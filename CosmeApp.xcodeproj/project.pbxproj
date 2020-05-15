@@ -24,7 +24,37 @@
 		1F4B7717246D32C000FC3B27 /* ActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B7715246D32C000FC3B27 /* ActivityViewController.xib */; };
 		5FA88A36246E271000B84ACE /* MyProfileMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA88A34246E271000B84ACE /* MyProfileMainView.swift */; };
 		5FA88A37246E271000B84ACE /* MyProfileMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FA88A35246E271000B84ACE /* MyProfileMainView.xib */; };
+		3F96651D246E2A7F0083EBC2 /* SearchTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F96651B246E2A7F0083EBC2 /* SearchTextView.swift */; };
+		3F96651E246E2A7F0083EBC2 /* SearchTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F96651C246E2A7F0083EBC2 /* SearchTextView.xib */; };
+		3F966521246E2B240083EBC2 /* SearchMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F96651F246E2B240083EBC2 /* SearchMainView.swift */; };
+		3F966522246E2B240083EBC2 /* SearchMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F966520246E2B240083EBC2 /* SearchMainView.xib */; };
+		1F4B771A246E25CF00FC3B27 /* NewPostMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4B7718246E25CF00FC3B27 /* NewPostMainView.swift */; };
+		1F4B771B246E25CF00FC3B27 /* NewPostMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B7719246E25CF00FC3B27 /* NewPostMainView.xib */; };
 		7226E7ADC4922F1C879ED00E /* Pods_CosmeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA8B8F6B83DFB7116173D325 /* Pods_CosmeApp.framework */; };
+		FF8509F1246E2870003E2ACF /* TimeLineMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8509EF246E2870003E2ACF /* TimeLineMainView.swift */; };
+		FF8509F2246E2870003E2ACF /* TimeLineMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF8509F0246E2870003E2ACF /* TimeLineMainView.xib */; };
+		FF8509FA246E294F003E2ACF /* ReviewDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8509F8246E294F003E2ACF /* ReviewDetailViewController.swift */; };
+		FF8509FB246E294F003E2ACF /* ReviewDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF8509F9246E294F003E2ACF /* ReviewDetailViewController.xib */; };
+		FF8509FE246E297C003E2ACF /* ReviewDetailMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8509FC246E297C003E2ACF /* ReviewDetailMainView.swift */; };
+		FF8509FF246E297C003E2ACF /* ReviewDetailMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF8509FD246E297C003E2ACF /* ReviewDetailMainView.xib */; };
+		FF850A02246E29BC003E2ACF /* MakeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF850A00246E29BC003E2ACF /* MakeDetailViewController.swift */; };
+		FF850A03246E29BC003E2ACF /* MakeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF850A01246E29BC003E2ACF /* MakeDetailViewController.xib */; };
+		FF850A06246E29F4003E2ACF /* MakeDetailMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF850A04246E29F4003E2ACF /* MakeDetailMainView.swift */; };
+		FF850A07246E29F4003E2ACF /* MakeDetailMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF850A05246E29F4003E2ACF /* MakeDetailMainView.xib */; };
+		FF850A0A246E2AD3003E2ACF /* EditReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF850A08246E2AD3003E2ACF /* EditReviewViewController.swift */; };
+		FF850A0B246E2AD3003E2ACF /* EditReviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF850A09246E2AD3003E2ACF /* EditReviewViewController.xib */; };
+		FF850A0E246E2B16003E2ACF /* EditReviewMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF850A0C246E2B16003E2ACF /* EditReviewMainView.swift */; };
+		FF850A0F246E2B16003E2ACF /* EditReviewMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF850A0D246E2B16003E2ACF /* EditReviewMainView.xib */; };
+		FF850A12246E2B3C003E2ACF /* EditMakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF850A10246E2B3C003E2ACF /* EditMakeViewController.swift */; };
+		FF850A13246E2B3C003E2ACF /* EditMakeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF850A11246E2B3C003E2ACF /* EditMakeViewController.xib */; };
+		FF850A16246E2BC2003E2ACF /* EditMakeMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF850A14246E2BC2003E2ACF /* EditMakeMainView.swift */; };
+		FF850A17246E2BC2003E2ACF /* EditMakeMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF850A15246E2BC2003E2ACF /* EditMakeMainView.xib */; };
+		FFD02820246E3745009EE2E4 /* TimeLineMainTableViewSecondCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD0281E246E3745009EE2E4 /* TimeLineMainTableViewSecondCell.swift */; };
+		FFD02821246E3745009EE2E4 /* TimeLineMainTableViewSecondCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFD0281F246E3745009EE2E4 /* TimeLineMainTableViewSecondCell.xib */; };
+		FFD02824246E3866009EE2E4 /* TimeLineMainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD02822246E3866009EE2E4 /* TimeLineMainCollectionViewCell.swift */; };
+		FFD02825246E3866009EE2E4 /* TimeLineMainCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFD02823246E3866009EE2E4 /* TimeLineMainCollectionViewCell.xib */; };
+		FFEA536B246E317700694E1C /* TimeLineMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEA5369246E317700694E1C /* TimeLineMainTableViewCell.swift */; };
+		FFEA536C246E317700694E1C /* TimeLineMainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFEA536A246E317700694E1C /* TimeLineMainTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,8 +78,38 @@
 		1F4B7715246D32C000FC3B27 /* ActivityViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityViewController.xib; sourceTree = "<group>"; };
 		5FA88A34246E271000B84ACE /* MyProfileMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileMainView.swift; sourceTree = "<group>"; };
 		5FA88A35246E271000B84ACE /* MyProfileMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyProfileMainView.xib; sourceTree = "<group>"; };
+		3F96651B246E2A7F0083EBC2 /* SearchTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextView.swift; sourceTree = "<group>"; };
+		3F96651C246E2A7F0083EBC2 /* SearchTextView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTextView.xib; sourceTree = "<group>"; };
+		3F96651F246E2B240083EBC2 /* SearchMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMainView.swift; sourceTree = "<group>"; };
+		3F966520246E2B240083EBC2 /* SearchMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchMainView.xib; sourceTree = "<group>"; };
+		1F4B7718246E25CF00FC3B27 /* NewPostMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostMainView.swift; sourceTree = "<group>"; };
+		1F4B7719246E25CF00FC3B27 /* NewPostMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewPostMainView.xib; sourceTree = "<group>"; };
 		BA8B8F6B83DFB7116173D325 /* Pods_CosmeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CosmeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F159956426546549A41B2D4D /* Pods-CosmeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CosmeApp.release.xcconfig"; path = "Target Support Files/Pods-CosmeApp/Pods-CosmeApp.release.xcconfig"; sourceTree = "<group>"; };
+		FF8509EF246E2870003E2ACF /* TimeLineMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineMainView.swift; sourceTree = "<group>"; };
+		FF8509F0246E2870003E2ACF /* TimeLineMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeLineMainView.xib; sourceTree = "<group>"; };
+		FF8509F8246E294F003E2ACF /* ReviewDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewDetailViewController.swift; sourceTree = "<group>"; };
+		FF8509F9246E294F003E2ACF /* ReviewDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewDetailViewController.xib; sourceTree = "<group>"; };
+		FF8509FC246E297C003E2ACF /* ReviewDetailMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewDetailMainView.swift; sourceTree = "<group>"; };
+		FF8509FD246E297C003E2ACF /* ReviewDetailMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewDetailMainView.xib; sourceTree = "<group>"; };
+		FF850A00246E29BC003E2ACF /* MakeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeDetailViewController.swift; sourceTree = "<group>"; };
+		FF850A01246E29BC003E2ACF /* MakeDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MakeDetailViewController.xib; sourceTree = "<group>"; };
+		FF850A04246E29F4003E2ACF /* MakeDetailMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeDetailMainView.swift; sourceTree = "<group>"; };
+		FF850A05246E29F4003E2ACF /* MakeDetailMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MakeDetailMainView.xib; sourceTree = "<group>"; };
+		FF850A08246E2AD3003E2ACF /* EditReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditReviewViewController.swift; sourceTree = "<group>"; };
+		FF850A09246E2AD3003E2ACF /* EditReviewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditReviewViewController.xib; sourceTree = "<group>"; };
+		FF850A0C246E2B16003E2ACF /* EditReviewMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditReviewMainView.swift; sourceTree = "<group>"; };
+		FF850A0D246E2B16003E2ACF /* EditReviewMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditReviewMainView.xib; sourceTree = "<group>"; };
+		FF850A10246E2B3C003E2ACF /* EditMakeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMakeViewController.swift; sourceTree = "<group>"; };
+		FF850A11246E2B3C003E2ACF /* EditMakeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditMakeViewController.xib; sourceTree = "<group>"; };
+		FF850A14246E2BC2003E2ACF /* EditMakeMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMakeMainView.swift; sourceTree = "<group>"; };
+		FF850A15246E2BC2003E2ACF /* EditMakeMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditMakeMainView.xib; sourceTree = "<group>"; };
+		FFD0281E246E3745009EE2E4 /* TimeLineMainTableViewSecondCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineMainTableViewSecondCell.swift; sourceTree = "<group>"; };
+		FFD0281F246E3745009EE2E4 /* TimeLineMainTableViewSecondCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeLineMainTableViewSecondCell.xib; sourceTree = "<group>"; };
+		FFD02822246E3866009EE2E4 /* TimeLineMainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineMainCollectionViewCell.swift; sourceTree = "<group>"; };
+		FFD02823246E3866009EE2E4 /* TimeLineMainCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeLineMainCollectionViewCell.xib; sourceTree = "<group>"; };
+		FFEA5369246E317700694E1C /* TimeLineMainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineMainTableViewCell.swift; sourceTree = "<group>"; };
+		FFEA536A246E317700694E1C /* TimeLineMainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeLineMainTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,8 +174,11 @@
 		1F4B76FF246D303200FC3B27 /* TimeLine */ = {
 			isa = PBXGroup;
 			children = (
-				1F4B7707246D310F00FC3B27 /* TimeLineViewController.swift */,
-				1F4B7708246D310F00FC3B27 /* TimeLineViewController.xib */,
+				FF8509F7246E292C003E2ACF /* EditMake */,
+				FF8509F6246E290D003E2ACF /* EditReview */,
+				FF8509F5246E2903003E2ACF /* MakeDetail */,
+				FF8509F4246E28F1003E2ACF /* ReviewDetail */,
+				FF8509F3246E28E2003E2ACF /* TimeLine */,
 			);
 			path = TimeLine;
 			sourceTree = "<group>";
@@ -125,6 +188,8 @@
 			children = (
 				1F4B770C246D31FD00FC3B27 /* NewPostViewController.swift */,
 				1F4B770D246D31FD00FC3B27 /* NewPostViewController.xib */,
+				1F4B7718246E25CF00FC3B27 /* NewPostMainView.swift */,
+				1F4B7719246E25CF00FC3B27 /* NewPostMainView.xib */,
 			);
 			path = Post;
 			sourceTree = "<group>";
@@ -134,6 +199,10 @@
 			children = (
 				1F4B7710246D329300FC3B27 /* SearchViewController.swift */,
 				1F4B7711246D329300FC3B27 /* SearchViewController.xib */,
+				3F96651F246E2B240083EBC2 /* SearchMainView.swift */,
+				3F966520246E2B240083EBC2 /* SearchMainView.xib */,
+				3F96651B246E2A7F0083EBC2 /* SearchTextView.swift */,
+				3F96651C246E2A7F0083EBC2 /* SearchTextView.xib */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -154,6 +223,67 @@
 				F159956426546549A41B2D4D /* Pods-CosmeApp.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		FF8509F3246E28E2003E2ACF /* TimeLine */ = {
+			isa = PBXGroup;
+			children = (
+				1F4B7707246D310F00FC3B27 /* TimeLineViewController.swift */,
+				1F4B7708246D310F00FC3B27 /* TimeLineViewController.xib */,
+				FF8509EF246E2870003E2ACF /* TimeLineMainView.swift */,
+				FF8509F0246E2870003E2ACF /* TimeLineMainView.xib */,
+				FFEA5369246E317700694E1C /* TimeLineMainTableViewCell.swift */,
+				FFEA536A246E317700694E1C /* TimeLineMainTableViewCell.xib */,
+				FFD0281E246E3745009EE2E4 /* TimeLineMainTableViewSecondCell.swift */,
+				FFD0281F246E3745009EE2E4 /* TimeLineMainTableViewSecondCell.xib */,
+				FFD02822246E3866009EE2E4 /* TimeLineMainCollectionViewCell.swift */,
+				FFD02823246E3866009EE2E4 /* TimeLineMainCollectionViewCell.xib */,
+			);
+			path = TimeLine;
+			sourceTree = "<group>";
+		};
+		FF8509F4246E28F1003E2ACF /* ReviewDetail */ = {
+			isa = PBXGroup;
+			children = (
+				FF8509F8246E294F003E2ACF /* ReviewDetailViewController.swift */,
+				FF8509F9246E294F003E2ACF /* ReviewDetailViewController.xib */,
+				FF8509FC246E297C003E2ACF /* ReviewDetailMainView.swift */,
+				FF8509FD246E297C003E2ACF /* ReviewDetailMainView.xib */,
+			);
+			path = ReviewDetail;
+			sourceTree = "<group>";
+		};
+		FF8509F5246E2903003E2ACF /* MakeDetail */ = {
+			isa = PBXGroup;
+			children = (
+				FF850A00246E29BC003E2ACF /* MakeDetailViewController.swift */,
+				FF850A01246E29BC003E2ACF /* MakeDetailViewController.xib */,
+				FF850A04246E29F4003E2ACF /* MakeDetailMainView.swift */,
+				FF850A05246E29F4003E2ACF /* MakeDetailMainView.xib */,
+			);
+			path = MakeDetail;
+			sourceTree = "<group>";
+		};
+		FF8509F6246E290D003E2ACF /* EditReview */ = {
+			isa = PBXGroup;
+			children = (
+				FF850A08246E2AD3003E2ACF /* EditReviewViewController.swift */,
+				FF850A09246E2AD3003E2ACF /* EditReviewViewController.xib */,
+				FF850A0C246E2B16003E2ACF /* EditReviewMainView.swift */,
+				FF850A0D246E2B16003E2ACF /* EditReviewMainView.xib */,
+			);
+			path = EditReview;
+			sourceTree = "<group>";
+		};
+		FF8509F7246E292C003E2ACF /* EditMake */ = {
+			isa = PBXGroup;
+			children = (
+				FF850A10246E2B3C003E2ACF /* EditMakeViewController.swift */,
+				FF850A11246E2B3C003E2ACF /* EditMakeViewController.xib */,
+				FF850A14246E2BC2003E2ACF /* EditMakeMainView.swift */,
+				FF850A15246E2BC2003E2ACF /* EditMakeMainView.xib */,
+			);
+			path = EditMake;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,15 +346,30 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F96651E246E2A7F0083EBC2 /* SearchTextView.xib in Resources */,
+				3F966522246E2B240083EBC2 /* SearchMainView.xib in Resources */,
 				1F4B76F0246D2AE100FC3B27 /* LaunchScreen.storyboard in Resources */,
 				1F4B770F246D31FD00FC3B27 /* NewPostViewController.xib in Resources */,
+				FFD02825246E3866009EE2E4 /* TimeLineMainCollectionViewCell.xib in Resources */,
 				1F4B76ED246D2AE100FC3B27 /* Assets.xcassets in Resources */,
+				FF8509FB246E294F003E2ACF /* ReviewDetailViewController.xib in Resources */,
+				FF850A0B246E2AD3003E2ACF /* EditReviewViewController.xib in Resources */,
 				1F4B7706246D30D900FC3B27 /* MyProfileViewController.xib in Resources */,
+				FF850A03246E29BC003E2ACF /* MakeDetailViewController.xib in Resources */,
 				1F4B76EB246D2AC100FC3B27 /* Main.storyboard in Resources */,
+				FF850A17246E2BC2003E2ACF /* EditMakeMainView.xib in Resources */,
 				1F4B770A246D310F00FC3B27 /* TimeLineViewController.xib in Resources */,
+				FF850A0F246E2B16003E2ACF /* EditReviewMainView.xib in Resources */,
 				1F4B7713246D329300FC3B27 /* SearchViewController.xib in Resources */,
+				FF8509F2246E2870003E2ACF /* TimeLineMainView.xib in Resources */,
 				1F4B7717246D32C000FC3B27 /* ActivityViewController.xib in Resources */,
 				5FA88A37246E271000B84ACE /* MyProfileMainView.xib in Resources */,
+				1F4B771B246E25CF00FC3B27 /* NewPostMainView.xib in Resources */,
+				FF8509FF246E297C003E2ACF /* ReviewDetailMainView.xib in Resources */,
+				FF850A13246E2B3C003E2ACF /* EditMakeViewController.xib in Resources */,
+				FFD02821246E3745009EE2E4 /* TimeLineMainTableViewSecondCell.xib in Resources */,
+				FF850A07246E29F4003E2ACF /* MakeDetailMainView.xib in Resources */,
+				FFEA536C246E317700694E1C /* TimeLineMainTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,14 +422,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F4B771A246E25CF00FC3B27 /* NewPostMainView.swift in Sources */,
+				FF8509FE246E297C003E2ACF /* ReviewDetailMainView.swift in Sources */,
+				FF8509F1246E2870003E2ACF /* TimeLineMainView.swift in Sources */,
+				FF850A12246E2B3C003E2ACF /* EditMakeViewController.swift in Sources */,
 				1F4B7712246D329300FC3B27 /* SearchViewController.swift in Sources */,
 				5FA88A36246E271000B84ACE /* MyProfileMainView.swift in Sources */,
 				1F4B7705246D30D900FC3B27 /* MyProfileViewController.swift in Sources */,
+				3F966521246E2B240083EBC2 /* SearchMainView.swift in Sources */,
+				3F96651D246E2A7F0083EBC2 /* SearchTextView.swift in Sources */,
+				FF850A16246E2BC2003E2ACF /* EditMakeMainView.swift in Sources */,
 				1F4B7709246D310F00FC3B27 /* TimeLineViewController.swift in Sources */,
 				1F4B76F9246D2F7700FC3B27 /* AppDelegate.swift in Sources */,
 				1F4B7716246D32C000FC3B27 /* ActivityViewController.swift in Sources */,
+				FF850A0E246E2B16003E2ACF /* EditReviewMainView.swift in Sources */,
+				FF8509FA246E294F003E2ACF /* ReviewDetailViewController.swift in Sources */,
+				FF850A06246E29F4003E2ACF /* MakeDetailMainView.swift in Sources */,
+				FF850A0A246E2AD3003E2ACF /* EditReviewViewController.swift in Sources */,
 				1F4B76E6246D2AC100FC3B27 /* SceneDelegate.swift in Sources */,
 				1F4B770E246D31FD00FC3B27 /* NewPostViewController.swift in Sources */,
+				FFD02824246E3866009EE2E4 /* TimeLineMainCollectionViewCell.swift in Sources */,
+				FFD02820246E3745009EE2E4 /* TimeLineMainTableViewSecondCell.swift in Sources */,
+				FFEA536B246E317700694E1C /* TimeLineMainTableViewCell.swift in Sources */,
+				FF850A02246E29BC003E2ACF /* MakeDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

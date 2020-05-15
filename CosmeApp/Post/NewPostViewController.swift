@@ -11,11 +11,16 @@ import UIKit
 import PGFramework
 // MARK: - Property
 class NewPostViewController: BaseViewController {
+    @IBOutlet weak var headerView: HeaderView!
+    
+    @IBOutlet weak var mainView: NewPostMainView!
 }
 // MARK: - Life cycle
 extension NewPostViewController {
     override func loadView() {
         super.loadView()
+        setHeaderView()
+        setDelegate()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +30,20 @@ extension NewPostViewController {
     }
 }
 // MARK: - Protocol
-extension NewPostViewController {
+extension NewPostViewController:NewPostMainViewDelegate {
+    func touchedReviewButton() {
+        //todo
+    }
+    func touchedMakeButton() {
+        //todo
+    }
 }
 // MARK: - method
 extension NewPostViewController {
+    func setHeaderView() {
+        headerView.setCenter(text: "新規投稿画面", fontSize: 19, color: UIColor.black)
+    }
+    func setDelegate() {
+        mainView.delegate = self
+    }
 }
