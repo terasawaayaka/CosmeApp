@@ -1,20 +1,19 @@
 //
-//  EditReviewViewController.swift
+//  UserSearchResultViewController.swift
 //  CosmeApp
 //
-//  Created by ASW-研修１ on 2020/05/15.
+//  Created by ASW-研修３ on 2020/05/15.
 //  Copyright © 2020 ASW-研修２. All rights reserved.
 //
 
 import UIKit
-
 import PGFramework
 // MARK: - Property
-class EditReviewViewController: BaseViewController {
+class UserSearchResultViewController: BaseViewController {
+    @IBOutlet weak var mainView: UserSearchResultMainView!
 }
-
 // MARK: - Life cycle
-extension EditReviewViewController {
+extension UserSearchResultViewController {
     override func loadView() {
         super.loadView()
     }
@@ -26,9 +25,10 @@ extension EditReviewViewController {
     }
 }
 // MARK: - Protocol
-extension EditReviewViewController {
+extension UserSearchResultViewController {
 }
 // MARK: - method
-extension EditReviewViewController {
+extension UserSearchResultViewController {
 }
+
 

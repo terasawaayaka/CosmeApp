@@ -24,6 +24,10 @@
 		1F4B7717246D32C000FC3B27 /* ActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B7715246D32C000FC3B27 /* ActivityViewController.xib */; };
 		1F4B771A246E25CF00FC3B27 /* NewPostMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4B7718246E25CF00FC3B27 /* NewPostMainView.swift */; };
 		1F4B771B246E25CF00FC3B27 /* NewPostMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B7719246E25CF00FC3B27 /* NewPostMainView.xib */; };
+		1F4B7720246E4F8F00FC3B27 /* CreateReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4B771E246E4F8F00FC3B27 /* CreateReviewViewController.swift */; };
+		1F4B7721246E4F8F00FC3B27 /* CreateReviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B771F246E4F8F00FC3B27 /* CreateReviewViewController.xib */; };
+		1F4B7724246E4FBD00FC3B27 /* CreateReviewMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4B7722246E4FBD00FC3B27 /* CreateReviewMainView.swift */; };
+		1F4B7725246E4FBD00FC3B27 /* CreateReviewMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B7723246E4FBD00FC3B27 /* CreateReviewMainView.xib */; };
 		3F96651D246E2A7F0083EBC2 /* SearchTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F96651B246E2A7F0083EBC2 /* SearchTextView.swift */; };
 		3F96651E246E2A7F0083EBC2 /* SearchTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F96651C246E2A7F0083EBC2 /* SearchTextView.xib */; };
 		3F966521246E2B240083EBC2 /* SearchMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F96651F246E2B240083EBC2 /* SearchMainView.swift */; };
@@ -40,6 +44,24 @@
 		5FA88A4A246E405900B84ACE /* EditProfileMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FA88A48246E405900B84ACE /* EditProfileMainView.xib */; };
 		5FA88A52246E581F00B84ACE /* TodayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA88A50246E581F00B84ACE /* TodayCollectionViewCell.swift */; };
 		5FA88A53246E581F00B84ACE /* TodayCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FA88A51246E581F00B84ACE /* TodayCollectionViewCell.xib */; };
+		3F966527246E540C0083EBC2 /* TagSearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F966525246E540C0083EBC2 /* TagSearchResultViewController.swift */; };
+		3F966528246E540C0083EBC2 /* TagSearchResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F966526246E540C0083EBC2 /* TagSearchResultViewController.xib */; };
+		3F96652D246E544B0083EBC2 /* UserSearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F96652B246E544B0083EBC2 /* UserSearchResultViewController.swift */; };
+		3F96652E246E544B0083EBC2 /* UserSearchResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F96652C246E544B0083EBC2 /* UserSearchResultViewController.xib */; };
+		3F966532246E549D0083EBC2 /* ProductNameSearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F966530246E549D0083EBC2 /* ProductNameSearchResultViewController.swift */; };
+		3F966533246E549D0083EBC2 /* ProductNameSearchResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F966531246E549D0083EBC2 /* ProductNameSearchResultViewController.xib */; };
+		3F966537246E54C90083EBC2 /* BrandSearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F966535246E54C90083EBC2 /* BrandSearchResultViewController.swift */; };
+		3F966538246E54C90083EBC2 /* BrandSearchResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F966536246E54C90083EBC2 /* BrandSearchResultViewController.xib */; };
+		3F96653B246E552A0083EBC2 /* TagSearchResultMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F966539246E552A0083EBC2 /* TagSearchResultMainView.swift */; };
+		3F96653C246E552A0083EBC2 /* TagSearchResultMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F96653A246E552A0083EBC2 /* TagSearchResultMainView.xib */; };
+		3F96653F246E558A0083EBC2 /* UserSearchResultMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F96653D246E558A0083EBC2 /* UserSearchResultMainView.swift */; };
+		3F966540246E558A0083EBC2 /* UserSearchResultMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F96653E246E558A0083EBC2 /* UserSearchResultMainView.xib */; };
+		3F966543246E55BD0083EBC2 /* ProductNameSearchResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F966541246E55BD0083EBC2 /* ProductNameSearchResultView.swift */; };
+		3F966544246E55BD0083EBC2 /* ProductNameSearchResultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F966542246E55BD0083EBC2 /* ProductNameSearchResultView.xib */; };
+		3F966547246E56040083EBC2 /* BrandSearchResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F966545246E56040083EBC2 /* BrandSearchResultView.swift */; };
+		3F966548246E56040083EBC2 /* BrandSearchResultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F966546246E56040083EBC2 /* BrandSearchResultView.xib */; };
+		5FA88A36246E271000B84ACE /* MyProfileMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA88A34246E271000B84ACE /* MyProfileMainView.swift */; };
+		5FA88A37246E271000B84ACE /* MyProfileMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FA88A35246E271000B84ACE /* MyProfileMainView.xib */; };
 		7226E7ADC4922F1C879ED00E /* Pods_CosmeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA8B8F6B83DFB7116173D325 /* Pods_CosmeApp.framework */; };
 		FF8509F1246E2870003E2ACF /* TimeLineMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8509EF246E2870003E2ACF /* TimeLineMainView.swift */; };
 		FF8509F2246E2870003E2ACF /* TimeLineMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF8509F0246E2870003E2ACF /* TimeLineMainView.xib */; };
@@ -88,6 +110,10 @@
 		1F4B7715246D32C000FC3B27 /* ActivityViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityViewController.xib; sourceTree = "<group>"; };
 		1F4B7718246E25CF00FC3B27 /* NewPostMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostMainView.swift; sourceTree = "<group>"; };
 		1F4B7719246E25CF00FC3B27 /* NewPostMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewPostMainView.xib; sourceTree = "<group>"; };
+		1F4B771E246E4F8F00FC3B27 /* CreateReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReviewViewController.swift; sourceTree = "<group>"; };
+		1F4B771F246E4F8F00FC3B27 /* CreateReviewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateReviewViewController.xib; sourceTree = "<group>"; };
+		1F4B7722246E4FBD00FC3B27 /* CreateReviewMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReviewMainView.swift; sourceTree = "<group>"; };
+		1F4B7723246E4FBD00FC3B27 /* CreateReviewMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateReviewMainView.xib; sourceTree = "<group>"; };
 		3F96651B246E2A7F0083EBC2 /* SearchTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextView.swift; sourceTree = "<group>"; };
 		3F96651C246E2A7F0083EBC2 /* SearchTextView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTextView.xib; sourceTree = "<group>"; };
 		3F96651F246E2B240083EBC2 /* SearchMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMainView.swift; sourceTree = "<group>"; };
@@ -104,6 +130,24 @@
 		5FA88A48246E405900B84ACE /* EditProfileMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileMainView.xib; sourceTree = "<group>"; };
 		5FA88A50246E581F00B84ACE /* TodayCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCollectionViewCell.swift; sourceTree = "<group>"; };
 		5FA88A51246E581F00B84ACE /* TodayCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodayCollectionViewCell.xib; sourceTree = "<group>"; };
+		3F966525246E540C0083EBC2 /* TagSearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagSearchResultViewController.swift; sourceTree = "<group>"; };
+		3F966526246E540C0083EBC2 /* TagSearchResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagSearchResultViewController.xib; sourceTree = "<group>"; };
+		3F96652B246E544B0083EBC2 /* UserSearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchResultViewController.swift; sourceTree = "<group>"; };
+		3F96652C246E544B0083EBC2 /* UserSearchResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserSearchResultViewController.xib; sourceTree = "<group>"; };
+		3F966530246E549D0083EBC2 /* ProductNameSearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductNameSearchResultViewController.swift; sourceTree = "<group>"; };
+		3F966531246E549D0083EBC2 /* ProductNameSearchResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductNameSearchResultViewController.xib; sourceTree = "<group>"; };
+		3F966535246E54C90083EBC2 /* BrandSearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandSearchResultViewController.swift; sourceTree = "<group>"; };
+		3F966536246E54C90083EBC2 /* BrandSearchResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BrandSearchResultViewController.xib; sourceTree = "<group>"; };
+		3F966539246E552A0083EBC2 /* TagSearchResultMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagSearchResultMainView.swift; sourceTree = "<group>"; };
+		3F96653A246E552A0083EBC2 /* TagSearchResultMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagSearchResultMainView.xib; sourceTree = "<group>"; };
+		3F96653D246E558A0083EBC2 /* UserSearchResultMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchResultMainView.swift; sourceTree = "<group>"; };
+		3F96653E246E558A0083EBC2 /* UserSearchResultMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserSearchResultMainView.xib; sourceTree = "<group>"; };
+		3F966541246E55BD0083EBC2 /* ProductNameSearchResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductNameSearchResultView.swift; sourceTree = "<group>"; };
+		3F966542246E55BD0083EBC2 /* ProductNameSearchResultView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductNameSearchResultView.xib; sourceTree = "<group>"; };
+		3F966545246E56040083EBC2 /* BrandSearchResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandSearchResultView.swift; sourceTree = "<group>"; };
+		3F966546246E56040083EBC2 /* BrandSearchResultView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BrandSearchResultView.xib; sourceTree = "<group>"; };
+		5FA88A34246E271000B84ACE /* MyProfileMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileMainView.swift; sourceTree = "<group>"; };
+		5FA88A35246E271000B84ACE /* MyProfileMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyProfileMainView.xib; sourceTree = "<group>"; };
 		BA8B8F6B83DFB7116173D325 /* Pods_CosmeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CosmeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F159956426546549A41B2D4D /* Pods-CosmeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CosmeApp.release.xcconfig"; path = "Target Support Files/Pods-CosmeApp/Pods-CosmeApp.release.xcconfig"; sourceTree = "<group>"; };
 		FF8509EF246E2870003E2ACF /* TimeLineMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineMainView.swift; sourceTree = "<group>"; };
@@ -205,6 +249,8 @@
 		1F4B7700246D306100FC3B27 /* Post */ = {
 			isa = PBXGroup;
 			children = (
+				1F4B771D246E4F6200FC3B27 /* Review */,
+				1F4B771C246E4F5100FC3B27 /* NewPost */,
 				1F4B770C246D31FD00FC3B27 /* NewPostViewController.swift */,
 				1F4B770D246D31FD00FC3B27 /* NewPostViewController.xib */,
 				1F4B7718246E25CF00FC3B27 /* NewPostMainView.swift */,
@@ -222,6 +268,7 @@
 				3F966520246E2B240083EBC2 /* SearchMainView.xib */,
 				3F96651B246E2A7F0083EBC2 /* SearchTextView.swift */,
 				3F96651C246E2A7F0083EBC2 /* SearchTextView.xib */,
+				3F966524246E53B40083EBC2 /* Search result */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -233,6 +280,79 @@
 				1F4B7715246D32C000FC3B27 /* ActivityViewController.xib */,
 			);
 			path = Activity;
+			sourceTree = "<group>";
+		};
+		1F4B771C246E4F5100FC3B27 /* NewPost */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NewPost;
+			sourceTree = "<group>";
+		};
+		1F4B771D246E4F6200FC3B27 /* Review */ = {
+			isa = PBXGroup;
+			children = (
+				1F4B771E246E4F8F00FC3B27 /* CreateReviewViewController.swift */,
+				1F4B771F246E4F8F00FC3B27 /* CreateReviewViewController.xib */,
+				1F4B7722246E4FBD00FC3B27 /* CreateReviewMainView.swift */,
+				1F4B7723246E4FBD00FC3B27 /* CreateReviewMainView.xib */,
+			);
+			path = Review;
+			sourceTree = "<group>";
+		};
+		3F966524246E53B40083EBC2 /* Search result */ = {
+			isa = PBXGroup;
+			children = (
+				3F966534246E54AF0083EBC2 /* Brand */,
+				3F96652F246E54700083EBC2 /* Product Name */,
+				3F96652A246E54340083EBC2 /* User */,
+				3F966529246E54240083EBC2 /* Tag */,
+			);
+			path = "Search result";
+			sourceTree = "<group>";
+		};
+		3F966529246E54240083EBC2 /* Tag */ = {
+			isa = PBXGroup;
+			children = (
+				3F966525246E540C0083EBC2 /* TagSearchResultViewController.swift */,
+				3F966526246E540C0083EBC2 /* TagSearchResultViewController.xib */,
+				3F966539246E552A0083EBC2 /* TagSearchResultMainView.swift */,
+				3F96653A246E552A0083EBC2 /* TagSearchResultMainView.xib */,
+			);
+			path = Tag;
+			sourceTree = "<group>";
+		};
+		3F96652A246E54340083EBC2 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				3F96652B246E544B0083EBC2 /* UserSearchResultViewController.swift */,
+				3F96652C246E544B0083EBC2 /* UserSearchResultViewController.xib */,
+				3F96653D246E558A0083EBC2 /* UserSearchResultMainView.swift */,
+				3F96653E246E558A0083EBC2 /* UserSearchResultMainView.xib */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		3F96652F246E54700083EBC2 /* Product Name */ = {
+			isa = PBXGroup;
+			children = (
+				3F966530246E549D0083EBC2 /* ProductNameSearchResultViewController.swift */,
+				3F966531246E549D0083EBC2 /* ProductNameSearchResultViewController.xib */,
+				3F966541246E55BD0083EBC2 /* ProductNameSearchResultView.swift */,
+				3F966542246E55BD0083EBC2 /* ProductNameSearchResultView.xib */,
+			);
+			path = "Product Name";
+			sourceTree = "<group>";
+		};
+		3F966534246E54AF0083EBC2 /* Brand */ = {
+			isa = PBXGroup;
+			children = (
+				3F966535246E54C90083EBC2 /* BrandSearchResultViewController.swift */,
+				3F966536246E54C90083EBC2 /* BrandSearchResultViewController.xib */,
+				3F966545246E56040083EBC2 /* BrandSearchResultView.swift */,
+				3F966546246E56040083EBC2 /* BrandSearchResultView.xib */,
+			);
+			path = Brand;
 			sourceTree = "<group>";
 		};
 		4360F9E917DBF64E840CB96A /* Pods */ = {
@@ -409,9 +529,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F96651E246E2A7F0083EBC2 /* SearchTextView.xib in Resources */,
+				3F966540246E558A0083EBC2 /* UserSearchResultMainView.xib in Resources */,
 				3F966522246E2B240083EBC2 /* SearchMainView.xib in Resources */,
 				1F4B76F0246D2AE100FC3B27 /* LaunchScreen.storyboard in Resources */,
+				1F4B7721246E4F8F00FC3B27 /* CreateReviewViewController.xib in Resources */,
 				1F4B770F246D31FD00FC3B27 /* NewPostViewController.xib in Resources */,
+				3F966528246E540C0083EBC2 /* TagSearchResultViewController.xib in Resources */,
+				3F96652E246E544B0083EBC2 /* UserSearchResultViewController.xib in Resources */,
 				FFD02825246E3866009EE2E4 /* TimeLineMainCollectionViewCell.xib in Resources */,
 				1F4B76ED246D2AE100FC3B27 /* Assets.xcassets in Resources */,
 				FF8509FB246E294F003E2ACF /* ReviewDetailViewController.xib in Resources */,
@@ -424,19 +548,25 @@
 				FF850A17246E2BC2003E2ACF /* EditMakeMainView.xib in Resources */,
 				1F4B770A246D310F00FC3B27 /* TimeLineViewController.xib in Resources */,
 				FF850A0F246E2B16003E2ACF /* EditReviewMainView.xib in Resources */,
+				3F966544246E55BD0083EBC2 /* ProductNameSearchResultView.xib in Resources */,
 				1F4B7713246D329300FC3B27 /* SearchViewController.xib in Resources */,
 				5FA88A42246E3FE200B84ACE /* YourProfileMainView.xib in Resources */,
 				5FA88A53246E581F00B84ACE /* TodayCollectionViewCell.xib in Resources */,
 				5FA88A46246E402700B84ACE /* EditProfileViewController.xib in Resources */,
+				3F96653C246E552A0083EBC2 /* TagSearchResultMainView.xib in Resources */,
+				3F966548246E56040083EBC2 /* BrandSearchResultView.xib in Resources */,
 				FF8509F2246E2870003E2ACF /* TimeLineMainView.xib in Resources */,
 				1F4B7717246D32C000FC3B27 /* ActivityViewController.xib in Resources */,
 				5FA88A37246E271000B84ACE /* MyProfileMainView.xib in Resources */,
+				1F4B7725246E4FBD00FC3B27 /* CreateReviewMainView.xib in Resources */,
 				1F4B771B246E25CF00FC3B27 /* NewPostMainView.xib in Resources */,
 				FF8509FF246E297C003E2ACF /* ReviewDetailMainView.xib in Resources */,
 				FF850A13246E2B3C003E2ACF /* EditMakeViewController.xib in Resources */,
+				3F966533246E549D0083EBC2 /* ProductNameSearchResultViewController.xib in Resources */,
 				FFD02821246E3745009EE2E4 /* TimeLineMainTableViewSecondCell.xib in Resources */,
 				FF850A07246E29F4003E2ACF /* MakeDetailMainView.xib in Resources */,
 				FFEA536C246E317700694E1C /* TimeLineMainTableViewCell.xib in Resources */,
+				3F966538246E54C90083EBC2 /* BrandSearchResultViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,6 +620,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5FA88A45246E402700B84ACE /* EditProfileViewController.swift in Sources */,
+				3F966527246E540C0083EBC2 /* TagSearchResultViewController.swift in Sources */,
 				1F4B771A246E25CF00FC3B27 /* NewPostMainView.swift in Sources */,
 				FF8509FE246E297C003E2ACF /* ReviewDetailMainView.swift in Sources */,
 				FF8509F1246E2870003E2ACF /* TimeLineMainView.swift in Sources */,
@@ -499,20 +630,29 @@
 				1F4B7705246D30D900FC3B27 /* MyProfileViewController.swift in Sources */,
 				5FA88A41246E3FE200B84ACE /* YourProfileMainView.swift in Sources */,
 				3F966521246E2B240083EBC2 /* SearchMainView.swift in Sources */,
+				1F4B7720246E4F8F00FC3B27 /* CreateReviewViewController.swift in Sources */,
+				3F966543246E55BD0083EBC2 /* ProductNameSearchResultView.swift in Sources */,
 				3F96651D246E2A7F0083EBC2 /* SearchTextView.swift in Sources */,
 				5FA88A3D246E3FA300B84ACE /* YourProfileViewController.swift in Sources */,
 				5FA88A52246E581F00B84ACE /* TodayCollectionViewCell.swift in Sources */,
+				1F4B7724246E4FBD00FC3B27 /* CreateReviewMainView.swift in Sources */,
+				3F966537246E54C90083EBC2 /* BrandSearchResultViewController.swift in Sources */,
 				FF850A16246E2BC2003E2ACF /* EditMakeMainView.swift in Sources */,
 				5FA88A49246E405900B84ACE /* EditProfileMainView.swift in Sources */,
 				1F4B7709246D310F00FC3B27 /* TimeLineViewController.swift in Sources */,
 				1F4B76F9246D2F7700FC3B27 /* AppDelegate.swift in Sources */,
 				1F4B7716246D32C000FC3B27 /* ActivityViewController.swift in Sources */,
+				3F966532246E549D0083EBC2 /* ProductNameSearchResultViewController.swift in Sources */,
 				FF850A0E246E2B16003E2ACF /* EditReviewMainView.swift in Sources */,
+				3F96652D246E544B0083EBC2 /* UserSearchResultViewController.swift in Sources */,
 				FF8509FA246E294F003E2ACF /* ReviewDetailViewController.swift in Sources */,
 				FF850A06246E29F4003E2ACF /* MakeDetailMainView.swift in Sources */,
 				FF850A0A246E2AD3003E2ACF /* EditReviewViewController.swift in Sources */,
+				3F966547246E56040083EBC2 /* BrandSearchResultView.swift in Sources */,
 				1F4B76E6246D2AC100FC3B27 /* SceneDelegate.swift in Sources */,
 				1F4B770E246D31FD00FC3B27 /* NewPostViewController.swift in Sources */,
+				3F96653F246E558A0083EBC2 /* UserSearchResultMainView.swift in Sources */,
+				3F96653B246E552A0083EBC2 /* TagSearchResultMainView.swift in Sources */,
 				FFD02824246E3866009EE2E4 /* TimeLineMainCollectionViewCell.swift in Sources */,
 				FFD02820246E3745009EE2E4 /* TimeLineMainTableViewSecondCell.swift in Sources */,
 				FFEA536B246E317700694E1C /* TimeLineMainTableViewCell.swift in Sources */,

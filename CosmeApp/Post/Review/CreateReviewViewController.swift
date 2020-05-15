@@ -1,8 +1,8 @@
 //
-//  EditReviewViewController.swift
+//  CreateReviewViewController.swift
 //  CosmeApp
 //
-//  Created by ASW-研修１ on 2020/05/15.
+//  Created by ASW-研修２ on 2020/05/15.
 //  Copyright © 2020 ASW-研修２. All rights reserved.
 //
 
@@ -10,11 +10,10 @@ import UIKit
 
 import PGFramework
 // MARK: - Property
-class EditReviewViewController: BaseViewController {
+class CreateReviewViewController: BaseViewController {
 }
-
 // MARK: - Life cycle
-extension EditReviewViewController {
+extension CreateReviewViewController {
     override func loadView() {
         super.loadView()
     }
@@ -26,9 +25,8 @@ extension EditReviewViewController {
     }
 }
 // MARK: - Protocol
-extension EditReviewViewController {
+extension CreateReviewViewController {
 }
 // MARK: - method
-extension EditReviewViewController {
+extension CreateReviewViewController {
 }
-
