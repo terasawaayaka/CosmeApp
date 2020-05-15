@@ -11,11 +11,13 @@ import UIKit
 import PGFramework
 // MARK: - Property
 class CreateReviewViewController: BaseViewController {
+    @IBOutlet weak var headerView: HeaderView!
 }
 // MARK: - Life cycle
 extension CreateReviewViewController {
     override func loadView() {
         super.loadView()
+        setHeaderView()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,4 +31,9 @@ extension CreateReviewViewController {
 }
 // MARK: - method
 extension CreateReviewViewController {
+    func setHeaderView() {
+        headerView.setLeft(text: "戻る", fontSize: 16, color: UIColor.blue)
+        headerView.setCenter(text: "新規レビュー", fontSize: 19, color: UIColor.black)
+        headerView.setRight(text: "シェア", fontSize: 16, color: UIColor.blue)
+    }
 }

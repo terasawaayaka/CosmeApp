@@ -196,10 +196,6 @@
 			children = (
 				1F4B771D246E4F6200FC3B27 /* Review */,
 				1F4B771C246E4F5100FC3B27 /* NewPost */,
-				1F4B770C246D31FD00FC3B27 /* NewPostViewController.swift */,
-				1F4B770D246D31FD00FC3B27 /* NewPostViewController.xib */,
-				1F4B7718246E25CF00FC3B27 /* NewPostMainView.swift */,
-				1F4B7719246E25CF00FC3B27 /* NewPostMainView.xib */,
 			);
 			path = Post;
 			sourceTree = "<group>";
@@ -229,6 +225,10 @@
 		1F4B771C246E4F5100FC3B27 /* NewPost */ = {
 			isa = PBXGroup;
 			children = (
+				1F4B770C246D31FD00FC3B27 /* NewPostViewController.swift */,
+				1F4B770D246D31FD00FC3B27 /* NewPostViewController.xib */,
+				1F4B7718246E25CF00FC3B27 /* NewPostMainView.swift */,
+				1F4B7719246E25CF00FC3B27 /* NewPostMainView.xib */,
 			);
 			path = NewPost;
 			sourceTree = "<group>";
