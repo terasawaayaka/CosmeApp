@@ -22,6 +22,8 @@
 		1F4B7713246D329300FC3B27 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B7711246D329300FC3B27 /* SearchViewController.xib */; };
 		1F4B7716246D32C000FC3B27 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4B7714246D32C000FC3B27 /* ActivityViewController.swift */; };
 		1F4B7717246D32C000FC3B27 /* ActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B7715246D32C000FC3B27 /* ActivityViewController.xib */; };
+		1F4B771A246E25CF00FC3B27 /* NewPostMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4B7718246E25CF00FC3B27 /* NewPostMainView.swift */; };
+		1F4B771B246E25CF00FC3B27 /* NewPostMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B7719246E25CF00FC3B27 /* NewPostMainView.xib */; };
 		7226E7ADC4922F1C879ED00E /* Pods_CosmeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA8B8F6B83DFB7116173D325 /* Pods_CosmeApp.framework */; };
 		FF8509F1246E2870003E2ACF /* TimeLineMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8509EF246E2870003E2ACF /* TimeLineMainView.swift */; };
 		FF8509F2246E2870003E2ACF /* TimeLineMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF8509F0246E2870003E2ACF /* TimeLineMainView.xib */; };
@@ -62,6 +64,8 @@
 		1F4B7711246D329300FC3B27 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		1F4B7714246D32C000FC3B27 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		1F4B7715246D32C000FC3B27 /* ActivityViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityViewController.xib; sourceTree = "<group>"; };
+		1F4B7718246E25CF00FC3B27 /* NewPostMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostMainView.swift; sourceTree = "<group>"; };
+		1F4B7719246E25CF00FC3B27 /* NewPostMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewPostMainView.xib; sourceTree = "<group>"; };
 		BA8B8F6B83DFB7116173D325 /* Pods_CosmeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CosmeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F159956426546549A41B2D4D /* Pods-CosmeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CosmeApp.release.xcconfig"; path = "Target Support Files/Pods-CosmeApp/Pods-CosmeApp.release.xcconfig"; sourceTree = "<group>"; };
 		FF8509EF246E2870003E2ACF /* TimeLineMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineMainView.swift; sourceTree = "<group>"; };
@@ -158,6 +162,8 @@
 			children = (
 				1F4B770C246D31FD00FC3B27 /* NewPostViewController.swift */,
 				1F4B770D246D31FD00FC3B27 /* NewPostViewController.xib */,
+				1F4B7718246E25CF00FC3B27 /* NewPostMainView.swift */,
+				1F4B7719246E25CF00FC3B27 /* NewPostMainView.xib */,
 			);
 			path = Post;
 			sourceTree = "<group>";
@@ -318,6 +324,7 @@
 				1F4B7713246D329300FC3B27 /* SearchViewController.xib in Resources */,
 				FF8509F2246E2870003E2ACF /* TimeLineMainView.xib in Resources */,
 				1F4B7717246D32C000FC3B27 /* ActivityViewController.xib in Resources */,
+				1F4B771B246E25CF00FC3B27 /* NewPostMainView.xib in Resources */,
 				FF8509FF246E297C003E2ACF /* ReviewDetailMainView.xib in Resources */,
 				FF850A13246E2B3C003E2ACF /* EditMakeViewController.xib in Resources */,
 				FF850A07246E29F4003E2ACF /* MakeDetailMainView.xib in Resources */,
@@ -373,6 +380,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F4B771A246E25CF00FC3B27 /* NewPostMainView.swift in Sources */,
 				FF8509FE246E297C003E2ACF /* ReviewDetailMainView.swift in Sources */,
 				FF8509F1246E2870003E2ACF /* TimeLineMainView.swift in Sources */,
 				FF850A12246E2B3C003E2ACF /* EditMakeViewController.swift in Sources */,
