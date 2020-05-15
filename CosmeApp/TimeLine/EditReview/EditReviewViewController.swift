@@ -10,7 +10,7 @@ import UIKit
 
 import PGFramework
 // MARK: - Property
-class EditReviewViewController: baseViewControler {
+class EditReviewViewController: BaseViewControler {
 }
 // MARK: - Life cycle
 extension EditReviewViewController {

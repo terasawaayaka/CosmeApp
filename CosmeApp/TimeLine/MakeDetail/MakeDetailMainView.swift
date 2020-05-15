@@ -14,7 +14,7 @@ protocol MakeDetailMainViewDelegate: NSObjectProtocol{
 extension MakeDetailMainViewDelegate {
 }
 // MARK: - Property
-class MakeDetailMainView: baseView {
+class MakeDetailMainView: BaseView {
     weak var delegate: MakeDetailMainViewDelegate? = nil
 }
 // MARK: - Life cycle

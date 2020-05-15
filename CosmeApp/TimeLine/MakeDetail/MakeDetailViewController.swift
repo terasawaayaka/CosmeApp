@@ -10,7 +10,7 @@ import UIKit
 
 import PGFramework
 // MARK: - Property
-class MakeDetailViewController: baseViewController {
+class MakeDetailViewController: BaseViewController {
 }
 // MARK: - Life cycle
 extension MakeDetailViewController {
