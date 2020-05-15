@@ -77,11 +77,11 @@
             </objects>
             <point key="canvasLocation" x="-367" y="84"/>
         </scene>
-        <!--Home-->
+        <!--TimeLine-->
         <scene sceneID="oc1-5C-lmx">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Oyi-1X-uTq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" id="CgC-84-UMa"/>
+                    <tabBarItem key="tabBarItem" title="TimeLine" id="CgC-84-UMa"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hPc-dv-uSa">
                         <autoresizingMask key="autoresizingMask"/>
