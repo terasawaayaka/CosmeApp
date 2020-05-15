@@ -8,23 +8,50 @@
 
 import UIKit
 
-class NewPostMainView: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+import PGFramework
+protocol NewPostMainViewDelegate: NSObjectProtocol{
+    func touchedReviewButton()
+    func touchedMakeButton()
+}
+extension NewPostMainViewDelegate {
+}
+// MARK: - Property
+class NewPostMainView: BaseView {
+    weak var delegate: NewPostMainViewDelegate? = nil
+    @IBOutlet weak var reviewImageView: UIView!
+    @IBOutlet weak var makeImageView: UIView!
+    
+    @IBAction func touchedReviewButton(_ sender: UIButton) {
+        if let delegate = delegate {
+            delegate.touchedReviewButton()
+        }
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func touchedMakeButton(_ sender: UIButton) {
+        if let delegate = delegate {
+            delegate.touchedMakeButton()
+        }
     }
-    */
+}
+// MARK: - Life cycle
+extension NewPostMainView {
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        setLayout()
+    }
+}
+// MARK: - Protocol
+extension NewPostMainView {
+}
 
+// MARK: - method
+extension NewPostMainView {
+    func setLayout() {
+        reviewImageView.layer.borderWidth = 3
+        reviewImageView.layer.borderColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+        reviewImageView.layer.cornerRadius = 30
+        makeImageView.layer.borderWidth = 3
+        makeImageView.layer.borderColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+        makeImageView.layer.cornerRadius = 30
+    }
 }
