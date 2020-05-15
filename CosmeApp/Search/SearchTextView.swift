@@ -9,6 +9,7 @@
 import UIKit
 import PGFramework
 protocol SearchTextViewDelegate: NSObjectProtocol{
+    func touchedSearchButton()
 }
 extension SearchTextViewDelegate {
 }
@@ -17,6 +18,13 @@ class SearchTextView: BaseView {
     weak var delegate: SearchTextViewDelegate? = nil
     @IBOutlet weak var searchIcon: UIImageView!
     @IBOutlet weak var searchTextField: UITextField!
+    
+    
+    @IBAction func touchedSearchButton(_ sender: UIButton){
+        if let delegate = delegate{
+            delegate.touchedSearchButton()
+        }
+    }
 }
 // MARK: - Life cycle
 extension SearchTextView {
