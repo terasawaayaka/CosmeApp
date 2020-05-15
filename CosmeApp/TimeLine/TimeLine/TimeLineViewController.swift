@@ -11,11 +11,13 @@ import UIKit
 import PGFramework
 // MARK: - Property
 class TimeLineViewController: BaseViewController {
+    @IBOutlet weak var mainView: TimeLineMainView!
 }
 // MARK: - Life cycle
 extension TimeLineViewController {
     override func loadView() {
         super.loadView()
+        setDelegate()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +27,26 @@ extension TimeLineViewController {
     }
 }
 // MARK: - Protocol
-extension TimeLineViewController {
+extension TimeLineViewController :TimeLineMainViewDelegate{
+    func didSelectRowAt() {
+        let reviewDetailViewController = ReviewDetailViewController()
+        navigationController?.pushViewController(reviewDetailViewController, animated: true)
+        animatorManager.navigationType = .slide_push
+    }
+}
+
+extension TimeLineViewController :TimeLineMainTableViewCellDelegate{
+    func didSelectItemAt() {
+        let makeDetailViewController = MakeDetailViewController()
+        navigationController?.pushViewController(makeDetailViewController, animated: true)
+        animatorManager.navigationType = .slide_push
+    }
+    
+    
 }
 // MARK: - method
 extension TimeLineViewController {
+    func setDelegate(){
+        mainView.delegate = self
+    }
 }

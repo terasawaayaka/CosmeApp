@@ -24,7 +24,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEw-Dw-VQ8">
-                        <rect key="frame" x="80" y="30" width="81" height="30"/>
+                        <rect key="frame" x="80" y="20" width="81" height="40"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -109,7 +109,7 @@
                     <constraint firstItem="3r1-pk-KXU" firstAttribute="top" secondItem="rmn-sH-SQw" secondAttribute="bottom" constant="10" id="bZ1-kD-leT"/>
                     <constraint firstItem="hT5-Ny-IHb" firstAttribute="top" secondItem="rmn-sH-SQw" secondAttribute="bottom" constant="10" id="cvK-WT-98i"/>
                     <constraint firstItem="3r1-pk-KXU" firstAttribute="leading" secondItem="hT5-Ny-IHb" secondAttribute="trailing" constant="2" id="eI7-MH-yxb"/>
-                    <constraint firstItem="yEw-Dw-VQ8" firstAttribute="top" secondItem="Kfw-xw-63K" secondAttribute="top" constant="30" id="fpy-2O-AnB"/>
+                    <constraint firstItem="yEw-Dw-VQ8" firstAttribute="top" secondItem="Kfw-xw-63K" secondAttribute="top" constant="20" id="fpy-2O-AnB"/>
                     <constraint firstItem="X10-pc-b88" firstAttribute="top" secondItem="rmn-sH-SQw" secondAttribute="bottom" constant="10" id="jdj-6c-a7H"/>
                     <constraint firstItem="O3y-Kk-6M9" firstAttribute="leading" secondItem="Kfw-xw-63K" secondAttribute="leadingMargin" constant="20" id="ris-0V-Mlr"/>
                     <constraint firstItem="rmn-sH-SQw" firstAttribute="leading" secondItem="Kfw-xw-63K" secondAttribute="leading" id="su3-tw-51A"/>

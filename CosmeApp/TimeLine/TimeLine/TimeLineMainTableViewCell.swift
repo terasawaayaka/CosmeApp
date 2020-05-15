@@ -10,6 +10,7 @@ import UIKit
 
 import PGFramework
 protocol TimeLineMainTableViewCellDelegate: NSObjectProtocol{
+    func didSelectItemAt()
 }
 extension TimeLineMainTableViewCellDelegate {
 }
@@ -39,12 +40,20 @@ extension TimeLineMainTableViewCell :UICollectionViewDataSource{
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TimeLineMainCollectionViewCell", for: indexPath) as? TimeLineMainCollectionViewCell else {return UICollectionViewCell()}
         return cell
     }
+}
+
+extension TimeLineMainTableViewCell :UICollectionViewDelegate{
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let delegate = delegate {delegate.didSelectItemAt()}
+    }
+    
     
 }
 // MARK: - method
 extension TimeLineMainTableViewCell {
     func setDelegate(){
         collectionView.dataSource = self
+        collectionView.delegate = self
     }
     func setLayout(){
         collectionViewFlowLayout.estimatedItemSize = CGSize(width:80,height:80)

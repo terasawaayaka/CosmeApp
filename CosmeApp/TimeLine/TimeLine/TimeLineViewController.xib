@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TimeLineViewController" customModule="CosmeApp" customModuleProvider="target">
             <connections>
+                <outlet property="mainView" destination="YHE-Ij-VZG" id="pH7-aj-mP4"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
