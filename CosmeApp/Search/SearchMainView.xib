@@ -9,9 +9,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchMainView" customModule="CosmeApp" customModuleProvider="target">
             <connections>
-                <outlet property="touchedProductNameButton" destination="ojC-1g-34m" id="X9L-MK-3UZ"/>
+                <outlet property="touchedProductNameButton" destination="ojC-1g-34m" id="ZDt-Na-QyL"/>
                 <outlet property="touchedTagButton" destination="o20-fw-gGm" id="neV-Ve-TLR"/>
-                <outlet property="touchedUserButton" destination="ojC-1g-34m" id="8jN-yt-oqA"/>
+                <outlet property="touchedUserButton" destination="Wdr-Ok-Orj" id="qic-nV-WSc"/>
                 <outlet property="touchedbrandButton" destination="DgT-yx-KBZ" id="5bl-Hv-lWW"/>
             </connections>
         </placeholder>
@@ -27,41 +27,40 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o20-fw-gGm">
-                                    <rect key="frame" x="45" y="10" width="31" height="30"/>
-                                    <state key="normal" title="タグ">
+                                    <rect key="frame" x="20" y="10" width="62" height="30"/>
+                                    <state key="normal" title="　タグ　">
                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wdr-Ok-Orj">
-                                    <rect key="frame" x="117" y="10" width="62" height="30"/>
-                                    <state key="normal" title="ユーザー">
+                                    <rect key="frame" x="102" y="10" width="92" height="30"/>
+                                    <state key="normal" title="　ユーザー　">
                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ojC-1g-34m">
-                                    <rect key="frame" x="220" y="10" width="46" height="30"/>
-                                    <state key="normal" title="商品名">
+                                    <rect key="frame" x="214" y="10" width="77" height="30"/>
+                                    <state key="normal" title="　商品名　">
                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DgT-yx-KBZ">
-                                    <rect key="frame" x="307" y="10" width="62" height="30"/>
-                                    <state key="normal" title="ブランド">
+                                    <rect key="frame" x="311" y="10" width="92" height="30"/>
+                                    <state key="normal" title="　ブランド　">
                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" red="1" green="0.82663194559999997" blue="0.99836927620000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstItem="o20-fw-gGm" firstAttribute="leading" secondItem="00x-zD-qMy" secondAttribute="leading" constant="45" id="0Iu-Wb-bei"/>
-                                <constraint firstAttribute="trailing" secondItem="DgT-yx-KBZ" secondAttribute="trailing" constant="45" id="Axb-2w-Tm3"/>
                                 <constraint firstItem="o20-fw-gGm" firstAttribute="top" secondItem="00x-zD-qMy" secondAttribute="top" constant="10" id="Bzx-xX-qfT"/>
                                 <constraint firstItem="ojC-1g-34m" firstAttribute="top" secondItem="00x-zD-qMy" secondAttribute="top" constant="10" id="Ces-X5-gLC"/>
-                                <constraint firstItem="ojC-1g-34m" firstAttribute="leading" secondItem="Wdr-Ok-Orj" secondAttribute="trailing" constant="41" id="I2k-hf-MaJ"/>
+                                <constraint firstItem="ojC-1g-34m" firstAttribute="leading" secondItem="Wdr-Ok-Orj" secondAttribute="trailing" constant="20" id="I2k-hf-MaJ"/>
                                 <constraint firstItem="DgT-yx-KBZ" firstAttribute="top" secondItem="00x-zD-qMy" secondAttribute="top" constant="10" id="Kmq-gN-S1g"/>
+                                <constraint firstItem="o20-fw-gGm" firstAttribute="leading" secondItem="00x-zD-qMy" secondAttribute="leading" constant="20" id="TA9-ES-B2a"/>
                                 <constraint firstItem="Wdr-Ok-Orj" firstAttribute="top" secondItem="00x-zD-qMy" secondAttribute="top" constant="10" id="cw4-h0-iGl"/>
-                                <constraint firstItem="Wdr-Ok-Orj" firstAttribute="leading" secondItem="o20-fw-gGm" secondAttribute="trailing" constant="41" id="ksa-wz-f49"/>
-                                <constraint firstItem="DgT-yx-KBZ" firstAttribute="leading" secondItem="ojC-1g-34m" secondAttribute="trailing" constant="41" id="wWD-su-qJQ"/>
+                                <constraint firstItem="Wdr-Ok-Orj" firstAttribute="leading" secondItem="o20-fw-gGm" secondAttribute="trailing" constant="20" id="ksa-wz-f49"/>
+                                <constraint firstItem="DgT-yx-KBZ" firstAttribute="leading" secondItem="ojC-1g-34m" secondAttribute="trailing" constant="20" id="wWD-su-qJQ"/>
                                 <constraint firstAttribute="height" constant="50" id="wcy-tw-rnS"/>
                             </constraints>
                         </view>

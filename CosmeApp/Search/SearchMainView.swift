@@ -24,6 +24,7 @@ class SearchMainView: BaseView {
 extension SearchMainView {
     override func awakeFromNib() {
         super.awakeFromNib()
+        setLayout()
     }
 }
 // MARK: - Protocol
@@ -48,8 +49,6 @@ extension SearchMainView {
         touchedbrandButton.layer.borderWidth = 1
         touchedbrandButton.layer.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         touchedbrandButton.layer.cornerRadius = 5
-        
-        
         
     }
 }
