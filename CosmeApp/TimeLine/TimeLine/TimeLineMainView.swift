@@ -14,7 +14,7 @@ protocol TimeLineMainViewDelegate: NSObjectProtocol{
 extension TimeLineMainViewDelegate {
 }
 // MARK: - Property
-class TimeLineMainView: baseView {
+class TimeLineMainView: BaseView {
     weak var delegate: TimeLineMainViewDelegate? = nil
 }
 // MARK: - Life cycle
