@@ -16,11 +16,13 @@ extension TimeLineMainCollectionViewCellDelegate {
 // MARK: - Property
 class TimeLineMainCollectionViewCell: BaseCollectionViewCell {
     weak var delegate: TimeLineMainCollectionViewCellDelegate? = nil
+    @IBOutlet weak var makeIconView: UIView!
 }
 // MARK: - Life cycle
 extension TimeLineMainCollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
+        setLayout()
     }
 }
 // MARK: - Protocol
@@ -28,4 +30,7 @@ extension TimeLineMainCollectionViewCell {
 }
 // MARK: - method
 extension TimeLineMainCollectionViewCell {
+    func setLayout(){
+        makeIconView.layer.cornerRadius = makeIconView.frame.width / 2
+    }
 }

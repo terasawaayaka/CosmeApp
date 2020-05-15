@@ -30,11 +30,24 @@
                         <constraint firstAttribute="height" constant="40" id="abz-QD-gx2"/>
                     </constraints>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAW-1c-gm1">
+                    <rect key="frame" x="40" y="64" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="7AD-BK-fQ7"/>
+                        <constraint firstAttribute="width" secondItem="aAW-1c-gm1" secondAttribute="height" multiplier="1:1" id="A7q-ux-Jsf"/>
+                    </constraints>
+                    <state key="normal" title="　　"/>
+                    <connections>
+                        <action selector="touchedSearchButton:" destination="-1" eventType="touchUpInside" id="fkO-Vt-eIJ"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
             <constraints>
                 <constraint firstItem="Cv3-ea-Sux" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="F9x-mD-gex"/>
+                <constraint firstItem="aAW-1c-gm1" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="Jnv-ru-YvV"/>
                 <constraint firstItem="Cv3-ea-Sux" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="100" id="coG-So-jSg"/>
+                <constraint firstItem="aAW-1c-gm1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="hLN-Ku-1kx"/>
                 <constraint firstItem="dsV-ss-eoU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="hMR-tF-klw"/>
                 <constraint firstItem="dsV-ss-eoU" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="pGw-nz-iou"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Cv3-ea-Sux" secondAttribute="trailing" constant="50" id="ysI-ok-qfd"/>
