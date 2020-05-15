@@ -11,6 +11,7 @@ import UIKit
 import PGFramework
 // MARK: - Property
 class MyProfileViewController: BaseViewController {
+    @IBOutlet weak var mainView: MyProfileMainView!
 }
 // MARK: - Life cycle
 extension MyProfileViewController {
