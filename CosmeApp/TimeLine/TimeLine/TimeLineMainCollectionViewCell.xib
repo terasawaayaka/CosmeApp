@@ -12,17 +12,29 @@
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="IHN-ut-div" customClass="TimeLineMainCollectionViewCell" customModule="CosmeApp" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="9E1-dG-AQG">
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="9E1-dG-AQG">
                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IFo-A3-xxT">
-                        <rect key="frame" x="-95" y="-22" width="240" height="128"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" red="0.87199596710000005" green="0.87682981640000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zOj-Ob-WUr">
+                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                        <color key="backgroundColor" systemColor="systemGray3Color" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="80" id="PpY-i2-C9Q"/>
+                            <constraint firstAttribute="width" secondItem="zOj-Ob-WUr" secondAttribute="height" multiplier="1:1" id="hmm-xK-7nr"/>
+                        </constraints>
                     </view>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="zOj-Ob-WUr" secondAttribute="bottom" id="3nL-Jo-dM5"/>
+                    <constraint firstItem="zOj-Ob-WUr" firstAttribute="leading" secondItem="9E1-dG-AQG" secondAttribute="leading" id="Ein-08-174"/>
+                    <constraint firstAttribute="trailing" secondItem="zOj-Ob-WUr" secondAttribute="trailing" id="jhA-ep-PJi"/>
+                    <constraint firstItem="zOj-Ob-WUr" firstAttribute="top" secondItem="9E1-dG-AQG" secondAttribute="top" id="oT7-bz-Fc8"/>
+                </constraints>
             </collectionViewCellContentView>
+            <connections>
+                <outlet property="makeIconView" destination="zOj-Ob-WUr" id="eHL-C4-4Ad"/>
+            </connections>
             <point key="canvasLocation" x="103" y="103"/>
         </collectionViewCell>
     </objects>
