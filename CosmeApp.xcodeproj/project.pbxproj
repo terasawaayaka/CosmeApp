@@ -3,27 +3,47 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F4B76E4246D2AC100FC3B27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4B76E3246D2AC100FC3B27 /* AppDelegate.swift */; };
 		1F4B76E6246D2AC100FC3B27 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4B76E5246D2AC100FC3B27 /* SceneDelegate.swift */; };
 		1F4B76EB246D2AC100FC3B27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B76E9246D2AC100FC3B27 /* Main.storyboard */; };
 		1F4B76ED246D2AE100FC3B27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B76EC246D2AE100FC3B27 /* Assets.xcassets */; };
 		1F4B76F0246D2AE100FC3B27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B76EE246D2AE100FC3B27 /* LaunchScreen.storyboard */; };
+		1F4B76F9246D2F7700FC3B27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4B76F8246D2F7700FC3B27 /* AppDelegate.swift */; };
+		1F4B7705246D30D900FC3B27 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4B7703246D30D900FC3B27 /* MyProfileViewController.swift */; };
+		1F4B7706246D30D900FC3B27 /* MyProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B7704246D30D900FC3B27 /* MyProfileViewController.xib */; };
+		1F4B7709246D310F00FC3B27 /* TimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4B7707246D310F00FC3B27 /* TimeLineViewController.swift */; };
+		1F4B770A246D310F00FC3B27 /* TimeLineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B7708246D310F00FC3B27 /* TimeLineViewController.xib */; };
+		1F4B770E246D31FD00FC3B27 /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4B770C246D31FD00FC3B27 /* NewPostViewController.swift */; };
+		1F4B770F246D31FD00FC3B27 /* NewPostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B770D246D31FD00FC3B27 /* NewPostViewController.xib */; };
+		1F4B7712246D329300FC3B27 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4B7710246D329300FC3B27 /* SearchViewController.swift */; };
+		1F4B7713246D329300FC3B27 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B7711246D329300FC3B27 /* SearchViewController.xib */; };
+		1F4B7716246D32C000FC3B27 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4B7714246D32C000FC3B27 /* ActivityViewController.swift */; };
+		1F4B7717246D32C000FC3B27 /* ActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B7715246D32C000FC3B27 /* ActivityViewController.xib */; };
 		7226E7ADC4922F1C879ED00E /* Pods_CosmeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA8B8F6B83DFB7116173D325 /* Pods_CosmeApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		153986C71F6FC96C59035F59 /* Pods-CosmeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CosmeApp.debug.xcconfig"; path = "Target Support Files/Pods-CosmeApp/Pods-CosmeApp.debug.xcconfig"; sourceTree = "<group>"; };
-		1F4B76E0246D2AC000FC3B27 /* CosmeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CosmeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1F4B76E3246D2AC100FC3B27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F4B76E5246D2AC100FC3B27 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1F4B76EA246D2AC100FC3B27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1F4B76EC246D2AE100FC3B27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F4B76EF246D2AE100FC3B27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F4B76F1246D2AE100FC3B27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F4B76F8246D2F7700FC3B27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1F4B7703246D30D900FC3B27 /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
+		1F4B7704246D30D900FC3B27 /* MyProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyProfileViewController.xib; sourceTree = "<group>"; };
+		1F4B7707246D310F00FC3B27 /* TimeLineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineViewController.swift; sourceTree = "<group>"; };
+		1F4B7708246D310F00FC3B27 /* TimeLineViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeLineViewController.xib; sourceTree = "<group>"; };
+		1F4B770B246D31C300FC3B27 /* CosmeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CosmeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F4B770C246D31FD00FC3B27 /* NewPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
+		1F4B770D246D31FD00FC3B27 /* NewPostViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewPostViewController.xib; sourceTree = "<group>"; };
+		1F4B7710246D329300FC3B27 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		1F4B7711246D329300FC3B27 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		1F4B7714246D32C000FC3B27 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		1F4B7715246D32C000FC3B27 /* ActivityViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityViewController.xib; sourceTree = "<group>"; };
 		BA8B8F6B83DFB7116173D325 /* Pods_CosmeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CosmeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F159956426546549A41B2D4D /* Pods-CosmeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CosmeApp.release.xcconfig"; path = "Target Support Files/Pods-CosmeApp/Pods-CosmeApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -52,24 +72,21 @@
 			isa = PBXGroup;
 			children = (
 				1F4B76E2246D2AC000FC3B27 /* CosmeApp */,
-				1F4B76E1246D2AC000FC3B27 /* Products */,
 				4360F9E917DBF64E840CB96A /* Pods */,
 				0A746E86DDDDD73D98671D8B /* Frameworks */,
+				1F4B770B246D31C300FC3B27 /* CosmeApp.app */,
 			);
-			sourceTree = "<group>";
-		};
-		1F4B76E1246D2AC000FC3B27 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				1F4B76E0246D2AC000FC3B27 /* CosmeApp.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		1F4B76E2246D2AC000FC3B27 /* CosmeApp */ = {
 			isa = PBXGroup;
 			children = (
-				1F4B76E3246D2AC100FC3B27 /* AppDelegate.swift */,
+				1F4B76FA246D2FFE00FC3B27 /* Profile */,
+				1F4B76FF246D303200FC3B27 /* TimeLine */,
+				1F4B7700246D306100FC3B27 /* Post */,
+				1F4B7701246D306700FC3B27 /* Search */,
+				1F4B7702246D307A00FC3B27 /* Activity */,
+				1F4B76F8246D2F7700FC3B27 /* AppDelegate.swift */,
 				1F4B76E5246D2AC100FC3B27 /* SceneDelegate.swift */,
 				1F4B76E9246D2AC100FC3B27 /* Main.storyboard */,
 				1F4B76EC246D2AE100FC3B27 /* Assets.xcassets */,
@@ -79,13 +96,57 @@
 			path = CosmeApp;
 			sourceTree = "<group>";
 		};
+		1F4B76FA246D2FFE00FC3B27 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				1F4B7703246D30D900FC3B27 /* MyProfileViewController.swift */,
+				1F4B7704246D30D900FC3B27 /* MyProfileViewController.xib */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		1F4B76FF246D303200FC3B27 /* TimeLine */ = {
+			isa = PBXGroup;
+			children = (
+				1F4B7707246D310F00FC3B27 /* TimeLineViewController.swift */,
+				1F4B7708246D310F00FC3B27 /* TimeLineViewController.xib */,
+			);
+			path = TimeLine;
+			sourceTree = "<group>";
+		};
+		1F4B7700246D306100FC3B27 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				1F4B770C246D31FD00FC3B27 /* NewPostViewController.swift */,
+				1F4B770D246D31FD00FC3B27 /* NewPostViewController.xib */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		1F4B7701246D306700FC3B27 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				1F4B7710246D329300FC3B27 /* SearchViewController.swift */,
+				1F4B7711246D329300FC3B27 /* SearchViewController.xib */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		1F4B7702246D307A00FC3B27 /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				1F4B7714246D32C000FC3B27 /* ActivityViewController.swift */,
+				1F4B7715246D32C000FC3B27 /* ActivityViewController.xib */,
+			);
+			path = Activity;
+			sourceTree = "<group>";
+		};
 		4360F9E917DBF64E840CB96A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				153986C71F6FC96C59035F59 /* Pods-CosmeApp.debug.xcconfig */,
 				F159956426546549A41B2D4D /* Pods-CosmeApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -108,7 +169,7 @@
 			);
 			name = CosmeApp;
 			productName = CosmeApp;
-			productReference = 1F4B76E0246D2AC000FC3B27 /* CosmeApp.app */;
+			productReference = 1F4B770B246D31C300FC3B27 /* CosmeApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -135,7 +196,7 @@
 				Base,
 			);
 			mainGroup = 1F4B76D7246D2AC000FC3B27;
-			productRefGroup = 1F4B76E1246D2AC000FC3B27 /* Products */;
+			productRefGroup = 1F4B76D7246D2AC000FC3B27;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -150,8 +211,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F4B76F0246D2AE100FC3B27 /* LaunchScreen.storyboard in Resources */,
+				1F4B770F246D31FD00FC3B27 /* NewPostViewController.xib in Resources */,
 				1F4B76ED246D2AE100FC3B27 /* Assets.xcassets in Resources */,
+				1F4B7706246D30D900FC3B27 /* MyProfileViewController.xib in Resources */,
 				1F4B76EB246D2AC100FC3B27 /* Main.storyboard in Resources */,
+				1F4B770A246D310F00FC3B27 /* TimeLineViewController.xib in Resources */,
+				1F4B7713246D329300FC3B27 /* SearchViewController.xib in Resources */,
+				1F4B7717246D32C000FC3B27 /* ActivityViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,8 +270,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F4B76E4246D2AC100FC3B27 /* AppDelegate.swift in Sources */,
+				1F4B7712246D329300FC3B27 /* SearchViewController.swift in Sources */,
+				1F4B7705246D30D900FC3B27 /* MyProfileViewController.swift in Sources */,
+				1F4B7709246D310F00FC3B27 /* TimeLineViewController.swift in Sources */,
+				1F4B76F9246D2F7700FC3B27 /* AppDelegate.swift in Sources */,
+				1F4B7716246D32C000FC3B27 /* ActivityViewController.swift in Sources */,
 				1F4B76E6246D2AC100FC3B27 /* SceneDelegate.swift in Sources */,
+				1F4B770E246D31FD00FC3B27 /* NewPostViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
