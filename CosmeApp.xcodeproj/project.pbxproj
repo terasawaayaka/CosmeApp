@@ -28,22 +28,16 @@
 		1F4B7721246E4F8F00FC3B27 /* CreateReviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B771F246E4F8F00FC3B27 /* CreateReviewViewController.xib */; };
 		1F4B7724246E4FBD00FC3B27 /* CreateReviewMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4B7722246E4FBD00FC3B27 /* CreateReviewMainView.swift */; };
 		1F4B7725246E4FBD00FC3B27 /* CreateReviewMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B7723246E4FBD00FC3B27 /* CreateReviewMainView.xib */; };
+		1F4B772A246E6B3300FC3B27 /* CreateMakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4B7728246E6B3300FC3B27 /* CreateMakeViewController.swift */; };
+		1F4B772B246E6B3300FC3B27 /* CreateMakeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B7729246E6B3300FC3B27 /* CreateMakeViewController.xib */; };
+		1F4B772E246E6B5A00FC3B27 /* CreateMakeMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4B772C246E6B5A00FC3B27 /* CreateMakeMainView.swift */; };
+		1F4B772F246E6B5A00FC3B27 /* CreateMakeMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B772D246E6B5A00FC3B27 /* CreateMakeMainView.xib */; };
+		1F4B7732246E7EC300FC3B27 /* ActivityMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4B7730246E7EC300FC3B27 /* ActivityMainView.swift */; };
+		1F4B7733246E7EC300FC3B27 /* ActivityMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B7731246E7EC300FC3B27 /* ActivityMainView.xib */; };
 		3F96651D246E2A7F0083EBC2 /* SearchTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F96651B246E2A7F0083EBC2 /* SearchTextView.swift */; };
 		3F96651E246E2A7F0083EBC2 /* SearchTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F96651C246E2A7F0083EBC2 /* SearchTextView.xib */; };
 		3F966521246E2B240083EBC2 /* SearchMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F96651F246E2B240083EBC2 /* SearchMainView.swift */; };
 		3F966522246E2B240083EBC2 /* SearchMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F966520246E2B240083EBC2 /* SearchMainView.xib */; };
-		5FA88A36246E271000B84ACE /* MyProfileMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA88A34246E271000B84ACE /* MyProfileMainView.swift */; };
-		5FA88A37246E271000B84ACE /* MyProfileMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FA88A35246E271000B84ACE /* MyProfileMainView.xib */; };
-		5FA88A3D246E3FA300B84ACE /* YourProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA88A3B246E3FA300B84ACE /* YourProfileViewController.swift */; };
-		5FA88A3E246E3FA300B84ACE /* YourProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FA88A3C246E3FA300B84ACE /* YourProfileViewController.xib */; };
-		5FA88A41246E3FE200B84ACE /* YourProfileMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA88A3F246E3FE200B84ACE /* YourProfileMainView.swift */; };
-		5FA88A42246E3FE200B84ACE /* YourProfileMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FA88A40246E3FE200B84ACE /* YourProfileMainView.xib */; };
-		5FA88A45246E402700B84ACE /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA88A43246E402700B84ACE /* EditProfileViewController.swift */; };
-		5FA88A46246E402700B84ACE /* EditProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FA88A44246E402700B84ACE /* EditProfileViewController.xib */; };
-		5FA88A49246E405900B84ACE /* EditProfileMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA88A47246E405900B84ACE /* EditProfileMainView.swift */; };
-		5FA88A4A246E405900B84ACE /* EditProfileMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FA88A48246E405900B84ACE /* EditProfileMainView.xib */; };
-		5FA88A52246E581F00B84ACE /* TodayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA88A50246E581F00B84ACE /* TodayCollectionViewCell.swift */; };
-		5FA88A53246E581F00B84ACE /* TodayCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FA88A51246E581F00B84ACE /* TodayCollectionViewCell.xib */; };
 		3F966527246E540C0083EBC2 /* TagSearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F966525246E540C0083EBC2 /* TagSearchResultViewController.swift */; };
 		3F966528246E540C0083EBC2 /* TagSearchResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F966526246E540C0083EBC2 /* TagSearchResultViewController.xib */; };
 		3F96652D246E544B0083EBC2 /* UserSearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F96652B246E544B0083EBC2 /* UserSearchResultViewController.swift */; };
@@ -62,6 +56,16 @@
 		3F966548246E56040083EBC2 /* BrandSearchResultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F966546246E56040083EBC2 /* BrandSearchResultView.xib */; };
 		5FA88A36246E271000B84ACE /* MyProfileMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA88A34246E271000B84ACE /* MyProfileMainView.swift */; };
 		5FA88A37246E271000B84ACE /* MyProfileMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FA88A35246E271000B84ACE /* MyProfileMainView.xib */; };
+		5FA88A3D246E3FA300B84ACE /* YourProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA88A3B246E3FA300B84ACE /* YourProfileViewController.swift */; };
+		5FA88A3E246E3FA300B84ACE /* YourProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FA88A3C246E3FA300B84ACE /* YourProfileViewController.xib */; };
+		5FA88A41246E3FE200B84ACE /* YourProfileMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA88A3F246E3FE200B84ACE /* YourProfileMainView.swift */; };
+		5FA88A42246E3FE200B84ACE /* YourProfileMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FA88A40246E3FE200B84ACE /* YourProfileMainView.xib */; };
+		5FA88A45246E402700B84ACE /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA88A43246E402700B84ACE /* EditProfileViewController.swift */; };
+		5FA88A46246E402700B84ACE /* EditProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FA88A44246E402700B84ACE /* EditProfileViewController.xib */; };
+		5FA88A49246E405900B84ACE /* EditProfileMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA88A47246E405900B84ACE /* EditProfileMainView.swift */; };
+		5FA88A4A246E405900B84ACE /* EditProfileMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FA88A48246E405900B84ACE /* EditProfileMainView.xib */; };
+		5FA88A52246E581F00B84ACE /* TodayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA88A50246E581F00B84ACE /* TodayCollectionViewCell.swift */; };
+		5FA88A53246E581F00B84ACE /* TodayCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FA88A51246E581F00B84ACE /* TodayCollectionViewCell.xib */; };
 		7226E7ADC4922F1C879ED00E /* Pods_CosmeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA8B8F6B83DFB7116173D325 /* Pods_CosmeApp.framework */; };
 		FF8509F1246E2870003E2ACF /* TimeLineMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8509EF246E2870003E2ACF /* TimeLineMainView.swift */; };
 		FF8509F2246E2870003E2ACF /* TimeLineMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF8509F0246E2870003E2ACF /* TimeLineMainView.xib */; };
@@ -114,22 +118,16 @@
 		1F4B771F246E4F8F00FC3B27 /* CreateReviewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateReviewViewController.xib; sourceTree = "<group>"; };
 		1F4B7722246E4FBD00FC3B27 /* CreateReviewMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReviewMainView.swift; sourceTree = "<group>"; };
 		1F4B7723246E4FBD00FC3B27 /* CreateReviewMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateReviewMainView.xib; sourceTree = "<group>"; };
+		1F4B7728246E6B3300FC3B27 /* CreateMakeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMakeViewController.swift; sourceTree = "<group>"; };
+		1F4B7729246E6B3300FC3B27 /* CreateMakeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateMakeViewController.xib; sourceTree = "<group>"; };
+		1F4B772C246E6B5A00FC3B27 /* CreateMakeMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMakeMainView.swift; sourceTree = "<group>"; };
+		1F4B772D246E6B5A00FC3B27 /* CreateMakeMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateMakeMainView.xib; sourceTree = "<group>"; };
+		1F4B7730246E7EC300FC3B27 /* ActivityMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityMainView.swift; sourceTree = "<group>"; };
+		1F4B7731246E7EC300FC3B27 /* ActivityMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityMainView.xib; sourceTree = "<group>"; };
 		3F96651B246E2A7F0083EBC2 /* SearchTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextView.swift; sourceTree = "<group>"; };
 		3F96651C246E2A7F0083EBC2 /* SearchTextView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTextView.xib; sourceTree = "<group>"; };
 		3F96651F246E2B240083EBC2 /* SearchMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMainView.swift; sourceTree = "<group>"; };
 		3F966520246E2B240083EBC2 /* SearchMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchMainView.xib; sourceTree = "<group>"; };
-		5FA88A34246E271000B84ACE /* MyProfileMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileMainView.swift; sourceTree = "<group>"; };
-		5FA88A35246E271000B84ACE /* MyProfileMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyProfileMainView.xib; sourceTree = "<group>"; };
-		5FA88A3B246E3FA300B84ACE /* YourProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourProfileViewController.swift; sourceTree = "<group>"; };
-		5FA88A3C246E3FA300B84ACE /* YourProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YourProfileViewController.xib; sourceTree = "<group>"; };
-		5FA88A3F246E3FE200B84ACE /* YourProfileMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourProfileMainView.swift; sourceTree = "<group>"; };
-		5FA88A40246E3FE200B84ACE /* YourProfileMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YourProfileMainView.xib; sourceTree = "<group>"; };
-		5FA88A43246E402700B84ACE /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
-		5FA88A44246E402700B84ACE /* EditProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileViewController.xib; sourceTree = "<group>"; };
-		5FA88A47246E405900B84ACE /* EditProfileMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileMainView.swift; sourceTree = "<group>"; };
-		5FA88A48246E405900B84ACE /* EditProfileMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileMainView.xib; sourceTree = "<group>"; };
-		5FA88A50246E581F00B84ACE /* TodayCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCollectionViewCell.swift; sourceTree = "<group>"; };
-		5FA88A51246E581F00B84ACE /* TodayCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodayCollectionViewCell.xib; sourceTree = "<group>"; };
 		3F966525246E540C0083EBC2 /* TagSearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagSearchResultViewController.swift; sourceTree = "<group>"; };
 		3F966526246E540C0083EBC2 /* TagSearchResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagSearchResultViewController.xib; sourceTree = "<group>"; };
 		3F96652B246E544B0083EBC2 /* UserSearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchResultViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +146,16 @@
 		3F966546246E56040083EBC2 /* BrandSearchResultView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BrandSearchResultView.xib; sourceTree = "<group>"; };
 		5FA88A34246E271000B84ACE /* MyProfileMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileMainView.swift; sourceTree = "<group>"; };
 		5FA88A35246E271000B84ACE /* MyProfileMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyProfileMainView.xib; sourceTree = "<group>"; };
+		5FA88A3B246E3FA300B84ACE /* YourProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourProfileViewController.swift; sourceTree = "<group>"; };
+		5FA88A3C246E3FA300B84ACE /* YourProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YourProfileViewController.xib; sourceTree = "<group>"; };
+		5FA88A3F246E3FE200B84ACE /* YourProfileMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourProfileMainView.swift; sourceTree = "<group>"; };
+		5FA88A40246E3FE200B84ACE /* YourProfileMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YourProfileMainView.xib; sourceTree = "<group>"; };
+		5FA88A43246E402700B84ACE /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		5FA88A44246E402700B84ACE /* EditProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileViewController.xib; sourceTree = "<group>"; };
+		5FA88A47246E405900B84ACE /* EditProfileMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileMainView.swift; sourceTree = "<group>"; };
+		5FA88A48246E405900B84ACE /* EditProfileMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileMainView.xib; sourceTree = "<group>"; };
+		5FA88A50246E581F00B84ACE /* TodayCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCollectionViewCell.swift; sourceTree = "<group>"; };
+		5FA88A51246E581F00B84ACE /* TodayCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodayCollectionViewCell.xib; sourceTree = "<group>"; };
 		BA8B8F6B83DFB7116173D325 /* Pods_CosmeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CosmeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F159956426546549A41B2D4D /* Pods-CosmeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CosmeApp.release.xcconfig"; path = "Target Support Files/Pods-CosmeApp/Pods-CosmeApp.release.xcconfig"; sourceTree = "<group>"; };
 		FF8509EF246E2870003E2ACF /* TimeLineMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineMainView.swift; sourceTree = "<group>"; };
@@ -249,6 +257,7 @@
 		1F4B7700246D306100FC3B27 /* Post */ = {
 			isa = PBXGroup;
 			children = (
+				1F4B7727246E6A7600FC3B27 /* Make */,
 				1F4B771D246E4F6200FC3B27 /* Review */,
 				1F4B771C246E4F5100FC3B27 /* NewPost */,
 			);
@@ -274,6 +283,8 @@
 			children = (
 				1F4B7714246D32C000FC3B27 /* ActivityViewController.swift */,
 				1F4B7715246D32C000FC3B27 /* ActivityViewController.xib */,
+				1F4B7730246E7EC300FC3B27 /* ActivityMainView.swift */,
+				1F4B7731246E7EC300FC3B27 /* ActivityMainView.xib */,
 			);
 			path = Activity;
 			sourceTree = "<group>";
@@ -298,6 +309,17 @@
 				1F4B7723246E4FBD00FC3B27 /* CreateReviewMainView.xib */,
 			);
 			path = Review;
+			sourceTree = "<group>";
+		};
+		1F4B7727246E6A7600FC3B27 /* Make */ = {
+			isa = PBXGroup;
+			children = (
+				1F4B7728246E6B3300FC3B27 /* CreateMakeViewController.swift */,
+				1F4B7729246E6B3300FC3B27 /* CreateMakeViewController.xib */,
+				1F4B772C246E6B5A00FC3B27 /* CreateMakeMainView.swift */,
+				1F4B772D246E6B5A00FC3B27 /* CreateMakeMainView.xib */,
+			);
+			path = Make;
 			sourceTree = "<group>";
 		};
 		3F966524246E53B40083EBC2 /* Search result */ = {
@@ -534,6 +556,8 @@
 				1F4B76F0246D2AE100FC3B27 /* LaunchScreen.storyboard in Resources */,
 				1F4B7721246E4F8F00FC3B27 /* CreateReviewViewController.xib in Resources */,
 				1F4B770F246D31FD00FC3B27 /* NewPostViewController.xib in Resources */,
+				1F4B772B246E6B3300FC3B27 /* CreateMakeViewController.xib in Resources */,
+				1F4B772F246E6B5A00FC3B27 /* CreateMakeMainView.xib in Resources */,
 				3F966528246E540C0083EBC2 /* TagSearchResultViewController.xib in Resources */,
 				3F96652E246E544B0083EBC2 /* UserSearchResultViewController.xib in Resources */,
 				FFD02825246E3866009EE2E4 /* TimeLineMainCollectionViewCell.xib in Resources */,
@@ -566,6 +590,7 @@
 				FFD02821246E3745009EE2E4 /* TimeLineMainTableViewSecondCell.xib in Resources */,
 				FF850A07246E29F4003E2ACF /* MakeDetailMainView.xib in Resources */,
 				FFEA536C246E317700694E1C /* TimeLineMainTableViewCell.xib in Resources */,
+				1F4B7733246E7EC300FC3B27 /* ActivityMainView.xib in Resources */,
 				3F966538246E54C90083EBC2 /* BrandSearchResultViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -631,6 +656,7 @@
 				5FA88A41246E3FE200B84ACE /* YourProfileMainView.swift in Sources */,
 				3F966521246E2B240083EBC2 /* SearchMainView.swift in Sources */,
 				1F4B7720246E4F8F00FC3B27 /* CreateReviewViewController.swift in Sources */,
+				1F4B772A246E6B3300FC3B27 /* CreateMakeViewController.swift in Sources */,
 				3F966543246E55BD0083EBC2 /* ProductNameSearchResultView.swift in Sources */,
 				3F96651D246E2A7F0083EBC2 /* SearchTextView.swift in Sources */,
 				5FA88A3D246E3FA300B84ACE /* YourProfileViewController.swift in Sources */,
@@ -639,6 +665,7 @@
 				3F966537246E54C90083EBC2 /* BrandSearchResultViewController.swift in Sources */,
 				FF850A16246E2BC2003E2ACF /* EditMakeMainView.swift in Sources */,
 				5FA88A49246E405900B84ACE /* EditProfileMainView.swift in Sources */,
+				1F4B7732246E7EC300FC3B27 /* ActivityMainView.swift in Sources */,
 				1F4B7709246D310F00FC3B27 /* TimeLineViewController.swift in Sources */,
 				1F4B76F9246D2F7700FC3B27 /* AppDelegate.swift in Sources */,
 				1F4B7716246D32C000FC3B27 /* ActivityViewController.swift in Sources */,
@@ -655,6 +682,7 @@
 				3F96653B246E552A0083EBC2 /* TagSearchResultMainView.swift in Sources */,
 				FFD02824246E3866009EE2E4 /* TimeLineMainCollectionViewCell.swift in Sources */,
 				FFD02820246E3745009EE2E4 /* TimeLineMainTableViewSecondCell.swift in Sources */,
+				1F4B772E246E6B5A00FC3B27 /* CreateMakeMainView.swift in Sources */,
 				FFEA536B246E317700694E1C /* TimeLineMainTableViewCell.swift in Sources */,
 				FF850A02246E29BC003E2ACF /* MakeDetailViewController.swift in Sources */,
 			);
