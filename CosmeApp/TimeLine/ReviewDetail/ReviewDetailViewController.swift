@@ -10,7 +10,7 @@ import UIKit
 
 import PGFramework
 // MARK: - Property
-class ReviewDetailViewController: baseViewController {
+class ReviewDetailViewController: BaseViewController {
 }
 // MARK: - Life cycle
 extension ReviewDetailViewController {

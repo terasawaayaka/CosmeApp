@@ -14,7 +14,7 @@ protocol EditReviewMainViewDelegate: NSObjectProtocol{
 extension EditReviewMainViewDelegate {
 }
 // MARK: - Property
-class EditReviewMainView: baseView {
+class EditReviewMainView: BaseView {
     weak var delegate: EditReviewMainViewDelegate? = nil
 }
 // MARK: - Life cycle

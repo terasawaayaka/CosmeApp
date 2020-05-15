@@ -9,12 +9,13 @@
 import UIKit
 
 import PGFramework
+
 protocol ReviewDetailMainViewDelegate: NSObjectProtocol{
 }
 extension ReviewDetailMainViewDelegate {
 }
 // MARK: - Property
-class ReviewDetailMainView: baseView {
+class ReviewDetailMainView: BaseView {
     weak var delegate: ReviewDetailMainViewDelegate? = nil
 }
 // MARK: - Life cycle
