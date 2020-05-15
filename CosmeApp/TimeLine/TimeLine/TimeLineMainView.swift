@@ -10,6 +10,7 @@ import UIKit
 
 import PGFramework
 protocol TimeLineMainViewDelegate: NSObjectProtocol{
+    func didSelectRowAt()
 }
 extension TimeLineMainViewDelegate {
 }
@@ -45,10 +46,17 @@ extension TimeLineMainView :UITableViewDataSource{
         }
     }
 }
+
+extension TimeLineMainView :UITableViewDelegate{
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let delegate = delegate{delegate.didSelectRowAt()}
+    }
+}
 // MARK: - method
 extension TimeLineMainView {
     func setDelegate(){
         tableView.dataSource = self
+        tableView.delegate = self
     }
     
 }
