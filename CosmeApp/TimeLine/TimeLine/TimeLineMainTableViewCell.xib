@@ -14,7 +14,34 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kgz-FE-jHP" id="vLg-Om-rs4">
                 <rect key="frame" x="0.0" y="0.0" width="414" height="98"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="blE-Fh-R3J">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="100" id="Kuv-88-D4q"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="52G-Wj-jJk">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="blE-Fh-R3J" firstAttribute="leading" secondItem="vLg-Om-rs4" secondAttribute="leading" id="3HW-Vn-Oja"/>
+                    <constraint firstItem="blE-Fh-R3J" firstAttribute="top" secondItem="vLg-Om-rs4" secondAttribute="top" id="3rd-vL-lpf"/>
+                    <constraint firstAttribute="bottom" secondItem="blE-Fh-R3J" secondAttribute="bottom" id="Rao-AC-kA9"/>
+                    <constraint firstAttribute="bottom" secondItem="blE-Fh-R3J" secondAttribute="bottom" id="VL8-1y-5Ie"/>
+                    <constraint firstAttribute="trailing" secondItem="blE-Fh-R3J" secondAttribute="trailing" id="aFw-yc-zaI"/>
+                </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="collectionView" destination="blE-Fh-R3J" id="rVJ-JN-dJ5"/>
+                <outlet property="collectionViewFlowLayout" destination="52G-Wj-jJk" id="Fvi-Df-I66"/>
+            </connections>
             <point key="canvasLocation" x="111.59420289855073" y="-56.919642857142854"/>
         </tableViewCell>
     </objects>

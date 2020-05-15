@@ -11,11 +11,15 @@ import UIKit
 import PGFramework
 // MARK: - Property
 class CreateReviewViewController: BaseViewController {
+    @IBOutlet weak var headerView: HeaderView!
+    @IBOutlet weak var mainView: CreateReviewMainView!
 }
 // MARK: - Life cycle
 extension CreateReviewViewController {
     override func loadView() {
         super.loadView()
+        setHeaderView()
+        setDelegate()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +29,47 @@ extension CreateReviewViewController {
     }
 }
 // MARK: - Protocol
-extension CreateReviewViewController {
+extension CreateReviewViewController:HeaderViewDelegate {
+    func touchedLeftButton(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+        animatorManager.navigationType = .slide_pop
+    }
+    func touchedRightButton(_ sender: UIButton) {
+        //todo
+    }
+}
+extension CreateReviewViewController:CreateReviewMainViewDelegate {
+    func touchedAddImageButton() {
+        //todo
+    }
+    func firstStarButton() {
+        //todo
+    }
+    func secondStarButton() {
+        //todo
+    }
+    
+    func thirdStarButton() {
+        //todo
+    }
+    
+    func fourthStarButton() {
+        //todo
+    }
+    
+    func fifthStarButton() {
+        //todo
+    }
 }
 // MARK: - method
 extension CreateReviewViewController {
+    func setHeaderView() {
+        headerView.setLeft(text: "戻る", fontSize: 16, color: UIColor.blue)
+        headerView.setCenter(text: "新規レビュー", fontSize: 19, color: UIColor.black)
+        headerView.setRight(text: "シェア", fontSize: 16, color: UIColor.blue)
+    }
+    func setDelegate() {
+        headerView.delegate = self
+        mainView.delegate = self
+    }
 }
