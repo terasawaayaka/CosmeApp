@@ -11,6 +11,7 @@ import UIKit
 import PGFramework
 // MARK: - Property
 class CreateReviewViewController: BaseViewController {
+    @IBOutlet weak var headerView: HeaderView!
 }
 // MARK: - Life cycle
 extension CreateReviewViewController {
