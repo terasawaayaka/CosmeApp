@@ -22,6 +22,10 @@
 		1F4B7713246D329300FC3B27 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B7711246D329300FC3B27 /* SearchViewController.xib */; };
 		1F4B7716246D32C000FC3B27 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4B7714246D32C000FC3B27 /* ActivityViewController.swift */; };
 		1F4B7717246D32C000FC3B27 /* ActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B7715246D32C000FC3B27 /* ActivityViewController.xib */; };
+		3F96651D246E2A7F0083EBC2 /* SearchTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F96651B246E2A7F0083EBC2 /* SearchTextView.swift */; };
+		3F96651E246E2A7F0083EBC2 /* SearchTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F96651C246E2A7F0083EBC2 /* SearchTextView.xib */; };
+		3F966521246E2B240083EBC2 /* SearchMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F96651F246E2B240083EBC2 /* SearchMainView.swift */; };
+		3F966522246E2B240083EBC2 /* SearchMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F966520246E2B240083EBC2 /* SearchMainView.xib */; };
 		1F4B771A246E25CF00FC3B27 /* NewPostMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4B7718246E25CF00FC3B27 /* NewPostMainView.swift */; };
 		1F4B771B246E25CF00FC3B27 /* NewPostMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B7719246E25CF00FC3B27 /* NewPostMainView.xib */; };
 		7226E7ADC4922F1C879ED00E /* Pods_CosmeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA8B8F6B83DFB7116173D325 /* Pods_CosmeApp.framework */; };
@@ -64,6 +68,10 @@
 		1F4B7711246D329300FC3B27 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		1F4B7714246D32C000FC3B27 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		1F4B7715246D32C000FC3B27 /* ActivityViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityViewController.xib; sourceTree = "<group>"; };
+		3F96651B246E2A7F0083EBC2 /* SearchTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextView.swift; sourceTree = "<group>"; };
+		3F96651C246E2A7F0083EBC2 /* SearchTextView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTextView.xib; sourceTree = "<group>"; };
+		3F96651F246E2B240083EBC2 /* SearchMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMainView.swift; sourceTree = "<group>"; };
+		3F966520246E2B240083EBC2 /* SearchMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchMainView.xib; sourceTree = "<group>"; };
 		1F4B7718246E25CF00FC3B27 /* NewPostMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostMainView.swift; sourceTree = "<group>"; };
 		1F4B7719246E25CF00FC3B27 /* NewPostMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewPostMainView.xib; sourceTree = "<group>"; };
 		BA8B8F6B83DFB7116173D325 /* Pods_CosmeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CosmeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -173,6 +181,10 @@
 			children = (
 				1F4B7710246D329300FC3B27 /* SearchViewController.swift */,
 				1F4B7711246D329300FC3B27 /* SearchViewController.xib */,
+				3F96651F246E2B240083EBC2 /* SearchMainView.swift */,
+				3F966520246E2B240083EBC2 /* SearchMainView.xib */,
+				3F96651B246E2A7F0083EBC2 /* SearchTextView.swift */,
+				3F96651C246E2A7F0083EBC2 /* SearchTextView.xib */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -310,6 +322,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F96651E246E2A7F0083EBC2 /* SearchTextView.xib in Resources */,
+				3F966522246E2B240083EBC2 /* SearchMainView.xib in Resources */,
 				1F4B76F0246D2AE100FC3B27 /* LaunchScreen.storyboard in Resources */,
 				1F4B770F246D31FD00FC3B27 /* NewPostViewController.xib in Resources */,
 				1F4B76ED246D2AE100FC3B27 /* Assets.xcassets in Resources */,
@@ -386,6 +400,8 @@
 				FF850A12246E2B3C003E2ACF /* EditMakeViewController.swift in Sources */,
 				1F4B7712246D329300FC3B27 /* SearchViewController.swift in Sources */,
 				1F4B7705246D30D900FC3B27 /* MyProfileViewController.swift in Sources */,
+				3F966521246E2B240083EBC2 /* SearchMainView.swift in Sources */,
+				3F96651D246E2A7F0083EBC2 /* SearchTextView.swift in Sources */,
 				FF850A16246E2BC2003E2ACF /* EditMakeMainView.swift in Sources */,
 				1F4B7709246D310F00FC3B27 /* TimeLineViewController.swift in Sources */,
 				1F4B76F9246D2F7700FC3B27 /* AppDelegate.swift in Sources */,

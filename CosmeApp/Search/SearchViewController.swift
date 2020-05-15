@@ -11,6 +11,8 @@ import UIKit
 import PGFramework
 // MARK: - Property
 class SearchViewController: BaseViewController {
+    @IBOutlet weak var searchTextView: SearchTextView!
+    @IBOutlet weak var mainView: SearchMainView!
 }
 // MARK: - Life cycle
 extension SearchViewController {
