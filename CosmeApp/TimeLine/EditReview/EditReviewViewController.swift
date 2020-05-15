@@ -10,8 +10,9 @@ import UIKit
 
 import PGFramework
 // MARK: - Property
-class EditReviewViewController: BaseViewControler {
+class EditReviewViewController: BaseViewController {
 }
+
 // MARK: - Life cycle
 extension EditReviewViewController {
     override func loadView() {
