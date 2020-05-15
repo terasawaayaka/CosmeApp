@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateReviewViewController" customModule="CosmeApp" customModuleProvider="target">
             <connections>
                 <outlet property="headerView" destination="kPq-z4-zwH" id="adI-3k-eJ4"/>
+                <outlet property="mainView" destination="lhH-ZY-XOp" id="Wbp-8j-n9b"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -25,11 +26,19 @@
                         <constraint firstAttribute="height" constant="48" id="jMq-DA-9Bg"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lhH-ZY-XOp" customClass="CreateReviewMainView" customModule="CosmeApp" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="92" width="414" height="770"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </view>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kPq-z4-zwH" secondAttribute="trailing" id="2em-TD-pzm"/>
                 <constraint firstItem="kPq-z4-zwH" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="BI7-2y-HWO"/>
+                <constraint firstItem="lhH-ZY-XOp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Bup-eS-J22"/>
+                <constraint firstItem="lhH-ZY-XOp" firstAttribute="top" secondItem="kPq-z4-zwH" secondAttribute="bottom" id="C7b-IR-wUD"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="lhH-ZY-XOp" secondAttribute="bottom" id="L3h-i8-SdD"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lhH-ZY-XOp" secondAttribute="trailing" id="NMX-2r-1rM"/>
                 <constraint firstItem="kPq-z4-zwH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="sGi-GF-T2u"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

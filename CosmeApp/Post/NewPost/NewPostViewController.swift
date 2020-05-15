@@ -32,7 +32,9 @@ extension NewPostViewController {
 // MARK: - Protocol
 extension NewPostViewController:NewPostMainViewDelegate {
     func touchedReviewButton() {
-        //todo
+        let createReviewController = CreateReviewViewController()
+        navigationController?.pushViewController(createReviewController, animated: true)
+        animatorManager.navigationType = .slide_push
     }
     func touchedMakeButton() {
         //todo
