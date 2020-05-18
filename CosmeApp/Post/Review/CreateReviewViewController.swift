@@ -35,7 +35,9 @@ extension CreateReviewViewController:HeaderViewDelegate {
         animatorManager.navigationType = .slide_pop
     }
     func touchedRightButton(_ sender: UIButton) {
-        //todo
+        let timeLineViewController = TimeLineViewController()
+        navigationController?.pushViewController(timeLineViewController, animated: true)
+        animatorManager.navigationType = .pop
     }
 }
 extension CreateReviewViewController:CreateReviewMainViewDelegate {
