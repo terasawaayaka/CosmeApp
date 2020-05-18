@@ -38,7 +38,10 @@ extension CreateMakeViewController:HeaderViewDelegate {
         //todo
     }
 }
-extension CreateMakeViewController {
+extension CreateMakeViewController:CreateMakeMainViewDelegate {
+    func touchedAddImageButton() {
+        //todo
+    }
 }
 // MARK: - method
 extension CreateMakeViewController {
@@ -49,5 +52,6 @@ extension CreateMakeViewController {
     }
     func setDelegate() {
         headerView.delegate = self
+        mainView.delegate = self
     }
 }
