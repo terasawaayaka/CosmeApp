@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MakeDetailMainView" customModule="CosmeApp" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vGF-Yv-JIV">
+                    <rect key="frame" x="10" y="54" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="0NM-eo-lY2"/>
+                        <constraint firstAttribute="width" secondItem="vGF-Yv-JIV" secondAttribute="height" multiplier="1:1" id="2Q2-bl-XSh"/>
+                    </constraints>
+                    <state key="normal" image="person.circle" catalog="system"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sAS-lv-LFd">
+                    <rect key="frame" x="80" y="74" width="81" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="47t-17-vcQ">
+                    <rect key="frame" x="0.0" y="115" width="414" height="414"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="47t-17-vcQ" secondAttribute="height" multiplier="1:1" id="DNJ-hZ-5a8"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="使った化粧品" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPf-wz-yx4">
+                    <rect key="frame" x="20" y="549" width="104" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="プロセス" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ouR-Rl-UUc">
+                    <rect key="frame" x="20" y="610.5" width="70" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="〜〜〜〜〜〜〜〜〜〜〜" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BBS-TC-heX">
+                    <rect key="frame" x="30" y="580" width="354" height="20.5"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="xNq-Sl-aZ3"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="〜〜〜〜〜〜〜〜〜〜〜" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ee-VQ-CE0">
+                    <rect key="frame" x="30" y="641.5" width="374" height="20.5"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="3Iy-iR-qfG"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MwT-Ol-2aB">
+                    <rect key="frame" x="0.0" y="115" width="414" height="414"/>
+                    <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="MwT-Ol-2aB" secondAttribute="height" multiplier="1:1" id="oRU-gm-i3t"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="BBS-TC-heX" secondAttribute="trailing" constant="30" id="0j6-16-Q81"/>
+                <constraint firstItem="MwT-Ol-2aB" firstAttribute="top" secondItem="vGF-Yv-JIV" secondAttribute="bottom" constant="1" id="1hR-4s-uAU"/>
+                <constraint firstItem="sAS-lv-LFd" firstAttribute="leading" secondItem="vGF-Yv-JIV" secondAttribute="trailing" constant="10" id="24P-H8-98k"/>
+                <constraint firstItem="bPf-wz-yx4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="5ef-kX-jA5"/>
+                <constraint firstItem="ouR-Rl-UUc" firstAttribute="top" secondItem="BBS-TC-heX" secondAttribute="bottom" constant="10" id="7aS-uk-rJb"/>
+                <constraint firstItem="bPf-wz-yx4" firstAttribute="top" secondItem="47t-17-vcQ" secondAttribute="bottom" constant="20" id="IRc-Yq-C0Y"/>
+                <constraint firstItem="47t-17-vcQ" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="M8B-uI-HAY"/>
+                <constraint firstItem="47t-17-vcQ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="PUq-J3-aqD"/>
+                <constraint firstItem="5ee-VQ-CE0" firstAttribute="top" secondItem="ouR-Rl-UUc" secondAttribute="bottom" constant="10" id="aHH-wu-dT9"/>
+                <constraint firstItem="vGF-Yv-JIV" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="d6j-ra-Kbz"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5ee-VQ-CE0" secondAttribute="trailing" constant="10" id="gSZ-Zu-kG5"/>
+                <constraint firstItem="vGF-Yv-JIV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="kqB-Nc-OhO"/>
+                <constraint firstItem="BBS-TC-heX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="kxS-t4-na9"/>
+                <constraint firstItem="MwT-Ol-2aB" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="l9n-NK-iyj"/>
+                <constraint firstItem="5ee-VQ-CE0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="q1z-aW-Gcv"/>
+                <constraint firstItem="ouR-Rl-UUc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="rhA-Mp-e7A"/>
+                <constraint firstItem="MwT-Ol-2aB" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="tkl-f7-VO5"/>
+                <constraint firstItem="BBS-TC-heX" firstAttribute="top" secondItem="bPf-wz-yx4" secondAttribute="bottom" constant="10" id="ugH-lg-s9a"/>
+                <constraint firstItem="47t-17-vcQ" firstAttribute="top" secondItem="sAS-lv-LFd" secondAttribute="bottom" constant="20" id="ysx-bI-rF9"/>
+                <constraint firstItem="sAS-lv-LFd" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="z6O-wK-UuG"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="132.58928571428572"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="person.circle" catalog="system" width="128" height="121"/>
+    </resources>
+</document>
