@@ -9,10 +9,16 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchMainView" customModule="CosmeApp" customModuleProvider="target">
             <connections>
+                <outlet property="brandResultView" destination="63M-T8-pMZ" id="E4Y-Q4-o7f"/>
+                <outlet property="productNameResultView" destination="7IA-Oi-ULz" id="gNk-80-dJO"/>
+                <outlet property="searchCategoryButtonView" destination="00x-zD-qMy" id="yOe-H0-I7Q"/>
+                <outlet property="searchResultMainView" destination="Fhv-7i-Ol0" id="I1e-w2-vbL"/>
+                <outlet property="tagResultView" destination="1Ut-cb-vK8" id="Nwb-Of-n0z"/>
                 <outlet property="touchedProductNameButton" destination="ojC-1g-34m" id="ZDt-Na-QyL"/>
                 <outlet property="touchedTagButton" destination="o20-fw-gGm" id="neV-Ve-TLR"/>
                 <outlet property="touchedUserButton" destination="Wdr-Ok-Orj" id="qic-nV-WSc"/>
                 <outlet property="touchedbrandButton" destination="DgT-yx-KBZ" id="5bl-Hv-lWW"/>
+                <outlet property="userResultView" destination="iig-gC-uYj" id="cQD-NZ-0yM"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -31,24 +37,36 @@
                                     <state key="normal" title="　タグ　">
                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
+                                    <connections>
+                                        <action selector="touchedTagButton:" destination="-1" eventType="touchUpInside" id="s7x-pw-THB"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wdr-Ok-Orj">
                                     <rect key="frame" x="102" y="10" width="92" height="30"/>
                                     <state key="normal" title="　ユーザー　">
                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
+                                    <connections>
+                                        <action selector="touchedUserButton:" destination="-1" eventType="touchUpInside" id="ISI-Gh-7n0"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ojC-1g-34m">
                                     <rect key="frame" x="214" y="10" width="77" height="30"/>
                                     <state key="normal" title="　商品名　">
                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
+                                    <connections>
+                                        <action selector="touchedProductNameButton:" destination="-1" eventType="touchUpInside" id="axp-iX-cl6"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DgT-yx-KBZ">
                                     <rect key="frame" x="311" y="10" width="92" height="30"/>
                                     <state key="normal" title="　ブランド　">
                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
+                                    <connections>
+                                        <action selector="touchedBrandButton:" destination="-1" eventType="touchUpInside" id="CrE-01-dHm"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" red="1" green="0.82663194559999997" blue="0.99836927620000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -64,11 +82,31 @@
                                 <constraint firstAttribute="height" constant="50" id="wcy-tw-rnS"/>
                             </constraints>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fhv-7i-Ol0">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Ut-cb-vK8" customClass="TagSearchResultMainView" customModule="CosmeApp" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="50" width="414" height="0.0"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iig-gC-uYj" customClass="UserSearchResultMainView" customModule="CosmeApp" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="50" width="414" height="0.0"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7IA-Oi-ULz" customClass="ProductNameSearchResultView" customModule="CosmeApp" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="50" width="414" height="0.0"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="63M-T8-pMZ" customClass="BrandSearchResultView" customModule="CosmeApp" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="50" width="414" height="0.0"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fhv-7i-Ol0" customClass="SearchResultMainView" customModule="CosmeApp" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="50" width="414" height="768"/>
                             <color key="backgroundColor" red="0.81445341510000002" green="0.59481206750000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </view>
                     </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="Fhv-7i-Ol0" secondAttribute="bottom" id="0dk-qM-zsr"/>
+                        <constraint firstItem="Fhv-7i-Ol0" firstAttribute="top" secondItem="00x-zD-qMy" secondAttribute="bottom" id="O5N-6q-5Tr"/>
+                    </constraints>
                 </stackView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

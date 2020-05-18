@@ -37,7 +37,9 @@ extension NewPostViewController:NewPostMainViewDelegate {
         animatorManager.navigationType = .slide_push
     }
     func touchedMakeButton() {
-        //todo
+        let createMakeViewController = CreateMakeViewController()
+        navigationController?.pushViewController(createMakeViewController, animated: true)
+        animatorManager.navigationType = .slide_push
     }
 }
 // MARK: - method

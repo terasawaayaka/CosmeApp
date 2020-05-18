@@ -9,21 +9,61 @@
 import UIKit
 import PGFramework
 protocol SearchMainViewDelegate: NSObjectProtocol{
+    func touchedTagButton()
+    func touchedUserButton()
+    func touchedProductNameButton()
+    func touchedBrandButton()
 }
 extension SearchMainViewDelegate {
 }
 // MARK: - Property
 class SearchMainView: BaseView {
     weak var delegate: SearchMainViewDelegate? = nil
+    //検索ジャンルを変えるボタンのあるview
+    @IBOutlet weak var searchCategoryButtonView: UIView!
+    
+    //検索結果の画面を変えるためのボタン
     @IBOutlet weak var touchedTagButton: UIButton!
     @IBOutlet weak var touchedUserButton: UIButton!
     @IBOutlet weak var touchedProductNameButton: UIButton!
     @IBOutlet weak var touchedbrandButton: UIButton!
+    
+    //検索結果画面のview
+    @IBOutlet weak var searchResultMainView: SearchResultMainView!
+    @IBOutlet weak var tagResultView: TagSearchResultMainView!
+    @IBOutlet weak var userResultView: UserSearchResultMainView!
+    @IBOutlet weak var productNameResultView: ProductNameSearchResultView!
+    @IBOutlet weak var brandResultView: BrandSearchResultView!
+    
+    
+    //Action
+    @IBAction func touchedTagButton(_ sender: UIButton) {
+        if let delegate = delegate {
+            delegate.touchedTagButton()}
+    }
+    @IBAction func touchedUserButton(_ sender: UIButton) {
+        if let delegate = delegate {
+            delegate.touchedUserButton()}
+    }
+    @IBAction func touchedProductNameButton(_ sender: UIButton) {
+        if let delegate = delegate {
+            delegate.touchedProductNameButton()}
+    }
+    @IBAction func touchedBrandButton(_ sender: UIButton) {
+        if let delegate = delegate {
+            delegate.touchedBrandButton()}
+    }
 }
 // MARK: - Life cycle
 extension SearchMainView {
     override func awakeFromNib() {
         super.awakeFromNib()
+        searchResultMainView.isHidden = false
+        searchCategoryButtonView.isHidden = true
+        tagResultView.isHidden = true
+        userResultView.isHidden = true
+        productNameResultView.isHidden = true
+        brandResultView.isHidden = true
         setLayout()
     }
 }

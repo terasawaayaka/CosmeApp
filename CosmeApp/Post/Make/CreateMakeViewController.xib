@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReviewDetailViewController" customModule="CosmeApp" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateMakeViewController" customModule="CosmeApp" customModuleProvider="target">
             <connections>
-                <outlet property="headerView" destination="i73-a6-Dhy" id="jd5-4U-E1c"/>
-                <outlet property="mainView" destination="IrC-Qd-4sV" id="3Gq-K4-xBd"/>
+                <outlet property="headerView" destination="Hae-Z0-I5E" id="0nB-gn-0D7"/>
+                <outlet property="mainView" destination="D44-X0-RwD" id="awJ-3J-3Nn"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,27 +19,27 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i73-a6-Dhy" customClass="HeaderView" customModule="PGFramework">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hae-Z0-I5E" customClass="HeaderView" customModule="PGFramework">
                     <rect key="frame" x="0.0" y="44" width="414" height="48"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="48" id="O68-g0-sJy"/>
+                        <constraint firstAttribute="height" constant="48" id="ANH-nG-2Zg"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IrC-Qd-4sV" customClass="ReviewDetailMainView" customModule="CosmeApp" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D44-X0-RwD" customClass="CreateMakeMainView" customModule="CosmeApp" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="92" width="414" height="770"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </view>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="IrC-Qd-4sV" secondAttribute="trailing" id="8B7-xD-gYU"/>
-                <constraint firstItem="IrC-Qd-4sV" firstAttribute="top" secondItem="i73-a6-Dhy" secondAttribute="bottom" id="Aj7-nW-AFN"/>
-                <constraint firstItem="IrC-Qd-4sV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Ltb-DS-1TB"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="i73-a6-Dhy" secondAttribute="trailing" id="Yq1-TE-bA8"/>
-                <constraint firstItem="i73-a6-Dhy" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="nIA-1b-gvU"/>
-                <constraint firstItem="i73-a6-Dhy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="nwE-KM-grT"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="IrC-Qd-4sV" secondAttribute="bottom" id="p55-2k-cJx"/>
+                <constraint firstItem="Hae-Z0-I5E" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="2fT-r8-Txf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Hae-Z0-I5E" secondAttribute="trailing" id="DcB-PF-iY4"/>
+                <constraint firstItem="D44-X0-RwD" firstAttribute="top" secondItem="Hae-Z0-I5E" secondAttribute="bottom" id="Pqn-Or-S6S"/>
+                <constraint firstItem="Hae-Z0-I5E" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="aJy-rs-5kR"/>
+                <constraint firstItem="D44-X0-RwD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="byr-QB-J0w"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="D44-X0-RwD" secondAttribute="trailing" id="h2y-Fn-VRA"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="D44-X0-RwD" secondAttribute="bottom" id="jCv-BR-ATf"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="139" y="107"/>
