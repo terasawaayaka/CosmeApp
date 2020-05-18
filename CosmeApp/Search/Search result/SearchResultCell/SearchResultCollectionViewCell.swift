@@ -7,24 +7,27 @@
 //
 
 import UIKit
-
-class SearchResultCollectionViewCell: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+import PGFramework
+protocol SearchResultCollectionViewCellDelegate: NSObjectProtocol{
 }
+extension SearchResultCollectionViewCellDelegate {
+}
+// MARK: - Property
+class SearchResultCollectionViewCell: BaseCollectionViewCell {
+    weak var delegate: SearchResultCollectionViewCellDelegate? = nil
+    @IBOutlet weak var imaveView: UIImageView!
+    @IBOutlet weak var productNameLabel: NSLayoutConstraint!
+}
+// MARK: - Life cycle
+extension SearchResultCollectionViewCell {
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+}
+// MARK: - Protocol
+extension SearchResultCollectionViewCell {
+}
+// MARK: - method
+extension SearchResultCollectionViewCell {
+}
+

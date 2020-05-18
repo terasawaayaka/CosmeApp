@@ -15,17 +15,33 @@ extension ProductNameSearchResultViewDelegate {
 // MARK: - Property
 class ProductNameSearchResultView: BaseView {
     weak var delegate: ProductNameSearchResultViewDelegate? = nil
+    @IBOutlet weak var productNameCollectionView: UICollectionView!
 }
 // MARK: - Life cycle
 extension ProductNameSearchResultView {
     override func awakeFromNib() {
         super.awakeFromNib()
+        setDelegate()
+        
+        loadCollectionViewCellFromXib(collectionView: productNameCollectionView, cellName: "SearchResultCollectionViewCell")
     }
 }
 // MARK: - Protocol
-extension ProductNameSearchResultView {
+extension ProductNameSearchResultView: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 4
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchResultCollectionViewCell", for: indexPath)as? SearchResultCollectionViewCell else {return UICollectionViewCell()}
+        return cell
+    }
+    
 }
 // MARK: - method
 extension ProductNameSearchResultView {
+    func setDelegate(){
+        productNameCollectionView.dataSource = self
+    }
 }
 
