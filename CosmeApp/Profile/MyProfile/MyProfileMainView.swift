@@ -9,7 +9,6 @@
 import UIKit
 import PGFramework
 protocol MyProfileMainViewDelegate: NSObjectProtocol{
-    func didSelectRowAt(indexPath: IndexPath)
 }
 extension MyProfileMainViewDelegate {
 }
@@ -19,6 +18,7 @@ class MyProfileMainView: BaseView {
     //Outlet
     @IBOutlet weak var iconView: UIImageView!
     @IBOutlet weak var todayCollectionView: UICollectionView!
+    @IBOutlet weak var collectionViewFlowlayout: UICollectionViewFlowLayout!
     
     //Action
     @IBAction func EditProfileButton(_ sender: UIButton) {
@@ -29,31 +29,29 @@ extension MyProfileMainView {
     override func awakeFromNib() {
         super.awakeFromNib()
         setDelegate()
+        
+        collectionViewFlowlayout.estimatedItemSize = CGSize(width: todayCollectionView.frame.width, height: todayCollectionView.frame.height)
         loadCollectionViewCellFromXib(collectionView: todayCollectionView, cellName: "TodayCollectionViewCell")
     }
 }
-// MARK: - Protocol
-//extension MyProfileMainView :UICollectionViewDataSource{
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return 2
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TodayCollectionViewCell", for: indexPath) as? TodayCollectionViewCell else {return UICollectionViewCell()}
-//
-//        return cell
-//    }
-//
-//}
-//extension MyProfileMainView :UICollectionViewDelegate{
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        if let delegate = delegate{delegate.didSelectRowAt(indexPath :indexPath)}
-//    }
-//}
+//MARK: - Protocol
+extension MyProfileMainView :UICollectionViewDataSource{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 10
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TodayCollectionViewCell", for: indexPath) as? TodayCollectionViewCell else {return UICollectionViewCell()}
+
+        return cell
+    }
+
+}
+
 // MARK: - method
 extension MyProfileMainView {
     func setDelegate() {
-//        todayCollectionView.dataSource = self
-//        todayCollectionView.delegate = self
+        todayCollectionView.dataSource = self
+        
     }
 }
