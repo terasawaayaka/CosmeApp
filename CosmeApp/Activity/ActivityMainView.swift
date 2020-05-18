@@ -16,6 +16,7 @@ extension ActivityMainViewDelegate {
 // MARK: - Property
 class ActivityMainView: BaseView {
     weak var delegate: ActivityMainViewDelegate? = nil
+    @IBOutlet weak var tableView: UITableView!
 }
 // MARK: - Life cycle
 extension ActivityMainView {

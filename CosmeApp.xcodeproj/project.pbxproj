@@ -30,6 +30,8 @@
 		1F4B7725246E4FBD00FC3B27 /* CreateReviewMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B7723246E4FBD00FC3B27 /* CreateReviewMainView.xib */; };
 		1F4B7732246E7EC300FC3B27 /* ActivityMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4B7730246E7EC300FC3B27 /* ActivityMainView.swift */; };
 		1F4B7733246E7EC300FC3B27 /* ActivityMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B7731246E7EC300FC3B27 /* ActivityMainView.xib */; };
+		1F4B773824726C0300FC3B27 /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4B773624726C0300FC3B27 /* ActivityTableViewCell.swift */; };
+		1F4B773924726C0300FC3B27 /* ActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B773724726C0300FC3B27 /* ActivityTableViewCell.xib */; };
 		3F18F05C24722C2B00957A2E /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F18F05A24722C2B00957A2E /* SignInViewController.swift */; };
 		3F18F05D24722C2B00957A2E /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F18F05B24722C2B00957A2E /* SignInViewController.xib */; };
 		3F18F06224722DC400957A2E /* SingInMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F18F06024722DC400957A2E /* SingInMainView.swift */; };
@@ -122,6 +124,8 @@
 		1F4B7723246E4FBD00FC3B27 /* CreateReviewMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateReviewMainView.xib; sourceTree = "<group>"; };
 		1F4B7730246E7EC300FC3B27 /* ActivityMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityMainView.swift; sourceTree = "<group>"; };
 		1F4B7731246E7EC300FC3B27 /* ActivityMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityMainView.xib; sourceTree = "<group>"; };
+		1F4B773624726C0300FC3B27 /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
+		1F4B773724726C0300FC3B27 /* ActivityTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityTableViewCell.xib; sourceTree = "<group>"; };
 		3F18F05A24722C2B00957A2E /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		3F18F05B24722C2B00957A2E /* SignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
 		3F18F06024722DC400957A2E /* SingInMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingInMainView.swift; sourceTree = "<group>"; };
@@ -290,6 +294,8 @@
 				1F4B7715246D32C000FC3B27 /* ActivityViewController.xib */,
 				1F4B7730246E7EC300FC3B27 /* ActivityMainView.swift */,
 				1F4B7731246E7EC300FC3B27 /* ActivityMainView.xib */,
+				1F4B773624726C0300FC3B27 /* ActivityTableViewCell.swift */,
+				1F4B773724726C0300FC3B27 /* ActivityTableViewCell.xib */,
 			);
 			path = Activity;
 			sourceTree = "<group>";
@@ -586,6 +592,7 @@
 				3F96653C246E552A0083EBC2 /* TagSearchResultMainView.xib in Resources */,
 				3F966548246E56040083EBC2 /* BrandSearchResultView.xib in Resources */,
 				D1B8AFC52472627C007BC6AD /* CreateMakeMainView.xib in Resources */,
+				1F4B773924726C0300FC3B27 /* ActivityTableViewCell.xib in Resources */,
 				3FA0F796246E6DCA00D8DBA2 /* SearchResultMainView.xib in Resources */,
 				FF8509F2246E2870003E2ACF /* TimeLineMainView.xib in Resources */,
 				1F4B7717246D32C000FC3B27 /* ActivityViewController.xib in Resources */,
@@ -658,6 +665,7 @@
 				FF8509F1246E2870003E2ACF /* TimeLineMainView.swift in Sources */,
 				FF850A12246E2B3C003E2ACF /* EditMakeViewController.swift in Sources */,
 				1F4B7712246D329300FC3B27 /* SearchViewController.swift in Sources */,
+				1F4B773824726C0300FC3B27 /* ActivityTableViewCell.swift in Sources */,
 				5FA88A36246E271000B84ACE /* MyProfileMainView.swift in Sources */,
 				1F4B7705246D30D900FC3B27 /* MyProfileViewController.swift in Sources */,
 				5FA88A41246E3FE200B84ACE /* YourProfileMainView.swift in Sources */,
