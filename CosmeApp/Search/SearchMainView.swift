@@ -30,6 +30,7 @@ class SearchMainView: BaseView {
     
     //検索結果画面のview
     @IBOutlet weak var searchResultMainView: SearchResultMainView!
+    @IBOutlet weak var mainCollectionView: UICollectionView!
     @IBOutlet weak var tagResultView: TagSearchResultMainView!
     @IBOutlet weak var userResultView: UserSearchResultMainView!
     @IBOutlet weak var productNameResultView: ProductNameSearchResultView!
