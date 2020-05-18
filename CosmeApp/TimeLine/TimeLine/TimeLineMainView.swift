@@ -11,6 +11,7 @@ import UIKit
 import PGFramework
 protocol TimeLineMainViewDelegate: NSObjectProtocol{
     func didSelectRowAt()
+    func didSelectCollectionViewCell()
 }
 extension TimeLineMainViewDelegate {
 }
@@ -40,6 +41,7 @@ extension TimeLineMainView :UITableViewDataSource{
         guard let secondCell = tableView.dequeueReusableCell(withIdentifier: "TimeLineMainTableViewSecondCell")as? TimeLineMainTableViewSecondCell else {return UITableViewCell()}
         switch indexPath.row {
         case 0:
+            cell.delegate = self
             return cell
         default:
             return secondCell
@@ -50,6 +52,12 @@ extension TimeLineMainView :UITableViewDataSource{
 extension TimeLineMainView :UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let delegate = delegate{delegate.didSelectRowAt()}
+    }
+}
+
+extension TimeLineMainView:TimeLineMainTableViewCellDelegate{
+    func didSelectItemAt() {
+        if let delegate = delegate {delegate.didSelectCollectionViewCell()}
     }
 }
 // MARK: - method
