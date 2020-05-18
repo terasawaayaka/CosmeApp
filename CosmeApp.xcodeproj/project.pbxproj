@@ -28,10 +28,6 @@
 		1F4B7721246E4F8F00FC3B27 /* CreateReviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B771F246E4F8F00FC3B27 /* CreateReviewViewController.xib */; };
 		1F4B7724246E4FBD00FC3B27 /* CreateReviewMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4B7722246E4FBD00FC3B27 /* CreateReviewMainView.swift */; };
 		1F4B7725246E4FBD00FC3B27 /* CreateReviewMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B7723246E4FBD00FC3B27 /* CreateReviewMainView.xib */; };
-		1F4B772A246E6B3300FC3B27 /* CreateMakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4B7728246E6B3300FC3B27 /* CreateMakeViewController.swift */; };
-		1F4B772B246E6B3300FC3B27 /* CreateMakeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B7729246E6B3300FC3B27 /* CreateMakeViewController.xib */; };
-		1F4B772E246E6B5A00FC3B27 /* CreateMakeMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4B772C246E6B5A00FC3B27 /* CreateMakeMainView.swift */; };
-		1F4B772F246E6B5A00FC3B27 /* CreateMakeMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B772D246E6B5A00FC3B27 /* CreateMakeMainView.xib */; };
 		1F4B7732246E7EC300FC3B27 /* ActivityMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4B7730246E7EC300FC3B27 /* ActivityMainView.swift */; };
 		1F4B7733246E7EC300FC3B27 /* ActivityMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B7731246E7EC300FC3B27 /* ActivityMainView.xib */; };
 		3F18F05C24722C2B00957A2E /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F18F05A24722C2B00957A2E /* SignInViewController.swift */; };
@@ -69,6 +65,10 @@
 		5FA88A52246E581F00B84ACE /* TodayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA88A50246E581F00B84ACE /* TodayCollectionViewCell.swift */; };
 		5FA88A53246E581F00B84ACE /* TodayCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FA88A51246E581F00B84ACE /* TodayCollectionViewCell.xib */; };
 		7226E7ADC4922F1C879ED00E /* Pods_CosmeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA8B8F6B83DFB7116173D325 /* Pods_CosmeApp.framework */; };
+		D1B8AFC42472627C007BC6AD /* CreateMakeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1B8AFC02472627B007BC6AD /* CreateMakeViewController.xib */; };
+		D1B8AFC52472627C007BC6AD /* CreateMakeMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1B8AFC12472627B007BC6AD /* CreateMakeMainView.xib */; };
+		D1B8AFC62472627C007BC6AD /* CreateMakeMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B8AFC22472627B007BC6AD /* CreateMakeMainView.swift */; };
+		D1B8AFC72472627C007BC6AD /* CreateMakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B8AFC32472627C007BC6AD /* CreateMakeViewController.swift */; };
 		FF8509F1246E2870003E2ACF /* TimeLineMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8509EF246E2870003E2ACF /* TimeLineMainView.swift */; };
 		FF8509F2246E2870003E2ACF /* TimeLineMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF8509F0246E2870003E2ACF /* TimeLineMainView.xib */; };
 		FF8509FA246E294F003E2ACF /* ReviewDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8509F8246E294F003E2ACF /* ReviewDetailViewController.swift */; };
@@ -120,10 +120,6 @@
 		1F4B771F246E4F8F00FC3B27 /* CreateReviewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateReviewViewController.xib; sourceTree = "<group>"; };
 		1F4B7722246E4FBD00FC3B27 /* CreateReviewMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReviewMainView.swift; sourceTree = "<group>"; };
 		1F4B7723246E4FBD00FC3B27 /* CreateReviewMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateReviewMainView.xib; sourceTree = "<group>"; };
-		1F4B7728246E6B3300FC3B27 /* CreateMakeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMakeViewController.swift; sourceTree = "<group>"; };
-		1F4B7729246E6B3300FC3B27 /* CreateMakeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateMakeViewController.xib; sourceTree = "<group>"; };
-		1F4B772C246E6B5A00FC3B27 /* CreateMakeMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMakeMainView.swift; sourceTree = "<group>"; };
-		1F4B772D246E6B5A00FC3B27 /* CreateMakeMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateMakeMainView.xib; sourceTree = "<group>"; };
 		1F4B7730246E7EC300FC3B27 /* ActivityMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityMainView.swift; sourceTree = "<group>"; };
 		1F4B7731246E7EC300FC3B27 /* ActivityMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityMainView.xib; sourceTree = "<group>"; };
 		3F18F05A24722C2B00957A2E /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -161,6 +157,10 @@
 		5FA88A50246E581F00B84ACE /* TodayCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCollectionViewCell.swift; sourceTree = "<group>"; };
 		5FA88A51246E581F00B84ACE /* TodayCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodayCollectionViewCell.xib; sourceTree = "<group>"; };
 		BA8B8F6B83DFB7116173D325 /* Pods_CosmeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CosmeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1B8AFC02472627B007BC6AD /* CreateMakeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateMakeViewController.xib; sourceTree = "<group>"; };
+		D1B8AFC12472627B007BC6AD /* CreateMakeMainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateMakeMainView.xib; sourceTree = "<group>"; };
+		D1B8AFC22472627B007BC6AD /* CreateMakeMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateMakeMainView.swift; sourceTree = "<group>"; };
+		D1B8AFC32472627C007BC6AD /* CreateMakeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateMakeViewController.swift; sourceTree = "<group>"; };
 		F159956426546549A41B2D4D /* Pods-CosmeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CosmeApp.release.xcconfig"; path = "Target Support Files/Pods-CosmeApp/Pods-CosmeApp.release.xcconfig"; sourceTree = "<group>"; };
 		FF8509EF246E2870003E2ACF /* TimeLineMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineMainView.swift; sourceTree = "<group>"; };
 		FF8509F0246E2870003E2ACF /* TimeLineMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeLineMainView.xib; sourceTree = "<group>"; };
@@ -319,10 +319,10 @@
 		1F4B7727246E6A7600FC3B27 /* Make */ = {
 			isa = PBXGroup;
 			children = (
-				1F4B7728246E6B3300FC3B27 /* CreateMakeViewController.swift */,
-				1F4B7729246E6B3300FC3B27 /* CreateMakeViewController.xib */,
-				1F4B772C246E6B5A00FC3B27 /* CreateMakeMainView.swift */,
-				1F4B772D246E6B5A00FC3B27 /* CreateMakeMainView.xib */,
+				D1B8AFC22472627B007BC6AD /* CreateMakeMainView.swift */,
+				D1B8AFC12472627B007BC6AD /* CreateMakeMainView.xib */,
+				D1B8AFC32472627C007BC6AD /* CreateMakeViewController.swift */,
+				D1B8AFC02472627B007BC6AD /* CreateMakeViewController.xib */,
 			);
 			path = Make;
 			sourceTree = "<group>";
@@ -564,10 +564,9 @@
 				3F18F05D24722C2B00957A2E /* SignInViewController.xib in Resources */,
 				1F4B7721246E4F8F00FC3B27 /* CreateReviewViewController.xib in Resources */,
 				1F4B770F246D31FD00FC3B27 /* NewPostViewController.xib in Resources */,
-				1F4B772B246E6B3300FC3B27 /* CreateMakeViewController.xib in Resources */,
-				1F4B772F246E6B5A00FC3B27 /* CreateMakeMainView.xib in Resources */,
 				FFD02825246E3866009EE2E4 /* TimeLineMainCollectionViewCell.xib in Resources */,
 				1F4B76ED246D2AE100FC3B27 /* Assets.xcassets in Resources */,
+				D1B8AFC42472627C007BC6AD /* CreateMakeViewController.xib in Resources */,
 				FF8509FB246E294F003E2ACF /* ReviewDetailViewController.xib in Resources */,
 				5FA88A4A246E405900B84ACE /* EditProfileMainView.xib in Resources */,
 				FF850A0B246E2AD3003E2ACF /* EditReviewViewController.xib in Resources */,
@@ -586,6 +585,7 @@
 				3F6648F32472287900D4D950 /* SignUpMainView.xib in Resources */,
 				3F96653C246E552A0083EBC2 /* TagSearchResultMainView.xib in Resources */,
 				3F966548246E56040083EBC2 /* BrandSearchResultView.xib in Resources */,
+				D1B8AFC52472627C007BC6AD /* CreateMakeMainView.xib in Resources */,
 				3FA0F796246E6DCA00D8DBA2 /* SearchResultMainView.xib in Resources */,
 				FF8509F2246E2870003E2ACF /* TimeLineMainView.xib in Resources */,
 				1F4B7717246D32C000FC3B27 /* ActivityViewController.xib in Resources */,
@@ -653,6 +653,7 @@
 			files = (
 				5FA88A45246E402700B84ACE /* EditProfileViewController.swift in Sources */,
 				1F4B771A246E25CF00FC3B27 /* NewPostMainView.swift in Sources */,
+				D1B8AFC62472627C007BC6AD /* CreateMakeMainView.swift in Sources */,
 				FF8509FE246E297C003E2ACF /* ReviewDetailMainView.swift in Sources */,
 				FF8509F1246E2870003E2ACF /* TimeLineMainView.swift in Sources */,
 				FF850A12246E2B3C003E2ACF /* EditMakeViewController.swift in Sources */,
@@ -662,7 +663,6 @@
 				5FA88A41246E3FE200B84ACE /* YourProfileMainView.swift in Sources */,
 				3F966521246E2B240083EBC2 /* SearchMainView.swift in Sources */,
 				1F4B7720246E4F8F00FC3B27 /* CreateReviewViewController.swift in Sources */,
-				1F4B772A246E6B3300FC3B27 /* CreateMakeViewController.swift in Sources */,
 				3F966543246E55BD0083EBC2 /* ProductNameSearchResultView.swift in Sources */,
 				3F96651D246E2A7F0083EBC2 /* SearchTextView.swift in Sources */,
 				5FA88A3D246E3FA300B84ACE /* YourProfileViewController.swift in Sources */,
@@ -687,7 +687,7 @@
 				3F96653B246E552A0083EBC2 /* TagSearchResultMainView.swift in Sources */,
 				FFD02824246E3866009EE2E4 /* TimeLineMainCollectionViewCell.swift in Sources */,
 				FFD02820246E3745009EE2E4 /* TimeLineMainTableViewSecondCell.swift in Sources */,
-				1F4B772E246E6B5A00FC3B27 /* CreateMakeMainView.swift in Sources */,
+				D1B8AFC72472627C007BC6AD /* CreateMakeViewController.swift in Sources */,
 				3F18F05C24722C2B00957A2E /* SignInViewController.swift in Sources */,
 				FFEA536B246E317700694E1C /* TimeLineMainTableViewCell.swift in Sources */,
 				3F6648F22472287900D4D950 /* SignUpMainView.swift in Sources */,
