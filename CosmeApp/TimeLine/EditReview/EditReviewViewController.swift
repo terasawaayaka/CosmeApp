@@ -11,6 +11,8 @@ import UIKit
 import PGFramework
 // MARK: - Property
 class EditReviewViewController: BaseViewController {
+    @IBOutlet weak var headerView: HeaderView!
+    @IBOutlet weak var mainView: EditReviewMainView!
 }
 
 // MARK: - Life cycle

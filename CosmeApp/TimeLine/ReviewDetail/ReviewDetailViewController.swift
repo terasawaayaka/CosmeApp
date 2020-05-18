@@ -44,9 +44,9 @@ extension ReviewDetailViewController :HeaderViewDelegate{
 // MARK: - method
 extension ReviewDetailViewController {
     func setHeaderView(){
-        headerView.setLeft(text: "＜", fontSize: 20, color: #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1))
+        headerView.setLeft(text: "＜", fontSize: 18, color: #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1))
         headerView.setCenter(text: "レビュー詳細", fontSize: 20, color: #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1))
-        headerView.setRight(text: "編集", fontSize: 20, color: #colorLiteral(red: 1, green: 0.6230913235, blue: 0.7894609614, alpha: 1))
+        headerView.setRight(text: "編集", fontSize: 18, color: #colorLiteral(red: 1, green: 0.6230913235, blue: 0.7894609614, alpha: 1))
     }
     func setDelegate(){
         headerView.delegate = self
