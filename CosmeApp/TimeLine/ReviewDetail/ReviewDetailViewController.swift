@@ -34,6 +34,11 @@ extension ReviewDetailViewController :HeaderViewDelegate{
         navigationController?.popViewController(animated: true)
         animatorManager.navigationType = .slide_pop
     }
+    func touchedRightButton(_ sender: UIButton) {
+        let editReviewViewController = EditReviewViewController()
+        navigationController?.pushViewController(editReviewViewController, animated: true)
+        animatorManager.navigationType = .slide_push
+    }
     
 }
 // MARK: - method
