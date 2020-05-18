@@ -15,11 +15,13 @@ extension TodayCollectionViewCellDelegate {
 // MARK: - Property
 class TodayCollectionViewCell: BaseCollectionViewCell {
     weak var delegate: TodayCollectionViewCellDelegate? = nil
+    @IBOutlet weak var roundView: UIView!
 }
 // MARK: - Life cycle
 extension TodayCollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
+        setLayout()
     }
 }
 // MARK: - Protocol
@@ -27,4 +29,7 @@ extension TodayCollectionViewCell {
 }
 // MARK: - method
 extension TodayCollectionViewCell {
+    func setLayout() {
+        roundView.layer.cornerRadius = roundView.frame.height / 2
+    }
 }
