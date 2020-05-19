@@ -11,6 +11,7 @@
             <connections>
                 <outlet property="headerView" destination="i73-a6-Dhy" id="jd5-4U-E1c"/>
                 <outlet property="mainView" destination="IrC-Qd-4sV" id="3Gq-K4-xBd"/>
+                <outlet property="mainViewBottomMergin" destination="p55-2k-cJx" id="2qh-S9-6Qy"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
