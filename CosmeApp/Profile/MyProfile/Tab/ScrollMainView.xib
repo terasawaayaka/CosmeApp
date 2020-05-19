@@ -30,26 +30,6 @@
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1sp-zw-FiG">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
-                                    <subviews>
-                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="kXa-bY-jgB">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="orX-fD-Hc8">
-                                                <size key="itemSize" width="128" height="128"/>
-                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                            </collectionViewFlowLayout>
-                                        </collectionView>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="kXa-bY-jgB" secondAttribute="trailing" id="3gt-Se-zaa"/>
-                                        <constraint firstItem="kXa-bY-jgB" firstAttribute="top" secondItem="1sp-zw-FiG" secondAttribute="top" id="DiX-q4-ZyQ"/>
-                                        <constraint firstItem="kXa-bY-jgB" firstAttribute="width" secondItem="1sp-zw-FiG" secondAttribute="width" id="LsD-cg-hyo"/>
-                                        <constraint firstItem="kXa-bY-jgB" firstAttribute="height" secondItem="1sp-zw-FiG" secondAttribute="height" id="dZJ-Bn-x9y"/>
-                                        <constraint firstItem="kXa-bY-jgB" firstAttribute="leading" secondItem="1sp-zw-FiG" secondAttribute="leading" id="qjI-2M-mcg"/>
-                                        <constraint firstAttribute="bottom" secondItem="kXa-bY-jgB" secondAttribute="bottom" id="xhv-rT-if2"/>
-                                    </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OTp-xI-1ar">
                                     <rect key="frame" x="414" y="0.0" width="414" height="818"/>
@@ -59,20 +39,38 @@
                                     <rect key="frame" x="828" y="0.0" width="414" height="818"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 </view>
+                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="kXa-bY-jgB">
+                                    <rect key="frame" x="0.0" y="0.0" width="1242" height="818"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="orX-fD-Hc8">
+                                        <size key="itemSize" width="128" height="128"/>
+                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    </collectionViewFlowLayout>
+                                </collectionView>
                             </subviews>
                             <constraints>
+                                <constraint firstItem="KcX-yQ-HHN" firstAttribute="leading" secondItem="OTp-xI-1ar" secondAttribute="trailing" id="0oS-DI-o4a"/>
                                 <constraint firstItem="OTp-xI-1ar" firstAttribute="leading" secondItem="1sp-zw-FiG" secondAttribute="trailing" id="1Ef-YD-ETr"/>
+                                <constraint firstItem="kXa-bY-jgB" firstAttribute="bottom" secondItem="0Dy-XU-R2B" secondAttribute="bottom" id="2wY-xa-GVA"/>
+                                <constraint firstItem="kXa-bY-jgB" firstAttribute="top" secondItem="0Dy-XU-R2B" secondAttribute="top" id="5HG-dZ-TYO"/>
                                 <constraint firstItem="KcX-yQ-HHN" firstAttribute="top" secondItem="h6B-Xc-l6M" secondAttribute="top" id="Bh6-r8-CB8"/>
                                 <constraint firstItem="OTp-xI-1ar" firstAttribute="height" secondItem="1sp-zw-FiG" secondAttribute="height" id="CEr-Lh-FDl"/>
                                 <constraint firstItem="1sp-zw-FiG" firstAttribute="leading" secondItem="h6B-Xc-l6M" secondAttribute="leading" id="CkE-KZ-C6U"/>
+                                <constraint firstItem="kXa-bY-jgB" firstAttribute="trailing" secondItem="0Dy-XU-R2B" secondAttribute="trailing" id="L8n-Qh-obw"/>
                                 <constraint firstAttribute="trailing" secondItem="KcX-yQ-HHN" secondAttribute="trailing" id="LCZ-ql-vGE"/>
                                 <constraint firstAttribute="bottom" secondItem="KcX-yQ-HHN" secondAttribute="bottom" id="LQQ-ay-Qym"/>
                                 <constraint firstAttribute="bottom" secondItem="1sp-zw-FiG" secondAttribute="bottom" id="Peb-qW-HHv"/>
                                 <constraint firstItem="1sp-zw-FiG" firstAttribute="top" secondItem="h6B-Xc-l6M" secondAttribute="top" id="RBU-yy-BoU"/>
                                 <constraint firstItem="OTp-xI-1ar" firstAttribute="width" secondItem="1sp-zw-FiG" secondAttribute="width" id="bhc-Pm-XKU"/>
                                 <constraint firstAttribute="bottom" secondItem="OTp-xI-1ar" secondAttribute="bottom" id="hDs-fd-hbv"/>
+                                <constraint firstItem="kXa-bY-jgB" firstAttribute="leading" secondItem="h6B-Xc-l6M" secondAttribute="leading" id="jIR-QU-EHR"/>
+                                <constraint firstItem="KcX-yQ-HHN" firstAttribute="trailing" secondItem="0Dy-XU-R2B" secondAttribute="trailing" id="nlS-KI-M6q"/>
                                 <constraint firstItem="OTp-xI-1ar" firstAttribute="top" secondItem="h6B-Xc-l6M" secondAttribute="top" id="pxy-ai-a2u"/>
                                 <constraint firstItem="KcX-yQ-HHN" firstAttribute="width" secondItem="OTp-xI-1ar" secondAttribute="width" id="q7I-OJ-J7S"/>
+                                <constraint firstItem="KcX-yQ-HHN" firstAttribute="bottom" secondItem="0Dy-XU-R2B" secondAttribute="bottom" id="uOt-Tp-np5"/>
+                                <constraint firstItem="KcX-yQ-HHN" firstAttribute="top" secondItem="0Dy-XU-R2B" secondAttribute="top" id="vob-Fd-Nth"/>
                                 <constraint firstItem="KcX-yQ-HHN" firstAttribute="height" secondItem="OTp-xI-1ar" secondAttribute="height" id="zVT-2L-ULd"/>
                                 <constraint firstItem="KcX-yQ-HHN" firstAttribute="leading" secondItem="OTp-xI-1ar" secondAttribute="trailing" id="zWz-yS-W2f"/>
                             </constraints>

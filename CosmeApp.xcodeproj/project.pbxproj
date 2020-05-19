@@ -56,6 +56,10 @@
 		3FF1213924724716001E0554 /* SearchResultCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FF1213724724716001E0554 /* SearchResultCollectionViewCell.xib */; };
 		3FF1213D24724B18001E0554 /* SearchUserResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF1213B24724B18001E0554 /* SearchUserResultTableViewCell.swift */; };
 		3FF1213E24724B18001E0554 /* SearchUserResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FF1213C24724B18001E0554 /* SearchUserResultTableViewCell.xib */; };
+		5F098A0C2473AF6100D033F4 /* BookmarkCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F098A0A2473AF6100D033F4 /* BookmarkCollectionViewCell.swift */; };
+		5F098A0D2473AF6100D033F4 /* BookmarkCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F098A0B2473AF6100D033F4 /* BookmarkCollectionViewCell.xib */; };
+		5F098A142473C5C700D033F4 /* GenreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F098A122473C5C700D033F4 /* GenreCollectionViewCell.swift */; };
+		5F098A152473C5C700D033F4 /* GenreCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F098A132473C5C700D033F4 /* GenreCollectionViewCell.xib */; };
 		5FA88A36246E271000B84ACE /* MyProfileMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA88A34246E271000B84ACE /* MyProfileMainView.swift */; };
 		5FA88A37246E271000B84ACE /* MyProfileMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FA88A35246E271000B84ACE /* MyProfileMainView.xib */; };
 		5FA88A3D246E3FA300B84ACE /* YourProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA88A3B246E3FA300B84ACE /* YourProfileViewController.swift */; };
@@ -156,6 +160,10 @@
 		3FF1213724724716001E0554 /* SearchResultCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultCollectionViewCell.xib; sourceTree = "<group>"; };
 		3FF1213B24724B18001E0554 /* SearchUserResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUserResultTableViewCell.swift; sourceTree = "<group>"; };
 		3FF1213C24724B18001E0554 /* SearchUserResultTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchUserResultTableViewCell.xib; sourceTree = "<group>"; };
+		5F098A0A2473AF6100D033F4 /* BookmarkCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkCollectionViewCell.swift; sourceTree = "<group>"; };
+		5F098A0B2473AF6100D033F4 /* BookmarkCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookmarkCollectionViewCell.xib; sourceTree = "<group>"; };
+		5F098A122473C5C700D033F4 /* GenreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreCollectionViewCell.swift; sourceTree = "<group>"; };
+		5F098A132473C5C700D033F4 /* GenreCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenreCollectionViewCell.xib; sourceTree = "<group>"; };
 		5FA88A34246E271000B84ACE /* MyProfileMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileMainView.swift; sourceTree = "<group>"; };
 		5FA88A35246E271000B84ACE /* MyProfileMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyProfileMainView.xib; sourceTree = "<group>"; };
 		5FA88A3B246E3FA300B84ACE /* YourProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourProfileViewController.swift; sourceTree = "<group>"; };
@@ -471,6 +479,10 @@
 				5FA88A622472316600B84ACE /* ScrollMainView.xib */,
 				5FA88A6D247272C000B84ACE /* GoodCollectionViewCell.swift */,
 				5FA88A6E247272C000B84ACE /* GoodCollectionViewCell.xib */,
+				5F098A0A2473AF6100D033F4 /* BookmarkCollectionViewCell.swift */,
+				5F098A0B2473AF6100D033F4 /* BookmarkCollectionViewCell.xib */,
+				5F098A122473C5C700D033F4 /* GenreCollectionViewCell.swift */,
+				5F098A132473C5C700D033F4 /* GenreCollectionViewCell.xib */,
 			);
 			path = Tab;
 			sourceTree = "<group>";
@@ -608,6 +620,7 @@
 				1F4B770F246D31FD00FC3B27 /* NewPostViewController.xib in Resources */,
 				FFD02825246E3866009EE2E4 /* TimeLineMainCollectionViewCell.xib in Resources */,
 				1F4B76ED246D2AE100FC3B27 /* Assets.xcassets in Resources */,
+				5F098A0D2473AF6100D033F4 /* BookmarkCollectionViewCell.xib in Resources */,
 				D1B8AFC42472627C007BC6AD /* CreateMakeViewController.xib in Resources */,
 				FF8509FB246E294F003E2ACF /* ReviewDetailViewController.xib in Resources */,
 				5FA88A4A246E405900B84ACE /* EditProfileMainView.xib in Resources */,
@@ -617,6 +630,7 @@
 				1F4B76EB246D2AC100FC3B27 /* Main.storyboard in Resources */,
 				5FA88A3E246E3FA300B84ACE /* YourProfileViewController.xib in Resources */,
 				FF850A17246E2BC2003E2ACF /* EditMakeMainView.xib in Resources */,
+				5F098A152473C5C700D033F4 /* GenreCollectionViewCell.xib in Resources */,
 				1F4B770A246D310F00FC3B27 /* TimeLineViewController.xib in Resources */,
 				FF850A0F246E2B16003E2ACF /* EditReviewMainView.xib in Resources */,
 				3F966544246E55BD0083EBC2 /* ProductNameSearchResultView.xib in Resources */,
@@ -710,6 +724,8 @@
 				1F4B7720246E4F8F00FC3B27 /* CreateReviewViewController.swift in Sources */,
 				3F966543246E55BD0083EBC2 /* ProductNameSearchResultView.swift in Sources */,
 				3F96651D246E2A7F0083EBC2 /* SearchTextView.swift in Sources */,
+				5F098A0C2473AF6100D033F4 /* BookmarkCollectionViewCell.swift in Sources */,
+				5F098A142473C5C700D033F4 /* GenreCollectionViewCell.swift in Sources */,
 				5FA88A3D246E3FA300B84ACE /* YourProfileViewController.swift in Sources */,
 				5FA88A6F247272C000B84ACE /* GoodCollectionViewCell.swift in Sources */,
 				5FA88A52246E581F00B84ACE /* TodayCollectionViewCell.swift in Sources */,

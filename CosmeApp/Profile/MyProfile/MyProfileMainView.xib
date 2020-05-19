@@ -52,7 +52,7 @@
                         <action selector="editProfileButton:" destination="-1" eventType="touchUpInside" id="97G-5M-hGS"/>
                     </connections>
                 </button>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WJI-J8-eIv">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WJI-J8-eIv">
                     <rect key="frame" x="20" y="179" width="374" height="112"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
@@ -118,6 +118,7 @@
             <constraints>
                 <constraint firstItem="OkQ-gw-UgN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="23N-Qc-R8q"/>
                 <constraint firstItem="e6z-FH-Yab" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="2iA-Fs-L6i"/>
+                <constraint firstItem="OkQ-gw-UgN" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="5IG-YC-xz8"/>
                 <constraint firstItem="rlS-MQ-gKS" firstAttribute="top" secondItem="oYb-nj-mml" secondAttribute="bottom" constant="7" id="5t7-gm-ccY"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="WJI-J8-eIv" secondAttribute="trailing" constant="20" id="914-4P-zWJ"/>
                 <constraint firstItem="1SZ-Lc-csE" firstAttribute="leading" secondItem="Lhr-Nh-3sc" secondAttribute="trailing" constant="24" id="DCC-3F-cyl"/>
@@ -142,7 +143,6 @@
                 <constraint firstItem="H65-42-76f" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="mmN-ci-Wob"/>
                 <constraint firstItem="Lhr-Nh-3sc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="oof-AT-aYc"/>
                 <constraint firstItem="e6z-FH-Yab" firstAttribute="leading" secondItem="Va8-Yv-sTT" secondAttribute="trailing" id="stm-4y-Ty7"/>
-                <constraint firstItem="OkQ-gw-UgN" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="tUU-Rx-1hv"/>
                 <constraint firstItem="H65-42-76f" firstAttribute="top" secondItem="WJI-J8-eIv" secondAttribute="bottom" constant="18" id="tr9-Sk-62t"/>
                 <constraint firstItem="rlS-MQ-gKS" firstAttribute="leading" secondItem="Lhr-Nh-3sc" secondAttribute="trailing" constant="24" id="ve9-6g-Cfr"/>
                 <constraint firstItem="55T-xZ-94V" firstAttribute="top" secondItem="H65-42-76f" secondAttribute="bottom" id="xyT-r8-6Uh"/>
