@@ -34,6 +34,7 @@
                                         </button>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m2e-HG-w7B">
                                             <rect key="frame" x="41.5" y="40" width="331" height="331"/>
+                                            <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="m2e-HG-w7B" secondAttribute="height" multiplier="1:1" id="0kb-Pl-ifm"/>
                                             </constraints>
