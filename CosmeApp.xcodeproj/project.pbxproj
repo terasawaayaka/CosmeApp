@@ -41,6 +41,10 @@
 		3F6648EE2472280300D4D950 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F6648EC2472280300D4D950 /* SignUpViewController.xib */; };
 		3F6648F22472287900D4D950 /* SignUpMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6648F02472287900D4D950 /* SignUpMainView.swift */; };
 		3F6648F32472287900D4D950 /* SignUpMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F6648F12472287900D4D950 /* SignUpMainView.xib */; };
+		3F6DB6942473C76E000B192A /* EyeShadowPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6DB6922473C76E000B192A /* EyeShadowPageViewController.swift */; };
+		3F6DB6952473C76E000B192A /* EyeShadowPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F6DB6932473C76E000B192A /* EyeShadowPageViewController.xib */; };
+		3F6DB6992473C7C0000B192A /* EyeShadowMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6DB6972473C7C0000B192A /* EyeShadowMainView.swift */; };
+		3F6DB69A2473C7C0000B192A /* EyeShadowMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F6DB6982473C7C0000B192A /* EyeShadowMainView.xib */; };
 		3F96651D246E2A7F0083EBC2 /* SearchTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F96651B246E2A7F0083EBC2 /* SearchTextView.swift */; };
 		3F96651E246E2A7F0083EBC2 /* SearchTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F96651C246E2A7F0083EBC2 /* SearchTextView.xib */; };
 		3F966521246E2B240083EBC2 /* SearchMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F96651F246E2B240083EBC2 /* SearchMainView.swift */; };
@@ -146,6 +150,10 @@
 		3F6648EC2472280300D4D950 /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
 		3F6648F02472287900D4D950 /* SignUpMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpMainView.swift; sourceTree = "<group>"; };
 		3F6648F12472287900D4D950 /* SignUpMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpMainView.xib; sourceTree = "<group>"; };
+		3F6DB6922473C76E000B192A /* EyeShadowPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeShadowPageViewController.swift; sourceTree = "<group>"; };
+		3F6DB6932473C76E000B192A /* EyeShadowPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EyeShadowPageViewController.xib; sourceTree = "<group>"; };
+		3F6DB6972473C7C0000B192A /* EyeShadowMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeShadowMainView.swift; sourceTree = "<group>"; };
+		3F6DB6982473C7C0000B192A /* EyeShadowMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EyeShadowMainView.xib; sourceTree = "<group>"; };
 		3F96651B246E2A7F0083EBC2 /* SearchTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextView.swift; sourceTree = "<group>"; };
 		3F96651C246E2A7F0083EBC2 /* SearchTextView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTextView.xib; sourceTree = "<group>"; };
 		3F96651F246E2B240083EBC2 /* SearchMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMainView.swift; sourceTree = "<group>"; };
@@ -297,6 +305,7 @@
 				3F966520246E2B240083EBC2 /* SearchMainView.xib */,
 				3F96651B246E2A7F0083EBC2 /* SearchTextView.swift */,
 				3F96651C246E2A7F0083EBC2 /* SearchTextView.xib */,
+				3F6DB6912473C742000B192A /* Category */,
 				3F966524246E53B40083EBC2 /* Search result */,
 			);
 			path = Search;
@@ -387,6 +396,25 @@
 				3F6648F12472287900D4D950 /* SignUpMainView.xib */,
 			);
 			path = SignUp;
+			sourceTree = "<group>";
+		};
+		3F6DB6912473C742000B192A /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				3F6DB6962473C798000B192A /* EyeShadow */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		3F6DB6962473C798000B192A /* EyeShadow */ = {
+			isa = PBXGroup;
+			children = (
+				3F6DB6922473C76E000B192A /* EyeShadowPageViewController.swift */,
+				3F6DB6932473C76E000B192A /* EyeShadowPageViewController.xib */,
+				3F6DB6972473C7C0000B192A /* EyeShadowMainView.swift */,
+				3F6DB6982473C7C0000B192A /* EyeShadowMainView.xib */,
+			);
+			path = EyeShadow;
 			sourceTree = "<group>";
 		};
 		3F966524246E53B40083EBC2 /* Search result */ = {
@@ -622,6 +650,7 @@
 				3FF1213E24724B18001E0554 /* SearchUserResultTableViewCell.xib in Resources */,
 				3F96651E246E2A7F0083EBC2 /* SearchTextView.xib in Resources */,
 				3F18F06324722DC400957A2E /* SingInMainView.xib in Resources */,
+				3F6DB69A2473C7C0000B192A /* EyeShadowMainView.xib in Resources */,
 				3F966540246E558A0083EBC2 /* UserSearchResultMainView.xib in Resources */,
 				5FA88A70247272C000B84ACE /* GoodCollectionViewCell.xib in Resources */,
 				3F966522246E2B240083EBC2 /* SearchMainView.xib in Resources */,
@@ -646,6 +675,7 @@
 				3F966544246E55BD0083EBC2 /* ProductNameSearchResultView.xib in Resources */,
 				3FC6EE862473BDF0008875B7 /* Assets.xcassets in Resources */,
 				1F4B7713246D329300FC3B27 /* SearchViewController.xib in Resources */,
+				3F6DB6952473C76E000B192A /* EyeShadowPageViewController.xib in Resources */,
 				5FA88A42246E3FE200B84ACE /* YourProfileMainView.xib in Resources */,
 				5FA88A53246E581F00B84ACE /* TodayCollectionViewCell.xib in Resources */,
 				5FA88A46246E402700B84ACE /* EditProfileViewController.xib in Resources */,
@@ -724,6 +754,7 @@
 				5FA88A45246E402700B84ACE /* EditProfileViewController.swift in Sources */,
 				1F4B771A246E25CF00FC3B27 /* NewPostMainView.swift in Sources */,
 				D1B8AFC62472627C007BC6AD /* CreateMakeMainView.swift in Sources */,
+				3F6DB6942473C76E000B192A /* EyeShadowPageViewController.swift in Sources */,
 				FF8509FE246E297C003E2ACF /* ReviewDetailMainView.swift in Sources */,
 				FF8509F1246E2870003E2ACF /* TimeLineMainView.swift in Sources */,
 				FF850A12246E2B3C003E2ACF /* EditMakeViewController.swift in Sources */,
@@ -768,6 +799,7 @@
 				3F6648F22472287900D4D950 /* SignUpMainView.swift in Sources */,
 				3FA0F795246E6DCA00D8DBA2 /* SearchResultMainView.swift in Sources */,
 				FF850A02246E29BC003E2ACF /* MakeDetailViewController.swift in Sources */,
+				3F6DB6992473C7C0000B192A /* EyeShadowMainView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
