@@ -10,11 +10,15 @@ import UIKit
 import PGFramework
 // MARK: - Property
 class EditProfileViewController: BaseViewController {
+    @IBOutlet weak var mainView: EditProfileMainView!
+    @IBOutlet weak var headerView: HeaderView!
 }
 // MARK: - Life cycle
 extension EditProfileViewController {
     override func loadView() {
         super.loadView()
+        setDelegate()
+        setHeaderView()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,8 +28,20 @@ extension EditProfileViewController {
     }
 }
 // MARK: - Protocol
-extension EditProfileViewController {
+extension EditProfileViewController :HeaderViewDelegate{
+    func touchedLeftButton(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+        animatorManager.navigationType = .slide_pop
+    }
 }
 // MARK: - method
 extension EditProfileViewController {
+    func setDelegate() {
+        headerView.delegate = self
+    }
+    func setHeaderView() {
+        headerView.setLeft(text: "キャンセル",fontSize: 18,color:#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))
+        headerView.setCenter(text: "プロフィールを編集", fontSize: 18, color: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))
+        headerView.setRight(text: "完了", fontSize: 18, color: #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1))
+    }
 }
