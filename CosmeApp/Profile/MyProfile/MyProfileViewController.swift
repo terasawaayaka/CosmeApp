@@ -10,13 +10,14 @@ import UIKit
 
 import PGFramework
 // MARK: - Property
-class MyProfileViewController: BaseViewController {
+class MyProfileViewController: BaseViewController{
     @IBOutlet weak var mainView: MyProfileMainView!
 }
 // MARK: - Life cycle
 extension MyProfileViewController {
     override func loadView() {
         super.loadView()
+        setDelegate()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +27,26 @@ extension MyProfileViewController {
     }
 }
 // MARK: - Protocol
-extension MyProfileViewController {
+extension MyProfileViewController :MyProfileMainViewDelegate{
+    func editProfileButton() {
+        let editProfileViewController = EditProfileViewController()
+        navigationController?.pushViewController(editProfileViewController, animated: true)
+        animatorManager.navigationType = .slide_push
+    }
+    
+    func touchedGoodButton() {
+    }
+    
+    func touchedBookMarkButton() {
+    }
+    
+    func touchedGenreButton() {
+    }
 }
+
 // MARK: - method
 extension MyProfileViewController {
+    func setDelegate(){
+        mainView.delegate = self
+    }
 }

@@ -15,6 +15,10 @@ extension EditProfileMainViewDelegate {
 // MARK: - Property
 class EditProfileMainView: BaseView {
     weak var delegate: EditProfileMainViewDelegate? = nil
+    @IBAction func editIconView(_ sender: UIButton) {
+    }
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var introductionTextField: UITextField!
 }
 // MARK: - Life cycle
 extension EditProfileMainView {

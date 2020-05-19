@@ -9,6 +9,10 @@
 import UIKit
 import PGFramework
 protocol MyProfileMainViewDelegate: NSObjectProtocol{
+    func editProfileButton()
+    func touchedGoodButton()
+    func touchedBookMarkButton()
+    func touchedGenreButton()
 }
 extension MyProfileMainViewDelegate {
 }
@@ -19,9 +23,21 @@ class MyProfileMainView: BaseView {
     @IBOutlet weak var iconView: UIImageView!
     @IBOutlet weak var todayCollectionView: UICollectionView!
     @IBOutlet weak var collectionViewFlowlayout: UICollectionViewFlowLayout!
+    @IBOutlet weak var scrollMainView: ScrollMainView!
+    
     
     //Action
-    @IBAction func EditProfileButton(_ sender: UIButton) {
+    @IBAction func editProfileButton(_ sender: UIButton) {
+        if let delegate = delegate{delegate.editProfileButton()}
+    }
+    @IBAction func touchedGoodButton(_ sender: UIButton) {
+        if let delegate = delegate{delegate.touchedGoodButton()}
+    }
+    @IBAction func touchedBookMarkButton(_ sender: UIButton) {
+        if let delegate = delegate{delegate.touchedBookMarkButton()}
+    }
+    @IBAction func touchedGenreButton(_ sender: UIButton) {
+        if let delegate = delegate{delegate.touchedGenreButton()}
     }
 }
 // MARK: - Life cycle
@@ -52,6 +68,5 @@ extension MyProfileMainView :UICollectionViewDataSource{
 extension MyProfileMainView {
     func setDelegate() {
         todayCollectionView.dataSource = self
-        
     }
 }
