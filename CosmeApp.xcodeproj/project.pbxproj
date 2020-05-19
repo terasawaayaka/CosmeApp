@@ -369,18 +369,18 @@
 		3F966524246E53B40083EBC2 /* Search result */ = {
 			isa = PBXGroup;
 			children = (
-				3FF12135247246C9001E0554 /* SearchResultCell */,
 				3FA0F793246E6DCA00D8DBA2 /* SearchResultMainView.swift */,
 				3FA0F794246E6DCA00D8DBA2 /* SearchResultMainView.xib */,
+				3FF12135247246C9001E0554 /* SearchResultCell */,
 				3F966545246E56040083EBC2 /* BrandSearchResultView.swift */,
 				3F966546246E56040083EBC2 /* BrandSearchResultView.xib */,
 				3F966541246E55BD0083EBC2 /* ProductNameSearchResultView.swift */,
 				3F966542246E55BD0083EBC2 /* ProductNameSearchResultView.xib */,
 				3F966539246E552A0083EBC2 /* TagSearchResultMainView.swift */,
 				3F96653A246E552A0083EBC2 /* TagSearchResultMainView.xib */,
+				3FF1213A24724AE0001E0554 /* UserResultCell */,
 				3F96653D246E558A0083EBC2 /* UserSearchResultMainView.swift */,
 				3F96653E246E558A0083EBC2 /* UserSearchResultMainView.xib */,
-				3FF1213A24724AE0001E0554 /* UserResultCell */,
 			);
 			path = "Search result";
 			sourceTree = "<group>";

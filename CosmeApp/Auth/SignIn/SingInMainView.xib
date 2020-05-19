@@ -11,8 +11,6 @@
             <connections>
                 <outlet property="mailTextField" destination="G2K-U7-W2Y" id="eYv-iM-Iit"/>
                 <outlet property="passwordTextField" destination="rf7-GM-e4g" id="HQ0-s3-J8s"/>
-                <outlet property="signInButton" destination="HXD-Dm-j15" id="Q1f-Ym-dI6"/>
-                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
