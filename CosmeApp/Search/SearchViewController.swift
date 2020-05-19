@@ -32,8 +32,8 @@ extension SearchViewController: SearchTextViewDelegate {
     func touchedSearchButton() {
         //タグ〜とかボタンが置いてあるバーが出現する
         mainView.searchCategoryButtonView.isHidden = false
-        mainView.searchResultMainView.isHidden = false
-        mainView.tagResultView.isHidden = true
+        mainView.searchResultMainView.isHidden = true
+        mainView.tagResultView.isHidden = false
         mainView.userResultView.isHidden = true
         mainView.productNameResultView.isHidden = true
         mainView.brandResultView.isHidden = true

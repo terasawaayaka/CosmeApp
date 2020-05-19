@@ -28,21 +28,17 @@ extension TimeLineViewController {
 }
 // MARK: - Protocol
 extension TimeLineViewController :TimeLineMainViewDelegate{
-    func didSelectRowAt() {
-        let reviewDetailViewController = ReviewDetailViewController()
-        navigationController?.pushViewController(reviewDetailViewController, animated: true)
-        animatorManager.navigationType = .slide_push
-    }
-}
-
-extension TimeLineViewController :TimeLineMainTableViewCellDelegate{
-    func didSelectItemAt() {
+    func didSelectCollectionViewCell() {
         let makeDetailViewController = MakeDetailViewController()
         navigationController?.pushViewController(makeDetailViewController, animated: true)
         animatorManager.navigationType = .slide_push
     }
     
-    
+    func didSelectRowAt() {
+        let reviewDetailViewController = ReviewDetailViewController()
+        navigationController?.pushViewController(reviewDetailViewController, animated: true)
+        animatorManager.navigationType = .slide_push
+    }
 }
 // MARK: - method
 extension TimeLineViewController {
