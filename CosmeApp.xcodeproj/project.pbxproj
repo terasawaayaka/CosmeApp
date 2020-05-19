@@ -30,6 +30,10 @@
 		1F4B7725246E4FBD00FC3B27 /* CreateReviewMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B7723246E4FBD00FC3B27 /* CreateReviewMainView.xib */; };
 		1F4B7732246E7EC300FC3B27 /* ActivityMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4B7730246E7EC300FC3B27 /* ActivityMainView.swift */; };
 		1F4B7733246E7EC300FC3B27 /* ActivityMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B7731246E7EC300FC3B27 /* ActivityMainView.xib */; };
+		1F4B774024736EE400FC3B27 /* ActivityGoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4B773E24736EE400FC3B27 /* ActivityGoodTableViewCell.swift */; };
+		1F4B774124736EE400FC3B27 /* ActivityGoodTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B773F24736EE400FC3B27 /* ActivityGoodTableViewCell.xib */; };
+		1F4B7744247379A700FC3B27 /* ActivityCommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4B7742247379A700FC3B27 /* ActivityCommentTableViewCell.swift */; };
+		1F4B7745247379A700FC3B27 /* ActivityCommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B7743247379A700FC3B27 /* ActivityCommentTableViewCell.xib */; };
 		3F18F05C24722C2B00957A2E /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F18F05A24722C2B00957A2E /* SignInViewController.swift */; };
 		3F18F05D24722C2B00957A2E /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F18F05B24722C2B00957A2E /* SignInViewController.xib */; };
 		3F18F06224722DC400957A2E /* SingInMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F18F06024722DC400957A2E /* SingInMainView.swift */; };
@@ -130,6 +134,10 @@
 		1F4B7723246E4FBD00FC3B27 /* CreateReviewMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateReviewMainView.xib; sourceTree = "<group>"; };
 		1F4B7730246E7EC300FC3B27 /* ActivityMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityMainView.swift; sourceTree = "<group>"; };
 		1F4B7731246E7EC300FC3B27 /* ActivityMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityMainView.xib; sourceTree = "<group>"; };
+		1F4B773E24736EE400FC3B27 /* ActivityGoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityGoodTableViewCell.swift; sourceTree = "<group>"; };
+		1F4B773F24736EE400FC3B27 /* ActivityGoodTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityGoodTableViewCell.xib; sourceTree = "<group>"; };
+		1F4B7742247379A700FC3B27 /* ActivityCommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCommentTableViewCell.swift; sourceTree = "<group>"; };
+		1F4B7743247379A700FC3B27 /* ActivityCommentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityCommentTableViewCell.xib; sourceTree = "<group>"; };
 		3F18F05A24722C2B00957A2E /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		3F18F05B24722C2B00957A2E /* SignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
 		3F18F06024722DC400957A2E /* SingInMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingInMainView.swift; sourceTree = "<group>"; };
@@ -306,6 +314,10 @@
 				1F4B7715246D32C000FC3B27 /* ActivityViewController.xib */,
 				1F4B7730246E7EC300FC3B27 /* ActivityMainView.swift */,
 				1F4B7731246E7EC300FC3B27 /* ActivityMainView.xib */,
+				1F4B773E24736EE400FC3B27 /* ActivityGoodTableViewCell.swift */,
+				1F4B773F24736EE400FC3B27 /* ActivityGoodTableViewCell.xib */,
+				1F4B7742247379A700FC3B27 /* ActivityCommentTableViewCell.swift */,
+				1F4B7743247379A700FC3B27 /* ActivityCommentTableViewCell.xib */,
 			);
 			path = Activity;
 			sourceTree = "<group>";
@@ -607,7 +619,9 @@
 				1F4B7721246E4F8F00FC3B27 /* CreateReviewViewController.xib in Resources */,
 				1F4B770F246D31FD00FC3B27 /* NewPostViewController.xib in Resources */,
 				FFD02825246E3866009EE2E4 /* TimeLineMainCollectionViewCell.xib in Resources */,
+				1F4B7745247379A700FC3B27 /* ActivityCommentTableViewCell.xib in Resources */,
 				1F4B76ED246D2AE100FC3B27 /* Assets.xcassets in Resources */,
+				1F4B774124736EE400FC3B27 /* ActivityGoodTableViewCell.xib in Resources */,
 				D1B8AFC42472627C007BC6AD /* CreateMakeViewController.xib in Resources */,
 				FF8509FB246E294F003E2ACF /* ReviewDetailViewController.xib in Resources */,
 				5FA88A4A246E405900B84ACE /* EditProfileMainView.xib in Resources */,
@@ -722,6 +736,7 @@
 				1F4B7716246D32C000FC3B27 /* ActivityViewController.swift in Sources */,
 				3F18F06224722DC400957A2E /* SingInMainView.swift in Sources */,
 				FF850A0E246E2B16003E2ACF /* EditReviewMainView.swift in Sources */,
+				1F4B7744247379A700FC3B27 /* ActivityCommentTableViewCell.swift in Sources */,
 				5FA88A632472316600B84ACE /* ScrollMainView.swift in Sources */,
 				3F6648ED2472280300D4D950 /* SignUpViewController.swift in Sources */,
 				FF8509FA246E294F003E2ACF /* ReviewDetailViewController.swift in Sources */,
@@ -730,6 +745,7 @@
 				3F966547246E56040083EBC2 /* BrandSearchResultView.swift in Sources */,
 				1F4B76E6246D2AC100FC3B27 /* SceneDelegate.swift in Sources */,
 				1F4B770E246D31FD00FC3B27 /* NewPostViewController.swift in Sources */,
+				1F4B774024736EE400FC3B27 /* ActivityGoodTableViewCell.swift in Sources */,
 				3FF1213D24724B18001E0554 /* SearchUserResultTableViewCell.swift in Sources */,
 				3F96653F246E558A0083EBC2 /* UserSearchResultMainView.swift in Sources */,
 				3F96653B246E552A0083EBC2 /* TagSearchResultMainView.swift in Sources */,
