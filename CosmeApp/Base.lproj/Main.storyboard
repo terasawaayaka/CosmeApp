@@ -81,7 +81,7 @@
         <scene sceneID="oc1-5C-lmx">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Oyi-1X-uTq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="TimeLine" id="CgC-84-UMa"/>
+                    <tabBarItem key="tabBarItem" title="TimeLine" image="home" id="CgC-84-UMa"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hPc-dv-uSa">
                         <autoresizingMask key="autoresizingMask"/>
@@ -99,7 +99,7 @@
         <scene sceneID="Rdg-wO-uew">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="8Nw-Rz-vjR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Search" id="wTu-nK-kx8"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="search-tab" id="wTu-nK-kx8"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="plq-S5-FIe">
                         <autoresizingMask key="autoresizingMask"/>
@@ -117,7 +117,7 @@
         <scene sceneID="WlJ-CY-Am8">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="xfa-R1-eEl" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Post" id="rvZ-42-kCj"/>
+                    <tabBarItem key="tabBarItem" title="Post" image="plus" id="rvZ-42-kCj"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Db9-kw-0Br">
                         <autoresizingMask key="autoresizingMask"/>
@@ -135,7 +135,7 @@
         <scene sceneID="h7x-zs-YcE">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="gUu-MH-5Up" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Activity" id="vZq-uK-2qr"/>
+                    <tabBarItem key="tabBarItem" title="Activity" image="heart" id="vZq-uK-2qr"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qyZ-FF-apK">
                         <autoresizingMask key="autoresizingMask"/>
@@ -153,7 +153,7 @@
         <scene sceneID="BtM-D6-27J">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="gRR-JV-hS9" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" id="QGu-9O-ibW"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="profile" id="QGu-9O-ibW"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="n5b-sv-mwf">
                         <autoresizingMask key="autoresizingMask"/>
@@ -168,4 +168,11 @@
             <point key="canvasLocation" x="550.72463768115949" y="2400.6696428571427"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="heart" width="256" height="256"/>
+        <image name="home" width="256" height="256"/>
+        <image name="plus" width="256" height="256"/>
+        <image name="profile" width="256" height="256"/>
+        <image name="search-tab" width="256" height="256"/>
+    </resources>
 </document>

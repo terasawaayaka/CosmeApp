@@ -57,7 +57,7 @@
                                                 <constraint firstAttribute="width" secondItem="HM2-2F-WKi" secondAttribute="height" multiplier="1:1" id="axs-aj-daL"/>
                                             </constraints>
                                         </imageView>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Base" translatesAutoresizingMaskIntoConstraints="NO" id="M8V-eB-c8D">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="base" translatesAutoresizingMaskIntoConstraints="NO" id="M8V-eB-c8D">
                                             <rect key="frame" x="17" y="350" width="120" height="120"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="M8V-eB-c8D" secondAttribute="height" multiplier="1:1" id="HMx-cD-VKH"/>
@@ -265,7 +265,6 @@
         </view>
     </objects>
     <resources>
-        <image name="Base" width="1052" height="1000"/>
         <image name="ColorContact" width="1284" height="1000"/>
         <image name="EyeBrow" width="1315" height="1000"/>
         <image name="EyeLiner" width="1651" height="1000"/>
@@ -275,6 +274,7 @@
         <image name="Lip" width="418" height="1000"/>
         <image name="Shading" width="1052" height="1000"/>
         <image name="SkinCare" width="858" height="1000"/>
+        <image name="base" width="1052" height="1000"/>
         <image name="cheek" width="1052" height="1000"/>
         <image name="mascara" width="1284" height="1000"/>
     </resources>
