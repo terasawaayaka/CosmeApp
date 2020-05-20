@@ -89,6 +89,8 @@
 		D1B8AFC52472627C007BC6AD /* CreateMakeMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1B8AFC12472627B007BC6AD /* CreateMakeMainView.xib */; };
 		D1B8AFC62472627C007BC6AD /* CreateMakeMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B8AFC22472627B007BC6AD /* CreateMakeMainView.swift */; };
 		D1B8AFC72472627C007BC6AD /* CreateMakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B8AFC32472627C007BC6AD /* CreateMakeViewController.swift */; };
+		FF3A5EA82474BAD100EDCB26 /* ReviewDetailMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3A5EA62474BAD100EDCB26 /* ReviewDetailMainTableViewCell.swift */; };
+		FF3A5EA92474BAD100EDCB26 /* ReviewDetailMainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF3A5EA72474BAD100EDCB26 /* ReviewDetailMainTableViewCell.xib */; };
 		FF8509F1246E2870003E2ACF /* TimeLineMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8509EF246E2870003E2ACF /* TimeLineMainView.swift */; };
 		FF8509F2246E2870003E2ACF /* TimeLineMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF8509F0246E2870003E2ACF /* TimeLineMainView.xib */; };
 		FF8509FA246E294F003E2ACF /* ReviewDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8509F8246E294F003E2ACF /* ReviewDetailViewController.swift */; };
@@ -202,6 +204,8 @@
 		D1B8AFC12472627B007BC6AD /* CreateMakeMainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateMakeMainView.xib; sourceTree = "<group>"; };
 		D1B8AFC22472627B007BC6AD /* CreateMakeMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateMakeMainView.swift; sourceTree = "<group>"; };
 		D1B8AFC32472627C007BC6AD /* CreateMakeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateMakeViewController.swift; sourceTree = "<group>"; };
+		FF3A5EA62474BAD100EDCB26 /* ReviewDetailMainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewDetailMainTableViewCell.swift; sourceTree = "<group>"; };
+		FF3A5EA72474BAD100EDCB26 /* ReviewDetailMainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewDetailMainTableViewCell.xib; sourceTree = "<group>"; };
 		FF8509EF246E2870003E2ACF /* TimeLineMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineMainView.swift; sourceTree = "<group>"; };
 		FF8509F0246E2870003E2ACF /* TimeLineMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeLineMainView.xib; sourceTree = "<group>"; };
 		FF8509F8246E294F003E2ACF /* ReviewDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewDetailViewController.swift; sourceTree = "<group>"; };
@@ -551,6 +555,8 @@
 				FF8509F9246E294F003E2ACF /* ReviewDetailViewController.xib */,
 				FF8509FC246E297C003E2ACF /* ReviewDetailMainView.swift */,
 				FF8509FD246E297C003E2ACF /* ReviewDetailMainView.xib */,
+				FF3A5EA62474BAD100EDCB26 /* ReviewDetailMainTableViewCell.swift */,
+				FF3A5EA72474BAD100EDCB26 /* ReviewDetailMainTableViewCell.xib */,
 			);
 			path = ReviewDetail;
 			sourceTree = "<group>";
@@ -695,6 +701,7 @@
 				5F098A212474BE5800D033F4 /* BookmarkCollectionViewCell.xib in Resources */,
 				1F4B7725246E4FBD00FC3B27 /* CreateReviewMainView.xib in Resources */,
 				1F4B771B246E25CF00FC3B27 /* NewPostMainView.xib in Resources */,
+				FF3A5EA92474BAD100EDCB26 /* ReviewDetailMainTableViewCell.xib in Resources */,
 				FF8509FF246E297C003E2ACF /* ReviewDetailMainView.xib in Resources */,
 				FF850A13246E2B3C003E2ACF /* EditMakeViewController.xib in Resources */,
 				FFD02821246E3745009EE2E4 /* TimeLineMainTableViewSecondCell.xib in Resources */,
@@ -805,6 +812,7 @@
 				3FA0F795246E6DCA00D8DBA2 /* SearchResultMainView.swift in Sources */,
 				FF850A02246E29BC003E2ACF /* MakeDetailViewController.swift in Sources */,
 				3F6DB6992473C7C0000B192A /* EyeShadowMainView.swift in Sources */,
+				FF3A5EA82474BAD100EDCB26 /* ReviewDetailMainTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
