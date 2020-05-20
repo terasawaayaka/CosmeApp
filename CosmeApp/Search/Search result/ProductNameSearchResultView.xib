@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductNameSearchResultView" customModule="CosmeApp" customModuleProvider="target">
             <connections>
+                <outlet property="collectionViewFlowLayout" destination="810-CE-VvI" id="d91-0c-Itq"/>
                 <outlet property="productNameCollectionView" destination="rDv-lg-0Ee" id="gIt-fK-4Z0"/>
             </connections>
         </placeholder>

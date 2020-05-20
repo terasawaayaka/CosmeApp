@@ -16,12 +16,15 @@ extension ShadingSearchMainViewDelegate {
 class ShadingSearchMainView: BaseView {
     weak var delegate: ShadingSearchMainViewDelegate? = nil
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
 }
 // MARK: - Life cycle
 extension ShadingSearchMainView {
     override func awakeFromNib() {
         super.awakeFromNib()
         setDelegate()
+        
+        collectionViewFlowLayout.estimatedItemSize = CGSize(width: UIScreen.main.bounds.size.width - 40, height: 150)
         
         loadCollectionViewCellFromXib(collectionView: collectionView, cellName: "SearchResultCollectionViewCell")
     }

@@ -16,12 +16,15 @@ extension SkinCareSearchMainViewDelegate {
 class SkinCareSearchMainView: BaseView {
     weak var delegate: SkinCareSearchMainViewDelegate? = nil
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
 }
 // MARK: - Life cycle
 extension SkinCareSearchMainView {
     override func awakeFromNib() {
         super.awakeFromNib()
         setDelegate()
+        
+        collectionViewFlowLayout.estimatedItemSize = CGSize(width: UIScreen.main.bounds.size.width - 40, height: 150)
         
         loadCollectionViewCellFromXib(collectionView: collectionView, cellName: "SearchResultCollectionViewCell")
     }

@@ -16,13 +16,15 @@ extension EyeShadowMainViewDelegate {
 class EyeShadowMainView: BaseView {
     weak var delegate: EyeShadowMainViewDelegate? = nil
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
 }
 // MARK: - Life cycle
 extension EyeShadowMainView {
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         setDelegate()
+        
+        collectionViewFlowLayout.estimatedItemSize = CGSize(width: UIScreen.main.bounds.size.width - 40, height: 150)
         
         loadCollectionViewCellFromXib(collectionView: collectionView, cellName: "SearchResultCollectionViewCell")
     }

@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TagSearchResultMainView" customModule="CosmeApp" customModuleProvider="target">
             <connections>
+                <outlet property="collectionViewFlowLayout" destination="gQu-ms-qkf" id="S8r-Jr-S9m"/>
                 <outlet property="tagCollectionView" destination="iw7-hH-Mr0" id="7nf-ba-XiB"/>
             </connections>
         </placeholder>

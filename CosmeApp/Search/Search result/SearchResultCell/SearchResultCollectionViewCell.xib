@@ -44,6 +44,7 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="aYS-SQ-fdc" secondAttribute="trailing" id="5AB-cC-wQi"/>
                             <constraint firstAttribute="bottom" secondItem="aYS-SQ-fdc" secondAttribute="bottom" id="GhL-Ey-Bvi"/>
+                            <constraint firstAttribute="width" constant="390" id="HjH-uC-h0h"/>
                             <constraint firstItem="ABk-Yb-Fo2" firstAttribute="top" secondItem="w9n-Yb-WCH" secondAttribute="top" id="Pb1-L3-Czb"/>
                             <constraint firstItem="ABk-Yb-Fo2" firstAttribute="leading" secondItem="w9n-Yb-WCH" secondAttribute="leading" id="eUO-su-kVT"/>
                             <constraint firstItem="aYS-SQ-fdc" firstAttribute="leading" secondItem="w9n-Yb-WCH" secondAttribute="leading" id="uQh-MU-p7s"/>
@@ -61,6 +62,7 @@
             </collectionViewCellContentView>
             <size key="customSize" width="390" height="468"/>
             <connections>
+                <outlet property="cellWidth" destination="HjH-uC-h0h" id="un3-8f-yvo"/>
                 <outlet property="imaveView" destination="ABk-Yb-Fo2" id="mTg-gc-1dr"/>
                 <outlet property="productNameLabel" destination="0De-BP-lM9" id="4hh-mB-Xsk"/>
             </connections>

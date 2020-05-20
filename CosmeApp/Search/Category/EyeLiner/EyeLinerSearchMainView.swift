@@ -16,12 +16,15 @@ extension EyeLinerSearchMainViewDelegate {
 class EyeLinerSearchMainView: BaseView {
     weak var delegate: EyeLinerSearchMainViewDelegate? = nil
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var collectionViewFloeLayout: UICollectionViewFlowLayout!
 }
 // MARK: - Life cycle
 extension EyeLinerSearchMainView {
     override func awakeFromNib() {
         super.awakeFromNib()
         setDelegate()
+        
+        collectionViewFloeLayout.estimatedItemSize = CGSize(width: UIScreen.main.bounds.size.width - 40, height: 150)
         
         loadCollectionViewCellFromXib(collectionView: collectionView, cellName: "SearchResultCollectionViewCell")
     }

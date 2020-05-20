@@ -16,12 +16,14 @@ extension TagSearchResultMainViewDelegate {
 class TagSearchResultMainView: BaseView {
     weak var delegate: TagSearchResultMainViewDelegate? = nil
     @IBOutlet weak var tagCollectionView: UICollectionView!
+    @IBOutlet weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
 }
 // MARK: - Life cycle
 extension TagSearchResultMainView {
     override func awakeFromNib() {
         super.awakeFromNib()
         setDelegate()
+        collectionViewFlowLayout.estimatedItemSize = CGSize(width: UIScreen.main.bounds.size.width - 40, height: 150)
         
         loadCollectionViewCellFromXib(collectionView: tagCollectionView, cellName: "SearchResultCollectionViewCell")
     }

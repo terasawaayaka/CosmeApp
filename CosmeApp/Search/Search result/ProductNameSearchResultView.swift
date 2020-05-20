@@ -16,12 +16,15 @@ extension ProductNameSearchResultViewDelegate {
 class ProductNameSearchResultView: BaseView {
     weak var delegate: ProductNameSearchResultViewDelegate? = nil
     @IBOutlet weak var productNameCollectionView: UICollectionView!
+    @IBOutlet weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
 }
 // MARK: - Life cycle
 extension ProductNameSearchResultView {
     override func awakeFromNib() {
         super.awakeFromNib()
         setDelegate()
+        
+        collectionViewFlowLayout.estimatedItemSize = CGSize(width: UIScreen.main.bounds.size.width - 40, height: 150)
         
         loadCollectionViewCellFromXib(collectionView: productNameCollectionView, cellName: "SearchResultCollectionViewCell")
     }

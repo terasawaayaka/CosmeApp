@@ -16,13 +16,15 @@ extension BrandSearchResultViewDelegate {
 class BrandSearchResultView: BaseView {
     weak var delegate: BrandSearchResultViewDelegate? = nil
     @IBOutlet weak var brandCollectionView: UICollectionView!
+    @IBOutlet weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
 }
 // MARK: - Life cycle
 extension BrandSearchResultView {
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         setDelegate()
+        
+        collectionViewFlowLayout.estimatedItemSize = CGSize(width: UIScreen.main.bounds.size.width - 40, height: 150)
         
         loadCollectionViewCellFromXib(collectionView: brandCollectionView, cellName: "SearchResultCollectionViewCell")
     }

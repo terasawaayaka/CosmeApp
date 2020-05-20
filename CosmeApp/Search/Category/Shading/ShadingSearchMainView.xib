@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShadingSearchMainView" customModule="CosmeApp" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="fL2-vY-Wjf" id="kWM-8U-1EV"/>
+                <outlet property="collectionViewFlowLayout" destination="6Ut-vW-oVR" id="WQw-8v-e1H"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
