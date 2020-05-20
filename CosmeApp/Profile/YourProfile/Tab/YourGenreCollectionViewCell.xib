@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="d34-GA-vr3" customClass="YourGenreCollectionViewCell" customModule="CosmeApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="276" height="276"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="9Vo-iM-UMg">
+                <rect key="frame" x="0.0" y="0.0" width="276" height="276"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="53d-MA-5FK">
+                        <rect key="frame" x="0.0" y="0.0" width="276" height="276"/>
+                        <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="53d-MA-5FK" firstAttribute="top" secondItem="9Vo-iM-UMg" secondAttribute="top" id="Nhx-2a-Szp"/>
+                    <constraint firstAttribute="trailing" secondItem="53d-MA-5FK" secondAttribute="trailing" id="W9n-k8-8N2"/>
+                    <constraint firstAttribute="bottom" secondItem="53d-MA-5FK" secondAttribute="bottom" id="d4Z-rO-ZZB"/>
+                    <constraint firstItem="53d-MA-5FK" firstAttribute="leading" secondItem="9Vo-iM-UMg" secondAttribute="leading" id="e1S-FP-Zjm"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="276" height="276"/>
+            <point key="canvasLocation" x="292.75362318840581" y="14.0625"/>
+        </collectionViewCell>
+    </objects>
+</document>
