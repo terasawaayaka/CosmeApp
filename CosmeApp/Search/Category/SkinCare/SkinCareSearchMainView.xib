@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SkinCareSearchMainView" customModule="CosmeApp" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="NNz-ai-Ww6" id="g06-ga-yBA"/>
+                <outlet property="collectionViewFlowLayout" destination="FEZ-Gg-NYT" id="EZT-B9-jV0"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

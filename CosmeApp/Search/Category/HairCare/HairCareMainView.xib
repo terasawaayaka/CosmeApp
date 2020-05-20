@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HairCareMainView" customModule="CosmeApp" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="NlB-Zm-qws" id="7qV-zQ-dva"/>
+                <outlet property="collectionViewFlowLayout" destination="9sT-wW-ZCc" id="D9x-UZ-o22"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
