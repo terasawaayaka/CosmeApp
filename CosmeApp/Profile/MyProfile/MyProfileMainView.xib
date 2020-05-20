@@ -11,7 +11,7 @@
             <connections>
                 <outlet property="collectionViewFlowlayout" destination="ZHi-Yy-wLY" id="9NB-3J-neg"/>
                 <outlet property="iconView" destination="Lhr-Nh-3sc" id="o7Z-Xu-0qU"/>
-                <outlet property="scrollMainView" destination="OkQ-gw-UgN" id="uzj-lq-Qar"/>
+                <outlet property="scrollMainView" destination="OkQ-gw-UgN" id="h9M-aX-XiG"/>
                 <outlet property="todayCollectionView" destination="H65-42-76f" id="urg-Ec-aYA"/>
             </connections>
         </placeholder>
