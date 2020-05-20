@@ -15,7 +15,7 @@ class EditReviewViewController: BaseViewController {
     @IBOutlet weak var mainView: EditReviewMainView!
     @IBOutlet weak var mainViewBottomMergin: NSLayoutConstraint!
     
-    let items = ["ベースメイク", "シェーディング", "ハイライト", "チーク", "アイシャドウ","アイライン","マスカラ","カラコン","リップ","ヘアケア","スキンケア","その他"]
+    let items = ["ベースメイク", "シェーディング", "ハイライト", "チーク", "アイシャドウ","アイライン","マスカラ","カラコン","アイブロウ","リップ","ヘアケア","スキンケア","その他"]
 }
 
 // MARK: - Life cycle
