@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShadingSearchViewController" customModule="CosmeApp" customModuleProvider="target">
+            <connections>
+                <outlet property="headerView" destination="MVM-Dq-8Rx" id="7zo-m8-4yy"/>
+                <outlet property="mainView" destination="dDj-Un-MKe" id="SUl-Lm-YTL"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MVM-Dq-8Rx" customClass="HeaderView" customModule="PGFramework">
+                    <rect key="frame" x="0.0" y="44" width="414" height="60"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="enx-yY-NhZ"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dDj-Un-MKe" customClass="ShadingSearchMainView" customModule="CosmeApp" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="104" width="414" height="758"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="MVM-Dq-8Rx" secondAttribute="trailing" id="3er-ko-B6a"/>
+                <constraint firstItem="MVM-Dq-8Rx" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="4jw-YQ-Zhv"/>
+                <constraint firstItem="MVM-Dq-8Rx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Eg5-09-MZa"/>
+                <constraint firstItem="dDj-Un-MKe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="OhN-MQ-i3G"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="dDj-Un-MKe" secondAttribute="bottom" id="Voq-pw-79y"/>
+                <constraint firstItem="dDj-Un-MKe" firstAttribute="top" secondItem="MVM-Dq-8Rx" secondAttribute="bottom" id="eFh-kQ-Sq7"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dDj-Un-MKe" secondAttribute="trailing" id="gts-ZB-eum"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="108"/>
+        </view>
+    </objects>
+</document>
