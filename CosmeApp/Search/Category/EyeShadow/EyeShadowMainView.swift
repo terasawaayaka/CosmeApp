@@ -2,7 +2,7 @@
 //  EyeShadowMainView.swift
 //  CosmeApp
 //
-//  Created by ASW-研修３ on 2020/05/19.
+//  Created by ASW-研修３ on 2020/05/20.
 //  Copyright © 2020 ASW-研修２. All rights reserved.
 //
 
@@ -21,22 +21,29 @@ class EyeShadowMainView: BaseView {
 extension EyeShadowMainView {
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        setDelegate()
+        
         loadCollectionViewCellFromXib(collectionView: collectionView, cellName: "SearchResultCollectionViewCell")
     }
 }
 // MARK: - Protocol
 extension EyeShadowMainView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchResultCollectionViewCell", for: indexPath)as? SearchResultCollectionViewCell else {return UICollectionViewCell()}
+        
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchResultCollectionViewCell", for: indexPath) as? SearchResultCollectionViewCell else {return UICollectionViewCell()}
         return cell
     }
     
 }
 // MARK: - method
 extension EyeShadowMainView {
+    func setDelegate(){
+        collectionView.dataSource = self
+    }
 }
 
