@@ -10,6 +10,8 @@ import UIKit
 
 import PGFramework
 protocol ActivityGoodTableViewCellDelegate: NSObjectProtocol{
+    func touchedProfilePageButton()
+    func touchedPostPageButton()
 }
 extension ActivityGoodTableViewCellDelegate {
 }
@@ -17,9 +19,19 @@ extension ActivityGoodTableViewCellDelegate {
 class ActivityGoodTableViewCell: BaseTableViewCell {
     weak var delegate: ActivityGoodTableViewCellDelegate? = nil
     @IBOutlet weak var iconImageView: UIImageView!
+    @IBAction func touchedProfilePageButton(_ sender: UIButton) {
+        if let delegate = delegate {
+            delegate.touchedProfilePageButton()
+        }
+    }
     
     @IBOutlet weak var postImageView: UIImageView!
     
+    @IBAction func touchedPostPageButton(_ sender: UIButton) {
+        if let delegate = delegate {
+            delegate.touchedPostPageButton()
+        }
+    }
 }
 // MARK: - Life cycle
 extension ActivityGoodTableViewCell {

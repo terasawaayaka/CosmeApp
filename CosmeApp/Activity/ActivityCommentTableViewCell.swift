@@ -17,7 +17,11 @@ extension ActivityCommentTableViewCellDelegate {
 class ActivityCommentTableViewCell: BaseTableViewCell {
     weak var delegate: ActivityCommentTableViewCellDelegate? = nil
     @IBOutlet weak var iconImageView: UIImageView!
+    @IBAction func touchedProfilePageButton(_ sender: UIButton) {
+    }
     @IBOutlet weak var postImageView: UIImageView!
+    @IBAction func touchedPostPageButton(_ sender: UIButton) {
+    }
 }
 // MARK: - Life cycle
 extension ActivityCommentTableViewCell {
