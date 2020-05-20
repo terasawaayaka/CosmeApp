@@ -10,7 +10,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateMakeViewController" customModule="CosmeApp" customModuleProvider="target">
             <connections>
                 <outlet property="headerView" destination="Hae-Z0-I5E" id="0nB-gn-0D7"/>
-                <outlet property="mainView" destination="D44-X0-RwD" id="awJ-3J-3Nn"/>
+                <outlet property="mainView" destination="D44-X0-RwD" id="3jB-Ej-s51"/>
+                <outlet property="mainViewBottomMargin" destination="jCv-BR-ATf" id="Rhw-AK-DjP"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

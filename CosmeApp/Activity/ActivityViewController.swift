@@ -30,14 +30,23 @@ extension ActivityViewController {
 }
 // MARK: - Protocol
 extension ActivityViewController:ActivityMainViewDelegate {
-    func didSelectRowAt() {
-        //todo
+    func didSelectRowAt(indexPath:IndexPath) {
+        
+        func touchedProfilePageButton() {
+            //todo
+        }
+        func touchedPostPageButton() {
+            let editReviewViewController = EditReviewViewController()
+            navigationController?.pushViewController(editReviewViewController, animated: true)
+            animatorManager.navigationType = .pop
+        }
     }
 }
 // MARK: - method
 extension ActivityViewController {
     func setHeaderView() {
         headerView.setCenter(text: "アクティビティ", fontSize: 19, color: UIColor.black)
+        headerView.setLeft(text: "")
     }
     func setDelegate() {
         mainView.delegate = self

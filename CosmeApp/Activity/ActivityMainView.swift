@@ -10,7 +10,7 @@ import UIKit
 
 import PGFramework
 protocol ActivityMainViewDelegate: NSObjectProtocol {
-    func didSelectRowAt()
+    func didSelectRowAt(indexPath:IndexPath)
 }
 extension ActivityMainViewDelegate {
 }
@@ -26,6 +26,7 @@ extension ActivityMainView {
         setDelegate()
         loadTableViewCellFromXib(tableView: tableView, cellName: "ActivityGoodTableViewCell")
         loadTableViewCellFromXib(tableView: tableView, cellName: "ActivityCommentTableViewCell")
+        loadTableViewCellFromXib(tableView: tableView, cellName: "ActivityFollowTableViewCell")
     }
 }
 // MARK: - Protocol
@@ -39,15 +40,25 @@ extension ActivityMainView:UITableViewDataSource {
              ActivityGoodTableViewCell else {return UITableViewCell()}
         guard let secondCell = tableView.dequeueReusableCell(withIdentifier: "ActivityCommentTableViewCell", for: indexPath) as?
              ActivityCommentTableViewCell else {return UITableViewCell()}
-        
-        return cell
+        guard let thirdCell = tableView.dequeueReusableCell(withIdentifier: "ActivityFollowTableViewCell", for: indexPath) as?
+             ActivityFollowTableViewCell else {return UITableViewCell()}
+        switch indexPath {
+        case [0,0]:
+            return cell
+        case [0,1]:
+            return secondCell
+        case [0,2]:
+            return thirdCell
+        default:
+            return cell
+        }
     }
 }
 
 extension ActivityMainView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let delegate = delegate {
-            delegate.didSelectRowAt()
+            delegate.didSelectRowAt(indexPath: indexPath)
         }
     }
 }
