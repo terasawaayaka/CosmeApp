@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1F4B76E6246D2AC100FC3B27 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4B76E5246D2AC100FC3B27 /* SceneDelegate.swift */; };
 		1F4B76EB246D2AC100FC3B27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B76E9246D2AC100FC3B27 /* Main.storyboard */; };
-		1F4B76ED246D2AE100FC3B27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B76EC246D2AE100FC3B27 /* Assets.xcassets */; };
 		1F4B76F0246D2AE100FC3B27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B76EE246D2AE100FC3B27 /* LaunchScreen.storyboard */; };
 		1F4B76F9246D2F7700FC3B27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4B76F8246D2F7700FC3B27 /* AppDelegate.swift */; };
 		1F4B7705246D30D900FC3B27 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4B7703246D30D900FC3B27 /* MyProfileViewController.swift */; };
@@ -44,6 +43,10 @@
 		3F6648EE2472280300D4D950 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F6648EC2472280300D4D950 /* SignUpViewController.xib */; };
 		3F6648F22472287900D4D950 /* SignUpMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6648F02472287900D4D950 /* SignUpMainView.swift */; };
 		3F6648F32472287900D4D950 /* SignUpMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F6648F12472287900D4D950 /* SignUpMainView.xib */; };
+		3F6DB6942473C76E000B192A /* EyeShadowPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6DB6922473C76E000B192A /* EyeShadowPageViewController.swift */; };
+		3F6DB6952473C76E000B192A /* EyeShadowPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F6DB6932473C76E000B192A /* EyeShadowPageViewController.xib */; };
+		3F6DB6992473C7C0000B192A /* EyeShadowMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6DB6972473C7C0000B192A /* EyeShadowMainView.swift */; };
+		3F6DB69A2473C7C0000B192A /* EyeShadowMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F6DB6982473C7C0000B192A /* EyeShadowMainView.xib */; };
 		3F96651D246E2A7F0083EBC2 /* SearchTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F96651B246E2A7F0083EBC2 /* SearchTextView.swift */; };
 		3F96651E246E2A7F0083EBC2 /* SearchTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F96651C246E2A7F0083EBC2 /* SearchTextView.xib */; };
 		3F966521246E2B240083EBC2 /* SearchMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F96651F246E2B240083EBC2 /* SearchMainView.swift */; };
@@ -58,10 +61,16 @@
 		3F966548246E56040083EBC2 /* BrandSearchResultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F966546246E56040083EBC2 /* BrandSearchResultView.xib */; };
 		3FA0F795246E6DCA00D8DBA2 /* SearchResultMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA0F793246E6DCA00D8DBA2 /* SearchResultMainView.swift */; };
 		3FA0F796246E6DCA00D8DBA2 /* SearchResultMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FA0F794246E6DCA00D8DBA2 /* SearchResultMainView.xib */; };
+		3FC6EE862473BDF0008875B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FC6EE852473BDF0008875B7 /* Assets.xcassets */; };
 		3FF1213824724716001E0554 /* SearchResultCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF1213624724716001E0554 /* SearchResultCollectionViewCell.swift */; };
 		3FF1213924724716001E0554 /* SearchResultCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FF1213724724716001E0554 /* SearchResultCollectionViewCell.xib */; };
 		3FF1213D24724B18001E0554 /* SearchUserResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF1213B24724B18001E0554 /* SearchUserResultTableViewCell.swift */; };
 		3FF1213E24724B18001E0554 /* SearchUserResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FF1213C24724B18001E0554 /* SearchUserResultTableViewCell.xib */; };
+		401EBF302A1D6FB2881C82CB /* Pods_CosmeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 555A83F82F2AD4E67FFEB327 /* Pods_CosmeApp.framework */; };
+		5F098A202474BE5800D033F4 /* BookmarkCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F098A1E2474BE5800D033F4 /* BookmarkCollectionViewCell.swift */; };
+		5F098A212474BE5800D033F4 /* BookmarkCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F098A1F2474BE5800D033F4 /* BookmarkCollectionViewCell.xib */; };
+		5F098A242474C0CF00D033F4 /* GenreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F098A222474C0CF00D033F4 /* GenreCollectionViewCell.swift */; };
+		5F098A252474C0CF00D033F4 /* GenreCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F098A232474C0CF00D033F4 /* GenreCollectionViewCell.xib */; };
 		5FA88A36246E271000B84ACE /* MyProfileMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA88A34246E271000B84ACE /* MyProfileMainView.swift */; };
 		5FA88A37246E271000B84ACE /* MyProfileMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FA88A35246E271000B84ACE /* MyProfileMainView.xib */; };
 		5FA88A3D246E3FA300B84ACE /* YourProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA88A3B246E3FA300B84ACE /* YourProfileViewController.swift */; };
@@ -83,6 +92,8 @@
 		D1B8AFC52472627C007BC6AD /* CreateMakeMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1B8AFC12472627B007BC6AD /* CreateMakeMainView.xib */; };
 		D1B8AFC62472627C007BC6AD /* CreateMakeMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B8AFC22472627B007BC6AD /* CreateMakeMainView.swift */; };
 		D1B8AFC72472627C007BC6AD /* CreateMakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B8AFC32472627C007BC6AD /* CreateMakeViewController.swift */; };
+		FF3A5EA82474BAD100EDCB26 /* ReviewDetailMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3A5EA62474BAD100EDCB26 /* ReviewDetailMainTableViewCell.swift */; };
+		FF3A5EA92474BAD100EDCB26 /* ReviewDetailMainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF3A5EA72474BAD100EDCB26 /* ReviewDetailMainTableViewCell.xib */; };
 		FF8509F1246E2870003E2ACF /* TimeLineMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8509EF246E2870003E2ACF /* TimeLineMainView.swift */; };
 		FF8509F2246E2870003E2ACF /* TimeLineMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF8509F0246E2870003E2ACF /* TimeLineMainView.xib */; };
 		FF8509FA246E294F003E2ACF /* ReviewDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8509F8246E294F003E2ACF /* ReviewDetailViewController.swift */; };
@@ -112,7 +123,6 @@
 /* Begin PBXFileReference section */
 		1F4B76E5246D2AC100FC3B27 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1F4B76EA246D2AC100FC3B27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		1F4B76EC246D2AE100FC3B27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F4B76EF246D2AE100FC3B27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F4B76F1246D2AE100FC3B27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F4B76F8246D2F7700FC3B27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -139,8 +149,7 @@
 		1F4B773F24736EE400FC3B27 /* ActivityGoodTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityGoodTableViewCell.xib; sourceTree = "<group>"; };
 		1F4B7742247379A700FC3B27 /* ActivityCommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCommentTableViewCell.swift; sourceTree = "<group>"; };
 		1F4B7743247379A700FC3B27 /* ActivityCommentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityCommentTableViewCell.xib; sourceTree = "<group>"; };
-		1F4B774A2473B5D600FC3B27 /* ActivityFollowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityFollowTableViewCell.swift; sourceTree = "<group>"; };
-		1F4B774B2473B5D600FC3B27 /* ActivityFollowTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityFollowTableViewCell.xib; sourceTree = "<group>"; };
+		379F08E79BCE8E2224F8C9FD /* Pods-CosmeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CosmeApp.debug.xcconfig"; path = "Target Support Files/Pods-CosmeApp/Pods-CosmeApp.debug.xcconfig"; sourceTree = "<group>"; };
 		3F18F05A24722C2B00957A2E /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		3F18F05B24722C2B00957A2E /* SignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
 		3F18F06024722DC400957A2E /* SingInMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingInMainView.swift; sourceTree = "<group>"; };
@@ -149,6 +158,10 @@
 		3F6648EC2472280300D4D950 /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
 		3F6648F02472287900D4D950 /* SignUpMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpMainView.swift; sourceTree = "<group>"; };
 		3F6648F12472287900D4D950 /* SignUpMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpMainView.xib; sourceTree = "<group>"; };
+		3F6DB6922473C76E000B192A /* EyeShadowPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeShadowPageViewController.swift; sourceTree = "<group>"; };
+		3F6DB6932473C76E000B192A /* EyeShadowPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EyeShadowPageViewController.xib; sourceTree = "<group>"; };
+		3F6DB6972473C7C0000B192A /* EyeShadowMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeShadowMainView.swift; sourceTree = "<group>"; };
+		3F6DB6982473C7C0000B192A /* EyeShadowMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EyeShadowMainView.xib; sourceTree = "<group>"; };
 		3F96651B246E2A7F0083EBC2 /* SearchTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextView.swift; sourceTree = "<group>"; };
 		3F96651C246E2A7F0083EBC2 /* SearchTextView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTextView.xib; sourceTree = "<group>"; };
 		3F96651F246E2B240083EBC2 /* SearchMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMainView.swift; sourceTree = "<group>"; };
@@ -163,11 +176,16 @@
 		3F966546246E56040083EBC2 /* BrandSearchResultView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BrandSearchResultView.xib; sourceTree = "<group>"; };
 		3FA0F793246E6DCA00D8DBA2 /* SearchResultMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultMainView.swift; sourceTree = "<group>"; };
 		3FA0F794246E6DCA00D8DBA2 /* SearchResultMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultMainView.xib; sourceTree = "<group>"; };
+		3FC6EE852473BDF0008875B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FF1213624724716001E0554 /* SearchResultCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCollectionViewCell.swift; sourceTree = "<group>"; };
 		3FF1213724724716001E0554 /* SearchResultCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultCollectionViewCell.xib; sourceTree = "<group>"; };
 		3FF1213B24724B18001E0554 /* SearchUserResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUserResultTableViewCell.swift; sourceTree = "<group>"; };
 		3FF1213C24724B18001E0554 /* SearchUserResultTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchUserResultTableViewCell.xib; sourceTree = "<group>"; };
-		48F8E3AC1E10902779801D89 /* Pods-CosmeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CosmeApp.debug.xcconfig"; path = "Target Support Files/Pods-CosmeApp/Pods-CosmeApp.debug.xcconfig"; sourceTree = "<group>"; };
+		555A83F82F2AD4E67FFEB327 /* Pods_CosmeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CosmeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F098A1E2474BE5800D033F4 /* BookmarkCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkCollectionViewCell.swift; sourceTree = "<group>"; };
+		5F098A1F2474BE5800D033F4 /* BookmarkCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookmarkCollectionViewCell.xib; sourceTree = "<group>"; };
+		5F098A222474C0CF00D033F4 /* GenreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreCollectionViewCell.swift; sourceTree = "<group>"; };
+		5F098A232474C0CF00D033F4 /* GenreCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenreCollectionViewCell.xib; sourceTree = "<group>"; };
 		5FA88A34246E271000B84ACE /* MyProfileMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileMainView.swift; sourceTree = "<group>"; };
 		5FA88A35246E271000B84ACE /* MyProfileMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyProfileMainView.xib; sourceTree = "<group>"; };
 		5FA88A3B246E3FA300B84ACE /* YourProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourProfileViewController.swift; sourceTree = "<group>"; };
@@ -184,12 +202,13 @@
 		5FA88A622472316600B84ACE /* ScrollMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScrollMainView.xib; sourceTree = "<group>"; };
 		5FA88A6D247272C000B84ACE /* GoodCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodCollectionViewCell.swift; sourceTree = "<group>"; };
 		5FA88A6E247272C000B84ACE /* GoodCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoodCollectionViewCell.xib; sourceTree = "<group>"; };
-		D120365C7E7228FD8E997051 /* Pods_CosmeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CosmeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C895E2CE8E5B96B293B0E23B /* Pods-CosmeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CosmeApp.release.xcconfig"; path = "Target Support Files/Pods-CosmeApp/Pods-CosmeApp.release.xcconfig"; sourceTree = "<group>"; };
 		D1B8AFC02472627B007BC6AD /* CreateMakeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateMakeViewController.xib; sourceTree = "<group>"; };
 		D1B8AFC12472627B007BC6AD /* CreateMakeMainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateMakeMainView.xib; sourceTree = "<group>"; };
 		D1B8AFC22472627B007BC6AD /* CreateMakeMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateMakeMainView.swift; sourceTree = "<group>"; };
 		D1B8AFC32472627C007BC6AD /* CreateMakeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateMakeViewController.swift; sourceTree = "<group>"; };
-		D8B2397571F57800DFA9A117 /* Pods-CosmeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CosmeApp.release.xcconfig"; path = "Target Support Files/Pods-CosmeApp/Pods-CosmeApp.release.xcconfig"; sourceTree = "<group>"; };
+		FF3A5EA62474BAD100EDCB26 /* ReviewDetailMainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewDetailMainTableViewCell.swift; sourceTree = "<group>"; };
+		FF3A5EA72474BAD100EDCB26 /* ReviewDetailMainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewDetailMainTableViewCell.xib; sourceTree = "<group>"; };
 		FF8509EF246E2870003E2ACF /* TimeLineMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineMainView.swift; sourceTree = "<group>"; };
 		FF8509F0246E2870003E2ACF /* TimeLineMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeLineMainView.xib; sourceTree = "<group>"; };
 		FF8509F8246E294F003E2ACF /* ReviewDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewDetailViewController.swift; sourceTree = "<group>"; };
@@ -221,7 +240,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCB572261DCF736DF31AF598 /* Pods_CosmeApp.framework in Frameworks */,
+				401EBF302A1D6FB2881C82CB /* Pods_CosmeApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,7 +253,7 @@
 				1F4B76E2246D2AC000FC3B27 /* CosmeApp */,
 				4360F9E917DBF64E840CB96A /* Pods */,
 				1F4B770B246D31C300FC3B27 /* CosmeApp.app */,
-				E73FFF0F67EE41C03E615462 /* Frameworks */,
+				B3FB677933B81D37CF910AE4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -250,7 +269,7 @@
 				1F4B76F8246D2F7700FC3B27 /* AppDelegate.swift */,
 				1F4B76E5246D2AC100FC3B27 /* SceneDelegate.swift */,
 				1F4B76E9246D2AC100FC3B27 /* Main.storyboard */,
-				1F4B76EC246D2AE100FC3B27 /* Assets.xcassets */,
+				3FC6EE852473BDF0008875B7 /* Assets.xcassets */,
 				1F4B76EE246D2AE100FC3B27 /* LaunchScreen.storyboard */,
 				1F4B76F1246D2AE100FC3B27 /* Info.plist */,
 			);
@@ -298,6 +317,7 @@
 				3F966520246E2B240083EBC2 /* SearchMainView.xib */,
 				3F96651B246E2A7F0083EBC2 /* SearchTextView.swift */,
 				3F96651C246E2A7F0083EBC2 /* SearchTextView.xib */,
+				3F6DB6912473C742000B192A /* Category */,
 				3F966524246E53B40083EBC2 /* Search result */,
 			);
 			path = Search;
@@ -384,6 +404,25 @@
 			path = SignUp;
 			sourceTree = "<group>";
 		};
+		3F6DB6912473C742000B192A /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				3F6DB6962473C798000B192A /* EyeShadow */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		3F6DB6962473C798000B192A /* EyeShadow */ = {
+			isa = PBXGroup;
+			children = (
+				3F6DB6922473C76E000B192A /* EyeShadowPageViewController.swift */,
+				3F6DB6932473C76E000B192A /* EyeShadowPageViewController.xib */,
+				3F6DB6972473C7C0000B192A /* EyeShadowMainView.swift */,
+				3F6DB6982473C7C0000B192A /* EyeShadowMainView.xib */,
+			);
+			path = EyeShadow;
+			sourceTree = "<group>";
+		};
 		3F966524246E53B40083EBC2 /* Search result */ = {
 			isa = PBXGroup;
 			children = (
@@ -424,8 +463,8 @@
 		4360F9E917DBF64E840CB96A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				48F8E3AC1E10902779801D89 /* Pods-CosmeApp.debug.xcconfig */,
-				D8B2397571F57800DFA9A117 /* Pods-CosmeApp.release.xcconfig */,
+				379F08E79BCE8E2224F8C9FD /* Pods-CosmeApp.debug.xcconfig */,
+				C895E2CE8E5B96B293B0E23B /* Pods-CosmeApp.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -481,14 +520,18 @@
 				5FA88A622472316600B84ACE /* ScrollMainView.xib */,
 				5FA88A6D247272C000B84ACE /* GoodCollectionViewCell.swift */,
 				5FA88A6E247272C000B84ACE /* GoodCollectionViewCell.xib */,
+				5F098A1E2474BE5800D033F4 /* BookmarkCollectionViewCell.swift */,
+				5F098A1F2474BE5800D033F4 /* BookmarkCollectionViewCell.xib */,
+				5F098A222474C0CF00D033F4 /* GenreCollectionViewCell.swift */,
+				5F098A232474C0CF00D033F4 /* GenreCollectionViewCell.xib */,
 			);
 			path = Tab;
 			sourceTree = "<group>";
 		};
-		E73FFF0F67EE41C03E615462 /* Frameworks */ = {
+		B3FB677933B81D37CF910AE4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D120365C7E7228FD8E997051 /* Pods_CosmeApp.framework */,
+				555A83F82F2AD4E67FFEB327 /* Pods_CosmeApp.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -517,6 +560,8 @@
 				FF8509F9246E294F003E2ACF /* ReviewDetailViewController.xib */,
 				FF8509FC246E297C003E2ACF /* ReviewDetailMainView.swift */,
 				FF8509FD246E297C003E2ACF /* ReviewDetailMainView.xib */,
+				FF3A5EA62474BAD100EDCB26 /* ReviewDetailMainTableViewCell.swift */,
+				FF3A5EA72474BAD100EDCB26 /* ReviewDetailMainTableViewCell.xib */,
 			);
 			path = ReviewDetail;
 			sourceTree = "<group>";
@@ -561,11 +606,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F4B76F4246D2AE100FC3B27 /* Build configuration list for PBXNativeTarget "CosmeApp" */;
 			buildPhases = (
-				48551416A39DAFC2B73A9ECF /* [CP] Check Pods Manifest.lock */,
+				291F1C78821FC3621B84494B /* [CP] Check Pods Manifest.lock */,
 				1F4B76DC246D2AC000FC3B27 /* Sources */,
 				1F4B76DD246D2AC000FC3B27 /* Frameworks */,
 				1F4B76DE246D2AC000FC3B27 /* Resources */,
-				8687764AE27D7A9E381BA32A /* [CP] Embed Pods Frameworks */,
+				0D71E75037F69D744A3987CE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -617,6 +662,7 @@
 				3FF1213E24724B18001E0554 /* SearchUserResultTableViewCell.xib in Resources */,
 				3F96651E246E2A7F0083EBC2 /* SearchTextView.xib in Resources */,
 				3F18F06324722DC400957A2E /* SingInMainView.xib in Resources */,
+				3F6DB69A2473C7C0000B192A /* EyeShadowMainView.xib in Resources */,
 				3F966540246E558A0083EBC2 /* UserSearchResultMainView.xib in Resources */,
 				5FA88A70247272C000B84ACE /* GoodCollectionViewCell.xib in Resources */,
 				3F966522246E2B240083EBC2 /* SearchMainView.xib in Resources */,
@@ -626,7 +672,6 @@
 				1F4B770F246D31FD00FC3B27 /* NewPostViewController.xib in Resources */,
 				FFD02825246E3866009EE2E4 /* TimeLineMainCollectionViewCell.xib in Resources */,
 				1F4B7745247379A700FC3B27 /* ActivityCommentTableViewCell.xib in Resources */,
-				1F4B76ED246D2AE100FC3B27 /* Assets.xcassets in Resources */,
 				1F4B774124736EE400FC3B27 /* ActivityGoodTableViewCell.xib in Resources */,
 				D1B8AFC42472627C007BC6AD /* CreateMakeViewController.xib in Resources */,
 				FF8509FB246E294F003E2ACF /* ReviewDetailViewController.xib in Resources */,
@@ -641,7 +686,9 @@
 				1F4B770A246D310F00FC3B27 /* TimeLineViewController.xib in Resources */,
 				FF850A0F246E2B16003E2ACF /* EditReviewMainView.xib in Resources */,
 				3F966544246E55BD0083EBC2 /* ProductNameSearchResultView.xib in Resources */,
+				3FC6EE862473BDF0008875B7 /* Assets.xcassets in Resources */,
 				1F4B7713246D329300FC3B27 /* SearchViewController.xib in Resources */,
+				3F6DB6952473C76E000B192A /* EyeShadowPageViewController.xib in Resources */,
 				5FA88A42246E3FE200B84ACE /* YourProfileMainView.xib in Resources */,
 				5FA88A53246E581F00B84ACE /* TodayCollectionViewCell.xib in Resources */,
 				5FA88A46246E402700B84ACE /* EditProfileViewController.xib in Resources */,
@@ -654,10 +701,13 @@
 				3FA0F796246E6DCA00D8DBA2 /* SearchResultMainView.xib in Resources */,
 				FF8509F2246E2870003E2ACF /* TimeLineMainView.xib in Resources */,
 				1F4B7717246D32C000FC3B27 /* ActivityViewController.xib in Resources */,
+				5F098A252474C0CF00D033F4 /* GenreCollectionViewCell.xib in Resources */,
 				3F6648EE2472280300D4D950 /* SignUpViewController.xib in Resources */,
 				5FA88A37246E271000B84ACE /* MyProfileMainView.xib in Resources */,
+				5F098A212474BE5800D033F4 /* BookmarkCollectionViewCell.xib in Resources */,
 				1F4B7725246E4FBD00FC3B27 /* CreateReviewMainView.xib in Resources */,
 				1F4B771B246E25CF00FC3B27 /* NewPostMainView.xib in Resources */,
+				FF3A5EA92474BAD100EDCB26 /* ReviewDetailMainTableViewCell.xib in Resources */,
 				FF8509FF246E297C003E2ACF /* ReviewDetailMainView.xib in Resources */,
 				FF850A13246E2B3C003E2ACF /* EditMakeViewController.xib in Resources */,
 				FFD02821246E3745009EE2E4 /* TimeLineMainTableViewSecondCell.xib in Resources */,
@@ -670,7 +720,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		48551416A39DAFC2B73A9ECF /* [CP] Check Pods Manifest.lock */ = {
+		0D71E75037F69D744A3987CE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CosmeApp/Pods-CosmeApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CosmeApp/Pods-CosmeApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CosmeApp/Pods-CosmeApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		291F1C78821FC3621B84494B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -692,23 +759,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8687764AE27D7A9E381BA32A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CosmeApp/Pods-CosmeApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CosmeApp/Pods-CosmeApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CosmeApp/Pods-CosmeApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -720,6 +770,7 @@
 				5FA88A45246E402700B84ACE /* EditProfileViewController.swift in Sources */,
 				1F4B771A246E25CF00FC3B27 /* NewPostMainView.swift in Sources */,
 				D1B8AFC62472627C007BC6AD /* CreateMakeMainView.swift in Sources */,
+				3F6DB6942473C76E000B192A /* EyeShadowPageViewController.swift in Sources */,
 				FF8509FE246E297C003E2ACF /* ReviewDetailMainView.swift in Sources */,
 				1F4B774C2473B5D600FC3B27 /* ActivityFollowTableViewCell.swift in Sources */,
 				FF8509F1246E2870003E2ACF /* TimeLineMainView.swift in Sources */,
@@ -740,9 +791,11 @@
 				5FA88A49246E405900B84ACE /* EditProfileMainView.swift in Sources */,
 				1F4B7732246E7EC300FC3B27 /* ActivityMainView.swift in Sources */,
 				1F4B7709246D310F00FC3B27 /* TimeLineViewController.swift in Sources */,
+				5F098A242474C0CF00D033F4 /* GenreCollectionViewCell.swift in Sources */,
 				1F4B76F9246D2F7700FC3B27 /* AppDelegate.swift in Sources */,
 				1F4B7716246D32C000FC3B27 /* ActivityViewController.swift in Sources */,
 				3F18F06224722DC400957A2E /* SingInMainView.swift in Sources */,
+				5F098A202474BE5800D033F4 /* BookmarkCollectionViewCell.swift in Sources */,
 				FF850A0E246E2B16003E2ACF /* EditReviewMainView.swift in Sources */,
 				1F4B7744247379A700FC3B27 /* ActivityCommentTableViewCell.swift in Sources */,
 				5FA88A632472316600B84ACE /* ScrollMainView.swift in Sources */,
@@ -765,6 +818,8 @@
 				3F6648F22472287900D4D950 /* SignUpMainView.swift in Sources */,
 				3FA0F795246E6DCA00D8DBA2 /* SearchResultMainView.swift in Sources */,
 				FF850A02246E29BC003E2ACF /* MakeDetailViewController.swift in Sources */,
+				3F6DB6992473C7C0000B192A /* EyeShadowMainView.swift in Sources */,
+				FF3A5EA82474BAD100EDCB26 /* ReviewDetailMainTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -906,7 +961,7 @@
 		};
 		1F4B76F5246D2AE100FC3B27 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 48F8E3AC1E10902779801D89 /* Pods-CosmeApp.debug.xcconfig */;
+			baseConfigurationReference = 379F08E79BCE8E2224F8C9FD /* Pods-CosmeApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -925,7 +980,7 @@
 		};
 		1F4B76F6246D2AE100FC3B27 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D8B2397571F57800DFA9A117 /* Pods-CosmeApp.release.xcconfig */;
+			baseConfigurationReference = C895E2CE8E5B96B293B0E23B /* Pods-CosmeApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
