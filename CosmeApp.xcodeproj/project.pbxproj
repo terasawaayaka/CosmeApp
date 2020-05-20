@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F49BB02247509940092AF96 /* ActivityFollowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F49BB00247509940092AF96 /* ActivityFollowTableViewCell.swift */; };
+		1F49BB03247509940092AF96 /* ActivityFollowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F49BB01247509940092AF96 /* ActivityFollowTableViewCell.xib */; };
 		1F4B76E6246D2AC100FC3B27 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4B76E5246D2AC100FC3B27 /* SceneDelegate.swift */; };
 		1F4B76EB246D2AC100FC3B27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B76E9246D2AC100FC3B27 /* Main.storyboard */; };
 		1F4B76F0246D2AE100FC3B27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B76EE246D2AE100FC3B27 /* LaunchScreen.storyboard */; };
@@ -33,8 +35,8 @@
 		1F4B774124736EE400FC3B27 /* ActivityGoodTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B773F24736EE400FC3B27 /* ActivityGoodTableViewCell.xib */; };
 		1F4B7744247379A700FC3B27 /* ActivityCommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4B7742247379A700FC3B27 /* ActivityCommentTableViewCell.swift */; };
 		1F4B7745247379A700FC3B27 /* ActivityCommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B7743247379A700FC3B27 /* ActivityCommentTableViewCell.xib */; };
-		1F4B774C2473B5D600FC3B27 /* ActivityFollowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4B774A2473B5D600FC3B27 /* ActivityFollowTableViewCell.swift */; };
-		1F4B774D2473B5D600FC3B27 /* ActivityFollowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B774B2473B5D600FC3B27 /* ActivityFollowTableViewCell.xib */; };
+		1F4B774C2473B5D600FC3B27 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		1F4B774D2473B5D600FC3B27 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		3F18F05C24722C2B00957A2E /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F18F05A24722C2B00957A2E /* SignInViewController.swift */; };
 		3F18F05D24722C2B00957A2E /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F18F05B24722C2B00957A2E /* SignInViewController.xib */; };
 		3F18F06224722DC400957A2E /* SingInMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F18F06024722DC400957A2E /* SingInMainView.swift */; };
@@ -131,7 +133,6 @@
 		5FA88A642472316600B84ACE /* ScrollMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FA88A622472316600B84ACE /* ScrollMainView.xib */; };
 		5FA88A6F247272C000B84ACE /* GoodCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA88A6D247272C000B84ACE /* GoodCollectionViewCell.swift */; };
 		5FA88A70247272C000B84ACE /* GoodCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FA88A6E247272C000B84ACE /* GoodCollectionViewCell.xib */; };
-		CCB572261DCF736DF31AF598 /* Pods_CosmeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D120365C7E7228FD8E997051 /* Pods_CosmeApp.framework */; };
 		D1B8AFC42472627C007BC6AD /* CreateMakeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1B8AFC02472627B007BC6AD /* CreateMakeViewController.xib */; };
 		D1B8AFC52472627C007BC6AD /* CreateMakeMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1B8AFC12472627B007BC6AD /* CreateMakeMainView.xib */; };
 		D1B8AFC62472627C007BC6AD /* CreateMakeMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B8AFC22472627B007BC6AD /* CreateMakeMainView.swift */; };
@@ -165,6 +166,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F49BB00247509940092AF96 /* ActivityFollowTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityFollowTableViewCell.swift; sourceTree = "<group>"; };
+		1F49BB01247509940092AF96 /* ActivityFollowTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityFollowTableViewCell.xib; sourceTree = "<group>"; };
 		1F4B76E5246D2AC100FC3B27 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1F4B76EA246D2AC100FC3B27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1F4B76EF246D2AE100FC3B27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -422,8 +425,8 @@
 				1F4B773F24736EE400FC3B27 /* ActivityGoodTableViewCell.xib */,
 				1F4B7742247379A700FC3B27 /* ActivityCommentTableViewCell.swift */,
 				1F4B7743247379A700FC3B27 /* ActivityCommentTableViewCell.xib */,
-				1F4B774A2473B5D600FC3B27 /* ActivityFollowTableViewCell.swift */,
-				1F4B774B2473B5D600FC3B27 /* ActivityFollowTableViewCell.xib */,
+				1F49BB00247509940092AF96 /* ActivityFollowTableViewCell.swift */,
+				1F49BB01247509940092AF96 /* ActivityFollowTableViewCell.xib */,
 			);
 			path = Activity;
 			sourceTree = "<group>";
@@ -907,7 +910,8 @@
 				5FA88A4A246E405900B84ACE /* EditProfileMainView.xib in Resources */,
 				FF850A0B246E2AD3003E2ACF /* EditReviewViewController.xib in Resources */,
 				1F4B7706246D30D900FC3B27 /* MyProfileViewController.xib in Resources */,
-				1F4B774D2473B5D600FC3B27 /* ActivityFollowTableViewCell.xib in Resources */,
+				1F4B774D2473B5D600FC3B27 /* (null) in Resources */,
+				1F49BB03247509940092AF96 /* ActivityFollowTableViewCell.xib in Resources */,
 				FF850A03246E29BC003E2ACF /* MakeDetailViewController.xib in Resources */,
 				1F4B76EB246D2AC100FC3B27 /* Main.storyboard in Resources */,
 				5FA88A3E246E3FA300B84ACE /* YourProfileViewController.xib in Resources */,
@@ -1016,7 +1020,7 @@
 				1F4B771A246E25CF00FC3B27 /* NewPostMainView.swift in Sources */,
 				D1B8AFC62472627C007BC6AD /* CreateMakeMainView.swift in Sources */,
 				FF8509FE246E297C003E2ACF /* ReviewDetailMainView.swift in Sources */,
-				1F4B774C2473B5D600FC3B27 /* ActivityFollowTableViewCell.swift in Sources */,
+				1F4B774C2473B5D600FC3B27 /* (null) in Sources */,
 				FF8509F1246E2870003E2ACF /* TimeLineMainView.swift in Sources */,
 				FF850A12246E2B3C003E2ACF /* EditMakeViewController.swift in Sources */,
 				1F4B7712246D329300FC3B27 /* SearchViewController.swift in Sources */,
@@ -1069,6 +1073,7 @@
 				3FC4B4D72474E550005FB6E6 /* HiLighthMainView.swift in Sources */,
 				3FF1213D24724B18001E0554 /* SearchUserResultTableViewCell.swift in Sources */,
 				3F96653F246E558A0083EBC2 /* UserSearchResultMainView.swift in Sources */,
+				1F49BB02247509940092AF96 /* ActivityFollowTableViewCell.swift in Sources */,
 				3FC4B5042474ECB0005FB6E6 /* HairCareSearchViewController.swift in Sources */,
 				3F96653B246E552A0083EBC2 /* TagSearchResultMainView.swift in Sources */,
 				3FC4B4E92474E86A005FB6E6 /* CheekSearchMainView.swift in Sources */,
