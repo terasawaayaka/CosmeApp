@@ -18,35 +18,38 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HKE-gx-W1q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U0G-Ed-eEz">
-                                <rect key="frame" x="9" y="9" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U0G-Ed-eEz">
+                                <rect key="frame" x="9" y="10" width="60" height="60"/>
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="U0G-Ed-eEz" secondAttribute="height" multiplier="1:1" id="E1a-bw-WRi"/>
+                                    <constraint firstAttribute="height" constant="60" id="F0c-cl-Z0W"/>
+                                </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Elo-FT-uds">
-                                <rect key="frame" x="346" y="10" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Elo-FT-uds">
+                                <rect key="frame" x="345" y="10" width="60" height="60"/>
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Elo-FT-uds" secondAttribute="height" multiplier="1:1" id="o0X-XQ-lsL"/>
+                                    <constraint firstAttribute="height" constant="60" id="oUE-Zu-FRg"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38r-7m-o5D">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38r-7m-o5D">
                                 <rect key="frame" x="9" y="9" width="60" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="+"/>
                                 <connections>
                                     <action selector="touchedProfilePageButton:" destination="K2T-EE-7HC" eventType="touchUpInside" id="0a4-0B-7we"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p6T-Fw-EdM">
-                                <rect key="frame" x="345" y="10" width="60" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p6T-Fw-EdM">
+                                <rect key="frame" x="344" y="10" width="60" height="59"/>
                                 <state key="normal" title="+"/>
                                 <connections>
                                     <action selector="touchedPostPageButton:" destination="K2T-EE-7HC" eventType="touchUpInside" id="8hi-wz-JgJ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="あなたの投稿にコメントしました" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJc-hN-k4t">
-                                <rect key="frame" x="77" y="34" width="169" height="14"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あなたの投稿にコメントしました" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJc-hN-k4t">
+                                <rect key="frame" x="77" y="34" width="260" height="14"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -54,8 +57,26 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Elo-FT-uds" secondAttribute="trailing" constant="9" id="5yQ-8B-hiP"/>
+                            <constraint firstItem="IJc-hN-k4t" firstAttribute="leading" secondItem="38r-7m-o5D" secondAttribute="trailing" constant="8" symbolic="YES" id="AiH-BO-fjd"/>
+                            <constraint firstItem="U0G-Ed-eEz" firstAttribute="leading" secondItem="HKE-gx-W1q" secondAttribute="leading" constant="9" id="CMW-O9-zDx"/>
+                            <constraint firstItem="Elo-FT-uds" firstAttribute="top" secondItem="HKE-gx-W1q" secondAttribute="top" constant="10" id="GTO-6w-VN9"/>
+                            <constraint firstItem="p6T-Fw-EdM" firstAttribute="firstBaseline" secondItem="IJc-hN-k4t" secondAttribute="baseline" id="J11-RD-GDa"/>
+                            <constraint firstItem="p6T-Fw-EdM" firstAttribute="leading" secondItem="IJc-hN-k4t" secondAttribute="trailing" constant="7" id="MCe-RY-N2O"/>
+                            <constraint firstItem="p6T-Fw-EdM" firstAttribute="width" secondItem="Elo-FT-uds" secondAttribute="width" id="Ppy-jz-LrW"/>
+                            <constraint firstItem="U0G-Ed-eEz" firstAttribute="top" secondItem="HKE-gx-W1q" secondAttribute="top" constant="10" id="VIc-3k-EwZ"/>
+                            <constraint firstItem="38r-7m-o5D" firstAttribute="leading" secondItem="U0G-Ed-eEz" secondAttribute="leading" id="Xda-nE-aHy"/>
+                            <constraint firstItem="p6T-Fw-EdM" firstAttribute="top" secondItem="Elo-FT-uds" secondAttribute="top" id="Zg7-Ap-C4c"/>
+                            <constraint firstItem="IJc-hN-k4t" firstAttribute="leading" secondItem="U0G-Ed-eEz" secondAttribute="trailing" constant="8" id="bAh-h5-4ls"/>
+                            <constraint firstItem="IJc-hN-k4t" firstAttribute="baseline" secondItem="p6T-Fw-EdM" secondAttribute="baseline" id="ebC-mz-Tfy"/>
+                            <constraint firstItem="Elo-FT-uds" firstAttribute="leading" secondItem="IJc-hN-k4t" secondAttribute="trailing" constant="8" id="etk-ry-kAM"/>
+                            <constraint firstAttribute="bottom" secondItem="38r-7m-o5D" secondAttribute="bottom" constant="12" id="kyj-IW-F3P"/>
+                            <constraint firstItem="U0G-Ed-eEz" firstAttribute="centerY" secondItem="HKE-gx-W1q" secondAttribute="centerY" id="l84-lA-YQR"/>
+                            <constraint firstItem="IJc-hN-k4t" firstAttribute="top" secondItem="HKE-gx-W1q" secondAttribute="top" constant="34" id="qO2-XR-5yr"/>
                             <constraint firstAttribute="width" constant="414" id="qss-5s-moX"/>
                             <constraint firstAttribute="height" constant="80" id="sd7-di-dDY"/>
+                            <constraint firstItem="38r-7m-o5D" firstAttribute="top" secondItem="HKE-gx-W1q" secondAttribute="top" constant="9" id="ujx-on-FuK"/>
+                            <constraint firstAttribute="bottom" secondItem="IJc-hN-k4t" secondAttribute="bottom" constant="32" id="vdI-0h-BOf"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -70,7 +91,7 @@
                 <outlet property="iconImageView" destination="U0G-Ed-eEz" id="gmR-ts-oSw"/>
                 <outlet property="postImageView" destination="Elo-FT-uds" id="GWp-fe-u2m"/>
             </connections>
-            <point key="canvasLocation" x="35" y="3"/>
+            <point key="canvasLocation" x="34.782608695652179" y="2.6785714285714284"/>
         </tableViewCell>
     </objects>
 </document>

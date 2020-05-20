@@ -17,29 +17,28 @@
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ok-Vj-ogW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="あなたをフォローしました" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCO-xo-6qP">
-                                <rect key="frame" x="78" y="33" width="135" height="14"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="80" id="RMp-Ef-iRy"/>
                             <constraint firstAttribute="width" constant="414" id="hfl-rq-8P9"/>
                         </constraints>
                     </view>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uNj-Xw-TOq">
-                        <rect key="frame" x="9" y="9" width="60" height="60"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uNj-Xw-TOq">
+                        <rect key="frame" x="9" y="10" width="60" height="60"/>
                         <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="uNj-Xw-TOq" secondAttribute="height" multiplier="1:1" id="HWg-ae-a7N"/>
+                            <constraint firstAttribute="height" constant="60" id="pTt-2c-fa9"/>
+                        </constraints>
                     </imageView>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KUx-SF-m0q">
-                        <rect key="frame" x="9" y="9" width="60" height="59"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あなたをフォローしました" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCO-xo-6qP">
+                        <rect key="frame" x="77" y="-11" width="261" height="102"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KUx-SF-m0q">
+                        <rect key="frame" x="9" y="10" width="60" height="60"/>
                         <state key="normal" title="+"/>
                         <connections>
                             <action selector="touchedProfilePageButton:" destination="-1" eventType="touchUpInside" id="2FV-r3-K9U"/>
@@ -47,13 +46,24 @@
                     </button>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="VCO-xo-6qP" firstAttribute="centerY" secondItem="uNj-Xw-TOq" secondAttribute="centerY" id="3gr-2w-3Mu"/>
+                    <constraint firstItem="KUx-SF-m0q" firstAttribute="leading" secondItem="uNj-Xw-TOq" secondAttribute="leading" id="Cdd-Ar-01T"/>
+                    <constraint firstItem="KUx-SF-m0q" firstAttribute="top" secondItem="uNj-Xw-TOq" secondAttribute="top" id="LM2-ux-ibQ"/>
+                    <constraint firstItem="KUx-SF-m0q" firstAttribute="width" secondItem="uNj-Xw-TOq" secondAttribute="width" id="Uww-p3-ESd"/>
                     <constraint firstAttribute="bottom" secondItem="0Ok-Vj-ogW" secondAttribute="bottom" id="WJX-yC-Kwt"/>
                     <constraint firstItem="0Ok-Vj-ogW" firstAttribute="top" secondItem="AhU-H9-rEu" secondAttribute="top" id="ZOE-0E-lEw"/>
+                    <constraint firstItem="uNj-Xw-TOq" firstAttribute="leading" secondItem="AhU-H9-rEu" secondAttribute="leading" constant="9" id="bZz-iu-KPb"/>
+                    <constraint firstItem="KUx-SF-m0q" firstAttribute="centerY" secondItem="uNj-Xw-TOq" secondAttribute="centerY" id="gBq-81-dq9"/>
+                    <constraint firstItem="VCO-xo-6qP" firstAttribute="leading" secondItem="uNj-Xw-TOq" secondAttribute="trailing" constant="8" id="gk0-hr-KI9"/>
                     <constraint firstItem="0Ok-Vj-ogW" firstAttribute="leading" secondItem="AhU-H9-rEu" secondAttribute="leading" id="lla-wc-cV7"/>
+                    <constraint firstAttribute="trailing" secondItem="VCO-xo-6qP" secondAttribute="trailing" constant="76" id="mOB-8g-hM2"/>
+                    <constraint firstItem="uNj-Xw-TOq" firstAttribute="top" secondItem="AhU-H9-rEu" secondAttribute="top" constant="10" id="pS2-w7-Wqc"/>
+                    <constraint firstItem="uNj-Xw-TOq" firstAttribute="centerY" secondItem="AhU-H9-rEu" secondAttribute="centerY" id="uZy-6T-J5C"/>
                     <constraint firstAttribute="trailing" secondItem="0Ok-Vj-ogW" secondAttribute="trailing" id="vfA-AQ-xrA"/>
+                    <constraint firstItem="VCO-xo-6qP" firstAttribute="top" secondItem="AhU-H9-rEu" secondAttribute="topMargin" constant="-22" id="ww9-Fa-HRU"/>
                 </constraints>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="257" y="109"/>
+            <point key="canvasLocation" x="256.52173913043481" y="108.48214285714285"/>
         </tableViewCell>
     </objects>
 </document>
