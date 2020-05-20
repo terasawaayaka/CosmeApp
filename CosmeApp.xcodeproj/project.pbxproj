@@ -65,6 +65,10 @@
 		3FF1213D24724B18001E0554 /* SearchUserResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF1213B24724B18001E0554 /* SearchUserResultTableViewCell.swift */; };
 		3FF1213E24724B18001E0554 /* SearchUserResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FF1213C24724B18001E0554 /* SearchUserResultTableViewCell.xib */; };
 		401EBF302A1D6FB2881C82CB /* Pods_CosmeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 555A83F82F2AD4E67FFEB327 /* Pods_CosmeApp.framework */; };
+		5F098A202474BE5800D033F4 /* BookmarkCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F098A1E2474BE5800D033F4 /* BookmarkCollectionViewCell.swift */; };
+		5F098A212474BE5800D033F4 /* BookmarkCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F098A1F2474BE5800D033F4 /* BookmarkCollectionViewCell.xib */; };
+		5F098A242474C0CF00D033F4 /* GenreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F098A222474C0CF00D033F4 /* GenreCollectionViewCell.swift */; };
+		5F098A252474C0CF00D033F4 /* GenreCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F098A232474C0CF00D033F4 /* GenreCollectionViewCell.xib */; };
 		5FA88A36246E271000B84ACE /* MyProfileMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA88A34246E271000B84ACE /* MyProfileMainView.swift */; };
 		5FA88A37246E271000B84ACE /* MyProfileMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FA88A35246E271000B84ACE /* MyProfileMainView.xib */; };
 		5FA88A3D246E3FA300B84ACE /* YourProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA88A3B246E3FA300B84ACE /* YourProfileViewController.swift */; };
@@ -81,7 +85,6 @@
 		5FA88A642472316600B84ACE /* ScrollMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FA88A622472316600B84ACE /* ScrollMainView.xib */; };
 		5FA88A6F247272C000B84ACE /* GoodCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA88A6D247272C000B84ACE /* GoodCollectionViewCell.swift */; };
 		5FA88A70247272C000B84ACE /* GoodCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FA88A6E247272C000B84ACE /* GoodCollectionViewCell.xib */; };
-		A851EF9A94A9FAC06732C9D2 /* Pods_CosmeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A84EF1F35532BE5CD709A1 /* Pods_CosmeApp.framework */; };
 		D1B8AFC42472627C007BC6AD /* CreateMakeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1B8AFC02472627B007BC6AD /* CreateMakeViewController.xib */; };
 		D1B8AFC52472627C007BC6AD /* CreateMakeMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1B8AFC12472627B007BC6AD /* CreateMakeMainView.xib */; };
 		D1B8AFC62472627C007BC6AD /* CreateMakeMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B8AFC22472627B007BC6AD /* CreateMakeMainView.swift */; };
@@ -174,6 +177,10 @@
 		3FF1213B24724B18001E0554 /* SearchUserResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUserResultTableViewCell.swift; sourceTree = "<group>"; };
 		3FF1213C24724B18001E0554 /* SearchUserResultTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchUserResultTableViewCell.xib; sourceTree = "<group>"; };
 		555A83F82F2AD4E67FFEB327 /* Pods_CosmeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CosmeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F098A1E2474BE5800D033F4 /* BookmarkCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkCollectionViewCell.swift; sourceTree = "<group>"; };
+		5F098A1F2474BE5800D033F4 /* BookmarkCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookmarkCollectionViewCell.xib; sourceTree = "<group>"; };
+		5F098A222474C0CF00D033F4 /* GenreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreCollectionViewCell.swift; sourceTree = "<group>"; };
+		5F098A232474C0CF00D033F4 /* GenreCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenreCollectionViewCell.xib; sourceTree = "<group>"; };
 		5FA88A34246E271000B84ACE /* MyProfileMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileMainView.swift; sourceTree = "<group>"; };
 		5FA88A35246E271000B84ACE /* MyProfileMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyProfileMainView.xib; sourceTree = "<group>"; };
 		5FA88A3B246E3FA300B84ACE /* YourProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourProfileViewController.swift; sourceTree = "<group>"; };
@@ -195,8 +202,6 @@
 		D1B8AFC12472627B007BC6AD /* CreateMakeMainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateMakeMainView.xib; sourceTree = "<group>"; };
 		D1B8AFC22472627B007BC6AD /* CreateMakeMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateMakeMainView.swift; sourceTree = "<group>"; };
 		D1B8AFC32472627C007BC6AD /* CreateMakeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateMakeViewController.swift; sourceTree = "<group>"; };
-		E4C9B49849F76126D6A7D742 /* Pods-CosmeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CosmeApp.debug.xcconfig"; path = "Target Support Files/Pods-CosmeApp/Pods-CosmeApp.debug.xcconfig"; sourceTree = "<group>"; };
-		E7ECBC6AB5767D3EF01A402E /* Pods-CosmeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CosmeApp.release.xcconfig"; path = "Target Support Files/Pods-CosmeApp/Pods-CosmeApp.release.xcconfig"; sourceTree = "<group>"; };
 		FF8509EF246E2870003E2ACF /* TimeLineMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineMainView.swift; sourceTree = "<group>"; };
 		FF8509F0246E2870003E2ACF /* TimeLineMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeLineMainView.xib; sourceTree = "<group>"; };
 		FF8509F8246E294F003E2ACF /* ReviewDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewDetailViewController.swift; sourceTree = "<group>"; };
@@ -359,14 +364,6 @@
 			path = Make;
 			sourceTree = "<group>";
 		};
-		1FD1215A37E661EEB30C93AB /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				35A84EF1F35532BE5CD709A1 /* Pods_CosmeApp.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		3F18F05924722B8400957A2E /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
@@ -514,6 +511,10 @@
 				5FA88A622472316600B84ACE /* ScrollMainView.xib */,
 				5FA88A6D247272C000B84ACE /* GoodCollectionViewCell.swift */,
 				5FA88A6E247272C000B84ACE /* GoodCollectionViewCell.xib */,
+				5F098A1E2474BE5800D033F4 /* BookmarkCollectionViewCell.swift */,
+				5F098A1F2474BE5800D033F4 /* BookmarkCollectionViewCell.xib */,
+				5F098A222474C0CF00D033F4 /* GenreCollectionViewCell.swift */,
+				5F098A232474C0CF00D033F4 /* GenreCollectionViewCell.xib */,
 			);
 			path = Tab;
 			sourceTree = "<group>";
@@ -688,8 +689,10 @@
 				3FA0F796246E6DCA00D8DBA2 /* SearchResultMainView.xib in Resources */,
 				FF8509F2246E2870003E2ACF /* TimeLineMainView.xib in Resources */,
 				1F4B7717246D32C000FC3B27 /* ActivityViewController.xib in Resources */,
+				5F098A252474C0CF00D033F4 /* GenreCollectionViewCell.xib in Resources */,
 				3F6648EE2472280300D4D950 /* SignUpViewController.xib in Resources */,
 				5FA88A37246E271000B84ACE /* MyProfileMainView.xib in Resources */,
+				5F098A212474BE5800D033F4 /* BookmarkCollectionViewCell.xib in Resources */,
 				1F4B7725246E4FBD00FC3B27 /* CreateReviewMainView.xib in Resources */,
 				1F4B771B246E25CF00FC3B27 /* NewPostMainView.xib in Resources */,
 				FF8509FF246E297C003E2ACF /* ReviewDetailMainView.xib in Resources */,
@@ -774,9 +777,11 @@
 				5FA88A49246E405900B84ACE /* EditProfileMainView.swift in Sources */,
 				1F4B7732246E7EC300FC3B27 /* ActivityMainView.swift in Sources */,
 				1F4B7709246D310F00FC3B27 /* TimeLineViewController.swift in Sources */,
+				5F098A242474C0CF00D033F4 /* GenreCollectionViewCell.swift in Sources */,
 				1F4B76F9246D2F7700FC3B27 /* AppDelegate.swift in Sources */,
 				1F4B7716246D32C000FC3B27 /* ActivityViewController.swift in Sources */,
 				3F18F06224722DC400957A2E /* SingInMainView.swift in Sources */,
+				5F098A202474BE5800D033F4 /* BookmarkCollectionViewCell.swift in Sources */,
 				FF850A0E246E2B16003E2ACF /* EditReviewMainView.swift in Sources */,
 				1F4B7744247379A700FC3B27 /* ActivityCommentTableViewCell.swift in Sources */,
 				5FA88A632472316600B84ACE /* ScrollMainView.swift in Sources */,
