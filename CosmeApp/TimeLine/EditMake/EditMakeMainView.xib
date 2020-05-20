@@ -67,6 +67,7 @@
                                             <rect key="frame" x="30" y="594.5" width="354" height="231.5"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             <constraints>
+                                                <constraint firstAttribute="height" constant="231.5" id="AB2-Tk-fXE"/>
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="IcZ-V6-Wvf"/>
                                             </constraints>
                                             <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -115,6 +116,7 @@
                                         <constraint firstAttribute="trailing" secondItem="kva-qc-F7t" secondAttribute="trailing" constant="30" id="9Z1-vi-xrK"/>
                                         <constraint firstItem="duX-jg-dmu" firstAttribute="leading" secondItem="5cP-XZ-kSN" secondAttribute="leading" constant="30" id="BFO-7e-d5U"/>
                                         <constraint firstItem="ghC-4t-BAr" firstAttribute="top" secondItem="5cP-XZ-kSN" secondAttribute="top" constant="40" id="BUm-EB-3kn"/>
+                                        <constraint firstAttribute="height" constant="850" id="Cm3-Gd-Se8"/>
                                         <constraint firstItem="kva-qc-F7t" firstAttribute="top" secondItem="p9m-qX-S2Z" secondAttribute="bottom" constant="10" id="Dxi-0f-DG4"/>
                                         <constraint firstItem="ghC-4t-BAr" firstAttribute="width" secondItem="ghC-4t-BAr" secondAttribute="height" multiplier="1:1" id="EIW-7n-yGn"/>
                                         <constraint firstItem="Mf1-iA-lck" firstAttribute="leading" secondItem="5cP-XZ-kSN" secondAttribute="leading" constant="30" id="Ep1-3d-MeD"/>
@@ -129,7 +131,7 @@
                                         <constraint firstItem="kva-qc-F7t" firstAttribute="leading" secondItem="5cP-XZ-kSN" secondAttribute="leading" constant="30" id="dLr-Ml-CLQ"/>
                                         <constraint firstItem="Uwb-3y-Vca" firstAttribute="leading" secondItem="5cP-XZ-kSN" secondAttribute="leading" constant="30" id="fQX-kJ-ORD"/>
                                         <constraint firstItem="n1p-gc-xeJ" firstAttribute="top" secondItem="ghC-4t-BAr" secondAttribute="bottom" constant="20" id="iPp-L0-Shl"/>
-                                        <constraint firstAttribute="height" constant="850" id="lnL-dc-98b"/>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="850" id="lnL-dc-98b"/>
                                         <constraint firstItem="duX-jg-dmu" firstAttribute="top" secondItem="kva-qc-F7t" secondAttribute="bottom" constant="2" id="mJv-e8-6oa"/>
                                         <constraint firstItem="847-Pc-7zB" firstAttribute="top" secondItem="ghC-4t-BAr" secondAttribute="bottom" constant="80" id="mmh-Sw-MaP"/>
                                         <constraint firstItem="rbp-u6-kda" firstAttribute="leading" secondItem="5cP-XZ-kSN" secondAttribute="leading" constant="30" id="nJL-MI-xxH"/>

@@ -35,12 +35,18 @@ extension MyProfileViewController :MyProfileMainViewDelegate{
     }
     
     func touchedGoodButton() {
+        let firstPoint = CGPoint(x: 0, y: 0)
+        mainView.scrollMainView.scrollView.setContentOffset(firstPoint, animated: true)
     }
     
     func touchedBookMarkButton() {
+        let secondPoint = CGPoint(x: mainView.frame.width, y: 0)
+        mainView.scrollMainView.scrollView.setContentOffset(secondPoint, animated: true)
     }
     
     func touchedGenreButton() {
+        let thirdPoint = CGPoint(x: mainView.frame.width * 2, y: 0)
+        mainView.scrollMainView.scrollView.setContentOffset(thirdPoint, animated: true)
     }
 }
 

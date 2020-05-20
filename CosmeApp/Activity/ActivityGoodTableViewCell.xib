@@ -18,36 +18,62 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qne-SH-pea">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wtD-uw-5l6">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wtD-uw-5l6">
                                 <rect key="frame" x="346" y="10" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="JB7-08-i5A"/>
+                                    <constraint firstAttribute="width" secondItem="wtD-uw-5l6" secondAttribute="height" multiplier="1:1" id="eUH-D8-DA1"/>
+                                </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c8e-Z3-8GW">
+                                <rect key="frame" x="346" y="10" width="60" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="touchedPostPageButton:" destination="Obi-G9-O5c" eventType="touchUpInside" id="Pa4-9G-Wnm"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あなたの投稿にいいねしました" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="niV-Ww-vfn">
+                                <rect key="frame" x="77" y="33.5" width="261" height="13.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="80" id="JMd-9v-Dgj"/>
-                            <constraint firstAttribute="width" constant="414" id="gOd-ca-hs9"/>
+                            <constraint firstItem="niV-Ww-vfn" firstAttribute="top" secondItem="wtD-uw-5l6" secondAttribute="bottom" constant="-36.5" id="VfB-jF-BcL"/>
+                            <constraint firstAttribute="centerY" secondItem="niV-Ww-vfn" secondAttribute="centerY" id="ZAK-e9-tBY"/>
+                            <constraint firstAttribute="trailing" secondItem="wtD-uw-5l6" secondAttribute="trailing" constant="8" id="Zk1-dC-PDQ"/>
+                            <constraint firstItem="wtD-uw-5l6" firstAttribute="leading" secondItem="niV-Ww-vfn" secondAttribute="trailing" constant="8" id="hJz-8L-9Ss"/>
                         </constraints>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あなたの投稿にいいねしました" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="niV-Ww-vfn">
-                        <rect key="frame" x="85.5" y="29.5" width="243" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WUM-w2-XnC">
-                        <rect key="frame" x="9" y="9" width="60" height="60"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WUM-w2-XnC">
+                        <rect key="frame" x="9" y="10" width="60" height="60"/>
                         <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="429-oP-leM"/>
+                            <constraint firstAttribute="width" secondItem="WUM-w2-XnC" secondAttribute="height" multiplier="1:1" id="62w-IC-dS3"/>
+                        </constraints>
                     </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="haN-nw-Jwg">
+                        <rect key="frame" x="9" y="10" width="60" height="59"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <state key="normal" title="+"/>
+                        <connections>
+                            <action selector="touchedProfilePageButton:" destination="Obi-G9-O5c" eventType="touchUpInside" id="Vo6-wi-iJw"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="WUM-w2-XnC" firstAttribute="leading" secondItem="pH5-aX-glg" secondAttribute="leading" constant="9" id="2aI-Su-aud"/>
+                    <constraint firstItem="WUM-w2-XnC" firstAttribute="centerY" secondItem="pH5-aX-glg" secondAttribute="centerY" id="60R-Ko-FdF"/>
+                    <constraint firstItem="niV-Ww-vfn" firstAttribute="leading" secondItem="WUM-w2-XnC" secondAttribute="trailing" constant="8" id="BUl-BF-7ON"/>
                     <constraint firstItem="Qne-SH-pea" firstAttribute="leading" secondItem="pH5-aX-glg" secondAttribute="leadingMargin" constant="-20" id="JwX-P1-1Ne"/>
-                    <constraint firstItem="Qne-SH-pea" firstAttribute="centerY" secondItem="niV-Ww-vfn" secondAttribute="centerY" id="LbF-3h-s2J"/>
                     <constraint firstAttribute="bottom" secondItem="Qne-SH-pea" secondAttribute="bottom" id="TMy-IW-oSV"/>
                     <constraint firstItem="Qne-SH-pea" firstAttribute="top" secondItem="pH5-aX-glg" secondAttribute="top" id="Z3w-ud-JkO"/>
-                    <constraint firstItem="Qne-SH-pea" firstAttribute="centerX" secondItem="niV-Ww-vfn" secondAttribute="centerX" id="fAV-Yp-D2m"/>
                     <constraint firstItem="Qne-SH-pea" firstAttribute="centerX" secondItem="pH5-aX-glg" secondAttribute="centerX" id="xiM-4P-r2B"/>
                 </constraints>
             </tableViewCellContentView>

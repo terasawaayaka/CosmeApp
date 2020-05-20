@@ -33,6 +33,8 @@
 		1F4B774124736EE400FC3B27 /* ActivityGoodTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B773F24736EE400FC3B27 /* ActivityGoodTableViewCell.xib */; };
 		1F4B7744247379A700FC3B27 /* ActivityCommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4B7742247379A700FC3B27 /* ActivityCommentTableViewCell.swift */; };
 		1F4B7745247379A700FC3B27 /* ActivityCommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B7743247379A700FC3B27 /* ActivityCommentTableViewCell.xib */; };
+		1F4B774C2473B5D600FC3B27 /* ActivityFollowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4B774A2473B5D600FC3B27 /* ActivityFollowTableViewCell.swift */; };
+		1F4B774D2473B5D600FC3B27 /* ActivityFollowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B774B2473B5D600FC3B27 /* ActivityFollowTableViewCell.xib */; };
 		3F18F05C24722C2B00957A2E /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F18F05A24722C2B00957A2E /* SignInViewController.swift */; };
 		3F18F05D24722C2B00957A2E /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F18F05B24722C2B00957A2E /* SignInViewController.xib */; };
 		3F18F06224722DC400957A2E /* SingInMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F18F06024722DC400957A2E /* SingInMainView.swift */; };
@@ -109,6 +111,10 @@
 		3FF1213D24724B18001E0554 /* SearchUserResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF1213B24724B18001E0554 /* SearchUserResultTableViewCell.swift */; };
 		3FF1213E24724B18001E0554 /* SearchUserResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FF1213C24724B18001E0554 /* SearchUserResultTableViewCell.xib */; };
 		401EBF302A1D6FB2881C82CB /* Pods_CosmeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 555A83F82F2AD4E67FFEB327 /* Pods_CosmeApp.framework */; };
+		5F098A202474BE5800D033F4 /* BookmarkCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F098A1E2474BE5800D033F4 /* BookmarkCollectionViewCell.swift */; };
+		5F098A212474BE5800D033F4 /* BookmarkCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F098A1F2474BE5800D033F4 /* BookmarkCollectionViewCell.xib */; };
+		5F098A242474C0CF00D033F4 /* GenreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F098A222474C0CF00D033F4 /* GenreCollectionViewCell.swift */; };
+		5F098A252474C0CF00D033F4 /* GenreCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F098A232474C0CF00D033F4 /* GenreCollectionViewCell.xib */; };
 		5FA88A36246E271000B84ACE /* MyProfileMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA88A34246E271000B84ACE /* MyProfileMainView.swift */; };
 		5FA88A37246E271000B84ACE /* MyProfileMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FA88A35246E271000B84ACE /* MyProfileMainView.xib */; };
 		5FA88A3D246E3FA300B84ACE /* YourProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA88A3B246E3FA300B84ACE /* YourProfileViewController.swift */; };
@@ -125,10 +131,13 @@
 		5FA88A642472316600B84ACE /* ScrollMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FA88A622472316600B84ACE /* ScrollMainView.xib */; };
 		5FA88A6F247272C000B84ACE /* GoodCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA88A6D247272C000B84ACE /* GoodCollectionViewCell.swift */; };
 		5FA88A70247272C000B84ACE /* GoodCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FA88A6E247272C000B84ACE /* GoodCollectionViewCell.xib */; };
+		CCB572261DCF736DF31AF598 /* Pods_CosmeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D120365C7E7228FD8E997051 /* Pods_CosmeApp.framework */; };
 		D1B8AFC42472627C007BC6AD /* CreateMakeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1B8AFC02472627B007BC6AD /* CreateMakeViewController.xib */; };
 		D1B8AFC52472627C007BC6AD /* CreateMakeMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1B8AFC12472627B007BC6AD /* CreateMakeMainView.xib */; };
 		D1B8AFC62472627C007BC6AD /* CreateMakeMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B8AFC22472627B007BC6AD /* CreateMakeMainView.swift */; };
 		D1B8AFC72472627C007BC6AD /* CreateMakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B8AFC32472627C007BC6AD /* CreateMakeViewController.swift */; };
+		FF3A5EA82474BAD100EDCB26 /* ReviewDetailMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3A5EA62474BAD100EDCB26 /* ReviewDetailMainTableViewCell.swift */; };
+		FF3A5EA92474BAD100EDCB26 /* ReviewDetailMainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF3A5EA72474BAD100EDCB26 /* ReviewDetailMainTableViewCell.xib */; };
 		FF8509F1246E2870003E2ACF /* TimeLineMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8509EF246E2870003E2ACF /* TimeLineMainView.swift */; };
 		FF8509F2246E2870003E2ACF /* TimeLineMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF8509F0246E2870003E2ACF /* TimeLineMainView.xib */; };
 		FF8509FA246E294F003E2ACF /* ReviewDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8509F8246E294F003E2ACF /* ReviewDetailViewController.swift */; };
@@ -261,6 +270,10 @@
 		3FF1213B24724B18001E0554 /* SearchUserResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUserResultTableViewCell.swift; sourceTree = "<group>"; };
 		3FF1213C24724B18001E0554 /* SearchUserResultTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchUserResultTableViewCell.xib; sourceTree = "<group>"; };
 		555A83F82F2AD4E67FFEB327 /* Pods_CosmeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CosmeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F098A1E2474BE5800D033F4 /* BookmarkCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkCollectionViewCell.swift; sourceTree = "<group>"; };
+		5F098A1F2474BE5800D033F4 /* BookmarkCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookmarkCollectionViewCell.xib; sourceTree = "<group>"; };
+		5F098A222474C0CF00D033F4 /* GenreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreCollectionViewCell.swift; sourceTree = "<group>"; };
+		5F098A232474C0CF00D033F4 /* GenreCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenreCollectionViewCell.xib; sourceTree = "<group>"; };
 		5FA88A34246E271000B84ACE /* MyProfileMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileMainView.swift; sourceTree = "<group>"; };
 		5FA88A35246E271000B84ACE /* MyProfileMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyProfileMainView.xib; sourceTree = "<group>"; };
 		5FA88A3B246E3FA300B84ACE /* YourProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourProfileViewController.swift; sourceTree = "<group>"; };
@@ -282,6 +295,8 @@
 		D1B8AFC12472627B007BC6AD /* CreateMakeMainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateMakeMainView.xib; sourceTree = "<group>"; };
 		D1B8AFC22472627B007BC6AD /* CreateMakeMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateMakeMainView.swift; sourceTree = "<group>"; };
 		D1B8AFC32472627C007BC6AD /* CreateMakeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateMakeViewController.swift; sourceTree = "<group>"; };
+		FF3A5EA62474BAD100EDCB26 /* ReviewDetailMainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewDetailMainTableViewCell.swift; sourceTree = "<group>"; };
+		FF3A5EA72474BAD100EDCB26 /* ReviewDetailMainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewDetailMainTableViewCell.xib; sourceTree = "<group>"; };
 		FF8509EF246E2870003E2ACF /* TimeLineMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineMainView.swift; sourceTree = "<group>"; };
 		FF8509F0246E2870003E2ACF /* TimeLineMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeLineMainView.xib; sourceTree = "<group>"; };
 		FF8509F8246E294F003E2ACF /* ReviewDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewDetailViewController.swift; sourceTree = "<group>"; };
@@ -407,6 +422,8 @@
 				1F4B773F24736EE400FC3B27 /* ActivityGoodTableViewCell.xib */,
 				1F4B7742247379A700FC3B27 /* ActivityCommentTableViewCell.swift */,
 				1F4B7743247379A700FC3B27 /* ActivityCommentTableViewCell.xib */,
+				1F4B774A2473B5D600FC3B27 /* ActivityFollowTableViewCell.swift */,
+				1F4B774B2473B5D600FC3B27 /* ActivityFollowTableViewCell.xib */,
 			);
 			path = Activity;
 			sourceTree = "<group>";
@@ -436,10 +453,10 @@
 		1F4B7727246E6A7600FC3B27 /* Make */ = {
 			isa = PBXGroup;
 			children = (
-				D1B8AFC22472627B007BC6AD /* CreateMakeMainView.swift */,
-				D1B8AFC12472627B007BC6AD /* CreateMakeMainView.xib */,
 				D1B8AFC32472627C007BC6AD /* CreateMakeViewController.swift */,
 				D1B8AFC02472627B007BC6AD /* CreateMakeViewController.xib */,
+				D1B8AFC22472627B007BC6AD /* CreateMakeMainView.swift */,
+				D1B8AFC12472627B007BC6AD /* CreateMakeMainView.xib */,
 			);
 			path = Make;
 			sourceTree = "<group>";
@@ -723,6 +740,10 @@
 				5FA88A622472316600B84ACE /* ScrollMainView.xib */,
 				5FA88A6D247272C000B84ACE /* GoodCollectionViewCell.swift */,
 				5FA88A6E247272C000B84ACE /* GoodCollectionViewCell.xib */,
+				5F098A1E2474BE5800D033F4 /* BookmarkCollectionViewCell.swift */,
+				5F098A1F2474BE5800D033F4 /* BookmarkCollectionViewCell.xib */,
+				5F098A222474C0CF00D033F4 /* GenreCollectionViewCell.swift */,
+				5F098A232474C0CF00D033F4 /* GenreCollectionViewCell.xib */,
 			);
 			path = Tab;
 			sourceTree = "<group>";
@@ -759,6 +780,8 @@
 				FF8509F9246E294F003E2ACF /* ReviewDetailViewController.xib */,
 				FF8509FC246E297C003E2ACF /* ReviewDetailMainView.swift */,
 				FF8509FD246E297C003E2ACF /* ReviewDetailMainView.xib */,
+				FF3A5EA62474BAD100EDCB26 /* ReviewDetailMainTableViewCell.swift */,
+				FF3A5EA72474BAD100EDCB26 /* ReviewDetailMainTableViewCell.xib */,
 			);
 			path = ReviewDetail;
 			sourceTree = "<group>";
@@ -884,6 +907,7 @@
 				5FA88A4A246E405900B84ACE /* EditProfileMainView.xib in Resources */,
 				FF850A0B246E2AD3003E2ACF /* EditReviewViewController.xib in Resources */,
 				1F4B7706246D30D900FC3B27 /* MyProfileViewController.xib in Resources */,
+				1F4B774D2473B5D600FC3B27 /* ActivityFollowTableViewCell.xib in Resources */,
 				FF850A03246E29BC003E2ACF /* MakeDetailViewController.xib in Resources */,
 				1F4B76EB246D2AC100FC3B27 /* Main.storyboard in Resources */,
 				5FA88A3E246E3FA300B84ACE /* YourProfileViewController.xib in Resources */,
@@ -913,11 +937,14 @@
 				1F4B7717246D32C000FC3B27 /* ActivityViewController.xib in Resources */,
 				3FC4B4C62474D502005FB6E6 /* EyeBrowSearchMainView.xib in Resources */,
 				3FC4B4F72474EA11005FB6E6 /* SkinCareSearchMainView.xib in Resources */,
+				3FC4B5052474ECB0005FB6E6 /* HairCareSearchViewController.xib in Resources */,
+				5F098A252474C0CF00D033F4 /* GenreCollectionViewCell.xib in Resources */,
 				3F6648EE2472280300D4D950 /* SignUpViewController.xib in Resources */,
 				5FA88A37246E271000B84ACE /* MyProfileMainView.xib in Resources */,
-				3FC4B5052474ECB0005FB6E6 /* HairCareSearchViewController.xib in Resources */,
+				5F098A212474BE5800D033F4 /* BookmarkCollectionViewCell.xib in Resources */,
 				1F4B7725246E4FBD00FC3B27 /* CreateReviewMainView.xib in Resources */,
 				1F4B771B246E25CF00FC3B27 /* NewPostMainView.xib in Resources */,
+				FF3A5EA92474BAD100EDCB26 /* ReviewDetailMainTableViewCell.xib in Resources */,
 				FF8509FF246E297C003E2ACF /* ReviewDetailMainView.xib in Resources */,
 				FF850A13246E2B3C003E2ACF /* EditMakeViewController.xib in Resources */,
 				3FC4B4B92474C9E1005FB6E6 /* ColorContactViewController.xib in Resources */,
@@ -989,6 +1016,7 @@
 				1F4B771A246E25CF00FC3B27 /* NewPostMainView.swift in Sources */,
 				D1B8AFC62472627C007BC6AD /* CreateMakeMainView.swift in Sources */,
 				FF8509FE246E297C003E2ACF /* ReviewDetailMainView.swift in Sources */,
+				1F4B774C2473B5D600FC3B27 /* ActivityFollowTableViewCell.swift in Sources */,
 				FF8509F1246E2870003E2ACF /* TimeLineMainView.swift in Sources */,
 				FF850A12246E2B3C003E2ACF /* EditMakeViewController.swift in Sources */,
 				1F4B7712246D329300FC3B27 /* SearchViewController.swift in Sources */,
@@ -1010,9 +1038,11 @@
 				1F4B7709246D310F00FC3B27 /* TimeLineViewController.swift in Sources */,
 				3FC4B4CA2474E3D4005FB6E6 /* BaseSearchViewController.swift in Sources */,
 				3FC4B4B82474C9E1005FB6E6 /* ColorContactViewController.swift in Sources */,
+				5F098A242474C0CF00D033F4 /* GenreCollectionViewCell.swift in Sources */,
 				1F4B76F9246D2F7700FC3B27 /* AppDelegate.swift in Sources */,
 				1F4B7716246D32C000FC3B27 /* ActivityViewController.swift in Sources */,
 				3F18F06224722DC400957A2E /* SingInMainView.swift in Sources */,
+				5F098A202474BE5800D033F4 /* BookmarkCollectionViewCell.swift in Sources */,
 				FF850A0E246E2B16003E2ACF /* EditReviewMainView.swift in Sources */,
 				1F4B7744247379A700FC3B27 /* ActivityCommentTableViewCell.swift in Sources */,
 				3FC4B4D32474E532005FB6E6 /* HiLightSearchViewController.swift in Sources */,
@@ -1053,6 +1083,7 @@
 				FF850A02246E29BC003E2ACF /* MakeDetailViewController.swift in Sources */,
 				3F70E6432474C4DD005DE8B3 /* EyeShadowMainView.swift in Sources */,
 				3FC4B4E52474E849005FB6E6 /* CheekSearchViewController.swift in Sources */,
+				FF3A5EA82474BAD100EDCB26 /* ReviewDetailMainTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

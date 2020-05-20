@@ -17,16 +17,32 @@ extension ReviewDetailMainViewDelegate {
 // MARK: - Property
 class ReviewDetailMainView: BaseView {
     weak var delegate: ReviewDetailMainViewDelegate? = nil
+    @IBOutlet weak var tableView: UITableView!
 }
 // MARK: - Life cycle
 extension ReviewDetailMainView {
     override func awakeFromNib() {
         super.awakeFromNib()
+        setDelegate()
+        
+        loadTableViewCellFromXib(tableView: tableView, cellName: "ReviewDetailMainTableViewCell")
     }
 }
 // MARK: - Protocol
-extension ReviewDetailMainView {
+extension ReviewDetailMainView :UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ReviewDetailMainTableViewCell")as? ReviewDetailMainTableViewCell else {return UITableViewCell()}
+        return cell
+    }
+    
 }
 // MARK: - method
 extension ReviewDetailMainView {
+    func setDelegate(){
+        tableView.dataSource = self
+    }
 }

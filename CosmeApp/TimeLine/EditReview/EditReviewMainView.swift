@@ -11,11 +11,15 @@ import UIKit
 import PGFramework
 protocol EditReviewMainViewDelegate: NSObjectProtocol{
 }
+
 extension EditReviewMainViewDelegate {
 }
 // MARK: - Property
 class EditReviewMainView: BaseView {
     weak var delegate: EditReviewMainViewDelegate? = nil
+    @IBOutlet weak var pickerView: UIPickerView!
+    @IBOutlet weak var pickerViewLabel: UILabel!
+    
 }
 // MARK: - Life cycle
 extension EditReviewMainView {
@@ -25,6 +29,7 @@ extension EditReviewMainView {
 }
 // MARK: - Protocol
 extension EditReviewMainView {
+    
 }
 // MARK: - method
 extension EditReviewMainView {

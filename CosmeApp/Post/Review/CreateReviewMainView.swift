@@ -56,7 +56,8 @@ class CreateReviewMainView: BaseView {
             delegate.fifthStarButton()
         }
     }
-    @IBOutlet weak var reviewTextField: UITextField!
+    @IBOutlet weak var reviewTextView: UITextView!
+    
     @IBOutlet weak var tagTextField: UITextField!
 }
 // MARK: - Life cycle
