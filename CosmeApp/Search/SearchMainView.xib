@@ -35,7 +35,7 @@
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o20-fw-gGm">
                                     <rect key="frame" x="20" y="10" width="62" height="30"/>
                                     <state key="normal" title="　タグ　">
-                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="titleColor" red="0.71165133250000001" green="0.1774580224" blue="0.39658061729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
                                     <connections>
                                         <action selector="touchedTagButton:" destination="-1" eventType="touchUpInside" id="s7x-pw-THB"/>
@@ -44,7 +44,7 @@
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wdr-Ok-Orj">
                                     <rect key="frame" x="102" y="10" width="92" height="30"/>
                                     <state key="normal" title="　ユーザー　">
-                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="titleColor" red="0.71165133250000001" green="0.1774580224" blue="0.39658061729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
                                     <connections>
                                         <action selector="touchedUserButton:" destination="-1" eventType="touchUpInside" id="ISI-Gh-7n0"/>
@@ -53,7 +53,7 @@
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ojC-1g-34m">
                                     <rect key="frame" x="214" y="10" width="77" height="30"/>
                                     <state key="normal" title="　商品名　">
-                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="titleColor" red="0.71165133250000001" green="0.1774580224" blue="0.39658061729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
                                     <connections>
                                         <action selector="touchedProductNameButton:" destination="-1" eventType="touchUpInside" id="axp-iX-cl6"/>
@@ -62,14 +62,14 @@
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DgT-yx-KBZ">
                                     <rect key="frame" x="311" y="10" width="92" height="30"/>
                                     <state key="normal" title="　ブランド　">
-                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="titleColor" red="0.71165133250000001" green="0.1774580224" blue="0.39658061729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
                                     <connections>
                                         <action selector="touchedBrandButton:" destination="-1" eventType="touchUpInside" id="CrE-01-dHm"/>
                                     </connections>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" red="1" green="0.82663194559999997" blue="0.99836927620000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="1" green="0.99085296059726369" blue="0.86297983854122595" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstItem="o20-fw-gGm" firstAttribute="top" secondItem="00x-zD-qMy" secondAttribute="top" constant="10" id="Bzx-xX-qfT"/>
                                 <constraint firstItem="ojC-1g-34m" firstAttribute="top" secondItem="00x-zD-qMy" secondAttribute="top" constant="10" id="Ces-X5-gLC"/>

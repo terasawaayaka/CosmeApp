@@ -34,8 +34,7 @@ class CreateMakeMainView: BaseView {
     @IBOutlet weak var cheekTextField: UITextField! //チーク
     @IBOutlet weak var lipTextField: UITextField! //リップ
     
-    @IBOutlet weak var processTextField: UITextField! //プロセス
-    
+    @IBOutlet weak var processTextField: UITextView! //プロセス
 }
 // MARK: - Life cycle
 extension CreateMakeMainView {

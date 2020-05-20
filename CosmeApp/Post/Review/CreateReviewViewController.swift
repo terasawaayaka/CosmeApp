@@ -13,6 +13,8 @@ import PGFramework
 class CreateReviewViewController: BaseViewController {
     @IBOutlet weak var headerView: HeaderView!
     @IBOutlet weak var mainView: CreateReviewMainView!
+    //Constrains
+    @IBOutlet weak var mainViewBottomMergin: NSLayoutConstraint!
 }
 // MARK: - Life cycle
 extension CreateReviewViewController {
@@ -20,6 +22,9 @@ extension CreateReviewViewController {
         super.loadView()
         setHeaderView()
         setDelegate()
+        hideKeybord()
+        showKeyboardObserver(self, selector: #selector(showKeyboard(notification:)))
+        hideKeyboardObserver(self, selector: #selector(hideKeyboard(notification:)))
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,5 +78,57 @@ extension CreateReviewViewController {
     func setDelegate() {
         headerView.delegate = self
         mainView.delegate = self
+    }
+    //キーボードとテキストフィールド以外をタップでキーボードを隠す
+    func hideKeybord() {
+        let hideTap : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKyeoboardTap))
+        hideTap.numberOfTapsRequired = 1
+        self.view.isUserInteractionEnabled = true
+        self.view.addGestureRecognizer(hideTap)
+    }
+    @objc func hideKyeoboardTap(recognizer : UITapGestureRecognizer){
+        self.view.endEditing(true)
+    }
+    
+    
+    @objc func showKeyboard(notification: Notification) {
+        let userInfo = notification.userInfo!
+        let keyboardRect = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+        var tabHeight: CGFloat = 0.0
+        if let tabBarController = tabBarController {
+            tabHeight = tabBarController.tabBar.frame.height
+        }
+        mainViewBottomMergin.constant = keyboardRect.height - tabHeight
+        updateView()
+    }
+    @objc func hideKeyboard(notification: Notification) {
+        mainViewBottomMergin.constant = 0
+        updateView()
+    }
+    func updateView() {
+        UIView.animate(withDuration: 0.25) {
+            self.view.layoutIfNeeded()
+            self.view.updateConstraints()
+        }
+    }
+    func showKeyboardObserver(_ observer: Any, selector aSelector: Selector) {
+        NotificationCenter.default.addObserver(observer,
+                                               selector: aSelector,
+                                               name: UIResponder.keyboardWillShowNotification,
+                                               object: nil)
+    }
+    func hideKeyboardObserver(_ observer: Any,
+                              selector aSelector: Selector) {
+        NotificationCenter.default.addObserver(observer, selector: aSelector, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    func removeShowKeyboardObserver(_ observer: Any) {
+        NotificationCenter.default.removeObserver(observer,
+                                                  name: UIResponder.keyboardWillShowNotification,
+                                                  object: nil)
+    }
+    func removeHideKeyboardObserver(_ observer: Any) {
+        NotificationCenter.default.removeObserver(observer,
+                                                  name: UIResponder.keyboardWillHideNotification,
+                                                  object: nil)
     }
 }

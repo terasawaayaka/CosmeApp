@@ -46,6 +46,7 @@ extension NewPostViewController:NewPostMainViewDelegate {
 extension NewPostViewController {
     func setHeaderView() {
         headerView.setCenter(text: "新規投稿画面", fontSize: 19, color: UIColor.black)
+        headerView.setLeft(text: "")
     }
     func setDelegate() {
         mainView.delegate = self

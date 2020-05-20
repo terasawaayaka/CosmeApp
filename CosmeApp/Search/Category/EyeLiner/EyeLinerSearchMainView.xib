@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EyeLinerSearchMainView" customModule="CosmeApp" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="f6s-Pz-NyC" id="cvK-gM-8vP"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EyeLinerIllust" translatesAutoresizingMaskIntoConstraints="NO" id="FId-s5-T4h">
+                    <rect key="frame" x="20" y="64" width="120" height="120"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="FId-s5-T4h" secondAttribute="height" multiplier="1:1" id="mvW-qU-ztf"/>
+                        <constraint firstAttribute="height" constant="120" id="yl5-p9-Fdc"/>
+                    </constraints>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EyeLinerLOGO" translatesAutoresizingMaskIntoConstraints="NO" id="p3B-i6-ZhH">
+                    <rect key="frame" x="160" y="64" width="234" height="120"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="120" id="DHQ-9P-8wt"/>
+                    </constraints>
+                </imageView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="f6s-Pz-NyC">
+                    <rect key="frame" x="10" y="204" width="394" height="658"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LhD-f4-SPd">
+                        <size key="itemSize" width="123" height="150"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="p3B-i6-ZhH" secondAttribute="trailing" constant="20" id="4vR-SX-u3c"/>
+                <constraint firstItem="p3B-i6-ZhH" firstAttribute="leading" secondItem="FId-s5-T4h" secondAttribute="trailing" constant="20" id="LfP-28-It4"/>
+                <constraint firstItem="FId-s5-T4h" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="MtN-7C-iti"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="f6s-Pz-NyC" secondAttribute="bottom" id="Nl1-la-cC4"/>
+                <constraint firstItem="f6s-Pz-NyC" firstAttribute="top" secondItem="FId-s5-T4h" secondAttribute="bottom" constant="20" id="Q8i-Mz-mxK"/>
+                <constraint firstItem="FId-s5-T4h" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="QRW-CP-0lg"/>
+                <constraint firstItem="f6s-Pz-NyC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="gGY-hl-Imo"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="f6s-Pz-NyC" secondAttribute="trailing" constant="10" id="r2b-xv-6fR"/>
+                <constraint firstItem="p3B-i6-ZhH" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="yeP-zc-5R9"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="107.8125"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="EyeLinerIllust" width="700" height="700"/>
+        <image name="EyeLinerLOGO" width="1063" height="393"/>
+    </resources>
+</document>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShadingSearchMainView" customModule="CosmeApp" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="fL2-vY-Wjf" id="kWM-8U-1EV"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shadingIllust" translatesAutoresizingMaskIntoConstraints="NO" id="jPL-it-3oS">
+                    <rect key="frame" x="20" y="64" width="120" height="120"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="120" id="QfG-wB-O7Y"/>
+                        <constraint firstAttribute="width" secondItem="jPL-it-3oS" secondAttribute="height" multiplier="1:1" id="knG-nx-Mya"/>
+                    </constraints>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ShadingLOGO" translatesAutoresizingMaskIntoConstraints="NO" id="yFS-V7-aOc">
+                    <rect key="frame" x="160" y="64" width="234" height="120"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="120" id="skb-WS-6Pk"/>
+                    </constraints>
+                </imageView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="fL2-vY-Wjf">
+                    <rect key="frame" x="10" y="204" width="394" height="658"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6Ut-vW-oVR">
+                        <size key="itemSize" width="123" height="150"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="fL2-vY-Wjf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="8ZT-ry-OGH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fL2-vY-Wjf" secondAttribute="trailing" constant="10" id="ACa-AJ-PMa"/>
+                <constraint firstItem="fL2-vY-Wjf" firstAttribute="top" secondItem="jPL-it-3oS" secondAttribute="bottom" constant="20" id="RFY-rD-MfR"/>
+                <constraint firstItem="yFS-V7-aOc" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="Y8T-qu-krq"/>
+                <constraint firstItem="yFS-V7-aOc" firstAttribute="leading" secondItem="jPL-it-3oS" secondAttribute="trailing" constant="20" id="c9v-mE-CX0"/>
+                <constraint firstItem="jPL-it-3oS" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="f7g-bk-wSw"/>
+                <constraint firstItem="jPL-it-3oS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="fO5-SU-jSk"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="fL2-vY-Wjf" secondAttribute="bottom" id="rJV-dA-m1P"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yFS-V7-aOc" secondAttribute="trailing" constant="20" id="slE-zq-bha"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="108"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ShadingLOGO" width="1034" height="440"/>
+        <image name="shadingIllust" width="700" height="700"/>
+    </resources>
+</document>

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F49BB02247509940092AF96 /* ActivityFollowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F49BB00247509940092AF96 /* ActivityFollowTableViewCell.swift */; };
+		1F49BB03247509940092AF96 /* ActivityFollowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F49BB01247509940092AF96 /* ActivityFollowTableViewCell.xib */; };
 		1F4B76E6246D2AC100FC3B27 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4B76E5246D2AC100FC3B27 /* SceneDelegate.swift */; };
 		1F4B76EB246D2AC100FC3B27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B76E9246D2AC100FC3B27 /* Main.storyboard */; };
 		1F4B76F0246D2AE100FC3B27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B76EE246D2AE100FC3B27 /* LaunchScreen.storyboard */; };
@@ -33,6 +35,8 @@
 		1F4B774124736EE400FC3B27 /* ActivityGoodTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B773F24736EE400FC3B27 /* ActivityGoodTableViewCell.xib */; };
 		1F4B7744247379A700FC3B27 /* ActivityCommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4B7742247379A700FC3B27 /* ActivityCommentTableViewCell.swift */; };
 		1F4B7745247379A700FC3B27 /* ActivityCommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B7743247379A700FC3B27 /* ActivityCommentTableViewCell.xib */; };
+		1F4B774C2473B5D600FC3B27 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		1F4B774D2473B5D600FC3B27 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		3F18F05C24722C2B00957A2E /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F18F05A24722C2B00957A2E /* SignInViewController.swift */; };
 		3F18F05D24722C2B00957A2E /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F18F05B24722C2B00957A2E /* SignInViewController.xib */; };
 		3F18F06224722DC400957A2E /* SingInMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F18F06024722DC400957A2E /* SingInMainView.swift */; };
@@ -41,10 +45,10 @@
 		3F6648EE2472280300D4D950 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F6648EC2472280300D4D950 /* SignUpViewController.xib */; };
 		3F6648F22472287900D4D950 /* SignUpMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6648F02472287900D4D950 /* SignUpMainView.swift */; };
 		3F6648F32472287900D4D950 /* SignUpMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F6648F12472287900D4D950 /* SignUpMainView.xib */; };
-		3F6DB6942473C76E000B192A /* EyeShadowPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6DB6922473C76E000B192A /* EyeShadowPageViewController.swift */; };
-		3F6DB6952473C76E000B192A /* EyeShadowPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F6DB6932473C76E000B192A /* EyeShadowPageViewController.xib */; };
-		3F6DB6992473C7C0000B192A /* EyeShadowMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6DB6972473C7C0000B192A /* EyeShadowMainView.swift */; };
-		3F6DB69A2473C7C0000B192A /* EyeShadowMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F6DB6982473C7C0000B192A /* EyeShadowMainView.xib */; };
+		3F70E63A2474C469005DE8B3 /* EyeShadowSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F70E6382474C469005DE8B3 /* EyeShadowSearchViewController.swift */; };
+		3F70E63B2474C469005DE8B3 /* EyeShadowSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F70E6392474C469005DE8B3 /* EyeShadowSearchViewController.xib */; };
+		3F70E6432474C4DD005DE8B3 /* EyeShadowMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F70E6412474C4DD005DE8B3 /* EyeShadowMainView.swift */; };
+		3F70E6442474C4DD005DE8B3 /* EyeShadowMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F70E6422474C4DD005DE8B3 /* EyeShadowMainView.xib */; };
 		3F96651D246E2A7F0083EBC2 /* SearchTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F96651B246E2A7F0083EBC2 /* SearchTextView.swift */; };
 		3F96651E246E2A7F0083EBC2 /* SearchTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F96651C246E2A7F0083EBC2 /* SearchTextView.xib */; };
 		3F966521246E2B240083EBC2 /* SearchMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F96651F246E2B240083EBC2 /* SearchMainView.swift */; };
@@ -59,6 +63,50 @@
 		3F966548246E56040083EBC2 /* BrandSearchResultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F966546246E56040083EBC2 /* BrandSearchResultView.xib */; };
 		3FA0F795246E6DCA00D8DBA2 /* SearchResultMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA0F793246E6DCA00D8DBA2 /* SearchResultMainView.swift */; };
 		3FA0F796246E6DCA00D8DBA2 /* SearchResultMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FA0F794246E6DCA00D8DBA2 /* SearchResultMainView.xib */; };
+		3FC4B4A62474C6A3005FB6E6 /* EyeLinerSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC4B4A42474C6A3005FB6E6 /* EyeLinerSearchViewController.swift */; };
+		3FC4B4A72474C6A3005FB6E6 /* EyeLinerSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FC4B4A52474C6A3005FB6E6 /* EyeLinerSearchViewController.xib */; };
+		3FC4B4AA2474C6D0005FB6E6 /* EyeLinerSearchMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC4B4A82474C6D0005FB6E6 /* EyeLinerSearchMainView.swift */; };
+		3FC4B4AB2474C6D0005FB6E6 /* EyeLinerSearchMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FC4B4A92474C6D0005FB6E6 /* EyeLinerSearchMainView.xib */; };
+		3FC4B4AF2474C875005FB6E6 /* MascaraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC4B4AD2474C875005FB6E6 /* MascaraViewController.swift */; };
+		3FC4B4B02474C875005FB6E6 /* MascaraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FC4B4AE2474C875005FB6E6 /* MascaraViewController.xib */; };
+		3FC4B4B32474C894005FB6E6 /* MascaraMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC4B4B12474C894005FB6E6 /* MascaraMainView.swift */; };
+		3FC4B4B42474C894005FB6E6 /* MascaraMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FC4B4B22474C894005FB6E6 /* MascaraMainView.xib */; };
+		3FC4B4B82474C9E1005FB6E6 /* ColorContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC4B4B62474C9E1005FB6E6 /* ColorContactViewController.swift */; };
+		3FC4B4B92474C9E1005FB6E6 /* ColorContactViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FC4B4B72474C9E1005FB6E6 /* ColorContactViewController.xib */; };
+		3FC4B4BC2474CA06005FB6E6 /* ColorContactMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC4B4BA2474CA06005FB6E6 /* ColorContactMainView.swift */; };
+		3FC4B4BD2474CA06005FB6E6 /* ColorContactMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FC4B4BB2474CA06005FB6E6 /* ColorContactMainView.xib */; };
+		3FC4B4C12474D4D6005FB6E6 /* EyeBrowSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC4B4BF2474D4D6005FB6E6 /* EyeBrowSearchViewController.swift */; };
+		3FC4B4C22474D4D6005FB6E6 /* EyeBrowSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FC4B4C02474D4D6005FB6E6 /* EyeBrowSearchViewController.xib */; };
+		3FC4B4C52474D502005FB6E6 /* EyeBrowSearchMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC4B4C32474D502005FB6E6 /* EyeBrowSearchMainView.swift */; };
+		3FC4B4C62474D502005FB6E6 /* EyeBrowSearchMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FC4B4C42474D502005FB6E6 /* EyeBrowSearchMainView.xib */; };
+		3FC4B4CA2474E3D4005FB6E6 /* BaseSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC4B4C82474E3D4005FB6E6 /* BaseSearchViewController.swift */; };
+		3FC4B4CB2474E3D4005FB6E6 /* BaseSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FC4B4C92474E3D4005FB6E6 /* BaseSearchViewController.xib */; };
+		3FC4B4CE2474E3F7005FB6E6 /* BaseSearchMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC4B4CC2474E3F7005FB6E6 /* BaseSearchMainView.swift */; };
+		3FC4B4CF2474E3F7005FB6E6 /* BaseSearchMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FC4B4CD2474E3F7005FB6E6 /* BaseSearchMainView.xib */; };
+		3FC4B4D32474E532005FB6E6 /* HiLightSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC4B4D12474E532005FB6E6 /* HiLightSearchViewController.swift */; };
+		3FC4B4D42474E532005FB6E6 /* HiLightSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FC4B4D22474E532005FB6E6 /* HiLightSearchViewController.xib */; };
+		3FC4B4D72474E550005FB6E6 /* HiLighthMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC4B4D52474E550005FB6E6 /* HiLighthMainView.swift */; };
+		3FC4B4D82474E550005FB6E6 /* HiLighthMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FC4B4D62474E550005FB6E6 /* HiLighthMainView.xib */; };
+		3FC4B4DC2474E6E6005FB6E6 /* ShadingSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC4B4DA2474E6E6005FB6E6 /* ShadingSearchViewController.swift */; };
+		3FC4B4DD2474E6E6005FB6E6 /* ShadingSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FC4B4DB2474E6E6005FB6E6 /* ShadingSearchViewController.xib */; };
+		3FC4B4E02474E716005FB6E6 /* ShadingSearchMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC4B4DE2474E716005FB6E6 /* ShadingSearchMainView.swift */; };
+		3FC4B4E12474E716005FB6E6 /* ShadingSearchMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FC4B4DF2474E716005FB6E6 /* ShadingSearchMainView.xib */; };
+		3FC4B4E52474E849005FB6E6 /* CheekSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC4B4E32474E849005FB6E6 /* CheekSearchViewController.swift */; };
+		3FC4B4E62474E849005FB6E6 /* CheekSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FC4B4E42474E849005FB6E6 /* CheekSearchViewController.xib */; };
+		3FC4B4E92474E86A005FB6E6 /* CheekSearchMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC4B4E72474E86A005FB6E6 /* CheekSearchMainView.swift */; };
+		3FC4B4EA2474E86A005FB6E6 /* CheekSearchMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FC4B4E82474E86A005FB6E6 /* CheekSearchMainView.xib */; };
+		3FC4B4EE2474E9CC005FB6E6 /* SkinCareSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC4B4EC2474E9CC005FB6E6 /* SkinCareSearchViewController.swift */; };
+		3FC4B4EF2474E9CC005FB6E6 /* SkinCareSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FC4B4ED2474E9CC005FB6E6 /* SkinCareSearchViewController.xib */; };
+		3FC4B4F62474EA11005FB6E6 /* SkinCareSearchMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC4B4F42474EA11005FB6E6 /* SkinCareSearchMainView.swift */; };
+		3FC4B4F72474EA11005FB6E6 /* SkinCareSearchMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FC4B4F52474EA11005FB6E6 /* SkinCareSearchMainView.xib */; };
+		3FC4B4FB2474EB57005FB6E6 /* LipSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC4B4F92474EB57005FB6E6 /* LipSearchViewController.swift */; };
+		3FC4B4FC2474EB57005FB6E6 /* LipSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FC4B4FA2474EB57005FB6E6 /* LipSearchViewController.xib */; };
+		3FC4B4FF2474EB75005FB6E6 /* LipSearchMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC4B4FD2474EB75005FB6E6 /* LipSearchMainView.swift */; };
+		3FC4B5002474EB75005FB6E6 /* LipSearchMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FC4B4FE2474EB75005FB6E6 /* LipSearchMainView.xib */; };
+		3FC4B5042474ECB0005FB6E6 /* HairCareSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC4B5022474ECB0005FB6E6 /* HairCareSearchViewController.swift */; };
+		3FC4B5052474ECB0005FB6E6 /* HairCareSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FC4B5032474ECB0005FB6E6 /* HairCareSearchViewController.xib */; };
+		3FC4B5082474ECCD005FB6E6 /* HairCareMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC4B5062474ECCD005FB6E6 /* HairCareMainView.swift */; };
+		3FC4B5092474ECCD005FB6E6 /* HairCareMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FC4B5072474ECCD005FB6E6 /* HairCareMainView.xib */; };
 		3FC6EE862473BDF0008875B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FC6EE852473BDF0008875B7 /* Assets.xcassets */; };
 		3FF1213824724716001E0554 /* SearchResultCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF1213624724716001E0554 /* SearchResultCollectionViewCell.swift */; };
 		3FF1213924724716001E0554 /* SearchResultCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FF1213724724716001E0554 /* SearchResultCollectionViewCell.xib */; };
@@ -126,6 +174,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F49BB00247509940092AF96 /* ActivityFollowTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityFollowTableViewCell.swift; sourceTree = "<group>"; };
+		1F49BB01247509940092AF96 /* ActivityFollowTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityFollowTableViewCell.xib; sourceTree = "<group>"; };
 		1F4B76E5246D2AC100FC3B27 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1F4B76EA246D2AC100FC3B27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1F4B76EF246D2AE100FC3B27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -163,10 +213,10 @@
 		3F6648EC2472280300D4D950 /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
 		3F6648F02472287900D4D950 /* SignUpMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpMainView.swift; sourceTree = "<group>"; };
 		3F6648F12472287900D4D950 /* SignUpMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpMainView.xib; sourceTree = "<group>"; };
-		3F6DB6922473C76E000B192A /* EyeShadowPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeShadowPageViewController.swift; sourceTree = "<group>"; };
-		3F6DB6932473C76E000B192A /* EyeShadowPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EyeShadowPageViewController.xib; sourceTree = "<group>"; };
-		3F6DB6972473C7C0000B192A /* EyeShadowMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeShadowMainView.swift; sourceTree = "<group>"; };
-		3F6DB6982473C7C0000B192A /* EyeShadowMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EyeShadowMainView.xib; sourceTree = "<group>"; };
+		3F70E6382474C469005DE8B3 /* EyeShadowSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeShadowSearchViewController.swift; sourceTree = "<group>"; };
+		3F70E6392474C469005DE8B3 /* EyeShadowSearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EyeShadowSearchViewController.xib; sourceTree = "<group>"; };
+		3F70E6412474C4DD005DE8B3 /* EyeShadowMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeShadowMainView.swift; sourceTree = "<group>"; };
+		3F70E6422474C4DD005DE8B3 /* EyeShadowMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EyeShadowMainView.xib; sourceTree = "<group>"; };
 		3F96651B246E2A7F0083EBC2 /* SearchTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextView.swift; sourceTree = "<group>"; };
 		3F96651C246E2A7F0083EBC2 /* SearchTextView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTextView.xib; sourceTree = "<group>"; };
 		3F96651F246E2B240083EBC2 /* SearchMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMainView.swift; sourceTree = "<group>"; };
@@ -181,6 +231,50 @@
 		3F966546246E56040083EBC2 /* BrandSearchResultView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BrandSearchResultView.xib; sourceTree = "<group>"; };
 		3FA0F793246E6DCA00D8DBA2 /* SearchResultMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultMainView.swift; sourceTree = "<group>"; };
 		3FA0F794246E6DCA00D8DBA2 /* SearchResultMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultMainView.xib; sourceTree = "<group>"; };
+		3FC4B4A42474C6A3005FB6E6 /* EyeLinerSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeLinerSearchViewController.swift; sourceTree = "<group>"; };
+		3FC4B4A52474C6A3005FB6E6 /* EyeLinerSearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EyeLinerSearchViewController.xib; sourceTree = "<group>"; };
+		3FC4B4A82474C6D0005FB6E6 /* EyeLinerSearchMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeLinerSearchMainView.swift; sourceTree = "<group>"; };
+		3FC4B4A92474C6D0005FB6E6 /* EyeLinerSearchMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EyeLinerSearchMainView.xib; sourceTree = "<group>"; };
+		3FC4B4AD2474C875005FB6E6 /* MascaraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MascaraViewController.swift; sourceTree = "<group>"; };
+		3FC4B4AE2474C875005FB6E6 /* MascaraViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MascaraViewController.xib; sourceTree = "<group>"; };
+		3FC4B4B12474C894005FB6E6 /* MascaraMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MascaraMainView.swift; sourceTree = "<group>"; };
+		3FC4B4B22474C894005FB6E6 /* MascaraMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MascaraMainView.xib; sourceTree = "<group>"; };
+		3FC4B4B62474C9E1005FB6E6 /* ColorContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorContactViewController.swift; sourceTree = "<group>"; };
+		3FC4B4B72474C9E1005FB6E6 /* ColorContactViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorContactViewController.xib; sourceTree = "<group>"; };
+		3FC4B4BA2474CA06005FB6E6 /* ColorContactMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorContactMainView.swift; sourceTree = "<group>"; };
+		3FC4B4BB2474CA06005FB6E6 /* ColorContactMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorContactMainView.xib; sourceTree = "<group>"; };
+		3FC4B4BF2474D4D6005FB6E6 /* EyeBrowSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeBrowSearchViewController.swift; sourceTree = "<group>"; };
+		3FC4B4C02474D4D6005FB6E6 /* EyeBrowSearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EyeBrowSearchViewController.xib; sourceTree = "<group>"; };
+		3FC4B4C32474D502005FB6E6 /* EyeBrowSearchMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeBrowSearchMainView.swift; sourceTree = "<group>"; };
+		3FC4B4C42474D502005FB6E6 /* EyeBrowSearchMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EyeBrowSearchMainView.xib; sourceTree = "<group>"; };
+		3FC4B4C82474E3D4005FB6E6 /* BaseSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSearchViewController.swift; sourceTree = "<group>"; };
+		3FC4B4C92474E3D4005FB6E6 /* BaseSearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaseSearchViewController.xib; sourceTree = "<group>"; };
+		3FC4B4CC2474E3F7005FB6E6 /* BaseSearchMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSearchMainView.swift; sourceTree = "<group>"; };
+		3FC4B4CD2474E3F7005FB6E6 /* BaseSearchMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaseSearchMainView.xib; sourceTree = "<group>"; };
+		3FC4B4D12474E532005FB6E6 /* HiLightSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiLightSearchViewController.swift; sourceTree = "<group>"; };
+		3FC4B4D22474E532005FB6E6 /* HiLightSearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HiLightSearchViewController.xib; sourceTree = "<group>"; };
+		3FC4B4D52474E550005FB6E6 /* HiLighthMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiLighthMainView.swift; sourceTree = "<group>"; };
+		3FC4B4D62474E550005FB6E6 /* HiLighthMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HiLighthMainView.xib; sourceTree = "<group>"; };
+		3FC4B4DA2474E6E6005FB6E6 /* ShadingSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadingSearchViewController.swift; sourceTree = "<group>"; };
+		3FC4B4DB2474E6E6005FB6E6 /* ShadingSearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShadingSearchViewController.xib; sourceTree = "<group>"; };
+		3FC4B4DE2474E716005FB6E6 /* ShadingSearchMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadingSearchMainView.swift; sourceTree = "<group>"; };
+		3FC4B4DF2474E716005FB6E6 /* ShadingSearchMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShadingSearchMainView.xib; sourceTree = "<group>"; };
+		3FC4B4E32474E849005FB6E6 /* CheekSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheekSearchViewController.swift; sourceTree = "<group>"; };
+		3FC4B4E42474E849005FB6E6 /* CheekSearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheekSearchViewController.xib; sourceTree = "<group>"; };
+		3FC4B4E72474E86A005FB6E6 /* CheekSearchMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheekSearchMainView.swift; sourceTree = "<group>"; };
+		3FC4B4E82474E86A005FB6E6 /* CheekSearchMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheekSearchMainView.xib; sourceTree = "<group>"; };
+		3FC4B4EC2474E9CC005FB6E6 /* SkinCareSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinCareSearchViewController.swift; sourceTree = "<group>"; };
+		3FC4B4ED2474E9CC005FB6E6 /* SkinCareSearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SkinCareSearchViewController.xib; sourceTree = "<group>"; };
+		3FC4B4F42474EA11005FB6E6 /* SkinCareSearchMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinCareSearchMainView.swift; sourceTree = "<group>"; };
+		3FC4B4F52474EA11005FB6E6 /* SkinCareSearchMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SkinCareSearchMainView.xib; sourceTree = "<group>"; };
+		3FC4B4F92474EB57005FB6E6 /* LipSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LipSearchViewController.swift; sourceTree = "<group>"; };
+		3FC4B4FA2474EB57005FB6E6 /* LipSearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LipSearchViewController.xib; sourceTree = "<group>"; };
+		3FC4B4FD2474EB75005FB6E6 /* LipSearchMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LipSearchMainView.swift; sourceTree = "<group>"; };
+		3FC4B4FE2474EB75005FB6E6 /* LipSearchMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LipSearchMainView.xib; sourceTree = "<group>"; };
+		3FC4B5022474ECB0005FB6E6 /* HairCareSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HairCareSearchViewController.swift; sourceTree = "<group>"; };
+		3FC4B5032474ECB0005FB6E6 /* HairCareSearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HairCareSearchViewController.xib; sourceTree = "<group>"; };
+		3FC4B5062474ECCD005FB6E6 /* HairCareMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HairCareMainView.swift; sourceTree = "<group>"; };
+		3FC4B5072474ECCD005FB6E6 /* HairCareMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HairCareMainView.xib; sourceTree = "<group>"; };
 		3FC6EE852473BDF0008875B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FF1213624724716001E0554 /* SearchResultCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCollectionViewCell.swift; sourceTree = "<group>"; };
 		3FF1213724724716001E0554 /* SearchResultCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -347,6 +441,8 @@
 				1F4B773F24736EE400FC3B27 /* ActivityGoodTableViewCell.xib */,
 				1F4B7742247379A700FC3B27 /* ActivityCommentTableViewCell.swift */,
 				1F4B7743247379A700FC3B27 /* ActivityCommentTableViewCell.xib */,
+				1F49BB00247509940092AF96 /* ActivityFollowTableViewCell.swift */,
+				1F49BB01247509940092AF96 /* ActivityFollowTableViewCell.xib */,
 			);
 			path = Activity;
 			sourceTree = "<group>";
@@ -376,10 +472,10 @@
 		1F4B7727246E6A7600FC3B27 /* Make */ = {
 			isa = PBXGroup;
 			children = (
-				D1B8AFC22472627B007BC6AD /* CreateMakeMainView.swift */,
-				D1B8AFC12472627B007BC6AD /* CreateMakeMainView.xib */,
 				D1B8AFC32472627C007BC6AD /* CreateMakeViewController.swift */,
 				D1B8AFC02472627B007BC6AD /* CreateMakeViewController.xib */,
+				D1B8AFC22472627B007BC6AD /* CreateMakeMainView.swift */,
+				D1B8AFC12472627B007BC6AD /* CreateMakeMainView.xib */,
 			);
 			path = Make;
 			sourceTree = "<group>";
@@ -418,18 +514,29 @@
 		3F6DB6912473C742000B192A /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				3F6DB6962473C798000B192A /* EyeShadow */,
+				3FC4B5012474EC9D005FB6E6 /* HairCare */,
+				3FC4B4F82474EB3D005FB6E6 /* Lip */,
+				3FC4B4EB2474E9B4005FB6E6 /* SkinCare */,
+				3FC4B4E22474E834005FB6E6 /* Cheek */,
+				3FC4B4D92474E6CF005FB6E6 /* Shading */,
+				3FC4B4D02474E51E005FB6E6 /* HiLight */,
+				3FC4B4C72474E3BD005FB6E6 /* Base */,
+				3FC4B4BE2474D4C2005FB6E6 /* EyeBrow */,
+				3FC4B4B52474C9C7005FB6E6 /* ColorContact */,
+				3FC4B4AC2474C85D005FB6E6 /* Mascara */,
+				3FC4B4A32474C68B005FB6E6 /* EyeLiner */,
+				3F70E63C2474C493005DE8B3 /* EyeShadow */,
 			);
 			path = Category;
 			sourceTree = "<group>";
 		};
-		3F6DB6962473C798000B192A /* EyeShadow */ = {
+		3F70E63C2474C493005DE8B3 /* EyeShadow */ = {
 			isa = PBXGroup;
 			children = (
-				3F6DB6922473C76E000B192A /* EyeShadowPageViewController.swift */,
-				3F6DB6932473C76E000B192A /* EyeShadowPageViewController.xib */,
-				3F6DB6972473C7C0000B192A /* EyeShadowMainView.swift */,
-				3F6DB6982473C7C0000B192A /* EyeShadowMainView.xib */,
+				3F70E6382474C469005DE8B3 /* EyeShadowSearchViewController.swift */,
+				3F70E6392474C469005DE8B3 /* EyeShadowSearchViewController.xib */,
+				3F70E6412474C4DD005DE8B3 /* EyeShadowMainView.swift */,
+				3F70E6422474C4DD005DE8B3 /* EyeShadowMainView.xib */,
 			);
 			path = EyeShadow;
 			sourceTree = "<group>";
@@ -451,6 +558,127 @@
 				3FF1213A24724AE0001E0554 /* UserResultCell */,
 			);
 			path = "Search result";
+			sourceTree = "<group>";
+		};
+		3FC4B4A32474C68B005FB6E6 /* EyeLiner */ = {
+			isa = PBXGroup;
+			children = (
+				3FC4B4A42474C6A3005FB6E6 /* EyeLinerSearchViewController.swift */,
+				3FC4B4A52474C6A3005FB6E6 /* EyeLinerSearchViewController.xib */,
+				3FC4B4A82474C6D0005FB6E6 /* EyeLinerSearchMainView.swift */,
+				3FC4B4A92474C6D0005FB6E6 /* EyeLinerSearchMainView.xib */,
+			);
+			path = EyeLiner;
+			sourceTree = "<group>";
+		};
+		3FC4B4AC2474C85D005FB6E6 /* Mascara */ = {
+			isa = PBXGroup;
+			children = (
+				3FC4B4AD2474C875005FB6E6 /* MascaraViewController.swift */,
+				3FC4B4AE2474C875005FB6E6 /* MascaraViewController.xib */,
+				3FC4B4B12474C894005FB6E6 /* MascaraMainView.swift */,
+				3FC4B4B22474C894005FB6E6 /* MascaraMainView.xib */,
+			);
+			path = Mascara;
+			sourceTree = "<group>";
+		};
+		3FC4B4B52474C9C7005FB6E6 /* ColorContact */ = {
+			isa = PBXGroup;
+			children = (
+				3FC4B4B62474C9E1005FB6E6 /* ColorContactViewController.swift */,
+				3FC4B4B72474C9E1005FB6E6 /* ColorContactViewController.xib */,
+				3FC4B4BA2474CA06005FB6E6 /* ColorContactMainView.swift */,
+				3FC4B4BB2474CA06005FB6E6 /* ColorContactMainView.xib */,
+			);
+			path = ColorContact;
+			sourceTree = "<group>";
+		};
+		3FC4B4BE2474D4C2005FB6E6 /* EyeBrow */ = {
+			isa = PBXGroup;
+			children = (
+				3FC4B4BF2474D4D6005FB6E6 /* EyeBrowSearchViewController.swift */,
+				3FC4B4C02474D4D6005FB6E6 /* EyeBrowSearchViewController.xib */,
+				3FC4B4C32474D502005FB6E6 /* EyeBrowSearchMainView.swift */,
+				3FC4B4C42474D502005FB6E6 /* EyeBrowSearchMainView.xib */,
+			);
+			path = EyeBrow;
+			sourceTree = "<group>";
+		};
+		3FC4B4C72474E3BD005FB6E6 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				3FC4B4C82474E3D4005FB6E6 /* BaseSearchViewController.swift */,
+				3FC4B4C92474E3D4005FB6E6 /* BaseSearchViewController.xib */,
+				3FC4B4CC2474E3F7005FB6E6 /* BaseSearchMainView.swift */,
+				3FC4B4CD2474E3F7005FB6E6 /* BaseSearchMainView.xib */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		3FC4B4D02474E51E005FB6E6 /* HiLight */ = {
+			isa = PBXGroup;
+			children = (
+				3FC4B4D12474E532005FB6E6 /* HiLightSearchViewController.swift */,
+				3FC4B4D22474E532005FB6E6 /* HiLightSearchViewController.xib */,
+				3FC4B4D52474E550005FB6E6 /* HiLighthMainView.swift */,
+				3FC4B4D62474E550005FB6E6 /* HiLighthMainView.xib */,
+			);
+			path = HiLight;
+			sourceTree = "<group>";
+		};
+		3FC4B4D92474E6CF005FB6E6 /* Shading */ = {
+			isa = PBXGroup;
+			children = (
+				3FC4B4DA2474E6E6005FB6E6 /* ShadingSearchViewController.swift */,
+				3FC4B4DB2474E6E6005FB6E6 /* ShadingSearchViewController.xib */,
+				3FC4B4DE2474E716005FB6E6 /* ShadingSearchMainView.swift */,
+				3FC4B4DF2474E716005FB6E6 /* ShadingSearchMainView.xib */,
+			);
+			path = Shading;
+			sourceTree = "<group>";
+		};
+		3FC4B4E22474E834005FB6E6 /* Cheek */ = {
+			isa = PBXGroup;
+			children = (
+				3FC4B4E32474E849005FB6E6 /* CheekSearchViewController.swift */,
+				3FC4B4E42474E849005FB6E6 /* CheekSearchViewController.xib */,
+				3FC4B4E72474E86A005FB6E6 /* CheekSearchMainView.swift */,
+				3FC4B4E82474E86A005FB6E6 /* CheekSearchMainView.xib */,
+			);
+			path = Cheek;
+			sourceTree = "<group>";
+		};
+		3FC4B4EB2474E9B4005FB6E6 /* SkinCare */ = {
+			isa = PBXGroup;
+			children = (
+				3FC4B4EC2474E9CC005FB6E6 /* SkinCareSearchViewController.swift */,
+				3FC4B4ED2474E9CC005FB6E6 /* SkinCareSearchViewController.xib */,
+				3FC4B4F42474EA11005FB6E6 /* SkinCareSearchMainView.swift */,
+				3FC4B4F52474EA11005FB6E6 /* SkinCareSearchMainView.xib */,
+			);
+			path = SkinCare;
+			sourceTree = "<group>";
+		};
+		3FC4B4F82474EB3D005FB6E6 /* Lip */ = {
+			isa = PBXGroup;
+			children = (
+				3FC4B4F92474EB57005FB6E6 /* LipSearchViewController.swift */,
+				3FC4B4FA2474EB57005FB6E6 /* LipSearchViewController.xib */,
+				3FC4B4FD2474EB75005FB6E6 /* LipSearchMainView.swift */,
+				3FC4B4FE2474EB75005FB6E6 /* LipSearchMainView.xib */,
+			);
+			path = Lip;
+			sourceTree = "<group>";
+		};
+		3FC4B5012474EC9D005FB6E6 /* HairCare */ = {
+			isa = PBXGroup;
+			children = (
+				3FC4B5022474ECB0005FB6E6 /* HairCareSearchViewController.swift */,
+				3FC4B5032474ECB0005FB6E6 /* HairCareSearchViewController.xib */,
+				3FC4B5062474ECCD005FB6E6 /* HairCareMainView.swift */,
+				3FC4B5072474ECCD005FB6E6 /* HairCareMainView.xib */,
+			);
+			path = HairCare;
 			sourceTree = "<group>";
 		};
 		3FF12135247246C9001E0554 /* SearchResultCell */ = {
@@ -694,51 +922,70 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FC4B4C22474D4D6005FB6E6 /* EyeBrowSearchViewController.xib in Resources */,
+				3FC4B5092474ECCD005FB6E6 /* HairCareMainView.xib in Resources */,
 				3FF1213E24724B18001E0554 /* SearchUserResultTableViewCell.xib in Resources */,
 				3F96651E246E2A7F0083EBC2 /* SearchTextView.xib in Resources */,
 				3F18F06324722DC400957A2E /* SingInMainView.xib in Resources */,
-				3F6DB69A2473C7C0000B192A /* EyeShadowMainView.xib in Resources */,
+				3F70E6442474C4DD005DE8B3 /* EyeShadowMainView.xib in Resources */,
 				3F966540246E558A0083EBC2 /* UserSearchResultMainView.xib in Resources */,
 				5FA88A70247272C000B84ACE /* GoodCollectionViewCell.xib in Resources */,
+				3FC4B4A72474C6A3005FB6E6 /* EyeLinerSearchViewController.xib in Resources */,
+				3FC4B4FC2474EB57005FB6E6 /* LipSearchViewController.xib in Resources */,
 				3F966522246E2B240083EBC2 /* SearchMainView.xib in Resources */,
+				3F70E63B2474C469005DE8B3 /* EyeShadowSearchViewController.xib in Resources */,
 				1F4B76F0246D2AE100FC3B27 /* LaunchScreen.storyboard in Resources */,
 				3F18F05D24722C2B00957A2E /* SignInViewController.xib in Resources */,
 				1F4B7721246E4F8F00FC3B27 /* CreateReviewViewController.xib in Resources */,
 				1F4B770F246D31FD00FC3B27 /* NewPostViewController.xib in Resources */,
+				3FC4B5002474EB75005FB6E6 /* LipSearchMainView.xib in Resources */,
 				FFD02825246E3866009EE2E4 /* TimeLineMainCollectionViewCell.xib in Resources */,
+				3FC4B4BD2474CA06005FB6E6 /* ColorContactMainView.xib in Resources */,
 				1F4B7745247379A700FC3B27 /* ActivityCommentTableViewCell.xib in Resources */,
 				5F098A332474F0E700D033F4 /* YourScrollMainView.xib in Resources */,
 				1F4B774124736EE400FC3B27 /* ActivityGoodTableViewCell.xib in Resources */,
 				D1B8AFC42472627C007BC6AD /* CreateMakeViewController.xib in Resources */,
 				FF8509FB246E294F003E2ACF /* ReviewDetailViewController.xib in Resources */,
 				5F098A3B2475006900D033F4 /* YourGenreCollectionViewCell.xib in Resources */,
+				3FC4B4CF2474E3F7005FB6E6 /* BaseSearchMainView.xib in Resources */,
+				3FC4B4E12474E716005FB6E6 /* ShadingSearchMainView.xib in Resources */,
 				5FA88A4A246E405900B84ACE /* EditProfileMainView.xib in Resources */,
 				FF850A0B246E2AD3003E2ACF /* EditReviewViewController.xib in Resources */,
 				5F098A2E2474D1A800D033F4 /* YourTodayCollectionViewCell.xib in Resources */,
 				1F4B7706246D30D900FC3B27 /* MyProfileViewController.xib in Resources */,
+				1F4B774D2473B5D600FC3B27 /* (null) in Resources */,
+				1F49BB03247509940092AF96 /* ActivityFollowTableViewCell.xib in Resources */,
 				FF850A03246E29BC003E2ACF /* MakeDetailViewController.xib in Resources */,
 				1F4B76EB246D2AC100FC3B27 /* Main.storyboard in Resources */,
 				5FA88A3E246E3FA300B84ACE /* YourProfileViewController.xib in Resources */,
+				3FC4B4EF2474E9CC005FB6E6 /* SkinCareSearchViewController.xib in Resources */,
 				FF850A17246E2BC2003E2ACF /* EditMakeMainView.xib in Resources */,
 				1F4B770A246D310F00FC3B27 /* TimeLineViewController.xib in Resources */,
 				FF850A0F246E2B16003E2ACF /* EditReviewMainView.xib in Resources */,
 				3F966544246E55BD0083EBC2 /* ProductNameSearchResultView.xib in Resources */,
 				3FC6EE862473BDF0008875B7 /* Assets.xcassets in Resources */,
+				3FC4B4D42474E532005FB6E6 /* HiLightSearchViewController.xib in Resources */,
 				1F4B7713246D329300FC3B27 /* SearchViewController.xib in Resources */,
-				3F6DB6952473C76E000B192A /* EyeShadowPageViewController.xib in Resources */,
 				5FA88A42246E3FE200B84ACE /* YourProfileMainView.xib in Resources */,
+				3FC4B4EA2474E86A005FB6E6 /* CheekSearchMainView.xib in Resources */,
+				3FC4B4DD2474E6E6005FB6E6 /* ShadingSearchViewController.xib in Resources */,
 				5FA88A53246E581F00B84ACE /* TodayCollectionViewCell.xib in Resources */,
 				5FA88A46246E402700B84ACE /* EditProfileViewController.xib in Resources */,
 				3FF1213924724716001E0554 /* SearchResultCollectionViewCell.xib in Resources */,
 				3F6648F32472287900D4D950 /* SignUpMainView.xib in Resources */,
+				3FC4B4B42474C894005FB6E6 /* MascaraMainView.xib in Resources */,
 				3F96653C246E552A0083EBC2 /* TagSearchResultMainView.xib in Resources */,
 				5FA88A642472316600B84ACE /* ScrollMainView.xib in Resources */,
 				3F966548246E56040083EBC2 /* BrandSearchResultView.xib in Resources */,
+				3FC4B4CB2474E3D4005FB6E6 /* BaseSearchViewController.xib in Resources */,
 				D1B8AFC52472627C007BC6AD /* CreateMakeMainView.xib in Resources */,
 				3FA0F796246E6DCA00D8DBA2 /* SearchResultMainView.xib in Resources */,
 				FF8509F2246E2870003E2ACF /* TimeLineMainView.xib in Resources */,
 				1F4B7717246D32C000FC3B27 /* ActivityViewController.xib in Resources */,
 				5F098A372475000B00D033F4 /* YourPostCollectionViewCell.xib in Resources */,
+				3FC4B4C62474D502005FB6E6 /* EyeBrowSearchMainView.xib in Resources */,
+				3FC4B4F72474EA11005FB6E6 /* SkinCareSearchMainView.xib in Resources */,
+				3FC4B5052474ECB0005FB6E6 /* HairCareSearchViewController.xib in Resources */,
 				5F098A252474C0CF00D033F4 /* GenreCollectionViewCell.xib in Resources */,
 				3F6648EE2472280300D4D950 /* SignUpViewController.xib in Resources */,
 				5FA88A37246E271000B84ACE /* MyProfileMainView.xib in Resources */,
@@ -748,8 +995,13 @@
 				FF3A5EA92474BAD100EDCB26 /* ReviewDetailMainTableViewCell.xib in Resources */,
 				FF8509FF246E297C003E2ACF /* ReviewDetailMainView.xib in Resources */,
 				FF850A13246E2B3C003E2ACF /* EditMakeViewController.xib in Resources */,
+				3FC4B4B92474C9E1005FB6E6 /* ColorContactViewController.xib in Resources */,
 				FFD02821246E3745009EE2E4 /* TimeLineMainTableViewSecondCell.xib in Resources */,
 				FF850A07246E29F4003E2ACF /* MakeDetailMainView.xib in Resources */,
+				3FC4B4AB2474C6D0005FB6E6 /* EyeLinerSearchMainView.xib in Resources */,
+				3FC4B4E62474E849005FB6E6 /* CheekSearchViewController.xib in Resources */,
+				3FC4B4D82474E550005FB6E6 /* HiLighthMainView.xib in Resources */,
+				3FC4B4B02474C875005FB6E6 /* MascaraViewController.xib in Resources */,
 				FFEA536C246E317700694E1C /* TimeLineMainTableViewCell.xib in Resources */,
 				1F4B7733246E7EC300FC3B27 /* ActivityMainView.xib in Resources */,
 			);
@@ -804,13 +1056,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FC4B4BC2474CA06005FB6E6 /* ColorContactMainView.swift in Sources */,
+				3FC4B4F62474EA11005FB6E6 /* SkinCareSearchMainView.swift in Sources */,
 				3FF1213824724716001E0554 /* SearchResultCollectionViewCell.swift in Sources */,
+				3FC4B4AF2474C875005FB6E6 /* MascaraViewController.swift in Sources */,
 				5FA88A45246E402700B84ACE /* EditProfileViewController.swift in Sources */,
 				1F4B771A246E25CF00FC3B27 /* NewPostMainView.swift in Sources */,
 				D1B8AFC62472627C007BC6AD /* CreateMakeMainView.swift in Sources */,
-				3F6DB6942473C76E000B192A /* EyeShadowPageViewController.swift in Sources */,
 				FF8509FE246E297C003E2ACF /* ReviewDetailMainView.swift in Sources */,
 				5F098A362475000B00D033F4 /* YourPostCollectionViewCell.swift in Sources */,
+				1F4B774C2473B5D600FC3B27 /* (null) in Sources */,
 				FF8509F1246E2870003E2ACF /* TimeLineMainView.swift in Sources */,
 				FF850A12246E2B3C003E2ACF /* EditMakeViewController.swift in Sources */,
 				1F4B7712246D329300FC3B27 /* SearchViewController.swift in Sources */,
@@ -826,12 +1081,15 @@
 				5FA88A3D246E3FA300B84ACE /* YourProfileViewController.swift in Sources */,
 				5FA88A6F247272C000B84ACE /* GoodCollectionViewCell.swift in Sources */,
 				5FA88A52246E581F00B84ACE /* TodayCollectionViewCell.swift in Sources */,
+				3FC4B4CE2474E3F7005FB6E6 /* BaseSearchMainView.swift in Sources */,
 				1F4B7724246E4FBD00FC3B27 /* CreateReviewMainView.swift in Sources */,
 				FF850A16246E2BC2003E2ACF /* EditMakeMainView.swift in Sources */,
 				5FA88A49246E405900B84ACE /* EditProfileMainView.swift in Sources */,
 				5F098A322474F0E700D033F4 /* YourScrollMainView.swift in Sources */,
 				1F4B7732246E7EC300FC3B27 /* ActivityMainView.swift in Sources */,
 				1F4B7709246D310F00FC3B27 /* TimeLineViewController.swift in Sources */,
+				3FC4B4CA2474E3D4005FB6E6 /* BaseSearchViewController.swift in Sources */,
+				3FC4B4B82474C9E1005FB6E6 /* ColorContactViewController.swift in Sources */,
 				5F098A242474C0CF00D033F4 /* GenreCollectionViewCell.swift in Sources */,
 				1F4B76F9246D2F7700FC3B27 /* AppDelegate.swift in Sources */,
 				1F4B7716246D32C000FC3B27 /* ActivityViewController.swift in Sources */,
@@ -839,27 +1097,45 @@
 				5F098A202474BE5800D033F4 /* BookmarkCollectionViewCell.swift in Sources */,
 				FF850A0E246E2B16003E2ACF /* EditReviewMainView.swift in Sources */,
 				1F4B7744247379A700FC3B27 /* ActivityCommentTableViewCell.swift in Sources */,
+				3FC4B4D32474E532005FB6E6 /* HiLightSearchViewController.swift in Sources */,
 				5FA88A632472316600B84ACE /* ScrollMainView.swift in Sources */,
+				3FC4B4B32474C894005FB6E6 /* MascaraMainView.swift in Sources */,
 				3F6648ED2472280300D4D950 /* SignUpViewController.swift in Sources */,
 				FF8509FA246E294F003E2ACF /* ReviewDetailViewController.swift in Sources */,
 				FF850A06246E29F4003E2ACF /* MakeDetailMainView.swift in Sources */,
+				3FC4B5082474ECCD005FB6E6 /* HairCareMainView.swift in Sources */,
+				3FC4B4EE2474E9CC005FB6E6 /* SkinCareSearchViewController.swift in Sources */,
 				FF850A0A246E2AD3003E2ACF /* EditReviewViewController.swift in Sources */,
+				3FC4B4C52474D502005FB6E6 /* EyeBrowSearchMainView.swift in Sources */,
 				3F966547246E56040083EBC2 /* BrandSearchResultView.swift in Sources */,
+				3FC4B4E02474E716005FB6E6 /* ShadingSearchMainView.swift in Sources */,
 				1F4B76E6246D2AC100FC3B27 /* SceneDelegate.swift in Sources */,
+				3FC4B4DC2474E6E6005FB6E6 /* ShadingSearchViewController.swift in Sources */,
+				3FC4B4FF2474EB75005FB6E6 /* LipSearchMainView.swift in Sources */,
 				1F4B770E246D31FD00FC3B27 /* NewPostViewController.swift in Sources */,
+				3F70E63A2474C469005DE8B3 /* EyeShadowSearchViewController.swift in Sources */,
 				1F4B774024736EE400FC3B27 /* ActivityGoodTableViewCell.swift in Sources */,
+				3FC4B4AA2474C6D0005FB6E6 /* EyeLinerSearchMainView.swift in Sources */,
+				3FC4B4FB2474EB57005FB6E6 /* LipSearchViewController.swift in Sources */,
+				3FC4B4A62474C6A3005FB6E6 /* EyeLinerSearchViewController.swift in Sources */,
+				3FC4B4D72474E550005FB6E6 /* HiLighthMainView.swift in Sources */,
 				3FF1213D24724B18001E0554 /* SearchUserResultTableViewCell.swift in Sources */,
 				3F96653F246E558A0083EBC2 /* UserSearchResultMainView.swift in Sources */,
+				1F49BB02247509940092AF96 /* ActivityFollowTableViewCell.swift in Sources */,
+				3FC4B5042474ECB0005FB6E6 /* HairCareSearchViewController.swift in Sources */,
 				3F96653B246E552A0083EBC2 /* TagSearchResultMainView.swift in Sources */,
+				3FC4B4E92474E86A005FB6E6 /* CheekSearchMainView.swift in Sources */,
 				FFD02824246E3866009EE2E4 /* TimeLineMainCollectionViewCell.swift in Sources */,
 				FFD02820246E3745009EE2E4 /* TimeLineMainTableViewSecondCell.swift in Sources */,
 				D1B8AFC72472627C007BC6AD /* CreateMakeViewController.swift in Sources */,
 				3F18F05C24722C2B00957A2E /* SignInViewController.swift in Sources */,
+				3FC4B4C12474D4D6005FB6E6 /* EyeBrowSearchViewController.swift in Sources */,
 				FFEA536B246E317700694E1C /* TimeLineMainTableViewCell.swift in Sources */,
 				3F6648F22472287900D4D950 /* SignUpMainView.swift in Sources */,
 				3FA0F795246E6DCA00D8DBA2 /* SearchResultMainView.swift in Sources */,
 				FF850A02246E29BC003E2ACF /* MakeDetailViewController.swift in Sources */,
-				3F6DB6992473C7C0000B192A /* EyeShadowMainView.swift in Sources */,
+				3F70E6432474C4DD005DE8B3 /* EyeShadowMainView.swift in Sources */,
+				3FC4B4E52474E849005FB6E6 /* CheekSearchViewController.swift in Sources */,
 				FF3A5EA82474BAD100EDCB26 /* ReviewDetailMainTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
