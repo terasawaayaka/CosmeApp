@@ -22,6 +22,9 @@
                             <constraint firstAttribute="height" constant="40" id="cmO-Hb-I0C"/>
                             <constraint firstAttribute="width" secondItem="q5U-Kp-gSZ" secondAttribute="height" multiplier="1:1" id="lzB-RC-6h1"/>
                         </constraints>
+                        <connections>
+                            <action selector="iconViewButton:" destination="1wg-iN-cef" eventType="touchUpInside" id="kab-ds-FbP"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uG1-hw-1Ya">
                         <rect key="frame" x="80" y="20" width="80.5" height="20.5"/>
@@ -39,7 +42,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
-                <color key="backgroundColor" red="0.99040381632527164" green="0.96976935239765827" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <color key="backgroundColor" red="0.99577349854175101" green="0.9866160204302683" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstAttribute="trailingMargin" secondItem="rF3-Gc-nIF" secondAttribute="trailing" constant="40" id="KES-dd-dnQ"/>
                     <constraint firstItem="q5U-Kp-gSZ" firstAttribute="top" secondItem="eHD-ej-ig6" secondAttribute="top" constant="10" id="YvU-Yj-83N"/>

@@ -40,6 +40,14 @@ extension MakeDetailViewController :HeaderViewDelegate{
         animatorManager.navigationType = .slide_push
     }
 }
+
+extension MakeDetailViewController:MakeDetailMainViewDelegate{
+    func iconViewButton() {
+        //TODO : 自分か他人のprofile画面に遷移
+    }
+    
+    
+}
 // MARK: - method
 extension MakeDetailViewController {
     func setHeaderView(){
@@ -49,6 +57,7 @@ extension MakeDetailViewController {
     }
     func setDelegate(){
         headerView.delegate = self
+        mainView.delegate = self
     }
 }
 

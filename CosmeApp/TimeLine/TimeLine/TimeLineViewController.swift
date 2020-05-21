@@ -28,6 +28,10 @@ extension TimeLineViewController {
 }
 // MARK: - Protocol
 extension TimeLineViewController :TimeLineMainViewDelegate{
+    func touchedIconViewButton() {
+        //TODO : 自分か他人のprofile画面に遷移
+    }
+    
     func didSelectCollectionViewCell() {
         let makeDetailViewController = MakeDetailViewController()
         navigationController?.pushViewController(makeDetailViewController, animated: true)

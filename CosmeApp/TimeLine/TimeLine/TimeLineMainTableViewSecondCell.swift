@@ -10,6 +10,7 @@ import UIKit
 
 import PGFramework
 protocol TimeLineMainTableViewSecondCellDelegate: NSObjectProtocol{
+    func iconViewButton()
 }
 extension TimeLineMainTableViewSecondCellDelegate {
 }
@@ -20,6 +21,10 @@ class TimeLineMainTableViewSecondCell: BaseTableViewCell, UIScrollViewDelegate {
     @IBOutlet weak var iconView: UIButton!
     @IBOutlet weak var imageScrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
+    
+    @IBAction func iconViewButton(_ sender: UIButton) {
+        if let delegate = delegate{delegate.iconViewButton()}
+    }
 }
 // MARK: - Life cycle
 extension TimeLineMainTableViewSecondCell {

@@ -44,6 +44,18 @@ extension ReviewDetailViewController :HeaderViewDelegate{
         animatorManager.navigationType = .slide_push
     }
 }
+
+extension ReviewDetailViewController:ReviewDetailMainViewDelegate {
+    func iconViewButton2() {
+        //TODO : 自分か他人のprofile画面に遷移
+    }
+    
+    func touchedIconViewButton() {
+        //TODO : 自分か他人のprofile画面に遷移
+    }
+    
+    
+}
 // MARK: - method
 extension ReviewDetailViewController {
     func setHeaderView(){
@@ -53,6 +65,7 @@ extension ReviewDetailViewController {
     }
     func setDelegate(){
         headerView.delegate = self
+        mainView.delegate = self
     }
     //キーボードとテキストフィールド以外をタップでキーボードを隠す
     func hideKeybord() {

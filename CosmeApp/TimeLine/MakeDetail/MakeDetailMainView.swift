@@ -10,6 +10,7 @@ import UIKit
 
 import PGFramework
 protocol MakeDetailMainViewDelegate: NSObjectProtocol{
+    func iconViewButton()
 }
 extension MakeDetailMainViewDelegate {
 }
@@ -17,6 +18,10 @@ extension MakeDetailMainViewDelegate {
 class MakeDetailMainView: BaseView {
     weak var delegate: MakeDetailMainViewDelegate? = nil
     @IBOutlet weak var iconView: UIButton!
+    @IBAction func iconViewButton(_ sender: UIButton) {
+        if let delegate = delegate {delegate.iconViewButton()
+        }
+    }
 }
 // MARK: - Life cycle
 extension MakeDetailMainView {
