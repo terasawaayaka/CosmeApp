@@ -9,7 +9,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignInViewController" customModule="CosmeApp" customModuleProvider="target">
             <connections>
-                <outlet property="mainView" destination="vFE-IZ-Ysp" id="daj-3K-mp6"/>
+                <outlet property="mainView" destination="w6Y-1l-ikB" id="2hv-sw-OTm"/>
+                <outlet property="mainViewButtomMargen" destination="w6Y-1l-ikB" id="Q40-Wv-4mK"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

@@ -17,6 +17,7 @@ extension SignUpViewController {
     override func loadView() {
         super.loadView()
         setDelegate()
+        hideKeybord()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +47,15 @@ extension SignUpViewController {
     func setDelegate(){
         mainView.delegate = self
     }
+    func hideKeybord() {
+         let hideTap : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKyeoboardTap))
+         hideTap.numberOfTapsRequired = 1
+         self.view.isUserInteractionEnabled = true
+         self.view.addGestureRecognizer(hideTap)
+     }
+     @objc func hideKyeoboardTap(recognizer : UITapGestureRecognizer){
+         self.view.endEditing(true)
+     }
 }
 
 
