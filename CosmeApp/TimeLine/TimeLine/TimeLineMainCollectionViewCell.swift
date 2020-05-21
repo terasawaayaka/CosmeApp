@@ -16,7 +16,8 @@ extension TimeLineMainCollectionViewCellDelegate {
 // MARK: - Property
 class TimeLineMainCollectionViewCell: BaseCollectionViewCell {
     weak var delegate: TimeLineMainCollectionViewCellDelegate? = nil
-    @IBOutlet weak var makeIconView: UIView!
+
+    @IBOutlet weak var makeIconView: UIImageView!
 }
 // MARK: - Life cycle
 extension TimeLineMainCollectionViewCell {

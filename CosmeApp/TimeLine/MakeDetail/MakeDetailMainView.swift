@@ -16,11 +16,13 @@ extension MakeDetailMainViewDelegate {
 // MARK: - Property
 class MakeDetailMainView: BaseView {
     weak var delegate: MakeDetailMainViewDelegate? = nil
+    @IBOutlet weak var iconView: UIButton!
 }
 // MARK: - Life cycle
 extension MakeDetailMainView {
     override func awakeFromNib() {
         super.awakeFromNib()
+        setLayout()
     }
 }
 // MARK: - Protocol
@@ -28,4 +30,7 @@ extension MakeDetailMainView {
 }
 // MARK: - method
 extension MakeDetailMainView {
+    func setLayout(){
+        iconView.layer.cornerRadius = iconView.frame.width / 2
+    }
 }

@@ -18,12 +18,14 @@ extension ReviewDetailMainViewDelegate {
 class ReviewDetailMainView: BaseView {
     weak var delegate: ReviewDetailMainViewDelegate? = nil
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var iconView: UIButton!
 }
 // MARK: - Life cycle
 extension ReviewDetailMainView {
     override func awakeFromNib() {
         super.awakeFromNib()
         setDelegate()
+        setLayout()
         
         loadTableViewCellFromXib(tableView: tableView, cellName: "ReviewDetailMainTableViewCell")
     }
@@ -44,5 +46,8 @@ extension ReviewDetailMainView :UITableViewDataSource{
 extension ReviewDetailMainView {
     func setDelegate(){
         tableView.dataSource = self
+    }
+    func setLayout(){
+        iconView.layer.cornerRadius = iconView.frame.width / 2
     }
 }
