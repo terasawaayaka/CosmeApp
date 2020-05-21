@@ -43,7 +43,6 @@ extension ReviewDetailViewController :HeaderViewDelegate{
         navigationController?.pushViewController(editReviewViewController, animated: true)
         animatorManager.navigationType = .slide_push
     }
-    
 }
 // MARK: - method
 extension ReviewDetailViewController {

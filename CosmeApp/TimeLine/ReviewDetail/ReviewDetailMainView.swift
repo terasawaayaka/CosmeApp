@@ -15,7 +15,7 @@ protocol ReviewDetailMainViewDelegate: NSObjectProtocol{
 extension ReviewDetailMainViewDelegate {
 }
 // MARK: - Property
-class ReviewDetailMainView: BaseView {
+class ReviewDetailMainView: BaseView, UIScrollViewDelegate {
     weak var delegate: ReviewDetailMainViewDelegate? = nil
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var iconView: UIButton!
@@ -40,7 +40,6 @@ extension ReviewDetailMainView :UITableViewDataSource{
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ReviewDetailMainTableViewCell")as? ReviewDetailMainTableViewCell else {return UITableViewCell()}
         return cell
     }
-    
 }
 // MARK: - method
 extension ReviewDetailMainView {
