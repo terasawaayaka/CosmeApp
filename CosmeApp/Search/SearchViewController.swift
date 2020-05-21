@@ -43,63 +43,63 @@ extension SearchViewController: SearchTextViewDelegate {
 }
 extension SearchViewController: SearchMainViewDelegate {
     func touchedEyeShadowButton() {
-        let eyeShadowVSearchViewConreoller = EyeShadowSearchViewController()
-        navigationController?.pushViewController(eyeShadowVSearchViewConreoller, animated: true)
+        let categorySearchViewController = CategorySearchViewController()
+        navigationController?.pushViewController(categorySearchViewController, animated: true)
         animatorManager.navigationType = .slide_push
     }
     func touchedEyeLinerButton() {
-        let eyeLinerSearchViewController = EyeLinerSearchViewController()
-        navigationController?.pushViewController(eyeLinerSearchViewController, animated: true)
+        let categorySearchViewController = CategorySearchViewController()
+        navigationController?.pushViewController(categorySearchViewController, animated: true)
         animatorManager.navigationType = .slide_push
     }
     func touchedMascaraButton() {
-        let mascaraSearchViewController = MascaraViewController()
-        navigationController?.pushViewController(mascaraSearchViewController, animated: true)
+        let categorySearchViewController = CategorySearchViewController()
+        navigationController?.pushViewController(categorySearchViewController, animated: true)
         animatorManager.navigationType = .slide_push
     }
     func touchedColorContctButton() {
-        let colorContactSearchViewController = ColorContactViewController()
-        navigationController?.pushViewController(colorContactSearchViewController, animated: true)
+        let categorySearchViewController = CategorySearchViewController()
+        navigationController?.pushViewController(categorySearchViewController, animated: true)
         animatorManager.navigationType = .slide_push
     }
     func touchedEyeBrowButton() {
-        let eyeBrowSearchViewController = EyeBrowSearchViewController()
-        navigationController?.pushViewController(eyeBrowSearchViewController, animated: true)
+        let categorySearchViewController = CategorySearchViewController()
+        navigationController?.pushViewController(categorySearchViewController, animated: true)
         animatorManager.navigationType = .slide_push
     }
     func touchedBaseButton() {
-        let baseSearchViewController = BaseSearchViewController()
-        navigationController?.pushViewController(baseSearchViewController, animated: true)
+        let categorySearchViewController = CategorySearchViewController()
+        navigationController?.pushViewController(categorySearchViewController, animated: true)
         animatorManager.navigationType = .slide_push
     }
     func touchedHiLightButton() {
-        let hiLightSearchViewController = HiLightSearchViewController()
-        navigationController?.pushViewController(hiLightSearchViewController, animated: true)
+        let categorySearchViewController = CategorySearchViewController()
+        navigationController?.pushViewController(categorySearchViewController, animated: true)
         animatorManager.navigationType = .slide_push
     }
     func touchedShadingButton() {
-        let shadingSearchViewController = ShadingSearchViewController()
-        navigationController?.pushViewController(shadingSearchViewController, animated: true)
+        let categorySearchViewController = CategorySearchViewController()
+        navigationController?.pushViewController(categorySearchViewController, animated: true)
         animatorManager.navigationType = .slide_push
     }
     func touchedCheekButton() {
-        let cheekSearchViewController = CheekSearchViewController()
-        navigationController?.pushViewController(cheekSearchViewController, animated: true)
+        let categorySearchViewController = CategorySearchViewController()
+        navigationController?.pushViewController(categorySearchViewController, animated: true)
         animatorManager.navigationType = .slide_push
     }
     func touchedSkinCareButton() {
-        let skinCareSearchViewController = SkinCareSearchViewController()
-        navigationController?.pushViewController(skinCareSearchViewController, animated: true)
+        let categorySearchViewController = CategorySearchViewController()
+        navigationController?.pushViewController(categorySearchViewController, animated: true)
         animatorManager.navigationType = .slide_push
     }
     func touchedLipButton() {
-        let lipSearchViewController = LipSearchViewController()
-        navigationController?.pushViewController(lipSearchViewController, animated: true)
+        let categorySearchViewController = CategorySearchViewController()
+        navigationController?.pushViewController(categorySearchViewController, animated: true)
         animatorManager.navigationType = .slide_push
     }
     func touchedHairCareButton() {
-        let hairCareSearchViewController = HairCareSearchViewController()
-        navigationController?.pushViewController(hairCareSearchViewController, animated: true)
+        let categorySearchViewController = CategorySearchViewController()
+        navigationController?.pushViewController(categorySearchViewController, animated: true)
         animatorManager.navigationType = .slide_push
     }
     func touchedTagButton() {

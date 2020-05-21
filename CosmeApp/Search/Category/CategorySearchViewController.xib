@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SkinCareSearchViewController" customModule="CosmeApp" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CategorySearchViewController" customModule="CosmeApp" customModuleProvider="target">
             <connections>
-                <outlet property="headerView" destination="9jn-kj-ivT" id="oSI-CS-e2I"/>
-                <outlet property="mainView" destination="oJg-bC-GfB" id="9fb-2j-uvk"/>
+                <outlet property="headerView" destination="G5f-yX-kLu" id="YFa-36-iZA"/>
+                <outlet property="mainView" destination="6Qd-yx-Z1c" id="DuB-hT-ca0"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,27 +19,27 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9jn-kj-ivT" customClass="HeaderView" customModule="PGFramework">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G5f-yX-kLu" customClass="HeaderView" customModule="PGFramework">
                     <rect key="frame" x="0.0" y="44" width="414" height="60"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="60" id="Cg6-zH-DTd"/>
+                        <constraint firstAttribute="height" constant="60" id="fZN-4j-GLW"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oJg-bC-GfB" customClass="SkinCareSearchMainView" customModule="CosmeApp" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Qd-yx-Z1c" customClass="CategorySearchMainView" customModule="CosmeApp" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="104" width="414" height="758"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </view>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="oJg-bC-GfB" secondAttribute="trailing" id="0R6-rK-aHN"/>
-                <constraint firstItem="oJg-bC-GfB" firstAttribute="top" secondItem="9jn-kj-ivT" secondAttribute="bottom" id="FAc-sH-a7P"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="oJg-bC-GfB" secondAttribute="bottom" id="Neg-OM-Kvi"/>
-                <constraint firstItem="oJg-bC-GfB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="eLs-Ms-QJa"/>
-                <constraint firstItem="9jn-kj-ivT" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="jen-aC-oAo"/>
-                <constraint firstItem="9jn-kj-ivT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="qel-Od-GYv"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9jn-kj-ivT" secondAttribute="trailing" id="t45-Zn-Qo2"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="6Qd-yx-Z1c" secondAttribute="bottom" id="TaN-c4-v6z"/>
+                <constraint firstItem="6Qd-yx-Z1c" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Zk1-KD-B7S"/>
+                <constraint firstItem="G5f-yX-kLu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="lPg-mE-xhT"/>
+                <constraint firstItem="G5f-yX-kLu" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="m7U-rq-blE"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="G5f-yX-kLu" secondAttribute="trailing" id="oGn-5s-Tln"/>
+                <constraint firstItem="6Qd-yx-Z1c" firstAttribute="top" secondItem="G5f-yX-kLu" secondAttribute="bottom" id="usz-e4-osx"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6Qd-yx-Z1c" secondAttribute="trailing" id="y6c-aY-UlO"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="139" y="108"/>

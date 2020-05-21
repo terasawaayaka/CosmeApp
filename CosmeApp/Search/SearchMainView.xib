@@ -72,6 +72,7 @@
                             <color key="backgroundColor" red="1" green="0.99085296059726369" blue="0.86297983854122595" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstItem="o20-fw-gGm" firstAttribute="top" secondItem="00x-zD-qMy" secondAttribute="top" constant="10" id="Bzx-xX-qfT"/>
+                                <constraint firstAttribute="width" constant="414" id="CWq-jE-xmJ"/>
                                 <constraint firstItem="ojC-1g-34m" firstAttribute="top" secondItem="00x-zD-qMy" secondAttribute="top" constant="10" id="Ces-X5-gLC"/>
                                 <constraint firstItem="ojC-1g-34m" firstAttribute="leading" secondItem="Wdr-Ok-Orj" secondAttribute="trailing" constant="20" id="I2k-hf-MaJ"/>
                                 <constraint firstItem="DgT-yx-KBZ" firstAttribute="top" secondItem="00x-zD-qMy" secondAttribute="top" constant="10" id="Kmq-gN-S1g"/>
