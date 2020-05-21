@@ -32,54 +32,106 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="00x-zD-qMy">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o20-fw-gGm">
-                                    <rect key="frame" x="20" y="10" width="62" height="30"/>
-                                    <state key="normal" title="　タグ　">
-                                        <color key="titleColor" red="0.71165133250000001" green="0.1774580224" blue="0.39658061729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="touchedTagButton:" destination="-1" eventType="touchUpInside" id="s7x-pw-THB"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wdr-Ok-Orj">
-                                    <rect key="frame" x="102" y="10" width="92" height="30"/>
-                                    <state key="normal" title="　ユーザー　">
-                                        <color key="titleColor" red="0.71165133250000001" green="0.1774580224" blue="0.39658061729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="touchedUserButton:" destination="-1" eventType="touchUpInside" id="ISI-Gh-7n0"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ojC-1g-34m">
-                                    <rect key="frame" x="214" y="10" width="77" height="30"/>
-                                    <state key="normal" title="　商品名　">
-                                        <color key="titleColor" red="0.71165133250000001" green="0.1774580224" blue="0.39658061729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="touchedProductNameButton:" destination="-1" eventType="touchUpInside" id="axp-iX-cl6"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DgT-yx-KBZ">
-                                    <rect key="frame" x="311" y="10" width="92" height="30"/>
-                                    <state key="normal" title="　ブランド　">
-                                        <color key="titleColor" red="0.71165133250000001" green="0.1774580224" blue="0.39658061729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="touchedBrandButton:" destination="-1" eventType="touchUpInside" id="CrE-01-dHm"/>
-                                    </connections>
-                                </button>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="EYf-ka-iBX">
+                                    <rect key="frame" x="5" y="0.0" width="404" height="50"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r9E-nK-IqR">
+                                            <rect key="frame" x="0.0" y="0.0" width="93.5" height="50"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o20-fw-gGm">
+                                                    <rect key="frame" x="16" y="10" width="62" height="30"/>
+                                                    <state key="normal" title="　タグ　">
+                                                        <color key="titleColor" red="0.71165133250000001" green="0.1774580224" blue="0.39658061729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="touchedTagButton:" destination="-1" eventType="touchUpInside" id="s7x-pw-THB"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" red="1" green="0.99085296060000005" blue="0.86297983850000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="o20-fw-gGm" firstAttribute="centerX" secondItem="r9E-nK-IqR" secondAttribute="centerX" id="D4K-8I-T0z"/>
+                                                <constraint firstItem="o20-fw-gGm" firstAttribute="centerY" secondItem="r9E-nK-IqR" secondAttribute="centerY" id="naF-7c-LJQ"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ToM-Np-zpo">
+                                            <rect key="frame" x="103.5" y="0.0" width="93.5" height="50"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wdr-Ok-Orj">
+                                                    <rect key="frame" x="1" y="10" width="92" height="30"/>
+                                                    <state key="normal" title="　ユーザー　">
+                                                        <color key="titleColor" red="0.71165133250000001" green="0.1774580224" blue="0.39658061729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="touchedUserButton:" destination="-1" eventType="touchUpInside" id="ISI-Gh-7n0"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" red="1" green="0.99085296060000005" blue="0.86297983850000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="Wdr-Ok-Orj" firstAttribute="centerX" secondItem="ToM-Np-zpo" secondAttribute="centerX" id="FoL-dG-71y"/>
+                                                <constraint firstItem="Wdr-Ok-Orj" firstAttribute="centerY" secondItem="ToM-Np-zpo" secondAttribute="centerY" id="tr8-qO-SPW"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fld-hc-SY8">
+                                            <rect key="frame" x="207" y="0.0" width="93.5" height="50"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DgT-yx-KBZ">
+                                                    <rect key="frame" x="1" y="10" width="92" height="30"/>
+                                                    <state key="normal" title="　ブランド　">
+                                                        <color key="titleColor" red="0.71165133250000001" green="0.1774580224" blue="0.39658061729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="touchedBrandButton:" destination="-1" eventType="touchUpInside" id="CrE-01-dHm"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" red="1" green="0.99085296060000005" blue="0.86297983850000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="DgT-yx-KBZ" firstAttribute="centerY" secondItem="fld-hc-SY8" secondAttribute="centerY" id="1tx-w9-elL"/>
+                                                <constraint firstItem="DgT-yx-KBZ" firstAttribute="centerX" secondItem="fld-hc-SY8" secondAttribute="centerX" id="Irp-hC-RBV"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5lD-4M-Mt8">
+                                            <rect key="frame" x="310.5" y="0.0" width="93.5" height="50"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ojC-1g-34m">
+                                                    <rect key="frame" x="8.5" y="10" width="77" height="30"/>
+                                                    <state key="normal" title="　商品名　">
+                                                        <color key="titleColor" red="0.71165133250000001" green="0.1774580224" blue="0.39658061729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="touchedProductNameButton:" destination="-1" eventType="touchUpInside" id="axp-iX-cl6"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" red="1" green="0.99085296060000005" blue="0.86297983850000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="ojC-1g-34m" firstAttribute="centerX" secondItem="5lD-4M-Mt8" secondAttribute="centerX" id="3zr-9F-AdF"/>
+                                                <constraint firstItem="ojC-1g-34m" firstAttribute="centerY" secondItem="5lD-4M-Mt8" secondAttribute="centerY" id="ERw-9M-UXP"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="r9E-nK-IqR" firstAttribute="leading" secondItem="EYf-ka-iBX" secondAttribute="leading" id="2JD-bB-aGq"/>
+                                        <constraint firstAttribute="bottom" secondItem="r9E-nK-IqR" secondAttribute="bottom" id="Lgd-30-V3O"/>
+                                        <constraint firstItem="fld-hc-SY8" firstAttribute="top" secondItem="EYf-ka-iBX" secondAttribute="top" id="NcL-1n-rRL"/>
+                                        <constraint firstAttribute="trailing" secondItem="5lD-4M-Mt8" secondAttribute="trailing" id="QIl-Wi-gSD"/>
+                                        <constraint firstAttribute="bottom" secondItem="5lD-4M-Mt8" secondAttribute="bottom" id="WSH-AS-ZyW"/>
+                                        <constraint firstAttribute="bottom" secondItem="fld-hc-SY8" secondAttribute="bottom" id="g2t-FU-n9e"/>
+                                        <constraint firstAttribute="bottom" secondItem="ToM-Np-zpo" secondAttribute="bottom" id="jns-a0-Mfe"/>
+                                        <constraint firstItem="r9E-nK-IqR" firstAttribute="top" secondItem="EYf-ka-iBX" secondAttribute="top" id="kgW-b0-x7l"/>
+                                        <constraint firstItem="ToM-Np-zpo" firstAttribute="top" secondItem="EYf-ka-iBX" secondAttribute="top" id="mGK-1p-Mdq"/>
+                                        <constraint firstItem="5lD-4M-Mt8" firstAttribute="top" secondItem="EYf-ka-iBX" secondAttribute="top" id="ySi-OH-ALt"/>
+                                    </constraints>
+                                </stackView>
                             </subviews>
                             <color key="backgroundColor" red="1" green="0.99085296059726369" blue="0.86297983854122595" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstItem="o20-fw-gGm" firstAttribute="top" secondItem="00x-zD-qMy" secondAttribute="top" constant="10" id="Bzx-xX-qfT"/>
-                                <constraint firstAttribute="width" constant="414" id="CWq-jE-xmJ"/>
-                                <constraint firstItem="ojC-1g-34m" firstAttribute="top" secondItem="00x-zD-qMy" secondAttribute="top" constant="10" id="Ces-X5-gLC"/>
-                                <constraint firstItem="ojC-1g-34m" firstAttribute="leading" secondItem="Wdr-Ok-Orj" secondAttribute="trailing" constant="20" id="I2k-hf-MaJ"/>
-                                <constraint firstItem="DgT-yx-KBZ" firstAttribute="top" secondItem="00x-zD-qMy" secondAttribute="top" constant="10" id="Kmq-gN-S1g"/>
-                                <constraint firstItem="o20-fw-gGm" firstAttribute="leading" secondItem="00x-zD-qMy" secondAttribute="leading" constant="20" id="TA9-ES-B2a"/>
-                                <constraint firstItem="Wdr-Ok-Orj" firstAttribute="top" secondItem="00x-zD-qMy" secondAttribute="top" constant="10" id="cw4-h0-iGl"/>
-                                <constraint firstItem="Wdr-Ok-Orj" firstAttribute="leading" secondItem="o20-fw-gGm" secondAttribute="trailing" constant="20" id="ksa-wz-f49"/>
-                                <constraint firstItem="DgT-yx-KBZ" firstAttribute="leading" secondItem="ojC-1g-34m" secondAttribute="trailing" constant="20" id="wWD-su-qJQ"/>
+                                <constraint firstAttribute="bottom" secondItem="EYf-ka-iBX" secondAttribute="bottom" id="Ziz-eN-PlZ"/>
+                                <constraint firstAttribute="trailing" secondItem="EYf-ka-iBX" secondAttribute="trailing" constant="5" id="ikt-O8-Bn5"/>
+                                <constraint firstItem="EYf-ka-iBX" firstAttribute="leading" secondItem="00x-zD-qMy" secondAttribute="leading" constant="5" id="lyt-kV-dlO"/>
+                                <constraint firstItem="EYf-ka-iBX" firstAttribute="top" secondItem="00x-zD-qMy" secondAttribute="top" id="mlI-7F-bsj"/>
                                 <constraint firstAttribute="height" constant="50" id="wcy-tw-rnS"/>
                             </constraints>
                         </view>
