@@ -12,6 +12,7 @@ import PGFramework
 protocol TimeLineMainViewDelegate: NSObjectProtocol{
     func didSelectRowAt()
     func didSelectCollectionViewCell()
+    func touchedIconViewButton()
 }
 extension TimeLineMainViewDelegate {
 }
@@ -44,6 +45,7 @@ extension TimeLineMainView :UITableViewDataSource{
             cell.delegate = self
             return cell
         default:
+            secondCell.delegate = self
             return secondCell
         }
     }
@@ -59,6 +61,14 @@ extension TimeLineMainView:TimeLineMainTableViewCellDelegate{
     func didSelectItemAt() {
         if let delegate = delegate {delegate.didSelectCollectionViewCell()}
     }
+}
+
+extension TimeLineMainView:TimeLineMainTableViewSecondCellDelegate{
+    func iconViewButton() {
+        if let delegate = delegate {delegate.touchedIconViewButton()}
+    }
+    
+    
 }
 // MARK: - method
 extension TimeLineMainView {

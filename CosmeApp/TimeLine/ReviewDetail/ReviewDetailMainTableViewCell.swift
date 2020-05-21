@@ -9,6 +9,7 @@
 import UIKit
 import PGFramework
 protocol ReviewDetailMainTableViewCellDelegate: NSObjectProtocol{
+    func iconViewButton()
 }
 extension ReviewDetailMainTableViewCellDelegate {
 }
@@ -16,6 +17,9 @@ extension ReviewDetailMainTableViewCellDelegate {
 class ReviewDetailMainTableViewCell: BaseTableViewCell {
     weak var delegate: ReviewDetailMainTableViewCellDelegate? = nil
     @IBOutlet weak var iconView: UIButton!
+    @IBAction func iconViewButton(_ sender: UIButton) {
+        if let delegate = delegate {delegate.iconViewButton()}
+    }
 }
 // MARK: - Life cycle
 extension ReviewDetailMainTableViewCell {

@@ -11,6 +11,8 @@ import UIKit
 import PGFramework
 
 protocol ReviewDetailMainViewDelegate: NSObjectProtocol{
+    func touchedIconViewButton()
+    func iconViewButton2()
 }
 extension ReviewDetailMainViewDelegate {
 }
@@ -21,6 +23,15 @@ class ReviewDetailMainView: BaseView, UIScrollViewDelegate {
     @IBOutlet weak var iconView: UIButton!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var imageScrollView: UIScrollView!
+    @IBOutlet weak var commentTextField: UITextField!
+    
+    @IBAction func iconViewButton(_ sender: UIButton) {
+        if let delegate = delegate {delegate.iconViewButton2()}
+    }
+    @IBAction func commentSendButton(_ sender: UIButton) {
+        commentTextField.endEditing(true)
+        commentTextField.text = ""
+    }
 }
 // MARK: - Life cycle
 extension ReviewDetailMainView {
@@ -41,8 +52,17 @@ extension ReviewDetailMainView :UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ReviewDetailMainTableViewCell")as? ReviewDetailMainTableViewCell else {return UITableViewCell()}
+        cell.delegate = self
         return cell
     }
+}
+
+extension ReviewDetailMainView:ReviewDetailMainTableViewCellDelegate{
+    func iconViewButton() {
+        if let delegate = delegate {delegate.touchedIconViewButton()}
+    }
+    
+    
 }
 // MARK: - method
 extension ReviewDetailMainView {
