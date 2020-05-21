@@ -23,12 +23,15 @@
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXm-jl-7o0">
                         <rect key="frame" x="10" y="10" width="60" height="60"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="60" id="Ov0-tl-S1l"/>
                             <constraint firstAttribute="width" secondItem="hXm-jl-7o0" secondAttribute="height" multiplier="1:1" id="k5e-OS-BV0"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="37"/>
-                        <state key="normal" image="person.crop.circle" catalog="system"/>
+                        <connections>
+                            <action selector="iconView:" destination="43z-Sw-CwR" eventType="touchUpInside" id="6lj-dh-eEZ"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H22-jq-AEz">
                         <rect key="frame" x="420" y="600" width="30" height="30"/>
@@ -146,12 +149,14 @@
                     <constraint firstItem="mLp-ry-D8v" firstAttribute="leading" secondItem="jWQ-Qu-YRn" secondAttribute="trailing" constant="5" id="zBT-up-Oql"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="iconView" destination="hXm-jl-7o0" id="z9E-Np-jp6"/>
+            </connections>
             <point key="canvasLocation" x="111.59420289855073" y="106.13839285714285"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="favorite" width="256" height="256"/>
         <image name="good" width="256" height="256"/>
-        <image name="person.crop.circle" catalog="system" width="128" height="121"/>
     </resources>
 </document>

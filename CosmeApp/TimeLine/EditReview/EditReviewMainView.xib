@@ -25,7 +25,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HDi-DS-6P3">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="1022"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="1062"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qm8-8Q-cYF">
                                             <rect key="frame" x="0.0" y="50" width="207" height="207"/>
@@ -80,7 +80,7 @@
                                             </state>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="751" text="レビュー：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t4M-T6-Nc1">
-                                            <rect key="frame" x="20" y="674" width="87" height="21"/>
+                                            <rect key="frame" x="20" y="714" width="87" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -98,19 +98,19 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="タグ：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="erY-qp-fSB">
-                                            <rect key="frame" x="20" y="948.5" width="52" height="20.5"/>
+                                            <rect key="frame" x="20" y="988.5" width="52" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DvM-a1-0tQ">
-                                            <rect key="frame" x="41.5" y="609" width="331" height="60"/>
+                                            <rect key="frame" x="41.5" y="609" width="331" height="100"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="60" id="qtd-5R-yyd"/>
+                                                <constraint firstAttribute="height" constant="100" id="qtd-5R-yyd"/>
                                             </constraints>
                                         </pickerView>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uKU-QL-0mZ">
-                                            <rect key="frame" x="30" y="705" width="354" height="233.5"/>
+                                            <rect key="frame" x="30" y="745" width="354" height="233.5"/>
                                             <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="tXD-En-WOa"/>
@@ -121,7 +121,7 @@
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rHn-7h-A5z">
-                                            <rect key="frame" x="30" y="979" width="354" height="33"/>
+                                            <rect key="frame" x="30" y="1019" width="354" height="33"/>
                                             <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="cxt-V3-Q4z"/>

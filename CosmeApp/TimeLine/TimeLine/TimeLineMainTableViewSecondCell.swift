@@ -16,11 +16,14 @@ extension TimeLineMainTableViewSecondCellDelegate {
 // MARK: - Property
 class TimeLineMainTableViewSecondCell: BaseTableViewCell {
     weak var delegate: TimeLineMainTableViewSecondCellDelegate? = nil
+
+    @IBOutlet weak var iconView: UIButton!
 }
 // MARK: - Life cycle
 extension TimeLineMainTableViewSecondCell {
     override func awakeFromNib() {
         super.awakeFromNib()
+        setLayout()
     }
 }
 // MARK: - Protocol
@@ -28,4 +31,7 @@ extension TimeLineMainTableViewSecondCell {
 }
 // MARK: - method
 extension TimeLineMainTableViewSecondCell {
+    func setLayout(){
+        iconView.layer.cornerRadius = iconView.frame.width / 2
+    }
 }
