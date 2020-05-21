@@ -27,6 +27,8 @@ protocol SearchMainViewDelegate: NSObjectProtocol{
     func touchedSkinCareButton()
     func touchedLipButton()
     func touchedHairCareButton()
+    //SearchのユーザーとかタグとかのViewのdelegate
+    func didSelectItemAt()
     
 }
 extension SearchMainViewDelegate {
@@ -148,7 +150,11 @@ extension SearchMainView {
     }
 }
 // MARK: - Protocol
-extension SearchMainView{
+extension SearchMainView: BrandSearchResultViewDelegate{
+    func didSelectItemAt() {
+        if let delegate = delegate {
+            delegate.didSelectItemAt()}
+    }
 }
 // MARK: - method
 extension SearchMainView {
@@ -177,6 +183,7 @@ extension SearchMainView {
     }
     func setDelegate(){
         searchResultMainView.delegate = self
+        brandResultView.delegate = self
     }
 }
 

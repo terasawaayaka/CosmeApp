@@ -9,6 +9,7 @@
 import UIKit
 import PGFramework
 protocol ProductNameSearchResultViewDelegate: NSObjectProtocol{
+    func didSelectItemAt()
 }
 extension ProductNameSearchResultViewDelegate {
 }
@@ -39,12 +40,19 @@ extension ProductNameSearchResultView: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchResultCollectionViewCell", for: indexPath)as? SearchResultCollectionViewCell else {return UICollectionViewCell()}
         return cell
     }
-    
+}
+extension ProductNameSearchResultView: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let delegate = delegate {
+            delegate.didSelectItemAt()
+        }
+    }
 }
 // MARK: - method
 extension ProductNameSearchResultView {
     func setDelegate(){
         productNameCollectionView.dataSource = self
+        productNameCollectionView.delegate = self
     }
 }
 

@@ -43,6 +43,12 @@ extension SearchViewController: SearchTextViewDelegate {
     }
 }
 extension SearchViewController: SearchMainViewDelegate {
+    func didSelectItemAt() {
+        let reviewDetailViewController = ReviewDetailViewController()
+        navigationController?.pushViewController(reviewDetailViewController, animated: true)
+        animatorManager.navigationType = .slide_push
+    }
+    
     func touchedEyeShadowButton() {
         let categorySearchViewController = CategorySearchViewController()
         navigationController?.pushViewController(categorySearchViewController, animated: true)
@@ -142,6 +148,7 @@ extension SearchViewController {
         searchTextView.delegate = self
         mainView.delegate = self
     }
+    
     func hideKeybord() {
         let hideTap : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKyeoboardTap))
         hideTap.numberOfTapsRequired = 1
