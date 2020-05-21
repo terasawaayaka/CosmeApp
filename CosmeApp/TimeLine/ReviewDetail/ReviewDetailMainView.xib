@@ -10,6 +10,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReviewDetailMainView" customModule="CosmeApp" customModuleProvider="target">
             <connections>
                 <outlet property="iconView" destination="jCH-yG-hqv" id="19U-Pn-Ila"/>
+                <outlet property="imageScrollView" destination="Yw9-sS-72U" id="CAZ-rU-aQt"/>
+                <outlet property="pageControl" destination="859-xC-lF7" id="5xg-ub-WKj"/>
                 <outlet property="tableView" destination="vP6-f0-HO1" id="mnZ-k6-Ps1"/>
             </connections>
         </placeholder>

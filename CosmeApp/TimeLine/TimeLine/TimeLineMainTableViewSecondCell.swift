@@ -14,16 +14,20 @@ protocol TimeLineMainTableViewSecondCellDelegate: NSObjectProtocol{
 extension TimeLineMainTableViewSecondCellDelegate {
 }
 // MARK: - Property
-class TimeLineMainTableViewSecondCell: BaseTableViewCell {
+class TimeLineMainTableViewSecondCell: BaseTableViewCell, UIScrollViewDelegate {
     weak var delegate: TimeLineMainTableViewSecondCellDelegate? = nil
 
     @IBOutlet weak var iconView: UIButton!
+    @IBOutlet weak var imageScrollView: UIScrollView!
+    @IBOutlet weak var pageControl: UIPageControl!
 }
 // MARK: - Life cycle
 extension TimeLineMainTableViewSecondCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         setLayout()
+        setDelegate()
+        scrollViewDidEndDecelerating(imageScrollView)
     }
 }
 // MARK: - Protocol
@@ -33,5 +37,13 @@ extension TimeLineMainTableViewSecondCell {
 extension TimeLineMainTableViewSecondCell {
     func setLayout(){
         iconView.layer.cornerRadius = iconView.frame.width / 2
+    }
+    func setDelegate(){
+        imageScrollView.delegate = self
+    }
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+    if fmod(imageScrollView.contentOffset.x, imageScrollView.frame.maxX) == 0 {
+        pageControl.currentPage = Int(scrollView.contentOffset.x / imageScrollView.frame.maxX)
+        }
     }
 }
