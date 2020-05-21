@@ -11,12 +11,16 @@ import PGFramework
 // MARK: - Property
 class SignInViewController: BaseViewController {
     @IBOutlet weak var mainView: SingInMainView!
+    
+    //constrans
+    @IBOutlet weak var mainViewButtomMargen: NSLayoutConstraint!
 }
 // MARK: - Life cycle
 extension SignInViewController {
     override func loadView() {
         super.loadView()
         setDelegate()
+        hideKeybord()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +50,16 @@ extension SignInViewController {
     func setDelegate(){
         mainView.delegate = self
     }
+    func hideKeybord() {
+        let hideTap : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKyeoboardTap))
+        hideTap.numberOfTapsRequired = 1
+        self.view.isUserInteractionEnabled = true
+        self.view.addGestureRecognizer(hideTap)
+    }
+    @objc func hideKyeoboardTap(recognizer : UITapGestureRecognizer){
+        self.view.endEditing(true)
+    }
+    
 }
 
 
