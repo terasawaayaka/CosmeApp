@@ -29,7 +29,7 @@ extension MyProfileViewController {
 // MARK: - Protocol
 extension MyProfileViewController :MyProfileMainViewDelegate{
     func editProfileButton() {
-        let editProfileViewController = EditProfileViewController()
+        let editProfileViewController = YourProfileViewController()
         navigationController?.pushViewController(editProfileViewController, animated: true)
         animatorManager.navigationType = .slide_push
     }
