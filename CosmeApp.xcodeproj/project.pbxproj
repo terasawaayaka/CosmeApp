@@ -35,8 +35,8 @@
 		1F4B774124736EE400FC3B27 /* ActivityGoodTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B773F24736EE400FC3B27 /* ActivityGoodTableViewCell.xib */; };
 		1F4B7744247379A700FC3B27 /* ActivityCommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4B7742247379A700FC3B27 /* ActivityCommentTableViewCell.swift */; };
 		1F4B7745247379A700FC3B27 /* ActivityCommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B7743247379A700FC3B27 /* ActivityCommentTableViewCell.xib */; };
-		1F4B774C2473B5D600FC3B27 /* (null) in Sources */ = {isa = PBXBuildFile; };
-		1F4B774D2473B5D600FC3B27 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		1F4B774C2473B5D600FC3B27 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		1F4B774D2473B5D600FC3B27 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
 		3F18F05C24722C2B00957A2E /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F18F05A24722C2B00957A2E /* SignInViewController.swift */; };
 		3F18F05D24722C2B00957A2E /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F18F05B24722C2B00957A2E /* SignInViewController.xib */; };
 		3F18F06224722DC400957A2E /* SingInMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F18F06024722DC400957A2E /* SingInMainView.swift */; };
@@ -68,7 +68,6 @@
 		3FF1213924724716001E0554 /* SearchResultCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FF1213724724716001E0554 /* SearchResultCollectionViewCell.xib */; };
 		3FF1213D24724B18001E0554 /* SearchUserResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF1213B24724B18001E0554 /* SearchUserResultTableViewCell.swift */; };
 		3FF1213E24724B18001E0554 /* SearchUserResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FF1213C24724B18001E0554 /* SearchUserResultTableViewCell.xib */; };
-		401EBF302A1D6FB2881C82CB /* Pods_CosmeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 555A83F82F2AD4E67FFEB327 /* Pods_CosmeApp.framework */; };
 		5F098A202474BE5800D033F4 /* BookmarkCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F098A1E2474BE5800D033F4 /* BookmarkCollectionViewCell.swift */; };
 		5F098A212474BE5800D033F4 /* BookmarkCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F098A1F2474BE5800D033F4 /* BookmarkCollectionViewCell.xib */; };
 		5F098A242474C0CF00D033F4 /* GenreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F098A222474C0CF00D033F4 /* GenreCollectionViewCell.swift */; };
@@ -97,6 +96,7 @@
 		5FA88A642472316600B84ACE /* ScrollMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FA88A622472316600B84ACE /* ScrollMainView.xib */; };
 		5FA88A6F247272C000B84ACE /* GoodCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA88A6D247272C000B84ACE /* GoodCollectionViewCell.swift */; };
 		5FA88A70247272C000B84ACE /* GoodCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FA88A6E247272C000B84ACE /* GoodCollectionViewCell.xib */; };
+		6016174123F66658AB01FA2E /* Pods_CosmeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F9FC5609CFCED43F9A89ED8 /* Pods_CosmeApp.framework */; };
 		D1B8AFC42472627C007BC6AD /* CreateMakeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1B8AFC02472627B007BC6AD /* CreateMakeViewController.xib */; };
 		D1B8AFC52472627C007BC6AD /* CreateMakeMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1B8AFC12472627B007BC6AD /* CreateMakeMainView.xib */; };
 		D1B8AFC62472627C007BC6AD /* CreateMakeMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B8AFC22472627B007BC6AD /* CreateMakeMainView.swift */; };
@@ -132,6 +132,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0163EBAD7923538C532F43E7 /* Pods-CosmeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CosmeApp.debug.xcconfig"; path = "Target Support Files/Pods-CosmeApp/Pods-CosmeApp.debug.xcconfig"; sourceTree = "<group>"; };
 		1F49BB00247509940092AF96 /* ActivityFollowTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityFollowTableViewCell.swift; sourceTree = "<group>"; };
 		1F49BB01247509940092AF96 /* ActivityFollowTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityFollowTableViewCell.xib; sourceTree = "<group>"; };
 		1F4B76E5246D2AC100FC3B27 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -162,7 +163,7 @@
 		1F4B773F24736EE400FC3B27 /* ActivityGoodTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityGoodTableViewCell.xib; sourceTree = "<group>"; };
 		1F4B7742247379A700FC3B27 /* ActivityCommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCommentTableViewCell.swift; sourceTree = "<group>"; };
 		1F4B7743247379A700FC3B27 /* ActivityCommentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityCommentTableViewCell.xib; sourceTree = "<group>"; };
-		379F08E79BCE8E2224F8C9FD /* Pods-CosmeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CosmeApp.debug.xcconfig"; path = "Target Support Files/Pods-CosmeApp/Pods-CosmeApp.debug.xcconfig"; sourceTree = "<group>"; };
+		1F9FC5609CFCED43F9A89ED8 /* Pods_CosmeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CosmeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F18F05A24722C2B00957A2E /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		3F18F05B24722C2B00957A2E /* SignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
 		3F18F06024722DC400957A2E /* SingInMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingInMainView.swift; sourceTree = "<group>"; };
@@ -194,7 +195,7 @@
 		3FF1213724724716001E0554 /* SearchResultCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultCollectionViewCell.xib; sourceTree = "<group>"; };
 		3FF1213B24724B18001E0554 /* SearchUserResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUserResultTableViewCell.swift; sourceTree = "<group>"; };
 		3FF1213C24724B18001E0554 /* SearchUserResultTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchUserResultTableViewCell.xib; sourceTree = "<group>"; };
-		555A83F82F2AD4E67FFEB327 /* Pods_CosmeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CosmeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		50AAD213D38C52F89A7C4FBE /* Pods-CosmeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CosmeApp.release.xcconfig"; path = "Target Support Files/Pods-CosmeApp/Pods-CosmeApp.release.xcconfig"; sourceTree = "<group>"; };
 		5F098A1E2474BE5800D033F4 /* BookmarkCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkCollectionViewCell.swift; sourceTree = "<group>"; };
 		5F098A1F2474BE5800D033F4 /* BookmarkCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookmarkCollectionViewCell.xib; sourceTree = "<group>"; };
 		5F098A222474C0CF00D033F4 /* GenreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -223,7 +224,6 @@
 		5FA88A622472316600B84ACE /* ScrollMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScrollMainView.xib; sourceTree = "<group>"; };
 		5FA88A6D247272C000B84ACE /* GoodCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodCollectionViewCell.swift; sourceTree = "<group>"; };
 		5FA88A6E247272C000B84ACE /* GoodCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoodCollectionViewCell.xib; sourceTree = "<group>"; };
-		C895E2CE8E5B96B293B0E23B /* Pods-CosmeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CosmeApp.release.xcconfig"; path = "Target Support Files/Pods-CosmeApp/Pods-CosmeApp.release.xcconfig"; sourceTree = "<group>"; };
 		D1B8AFC02472627B007BC6AD /* CreateMakeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateMakeViewController.xib; sourceTree = "<group>"; };
 		D1B8AFC12472627B007BC6AD /* CreateMakeMainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateMakeMainView.xib; sourceTree = "<group>"; };
 		D1B8AFC22472627B007BC6AD /* CreateMakeMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateMakeMainView.swift; sourceTree = "<group>"; };
@@ -263,7 +263,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				401EBF302A1D6FB2881C82CB /* Pods_CosmeApp.framework in Frameworks */,
+				6016174123F66658AB01FA2E /* Pods_CosmeApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +276,7 @@
 				1F4B76E2246D2AC000FC3B27 /* CosmeApp */,
 				4360F9E917DBF64E840CB96A /* Pods */,
 				1F4B770B246D31C300FC3B27 /* CosmeApp.app */,
-				B3FB677933B81D37CF910AE4 /* Frameworks */,
+				1FE8A5A5C5415D20D22F4EF9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -398,6 +398,14 @@
 			path = Make;
 			sourceTree = "<group>";
 		};
+		1FE8A5A5C5415D20D22F4EF9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F9FC5609CFCED43F9A89ED8 /* Pods_CosmeApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3F18F05924722B8400957A2E /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
@@ -480,8 +488,8 @@
 		4360F9E917DBF64E840CB96A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				379F08E79BCE8E2224F8C9FD /* Pods-CosmeApp.debug.xcconfig */,
-				C895E2CE8E5B96B293B0E23B /* Pods-CosmeApp.release.xcconfig */,
+				0163EBAD7923538C532F43E7 /* Pods-CosmeApp.debug.xcconfig */,
+				50AAD213D38C52F89A7C4FBE /* Pods-CosmeApp.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -569,14 +577,6 @@
 			path = Tab;
 			sourceTree = "<group>";
 		};
-		B3FB677933B81D37CF910AE4 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				555A83F82F2AD4E67FFEB327 /* Pods_CosmeApp.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		FF3F38DB247796D10023FAAC /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -655,11 +655,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F4B76F4246D2AE100FC3B27 /* Build configuration list for PBXNativeTarget "CosmeApp" */;
 			buildPhases = (
-				291F1C78821FC3621B84494B /* [CP] Check Pods Manifest.lock */,
+				2A4AA6DA6BCD85E6CDC80E8E /* [CP] Check Pods Manifest.lock */,
 				1F4B76DC246D2AC000FC3B27 /* Sources */,
 				1F4B76DD246D2AC000FC3B27 /* Frameworks */,
 				1F4B76DE246D2AC000FC3B27 /* Resources */,
-				0D71E75037F69D744A3987CE /* [CP] Embed Pods Frameworks */,
+				6E5BA85B0DD2688A04EA2586 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -730,7 +730,7 @@
 				5F098A2E2474D1A800D033F4 /* YourTodayCollectionViewCell.xib in Resources */,
 				3F7C5D90247644ED007640E2 /* TagSearchResultMainView.xib in Resources */,
 				1F4B7706246D30D900FC3B27 /* MyProfileViewController.xib in Resources */,
-				1F4B774D2473B5D600FC3B27 /* (null) in Resources */,
+				1F4B774D2473B5D600FC3B27 /* BuildFile in Resources */,
 				1F49BB03247509940092AF96 /* ActivityFollowTableViewCell.xib in Resources */,
 				FF850A03246E29BC003E2ACF /* MakeDetailViewController.xib in Resources */,
 				1F4B76EB246D2AC100FC3B27 /* Main.storyboard in Resources */,
@@ -775,24 +775,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0D71E75037F69D744A3987CE /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CosmeApp/Pods-CosmeApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CosmeApp/Pods-CosmeApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CosmeApp/Pods-CosmeApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		291F1C78821FC3621B84494B /* [CP] Check Pods Manifest.lock */ = {
+		2A4AA6DA6BCD85E6CDC80E8E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -814,6 +797,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		6E5BA85B0DD2688A04EA2586 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CosmeApp/Pods-CosmeApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CosmeApp/Pods-CosmeApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CosmeApp/Pods-CosmeApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -828,7 +828,7 @@
 				3F8CA3E92476215C000EA5AF /* CategorySearchViewController.swift in Sources */,
 				FF8509FE246E297C003E2ACF /* ReviewDetailMainView.swift in Sources */,
 				5F098A362475000B00D033F4 /* YourPostCollectionViewCell.swift in Sources */,
-				1F4B774C2473B5D600FC3B27 /* (null) in Sources */,
+				1F4B774C2473B5D600FC3B27 /* BuildFile in Sources */,
 				FF8509F1246E2870003E2ACF /* TimeLineMainView.swift in Sources */,
 				FF850A12246E2B3C003E2ACF /* EditMakeViewController.swift in Sources */,
 				1F4B7712246D329300FC3B27 /* SearchViewController.swift in Sources */,
@@ -1022,7 +1022,7 @@
 		};
 		1F4B76F5246D2AE100FC3B27 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 379F08E79BCE8E2224F8C9FD /* Pods-CosmeApp.debug.xcconfig */;
+			baseConfigurationReference = 0163EBAD7923538C532F43E7 /* Pods-CosmeApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -1041,7 +1041,7 @@
 		};
 		1F4B76F6246D2AE100FC3B27 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C895E2CE8E5B96B293B0E23B /* Pods-CosmeApp.release.xcconfig */;
+			baseConfigurationReference = 50AAD213D38C52F89A7C4FBE /* Pods-CosmeApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

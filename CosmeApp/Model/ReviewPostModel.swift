@@ -1,5 +1,5 @@
 //
-//  ReviewPostModel.swift
+//  ReviewReviewPostModel.swift
 //  CosmeApp
 //
 //  Created by ASW-研修１ on 2020/05/22.
@@ -8,7 +8,8 @@
 
 import UIKit
 import PGFramework
-import Firebase/Database
+import FirebaseDatabase
+import FirebaseStorage
 
 class ReviewPostModel{
     fileprivate static let PATH: String = "post"
@@ -21,9 +22,9 @@ class ReviewPostModel{
     var post_user_icon: String?
 }
 
-extension PostModel{
-    static func parse(data: [String:Any]) -> PostModel {
-        let model:PostModel = PostModel()
+extension ReviewPostModel{
+    static func parse(data: [String:Any]) -> ReviewPostModel {
+        let model:ReviewPostModel = ReviewPostModel()
         if let id = data["id"]as? String{model.id = id}
         if let post_user_id = data["post_user_id"]as? String{model.post_user_id = post_user_id}
         if let discription = data["discription"]as? String{model.discription = discription}
@@ -32,7 +33,7 @@ extension PostModel{
     }
     
     
-    static func setParameter(request: PostModel) -> [String:Any] {
+    static func setParameter(request: ReviewPostModel) -> [String:Any] {
         var parameter:[String:Any] = [:]
         parameter["id"] = request.id
         parameter["post_user_id"] = request.post_user_id
@@ -44,8 +45,8 @@ extension PostModel{
 }
 
 //MARK: -Create
-extension PostModel{
-    static func create(request:PostModel, images:[UIImage], success:@escaping () -> Void) {
+extension ReviewPostModel{
+    static func create(request:ReviewPostModel, images:[UIImage], success:@escaping () -> Void) {
         let dbRef = Database.database().reference().child(PATH).childByAutoId()
         if let key = dbRef.key{
             request.id = key
@@ -63,15 +64,15 @@ extension PostModel{
 
 
 //MARK: -Read
-extension PostModel{
-    static func reads(success:@escaping ([PostModel]) -> Void) {
+extension ReviewPostModel{
+    static func reads(success:@escaping ([ReviewPostModel]) -> Void) {
         let dbRef = Database.database().reference().child(PATH)
         dbRef.observe(.value, with: {snapshot in
-            var models: [PostModel] = [PostModel]()
+            var models: [ReviewPostModel] = [ReviewPostModel]()
             for item in (snapshot.children){
                 let snapshot = item as! DataSnapshot
                 let data = snapshot.value as! [String: Any]
-                let model: PostModel = parse(data:data)
+                let model: ReviewPostModel = parse(data:data)
                 model.id = snapshot.key
                 models.append(model)
             }
@@ -79,22 +80,22 @@ extension PostModel{
         })
     }
     
-    static func readAt(id:String, success:@escaping (PostModel) -> Void, failure:@escaping () -> Void){
+    static func readAt(id:String, success:@escaping (ReviewPostModel) -> Void, failure:@escaping () -> Void){
         let dbRef = Database.database().reference().child(PATH).child(id)
         dbRef.observe(.value) {(snapshot)in
             guard let data = snapshot.value as? [String:Any]else{
                 failure()
                 return
             }
-            let model:PostModel = parse(data: data)
+            let model:ReviewPostModel = parse(data: data)
             success(model)
         }
     }
 }
 
 //MARK: -Update
-extension PostModel{
-    static func update(request:PostModel,images:[UIImage],success:@escaping() -> Void){
+extension ReviewPostModel{
+    static func update(request:ReviewPostModel,images:[UIImage],success:@escaping() -> Void){
             let id = request.id
             let dbRef = Database.database().reference().child(PATH).child(id)
         var parameter = setParameter(request: request)
@@ -116,7 +117,7 @@ extension PostModel{
 
 
 //MARK: -Delete
-extension PostModel{
+extension ReviewPostModel{
     static func delete (id:String, success:@escaping () -> Void) {
         let dbRef = Database.database().reference().child(PATH).child(id)
         dbRef.removeValue{(error,dbRef)in
@@ -129,7 +130,7 @@ extension PostModel{
     }
 }
 
-extension PostModel{
+extension ReviewPostModel{
     static func uploadPhoto(photoName: String, image: [UIImage]?, success: @escaping ([String]) -> Void, failure: @escaping () -> Void) -> Void{
         let group = DispatchGroup()
         let queue = DispatchQueue(label: ".photo")
