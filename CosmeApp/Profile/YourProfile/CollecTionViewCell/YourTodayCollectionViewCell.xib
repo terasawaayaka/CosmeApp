@@ -37,7 +37,7 @@
             <connections>
                 <outlet property="roundView" destination="uBr-bf-Y1f" id="KTy-3w-IlH"/>
             </connections>
-            <point key="canvasLocation" x="172.46376811594203" y="145.98214285714286"/>
+            <point key="canvasLocation" x="169.56521739130437" y="145.98214285714286"/>
         </collectionViewCell>
     </objects>
 </document>

@@ -28,7 +28,9 @@ extension ScrollMainView {
         super.awakeFromNib()
         setDelegate()
         
-      //  collectionViewFlowLayout.estimatedItemSize = CGSize(width: goodCollectionView.frame.height, height: goodCollectionView.frame.width)
+        
+        //collectionViewFlowLayout.estimatedItemSize = CGSize(width: goodMainView.frame.width, height: goodMainView.frame.height)
+        
         loadCollectionViewCellFromXib(collectionView: goodCollectionView, cellName: "GoodCollectionViewCell")
         loadCollectionViewCellFromXib(collectionView: goodCollectionView, cellName: "BookmarkCollectionViewCell")
         loadCollectionViewCellFromXib(collectionView: goodCollectionView, cellName: "GenreCollectionViewCell")
