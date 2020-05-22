@@ -9,6 +9,7 @@
 import UIKit
 
 import PGFramework
+import FirebaseAuth
 // MARK: - Property
 class TimeLineViewController: BaseViewController {
     @IBOutlet weak var mainView: TimeLineMainView!
@@ -24,6 +25,10 @@ extension TimeLineViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        if Auth.auth().currentUser == nil{
+            let signUpViewController = SignUpViewController()
+            navigationController?.pushViewController(signUpViewController, animated: false)
+        }
     }
 }
 // MARK: - Protocol
