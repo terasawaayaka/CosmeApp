@@ -63,6 +63,8 @@
 		3F966548246E56040083EBC2 /* BrandSearchResultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F966546246E56040083EBC2 /* BrandSearchResultView.xib */; };
 		3FA0F795246E6DCA00D8DBA2 /* SearchResultMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA0F793246E6DCA00D8DBA2 /* SearchResultMainView.swift */; };
 		3FA0F796246E6DCA00D8DBA2 /* SearchResultMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FA0F794246E6DCA00D8DBA2 /* SearchResultMainView.xib */; };
+		3FBC60CE2477B70D007F78F2 /* SearchUserSelectResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBC60CC2477B70D007F78F2 /* SearchUserSelectResultViewController.swift */; };
+		3FBC60CF2477B70D007F78F2 /* SearchUserSelectResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FBC60CD2477B70D007F78F2 /* SearchUserSelectResultViewController.xib */; };
 		3FC6EE862473BDF0008875B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FC6EE852473BDF0008875B7 /* Assets.xcassets */; };
 		3FD7CE552477AB4D00B31D8A /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7CE542477AB4D00B31D8A /* AuthModel.swift */; };
 		3FF1213824724716001E0554 /* SearchResultCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF1213624724716001E0554 /* SearchResultCollectionViewCell.swift */; };
@@ -192,6 +194,8 @@
 		3F966546246E56040083EBC2 /* BrandSearchResultView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BrandSearchResultView.xib; sourceTree = "<group>"; };
 		3FA0F793246E6DCA00D8DBA2 /* SearchResultMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultMainView.swift; sourceTree = "<group>"; };
 		3FA0F794246E6DCA00D8DBA2 /* SearchResultMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultMainView.xib; sourceTree = "<group>"; };
+		3FBC60CC2477B70D007F78F2 /* SearchUserSelectResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUserSelectResultViewController.swift; sourceTree = "<group>"; };
+		3FBC60CD2477B70D007F78F2 /* SearchUserSelectResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchUserSelectResultViewController.xib; sourceTree = "<group>"; };
 		3FC6EE852473BDF0008875B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FD7CE542477AB4D00B31D8A /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
 		3FF1213624724716001E0554 /* SearchResultCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -455,6 +459,7 @@
 		3F966524246E53B40083EBC2 /* Search result */ = {
 			isa = PBXGroup;
 			children = (
+				3FBC60CB2477B6EB007F78F2 /* SearchUserSelect */,
 				3FF12135247246C9001E0554 /* SearchResultCell */,
 				3FA0F793246E6DCA00D8DBA2 /* SearchResultMainView.swift */,
 				3FA0F794246E6DCA00D8DBA2 /* SearchResultMainView.xib */,
@@ -469,6 +474,15 @@
 				3FF1213A24724AE0001E0554 /* UserResultCell */,
 			);
 			path = "Search result";
+			sourceTree = "<group>";
+		};
+		3FBC60CB2477B6EB007F78F2 /* SearchUserSelect */ = {
+			isa = PBXGroup;
+			children = (
+				3FBC60CC2477B70D007F78F2 /* SearchUserSelectResultViewController.swift */,
+				3FBC60CD2477B70D007F78F2 /* SearchUserSelectResultViewController.xib */,
+			);
+			path = SearchUserSelect;
 			sourceTree = "<group>";
 		};
 		3FF12135247246C9001E0554 /* SearchResultCell */ = {
@@ -740,6 +754,7 @@
 				1F49BB03247509940092AF96 /* ActivityFollowTableViewCell.xib in Resources */,
 				FF850A03246E29BC003E2ACF /* MakeDetailViewController.xib in Resources */,
 				1F4B76EB246D2AC100FC3B27 /* Main.storyboard in Resources */,
+				3FBC60CF2477B70D007F78F2 /* SearchUserSelectResultViewController.xib in Resources */,
 				5FA88A3E246E3FA300B84ACE /* YourProfileViewController.xib in Resources */,
 				FF850A17246E2BC2003E2ACF /* EditMakeMainView.xib in Resources */,
 				1F4B770A246D310F00FC3B27 /* TimeLineViewController.xib in Resources */,
@@ -873,6 +888,7 @@
 				3F6648ED2472280300D4D950 /* SignUpViewController.swift in Sources */,
 				FF8509FA246E294F003E2ACF /* ReviewDetailViewController.swift in Sources */,
 				FF850A06246E29F4003E2ACF /* MakeDetailMainView.swift in Sources */,
+				3FBC60CE2477B70D007F78F2 /* SearchUserSelectResultViewController.swift in Sources */,
 				FF850A0A246E2AD3003E2ACF /* EditReviewViewController.swift in Sources */,
 				3F966547246E56040083EBC2 /* BrandSearchResultView.swift in Sources */,
 				1F4B76E6246D2AC100FC3B27 /* SceneDelegate.swift in Sources */,

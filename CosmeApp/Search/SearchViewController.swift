@@ -43,8 +43,8 @@ extension SearchViewController: SearchTextViewDelegate {
 }
 extension SearchViewController: SearchMainViewDelegate {
     func touchedUserCellButton() {
-        let yourProfileViewController = YourProfileViewController()
-        navigationController?.pushViewController(yourProfileViewController, animated: true)
+        let searchUserResultViewController = SearchUserSelectResultViewController()
+        navigationController?.pushViewController(searchUserResultViewController, animated: true)
         animatorManager.navigationType = .slide_push
     }
     
