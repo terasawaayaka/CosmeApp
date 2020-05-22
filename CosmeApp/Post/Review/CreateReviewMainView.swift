@@ -10,7 +10,10 @@ import UIKit
 
 import PGFramework
 protocol CreateReviewMainViewDelegate: NSObjectProtocol{
-    func touchedAddImageButton()
+    func touchedAddFirstImageButton()
+    func touchedAddSecondImageButton()
+    func touchedAddThirdImageButton()
+    func touchedAddFourthImageButton()
     func firstStarButton()
     func secondStarButton()
     func thirdStarButton()
@@ -23,14 +26,31 @@ extension CreateReviewMainViewDelegate {
 class CreateReviewMainView: BaseView {
     weak var delegate: CreateReviewMainViewDelegate? = nil
     
-    @IBOutlet weak var itemTextField: UITextField!
-    @IBOutlet weak var categoryTextField: UITextField!
-    @IBOutlet weak var itemImageView: UIImageView!
-    @IBAction func touchedAddImageButton(_ sender: UIButton) {
+    @IBOutlet weak var itemFirstImageVIew: UIImageView! //左上
+    @IBOutlet weak var itemSecondImageView: UIImageView! //右上
+    @IBOutlet weak var itemThirdImageView: UIImageView! //左下
+    @IBOutlet weak var itemFourthImageView: UIImageView! //右下
+    @IBAction func touchedAddFirstImageButton(_ sender: UIButton) {
         if let delegate = delegate {
-            delegate.touchedAddImageButton()
+            delegate.touchedAddFirstImageButton()
         }
     }
+    @IBAction func touchedAddImageSecondButton(_ sender: UIButton) {
+        if let delegate = delegate {
+            delegate.touchedAddSecondImageButton()
+        }
+    }
+    @IBAction func touchedAddThirdImageButton(_ sender: UIButton) {
+        if let delegate = delegate {
+            delegate.touchedAddThirdImageButton()
+        }
+    }
+    @IBAction func touchedAddFourthImageButton(_ sender: UIButton) {
+        if let delegate = delegate {
+            delegate.touchedAddFourthImageButton()
+        }
+    }
+   
     @IBAction func firstStarButton(_ sender: UIButton) {
         if let delegate = delegate {
             delegate.firstStarButton()
@@ -56,9 +76,12 @@ class CreateReviewMainView: BaseView {
             delegate.fifthStarButton()
         }
     }
-    @IBOutlet weak var reviewTextView: UITextView!
     
-    @IBOutlet weak var tagTextField: UITextField!
+    @IBOutlet weak var itemTextView: UITextView!
+    @IBOutlet weak var pickerLabel: UILabel!
+    @IBOutlet weak var pickerView: UIPickerView!
+    @IBOutlet weak var reviewTextView: UITextView!
+    @IBOutlet weak var tagTextView: UITextView!
 }
 // MARK: - Life cycle
 extension CreateReviewMainView {

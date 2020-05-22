@@ -23,18 +23,21 @@ class CreateMakeMainView: BaseView {
             delegate.touchedAddImageButton()
         }
     }
-    @IBOutlet weak var foundationTextField: UITextField! //ファンデーション
-    @IBOutlet weak var highlightTextField: UITextField! //ハイライト
-    @IBOutlet weak var shadingTextField: UITextField! //シェーディング
-    @IBOutlet weak var eyeshadowTextField: UITextField! //アイシャドウ
-    @IBOutlet weak var eyelinerTextField: UITextField! //アイライナー
-    @IBOutlet weak var mascaraTextField: UITextField! //マスカラ
-    @IBOutlet weak var colorContactTextField: UITextField! //カラコン
-    @IBOutlet weak var eyebrowTextField: UITextField! //アイブロウ
-    @IBOutlet weak var cheekTextField: UITextField! //チーク
-    @IBOutlet weak var lipTextField: UITextField! //リップ
     
-    @IBOutlet weak var processTextField: UITextView! //プロセス
+    @IBOutlet weak var baseMakeTextView: UITextView! //ベースメイク
+    @IBOutlet weak var highlightTextView: UITextView! //ハイライト
+    @IBOutlet weak var shadingTextView: UITextView! //シェーディング
+    @IBOutlet weak var eyeshadowTextView: UITextView! //アイシャドウ
+    @IBOutlet weak var eyelinerTextView: UITextView! //アイライナー
+    @IBOutlet weak var mascaraTextView: UITextView! //マスカラ
+    @IBOutlet weak var colorContactTextView: UITextView! //カラコン
+    @IBOutlet weak var eyebrowTextView: UITextView! //アイブロウ
+    @IBOutlet weak var cheekTextView: UITextView! //チーク
+    @IBOutlet weak var lipTextView: UITextView! //リップ
+    @IBOutlet weak var skinCareTextView: UITextView! //スキンケア
+    @IBOutlet weak var hairCareTextView: UITextView! //ヘアケア
+    
+    @IBOutlet weak var processTextView: UITextView! //プロセス
 }
 // MARK: - Life cycle
 extension CreateMakeMainView {
