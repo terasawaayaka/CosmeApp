@@ -18,6 +18,7 @@ extension SignUpViewController {
         super.loadView()
         setDelegate()
         hideKeybord()
+        tabBarController?.tabBar.isHidden = true
     }
     override func viewDidLoad() {
         super.viewDidLoad()
