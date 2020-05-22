@@ -19,6 +19,7 @@ extension TimeLineViewController {
     override func loadView() {
         super.loadView()
         setDelegate()
+        tabBarController?.tabBar.isHidden = false
     }
     override func viewDidLoad() {
         super.viewDidLoad()
