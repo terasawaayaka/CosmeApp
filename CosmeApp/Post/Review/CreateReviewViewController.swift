@@ -15,6 +15,7 @@ class CreateReviewViewController: BaseViewController {
     @IBOutlet weak var mainView: CreateReviewMainView!
     //Constrains
     @IBOutlet weak var mainViewBottomMargin: NSLayoutConstraint!
+
     
     let items = ["ベースメイク","ハイライト","シェーディング","アイシャドウ","アイライナー","マスカラ","カラコン","アイブロウ","チーク","リップ","スキンケア","ヘアケア","その他"]
 }
@@ -34,6 +35,12 @@ extension CreateReviewViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[.originalImage] as? UIImage {
+            mainView.itemFirstImageVIew.image = image
+            picker.dismiss(animated: true, completion: nil)
+        }
+    }
 }
 // MARK: - Protocol
 extension CreateReviewViewController:HeaderViewDelegate {
@@ -42,9 +49,20 @@ extension CreateReviewViewController:HeaderViewDelegate {
         animatorManager.navigationType = .slide_pop
     }
     func touchedRightButton(_ sender: UIButton) {
-        let timeLineViewController = TimeLineViewController()
-        navigationController?.pushViewController(timeLineViewController, animated: true)
-        animatorManager.navigationType = .pop
+        let reviewPostModel: ReviewPostModel = ReviewPostModel()
+        if let text = mainView.itemTextView.text {
+            reviewPostModel.discription = text
+        }
+        var images:[UIImage] = []
+        if let image = mainView.itemFirstImageVIew.image {
+            images.append(image)
+        }
+        //todo imageつなぐ
+        ReviewPostModel.create(request: reviewPostModel, images: images) {
+            let timeLineViewController = TimeLineViewController()
+            self.navigationController?.pushViewController(timeLineViewController, animated: true)
+            self.animatorManager.navigationType = .pop
+        }
     }
 }
 
@@ -69,7 +87,7 @@ extension CreateReviewViewController:UIPickerViewDelegate {
 
 extension CreateReviewViewController:CreateReviewMainViewDelegate {
     func touchedAddFirstImageButton() {
-        //todo
+        useCamera()
     }
     func touchedAddSecondImageButton() {
         //todo
