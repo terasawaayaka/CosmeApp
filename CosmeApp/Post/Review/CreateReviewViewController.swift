@@ -14,7 +14,9 @@ class CreateReviewViewController: BaseViewController {
     @IBOutlet weak var headerView: HeaderView!
     @IBOutlet weak var mainView: CreateReviewMainView!
     //Constrains
-    @IBOutlet weak var mainViewBottomMergin: NSLayoutConstraint!
+    @IBOutlet weak var mainViewBottomMargin: NSLayoutConstraint!
+    
+    let items = ["ベースメイク","ハイライト","シェーディング","アイシャドウ","アイライナー","マスカラ","カラコン","アイブロウ","チーク","リップ","スキンケア","ヘアケア","その他"]
 }
 // MARK: - Life cycle
 extension CreateReviewViewController {
@@ -45,8 +47,37 @@ extension CreateReviewViewController:HeaderViewDelegate {
         animatorManager.navigationType = .pop
     }
 }
+
+extension CreateReviewViewController:UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return items.count
+    }
+}
+extension CreateReviewViewController:UIPickerViewDelegate {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return items[row]
+    }
+    //行が選択された時
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        mainView.pickerLabel.text = items[row]
+    }
+}
+
 extension CreateReviewViewController:CreateReviewMainViewDelegate {
-    func touchedAddImageButton() {
+    func touchedAddFirstImageButton() {
+        //todo
+    }
+    func touchedAddSecondImageButton() {
+        //todo
+    }
+    func touchedAddThirdImageButton() {
+        //todo
+    }
+    func touchedAddFourthImageButton() {
         //todo
     }
     func firstStarButton() {
@@ -78,6 +109,8 @@ extension CreateReviewViewController {
     func setDelegate() {
         headerView.delegate = self
         mainView.delegate = self
+        mainView.pickerView.dataSource = self
+        mainView.pickerView.delegate = self
     }
     //キーボードとテキストフィールド以外をタップでキーボードを隠す
     func hideKeybord() {
@@ -89,8 +122,7 @@ extension CreateReviewViewController {
     @objc func hideKyeoboardTap(recognizer : UITapGestureRecognizer){
         self.view.endEditing(true)
     }
-    
-    
+ 
     @objc func showKeyboard(notification: Notification) {
         let userInfo = notification.userInfo!
         let keyboardRect = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
@@ -98,11 +130,11 @@ extension CreateReviewViewController {
         if let tabBarController = tabBarController {
             tabHeight = tabBarController.tabBar.frame.height
         }
-        mainViewBottomMergin.constant = keyboardRect.height - tabHeight
+        mainViewBottomMargin.constant = keyboardRect.height - tabHeight
         updateView()
     }
     @objc func hideKeyboard(notification: Notification) {
-        mainViewBottomMergin.constant = 0
+        mainViewBottomMargin.constant = 0
         updateView()
     }
     func updateView() {
