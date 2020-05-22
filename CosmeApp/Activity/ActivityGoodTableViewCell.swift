@@ -37,6 +37,7 @@ class ActivityGoodTableViewCell: BaseTableViewCell {
 extension ActivityGoodTableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
+        setLayout()
     }
 }
 // MARK: - Protocol
@@ -45,4 +46,7 @@ extension ActivityGoodTableViewCell {
 
 // MARK: - method
 extension ActivityGoodTableViewCell {
+    func setLayout() {
+        iconImageView.layer.cornerRadius = iconImageView.frame.height / 2
+    }
 }

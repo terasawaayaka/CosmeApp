@@ -38,14 +38,14 @@
                                 <rect key="frame" x="9" y="9" width="60" height="59"/>
                                 <state key="normal" title="+"/>
                                 <connections>
-                                    <action selector="touchedProfilePageButton:" destination="K2T-EE-7HC" eventType="touchUpInside" id="0a4-0B-7we"/>
+                                    <action selector="touchedSecondProfilePageButton:" destination="K2T-EE-7HC" eventType="touchUpInside" id="9b5-Hg-TeU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p6T-Fw-EdM">
                                 <rect key="frame" x="344" y="10" width="60" height="59"/>
                                 <state key="normal" title="+"/>
                                 <connections>
-                                    <action selector="touchedPostPageButton:" destination="K2T-EE-7HC" eventType="touchUpInside" id="8hi-wz-JgJ"/>
+                                    <action selector="touchedSecondPostPageButton:" destination="K2T-EE-7HC" eventType="touchUpInside" id="lI9-gH-WX6"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あなたの投稿にコメントしました" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJc-hN-k4t">
@@ -88,8 +88,8 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="iconImageView" destination="U0G-Ed-eEz" id="gmR-ts-oSw"/>
-                <outlet property="postImageView" destination="Elo-FT-uds" id="GWp-fe-u2m"/>
+                <outlet property="secondIconImageView" destination="U0G-Ed-eEz" id="tKF-0Y-SSQ"/>
+                <outlet property="secondPostImageView" destination="Elo-FT-uds" id="TzQ-Tq-Ya4"/>
             </connections>
             <point key="canvasLocation" x="34.782608695652179" y="2.6785714285714284"/>
         </tableViewCell>

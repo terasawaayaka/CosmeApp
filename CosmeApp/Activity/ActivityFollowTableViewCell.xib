@@ -6,7 +6,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ActivityFollowTableViewCell" customModule="CosmeApp" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="X5C-Ay-yB2" customClass="ActivityFollowTableViewCell" customModule="CosmeApp" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
@@ -41,7 +41,7 @@
                         <rect key="frame" x="9" y="10" width="60" height="60"/>
                         <state key="normal" title="+"/>
                         <connections>
-                            <action selector="touchedProfilePageButton:" destination="-1" eventType="touchUpInside" id="2FV-r3-K9U"/>
+                            <action selector="touchedThirdProfilePageButton:" destination="X5C-Ay-yB2" eventType="touchUpInside" id="S96-61-XjY"/>
                         </connections>
                     </button>
                 </subviews>
@@ -63,6 +63,9 @@
                     <constraint firstItem="VCO-xo-6qP" firstAttribute="top" secondItem="AhU-H9-rEu" secondAttribute="topMargin" constant="-22" id="ww9-Fa-HRU"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="thirdIconImageView" destination="uNj-Xw-TOq" id="AVo-y5-QPx"/>
+            </connections>
             <point key="canvasLocation" x="256.52173913043481" y="108.48214285714285"/>
         </tableViewCell>
     </objects>
