@@ -14,11 +14,7 @@ import FirebaseDatabase
 class CommentPostModel{
     fileprivate static let PATH: String = "post"
     var id  :String = String()
-    var title: String = String()
-    var category: String = String()
-    var review: String = String()
-    var tag: String = String()
-    var image_paths: [String] = [String]()
+    var description: String = String()
     //ユーザーの情報
     var post_user_name: String = String()
     var post_user_id: String = String()
@@ -30,11 +26,7 @@ extension CommentPostModel{
         let model:CommentPostModel = CommentPostModel()
         if let id = data["id"]as? String{model.id = id}
         if let post_user_id = data["post_user_id"]as? String{model.post_user_id = post_user_id}
-        if let review = data["review"]as? String{model.review = review}
-        if let image_paths = data["image_paths"]as? [String]{model.image_paths = image_paths}
-        if let title = data["title"]as? String{model.title = title}
-        if let category = data["category"]as? String{model.category = category}
-        if let tag = data["tag"]as? String{model.tag = tag}
+        if let description = data["description"]as? String{model.description = description}
         return model
     }
     
@@ -42,12 +34,8 @@ extension CommentPostModel{
     static func setParameter(request: CommentPostModel) -> [String:Any] {
         var parameter:[String:Any] = [:]
         parameter["id"] = request.id
+        parameter["description"] = request.description
         parameter["post_user_id"] = request.post_user_id
-        parameter["review"] = request.review
-        parameter["title"] = request.title
-        parameter["category"] = request.category
-        parameter["tag"] = request.tag
-        parameter["image_paths"] = request.image_paths
         return parameter
     }
     

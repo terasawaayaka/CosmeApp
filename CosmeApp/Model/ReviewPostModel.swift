@@ -31,10 +31,10 @@ extension ReviewPostModel{
         if let id = data["id"]as? String{model.id = id}
         if let post_user_id = data["post_user_id"]as? String{model.post_user_id = post_user_id}
         if let review = data["review"]as? String{model.review = review}
-        if let image_paths = data["image_paths"]as? [String]{model.image_paths = image_paths}
         if let title = data["title"]as? String{model.title = title}
         if let category = data["category"]as? String{model.category = category}
         if let tag = data["tag"]as? String{model.tag = tag}
+        if let image_paths = data["image_paths"]as? [String]{model.image_paths = image_paths}
         return model
     }
     
