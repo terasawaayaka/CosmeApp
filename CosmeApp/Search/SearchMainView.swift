@@ -28,6 +28,11 @@ protocol SearchMainViewDelegate: NSObjectProtocol{
     func touchedLipButton()
     func touchedHairCareButton()
     
+    func touchedCellButton()
+    func touchedBrandCellButton()
+    func touchedProductNAmeCellButton()
+    func touchedUserCellButton()
+    
 }
 extension SearchMainViewDelegate {
 }
@@ -148,7 +153,29 @@ extension SearchMainView {
     }
 }
 // MARK: - Protocol
-extension SearchMainView{
+extension SearchMainView: TagSearchResultMainViewDelegate{
+    func touchedCellButton() {
+        if let delegate = delegate {
+            delegate.touchedCellButton()}
+    }
+}
+extension SearchMainView: BrandSearchResultViewDelegate {
+    func touchedBrandCellButton() {
+        if let delegate = delegate {
+            delegate.touchedCellButton()}
+    }
+}
+extension SearchMainView: ProductNameSearchResultViewDelegate {
+    func touchedProductNAmeCellButton() {
+        if let delegate = delegate {
+            delegate.touchedProductNAmeCellButton()}
+    }
+}
+extension SearchMainView: UserSearchResultMainViewDelegate {
+    func touchedUserCellButton() {
+        if let delegate = delegate{
+            delegate.touchedUserCellButton()}
+    }
 }
 // MARK: - method
 extension SearchMainView {
@@ -177,6 +204,10 @@ extension SearchMainView {
     }
     func setDelegate(){
         searchResultMainView.delegate = self
+        tagResultView.delegate = self
+        brandResultView.delegate = self
+        productNameResultView.delegate = self
+        userResultView.delegate = self
     }
 }
 

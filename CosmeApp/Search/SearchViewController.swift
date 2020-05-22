@@ -38,11 +38,35 @@ extension SearchViewController: SearchTextViewDelegate {
         mainView.userResultView.isHidden = true
         mainView.productNameResultView.isHidden = true
         mainView.brandResultView.isHidden = true
-        
-        //最初はタグの検索結果が出てくる
+
     }
 }
 extension SearchViewController: SearchMainViewDelegate {
+    func touchedUserCellButton() {
+        let yourProfileViewController = YourProfileViewController()
+        navigationController?.pushViewController(yourProfileViewController, animated: true)
+        animatorManager.navigationType = .slide_push
+    }
+    
+    func touchedProductNAmeCellButton() {
+        let reviewDatailViewController = ReviewDetailViewController()
+        navigationController?.pushViewController(reviewDatailViewController, animated: true)
+        animatorManager.navigationType = .slide_push
+    }
+    
+    func touchedBrandCellButton() {
+        let reviewDatailViewController = ReviewDetailViewController()
+        navigationController?.pushViewController(reviewDatailViewController, animated: true)
+        animatorManager.navigationType = .slide_push
+    }
+    
+    func touchedCellButton() {
+        let reviewDatailViewController = ReviewDetailViewController()
+        navigationController?.pushViewController(reviewDatailViewController, animated: true)
+        animatorManager.navigationType = .slide_push
+    }
+    
+   
     func touchedEyeShadowButton() {
         let categorySearchViewController = CategorySearchViewController()
         navigationController?.pushViewController(categorySearchViewController, animated: true)
@@ -142,6 +166,7 @@ extension SearchViewController {
         searchTextView.delegate = self
         mainView.delegate = self
     }
+    
     func hideKeybord() {
         let hideTap : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKyeoboardTap))
         hideTap.numberOfTapsRequired = 1

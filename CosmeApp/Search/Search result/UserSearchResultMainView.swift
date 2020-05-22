@@ -9,6 +9,7 @@
 import UIKit
 import PGFramework
 protocol UserSearchResultMainViewDelegate: NSObjectProtocol{
+    func touchedUserCellButton()
 }
 extension UserSearchResultMainViewDelegate {
 }
@@ -34,9 +35,15 @@ extension UserSearchResultMainView: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "SearchUserResultTableViewCell", for: indexPath)as? SearchUserResultTableViewCell else {return UITableViewCell()}
+        cell.delegate = self
         return cell
     }
-    
+}
+extension UserSearchResultMainView: SearchUserResultTableViewCellDelegate {
+    func touchedUserButton() {
+        if let delegate = delegate {
+            delegate.touchedUserCellButton()}
+    }
 }
 // MARK: - method
 extension UserSearchResultMainView {

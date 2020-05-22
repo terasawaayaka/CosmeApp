@@ -45,6 +45,12 @@
 		3F6648EE2472280300D4D950 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F6648EC2472280300D4D950 /* SignUpViewController.xib */; };
 		3F6648F22472287900D4D950 /* SignUpMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6648F02472287900D4D950 /* SignUpMainView.swift */; };
 		3F6648F32472287900D4D950 /* SignUpMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F6648F12472287900D4D950 /* SignUpMainView.xib */; };
+		3F7C5D8C247644D7007640E2 /* ProductNameSearchResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C5D8B247644D7007640E2 /* ProductNameSearchResultView.swift */; };
+		3F7C5D8E247644E0007640E2 /* ProductNameSearchResultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F7C5D8D247644E0007640E2 /* ProductNameSearchResultView.xib */; };
+		3F7C5D90247644ED007640E2 /* TagSearchResultMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F7C5D8F247644ED007640E2 /* TagSearchResultMainView.xib */; };
+		3F7C5D92247644F5007640E2 /* TagSearchResultMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C5D91247644F5007640E2 /* TagSearchResultMainView.swift */; };
+		3F7C5D9524764510007640E2 /* UserSearchResultMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F7C5D9324764510007640E2 /* UserSearchResultMainView.xib */; };
+		3F7C5D9624764510007640E2 /* UserSearchResultMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C5D9424764510007640E2 /* UserSearchResultMainView.swift */; };
 		3F8CA3E92476215C000EA5AF /* CategorySearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8CA3E72476215C000EA5AF /* CategorySearchViewController.swift */; };
 		3F8CA3EA2476215C000EA5AF /* CategorySearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F8CA3E82476215C000EA5AF /* CategorySearchViewController.xib */; };
 		3F8CA3ED24762185000EA5AF /* CategorySearchMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8CA3EB24762185000EA5AF /* CategorySearchMainView.swift */; };
@@ -53,12 +59,6 @@
 		3F96651E246E2A7F0083EBC2 /* SearchTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F96651C246E2A7F0083EBC2 /* SearchTextView.xib */; };
 		3F966521246E2B240083EBC2 /* SearchMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F96651F246E2B240083EBC2 /* SearchMainView.swift */; };
 		3F966522246E2B240083EBC2 /* SearchMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F966520246E2B240083EBC2 /* SearchMainView.xib */; };
-		3F96653B246E552A0083EBC2 /* TagSearchResultMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F966539246E552A0083EBC2 /* TagSearchResultMainView.swift */; };
-		3F96653C246E552A0083EBC2 /* TagSearchResultMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F96653A246E552A0083EBC2 /* TagSearchResultMainView.xib */; };
-		3F96653F246E558A0083EBC2 /* UserSearchResultMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F96653D246E558A0083EBC2 /* UserSearchResultMainView.swift */; };
-		3F966540246E558A0083EBC2 /* UserSearchResultMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F96653E246E558A0083EBC2 /* UserSearchResultMainView.xib */; };
-		3F966543246E55BD0083EBC2 /* ProductNameSearchResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F966541246E55BD0083EBC2 /* ProductNameSearchResultView.swift */; };
-		3F966544246E55BD0083EBC2 /* ProductNameSearchResultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F966542246E55BD0083EBC2 /* ProductNameSearchResultView.xib */; };
 		3F966547246E56040083EBC2 /* BrandSearchResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F966545246E56040083EBC2 /* BrandSearchResultView.swift */; };
 		3F966548246E56040083EBC2 /* BrandSearchResultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F966546246E56040083EBC2 /* BrandSearchResultView.xib */; };
 		3FA0F795246E6DCA00D8DBA2 /* SearchResultMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA0F793246E6DCA00D8DBA2 /* SearchResultMainView.swift */; };
@@ -169,6 +169,12 @@
 		3F6648EC2472280300D4D950 /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
 		3F6648F02472287900D4D950 /* SignUpMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpMainView.swift; sourceTree = "<group>"; };
 		3F6648F12472287900D4D950 /* SignUpMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpMainView.xib; sourceTree = "<group>"; };
+		3F7C5D8B247644D7007640E2 /* ProductNameSearchResultView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductNameSearchResultView.swift; sourceTree = "<group>"; };
+		3F7C5D8D247644E0007640E2 /* ProductNameSearchResultView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductNameSearchResultView.xib; sourceTree = "<group>"; };
+		3F7C5D8F247644ED007640E2 /* TagSearchResultMainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TagSearchResultMainView.xib; sourceTree = "<group>"; };
+		3F7C5D91247644F5007640E2 /* TagSearchResultMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagSearchResultMainView.swift; sourceTree = "<group>"; };
+		3F7C5D9324764510007640E2 /* UserSearchResultMainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserSearchResultMainView.xib; sourceTree = "<group>"; };
+		3F7C5D9424764510007640E2 /* UserSearchResultMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchResultMainView.swift; sourceTree = "<group>"; };
 		3F8CA3E72476215C000EA5AF /* CategorySearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySearchViewController.swift; sourceTree = "<group>"; };
 		3F8CA3E82476215C000EA5AF /* CategorySearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategorySearchViewController.xib; sourceTree = "<group>"; };
 		3F8CA3EB24762185000EA5AF /* CategorySearchMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySearchMainView.swift; sourceTree = "<group>"; };
@@ -177,12 +183,6 @@
 		3F96651C246E2A7F0083EBC2 /* SearchTextView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTextView.xib; sourceTree = "<group>"; };
 		3F96651F246E2B240083EBC2 /* SearchMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMainView.swift; sourceTree = "<group>"; };
 		3F966520246E2B240083EBC2 /* SearchMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchMainView.xib; sourceTree = "<group>"; };
-		3F966539246E552A0083EBC2 /* TagSearchResultMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagSearchResultMainView.swift; sourceTree = "<group>"; };
-		3F96653A246E552A0083EBC2 /* TagSearchResultMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagSearchResultMainView.xib; sourceTree = "<group>"; };
-		3F96653D246E558A0083EBC2 /* UserSearchResultMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchResultMainView.swift; sourceTree = "<group>"; };
-		3F96653E246E558A0083EBC2 /* UserSearchResultMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserSearchResultMainView.xib; sourceTree = "<group>"; };
-		3F966541246E55BD0083EBC2 /* ProductNameSearchResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductNameSearchResultView.swift; sourceTree = "<group>"; };
-		3F966542246E55BD0083EBC2 /* ProductNameSearchResultView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductNameSearchResultView.xib; sourceTree = "<group>"; };
 		3F966545246E56040083EBC2 /* BrandSearchResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandSearchResultView.swift; sourceTree = "<group>"; };
 		3F966546246E56040083EBC2 /* BrandSearchResultView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BrandSearchResultView.xib; sourceTree = "<group>"; };
 		3FA0F793246E6DCA00D8DBA2 /* SearchResultMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultMainView.swift; sourceTree = "<group>"; };
@@ -440,14 +440,14 @@
 				3FF12135247246C9001E0554 /* SearchResultCell */,
 				3FA0F793246E6DCA00D8DBA2 /* SearchResultMainView.swift */,
 				3FA0F794246E6DCA00D8DBA2 /* SearchResultMainView.xib */,
+				3F7C5D91247644F5007640E2 /* TagSearchResultMainView.swift */,
+				3F7C5D8F247644ED007640E2 /* TagSearchResultMainView.xib */,
+				3F7C5D9424764510007640E2 /* UserSearchResultMainView.swift */,
+				3F7C5D9324764510007640E2 /* UserSearchResultMainView.xib */,
 				3F966545246E56040083EBC2 /* BrandSearchResultView.swift */,
 				3F966546246E56040083EBC2 /* BrandSearchResultView.xib */,
-				3F966541246E55BD0083EBC2 /* ProductNameSearchResultView.swift */,
-				3F966542246E55BD0083EBC2 /* ProductNameSearchResultView.xib */,
-				3F966539246E552A0083EBC2 /* TagSearchResultMainView.swift */,
-				3F96653A246E552A0083EBC2 /* TagSearchResultMainView.xib */,
-				3F96653D246E558A0083EBC2 /* UserSearchResultMainView.swift */,
-				3F96653E246E558A0083EBC2 /* UserSearchResultMainView.xib */,
+				3F7C5D8B247644D7007640E2 /* ProductNameSearchResultView.swift */,
+				3F7C5D8D247644E0007640E2 /* ProductNameSearchResultView.xib */,
 				3FF1213A24724AE0001E0554 /* UserResultCell */,
 			);
 			path = "Search result";
@@ -697,13 +697,13 @@
 				3FF1213E24724B18001E0554 /* SearchUserResultTableViewCell.xib in Resources */,
 				3F96651E246E2A7F0083EBC2 /* SearchTextView.xib in Resources */,
 				3F18F06324722DC400957A2E /* SingInMainView.xib in Resources */,
-				3F966540246E558A0083EBC2 /* UserSearchResultMainView.xib in Resources */,
 				5FA88A70247272C000B84ACE /* GoodCollectionViewCell.xib in Resources */,
 				3F966522246E2B240083EBC2 /* SearchMainView.xib in Resources */,
 				1F4B76F0246D2AE100FC3B27 /* LaunchScreen.storyboard in Resources */,
 				3F18F05D24722C2B00957A2E /* SignInViewController.xib in Resources */,
 				1F4B7721246E4F8F00FC3B27 /* CreateReviewViewController.xib in Resources */,
 				1F4B770F246D31FD00FC3B27 /* NewPostViewController.xib in Resources */,
+				3F7C5D9524764510007640E2 /* UserSearchResultMainView.xib in Resources */,
 				FFD02825246E3866009EE2E4 /* TimeLineMainCollectionViewCell.xib in Resources */,
 				1F4B7745247379A700FC3B27 /* ActivityCommentTableViewCell.xib in Resources */,
 				5F098A332474F0E700D033F4 /* YourScrollMainView.xib in Resources */,
@@ -714,6 +714,7 @@
 				5FA88A4A246E405900B84ACE /* EditProfileMainView.xib in Resources */,
 				FF850A0B246E2AD3003E2ACF /* EditReviewViewController.xib in Resources */,
 				5F098A2E2474D1A800D033F4 /* YourTodayCollectionViewCell.xib in Resources */,
+				3F7C5D90247644ED007640E2 /* TagSearchResultMainView.xib in Resources */,
 				1F4B7706246D30D900FC3B27 /* MyProfileViewController.xib in Resources */,
 				1F4B774D2473B5D600FC3B27 /* (null) in Resources */,
 				1F49BB03247509940092AF96 /* ActivityFollowTableViewCell.xib in Resources */,
@@ -723,15 +724,14 @@
 				FF850A17246E2BC2003E2ACF /* EditMakeMainView.xib in Resources */,
 				1F4B770A246D310F00FC3B27 /* TimeLineViewController.xib in Resources */,
 				FF850A0F246E2B16003E2ACF /* EditReviewMainView.xib in Resources */,
-				3F966544246E55BD0083EBC2 /* ProductNameSearchResultView.xib in Resources */,
 				3FC6EE862473BDF0008875B7 /* Assets.xcassets in Resources */,
 				1F4B7713246D329300FC3B27 /* SearchViewController.xib in Resources */,
 				5FA88A42246E3FE200B84ACE /* YourProfileMainView.xib in Resources */,
 				5FA88A53246E581F00B84ACE /* TodayCollectionViewCell.xib in Resources */,
 				5FA88A46246E402700B84ACE /* EditProfileViewController.xib in Resources */,
 				3FF1213924724716001E0554 /* SearchResultCollectionViewCell.xib in Resources */,
+				3F7C5D8E247644E0007640E2 /* ProductNameSearchResultView.xib in Resources */,
 				3F6648F32472287900D4D950 /* SignUpMainView.xib in Resources */,
-				3F96653C246E552A0083EBC2 /* TagSearchResultMainView.xib in Resources */,
 				5FA88A642472316600B84ACE /* ScrollMainView.xib in Resources */,
 				3F966548246E56040083EBC2 /* BrandSearchResultView.xib in Resources */,
 				D1B8AFC52472627C007BC6AD /* CreateMakeMainView.xib in Resources */,
@@ -824,18 +824,19 @@
 				5F098A2D2474D1A800D033F4 /* YourTodayCollectionViewCell.swift in Sources */,
 				1F4B7720246E4F8F00FC3B27 /* CreateReviewViewController.swift in Sources */,
 				3F8CA3ED24762185000EA5AF /* CategorySearchMainView.swift in Sources */,
-				3F966543246E55BD0083EBC2 /* ProductNameSearchResultView.swift in Sources */,
 				3F96651D246E2A7F0083EBC2 /* SearchTextView.swift in Sources */,
 				5F098A3A2475006900D033F4 /* YourGenreCollectionViewCell.swift in Sources */,
 				5FA88A3D246E3FA300B84ACE /* YourProfileViewController.swift in Sources */,
 				5FA88A6F247272C000B84ACE /* GoodCollectionViewCell.swift in Sources */,
 				5FA88A52246E581F00B84ACE /* TodayCollectionViewCell.swift in Sources */,
 				1F4B7724246E4FBD00FC3B27 /* CreateReviewMainView.swift in Sources */,
+				3F7C5D8C247644D7007640E2 /* ProductNameSearchResultView.swift in Sources */,
 				FF850A16246E2BC2003E2ACF /* EditMakeMainView.swift in Sources */,
 				5FA88A49246E405900B84ACE /* EditProfileMainView.swift in Sources */,
 				5F098A322474F0E700D033F4 /* YourScrollMainView.swift in Sources */,
 				1F4B7732246E7EC300FC3B27 /* ActivityMainView.swift in Sources */,
 				1F4B7709246D310F00FC3B27 /* TimeLineViewController.swift in Sources */,
+				3F7C5D9624764510007640E2 /* UserSearchResultMainView.swift in Sources */,
 				5F098A242474C0CF00D033F4 /* GenreCollectionViewCell.swift in Sources */,
 				1F4B76F9246D2F7700FC3B27 /* AppDelegate.swift in Sources */,
 				1F4B7716246D32C000FC3B27 /* ActivityViewController.swift in Sources */,
@@ -843,6 +844,7 @@
 				5F098A202474BE5800D033F4 /* BookmarkCollectionViewCell.swift in Sources */,
 				FF850A0E246E2B16003E2ACF /* EditReviewMainView.swift in Sources */,
 				1F4B7744247379A700FC3B27 /* ActivityCommentTableViewCell.swift in Sources */,
+				3F7C5D92247644F5007640E2 /* TagSearchResultMainView.swift in Sources */,
 				5FA88A632472316600B84ACE /* ScrollMainView.swift in Sources */,
 				3F6648ED2472280300D4D950 /* SignUpViewController.swift in Sources */,
 				FF8509FA246E294F003E2ACF /* ReviewDetailViewController.swift in Sources */,
@@ -853,9 +855,7 @@
 				1F4B770E246D31FD00FC3B27 /* NewPostViewController.swift in Sources */,
 				1F4B774024736EE400FC3B27 /* ActivityGoodTableViewCell.swift in Sources */,
 				3FF1213D24724B18001E0554 /* SearchUserResultTableViewCell.swift in Sources */,
-				3F96653F246E558A0083EBC2 /* UserSearchResultMainView.swift in Sources */,
 				1F49BB02247509940092AF96 /* ActivityFollowTableViewCell.swift in Sources */,
-				3F96653B246E552A0083EBC2 /* TagSearchResultMainView.swift in Sources */,
 				FFD02824246E3866009EE2E4 /* TimeLineMainCollectionViewCell.swift in Sources */,
 				FFD02820246E3745009EE2E4 /* TimeLineMainTableViewSecondCell.swift in Sources */,
 				D1B8AFC72472627C007BC6AD /* CreateMakeViewController.swift in Sources */,
