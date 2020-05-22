@@ -107,6 +107,7 @@
 		FF3F38DA24778A400023FAAC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FF3F38D924778A400023FAAC /* GoogleService-Info.plist */; };
 		FF3F38DE2477977B0023FAAC /* ReviewPostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3F38DD2477977A0023FAAC /* ReviewPostModel.swift */; };
 		FF3F38E02477AD850023FAAC /* MakePostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3F38DF2477AD850023FAAC /* MakePostModel.swift */; };
+		FF3F38E22477B6B90023FAAC /* CommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3F38E12477B6B90023FAAC /* CommentModel.swift */; };
 		FF8509F1246E2870003E2ACF /* TimeLineMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8509EF246E2870003E2ACF /* TimeLineMainView.swift */; };
 		FF8509F2246E2870003E2ACF /* TimeLineMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF8509F0246E2870003E2ACF /* TimeLineMainView.xib */; };
 		FF8509FA246E294F003E2ACF /* ReviewDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8509F8246E294F003E2ACF /* ReviewDetailViewController.swift */; };
@@ -236,6 +237,7 @@
 		FF3F38D924778A400023FAAC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FF3F38DD2477977A0023FAAC /* ReviewPostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewPostModel.swift; sourceTree = "<group>"; };
 		FF3F38DF2477AD850023FAAC /* MakePostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakePostModel.swift; sourceTree = "<group>"; };
+		FF3F38E12477B6B90023FAAC /* CommentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentModel.swift; sourceTree = "<group>"; };
 		FF8509EF246E2870003E2ACF /* TimeLineMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineMainView.swift; sourceTree = "<group>"; };
 		FF8509F0246E2870003E2ACF /* TimeLineMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeLineMainView.xib; sourceTree = "<group>"; };
 		FF8509F8246E294F003E2ACF /* ReviewDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewDetailViewController.swift; sourceTree = "<group>"; };
@@ -587,6 +589,7 @@
 				FF3F38DD2477977A0023FAAC /* ReviewPostModel.swift */,
 				FF3F38DF2477AD850023FAAC /* MakePostModel.swift */,
 				3FD7CE542477AB4D00B31D8A /* AuthModel.swift */,
+				FF3F38E12477B6B90023FAAC /* CommentModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -852,6 +855,7 @@
 				5F098A3A2475006900D033F4 /* YourGenreCollectionViewCell.swift in Sources */,
 				5FA88A3D246E3FA300B84ACE /* YourProfileViewController.swift in Sources */,
 				5FA88A6F247272C000B84ACE /* GoodCollectionViewCell.swift in Sources */,
+				FF3F38E22477B6B90023FAAC /* CommentModel.swift in Sources */,
 				5FA88A52246E581F00B84ACE /* TodayCollectionViewCell.swift in Sources */,
 				1F4B7724246E4FBD00FC3B27 /* CreateReviewMainView.swift in Sources */,
 				3F7C5D8C247644D7007640E2 /* ProductNameSearchResultView.swift in Sources */,
