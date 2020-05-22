@@ -9,6 +9,7 @@
 import UIKit
 import PGFramework
 protocol SearchUserResultTableViewCellDelegate: NSObjectProtocol{
+    func touchedUserButton()
 }
 extension SearchUserResultTableViewCellDelegate {
 }
@@ -17,6 +18,10 @@ class SearchUserResultTableViewCell: BaseTableViewCell {
     weak var delegate: SearchUserResultTableViewCellDelegate? = nil
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
+    @IBAction func touchedUserButton(_ sender: UIButton) {
+        if let delegate = delegate {
+            delegate.touchedUserButton()}
+    }
 }
 // MARK: - Life cycle
 extension SearchUserResultTableViewCell {

@@ -29,13 +29,23 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YaG-ZV-uSc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="87"/>
+                        <connections>
+                            <action selector="touchedUserButton:" destination="53H-GM-n9e" eventType="touchUpInside" id="5Om-sW-F61"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="YaG-ZV-uSc" firstAttribute="leading" secondItem="aF9-Yh-4ri" secondAttribute="leading" id="4UY-f6-aOZ"/>
+                    <constraint firstItem="YaG-ZV-uSc" firstAttribute="top" secondItem="aF9-Yh-4ri" secondAttribute="top" id="7Xm-bt-Iu6"/>
                     <constraint firstAttribute="bottom" secondItem="gnO-Tc-Elb" secondAttribute="bottom" constant="33" id="J3P-n7-3ER"/>
                     <constraint firstItem="gnO-Tc-Elb" firstAttribute="top" secondItem="aF9-Yh-4ri" secondAttribute="top" constant="33" id="Mfq-5f-Lan"/>
                     <constraint firstItem="CQJ-Jd-VYs" firstAttribute="top" secondItem="aF9-Yh-4ri" secondAttribute="top" constant="10" id="Nh8-y4-1Is"/>
                     <constraint firstItem="gnO-Tc-Elb" firstAttribute="leading" secondItem="CQJ-Jd-VYs" secondAttribute="trailing" constant="30" id="TAY-pF-dym"/>
                     <constraint firstItem="CQJ-Jd-VYs" firstAttribute="leading" secondItem="aF9-Yh-4ri" secondAttribute="leading" constant="10" id="pY7-Wc-BGt"/>
+                    <constraint firstAttribute="bottom" secondItem="YaG-ZV-uSc" secondAttribute="bottom" id="roo-Ay-kec"/>
+                    <constraint firstAttribute="trailing" secondItem="YaG-ZV-uSc" secondAttribute="trailing" id="xBU-n8-7Nw"/>
                     <constraint firstItem="gnO-Tc-Elb" firstAttribute="centerY" secondItem="aF9-Yh-4ri" secondAttribute="centerY" id="yIw-2y-jtq"/>
                     <constraint firstAttribute="bottom" secondItem="CQJ-Jd-VYs" secondAttribute="bottom" constant="10" id="zuZ-hJ-I5Q"/>
                 </constraints>

@@ -9,6 +9,7 @@
 import UIKit
 import PGFramework
 protocol SearchResultCollectionViewCellDelegate: NSObjectProtocol{
+    func touchedCellButton()
 }
 extension SearchResultCollectionViewCellDelegate {
 }
@@ -18,6 +19,11 @@ class SearchResultCollectionViewCell: BaseCollectionViewCell {
     @IBOutlet weak var imaveView: UIImageView!
     @IBOutlet weak var productNameLabel: NSLayoutConstraint!
     @IBOutlet weak var cellWidth: NSLayoutConstraint!
+    @IBAction func touchedCellButton(_ sender: UIButton) {
+        if let delegate = delegate{
+            delegate.touchedCellButton()
+        }
+    }
 }
 // MARK: - Life cycle
 extension SearchResultCollectionViewCell {
