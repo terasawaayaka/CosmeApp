@@ -43,7 +43,7 @@ extension CommentPostModel{
 
 //MARK: -Create
 extension CommentPostModel{
-    static func create(request:CommentPostModel, images:[UIImage], success:@escaping () -> Void) {
+    static func create(request:CommentPostModel, success:@escaping () -> Void) {
         let dbRef = Database.database().reference().child(PATH).childByAutoId()
         if let key = dbRef.key{
             request.id = key

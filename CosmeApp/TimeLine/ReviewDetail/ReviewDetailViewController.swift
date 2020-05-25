@@ -11,6 +11,7 @@ import UIKit
 import PGFramework
 // MARK: - Property
 class ReviewDetailViewController: BaseViewController {
+    
     @IBOutlet weak var headerView: HeaderView!
     @IBOutlet weak var mainView: ReviewDetailMainView!
     @IBOutlet weak var mainViewBottomMergin: NSLayoutConstraint!
@@ -30,6 +31,7 @@ extension ReviewDetailViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        getModel()
     }
 }
 // MARK: - Protocol
@@ -46,6 +48,17 @@ extension ReviewDetailViewController :HeaderViewDelegate{
 }
 
 extension ReviewDetailViewController:ReviewDetailMainViewDelegate {
+    func commentSendButton() {
+        let commentPostModel  : CommentPostModel = CommentPostModel()
+        if let text = mainView.commentTextField.text{
+            commentPostModel.description = text
+        }
+        CommentPostModel.create(request: commentPostModel) {
+            self.mainView.commentTextField.endEditing(true)
+            self.mainView.commentTextField.text = ""
+        }
+    }
+    
     func iconViewButton2() {
         //TODO : 自分か他人のprofile画面に遷移
     }
@@ -67,6 +80,13 @@ extension ReviewDetailViewController {
         headerView.delegate = self
         mainView.delegate = self
     }
+    func getModel(){
+        CommentPostModel.reads{(commentPostModels)in
+            self.mainView.getModel(commentPostModels: commentPostModels)
+        }
+    }
+    
+    
     //キーボードとテキストフィールド以外をタップでキーボードを隠す
     func hideKeybord() {
         let hideTap : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKyeoboardTap))

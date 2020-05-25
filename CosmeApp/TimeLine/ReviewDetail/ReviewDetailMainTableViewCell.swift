@@ -17,6 +17,7 @@ extension ReviewDetailMainTableViewCellDelegate {
 class ReviewDetailMainTableViewCell: BaseTableViewCell {
     weak var delegate: ReviewDetailMainTableViewCellDelegate? = nil
     @IBOutlet weak var iconView: UIButton!
+    @IBOutlet weak var descriptionLabel: UILabel!
     @IBAction func iconViewButton(_ sender: UIButton) {
         if let delegate = delegate {delegate.iconViewButton()}
     }
@@ -35,5 +36,8 @@ extension ReviewDetailMainTableViewCell {
 extension ReviewDetailMainTableViewCell {
     func setLayout(){
         iconView.layer.cornerRadius = iconView.frame.width / 2
+    }
+    func updateCell(commentPostModel:CommentPostModel){
+        descriptionLabel.text = commentPostModel.description
     }
 }
