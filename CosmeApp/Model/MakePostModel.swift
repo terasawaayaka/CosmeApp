@@ -12,7 +12,7 @@ import FirebaseDatabase
 import FirebaseStorage
 
 class MakePostModel{
-    fileprivate static let PATH: String = "MakePost"
+    fileprivate static let PATH: String = "makePost"
     var id  :String = String()
     var basemake: String = String()
     var highlight: String = String()

@@ -10,7 +10,8 @@ import UIKit
 
 import PGFramework
 protocol TimeLineMainViewDelegate: NSObjectProtocol{
-    func didSelectRowAt()
+    
+    func didSelectRowAt(indexPath:IndexPath)
     func didSelectCollectionViewCell()
     func touchedIconViewButton()
 }
@@ -19,6 +20,9 @@ extension TimeLineMainViewDelegate {
 // MARK: - Property
 class TimeLineMainView: BaseView {
     weak var delegate: TimeLineMainViewDelegate? = nil
+    
+    var reviewPostModels : [ReviewPostModel] = [ReviewPostModel]()
+    
     @IBOutlet weak var tableView: UITableView!
 }
 // MARK: - Life cycle
@@ -34,7 +38,7 @@ extension TimeLineMainView {
 // MARK: - Protocol
 extension TimeLineMainView :UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 8
+        return reviewPostModels.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -46,6 +50,7 @@ extension TimeLineMainView :UITableViewDataSource{
             return cell
         default:
             secondCell.delegate = self
+            secondCell.updateCell(reviewPostModel: reviewPostModels[indexPath.row])
             return secondCell
         }
     }
@@ -53,7 +58,7 @@ extension TimeLineMainView :UITableViewDataSource{
 
 extension TimeLineMainView :UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let delegate = delegate{delegate.didSelectRowAt()}
+        if let delegate = delegate{delegate.didSelectRowAt(indexPath: indexPath)}
     }
 }
 
@@ -75,6 +80,10 @@ extension TimeLineMainView {
     func setDelegate(){
         tableView.dataSource = self
         tableView.delegate = self
+    }
+    func getModel(reviewPostModels:[ReviewPostModel]){
+    self.reviewPostModels = reviewPostModels
+        tableView.reloadData()
     }
     
 }

@@ -12,13 +12,19 @@ import FirebaseDatabase
 import FirebaseStorage
 
 class ReviewPostModel{
-    fileprivate static let PATH: String = "ReviewPost"
+    fileprivate static let PATH: String = "reviewPost"
     var id  :String = String()
     var title: String = String()
     var category: String = String()
     var review: String = String()
     var tag: String = String()
     var image_paths: [String] = [String]()
+    var firstStar: String = String()
+    var secondStar: String = String()
+    var thirdStar: String = String()
+    var fourthStar: String = String()
+    var fifthStar: String = String()
+    
     //ユーザーの情報
     var post_user_name: String = String()
     var post_user_id: String = String()
@@ -35,6 +41,11 @@ extension ReviewPostModel{
         if let category = data["category"]as? String{model.category = category}
         if let tag = data["tag"]as? String{model.tag = tag}
         if let image_paths = data["image_paths"]as? [String]{model.image_paths = image_paths}
+        if let firstStar = data["firstStar"]as? String{model.firstStar = firstStar}
+        if let secondStar = data["secondStar"]as? String{model.secondStar = secondStar}
+        if let thirdStar = data["thirdStar"]as? String{model.thirdStar = thirdStar}
+        if let fourthStar = data["fourthStar"]as? String{model.fourthStar = fourthStar}
+        if let fifthStar = data["fifthStar"]as? String{model.fifthStar = fifthStar}
         return model
     }
     
@@ -48,6 +59,11 @@ extension ReviewPostModel{
         parameter["category"] = request.category
         parameter["tag"] = request.tag
         parameter["image_paths"] = request.image_paths
+        parameter["firstStar"] = request.firstStar
+        parameter["secondStar"] = request.secondStar
+        parameter["thirdStar"] = request.thirdStar
+        parameter["fourthStar"] = request.fourthStar
+        parameter["fifthStar"] = request.fifthStar
         return parameter
     }
     

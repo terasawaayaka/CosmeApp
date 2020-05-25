@@ -40,6 +40,9 @@
                             <constraint firstAttribute="width" constant="30" id="okB-Kh-1HT"/>
                         </constraints>
                         <state key="normal" image="favorite"/>
+                        <connections>
+                            <action selector="favoriteButton:" destination="43z-Sw-CwR" eventType="touchUpInside" id="shq-vx-roU"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hr4-NW-pQr">
                         <rect key="frame" x="380" y="580" width="30" height="30"/>
@@ -48,6 +51,9 @@
                             <constraint firstAttribute="width" constant="30" id="vYJ-Xf-OBo"/>
                         </constraints>
                         <state key="normal" image="good"/>
+                        <connections>
+                            <action selector="goodButton:" destination="43z-Sw-CwR" eventType="touchUpInside" id="ekb-Pk-Zp8"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="カテゴリ：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jWQ-Qu-YRn">
                         <rect key="frame" x="40" y="666.5" width="430" height="36.5"/>
@@ -211,9 +217,20 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="categoryLabel" destination="jWQ-Qu-YRn" id="Jzk-3i-BOB"/>
+                <outlet property="fifthStarLabel" destination="cgU-ej-Rwc" id="bIh-RJ-dzo"/>
+                <outlet property="firstImageView" destination="NPL-Q1-5DZ" id="nI9-O5-doY"/>
+                <outlet property="firstStarLabel" destination="oun-pL-nKG" id="yuH-5k-Amj"/>
+                <outlet property="fourthImageView" destination="g91-z3-dDg" id="C8G-nq-jcQ"/>
+                <outlet property="fourthStarLabel" destination="Cbe-Mz-3IV" id="FxM-B1-DLi"/>
                 <outlet property="iconView" destination="hXm-jl-7o0" id="z9E-Np-jp6"/>
                 <outlet property="imageScrollView" destination="Th6-o7-tQm" id="jPF-Om-el6"/>
                 <outlet property="pageControl" destination="PHX-CF-vZr" id="3no-E2-AVx"/>
+                <outlet property="productLabel" destination="VEt-Lk-69e" id="7pz-Tj-1tU"/>
+                <outlet property="secondImageView" destination="MVK-W4-YLu" id="YnE-x0-Dzw"/>
+                <outlet property="secondStarlabel" destination="OcB-yt-U72" id="Tdf-Zt-hkn"/>
+                <outlet property="thirdImageView" destination="ngw-r1-I16" id="ULw-JP-We6"/>
+                <outlet property="thirdStarLabel" destination="vS2-LO-YJl" id="9Lc-Fo-2hp"/>
             </connections>
             <point key="canvasLocation" x="110" y="109"/>
         </tableViewCell>
