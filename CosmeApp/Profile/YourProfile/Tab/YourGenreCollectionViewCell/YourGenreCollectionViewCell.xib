@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -18,10 +18,18 @@
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="53d-MA-5FK">
                         <rect key="frame" x="0.0" y="0.0" width="115" height="115"/>
-                        <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EyeShadow" translatesAutoresizingMaskIntoConstraints="NO" id="DMh-y8-Jof">
+                                <rect key="frame" x="0.0" y="0.0" width="115" height="115"/>
+                            </imageView>
+                        </subviews>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="DMh-y8-Jof" secondAttribute="bottom" id="DbP-rM-EbC"/>
+                            <constraint firstAttribute="trailing" secondItem="DMh-y8-Jof" secondAttribute="trailing" id="WLh-ya-aiM"/>
                             <constraint firstAttribute="height" constant="115" id="aEv-Wy-KMb"/>
                             <constraint firstAttribute="width" constant="115" id="dK4-WX-eQB"/>
+                            <constraint firstItem="DMh-y8-Jof" firstAttribute="leading" secondItem="53d-MA-5FK" secondAttribute="leading" id="iTy-w9-Kt1"/>
+                            <constraint firstItem="DMh-y8-Jof" firstAttribute="top" secondItem="53d-MA-5FK" secondAttribute="top" id="l22-9t-WiX"/>
                             <constraint firstAttribute="width" secondItem="53d-MA-5FK" secondAttribute="height" multiplier="1:1" id="vAB-1e-uJM"/>
                         </constraints>
                     </view>
@@ -37,4 +45,7 @@
             <point key="canvasLocation" x="176.08695652173915" y="-39.84375"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="EyeShadow" width="700" height="706"/>
+    </resources>
 </document>
