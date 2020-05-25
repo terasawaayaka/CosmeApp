@@ -11,6 +11,8 @@
             <connections>
                 <outlet property="collectionView" destination="Kde-yW-NGi" id="aGR-gt-mdR"/>
                 <outlet property="collectionViewFlowLayout" destination="MPb-9c-hTa" id="1bO-6d-LH1"/>
+                <outlet property="illustImage" destination="CB8-1m-Dg2" id="qxi-Tp-4ah"/>
+                <outlet property="logoImage" destination="aH5-2G-NMC" id="Hb6-HZ-rzC"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -18,21 +20,6 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Owz-h1-NDX">
-                    <rect key="frame" x="20" y="64" width="120" height="120"/>
-                    <color key="backgroundColor" red="1" green="0.54001407779999999" blue="0.77211574660000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="120" id="Xos-lt-x3c"/>
-                        <constraint firstAttribute="width" secondItem="Owz-h1-NDX" secondAttribute="height" multiplier="1:1" id="YdH-3g-B1f"/>
-                    </constraints>
-                </imageView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MpS-df-GgH">
-                    <rect key="frame" x="160" y="64" width="234" height="120"/>
-                    <color key="backgroundColor" red="1" green="0.54001407779999999" blue="0.77211574660000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="120" id="aru-Mj-mrO"/>
-                    </constraints>
-                </imageView>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Kde-yW-NGi">
                     <rect key="frame" x="10" y="194" width="394" height="668"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -43,21 +30,34 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CB8-1m-Dg2">
+                    <rect key="frame" x="20" y="64" width="120" height="120"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="CB8-1m-Dg2" secondAttribute="height" multiplier="1:1" id="DFf-Rh-0g6"/>
+                        <constraint firstAttribute="height" constant="120" id="ouo-NQ-EIP"/>
+                    </constraints>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aH5-2G-NMC">
+                    <rect key="frame" x="160" y="64" width="234" height="120"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="120" id="32h-av-PyF"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="Owz-h1-NDX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="3jj-x4-hGw"/>
-                <constraint firstItem="Kde-yW-NGi" firstAttribute="top" secondItem="Owz-h1-NDX" secondAttribute="bottom" constant="10" id="9yf-c6-M5d"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="MpS-df-GgH" secondAttribute="trailing" constant="20" id="Aes-wA-7R8"/>
-                <constraint firstItem="MpS-df-GgH" firstAttribute="leading" secondItem="Owz-h1-NDX" secondAttribute="trailing" constant="20" id="BT5-pT-sxd"/>
-                <constraint firstItem="Owz-h1-NDX" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="Ltd-GC-IhJ"/>
+                <constraint firstItem="CB8-1m-Dg2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="55N-Q4-Mi5"/>
+                <constraint firstItem="aH5-2G-NMC" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="Cpi-XE-F4W"/>
+                <constraint firstItem="Kde-yW-NGi" firstAttribute="top" secondItem="CB8-1m-Dg2" secondAttribute="bottom" constant="10" id="HNg-ER-M1x"/>
+                <constraint firstItem="aH5-2G-NMC" firstAttribute="leading" secondItem="CB8-1m-Dg2" secondAttribute="trailing" constant="20" id="LjX-e4-CKT"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Kde-yW-NGi" secondAttribute="trailing" constant="10" id="N2V-Tm-IsC"/>
-                <constraint firstItem="MpS-df-GgH" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="XDz-hA-kra"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="aH5-2G-NMC" secondAttribute="trailing" constant="20" id="dRQ-Ke-q0P"/>
+                <constraint firstItem="CB8-1m-Dg2" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="dlR-eH-XSE"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Kde-yW-NGi" secondAttribute="bottom" id="fdc-cl-5oS"/>
                 <constraint firstItem="Kde-yW-NGi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="xdO-M2-u2Y"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="139" y="108"/>
+            <point key="canvasLocation" x="137.68115942028987" y="107.8125"/>
         </view>
     </objects>
 </document>

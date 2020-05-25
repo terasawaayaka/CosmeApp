@@ -16,8 +16,13 @@ extension CategorySearchMainViewDelegate {
 // MARK: - Property
 class CategorySearchMainView: BaseView {
     weak var delegate: CategorySearchMainViewDelegate? = nil
+    
+    
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
+    
+    @IBOutlet weak var illustImage: UIImageView!
+    @IBOutlet weak var logoImage: UIImageView!
 }
 // MARK: - Life cycle
 extension CategorySearchMainView {
