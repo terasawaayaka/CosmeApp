@@ -22,6 +22,11 @@ extension ReviewDetailMainViewDelegate {
 class ReviewDetailMainView: BaseView, UIScrollViewDelegate {
     weak var delegate: ReviewDetailMainViewDelegate? = nil
     
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet weak var reviewLabel: UITextView!
+    @IBOutlet weak var tagLabel: UILabel!
+    
     var commentPostModels : [CommentPostModel]=[CommentPostModel]()
     var commentPostModel : CommentPostModel = CommentPostModel()
     

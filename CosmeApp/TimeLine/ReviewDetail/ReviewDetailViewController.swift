@@ -13,6 +13,7 @@ import PGFramework
 class ReviewDetailViewController: BaseViewController {
     
     var commentPostModel : CommentPostModel = CommentPostModel()
+    var reviewPostModel : ReviewPostModel = ReviewPostModel()
     
     @IBOutlet weak var headerView: HeaderView!
     @IBOutlet weak var mainView: ReviewDetailMainView!
@@ -34,6 +35,7 @@ extension ReviewDetailViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         getModel()
+        updateView2()
     }
 }
 // MARK: - Protocol
@@ -51,7 +53,7 @@ extension ReviewDetailViewController :HeaderViewDelegate{
 
 extension ReviewDetailViewController:ReviewDetailMainViewDelegate {
     func commentDeleteButton2() {
-        CommentPostModel.delete(id:commentPostModel.id) {
+        CommentPostModel.delete(id: commentPostModel.id) {
         }
     }
     
@@ -91,6 +93,12 @@ extension ReviewDetailViewController {
         CommentPostModel.reads{(commentPostModels)in
             self.mainView.getModel(commentPostModels: commentPostModels)
         }
+    }
+    func updateView2(){
+        mainView.titleLabel.text = reviewPostModel.title
+        mainView.categoryLabel.text = reviewPostModel.category
+        mainView.reviewLabel.text = reviewPostModel.review
+        mainView.tagLabel.text = reviewPostModel.tag
     }
     
     

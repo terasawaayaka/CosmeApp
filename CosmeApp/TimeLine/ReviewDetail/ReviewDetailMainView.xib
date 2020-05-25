@@ -9,11 +9,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReviewDetailMainView" customModule="CosmeApp" customModuleProvider="target">
             <connections>
+                <outlet property="categoryLabel" destination="q6t-PE-tCO" id="xmG-a5-Jgo"/>
                 <outlet property="commentTextField" destination="3Kj-mN-rYo" id="R3u-iX-9Ix"/>
                 <outlet property="iconView" destination="jCH-yG-hqv" id="19U-Pn-Ila"/>
                 <outlet property="imageScrollView" destination="Yw9-sS-72U" id="CAZ-rU-aQt"/>
                 <outlet property="pageControl" destination="859-xC-lF7" id="5xg-ub-WKj"/>
+                <outlet property="reviewLabel" destination="nuP-FO-sms" id="8Mc-NV-Ek2"/>
                 <outlet property="tableView" destination="vP6-f0-HO1" id="mnZ-k6-Ps1"/>
+                <outlet property="tagLabel" destination="QEw-QU-ABq" id="OXj-oA-f62"/>
+                <outlet property="titleLabel" destination="5I7-1k-RaQ" id="Zj8-cn-BMb"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

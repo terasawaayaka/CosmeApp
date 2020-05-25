@@ -38,6 +38,7 @@ extension TimeLineMainTableViewCell :UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TimeLineMainCollectionViewCell", for: indexPath) as? TimeLineMainCollectionViewCell else {return UICollectionViewCell()}
+        
         return cell
     }
 }
@@ -57,5 +58,7 @@ extension TimeLineMainTableViewCell {
     }
     func setLayout(){
         collectionViewFlowLayout.estimatedItemSize = CGSize(width:80,height:80)
+        
+        
     }
 }
