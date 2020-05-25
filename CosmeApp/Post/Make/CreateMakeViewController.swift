@@ -15,6 +15,8 @@ class CreateMakeViewController: BaseViewController {
     @IBOutlet weak var mainView: CreateMakeMainView!
     //Contstrains
     @IBOutlet weak var mainViewBottomMargin: NSLayoutConstraint!
+    
+    let loadingView: LoadingView = LoadingView()
 }
 // MARK: - Life cycle
 extension CreateMakeViewController {
@@ -91,6 +93,9 @@ extension CreateMakeViewController:HeaderViewDelegate {
         if let image = mainView.makeImageView.image {
             images.append(image)
         }
+        
+        addLoadingView()
+        
         MakePostModel.create(request: makePostModel, images: images) {
             let timeLineViewController = TimeLineViewController()
             self.navigationController?.pushViewController(timeLineViewController, animated: true)
@@ -114,6 +119,14 @@ extension CreateMakeViewController {
         headerView.delegate = self
         mainView.delegate = self
     }
+    func addLoadingView() {
+        loadingView.frame = self.view.frame
+        self.view.addSubview(loadingView)
+    }
+    func removeLoadingView() {
+        loadingView.removeFromSuperview()
+    }
+    
     //キーボードとテキストフィールド以外をタップでキーボードを隠す
     func hideKeybord() {
         let hideTap : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKyeoboardTap))
