@@ -18,6 +18,7 @@ class CreateReviewViewController: BaseViewController {
 
     
     let items = ["ベースメイク","ハイライト","シェーディング","アイシャドウ","アイライナー","マスカラ","カラコン","アイブロウ","チーク","リップ","スキンケア","ヘアケア","その他"]
+    let loadingView: LoadingView = LoadingView()
 }
 // MARK: - Life cycle
 extension CreateReviewViewController {
@@ -51,13 +52,25 @@ extension CreateReviewViewController:HeaderViewDelegate {
     func touchedRightButton(_ sender: UIButton) {
         let reviewPostModel: ReviewPostModel = ReviewPostModel()
         if let text = mainView.itemTextView.text {
-            reviewPostModel.discription = text
+            reviewPostModel.title = text
+        }
+        if let text = mainView.pickerLabel.text {
+            reviewPostModel.category = text
+        }
+        if let text = mainView.reviewTextView.text {
+            reviewPostModel.review = text
+        }
+        if let text = mainView.tagTextView.text {
+            reviewPostModel.tag = text
         }
         var images:[UIImage] = []
         if let image = mainView.itemFirstImageVIew.image {
             images.append(image)
         }
         //todo imageつなぐ
+        
+        addLoadingView()
+        
         ReviewPostModel.create(request: reviewPostModel, images: images) {
             let timeLineViewController = TimeLineViewController()
             self.navigationController?.pushViewController(timeLineViewController, animated: true)
@@ -130,6 +143,14 @@ extension CreateReviewViewController {
         mainView.pickerView.dataSource = self
         mainView.pickerView.delegate = self
     }
+    func addLoadingView() {
+        loadingView.frame = self.view.frame
+        self.view.addSubview(loadingView)
+    }
+    func removeLoadingView() {
+        loadingView.removeFromSuperview()
+    }
+    
     //キーボードとテキストフィールド以外をタップでキーボードを隠す
     func hideKeybord() {
         let hideTap : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKyeoboardTap))
