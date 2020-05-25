@@ -10,7 +10,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateReviewMainView" customModule="CosmeApp" customModuleProvider="target">
             <connections>
                 <outlet property="itemFirstImageVIew" destination="kag-eD-UFz" id="U2T-i7-AyM"/>
+                <outlet property="itemFourthImageView" destination="T7S-2v-SlC" id="VgQ-zh-OGG"/>
+                <outlet property="itemSecondImageView" destination="2Ps-F6-oAc" id="q0U-4c-9h1"/>
                 <outlet property="itemTextView" destination="xGX-ew-SMJ" id="QPX-h1-tNU"/>
+                <outlet property="itemThirdImageView" destination="bFH-Yj-zWP" id="tM6-wa-Nyx"/>
                 <outlet property="pickerLabel" destination="3eB-Vo-NTj" id="631-uU-aAb"/>
                 <outlet property="pickerView" destination="gIK-Av-YLe" id="Cpy-Xi-LGM"/>
                 <outlet property="reviewTextView" destination="SeW-Ib-j4C" id="HWb-XG-f67"/>

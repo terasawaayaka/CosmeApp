@@ -8,6 +8,13 @@
 
 import UIKit
 
+enum ImageViewType {
+    case first
+    case second
+    case third
+    case fourth
+}
+
 import PGFramework
 // MARK: - Property
 class CreateReviewViewController: BaseViewController {
@@ -16,6 +23,7 @@ class CreateReviewViewController: BaseViewController {
     //Constrains
     @IBOutlet weak var mainViewBottomMargin: NSLayoutConstraint!
 
+    var imageViewType: ImageViewType = ImageViewType.first
     
     let items = ["ベースメイク","ハイライト","シェーディング","アイシャドウ","アイライナー","マスカラ","カラコン","アイブロウ","チーク","リップ","スキンケア","ヘアケア","その他"]
     let loadingView: LoadingView = LoadingView()
@@ -37,9 +45,29 @@ extension CreateReviewViewController {
         super.viewWillAppear(animated)
     }
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let image = info[.originalImage] as? UIImage {
-            mainView.itemFirstImageVIew.image = image
-            picker.dismiss(animated: true, completion: nil)
+        switch imageViewType {
+        case .first:
+            if let image = info[.originalImage] as? UIImage {
+                mainView.itemFirstImageVIew.image = image
+                picker.dismiss(animated: true, completion: nil)
+            }
+        case .second:
+            if let image = info[.originalImage] as? UIImage {
+                mainView.itemSecondImageView.image = image
+                picker.dismiss(animated: true, completion: nil)
+            }
+        case .third:
+            if let image = info[.originalImage] as? UIImage {
+                mainView.itemThirdImageView.image = image
+                picker.dismiss(animated: true, completion: nil)
+            }
+        case .fourth:
+            if let image = info[.originalImage] as? UIImage {
+                mainView.itemFourthImageView.image = image
+                picker.dismiss(animated: true, completion: nil)
+            }
+        default:
+            break
         }
     }
 }
@@ -67,7 +95,15 @@ extension CreateReviewViewController:HeaderViewDelegate {
         if let image = mainView.itemFirstImageVIew.image {
             images.append(image)
         }
-        //todo imageつなぐ
+        if let image = mainView.itemSecondImageView.image {
+            images.append(image)
+        }
+        if let image = mainView.itemThirdImageView.image {
+            images.append(image)
+        }
+        if let image = mainView.itemFourthImageView.image {
+            images.append(image)
+        }
         
         addLoadingView()
         
@@ -100,16 +136,20 @@ extension CreateReviewViewController:UIPickerViewDelegate {
 
 extension CreateReviewViewController:CreateReviewMainViewDelegate {
     func touchedAddFirstImageButton() {
+        imageViewType = ImageViewType.first
         useCamera()
     }
     func touchedAddSecondImageButton() {
-        //todo
+        imageViewType = ImageViewType.second
+        useCamera()
     }
     func touchedAddThirdImageButton() {
-        //todo
+        imageViewType = ImageViewType.third
+        useCamera()
     }
     func touchedAddFourthImageButton() {
-        //todo
+        imageViewType = ImageViewType.fourth
+        useCamera()
     }
     func firstStarButton() {
         //todo
