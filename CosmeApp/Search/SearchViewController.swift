@@ -69,61 +69,73 @@ extension SearchViewController: SearchMainViewDelegate {
    
     func touchedEyeShadowButton() {
         let categorySearchViewController = CategorySearchViewController()
+        categorySearchViewController.categoryType = CategoryType.eyeShadow
         navigationController?.pushViewController(categorySearchViewController, animated: true)
         animatorManager.navigationType = .slide_push
     }
     func touchedEyeLinerButton() {
         let categorySearchViewController = CategorySearchViewController()
+        categorySearchViewController.categoryType = CategoryType.eyeLiner
         navigationController?.pushViewController(categorySearchViewController, animated: true)
         animatorManager.navigationType = .slide_push
     }
     func touchedMascaraButton() {
         let categorySearchViewController = CategorySearchViewController()
+        categorySearchViewController.categoryType = CategoryType.mascara
         navigationController?.pushViewController(categorySearchViewController, animated: true)
         animatorManager.navigationType = .slide_push
     }
     func touchedColorContctButton() {
         let categorySearchViewController = CategorySearchViewController()
+        categorySearchViewController.categoryType = CategoryType.colorContact
         navigationController?.pushViewController(categorySearchViewController, animated: true)
         animatorManager.navigationType = .slide_push
     }
     func touchedEyeBrowButton() {
         let categorySearchViewController = CategorySearchViewController()
+        categorySearchViewController.categoryType = CategoryType.eyeBrow
         navigationController?.pushViewController(categorySearchViewController, animated: true)
         animatorManager.navigationType = .slide_push
     }
     func touchedBaseButton() {
         let categorySearchViewController = CategorySearchViewController()
+        categorySearchViewController.categoryType = CategoryType.baseMake
         navigationController?.pushViewController(categorySearchViewController, animated: true)
         animatorManager.navigationType = .slide_push
     }
     func touchedHiLightButton() {
         let categorySearchViewController = CategorySearchViewController()
+        categorySearchViewController.categoryType = CategoryType.hiLight
         navigationController?.pushViewController(categorySearchViewController, animated: true)
         animatorManager.navigationType = .slide_push
     }
     func touchedShadingButton() {
         let categorySearchViewController = CategorySearchViewController()
+        categorySearchViewController.categoryType = CategoryType.shading
         navigationController?.pushViewController(categorySearchViewController, animated: true)
         animatorManager.navigationType = .slide_push
     }
     func touchedCheekButton() {
         let categorySearchViewController = CategorySearchViewController()
+        categorySearchViewController.categoryType = CategoryType.cheek
         navigationController?.pushViewController(categorySearchViewController, animated: true)
         animatorManager.navigationType = .slide_push
     }
     func touchedSkinCareButton() {
         let categorySearchViewController = CategorySearchViewController()
+        categorySearchViewController.categoryType = CategoryType.skinCare
         navigationController?.pushViewController(categorySearchViewController, animated: true)
         animatorManager.navigationType = .slide_push
     }
     func touchedLipButton() {
         let categorySearchViewController = CategorySearchViewController()
+        categorySearchViewController.categoryType = CategoryType.lip
         navigationController?.pushViewController(categorySearchViewController, animated: true)
         animatorManager.navigationType = .slide_push
     }
     func touchedHairCareButton() {
         let categorySearchViewController = CategorySearchViewController()
+        categorySearchViewController.categoryType = CategoryType.hairCare
         navigationController?.pushViewController(categorySearchViewController, animated: true)
         animatorManager.navigationType = .slide_push
     }
