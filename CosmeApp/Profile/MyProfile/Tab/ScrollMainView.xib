@@ -26,14 +26,14 @@
                         <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h6B-Xc-l6M">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1sp-zw-FiG">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1sp-zw-FiG" customClass="GoodCollectionView" customModule="CosmeApp" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OTp-xI-1ar">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OTp-xI-1ar" customClass="BookmarkCollectionView" customModule="CosmeApp" customModuleProvider="target">
                                     <rect key="frame" x="414" y="0.0" width="414" height="818"/>
                                     <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KcX-yQ-HHN">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KcX-yQ-HHN" customClass="GenreCollectionView" customModule="CosmeApp" customModuleProvider="target">
                                     <rect key="frame" x="828" y="0.0" width="414" height="818"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 </view>
