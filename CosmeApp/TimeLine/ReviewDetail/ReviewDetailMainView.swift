@@ -13,12 +13,17 @@ import PGFramework
 protocol ReviewDetailMainViewDelegate: NSObjectProtocol{
     func touchedIconViewButton()
     func iconViewButton2()
+    func commentSendButton()
 }
 extension ReviewDetailMainViewDelegate {
 }
 // MARK: - Property
 class ReviewDetailMainView: BaseView, UIScrollViewDelegate {
     weak var delegate: ReviewDetailMainViewDelegate? = nil
+    
+    var commentPostModels : [CommentPostModel]=[CommentPostModel]()
+    var commentPostModel : CommentPostModel = CommentPostModel()
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var iconView: UIButton!
     @IBOutlet weak var pageControl: UIPageControl!
@@ -29,8 +34,8 @@ class ReviewDetailMainView: BaseView, UIScrollViewDelegate {
         if let delegate = delegate {delegate.iconViewButton2()}
     }
     @IBAction func commentSendButton(_ sender: UIButton) {
-        commentTextField.endEditing(true)
-        commentTextField.text = ""
+        if let delegate = delegate {delegate.commentSendButton()}
+        
     }
 }
 // MARK: - Life cycle
@@ -53,6 +58,7 @@ extension ReviewDetailMainView :UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ReviewDetailMainTableViewCell")as? ReviewDetailMainTableViewCell else {return UITableViewCell()}
         cell.delegate = self
+        cell.updateCell(commentPostModel:commentPostModels[indexPath.row])
         return cell
     }
 }
@@ -69,6 +75,10 @@ extension ReviewDetailMainView {
     func setDelegate(){
         tableView.dataSource = self
         imageScrollView.delegate = self
+    }
+    func getModel(commentPostModels:[CommentPostModel]){
+        self.commentPostModels = commentPostModels
+        tableView.reloadData()
     }
     func setLayout(){
         iconView.layer.cornerRadius = iconView.frame.width / 2
