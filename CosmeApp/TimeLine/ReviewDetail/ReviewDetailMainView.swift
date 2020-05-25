@@ -14,6 +14,7 @@ protocol ReviewDetailMainViewDelegate: NSObjectProtocol{
     func touchedIconViewButton()
     func iconViewButton2()
     func commentSendButton()
+    func commentDeleteButton2()
 }
 extension ReviewDetailMainViewDelegate {
 }
@@ -52,7 +53,7 @@ extension ReviewDetailMainView {
 // MARK: - Protocol
 extension ReviewDetailMainView :UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return commentPostModels.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -64,6 +65,10 @@ extension ReviewDetailMainView :UITableViewDataSource{
 }
 
 extension ReviewDetailMainView:ReviewDetailMainTableViewCellDelegate{
+    func commentDeleteButton() {
+        if let delegate = delegate {delegate.commentDeleteButton2()}
+    }
+    
     func iconViewButton() {
         if let delegate = delegate {delegate.touchedIconViewButton()}
     }

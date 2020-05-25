@@ -12,7 +12,7 @@ import PGFramework
 import FirebaseDatabase
 
 class CommentPostModel{
-    fileprivate static let PATH: String = "post"
+    fileprivate static let PATH: String = "commentPost"
     var id  :String = String()
     var description: String = String()
     //ユーザーの情報
@@ -104,7 +104,7 @@ extension CommentPostModel{
 
 //MARK: -Delete
 extension CommentPostModel{
-    static func delete (id:String, success:@escaping () -> Void) {
+    static func delete(id:String, success:@escaping () -> Void) {
         let dbRef = Database.database().reference().child(PATH).child(id)
         dbRef.removeValue{(error,dbRef)in
             if error != nil{

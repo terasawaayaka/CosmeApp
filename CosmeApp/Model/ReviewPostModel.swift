@@ -12,7 +12,7 @@ import FirebaseDatabase
 import FirebaseStorage
 
 class ReviewPostModel{
-    fileprivate static let PATH: String = "post"
+    fileprivate static let PATH: String = "ReviewPost"
     var id  :String = String()
     var title: String = String()
     var category: String = String()

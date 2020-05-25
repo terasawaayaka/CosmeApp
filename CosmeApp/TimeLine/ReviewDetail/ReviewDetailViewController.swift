@@ -12,6 +12,8 @@ import PGFramework
 // MARK: - Property
 class ReviewDetailViewController: BaseViewController {
     
+    var commentPostModel : CommentPostModel = CommentPostModel()
+    
     @IBOutlet weak var headerView: HeaderView!
     @IBOutlet weak var mainView: ReviewDetailMainView!
     @IBOutlet weak var mainViewBottomMergin: NSLayoutConstraint!
@@ -48,6 +50,11 @@ extension ReviewDetailViewController :HeaderViewDelegate{
 }
 
 extension ReviewDetailViewController:ReviewDetailMainViewDelegate {
+    func commentDeleteButton2() {
+        CommentPostModel.delete(id:commentPostModel.id) {
+        }
+    }
+    
     func commentSendButton() {
         let commentPostModel  : CommentPostModel = CommentPostModel()
         if let text = mainView.commentTextField.text{
