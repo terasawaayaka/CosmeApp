@@ -33,6 +33,12 @@ extension CreateMakeViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[.originalImage] as? UIImage {
+            mainView.makeImageView.image = image
+            picker.dismiss(animated: true, completion: nil)
+        }
+    }
 }
 // MARK: - Protocol
 extension CreateMakeViewController:HeaderViewDelegate {
@@ -41,14 +47,60 @@ extension CreateMakeViewController:HeaderViewDelegate {
         animatorManager.navigationType = .slide_pop
     }
     func touchedRightButton(_ sender: UIButton) {
-        let timeLineViewController = TimeLineViewController()
-        navigationController?.pushViewController(timeLineViewController, animated: true)
-        animatorManager.navigationType = .pop
+        let makePostModel: MakePostModel = MakePostModel()
+        if let text = mainView.baseMakeTextView.text {
+            makePostModel.basemake = text
+        }
+        if let text = mainView.highlightTextView.text {
+            makePostModel.highlight = text
+        }
+        if let text = mainView.shadingTextView.text {
+            makePostModel.shading = text
+        }
+        if let text = mainView.eyeshadowTextView.text {
+            makePostModel.eyeshadow = text
+        }
+        if let text = mainView.eyelinerTextView.text {
+            makePostModel.eyeliner = text
+        }
+        if let text = mainView.mascaraTextView.text {
+            makePostModel.mascara = text
+        }
+        if let text = mainView.colorContactTextView.text {
+            makePostModel.colorcontact = text
+        }
+        if let text = mainView.eyebrowTextView.text {
+            makePostModel.eyebrow = text
+            }
+        if let text = mainView.cheekTextView.text {
+            makePostModel.cheek = text
+        }
+        if let text = mainView.lipTextView.text {
+            makePostModel.lip = text
+        }
+        if let text = mainView.skinCareTextView.text {
+            makePostModel.skincare = text
+        }
+        if let text = mainView.hairCareTextView.text {
+            makePostModel.haircare = text
+        }
+        if let text = mainView.processTextView.text {
+            makePostModel.process = text
+        }
+        var images: [UIImage] = []
+        if let image = mainView.makeImageView.image {
+            images.append(image)
+        }
+        MakePostModel.create(request: makePostModel, images: images) {
+            let timeLineViewController = TimeLineViewController()
+            self.navigationController?.pushViewController(timeLineViewController, animated: true)
+            self.animatorManager.navigationType = .pop
+        }
     }
 }
 extension CreateMakeViewController:CreateMakeMainViewDelegate {
     func touchedAddImageButton() {
-        //todo
+        useCamera()
     }
 }
 // MARK: - method
