@@ -33,11 +33,18 @@ extension SignInViewController {
 extension SignInViewController: SingInMainViewDelegate {
     func signInButton() {
         //TimeLineVCへ遷移
-        let timelineViewController = TimeLineViewController()
-        navigationController?.pushViewController(timelineViewController, animated: true)
-        animatorManager.navigationType = .push
+        guard let mail = mainView.mailTextField.text else {return}
+        guard let password = mainView.passwordTextField.text else {return}
+        UserModel.signIn(email: mail, pass: password, failure: { (error) in
+            print("SignInエラー",error)
+        }) {
+            let timelineViewController = TimeLineViewController()
+            self.navigationController?.pushViewController(timelineViewController, animated: true)
+            self.animatorManager.navigationType = .push
+        }
+        
     }
-    
+    //新規登録はこちら
     func touchedSignUpButton() {
         let signUpViewController = SignUpViewController()
         navigationController?.pushViewController(signUpViewController, animated: true)

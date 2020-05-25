@@ -15,8 +15,10 @@ class CreateReviewViewController: BaseViewController {
     @IBOutlet weak var mainView: CreateReviewMainView!
     //Constrains
     @IBOutlet weak var mainViewBottomMargin: NSLayoutConstraint!
+
     
     let items = ["ベースメイク","ハイライト","シェーディング","アイシャドウ","アイライナー","マスカラ","カラコン","アイブロウ","チーク","リップ","スキンケア","ヘアケア","その他"]
+    let loadingView: LoadingView = LoadingView()
 }
 // MARK: - Life cycle
 extension CreateReviewViewController {
@@ -34,6 +36,12 @@ extension CreateReviewViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[.originalImage] as? UIImage {
+            mainView.itemFirstImageVIew.image = image
+            picker.dismiss(animated: true, completion: nil)
+        }
+    }
 }
 // MARK: - Protocol
 extension CreateReviewViewController:HeaderViewDelegate {
@@ -42,9 +50,32 @@ extension CreateReviewViewController:HeaderViewDelegate {
         animatorManager.navigationType = .slide_pop
     }
     func touchedRightButton(_ sender: UIButton) {
-        let timeLineViewController = TimeLineViewController()
-        navigationController?.pushViewController(timeLineViewController, animated: true)
-        animatorManager.navigationType = .pop
+        let reviewPostModel: ReviewPostModel = ReviewPostModel()
+        if let text = mainView.itemTextView.text {
+            reviewPostModel.title = text
+        }
+        if let text = mainView.pickerLabel.text {
+            reviewPostModel.category = text
+        }
+        if let text = mainView.reviewTextView.text {
+            reviewPostModel.review = text
+        }
+        if let text = mainView.tagTextView.text {
+            reviewPostModel.tag = text
+        }
+        var images:[UIImage] = []
+        if let image = mainView.itemFirstImageVIew.image {
+            images.append(image)
+        }
+        //todo imageつなぐ
+        
+        addLoadingView()
+        
+        ReviewPostModel.create(request: reviewPostModel, images: images) {
+            let timeLineViewController = TimeLineViewController()
+            self.navigationController?.pushViewController(timeLineViewController, animated: true)
+            self.animatorManager.navigationType = .pop
+        }
     }
 }
 
@@ -69,7 +100,7 @@ extension CreateReviewViewController:UIPickerViewDelegate {
 
 extension CreateReviewViewController:CreateReviewMainViewDelegate {
     func touchedAddFirstImageButton() {
-        //todo
+        useCamera()
     }
     func touchedAddSecondImageButton() {
         //todo
@@ -112,6 +143,14 @@ extension CreateReviewViewController {
         mainView.pickerView.dataSource = self
         mainView.pickerView.delegate = self
     }
+    func addLoadingView() {
+        loadingView.frame = self.view.frame
+        self.view.addSubview(loadingView)
+    }
+    func removeLoadingView() {
+        loadingView.removeFromSuperview()
+    }
+    
     //キーボードとテキストフィールド以外をタップでキーボードを隠す
     func hideKeybord() {
         let hideTap : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKyeoboardTap))

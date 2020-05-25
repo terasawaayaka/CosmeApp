@@ -18,6 +18,7 @@ extension SignUpViewController {
         super.loadView()
         setDelegate()
         hideKeybord()
+        tabBarController?.tabBar.isHidden = true
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,11 +31,21 @@ extension SignUpViewController {
 extension SignUpViewController:SignUpMainViewDelegate {
     func signUpButton() {
         //TimeLineVCに遷移
-        let timelineViewController = TimeLineViewController()
-        navigationController?.pushViewController(timelineViewController, animated: true)
-        animatorManager.navigationType = .push
+        let userModel: UserModel = UserModel()
+        userModel.nickname = mainView.userNameTextField.text
+        userModel.mail = mainView.mailTextField.text
+        userModel.password = mainView.passwordTextField.text
+        
+        UserModel.create(request: userModel, success: {
+            let timelineViewController = TimeLineViewController()
+            self.navigationController?.pushViewController(timelineViewController, animated: true)
+            self.animatorManager.navigationType = .push
+        }, failure: { (error) in
+            print("SignUpエラー",error)
+        })
+        
     }
-    
+    //ログインはこちら
     func touchedSignInButton() {
         let signInViewController = SignInViewController()
         navigationController?.pushViewController(signInViewController, animated: true)

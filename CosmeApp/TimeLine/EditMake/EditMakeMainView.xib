@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,7 +20,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8xY-cO-qpg">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="1013"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="M5c-Is-hTv">
                                             <rect key="frame" x="41.5" y="50" width="331" height="331"/>
@@ -46,7 +46,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="d3U-XR-pDP">
-                                            <rect key="frame" x="30" y="910" width="354" height="80"/>
+                                            <rect key="frame" x="30" y="910" width="354" height="33"/>
                                             <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="jxx-RP-wbY"/>
@@ -259,6 +259,16 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4of-wu-c7I">
+                                            <rect key="frame" x="157" y="973" width="100" height="30"/>
+                                            <color key="backgroundColor" red="0.74048776390000004" green="0.74497202009999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="100" id="fu4-6y-o1H"/>
+                                            </constraints>
+                                            <state key="normal" title="投稿を削除">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     <constraints>
@@ -267,8 +277,10 @@
                                         <constraint firstAttribute="trailing" secondItem="Sg3-V4-wyg" secondAttribute="trailing" constant="30" id="2Gr-NE-C24"/>
                                         <constraint firstAttribute="trailing" secondItem="014-CM-MQ4" secondAttribute="trailing" constant="30" id="2rh-ct-Ll0"/>
                                         <constraint firstItem="4fx-II-Xbw" firstAttribute="top" secondItem="UqL-mJ-Hef" secondAttribute="bottom" constant="8" id="3oG-uD-Y2y"/>
+                                        <constraint firstAttribute="bottom" secondItem="4of-wu-c7I" secondAttribute="bottom" constant="10" id="3v3-BS-ooe"/>
                                         <constraint firstItem="Sqy-QU-IKM" firstAttribute="top" secondItem="3zx-Ne-ai0" secondAttribute="bottom" constant="8" id="45L-jw-A5u"/>
                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1000" id="4Fj-oS-FQQ"/>
+                                        <constraint firstItem="4of-wu-c7I" firstAttribute="top" secondItem="d3U-XR-pDP" secondAttribute="bottom" constant="30" id="5f3-tr-0nm"/>
                                         <constraint firstAttribute="trailing" secondItem="JXa-Hu-KVQ" secondAttribute="trailing" constant="30" id="6Gz-1P-wPW"/>
                                         <constraint firstItem="dqb-cO-aNY" firstAttribute="top" secondItem="Gxo-ij-Vvj" secondAttribute="bottom" constant="8" id="6Qm-Cv-4fk"/>
                                         <constraint firstItem="yPc-TZ-o0V" firstAttribute="top" secondItem="Lwt-P2-YEF" secondAttribute="bottom" constant="8" id="6mg-de-DWP"/>
@@ -279,7 +291,6 @@
                                         <constraint firstAttribute="trailing" secondItem="dqb-cO-aNY" secondAttribute="trailing" constant="30" id="8ZZ-Yi-QLs"/>
                                         <constraint firstItem="M5c-Is-hTv" firstAttribute="width" secondItem="8xY-cO-qpg" secondAttribute="width" multiplier="0.8" id="8mJ-dK-fLh"/>
                                         <constraint firstItem="jP5-sS-fyn" firstAttribute="leading" secondItem="8xY-cO-qpg" secondAttribute="leading" constant="30" id="8tz-ws-ZJX"/>
-                                        <constraint firstAttribute="bottom" secondItem="d3U-XR-pDP" secondAttribute="bottom" constant="10" id="CDy-66-DqQ"/>
                                         <constraint firstItem="J44-M4-lOP" firstAttribute="top" secondItem="IUe-OZ-FUM" secondAttribute="bottom" constant="8" id="CQQ-MK-etL"/>
                                         <constraint firstItem="ANx-M8-pi7" firstAttribute="top" secondItem="Ebh-19-eBy" secondAttribute="bottom" constant="15" id="Cks-uE-zHJ"/>
                                         <constraint firstItem="d3U-XR-pDP" firstAttribute="top" secondItem="cYc-RG-PoU" secondAttribute="bottom" constant="12.5" id="D9S-m4-sgH"/>
@@ -315,6 +326,7 @@
                                         <constraint firstItem="UqL-mJ-Hef" firstAttribute="top" secondItem="c7V-Ze-RbR" secondAttribute="bottom" constant="8" id="hYC-wD-i5Q"/>
                                         <constraint firstItem="jpT-Pg-Fhh" firstAttribute="top" secondItem="Ubv-ui-Xyk" secondAttribute="bottom" constant="63" id="hrv-QY-bFi"/>
                                         <constraint firstItem="zas-En-ELM" firstAttribute="top" secondItem="a1Y-qq-meo" secondAttribute="bottom" constant="8" id="iLK-CG-aod"/>
+                                        <constraint firstItem="4of-wu-c7I" firstAttribute="centerX" secondItem="8xY-cO-qpg" secondAttribute="centerX" id="ikp-Ud-S95"/>
                                         <constraint firstAttribute="trailing" secondItem="jpT-Pg-Fhh" secondAttribute="trailing" constant="30" id="ltE-xf-Gt7"/>
                                         <constraint firstAttribute="trailing" secondItem="d3U-XR-pDP" secondAttribute="trailing" constant="30" id="mF8-BF-hvS"/>
                                         <constraint firstItem="Lwt-P2-YEF" firstAttribute="top" secondItem="oZn-PM-CX1" secondAttribute="bottom" constant="8" id="mY7-PE-cri"/>
