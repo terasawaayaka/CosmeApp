@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="5u0-Yc-YeG" customClass="SecondGenreCollectionViewCell" customModule="CosmeApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="115" height="115"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="94g-kO-xwX">
+                <rect key="frame" x="0.0" y="0.0" width="115" height="115"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hEd-XU-LdT">
+                        <rect key="frame" x="0.0" y="0.0" width="115" height="115"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EyeLiner" translatesAutoresizingMaskIntoConstraints="NO" id="Tog-SE-u7B">
+                                <rect key="frame" x="0.0" y="0.0" width="115" height="115"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Tog-SE-u7B" secondAttribute="trailing" id="0nI-4y-jup"/>
+                            <constraint firstItem="Tog-SE-u7B" firstAttribute="top" secondItem="hEd-XU-LdT" secondAttribute="top" id="6Ce-fT-rD4"/>
+                            <constraint firstAttribute="bottom" secondItem="Tog-SE-u7B" secondAttribute="bottom" id="AWs-IP-NaJ"/>
+                            <constraint firstAttribute="width" secondItem="hEd-XU-LdT" secondAttribute="height" multiplier="1:1" id="GDO-s6-vUM"/>
+                            <constraint firstItem="Tog-SE-u7B" firstAttribute="leading" secondItem="hEd-XU-LdT" secondAttribute="leading" id="k8J-Mg-LwV"/>
+                            <constraint firstAttribute="height" constant="115" id="po1-q6-5mL"/>
+                            <constraint firstAttribute="width" constant="115" id="ukx-VB-LVb"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="hEd-XU-LdT" firstAttribute="leading" secondItem="94g-kO-xwX" secondAttribute="leading" id="2NV-Hw-wn9"/>
+                    <constraint firstAttribute="trailing" secondItem="hEd-XU-LdT" secondAttribute="trailing" id="NLz-en-Dto"/>
+                    <constraint firstAttribute="bottom" secondItem="hEd-XU-LdT" secondAttribute="bottom" id="cRb-a6-n0U"/>
+                    <constraint firstItem="hEd-XU-LdT" firstAttribute="top" secondItem="94g-kO-xwX" secondAttribute="top" id="oLX-0p-xnO"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="115" height="115"/>
+            <point key="canvasLocation" x="268.84057971014494" y="43.191964285714285"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="EyeLiner" width="700" height="706"/>
+    </resources>
+</document>

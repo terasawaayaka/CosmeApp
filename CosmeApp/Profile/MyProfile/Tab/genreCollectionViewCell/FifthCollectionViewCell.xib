@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="abz-7A-xst" customClass="FifthCollectionViewCell" customModule="CosmeApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="115" height="115"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="fGL-LA-82j">
+                <rect key="frame" x="0.0" y="0.0" width="115" height="115"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Cq-i1-8Ca">
+                        <rect key="frame" x="0.0" y="0.0" width="115" height="115"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EyeBrow" translatesAutoresizingMaskIntoConstraints="NO" id="avz-Cd-PqW">
+                                <rect key="frame" x="0.0" y="0.0" width="115" height="115"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="avz-Cd-PqW" secondAttribute="trailing" id="Awc-Bq-c6w"/>
+                            <constraint firstAttribute="height" constant="115" id="J5G-OV-Gtq"/>
+                            <constraint firstAttribute="width" secondItem="4Cq-i1-8Ca" secondAttribute="height" multiplier="1:1" id="O6A-hA-Ijy"/>
+                            <constraint firstItem="avz-Cd-PqW" firstAttribute="leading" secondItem="4Cq-i1-8Ca" secondAttribute="leading" id="XLz-Vt-MTt"/>
+                            <constraint firstAttribute="bottom" secondItem="avz-Cd-PqW" secondAttribute="bottom" id="dJs-bI-yYL"/>
+                            <constraint firstAttribute="width" constant="115" id="hDg-uq-EcQ"/>
+                            <constraint firstItem="avz-Cd-PqW" firstAttribute="top" secondItem="4Cq-i1-8Ca" secondAttribute="top" id="uE0-cn-FCb"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="4Cq-i1-8Ca" secondAttribute="bottom" id="6UZ-4P-RX6"/>
+                    <constraint firstAttribute="trailing" secondItem="4Cq-i1-8Ca" secondAttribute="trailing" id="EKk-iu-JSD"/>
+                    <constraint firstItem="4Cq-i1-8Ca" firstAttribute="top" secondItem="fGL-LA-82j" secondAttribute="top" id="SkV-fS-rva"/>
+                    <constraint firstItem="4Cq-i1-8Ca" firstAttribute="leading" secondItem="fGL-LA-82j" secondAttribute="leading" id="YR6-35-wpn"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="115" height="115"/>
+            <point key="canvasLocation" x="83.333333333333343" y="-243.41517857142856"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="EyeBrow" width="700" height="706"/>
+    </resources>
+</document>
