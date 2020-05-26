@@ -10,6 +10,7 @@ import UIKit
 import PGFramework
 // MARK: - Property
 class SignInViewController: BaseViewController {
+
     @IBOutlet weak var mainView: SingInMainView!
     
     //constrans

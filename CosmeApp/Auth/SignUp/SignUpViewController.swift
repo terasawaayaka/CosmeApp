@@ -30,7 +30,7 @@ extension SignUpViewController {
 // MARK: - Protocol
 extension SignUpViewController:SignUpMainViewDelegate {
     func signUpButton() {
-        //TimeLineVCに遷移
+        //SignUpとTimeLineVCに遷移
         let userModel: UserModel = UserModel()
         userModel.nickname = mainView.userNameTextField.text
         userModel.mail = mainView.mailTextField.text
@@ -40,10 +40,9 @@ extension SignUpViewController:SignUpMainViewDelegate {
             let timelineViewController = TimeLineViewController()
             self.navigationController?.pushViewController(timelineViewController, animated: true)
             self.animatorManager.navigationType = .push
-        }, failure: { (error) in
+        }) { (error) in
             print("SignUpエラー",error)
-        })
-        
+        }
     }
     //ログインはこちら
     func touchedSignInButton() {
