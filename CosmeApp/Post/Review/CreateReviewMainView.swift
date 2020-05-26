@@ -51,6 +51,12 @@ class CreateReviewMainView: BaseView {
         }
     }
    
+    @IBOutlet weak var firstStarButton: UIButton!
+    @IBOutlet weak var secondStarButton: UIButton!
+    @IBOutlet weak var thirdStarButton: UIButton!
+    @IBOutlet weak var fourthStarButton: UIButton!
+    @IBOutlet weak var fifthStarButton: UIButton!
+    
     @IBAction func firstStarButton(_ sender: UIButton) {
         if let delegate = delegate {
             delegate.firstStarButton()
@@ -82,18 +88,38 @@ class CreateReviewMainView: BaseView {
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var reviewTextView: UITextView!
     @IBOutlet weak var tagTextView: UITextView!
+    
+    var isFirstStarSelected: Bool = false
+    var isSecondStarSelected: Bool = false
+    var isThirdStarSelected: Bool = false
+    var isFourthStarSelected: Bool = false
+    var isFifthStarSelected: Bool = false
 }
 // MARK: - Life cycle
 extension CreateReviewMainView {
     override func awakeFromNib() {
         super.awakeFromNib()
+
     }
 }
 // MARK: - Protocol
 extension CreateReviewMainView {
-    
 }
 
 // MARK: - method
 extension CreateReviewMainView {
+    func updateStar() {
+        if isFifthStarSelected {
+            firstStarButton.setTitleColor(#colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1), for: .normal)
+        } else {
+            firstStarButton.setTitleColor(#colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1), for: .normal)
+        }
+        if isSecondStarSelected {
+            let image = UIImage(named: "star")
+            secondStarButton.setBackgroundImage(image, for: .normal)
+        } else {
+            let image = UIImage(named: "checkedStar")
+            secondStarButton.setImage(image, for: .normal)
+        }
+    }
 }
