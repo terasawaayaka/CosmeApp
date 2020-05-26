@@ -9,8 +9,16 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditReviewMainView" customModule="CosmeApp" customModuleProvider="target">
             <connections>
+                <outlet property="categoryLabel" destination="UfL-gS-Sb8" id="q6d-gk-bZf"/>
+                <outlet property="firstImageView" destination="Qm8-8Q-cYF" id="EgZ-vN-Z8C"/>
+                <outlet property="fourthImageView" destination="Qa3-Ll-p8t" id="8aW-DZ-DVT"/>
                 <outlet property="pickerView" destination="DvM-a1-0tQ" id="Pu2-MK-0bu"/>
                 <outlet property="pickerViewLabel" destination="UfL-gS-Sb8" id="iLJ-Sd-jNq"/>
+                <outlet property="reviewTextField" destination="uKU-QL-0mZ" id="hAi-TE-AsO"/>
+                <outlet property="secondImageView" destination="1g2-E3-7fb" id="6jx-vz-IzY"/>
+                <outlet property="tagTextField" destination="rHn-7h-A5z" id="Oho-hg-3Ml"/>
+                <outlet property="thirdImageView" destination="1g2-E3-7fb" id="alf-Vz-huu"/>
+                <outlet property="titleTextField" destination="cAt-Ic-Be5" id="aq0-jN-buk"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -190,6 +198,9 @@
                                             <state key="normal" title="投稿を削除">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
+                                            <connections>
+                                                <action selector="postDeleteButton:" destination="-1" eventType="touchUpInside" id="lsP-0A-DVj"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

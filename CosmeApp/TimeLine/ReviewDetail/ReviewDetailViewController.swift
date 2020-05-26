@@ -34,6 +34,7 @@ extension ReviewDetailViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        reviewGetModel()
         getModel()
         updateView2()
     }
@@ -46,8 +47,9 @@ extension ReviewDetailViewController :HeaderViewDelegate{
     }
     func touchedRightButton(_ sender: UIButton) {
         let editReviewViewController = EditReviewViewController()
-        navigationController?.pushViewController(editReviewViewController, animated: true)
-        animatorManager.navigationType = .slide_push
+        editReviewViewController.reviewPostModel = reviewPostModel
+        editReviewViewController.modalPresentationStyle = .fullScreen
+        present(editReviewViewController, animated: true, completion: nil)
     }
 }
 
@@ -94,9 +96,17 @@ extension ReviewDetailViewController {
             self.mainView.getModel(commentPostModels: commentPostModels)
         }
     }
+    func reviewGetModel(){
+        ReviewPostModel.readAt(id: reviewPostModel.id, success: { (reviewPostModel) in
+            self.reviewPostModel = reviewPostModel
+        }) {
+            self.navigationController?.popViewController(animated: true)
+            self.animatorManager.navigationType = .slide_pop
+        }
+    }
     func updateView2(){
-        mainView.titleLabel.text = reviewPostModel.title
-        mainView.categoryLabel.text = reviewPostModel.category
+        mainView.titleLabel.text = "商品名：　" + reviewPostModel.title
+        mainView.categoryLabel.text = "カテゴリ：　" + reviewPostModel.category
         mainView.reviewLabel.text = reviewPostModel.review
         mainView.tagLabel.text = reviewPostModel.tag
     }
