@@ -9,16 +9,23 @@
 import UIKit
 import PGFramework
 protocol EditProfileMainViewDelegate: NSObjectProtocol{
+    func touchedEditIconViewButton()
+    func touchedLogoutButton()
 }
 extension EditProfileMainViewDelegate {
 }
 // MARK: - Property
 class EditProfileMainView: BaseView {
     weak var delegate: EditProfileMainViewDelegate? = nil
-    @IBAction func editIconView(_ sender: UIButton) {
+    @IBAction func touchedEditIconViewButton(_ sender: UIButton) {
+        if let delegate = delegate{delegate.touchedEditIconViewButton()}
     }
+    @IBAction func touchedLogoutButton(_ sender: UIButton) {
+        if let delegate = delegate{delegate.touchedLogoutButton()}
+    }
+    
+    
     @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var introductionTextField: UITextField!
 }
 // MARK: - Life cycle
 extension EditProfileMainView {
