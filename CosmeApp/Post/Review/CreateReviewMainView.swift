@@ -109,17 +109,40 @@ extension CreateReviewMainView {
 // MARK: - method
 extension CreateReviewMainView {
     func updateStar() {
-        if isFifthStarSelected {
-            firstStarButton.setTitleColor(#colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1), for: .normal)
-        } else {
-            firstStarButton.setTitleColor(#colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1), for: .normal)
+        if isFirstStarSelected {
+          let image = UIImage(named: "checkedStar")
+              firstStarButton.setImage(image, for: .normal)
+          } else {
+              let image = UIImage(named: "star")
+              firstStarButton.setImage(image, for: .normal)
         }
         if isSecondStarSelected {
-            let image = UIImage(named: "star")
-            secondStarButton.setBackgroundImage(image, for: .normal)
-        } else {
             let image = UIImage(named: "checkedStar")
             secondStarButton.setImage(image, for: .normal)
+        } else {
+            let image = UIImage(named: "star")
+            secondStarButton.setImage(image, for: .normal)
+        }
+        if isThirdStarSelected {
+            let image = UIImage(named: "checkedStar")
+            thirdStarButton.setImage(image, for: .normal)
+        } else {
+            let image = UIImage(named: "star")
+            thirdStarButton.setImage(image, for: .normal)
+        }
+        if isFourthStarSelected {
+            let image = UIImage(named: "checkedStar")
+            fourthStarButton.setImage(image, for: .normal)
+        } else {
+            let image = UIImage(named: "star")
+            fourthStarButton.setImage(image, for: .normal)
+        }
+        if isFifthStarSelected {
+            let image = UIImage(named: "checkedStar")
+            fifthStarButton.setImage(image, for: .normal)
+        } else {
+            let image = UIImage(named: "star")
+            fifthStarButton.setImage(image, for: .normal)
         }
     }
 }
