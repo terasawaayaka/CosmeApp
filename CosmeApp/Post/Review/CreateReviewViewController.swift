@@ -152,22 +152,27 @@ extension CreateReviewViewController:CreateReviewMainViewDelegate {
         useCamera()
     }
     func firstStarButton() {
-        //todo
+        mainView.isFirstStarSelected = !mainView.isFirstStarSelected
+        mainView.updateStar()
     }
     func secondStarButton() {
-        //todo
+        mainView.isSecondStarSelected = !mainView.isSecondStarSelected
+        mainView.updateStar()
     }
     
     func thirdStarButton() {
-        //todo
+        mainView.isThirdStarSelected = !mainView.isThirdStarSelected
+        mainView.updateStar()
     }
     
     func fourthStarButton() {
-        //todo
+        mainView.isFourthStarSelected = !mainView.isFourthStarSelected
+        mainView.updateStar()
     }
     
     func fifthStarButton() {
-        //todo
+        mainView.isFifthStarSelected = !mainView.isFifthStarSelected
+        mainView.updateStar()
     }
 }
 // MARK: - method
