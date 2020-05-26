@@ -19,11 +19,7 @@ class ReviewPostModel{
     var review: String = String()
     var tag: String = String()
     var image_paths: [String] = [String]()
-    var firstStar: String = String()
-    var secondStar: String = String()
-    var thirdStar: String = String()
-    var fourthStar: String = String()
-    var fifthStar: String = String()
+    var review_num: Int = Int() //星の数
     
     //ユーザーの情報
     var post_user_name: String = String()
@@ -41,11 +37,7 @@ extension ReviewPostModel{
         if let category = data["category"]as? String{model.category = category}
         if let tag = data["tag"]as? String{model.tag = tag}
         if let image_paths = data["image_paths"]as? [String]{model.image_paths = image_paths}
-        if let firstStar = data["firstStar"]as? String{model.firstStar = firstStar}
-        if let secondStar = data["secondStar"]as? String{model.secondStar = secondStar}
-        if let thirdStar = data["thirdStar"]as? String{model.thirdStar = thirdStar}
-        if let fourthStar = data["fourthStar"]as? String{model.fourthStar = fourthStar}
-        if let fifthStar = data["fifthStar"]as? String{model.fifthStar = fifthStar}
+        if let review_num = data["review_num"]as? Int{model.review_num = review_num}
         return model
     }
     
@@ -59,11 +51,7 @@ extension ReviewPostModel{
         parameter["category"] = request.category
         parameter["tag"] = request.tag
         parameter["image_paths"] = request.image_paths
-        parameter["firstStar"] = request.firstStar
-        parameter["secondStar"] = request.secondStar
-        parameter["thirdStar"] = request.thirdStar
-        parameter["fourthStar"] = request.fourthStar
-        parameter["fifthStar"] = request.fifthStar
+        parameter["review_num"] = request.review_num
         return parameter
     }
     
