@@ -18,6 +18,8 @@ class TagSearchResultMainView: BaseView {
     weak var delegate: TagSearchResultMainViewDelegate? = nil
     @IBOutlet weak var tagCollectionView: UICollectionView!
     @IBOutlet weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
+    
+    var reviewPostModels: [ReviewPostModel] = [ReviewPostModel]()
 }
 // MARK: - Life cycle
 extension TagSearchResultMainView {
@@ -32,12 +34,13 @@ extension TagSearchResultMainView {
 // MARK: - Protocol
 extension TagSearchResultMainView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return reviewPostModels.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchResultCollectionViewCell", for: indexPath)as? SearchResultCollectionViewCell else {return UICollectionViewCell()}
         cell.delegate = self
+        cell.updateReviewCell(reviewPostModel: reviewPostModels[indexPath.row])
         return cell
     }
 }
@@ -51,6 +54,10 @@ extension TagSearchResultMainView: SearchResultCollectionViewCellDelegate {
 extension TagSearchResultMainView {
     func setDelegate(){
         tagCollectionView.dataSource = self
+    }
+    func getReviewPostModel(reviewPostModels: [ReviewPostModel]){
+        self.reviewPostModels = reviewPostModels
+        tagCollectionView.reloadData()
     }
 }
 

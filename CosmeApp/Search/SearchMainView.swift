@@ -74,8 +74,11 @@ class SearchMainView: BaseView {
         if let delegate = delegate {
             delegate.touchedBrandButton()}
     }
+    //Models
     var userModels: [UserModel] = [UserModel]()
+    var reviewPostModels: [ReviewPostModel] = [ReviewPostModel]()
 }
+
 
 extension SearchMainView: SearchResultMainViewDelegate {
     func touchedEyeShadowButton() {
@@ -214,5 +217,10 @@ extension SearchMainView {
         self.userModels = userModels
         userResultView.getModel(userModels: userModels)
     }
+    func getReviewPostModel(reviewPostModels: [ReviewPostModel]){
+        self.reviewPostModels = reviewPostModels
+        tagResultView.getReviewPostModel(reviewPostModels: reviewPostModels)
+    }
+    
 }
 

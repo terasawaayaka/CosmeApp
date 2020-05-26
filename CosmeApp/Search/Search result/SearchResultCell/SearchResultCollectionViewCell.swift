@@ -17,7 +17,8 @@ extension SearchResultCollectionViewCellDelegate {
 class SearchResultCollectionViewCell: BaseCollectionViewCell {
     weak var delegate: SearchResultCollectionViewCellDelegate? = nil
     @IBOutlet weak var imaveView: UIImageView!
-    @IBOutlet weak var productNameLabel: NSLayoutConstraint!
+
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var cellWidth: NSLayoutConstraint!
     @IBAction func touchedCellButton(_ sender: UIButton) {
         if let delegate = delegate{
@@ -40,6 +41,10 @@ extension SearchResultCollectionViewCell {
     func updateCell(){
         let cellWidthConstant = UIScreen.main.bounds.size.width - 40
         cellWidth.constant = cellWidthConstant / 3
+    }
+    
+    func updateReviewCell(reviewPostModel: ReviewPostModel){
+        nameLabel.text = reviewPostModel.title
     }
 }
 

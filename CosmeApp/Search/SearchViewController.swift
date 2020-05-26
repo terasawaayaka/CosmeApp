@@ -29,6 +29,7 @@ extension SearchViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         getModel()
+        getReviewPostModel()
     }
 }
 // MARK: - Protocol
@@ -192,6 +193,13 @@ extension SearchViewController {
 //            for userModel in userModels {
 //            print("ユーザーネーム:", userModel.nickname)
 //            }
+        }
+    }
+    func getReviewPostModel(){
+        ReviewPostModel.reads { (reviewPostModels) in
+//            for reviewPostModel in reviewPostModels {
+//                print("DESC: ",reviewPostModel.title) }
+            self.mainView.getReviewPostModel(reviewPostModels: reviewPostModels)
         }
     }
     
