@@ -38,5 +38,8 @@ extension SearchUserResultTableViewCell {
     func setLayout(){
         profileImageView.layer.cornerRadius = profileImageView.frame.height / 2
     }
+    func updateCell(userModel: UserModel){
+        userNameLabel.text = userModel.nickname
+    }
 }
 
