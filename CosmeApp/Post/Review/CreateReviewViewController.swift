@@ -91,6 +91,20 @@ extension CreateReviewViewController:HeaderViewDelegate {
         if let text = mainView.tagTextView.text {
             reviewPostModel.tag = text
         }
+        
+        if mainView.isFirstStarSelected == true && mainView.isSecondStarSelected == true && mainView.isThirdStarSelected == true && mainView.isFourthStarSelected == true && mainView.isFifthStarSelected == true {
+            reviewPostModel.review_num = 5
+        } else if mainView.isFirstStarSelected == true && mainView.isSecondStarSelected == true && mainView.isThirdStarSelected == true && mainView.isFourthStarSelected == true {
+            reviewPostModel.review_num = 4
+        } else if mainView.isFirstStarSelected == true && mainView.isSecondStarSelected == true && mainView.isThirdStarSelected == true {
+            reviewPostModel.review_num = 3
+        } else if mainView.isFirstStarSelected == true && mainView.isSecondStarSelected == true {
+            reviewPostModel.review_num = 2
+        } else if mainView.isFirstStarSelected == true {
+            reviewPostModel.review_num = 1
+        }
+        
+        
         var images:[UIImage] = []
         if let image = mainView.itemFirstImageVIew.image {
             images.append(image)
