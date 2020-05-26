@@ -15,6 +15,8 @@ class EditReviewViewController: BaseViewController {
     @IBOutlet weak var mainView: EditReviewMainView!
     @IBOutlet weak var mainViewBottomMergin: NSLayoutConstraint!
     
+    var reviewPostModel : ReviewPostModel = ReviewPostModel()
+    
     let items = ["ベースメイク", "シェーディング", "ハイライト", "チーク", "アイシャドウ","アイライン","マスカラ","カラコン","アイブロウ","リップ","ヘアケア","スキンケア","その他"]
 }
 
@@ -33,18 +35,45 @@ extension EditReviewViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        giveModel()
     }
 }
 // MARK: - Protocol
 extension EditReviewViewController :HeaderViewDelegate{
     func touchedLeftButton(_ sender: UIButton) {
-        navigationController?.popViewController(animated: true)
-        animatorManager.navigationType = .slide_pop
+        dismiss(animated: true, completion: nil)
     }
     func touchedRightButton(_ sender: UIButton) {
-        navigationController?.popViewController(animated: true)
-        animatorManager.navigationType = .slide_pop
+        if let text = mainView.titleTextField.text {
+            reviewPostModel.title = text
+        }
+        if let text = mainView.categoryLabel.text{
+            reviewPostModel.category = text
+        }
+        if let text = mainView.reviewTextField.text {
+            reviewPostModel.review = text
+        }
+        if let text = mainView.tagTextField.text {
+            reviewPostModel.tag = text
+        }
+        var images : [UIImage] = []
+        if let image = mainView.firstImageView.image{
+            images.append(image)
+        }
+        ReviewPostModel.update(request: reviewPostModel, images: images) {
+            self.dismiss(animated: true, completion: nil)
+        }
     }
+}
+
+extension EditReviewViewController:EditReviewMainViewDelegate{
+    func postDeleteButton() {
+        ReviewPostModel.delete(id: reviewPostModel.id) {
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    
 }
 
 extension EditReviewViewController:UIPickerViewDataSource{
@@ -75,10 +104,16 @@ extension EditReviewViewController {
     }
     func setDelegate(){
         headerView.delegate = self
+        mainView.delegate = self
         mainView.pickerView.dataSource = self
         mainView.pickerView.delegate = self
-        
     }
+    func giveModel(){
+        mainView.updateReview(reviewPostModel:reviewPostModel)
+    }
+    
+    
+    
     //キーボードとテキストフィールド以外をタップでキーボードを隠す
     func hideKeybord() {
         let hideTap : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKyeoboardTap))
