@@ -13,6 +13,8 @@ import PGFramework
 class SearchViewController: BaseViewController {
     @IBOutlet weak var searchTextView: SearchTextView!
     @IBOutlet weak var mainView: SearchMainView!
+    
+    var userModels: [UserModel] = [UserModel]()
 }
 // MARK: - Life cycle
 extension SearchViewController {
@@ -26,6 +28,7 @@ extension SearchViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        getModel()
     }
 }
 // MARK: - Protocol
@@ -42,6 +45,8 @@ extension SearchViewController: SearchTextViewDelegate {
     }
 }
 extension SearchViewController: SearchMainViewDelegate {
+    
+    //タグとかユーザーとかのセルをタッチしたら詳細画面へ遷移する
     func touchedUserCellButton() {
         let searchUserResultViewController = SearchUserSelectResultViewController()
         navigationController?.pushViewController(searchUserResultViewController, animated: true)
@@ -66,7 +71,7 @@ extension SearchViewController: SearchMainViewDelegate {
         animatorManager.navigationType = .slide_push
     }
     
-   
+//カテゴリ分けしたアイシャドウとかベースメイクとかボタン
     func touchedEyeShadowButton() {
         let categorySearchViewController = CategorySearchViewController()
         categorySearchViewController.categoryType = CategoryType.eyeShadow
@@ -139,8 +144,10 @@ extension SearchViewController: SearchMainViewDelegate {
         navigationController?.pushViewController(categorySearchViewController, animated: true)
         animatorManager.navigationType = .slide_push
     }
+    
+    //タグとかユーザーとかのボタンを押した結果画面の表示
     func touchedTagButton() {
-        //SearchMainViewのView２がタグ検索結果Viewを表示
+        //SearchMainViewがタグ検索結果Viewを表示
         mainView.tagResultView.isHidden = false
         mainView.userResultView.isHidden = true
         mainView.productNameResultView.isHidden = true
@@ -148,6 +155,7 @@ extension SearchViewController: SearchMainViewDelegate {
         mainView.searchResultMainView.isHidden = true
     }
     func touchedUserButton() {
+        
         //SearchMainViewのView２がユーザー検索結果Viewを表示
         mainView.userResultView.isHidden = false
         mainView.tagResultView.isHidden = true
@@ -177,6 +185,14 @@ extension SearchViewController {
     func setDelegate(){
         searchTextView.delegate = self
         mainView.delegate = self
+    }
+    func getModel(){
+        UserModel.reads { userModels in
+            self.mainView.getModel(userModels: userModels)
+//            for userModel in userModels {
+//            print("ユーザーネーム:", userModel.nickname)
+//            }
+        }
     }
     
     func hideKeybord() {

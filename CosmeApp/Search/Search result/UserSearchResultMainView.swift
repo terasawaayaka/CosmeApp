@@ -17,6 +17,8 @@ extension UserSearchResultMainViewDelegate {
 class UserSearchResultMainView: BaseView {
     weak var delegate: UserSearchResultMainViewDelegate? = nil
     @IBOutlet weak var userTableView: UITableView!
+    
+    var userModels: [UserModel] = [UserModel]()
 }
 // MARK: - Life cycle
 extension UserSearchResultMainView {
@@ -30,12 +32,13 @@ extension UserSearchResultMainView {
 // MARK: - Protocol
 extension UserSearchResultMainView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return userModels.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "SearchUserResultTableViewCell", for: indexPath)as? SearchUserResultTableViewCell else {return UITableViewCell()}
         cell.delegate = self
+        cell.updateCell(userModel: userModels[indexPath.row])
         return cell
     }
 }
@@ -49,6 +52,10 @@ extension UserSearchResultMainView: SearchUserResultTableViewCellDelegate {
 extension UserSearchResultMainView {
     func setDelegate(){
         userTableView.dataSource = self
+    }
+    func getModel(userModels: [UserModel]){
+        self.userModels = userModels
+        userTableView.reloadData()
     }
 }
 

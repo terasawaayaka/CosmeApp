@@ -74,6 +74,7 @@ class SearchMainView: BaseView {
         if let delegate = delegate {
             delegate.touchedBrandButton()}
     }
+    var userModels: [UserModel] = [UserModel]()
 }
 
 extension SearchMainView: SearchResultMainViewDelegate {
@@ -208,6 +209,10 @@ extension SearchMainView {
         brandResultView.delegate = self
         productNameResultView.delegate = self
         userResultView.delegate = self
+    }
+    func getModel(userModels: [UserModel]){
+        self.userModels = userModels
+        userResultView.getModel(userModels: userModels)
     }
 }
 
