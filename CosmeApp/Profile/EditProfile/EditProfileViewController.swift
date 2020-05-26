@@ -31,14 +31,30 @@ extension EditProfileViewController {
 // MARK: - Protocol
 extension EditProfileViewController :HeaderViewDelegate{
     func touchedLeftButton(_ sender: UIButton) {
-        navigationController?.popViewController(animated: true)
-        animatorManager.navigationType = .slide_pop
+        dismiss(animated: true, completion: nil)
     }
+    func touchedRightButton(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
+}
+extension EditProfileViewController :EditProfileMainViewDelegate{
+    func touchedEditIconViewButton() {
+        
+    }
+    
+    func touchedLogoutButton() {
+        UserModel.logOut {
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    
 }
 // MARK: - method
 extension EditProfileViewController {
     func setDelegate() {
         headerView.delegate = self
+        mainView.delegate = self
     }
     func setHeaderView() {
         headerView.setLeft(text: "キャンセル",fontSize: 15,color:#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))

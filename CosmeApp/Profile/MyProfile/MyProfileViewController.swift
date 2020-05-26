@@ -9,6 +9,7 @@
 import UIKit
 
 import PGFramework
+import FirebaseAuth
 // MARK: - Property
 class MyProfileViewController: BaseViewController{
     @IBOutlet weak var mainView: MyProfileMainView!
@@ -24,14 +25,18 @@ extension MyProfileViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        if Auth.auth().currentUser == nil {
+            let signUpViewController = SignUpViewController()
+            navigationController?.pushViewController(signUpViewController, animated: false)
+        }
     }
 }
 // MARK: - Protocol
 extension MyProfileViewController :MyProfileMainViewDelegate{
     func editProfileButton() {
         let editProfileViewController = EditProfileViewController()
-        navigationController?.pushViewController(editProfileViewController, animated: true)
-        animatorManager.navigationType = .slide_push
+        editProfileViewController.modalPresentationStyle = .fullScreen
+        present(editProfileViewController, animated: true, completion: nil)
     }
     
     func touchedGoodButton() {
