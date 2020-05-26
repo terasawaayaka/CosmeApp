@@ -75,6 +75,7 @@
             <connections>
                 <outlet property="cellWidth" destination="HjH-uC-h0h" id="un3-8f-yvo"/>
                 <outlet property="imaveView" destination="ABk-Yb-Fo2" id="mTg-gc-1dr"/>
+                <outlet property="nameLabel" destination="Y0T-g2-hSX" id="V49-7A-TxB"/>
             </connections>
             <point key="canvasLocation" x="-178.2608695652174" y="-123.21428571428571"/>
         </collectionViewCell>
