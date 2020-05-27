@@ -39,6 +39,7 @@
 		1F4B7745247379A700FC3B27 /* ActivityCommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B7743247379A700FC3B27 /* ActivityCommentTableViewCell.xib */; };
 		1F4B774C2473B5D600FC3B27 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		1F4B774D2473B5D600FC3B27 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		1F7D444E247CFC6B00743829 /* NoticeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7D444D247CFC6B00743829 /* NoticeModel.swift */; };
 		3F18F05C24722C2B00957A2E /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F18F05A24722C2B00957A2E /* SignInViewController.swift */; };
 		3F18F05D24722C2B00957A2E /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F18F05B24722C2B00957A2E /* SignInViewController.xib */; };
 		3F18F06224722DC400957A2E /* SingInMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F18F06024722DC400957A2E /* SingInMainView.swift */; };
@@ -218,6 +219,7 @@
 		1F4B773F24736EE400FC3B27 /* ActivityGoodTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityGoodTableViewCell.xib; sourceTree = "<group>"; };
 		1F4B7742247379A700FC3B27 /* ActivityCommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCommentTableViewCell.swift; sourceTree = "<group>"; };
 		1F4B7743247379A700FC3B27 /* ActivityCommentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityCommentTableViewCell.xib; sourceTree = "<group>"; };
+		1F7D444D247CFC6B00743829 /* NoticeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeModel.swift; sourceTree = "<group>"; };
 		1F9FC5609CFCED43F9A89ED8 /* Pods_CosmeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CosmeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F18F05A24722C2B00957A2E /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		3F18F05B24722C2B00957A2E /* SignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
@@ -772,6 +774,7 @@
 				FF3F38DF2477AD850023FAAC /* MakePostModel.swift */,
 				3FD7CE542477AB4D00B31D8A /* AuthModel.swift */,
 				FF3F38E12477B6B90023FAAC /* CommentModel.swift */,
+				1F7D444D247CFC6B00743829 /* NoticeModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1045,6 +1048,7 @@
 				3F8CA3E92476215C000EA5AF /* CategorySearchViewController.swift in Sources */,
 				1F3F5E7E247B5CD300F04090 /* LoadingView.swift in Sources */,
 				FF8509FE246E297C003E2ACF /* ReviewDetailMainView.swift in Sources */,
+				1F7D444E247CFC6B00743829 /* NoticeModel.swift in Sources */,
 				5F098A362475000B00D033F4 /* YourPostCollectionViewCell.swift in Sources */,
 				1F4B774C2473B5D600FC3B27 /* (null) in Sources */,
 				5F97F3B1247B7EF400D68A0C /* SeventhYourGenreCollectionViewCell.swift in Sources */,

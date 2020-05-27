@@ -9,6 +9,8 @@
 import UIKit
 
 import PGFramework
+import FirebaseAuth
+
 // MARK: - Property
 class CreateMakeViewController: BaseViewController {
     @IBOutlet weak var headerView: HeaderView!
@@ -92,6 +94,10 @@ extension CreateMakeViewController:HeaderViewDelegate {
         var images: [UIImage] = []
         if let image = mainView.makeImageView.image {
             images.append(image)
+        }
+        
+        if let uid = Auth.auth().currentUser?.uid {
+            makePostModel.post_user_id = uid
         }
         
         addLoadingView()

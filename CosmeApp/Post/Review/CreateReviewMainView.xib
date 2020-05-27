@@ -37,7 +37,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="927.5"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="27P-CU-uer">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="1264.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="1064"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HFS-mf-oiG">
                                             <rect key="frame" x="20" y="500" width="35" height="35"/>
@@ -204,24 +204,23 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="SeW-Ib-j4C">
-                                            <rect key="frame" x="30" y="782" width="354" height="233.5"/>
+                                            <rect key="frame" x="30" y="782" width="354" height="33"/>
                                             <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="0Ku-6m-wb5"/>
                                             </constraints>
-                                            <string key="text">=========================================================================================================================================================================================================================================================================================================================================================================================================================================================================================</string>
                                             <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="タグ：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QIG-1t-jwe">
-                                            <rect key="frame" x="20" y="1053" width="52" height="20.5"/>
+                                            <rect key="frame" x="20" y="852.5" width="52" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CL8-H4-Riq">
-                                            <rect key="frame" x="30" y="1081.5" width="354" height="33"/>
+                                            <rect key="frame" x="30" y="881" width="354" height="33"/>
                                             <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="oQc-Km-jf7"/>

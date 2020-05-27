@@ -44,10 +44,13 @@ extension ActivityMainView:UITableViewDataSource {
              ActivityFollowTableViewCell else {return UITableViewCell()}
         switch indexPath {
         case [0,0]:
+            //cell.delegate = self
             return cell
         case [0,1]:
+            //secondCell.delegate = self
             return secondCell
         case [0,2]:
+            //thirdCell.delegate = self
             return thirdCell
         default:
             return cell

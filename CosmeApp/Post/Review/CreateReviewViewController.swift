@@ -16,6 +16,8 @@ enum ImageViewType {
 }
 
 import PGFramework
+import FirebaseAuth
+
 // MARK: - Property
 class CreateReviewViewController: BaseViewController {
     @IBOutlet weak var headerView: HeaderView!
@@ -117,6 +119,10 @@ extension CreateReviewViewController:HeaderViewDelegate {
         }
         if let image = mainView.itemFourthImageView.image {
             images.append(image)
+        }
+        
+        if let uid = Auth.auth().currentUser?.uid {
+            reviewPostModel.post_user_id = uid
         }
         
         addLoadingView()

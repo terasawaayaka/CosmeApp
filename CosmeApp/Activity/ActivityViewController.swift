@@ -33,7 +33,9 @@ extension ActivityViewController:ActivityMainViewDelegate {
     func didSelectRowAt(indexPath:IndexPath) {
         
         func touchedProfilePageButton() {
-            //todo
+            let yourProfileViewController = YourProfileViewController()
+            navigationController?.pushViewController(yourProfileViewController, animated: true)
+            animatorManager.navigationType = .pop
         }
         func touchedPostPageButton() {
             let editReviewViewController = EditReviewViewController()
@@ -50,5 +52,6 @@ extension ActivityViewController {
     }
     func setDelegate() {
         mainView.delegate = self
+        
     }
 }
