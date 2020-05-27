@@ -48,6 +48,7 @@ extension EditProfileViewController :HeaderViewDelegate{
     }
     func touchedRightButton(_ sender: UIButton) {
         userModel.nickname = mainView.editNameTextField.text
+        userModel.description = mainView.editUserText.text
         
         let image = mainView.iconView.image
         UserModel.update(request: userModel, image: image) {
@@ -66,8 +67,6 @@ extension EditProfileViewController :EditProfileMainViewDelegate{
             self.dismiss(animated: true, completion: nil)
         }
     }
-    
-    
 }
 // MARK: - method
 extension EditProfileViewController {
@@ -82,6 +81,7 @@ extension EditProfileViewController {
     }
     func giveModel() {
         mainView.updateUserName(userModel: userModel)
+        mainView.updateUserText(userModel: userModel)
     }
     
     

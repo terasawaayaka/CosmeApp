@@ -14,6 +14,7 @@
                 <outlet property="scrollMainView" destination="OkQ-gw-UgN" id="h9M-aX-XiG"/>
                 <outlet property="todayCollectionView" destination="H65-42-76f" id="urg-Ec-aYA"/>
                 <outlet property="userName" destination="ihb-Xb-U9M" id="Y3T-aU-MWY"/>
+                <outlet property="userText" destination="rGk-cd-qOp" id="jAf-Eq-Oh1"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -75,17 +76,6 @@
                                                 <action selector="editProfileButton:" destination="-1" eventType="touchUpInside" id="97G-5M-hGS"/>
                                             </connections>
                                         </button>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WJI-J8-eIv">
-                                            <rect key="frame" x="20" y="136" width="374" height="100"/>
-                                            <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="374" id="L0G-3y-VUM"/>
-                                            </constraints>
-                                            <string key="text">texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttextxttexttexttexttexttexttexttexttexttexttexttexttexttexttext</string>
-                                            <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        </textView>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="H65-42-76f">
                                             <rect key="frame" x="0.0" y="244" width="414" height="120"/>
                                             <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -133,11 +123,19 @@
                                                 <action selector="touchedBookMarkButton:" destination="-1" eventType="touchUpInside" id="A2U-Td-hOK"/>
                                             </connections>
                                         </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="自己紹介文" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGk-cd-qOp">
+                                            <rect key="frame" x="20" y="136" width="374" height="18"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="374" id="fWq-rq-Nkm"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="1SZ-Lc-csE" secondAttribute="trailing" constant="20" id="4ZR-zv-vKp"/>
-                                        <constraint firstItem="WJI-J8-eIv" firstAttribute="leading" secondItem="Ah6-7G-EQs" secondAttribute="leading" constant="20" id="4ro-3e-cp0"/>
                                         <constraint firstItem="H65-42-76f" firstAttribute="leading" secondItem="Ah6-7G-EQs" secondAttribute="leading" id="5Vn-mD-pJY"/>
                                         <constraint firstAttribute="bottom" secondItem="55T-xZ-94V" secondAttribute="bottom" constant="7" id="6qw-dr-UDx"/>
                                         <constraint firstItem="oYb-nj-mml" firstAttribute="top" secondItem="ihb-Xb-U9M" secondAttribute="bottom" constant="8" id="Dd6-pn-p9S"/>
@@ -150,12 +148,12 @@
                                         <constraint firstItem="e6z-FH-Yab" firstAttribute="leading" secondItem="Va8-Yv-sTT" secondAttribute="trailing" id="P81-ax-bTi"/>
                                         <constraint firstAttribute="trailing" secondItem="H65-42-76f" secondAttribute="trailing" id="SMP-H6-l7p"/>
                                         <constraint firstAttribute="trailing" secondItem="e6z-FH-Yab" secondAttribute="trailing" id="TC0-HL-RO4"/>
-                                        <constraint firstItem="H65-42-76f" firstAttribute="top" secondItem="WJI-J8-eIv" secondAttribute="bottom" constant="8" id="amj-Uo-n1C"/>
                                         <constraint firstItem="ihb-Xb-U9M" firstAttribute="top" secondItem="Ah6-7G-EQs" secondAttribute="top" constant="8" id="bXu-vd-ICC"/>
-                                        <constraint firstItem="WJI-J8-eIv" firstAttribute="top" secondItem="Lhr-Nh-3sc" secondAttribute="bottom" constant="8" id="dPt-37-WUU"/>
-                                        <constraint firstAttribute="trailing" secondItem="WJI-J8-eIv" secondAttribute="trailing" constant="20" id="dmT-GA-O9F"/>
+                                        <constraint firstItem="rGk-cd-qOp" firstAttribute="leading" secondItem="Ah6-7G-EQs" secondAttribute="leading" constant="20" id="cCg-TI-HTV"/>
+                                        <constraint firstAttribute="trailing" secondItem="rGk-cd-qOp" secondAttribute="trailing" constant="20" id="dfL-Kw-48S"/>
                                         <constraint firstItem="rlS-MQ-gKS" firstAttribute="leading" secondItem="Lhr-Nh-3sc" secondAttribute="trailing" constant="15" id="eXK-h2-hhS"/>
                                         <constraint firstAttribute="trailing" secondItem="rlS-MQ-gKS" secondAttribute="trailing" constant="20" id="fiw-2W-VsC"/>
+                                        <constraint firstItem="H65-42-76f" firstAttribute="top" secondItem="rGk-cd-qOp" secondAttribute="bottom" constant="90" id="hzi-bl-Rea"/>
                                         <constraint firstItem="Lhr-Nh-3sc" firstAttribute="leading" secondItem="Ah6-7G-EQs" secondAttribute="leading" constant="20" id="jTg-ry-Moc"/>
                                         <constraint firstAttribute="trailing" secondItem="oYb-nj-mml" secondAttribute="trailing" constant="20" id="jwL-oh-jbV"/>
                                         <constraint firstItem="Lhr-Nh-3sc" firstAttribute="top" secondItem="Ah6-7G-EQs" secondAttribute="top" id="k5o-eb-ydH"/>
@@ -164,6 +162,7 @@
                                         <constraint firstItem="e6z-FH-Yab" firstAttribute="leading" secondItem="Va8-Yv-sTT" secondAttribute="trailing" id="o0u-ye-1MV"/>
                                         <constraint firstItem="Va8-Yv-sTT" firstAttribute="top" secondItem="H65-42-76f" secondAttribute="bottom" constant="7" id="szw-hR-1zB"/>
                                         <constraint firstItem="e6z-FH-Yab" firstAttribute="top" secondItem="H65-42-76f" secondAttribute="bottom" constant="7" id="tGN-mc-Bgf"/>
+                                        <constraint firstItem="rGk-cd-qOp" firstAttribute="top" secondItem="Lhr-Nh-3sc" secondAttribute="bottom" constant="8" id="w8F-es-nzq"/>
                                         <constraint firstItem="1SZ-Lc-csE" firstAttribute="leading" secondItem="Lhr-Nh-3sc" secondAttribute="trailing" constant="8" id="xPk-Va-1v5"/>
                                         <constraint firstAttribute="trailing" secondItem="ihb-Xb-U9M" secondAttribute="trailing" constant="8" id="xWI-6g-ysH"/>
                                         <constraint firstItem="1SZ-Lc-csE" firstAttribute="top" secondItem="rlS-MQ-gKS" secondAttribute="bottom" constant="2" id="z6S-pq-C6s"/>

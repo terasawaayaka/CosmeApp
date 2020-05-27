@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditProfileMainView" customModule="CosmeApp" customModuleProvider="target">
             <connections>
                 <outlet property="editNameTextField" destination="CE7-PN-9nR" id="aWJ-5g-h88"/>
+                <outlet property="editUserText" destination="Oax-yN-6yC" id="99A-hc-bDU"/>
                 <outlet property="iconView" destination="7K5-s5-gMx" id="szg-KI-Hmc"/>
             </connections>
         </placeholder>
@@ -79,12 +80,11 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Oax-yN-6yC">
-                                            <rect key="frame" x="145" y="368" width="263" height="83"/>
+                                            <rect key="frame" x="145" y="368" width="263" height="33"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="263" id="O2n-79-wIq"/>
                                             </constraints>
-                                            <string key="text">texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext</string>
                                             <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -96,7 +96,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Nj-DV-eQz">
-                                            <rect key="frame" x="143" y="450" width="272" height="1"/>
+                                            <rect key="frame" x="143" y="400" width="272" height="1"/>
                                             <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="272" id="cnb-28-Wk3"/>
@@ -106,7 +106,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69x-je-ics">
-                                            <rect key="frame" x="170" y="571" width="77" height="30"/>
+                                            <rect key="frame" x="170" y="521" width="77" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="77" id="K1i-XG-4o8"/>
                                             </constraints>
