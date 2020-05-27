@@ -10,6 +10,10 @@ import UIKit
 import PGFramework
 // MARK: - Property
 class EditProfileViewController: BaseViewController {
+    //data
+    var userModel: UserModel = UserModel()
+    
+    //Outlet
     @IBOutlet weak var mainView: EditProfileMainView!
     @IBOutlet weak var headerView: HeaderView!
 }
@@ -26,6 +30,7 @@ extension EditProfileViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        giveModel()
     }
 }
 // MARK: - Protocol
@@ -34,7 +39,11 @@ extension EditProfileViewController :HeaderViewDelegate{
         dismiss(animated: true, completion: nil)
     }
     func touchedRightButton(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
+        userModel.nickname = mainView.editNameTextField.text
+        UserModel.update(request: userModel) {
+            self.dismiss(animated: true, completion: nil)
+        }
+        
     }
 }
 extension EditProfileViewController :EditProfileMainViewDelegate{
@@ -61,6 +70,11 @@ extension EditProfileViewController {
         headerView.setCenter(text: "プロフィールを編集", fontSize: 15, color: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))
         headerView.setRight(text: "完了", fontSize: 15, color: #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1))
     }
+    func giveModel() {
+        mainView.updateUserName(userModel: userModel)
+    }
+    
+    
     //キーボードとテキストフィールド以外をタップでキーボードを隠す
     func hideKeybord() {
         let hideTap : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKyeoboardTap))

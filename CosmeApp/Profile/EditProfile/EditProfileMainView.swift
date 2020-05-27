@@ -17,6 +17,7 @@ extension EditProfileMainViewDelegate {
 // MARK: - Property
 class EditProfileMainView: BaseView {
     weak var delegate: EditProfileMainViewDelegate? = nil
+    //Action
     @IBAction func touchedEditIconViewButton(_ sender: UIButton) {
         if let delegate = delegate{delegate.touchedEditIconViewButton()}
     }
@@ -24,8 +25,8 @@ class EditProfileMainView: BaseView {
         if let delegate = delegate{delegate.touchedLogoutButton()}
     }
     
-    
-    @IBOutlet weak var nameTextField: UITextField!
+    //Outlet
+    @IBOutlet weak var editNameTextField: UITextField!
 }
 // MARK: - Life cycle
 extension EditProfileMainView {
@@ -38,4 +39,7 @@ extension EditProfileMainView {
 }
 // MARK: - method
 extension EditProfileMainView {
+    func updateUserName(userModel: UserModel) {
+        editNameTextField.text = userModel.nickname
+    }
 }

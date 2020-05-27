@@ -12,6 +12,10 @@ import PGFramework
 import FirebaseAuth
 // MARK: - Property
 class MyProfileViewController: BaseViewController{
+    //data
+    var userModel: UserModel = UserModel()
+    
+    //Outlet
     @IBOutlet weak var mainView: MyProfileMainView!
 }
 // MARK: - Life cycle
@@ -19,6 +23,7 @@ extension MyProfileViewController {
     override func loadView() {
         super.loadView()
         setDelegate()
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,12 +34,14 @@ extension MyProfileViewController {
             let signUpViewController = SignUpViewController()
             navigationController?.pushViewController(signUpViewController, animated: false)
         }
+        getModel()
     }
 }
 // MARK: - Protocol
 extension MyProfileViewController :MyProfileMainViewDelegate{
     func editProfileButton() {
         let editProfileViewController = EditProfileViewController()
+        editProfileViewController.userModel = userModel
         editProfileViewController.modalPresentationStyle = .fullScreen
         present(editProfileViewController, animated: true, completion: nil)
     }
@@ -59,5 +66,11 @@ extension MyProfileViewController :MyProfileMainViewDelegate{
 extension MyProfileViewController {
     func setDelegate(){
         mainView.delegate = self
+    }
+    func getModel() {
+        UserModel.readMe { (userModel) in
+            self.mainView.getModel(userModel: userModel)
+            self.userModel = userModel
+        }
     }
 }
