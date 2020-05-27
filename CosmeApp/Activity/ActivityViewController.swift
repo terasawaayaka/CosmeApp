@@ -30,18 +30,31 @@ extension ActivityViewController {
 }
 // MARK: - Protocol
 extension ActivityViewController:ActivityMainViewDelegate {
-    func didSelectRowAt(indexPath:IndexPath) {
-        
-        func touchedProfilePageButton() {
-            let yourProfileViewController = YourProfileViewController()
-            navigationController?.pushViewController(yourProfileViewController, animated: true)
-            animatorManager.navigationType = .pop
-        }
-        func touchedPostPageButton() {
-            let editReviewViewController = EditReviewViewController()
-            navigationController?.pushViewController(editReviewViewController, animated: true)
-            animatorManager.navigationType = .pop
-        }
+    func touchedProfilePageButton() {
+        let yourProfileViewController = YourProfileViewController()
+        navigationController?.pushViewController(yourProfileViewController, animated: true)
+        animatorManager.navigationType = .slide_push
+    }
+    
+    func touchedPostPageButton() {
+        let reviewDetailViewController = ReviewDetailViewController()
+        navigationController?.pushViewController(reviewDetailViewController, animated: true)
+        animatorManager.navigationType = .slide_push
+    }
+    func touchedSecondProfileButton() {
+        let yourProfileViewController = YourProfileViewController()
+        navigationController?.pushViewController(yourProfileViewController, animated: true)
+        animatorManager.navigationType = .slide_push
+    }
+    func touchedSecondPostPageButton() {
+        let reviewDetailViewController = ReviewDetailViewController()
+        navigationController?.pushViewController(reviewDetailViewController, animated: true)
+        animatorManager.navigationType = .slide_push
+    }
+    func touchedThirdProfileButton() {
+        let yourProfileViewController = YourProfileViewController()
+        navigationController?.pushViewController(yourProfileViewController, animated: true)
+        animatorManager.navigationType = .slide_push
     }
 }
 // MARK: - method
