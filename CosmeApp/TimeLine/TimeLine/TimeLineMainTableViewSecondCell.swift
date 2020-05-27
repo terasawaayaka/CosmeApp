@@ -78,5 +78,27 @@ extension TimeLineMainTableViewSecondCell {
     func updateCell(reviewPostModel:ReviewPostModel){
         productLabel.text = "商品名：　" + reviewPostModel.title
         categoryLabel.text = "カテゴリ：　" + reviewPostModel.category
+        
+        
+        if let url = URL(string: reviewPostModel.image_paths[0]){
+            firstImageView.af_setImage(withURL: url)
+        }else{
+            firstImageView.image = UIImage(named: "noimage.png")
+        }
+        if let url = URL(string: reviewPostModel.image_paths[1]){
+            secondImageView.af_setImage(withURL: url)
+        }else{
+            secondImageView.image = UIImage(named: "noimage.png")
+        }
+        if let url = URL(string: reviewPostModel.image_paths[2]){
+            thirdImageView.af_setImage(withURL: url)
+        }else{
+            thirdImageView.image = UIImage(named: "noimage.png")
+        }
+        if let url = URL(string: reviewPostModel.image_paths[3]){
+            fourthImageView.af_setImage(withURL: url)
+        }else{
+            fourthImageView.image = UIImage(named: "noimage.png")
+        }
     }
 }
