@@ -43,6 +43,7 @@ extension CategorySearchViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         changeCategory()
+        getReviewPostModel()
     }
 }
 // MARK: - Protocol
@@ -138,6 +139,14 @@ extension CategorySearchViewController {
                 mainView.illustImage.image = image}
             if let image = UIImage(named: "EyeShadowLOGO") {
                 mainView.logoImage.image = image}
+        }
+    }
+    func getReviewPostModel(){
+        ReviewPostModel.reads { (reviewPostModels) in
+//            for reviewPostModel in reviewPostModels {
+//                print("DESC: ",reviewPostModel.title)
+//            }
+            self.mainView.getReviewPostModel(reviewPostModels: reviewPostModels)
         }
     }
 }

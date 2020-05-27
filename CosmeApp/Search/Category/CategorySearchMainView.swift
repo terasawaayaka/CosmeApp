@@ -17,12 +17,13 @@ extension CategorySearchMainViewDelegate {
 class CategorySearchMainView: BaseView {
     weak var delegate: CategorySearchMainViewDelegate? = nil
     
-    
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
     
     @IBOutlet weak var illustImage: UIImageView!
     @IBOutlet weak var logoImage: UIImageView!
+    
+    var reviewPostModels: [ReviewPostModel] = [ReviewPostModel]()
 }
 // MARK: - Life cycle
 extension CategorySearchMainView {
@@ -38,12 +39,13 @@ extension CategorySearchMainView {
 // MARK: - Protocol
 extension CategorySearchMainView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return reviewPostModels.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchResultCollectionViewCell", for: indexPath)
             as? SearchResultCollectionViewCell else {return UICollectionViewCell()}
+        cell.updateReviewCell(reviewPostModel: reviewPostModels[indexPath.row])
         return cell
     }
 }
@@ -60,6 +62,10 @@ extension CategorySearchMainView {
     func setDelegate(){
         collectionView.dataSource = self
         collectionView.delegate = self
+    }
+    func getReviewPostModel(reviewPostModels: [ReviewPostModel]){
+        self.reviewPostModels = reviewPostModels
+        collectionView.reloadData()
     }
 }
 

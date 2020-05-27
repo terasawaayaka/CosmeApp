@@ -18,6 +18,8 @@ class ProductNameSearchResultView: BaseView {
     weak var delegate: ProductNameSearchResultViewDelegate? = nil
     @IBOutlet weak var productNameCollectionView: UICollectionView!
     @IBOutlet weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
+    
+    var reviewPostModels: [ReviewPostModel] = [ReviewPostModel]()
 }
 // MARK: - Life cycle
 extension ProductNameSearchResultView {
@@ -33,12 +35,13 @@ extension ProductNameSearchResultView {
 // MARK: - Protocol
 extension ProductNameSearchResultView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return reviewPostModels.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchResultCollectionViewCell", for: indexPath)as? SearchResultCollectionViewCell else {return UICollectionViewCell()}
         cell.delegate = self
+        cell.updateReviewCell(reviewPostModel: reviewPostModels[indexPath.row])
         return cell
     }
 }
@@ -54,6 +57,10 @@ extension ProductNameSearchResultView: SearchResultCollectionViewCellDelegate {
 extension ProductNameSearchResultView {
     func setDelegate(){
         productNameCollectionView.dataSource = self
+    }
+    func getReviewPostModel(reviewPostModels: [ReviewPostModel]){
+    self.reviewPostModels = reviewPostModels
+    productNameCollectionView.reloadData()
     }
 }
 
