@@ -25,6 +25,7 @@ class MyProfileMainView: BaseView {
     @IBOutlet weak var collectionViewFlowlayout: UICollectionViewFlowLayout!
     @IBOutlet weak var scrollMainView: ScrollMainView!
     @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var userText: UILabel!
     
     
     //Action
@@ -76,6 +77,13 @@ extension MyProfileMainView {
         }else{
             userName.text = userModel.nickname
         }
+        
+        if userModel.description == "" {
+            userText.text = "自己紹介文を入力"
+        }else{
+            userText.text = userModel.description
+        }
+        
         if let photo_path = userModel.photo_path {
             if let url = URL(string: photo_path) {
                 iconView.af_setImage(withURL: url)
