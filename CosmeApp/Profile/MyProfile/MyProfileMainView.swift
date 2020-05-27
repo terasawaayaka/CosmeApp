@@ -24,6 +24,7 @@ class MyProfileMainView: BaseView {
     @IBOutlet weak var todayCollectionView: UICollectionView!
     @IBOutlet weak var collectionViewFlowlayout: UICollectionViewFlowLayout!
     @IBOutlet weak var scrollMainView: ScrollMainView!
+    @IBOutlet weak var userName: UILabel!
     
     
     //Action
@@ -68,5 +69,8 @@ extension MyProfileMainView :UICollectionViewDataSource{
 extension MyProfileMainView {
     func setDelegate() {
         todayCollectionView.dataSource = self
+    }
+    func getModel(userModel: UserModel) {
+        userName.text = userModel.nickname
     }
 }
