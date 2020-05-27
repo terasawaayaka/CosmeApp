@@ -8,6 +8,7 @@
 
 import UIKit
 import PGFramework
+import FirebaseAuth
 // MARK: - Property
 class EditProfileViewController: BaseViewController {
     //data
@@ -32,6 +33,13 @@ extension EditProfileViewController {
         super.viewWillAppear(animated)
         giveModel()
     }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[.originalImage] as? UIImage {
+            mainView.iconView.image = image
+            picker.dismiss(animated: true, completion: nil)
+        }
+    }
 }
 // MARK: - Protocol
 extension EditProfileViewController :HeaderViewDelegate{
@@ -40,7 +48,9 @@ extension EditProfileViewController :HeaderViewDelegate{
     }
     func touchedRightButton(_ sender: UIButton) {
         userModel.nickname = mainView.editNameTextField.text
-        UserModel.update(request: userModel) {
+        
+        let image = mainView.iconView.image
+        UserModel.update(request: userModel, image: image) {
             self.dismiss(animated: true, completion: nil)
         }
         
@@ -48,7 +58,7 @@ extension EditProfileViewController :HeaderViewDelegate{
 }
 extension EditProfileViewController :EditProfileMainViewDelegate{
     func touchedEditIconViewButton() {
-        
+        useCamera()
     }
     
     func touchedLogoutButton() {

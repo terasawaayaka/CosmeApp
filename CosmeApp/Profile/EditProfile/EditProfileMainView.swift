@@ -27,6 +27,7 @@ class EditProfileMainView: BaseView {
     
     //Outlet
     @IBOutlet weak var editNameTextField: UITextField!
+    @IBOutlet weak var iconView: UIImageView!
 }
 // MARK: - Life cycle
 extension EditProfileMainView {
@@ -41,5 +42,10 @@ extension EditProfileMainView {
 extension EditProfileMainView {
     func updateUserName(userModel: UserModel) {
         editNameTextField.text = userModel.nickname
+    }
+    func updateUserIcon(userModel: UserModel) {
+        if let url = URL(string: userModel.photo_path!) {
+            iconView.af_setImage(withURL: url)
+        }
     }
 }

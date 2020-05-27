@@ -71,6 +71,15 @@ extension MyProfileMainView {
         todayCollectionView.dataSource = self
     }
     func getModel(userModel: UserModel) {
-        userName.text = userModel.nickname
+        if userModel.nickname == "" {
+            userName.text =  "名無しさん"
+        }else{
+            userName.text = userModel.nickname
+        }
+        if let photo_path = userModel.photo_path {
+            if let url = URL(string: photo_path) {
+                iconView.af_setImage(withURL: url)
+            }
+        }
     }
 }

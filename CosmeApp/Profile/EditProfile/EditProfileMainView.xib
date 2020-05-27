@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditProfileMainView" customModule="CosmeApp" customModuleProvider="target">
             <connections>
                 <outlet property="editNameTextField" destination="CE7-PN-9nR" id="aWJ-5g-h88"/>
+                <outlet property="iconView" destination="7K5-s5-gMx" id="szg-KI-Hmc"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -42,6 +43,9 @@
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <state key="normal" title="プロフィール写真を変更"/>
+                                            <connections>
+                                                <action selector="touchedEditIconViewButton:" destination="-1" eventType="touchUpInside" id="hcU-4B-1rP"/>
+                                            </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zmK-AD-U48">
                                             <rect key="frame" x="0.0" y="264" width="416" height="2"/>
