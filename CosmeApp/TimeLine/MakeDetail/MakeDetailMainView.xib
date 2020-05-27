@@ -9,7 +9,21 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MakeDetailMainView" customModule="CosmeApp" customModuleProvider="target">
             <connections>
+                <outlet property="basemakeLabel" destination="7kF-LO-BlI" id="1dX-rX-kXB"/>
+                <outlet property="cheekLabel" destination="W3j-QC-uZC" id="ujL-fK-z78"/>
+                <outlet property="colorcontactLabel" destination="xmU-c4-k41" id="kIZ-mR-4Tg"/>
+                <outlet property="eyeblowLabel" destination="JF8-hB-nzG" id="bPi-qW-cW6"/>
+                <outlet property="eyelinerLabel" destination="djG-Go-pCb" id="3jK-AW-zDS"/>
+                <outlet property="eyeshadowLabel" destination="fg7-3i-gxc" id="uSb-o2-Pxi"/>
+                <outlet property="haircareLabel" destination="wik-sZ-9eJ" id="wHj-Y8-UpA"/>
+                <outlet property="highlightLabel" destination="oop-Cm-a4T" id="azq-Rd-ek7"/>
                 <outlet property="iconView" destination="T2i-hv-zaE" id="qFO-kb-2w5"/>
+                <outlet property="lipLabel" destination="E2M-vz-g07" id="OYk-gP-6AF"/>
+                <outlet property="makeImage" destination="ZyV-Pp-GCM" id="5mN-Ry-33d"/>
+                <outlet property="mascaraLabel" destination="BCO-hd-VVo" id="Abp-bX-Y7V"/>
+                <outlet property="processTextView" destination="bex-O9-HRR" id="fjl-n7-MqG"/>
+                <outlet property="shadingLabel" destination="rhP-m7-zgq" id="5aU-1Z-wn2"/>
+                <outlet property="skincareLabel" destination="riX-Is-6e9" id="3CH-f1-7Nw"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -24,7 +38,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="99W-bg-wak">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="1197.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="1169"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZyV-Pp-GCM">
                                             <rect key="frame" x="0.0" y="70" width="414" height="414"/>
@@ -53,12 +67,6 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="759" text="使った化粧品" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U7o-kM-72I">
                                             <rect key="frame" x="20" y="514" width="111" height="22"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="760" text="その他：" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pui-Sy-xcz">
-                                            <rect key="frame" x="30" y="893" width="354" height="20.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -135,24 +143,24 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="プロセス" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wk4-2t-JZZ">
-                                            <rect key="frame" x="20" y="945.5" width="74" height="22"/>
+                                            <rect key="frame" x="20" y="917" width="74" height="22"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="749" scrollEnabled="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bex-O9-HRR">
-                                            <rect key="frame" x="30" y="977.5" width="354" height="200"/>
+                                            <rect key="frame" x="30" y="949" width="354" height="200"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="Raj-gW-2Nd"/>
                                             </constraints>
-                                            <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                             <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8tp-TE-uqP">
-                                            <rect key="frame" x="20" y="928.5" width="374" height="2"/>
+                                            <rect key="frame" x="20" y="900" width="374" height="2"/>
                                             <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="2" id="Qo8-6S-B9C"/>
@@ -168,11 +176,9 @@
                                         <constraint firstItem="7kF-LO-BlI" firstAttribute="top" secondItem="U7o-kM-72I" secondAttribute="bottom" constant="15" id="5Rq-EO-IRV"/>
                                         <constraint firstItem="FID-BF-EzM" firstAttribute="top" secondItem="99W-bg-wak" secondAttribute="top" constant="25" id="5fJ-A6-aQo"/>
                                         <constraint firstAttribute="trailing" secondItem="7kF-LO-BlI" secondAttribute="trailing" constant="30" id="7Uy-v8-0xB"/>
-                                        <constraint firstAttribute="trailing" secondItem="pui-Sy-xcz" secondAttribute="trailing" constant="30" id="90z-3l-2W9"/>
                                         <constraint firstItem="riX-Is-6e9" firstAttribute="top" secondItem="wik-sZ-9eJ" secondAttribute="bottom" constant="8" id="9x2-uh-uGt"/>
                                         <constraint firstAttribute="trailing" secondItem="fg7-3i-gxc" secondAttribute="trailing" constant="30" id="DAD-8D-vlg"/>
                                         <constraint firstItem="fg7-3i-gxc" firstAttribute="top" secondItem="W3j-QC-uZC" secondAttribute="bottom" constant="8" id="DhT-1c-Ybm"/>
-                                        <constraint firstItem="pui-Sy-xcz" firstAttribute="leading" secondItem="99W-bg-wak" secondAttribute="leading" constant="30" id="E50-Lx-Q3t"/>
                                         <constraint firstAttribute="trailing" secondItem="BCO-hd-VVo" secondAttribute="trailing" constant="30" id="Gp1-pR-pGY"/>
                                         <constraint firstItem="E2M-vz-g07" firstAttribute="top" secondItem="JF8-hB-nzG" secondAttribute="bottom" constant="8" id="Iof-BD-tfz"/>
                                         <constraint firstItem="djG-Go-pCb" firstAttribute="leading" secondItem="99W-bg-wak" secondAttribute="leading" constant="30" id="IuD-qc-ibS"/>
@@ -191,6 +197,7 @@
                                         <constraint firstItem="xmU-c4-k41" firstAttribute="leading" secondItem="99W-bg-wak" secondAttribute="leading" constant="30" id="Uvl-ja-F3r"/>
                                         <constraint firstItem="T2i-hv-zaE" firstAttribute="top" secondItem="99W-bg-wak" secondAttribute="top" constant="10" id="Vsc-8p-C1n"/>
                                         <constraint firstItem="8tp-TE-uqP" firstAttribute="leading" secondItem="99W-bg-wak" secondAttribute="leading" constant="20" id="WOW-FV-YpY"/>
+                                        <constraint firstItem="8tp-TE-uqP" firstAttribute="top" secondItem="riX-Is-6e9" secondAttribute="bottom" constant="15" id="Wgf-e8-h8Y"/>
                                         <constraint firstItem="riX-Is-6e9" firstAttribute="leading" secondItem="99W-bg-wak" secondAttribute="leading" constant="30" id="XvG-Ot-PGw"/>
                                         <constraint firstAttribute="trailing" secondItem="W3j-QC-uZC" secondAttribute="trailing" constant="30" id="aiL-00-DUm"/>
                                         <constraint firstItem="W3j-QC-uZC" firstAttribute="leading" secondItem="99W-bg-wak" secondAttribute="leading" constant="30" id="c3c-fg-0Yx"/>
@@ -207,14 +214,12 @@
                                         <constraint firstItem="Wk4-2t-JZZ" firstAttribute="top" secondItem="8tp-TE-uqP" secondAttribute="bottom" constant="15" id="nD0-1e-LI7"/>
                                         <constraint firstItem="oop-Cm-a4T" firstAttribute="top" secondItem="rhP-m7-zgq" secondAttribute="bottom" constant="8" id="oGt-RK-Rnd"/>
                                         <constraint firstItem="oop-Cm-a4T" firstAttribute="leading" secondItem="99W-bg-wak" secondAttribute="leading" constant="30" id="p7V-Yl-QjP"/>
-                                        <constraint firstItem="8tp-TE-uqP" firstAttribute="top" secondItem="pui-Sy-xcz" secondAttribute="bottom" constant="15" id="qIU-Qj-6kM"/>
                                         <constraint firstAttribute="trailing" secondItem="8tp-TE-uqP" secondAttribute="trailing" constant="20" id="qe9-VA-TLw"/>
                                         <constraint firstItem="U7o-kM-72I" firstAttribute="leading" secondItem="99W-bg-wak" secondAttribute="leading" constant="20" id="sjs-az-eyA"/>
                                         <constraint firstAttribute="trailing" secondItem="rhP-m7-zgq" secondAttribute="trailing" constant="30" id="tfV-4b-wjt"/>
                                         <constraint firstItem="djG-Go-pCb" firstAttribute="top" secondItem="fg7-3i-gxc" secondAttribute="bottom" constant="8" id="uBR-fF-S8e"/>
                                         <constraint firstItem="wik-sZ-9eJ" firstAttribute="top" secondItem="E2M-vz-g07" secondAttribute="bottom" constant="8" id="y3q-8e-g7O"/>
                                         <constraint firstItem="FID-BF-EzM" firstAttribute="leading" secondItem="T2i-hv-zaE" secondAttribute="trailing" constant="10" id="yfr-4K-BzM"/>
-                                        <constraint firstItem="pui-Sy-xcz" firstAttribute="top" secondItem="riX-Is-6e9" secondAttribute="bottom" constant="8" id="yqy-3D-2Fv"/>
                                         <constraint firstItem="fg7-3i-gxc" firstAttribute="leading" secondItem="99W-bg-wak" secondAttribute="leading" constant="30" id="zUn-nc-JVe"/>
                                         <constraint firstAttribute="trailing" secondItem="xmU-c4-k41" secondAttribute="trailing" constant="30" id="zgM-Ki-RB3"/>
                                         <constraint firstItem="JF8-hB-nzG" firstAttribute="top" secondItem="xmU-c4-k41" secondAttribute="bottom" constant="8" id="zvJ-0G-yic"/>

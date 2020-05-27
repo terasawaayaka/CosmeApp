@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum ImageViewType {
+enum ImageViewType2 {
     case first
     case second
     case third
@@ -25,7 +25,7 @@ class CreateReviewViewController: BaseViewController {
     //Constrains
     @IBOutlet weak var mainViewBottomMargin: NSLayoutConstraint!
 
-    var imageViewType: ImageViewType = ImageViewType.first
+    var imageViewType2: ImageViewType2 = ImageViewType2.first
     
     let items = ["ベースメイク","ハイライト","シェーディング","アイシャドウ","アイライナー","マスカラ","カラコン","アイブロウ","チーク","リップ","スキンケア","ヘアケア","その他"]
     let loadingView: LoadingView = LoadingView()
@@ -47,7 +47,7 @@ extension CreateReviewViewController {
         super.viewWillAppear(animated)
     }
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        switch imageViewType {
+        switch imageViewType2 {
         case .first:
             if let image = info[.originalImage] as? UIImage {
                 mainView.itemFirstImageVIew.image = image
@@ -156,19 +156,19 @@ extension CreateReviewViewController:UIPickerViewDelegate {
 
 extension CreateReviewViewController:CreateReviewMainViewDelegate {
     func touchedAddFirstImageButton() {
-        imageViewType = ImageViewType.first
+        imageViewType2 = ImageViewType2.first
         useCamera()
     }
     func touchedAddSecondImageButton() {
-        imageViewType = ImageViewType.second
+        imageViewType2 = ImageViewType2.second
         useCamera()
     }
     func touchedAddThirdImageButton() {
-        imageViewType = ImageViewType.third
+        imageViewType2 = ImageViewType2.third
         useCamera()
     }
     func touchedAddFourthImageButton() {
-        imageViewType = ImageViewType.fourth
+        imageViewType2 = ImageViewType2.fourth
         useCamera()
     }
     func firstStarButton() {

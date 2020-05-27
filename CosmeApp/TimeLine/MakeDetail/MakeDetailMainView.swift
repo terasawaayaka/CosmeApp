@@ -22,6 +22,22 @@ class MakeDetailMainView: BaseView {
         if let delegate = delegate {delegate.iconViewButton()
         }
     }
+    
+    @IBOutlet weak var makeImage: UIImageView!
+    @IBOutlet weak var basemakeLabel: UILabel!
+    @IBOutlet weak var shadingLabel: UILabel!
+    @IBOutlet weak var highlightLabel: UILabel!
+    @IBOutlet weak var cheekLabel: UILabel!
+    @IBOutlet weak var eyeshadowLabel: UILabel!
+    @IBOutlet weak var eyelinerLabel: UILabel!
+    @IBOutlet weak var mascaraLabel: UILabel!
+    @IBOutlet weak var colorcontactLabel: UILabel!
+    @IBOutlet weak var eyeblowLabel: UILabel!
+    @IBOutlet weak var lipLabel: UILabel!
+    @IBOutlet weak var haircareLabel: UILabel!
+    @IBOutlet weak var skincareLabel: UILabel!
+    @IBOutlet weak var processTextView: UITextView!
+    
 }
 // MARK: - Life cycle
 extension MakeDetailMainView {

@@ -8,12 +8,21 @@
 
 import UIKit
 
+enum ImageViewType {
+case first
+case second
+case third
+case fourth
+}
+
 import PGFramework
 // MARK: - Property
 class EditReviewViewController: BaseViewController {
     @IBOutlet weak var headerView: HeaderView!
     @IBOutlet weak var mainView: EditReviewMainView!
     @IBOutlet weak var mainViewBottomMergin: NSLayoutConstraint!
+    
+    var imageViewType : ImageViewType = ImageViewType.first
     
     var reviewPostModel : ReviewPostModel = ReviewPostModel()
     
@@ -36,6 +45,32 @@ extension EditReviewViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         giveModel()
+    }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    switch imageViewType {
+    case .first:
+        if let image = info[.originalImage] as? UIImage {
+            mainView.firstImageView.image = image
+            picker.dismiss(animated: true, completion: nil)
+        }
+    case .second:
+        if let image = info[.originalImage] as? UIImage {
+            mainView.secondImageView.image = image
+            picker.dismiss(animated: true, completion: nil)
+        }
+    case .third:
+        if let image = info[.originalImage] as? UIImage {
+            mainView.thirdImageView.image = image
+            picker.dismiss(animated: true, completion: nil)
+        }
+    case .fourth:
+        if let image = info[.originalImage] as? UIImage {
+            mainView.fourthImageView.image = image
+            picker.dismiss(animated: true, completion: nil)
+        }
+    default:
+        break
+        }
     }
 }
 // MARK: - Protocol
@@ -60,6 +95,28 @@ extension EditReviewViewController :HeaderViewDelegate{
         if let image = mainView.firstImageView.image{
             images.append(image)
         }
+        if let image = mainView.secondImageView.image{
+            images.append(image)
+        }
+        if let image = mainView.thirdImageView.image{
+            images.append(image)
+        }
+        if let image = mainView.fourthImageView.image{
+            images.append(image)
+        }
+        
+        if mainView.isFirstStarSelected == true && mainView.isSecondStarSelected == true && mainView.isThirdStarSelected == true && mainView.isFourthStarSelected == true && mainView.isFifthStarSelected == true {
+            reviewPostModel.review_num = 5
+        } else if mainView.isFirstStarSelected == true && mainView.isSecondStarSelected == true && mainView.isThirdStarSelected == true && mainView.isFourthStarSelected == true {
+            reviewPostModel.review_num = 4
+        } else if mainView.isFirstStarSelected == true && mainView.isSecondStarSelected == true && mainView.isThirdStarSelected == true {
+            reviewPostModel.review_num = 3
+        } else if mainView.isFirstStarSelected == true && mainView.isSecondStarSelected == true {
+            reviewPostModel.review_num = 2
+        } else if mainView.isFirstStarSelected == true {
+            reviewPostModel.review_num = 1
+        }
+        
         ReviewPostModel.update(request: reviewPostModel, images: images) {
             self.dismiss(animated: true, completion: nil)
         }
@@ -67,6 +124,51 @@ extension EditReviewViewController :HeaderViewDelegate{
 }
 
 extension EditReviewViewController:EditReviewMainViewDelegate{
+    func firstStarButton() {
+        mainView.isFirstStarSelected = !mainView.isFirstStarSelected
+        mainView.updateStar()
+    }
+    
+    func secondStarButton() {
+        mainView.isSecondStarSelected = !mainView.isFirstStarSelected
+        mainView.updateStar()
+    }
+    
+    func thirdStarButton() {
+        mainView.isThirdStarSelected = !mainView.isFirstStarSelected
+        mainView.updateStar()
+    }
+    
+    func fourthStarButton() {
+        mainView.isFourthStarSelected = !mainView.isFirstStarSelected
+        mainView.updateStar()
+    }
+    
+    func fifthStarButton() {
+        mainView.isFifthStarSelected = !mainView.isFirstStarSelected
+        mainView.updateStar()
+    }
+    
+    func firstAddButton() {
+        imageViewType = ImageViewType.first
+        useCamera()
+    }
+    
+    func secondAddButton() {
+        imageViewType = ImageViewType.second
+        useCamera()
+    }
+    
+    func thirdAddButton() {
+        imageViewType = ImageViewType.third
+        useCamera()
+    }
+    
+    func fourthAddButton() {
+        imageViewType = ImageViewType.fourth
+        useCamera()
+    }
+    
     func postDeleteButton() {
         ReviewPostModel.delete(id: reviewPostModel.id) {
             self.dismiss(animated: true, completion: nil)

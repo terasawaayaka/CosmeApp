@@ -16,6 +16,7 @@ class TimeLineViewController: BaseViewController {
     @IBOutlet weak var mainView: TimeLineMainView!
     
     var reviewPostModels : [ReviewPostModel] = [ReviewPostModel]()
+    var makePostModels : [MakePostModel] = [MakePostModel]()
 }
 // MARK: - Life cycle
 extension TimeLineViewController {
@@ -33,21 +34,24 @@ extension TimeLineViewController {
             let signUpViewController = SignUpViewController()
             navigationController?.pushViewController(signUpViewController, animated: false)
         }
-        getModel()
+        reviewGetModel()
+        makeGetModel()
     }
 }
 // MARK: - Protocol
-extension TimeLineViewController :TimeLineMainViewDelegate{
+extension TimeLineViewController :TimeLineMainViewDelegate {
+    func didSelectCollectionViewCell(indexPath: IndexPath) {
+        let makeDetailViewController = MakeDetailViewController()
+        makeDetailViewController.makePostModel = makePostModels[indexPath.row]
+        navigationController?.pushViewController(makeDetailViewController, animated: true)
+        animatorManager.navigationType = .slide_push
+    }
+    
     
     func touchedIconViewButton() {
         //TODO : 自分か他人のprofile画面に遷移
     }
     
-    func didSelectCollectionViewCell() {
-        let makeDetailViewController = MakeDetailViewController()
-        navigationController?.pushViewController(makeDetailViewController, animated: true)
-        animatorManager.navigationType = .slide_push
-    }
     
     func didSelectRowAt(indexPath:IndexPath) {
         let reviewDetailViewController = ReviewDetailViewController()
@@ -61,10 +65,16 @@ extension TimeLineViewController {
     func setDelegate(){
         mainView.delegate = self
     }
-    func getModel(){
+    func reviewGetModel(){
         ReviewPostModel.reads { (reviewPostModels) in
-            self.mainView.getModel(reviewPostModels: reviewPostModels)
+            self.mainView.reviewGetModel(reviewPostModels: reviewPostModels)
             self.reviewPostModels = reviewPostModels
+        }
+    }
+    func makeGetModel(){
+        MakePostModel.reads { (makePostModels) in
+            self.mainView.makeGetModel(makePostModels: makePostModels)
+            self.makePostModels = makePostModels
         }
     }
 }

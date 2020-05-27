@@ -34,9 +34,10 @@ extension ReviewDetailViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        reviewUpdateView()
         reviewGetModel()
         getModel()
-        updateView2()
+        
     }
 }
 // MARK: - Protocol
@@ -104,11 +105,92 @@ extension ReviewDetailViewController {
             self.animatorManager.navigationType = .slide_pop
         }
     }
-    func updateView2(){
+    func reviewUpdateView(){
+        //text
         mainView.titleLabel.text = "商品名：　" + reviewPostModel.title
         mainView.categoryLabel.text = "カテゴリ：　" + reviewPostModel.category
         mainView.reviewLabel.text = reviewPostModel.review
         mainView.tagLabel.text = reviewPostModel.tag
+        
+        //星の数
+        if case reviewPostModel.review_num = 5{
+            mainView.firstStarImage.image = UIImage(named: "checkedStar")
+            mainView.secondStarImage.image = UIImage(named: "checkedStar")
+            mainView.thirdStarImage.image = UIImage(named: "checkedStar")
+            mainView.fourthStarImage.image = UIImage(named: "checkedStar")
+            mainView.fifthStarImage.image = UIImage(named: "checkedStar")
+        }
+        if case reviewPostModel.review_num = 4{
+            mainView.firstStarImage.image = UIImage(named: "checkedStar")
+            mainView.secondStarImage.image = UIImage(named: "checkedStar")
+            mainView.thirdStarImage.image = UIImage(named: "checkedStar")
+            mainView.fourthStarImage.image = UIImage(named: "checkedStar")
+        }
+        if case reviewPostModel.review_num = 3{
+            mainView.firstStarImage.image = UIImage(named: "checkedStar")
+            mainView.secondStarImage.image = UIImage(named: "checkedStar")
+            mainView.thirdStarImage.image = UIImage(named: "checkedStar")
+        }
+        if case reviewPostModel.review_num = 2{
+            mainView.firstStarImage.image = UIImage(named: "checkedStar")
+            mainView.secondStarImage.image = UIImage(named: "checkedStar")
+        }
+        if case reviewPostModel.review_num = 1{
+            mainView.firstStarImage.image = UIImage(named: "checkedStar")
+        }
+        
+        //画像
+        switch reviewPostModel.image_paths.count {
+        case 0:
+            mainView.firstImageView.image = UIImage(named: "noimage.png")
+            mainView.secondImageView.image = UIImage(named: "noimage.png")
+            mainView.thirdImageView.image = UIImage(named: "noimage.png")
+            mainView.fourthImageView.image = UIImage(named: "noimage.png")
+            
+        case 1:
+            if let url = URL(string: reviewPostModel.image_paths[0]){
+                mainView.firstImageView.af_setImage(withURL: url)
+            }
+            mainView.secondImageView.image = UIImage(named: "noimage.png")
+            mainView.thirdImageView.image = UIImage(named: "noimage.png")
+            mainView.fourthImageView.image = UIImage(named: "noimage.png")
+        case 2:
+            if let url = URL(string: reviewPostModel.image_paths[0]){
+                mainView.firstImageView.af_setImage(withURL: url)
+            }
+            if let url = URL(string: reviewPostModel.image_paths[1]){
+                mainView.secondImageView.af_setImage(withURL: url)
+            }
+            mainView.thirdImageView.image = UIImage(named: "noimage.png")
+            mainView.fourthImageView.image = UIImage(named: "noimage.png")
+        case 3:
+            if let url = URL(string: reviewPostModel.image_paths[0]){
+                mainView.firstImageView.af_setImage(withURL: url)
+            }
+            if let url = URL(string: reviewPostModel.image_paths[1]){
+                mainView.secondImageView.af_setImage(withURL: url)
+            }
+            if let url = URL(string: reviewPostModel.image_paths[2]){
+                mainView.thirdImageView.af_setImage(withURL: url)
+            }
+            mainView.fourthImageView.image = UIImage(named: "noimage.png")
+
+        case 4:
+            if let url = URL(string: reviewPostModel.image_paths[0]){
+                mainView.firstImageView.af_setImage(withURL: url)
+            }
+            if let url = URL(string: reviewPostModel.image_paths[1]){
+                mainView.secondImageView.af_setImage(withURL: url)
+            }
+            if let url = URL(string: reviewPostModel.image_paths[2]){
+                mainView.thirdImageView.af_setImage(withURL: url)
+            }
+            if let url = URL(string: reviewPostModel.image_paths[3]){
+                mainView.fourthImageView.af_setImage(withURL: url)
+            }
+        default:
+            break
+        }
     }
     
     

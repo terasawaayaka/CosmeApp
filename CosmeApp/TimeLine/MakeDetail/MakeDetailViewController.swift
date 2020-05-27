@@ -13,6 +13,9 @@ import PGFramework
 class MakeDetailViewController: BaseViewController {
     @IBOutlet weak var headerView: HeaderView!
     @IBOutlet weak var mainView: MakeDetailMainView!
+    
+    var makePostModel : MakePostModel = MakePostModel()
+    
 }
 // MARK: - Life cycle
 extension MakeDetailViewController {
@@ -26,6 +29,7 @@ extension MakeDetailViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        makeUpdateView()
     }
 }
 // MARK: - Protocol
@@ -58,6 +62,21 @@ extension MakeDetailViewController {
     func setDelegate(){
         headerView.delegate = self
         mainView.delegate = self
+    }
+    func makeUpdateView(){
+        mainView.basemakeLabel.text = makePostModel.basemake
+        mainView.shadingLabel.text = makePostModel.shading
+        mainView.highlightLabel.text = makePostModel.highlight
+        mainView.cheekLabel.text = makePostModel.cheek
+        mainView.eyeshadowLabel.text = makePostModel.eyeshadow
+        mainView.eyelinerLabel.text = makePostModel.eyeliner
+        mainView.mascaraLabel.text = makePostModel.mascara
+        mainView.colorcontactLabel.text = makePostModel.colorcontact
+        mainView.eyeblowLabel.text = makePostModel.eyebrow
+        mainView.lipLabel.text = makePostModel.lip
+        mainView.haircareLabel.text = makePostModel.haircare
+        mainView.skincareLabel.text = makePostModel.skincare
+        mainView.processTextView.text = makePostModel.process
     }
 }
 

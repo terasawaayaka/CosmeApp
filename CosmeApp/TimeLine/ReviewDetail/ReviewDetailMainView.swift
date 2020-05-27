@@ -22,6 +22,19 @@ extension ReviewDetailMainViewDelegate {
 class ReviewDetailMainView: BaseView, UIScrollViewDelegate {
     weak var delegate: ReviewDetailMainViewDelegate? = nil
     
+    //star
+    @IBOutlet weak var firstStarImage: UIImageView!
+    @IBOutlet weak var secondStarImage: UIImageView!
+    @IBOutlet weak var thirdStarImage: UIImageView!
+    @IBOutlet weak var fourthStarImage: UIImageView!
+    @IBOutlet weak var fifthStarImage: UIImageView!
+    //image
+    @IBOutlet weak var firstImageView: UIImageView!
+    @IBOutlet weak var secondImageView: UIImageView!
+    @IBOutlet weak var thirdImageView: UIImageView!
+    @IBOutlet weak var fourthImageView: UIImageView!
+    
+    //review
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var reviewLabel: UITextView!
@@ -32,10 +45,13 @@ class ReviewDetailMainView: BaseView, UIScrollViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var iconView: UIButton!
+    
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var imageScrollView: UIScrollView!
+    
     @IBOutlet weak var commentTextField: UITextField!
     
+    //button
     @IBAction func iconViewButton(_ sender: UIButton) {
         if let delegate = delegate {delegate.iconViewButton2()}
     }
