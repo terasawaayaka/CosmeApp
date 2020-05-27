@@ -34,4 +34,9 @@ extension TimeLineMainCollectionViewCell {
     func setLayout(){
         makeIconView.layer.cornerRadius = makeIconView.frame.width / 2
     }
+    func updatecollectionView(makePostModel:MakePostModel){
+        if let url = URL(string: makePostModel.image_paths[0]){
+            makeIconView.af_setImage(withURL: url)
+        }
+    }
 }

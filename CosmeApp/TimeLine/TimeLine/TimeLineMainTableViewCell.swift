@@ -10,7 +10,7 @@ import UIKit
 
 import PGFramework
 protocol TimeLineMainTableViewCellDelegate: NSObjectProtocol{
-    func didSelectItemAt()
+    func didSelectItemAt(indexPath:IndexPath)
 }
 extension TimeLineMainTableViewCellDelegate {
 }
@@ -19,6 +19,8 @@ class TimeLineMainTableViewCell: BaseTableViewCell {
     weak var delegate: TimeLineMainTableViewCellDelegate? = nil
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
+    
+    var makePostModels : [MakePostModel] = [MakePostModel]()
 }
 // MARK: - Life cycle
 extension TimeLineMainTableViewCell {
@@ -33,19 +35,19 @@ extension TimeLineMainTableViewCell {
 // MARK: - Protocol
 extension TimeLineMainTableViewCell :UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 15
+        return makePostModels.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TimeLineMainCollectionViewCell", for: indexPath) as? TimeLineMainCollectionViewCell else {return UICollectionViewCell()}
-        
+        cell.updatecollectionView(makePostModel: makePostModels[indexPath.row])
         return cell
     }
 }
 
 extension TimeLineMainTableViewCell :UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let delegate = delegate {delegate.didSelectItemAt()}
+        if let delegate = delegate {delegate.didSelectItemAt(indexPath: indexPath)}
     }
     
     
@@ -58,7 +60,8 @@ extension TimeLineMainTableViewCell {
     }
     func setLayout(){
         collectionViewFlowLayout.estimatedItemSize = CGSize(width:80,height:80)
-        
+    }
+    func updateCell(makePostModel:MakePostModel){
         
     }
 }

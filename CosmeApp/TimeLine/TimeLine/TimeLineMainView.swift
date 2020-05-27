@@ -12,7 +12,7 @@ import PGFramework
 protocol TimeLineMainViewDelegate: NSObjectProtocol{
     
     func didSelectRowAt(indexPath:IndexPath)
-    func didSelectCollectionViewCell()
+    func didSelectCollectionViewCell(indexPath:IndexPath)
     func touchedIconViewButton()
 }
 extension TimeLineMainViewDelegate {
@@ -22,6 +22,7 @@ class TimeLineMainView: BaseView {
     weak var delegate: TimeLineMainViewDelegate? = nil
     
     var reviewPostModels : [ReviewPostModel] = [ReviewPostModel]()
+    var makePostModels : [MakePostModel] = [MakePostModel]()
     
     @IBOutlet weak var tableView: UITableView!
 }
@@ -47,6 +48,7 @@ extension TimeLineMainView :UITableViewDataSource{
         switch indexPath.row {
         case 0:
             cell.delegate = self
+            cell.updateCell(makePostModel: makePostModels[indexPath.row])
             return cell
         default:
             secondCell.delegate = self
@@ -62,9 +64,9 @@ extension TimeLineMainView :UITableViewDelegate{
     }
 }
 
-extension TimeLineMainView:TimeLineMainTableViewCellDelegate{
-    func didSelectItemAt() {
-        if let delegate = delegate {delegate.didSelectCollectionViewCell()}
+extension TimeLineMainView:TimeLineMainTableViewCellDelegate {
+    func didSelectItemAt(indexPath: IndexPath) {
+        if let delegate = delegate {delegate.didSelectCollectionViewCell(indexPath: indexPath)}
     }
 }
 
@@ -81,8 +83,12 @@ extension TimeLineMainView {
         tableView.dataSource = self
         tableView.delegate = self
     }
-    func getModel(reviewPostModels:[ReviewPostModel]){
+    func reviewGetModel(reviewPostModels:[ReviewPostModel]){
     self.reviewPostModels = reviewPostModels
+        tableView.reloadData()
+    }
+    func makeGetModel(makePostModels:[MakePostModel]){
+        self.makePostModels = makePostModels
         tableView.reloadData()
     }
     

@@ -10,14 +10,19 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditReviewMainView" customModule="CosmeApp" customModuleProvider="target">
             <connections>
                 <outlet property="categoryLabel" destination="UfL-gS-Sb8" id="q6d-gk-bZf"/>
+                <outlet property="fifthStarButton" destination="Dlk-9d-5fX" id="0KB-le-kgG"/>
                 <outlet property="firstImageView" destination="Qm8-8Q-cYF" id="EgZ-vN-Z8C"/>
+                <outlet property="firstStarButton" destination="goe-O2-0xR" id="Jwh-No-9W1"/>
                 <outlet property="fourthImageView" destination="Qa3-Ll-p8t" id="8aW-DZ-DVT"/>
+                <outlet property="fourthStarButton" destination="72D-bc-X0j" id="Zaa-aM-lH5"/>
                 <outlet property="pickerView" destination="DvM-a1-0tQ" id="Pu2-MK-0bu"/>
                 <outlet property="pickerViewLabel" destination="UfL-gS-Sb8" id="iLJ-Sd-jNq"/>
                 <outlet property="reviewTextField" destination="uKU-QL-0mZ" id="hAi-TE-AsO"/>
-                <outlet property="secondImageView" destination="1g2-E3-7fb" id="6jx-vz-IzY"/>
+                <outlet property="secondImageView" destination="nmV-Pb-dRU" id="DTM-X1-rR1"/>
+                <outlet property="secondStarButton" destination="gyg-S2-ZFe" id="MJ2-kn-Mpf"/>
                 <outlet property="tagTextField" destination="rHn-7h-A5z" id="Oho-hg-3Ml"/>
                 <outlet property="thirdImageView" destination="1g2-E3-7fb" id="alf-Vz-huu"/>
+                <outlet property="thirdStarButton" destination="9Il-FL-Nve" id="4xQ-o4-q8m"/>
                 <outlet property="titleTextField" destination="cAt-Ic-Be5" id="aq0-jN-buk"/>
             </connections>
         </placeholder>
@@ -58,6 +63,9 @@
                                             <state key="normal" title="＋">
                                                 <color key="titleColor" red="1" green="0.62309132349999996" blue="0.78946096139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
+                                            <connections>
+                                                <action selector="secondAddButton:" destination="-1" eventType="touchUpInside" id="Dtv-G1-aa9"/>
+                                            </connections>
                                         </button>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1g2-E3-7fb">
                                             <rect key="frame" x="0.0" y="257" width="207" height="207"/>
@@ -72,6 +80,9 @@
                                             <state key="normal" title="＋">
                                                 <color key="titleColor" red="1" green="0.62309132349999996" blue="0.78946096139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
+                                            <connections>
+                                                <action selector="thirdAddButton:" destination="-1" eventType="touchUpInside" id="RAF-RI-fxd"/>
+                                            </connections>
                                         </button>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qa3-Ll-p8t">
                                             <rect key="frame" x="207" y="257" width="207" height="207"/>
@@ -86,6 +97,9 @@
                                             <state key="normal" title="＋">
                                                 <color key="titleColor" red="1" green="0.62309132349999996" blue="0.78946096139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
+                                            <connections>
+                                                <action selector="fourthAddButton:" destination="-1" eventType="touchUpInside" id="iNI-qF-LUx"/>
+                                            </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="751" text="レビュー：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t4M-T6-Nc1">
                                             <rect key="frame" x="20" y="714" width="87" height="21"/>
@@ -163,31 +177,64 @@
                                             <state key="normal" title="＋">
                                                 <color key="titleColor" red="1" green="0.62309132349999996" blue="0.78946096139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
+                                            <connections>
+                                                <action selector="firstAddButton:" destination="-1" eventType="touchUpInside" id="DJW-Ld-Csq"/>
+                                            </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="goe-O2-0xR">
-                                            <rect key="frame" x="20" y="474" width="31" height="48"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                            <state key="normal" title="☆"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="goe-O2-0xR">
+                                            <rect key="frame" x="20" y="474" width="35" height="35"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="35" id="899-xO-XOH"/>
+                                                <constraint firstAttribute="width" secondItem="goe-O2-0xR" secondAttribute="height" multiplier="1:1" id="j07-nL-rjO"/>
+                                            </constraints>
+                                            <state key="normal" image="star"/>
+                                            <connections>
+                                                <action selector="firstStarButtton:" destination="-1" eventType="touchUpInside" id="Qtk-SL-JqQ"/>
+                                            </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gyg-S2-ZFe">
-                                            <rect key="frame" x="53" y="474" width="31" height="48"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                            <state key="normal" title="☆"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gyg-S2-ZFe">
+                                            <rect key="frame" x="57" y="474" width="35" height="35"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="gyg-S2-ZFe" secondAttribute="height" multiplier="1:1" id="Tab-rk-Cef"/>
+                                                <constraint firstAttribute="height" constant="35" id="ybZ-UW-egy"/>
+                                            </constraints>
+                                            <state key="normal" image="star"/>
+                                            <connections>
+                                                <action selector="secondStarButton:" destination="-1" eventType="touchUpInside" id="e82-9q-htJ"/>
+                                            </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Il-FL-Nve">
-                                            <rect key="frame" x="86" y="474" width="31" height="48"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                            <state key="normal" title="☆"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Il-FL-Nve">
+                                            <rect key="frame" x="94" y="474" width="35" height="35"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="9Il-FL-Nve" secondAttribute="height" multiplier="1:1" id="kH5-Z4-GrL"/>
+                                                <constraint firstAttribute="height" constant="35" id="sQ1-2S-3LN"/>
+                                            </constraints>
+                                            <state key="normal" image="star"/>
+                                            <connections>
+                                                <action selector="thirdStarButton:" destination="-1" eventType="touchUpInside" id="CI6-5G-OLo"/>
+                                            </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="72D-bc-X0j">
-                                            <rect key="frame" x="119" y="474" width="31" height="48"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                            <state key="normal" title="☆"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="72D-bc-X0j">
+                                            <rect key="frame" x="131" y="474" width="35" height="35"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="35" id="AdL-8u-SZO"/>
+                                                <constraint firstAttribute="width" secondItem="72D-bc-X0j" secondAttribute="height" multiplier="1:1" id="olX-hh-ewC"/>
+                                            </constraints>
+                                            <state key="normal" image="star"/>
+                                            <connections>
+                                                <action selector="fourthStarButton:" destination="-1" eventType="touchUpInside" id="kWT-Vi-ZO5"/>
+                                            </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dlk-9d-5fX">
-                                            <rect key="frame" x="152" y="474" width="31" height="48"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                            <state key="normal" title="☆"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dlk-9d-5fX">
+                                            <rect key="frame" x="168" y="474" width="35" height="35"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="35" id="Bot-Gg-Ie6"/>
+                                                <constraint firstAttribute="width" secondItem="Dlk-9d-5fX" secondAttribute="height" multiplier="1:1" id="RhL-tE-3Mk"/>
+                                            </constraints>
+                                            <state key="normal" image="star"/>
+                                            <connections>
+                                                <action selector="fifthStarButton:" destination="-1" eventType="touchUpInside" id="COV-5s-epL"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mt4-2G-0EQ">
                                             <rect key="frame" x="157" y="1082" width="100" height="30"/>
@@ -206,7 +253,6 @@
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     <constraints>
                                         <constraint firstItem="goe-O2-0xR" firstAttribute="top" secondItem="1g2-E3-7fb" secondAttribute="bottom" constant="10" id="1hK-9H-Ytp"/>
-                                        <constraint firstItem="gyg-S2-ZFe" firstAttribute="leading" secondItem="goe-O2-0xR" secondAttribute="trailing" constant="2" id="2TM-3h-CFK"/>
                                         <constraint firstAttribute="trailing" secondItem="74c-wL-fzF" secondAttribute="trailing" id="3MY-7l-XQT"/>
                                         <constraint firstItem="0Va-iO-eAi" firstAttribute="top" secondItem="nmV-Pb-dRU" secondAttribute="bottom" id="5Zo-WR-XV2"/>
                                         <constraint firstItem="UfL-gS-Sb8" firstAttribute="top" secondItem="cAt-Ic-Be5" secondAttribute="bottom" constant="15" id="6PD-ve-t42"/>
@@ -239,6 +285,7 @@
                                         <constraint firstItem="Qm8-8Q-cYF" firstAttribute="leading" secondItem="HDi-DS-6P3" secondAttribute="leading" id="U02-FQ-noD"/>
                                         <constraint firstAttribute="trailing" secondItem="0Va-iO-eAi" secondAttribute="trailing" id="UT0-JJ-xK1"/>
                                         <constraint firstItem="0Va-iO-eAi" firstAttribute="width" secondItem="Qa3-Ll-p8t" secondAttribute="width" id="V3Q-vi-fr8"/>
+                                        <constraint firstItem="gyg-S2-ZFe" firstAttribute="leading" secondItem="goe-O2-0xR" secondAttribute="trailing" constant="2" id="X0c-KA-3aM"/>
                                         <constraint firstItem="3aY-ir-3Z6" firstAttribute="width" secondItem="Qa3-Ll-p8t" secondAttribute="width" id="XZd-h9-u11"/>
                                         <constraint firstItem="nmV-Pb-dRU" firstAttribute="top" secondItem="HDi-DS-6P3" secondAttribute="top" constant="50" id="YSW-r5-Ws8"/>
                                         <constraint firstItem="erY-qp-fSB" firstAttribute="top" secondItem="uKU-QL-0mZ" secondAttribute="bottom" constant="10" id="YSk-9b-4l6"/>
@@ -300,4 +347,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="132.58928571428572"/>
         </view>
     </objects>
+    <resources>
+        <image name="star" width="64" height="64"/>
+    </resources>
 </document>
