@@ -45,6 +45,8 @@ extension SearchResultCollectionViewCell {
     
     func updateReviewCell(reviewPostModel: ReviewPostModel){
         nameLabel.text = reviewPostModel.title
+        if let url = URL(string: reviewPostModel.image_paths[0]) {
+            imaveView.af_setImage(withURL: url) }
     }
 }
 
