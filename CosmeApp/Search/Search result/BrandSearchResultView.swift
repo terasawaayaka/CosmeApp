@@ -18,6 +18,8 @@ class BrandSearchResultView: BaseView {
     weak var delegate: BrandSearchResultViewDelegate? = nil
     @IBOutlet weak var brandCollectionView: UICollectionView!
     @IBOutlet weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
+    
+    var reviewPostModels: [ReviewPostModel] = [ReviewPostModel]()
 }
 // MARK: - Life cycle
 extension BrandSearchResultView {
@@ -33,12 +35,13 @@ extension BrandSearchResultView {
 // MARK: - Protocol
 extension BrandSearchResultView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return reviewPostModels.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchResultCollectionViewCell", for: indexPath) as? SearchResultCollectionViewCell else {return UICollectionViewCell()}
         cell.delegate = self
+        cell.updateReviewCell(reviewPostModel: reviewPostModels[indexPath.row])
         return cell
     }
 }
@@ -53,6 +56,10 @@ extension BrandSearchResultView: SearchResultCollectionViewCellDelegate {
 extension BrandSearchResultView {
     func setDelegate(){
         brandCollectionView.dataSource = self
+    }
+    func getReviewPostModel(reviewPostModels: [ReviewPostModel]){
+    self.reviewPostModels = reviewPostModels
+    brandCollectionView.reloadData()
     }
 }
 

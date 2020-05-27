@@ -220,6 +220,8 @@ extension SearchMainView {
     func getReviewPostModel(reviewPostModels: [ReviewPostModel]){
         self.reviewPostModels = reviewPostModels
         tagResultView.getReviewPostModel(reviewPostModels: reviewPostModels)
+        brandResultView.getReviewPostModel(reviewPostModels: reviewPostModels)
+        productNameResultView.getReviewPostModel(reviewPostModels: reviewPostModels)
     }
     
 }
