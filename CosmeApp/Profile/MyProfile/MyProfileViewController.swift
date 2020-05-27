@@ -14,6 +14,7 @@ import FirebaseAuth
 class MyProfileViewController: BaseViewController{
     //data
     var userModel: UserModel = UserModel()
+    var makePostmodel: MakePostModel = MakePostModel()
     
     //Outlet
     @IBOutlet weak var mainView: MyProfileMainView!
@@ -69,6 +70,9 @@ extension MyProfileViewController {
     }
     func getModel() {
         UserModel.readMe { (userModel) in
+            if let icon = userModel.photo_path {
+                self.makePostmodel.post_user_icon = icon
+            }
             self.mainView.getModel(userModel: userModel)
             self.userModel = userModel
         }
