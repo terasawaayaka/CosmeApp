@@ -10,7 +10,7 @@ import UIKit
 import PGFramework
 protocol SearchTextViewDelegate: NSObjectProtocol{
     func searchBarCancelButtonClicked()
-    func searchBarSearchButtonClicked()
+    func searchBarSearchButtonClicked(text: String)
 }
 extension SearchTextViewDelegate {
 }
@@ -44,8 +44,11 @@ extension SearchTextView {
     }
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         if let delegate = delegate {
-            delegate.searchBarSearchButtonClicked() }
+            if let text = searchBar.text {
+                delegate.searchBarSearchButtonClicked(text: text)
+            }
+        }
     }
-
+    
 }
 

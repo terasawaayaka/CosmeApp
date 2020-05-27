@@ -217,9 +217,9 @@ extension SearchMainView {
         self.userModels = userModels
         userResultView.getModel(userModels: userModels)
     }
-    func getReviewPostModel(reviewPostModels: [ReviewPostModel]){
+    func getReviewPostModel(reviewPostModels: [ReviewPostModel], text: String?=nil){
         self.reviewPostModels = reviewPostModels
-        tagResultView.getReviewPostModel(reviewPostModels: reviewPostModels)
+        tagResultView.getReviewPostModel(reviewPostModels: reviewPostModels,text: text)
         brandResultView.getReviewPostModel(reviewPostModels: reviewPostModels)
         productNameResultView.getReviewPostModel(reviewPostModels: reviewPostModels)
     }

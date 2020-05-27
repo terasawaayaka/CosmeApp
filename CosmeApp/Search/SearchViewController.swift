@@ -15,6 +15,7 @@ class SearchViewController: BaseViewController {
     @IBOutlet weak var mainView: SearchMainView!
     
     var userModels: [UserModel] = [UserModel]()
+    var reviewPostModels: [ReviewPostModel] = [ReviewPostModel]()
 }
 // MARK: - Life cycle
 extension SearchViewController {
@@ -35,20 +36,23 @@ extension SearchViewController {
 // MARK: - Protocol
 //検索バーのあるView
 extension SearchViewController: SearchTextViewDelegate {
+    func searchBarSearchButtonClicked(text: String) {
+        mainView.searchCategoryButtonView.isHidden = false
+        mainView.searchResultMainView.isHidden = true
+        mainView.tagResultView.isHidden = false
+        mainView.userResultView.isHidden = true
+        mainView.productNameResultView.isHidden = true
+        mainView.brandResultView.isHidden = true
+        
+        mainView.getReviewPostModel(reviewPostModels: reviewPostModels, text: text)
+        
+    }
+    
     func searchBarCancelButtonClicked() {
         
         mainView.searchCategoryButtonView.isHidden = true
         mainView.searchResultMainView.isHidden = false
         mainView.tagResultView.isHidden = true
-        mainView.userResultView.isHidden = true
-        mainView.productNameResultView.isHidden = true
-        mainView.brandResultView.isHidden = true
-    }
-    
-    func searchBarSearchButtonClicked() {
-        mainView.searchCategoryButtonView.isHidden = false
-        mainView.searchResultMainView.isHidden = true
-        mainView.tagResultView.isHidden = false
         mainView.userResultView.isHidden = true
         mainView.productNameResultView.isHidden = true
         mainView.brandResultView.isHidden = true
@@ -210,6 +214,7 @@ extension SearchViewController {
 //            for reviewPostModel in reviewPostModels {
 //                print("DESC: ",reviewPostModel.title) }
             self.mainView.getReviewPostModel(reviewPostModels: reviewPostModels)
+            self.reviewPostModels = reviewPostModels
         }
     }
     
