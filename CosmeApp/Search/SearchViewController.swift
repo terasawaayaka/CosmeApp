@@ -33,20 +33,30 @@ extension SearchViewController {
     }
 }
 // MARK: - Protocol
+//検索バーのあるView
 extension SearchViewController: SearchTextViewDelegate {
-    func touchedSearchButton() {
-        //タグ〜とかボタンが置いてあるバーが出現する
+    func searchBarCancelButtonClicked() {
+        
+        mainView.searchCategoryButtonView.isHidden = true
+        mainView.searchResultMainView.isHidden = false
+        mainView.tagResultView.isHidden = true
+        mainView.userResultView.isHidden = true
+        mainView.productNameResultView.isHidden = true
+        mainView.brandResultView.isHidden = true
+    }
+    
+    func searchBarSearchButtonClicked() {
         mainView.searchCategoryButtonView.isHidden = false
         mainView.searchResultMainView.isHidden = true
         mainView.tagResultView.isHidden = false
         mainView.userResultView.isHidden = true
         mainView.productNameResultView.isHidden = true
         mainView.brandResultView.isHidden = true
-
     }
+  
 }
+//タグとかユーザーとかが出てくるView
 extension SearchViewController: SearchMainViewDelegate {
-    
     //タグとかユーザーとかのセルをタッチしたら詳細画面へ遷移する
     func touchedUserCellButton() {
         let searchUserResultViewController = SearchUserSelectResultViewController()
@@ -71,6 +81,40 @@ extension SearchViewController: SearchMainViewDelegate {
         navigationController?.pushViewController(reviewDatailViewController, animated: true)
         animatorManager.navigationType = .slide_push
     }
+    //タグとかユーザーとかのボタンを押した結果画面の表示
+      func touchedTagButton() {
+          //SearchMainViewがタグ検索結果Viewを表示
+          mainView.tagResultView.isHidden = false
+          mainView.userResultView.isHidden = true
+          mainView.productNameResultView.isHidden = true
+          mainView.brandResultView.isHidden = true
+          mainView.searchResultMainView.isHidden = true
+      }
+      func touchedUserButton() {
+          
+          //SearchMainViewのView２がユーザー検索結果Viewを表示
+          mainView.userResultView.isHidden = false
+          mainView.tagResultView.isHidden = true
+          mainView.productNameResultView.isHidden = true
+          mainView.brandResultView.isHidden = true
+          mainView.searchResultMainView.isHidden = true
+      }
+      func touchedProductNameButton() {
+          //SearchMainViewのView２が商品名検索結果Viewを表示
+          mainView.productNameResultView.isHidden = false
+          mainView.tagResultView.isHidden = true
+          mainView.userResultView.isHidden = true
+          mainView.brandResultView.isHidden = true
+          mainView.searchResultMainView.isHidden = true
+      }
+      func touchedBrandButton() {
+          //SearchMainViewのView２がブランド名検索結果Viewを表示
+          mainView.brandResultView.isHidden = false
+          mainView.tagResultView.isHidden = true
+          mainView.userResultView.isHidden = true
+          mainView.productNameResultView.isHidden = true
+          mainView.searchResultMainView.isHidden = true
+      }
     
 //カテゴリ分けしたアイシャドウとかベースメイクとかボタン
     func touchedEyeShadowButton() {
@@ -146,40 +190,6 @@ extension SearchViewController: SearchMainViewDelegate {
         animatorManager.navigationType = .slide_push
     }
     
-    //タグとかユーザーとかのボタンを押した結果画面の表示
-    func touchedTagButton() {
-        //SearchMainViewがタグ検索結果Viewを表示
-        mainView.tagResultView.isHidden = false
-        mainView.userResultView.isHidden = true
-        mainView.productNameResultView.isHidden = true
-        mainView.brandResultView.isHidden = true
-        mainView.searchResultMainView.isHidden = true
-    }
-    func touchedUserButton() {
-        
-        //SearchMainViewのView２がユーザー検索結果Viewを表示
-        mainView.userResultView.isHidden = false
-        mainView.tagResultView.isHidden = true
-        mainView.productNameResultView.isHidden = true
-        mainView.brandResultView.isHidden = true
-        mainView.searchResultMainView.isHidden = true
-    }
-    func touchedProductNameButton() {
-        //SearchMainViewのView２が商品名検索結果Viewを表示
-        mainView.productNameResultView.isHidden = false
-        mainView.tagResultView.isHidden = true
-        mainView.userResultView.isHidden = true
-        mainView.brandResultView.isHidden = true
-        mainView.searchResultMainView.isHidden = true
-    }
-    func touchedBrandButton() {
-        //SearchMainViewのView２がブランド名検索結果Viewを表示
-        mainView.brandResultView.isHidden = false
-        mainView.tagResultView.isHidden = true
-        mainView.userResultView.isHidden = true
-        mainView.productNameResultView.isHidden = true
-        mainView.searchResultMainView.isHidden = true
-    }
 }
 // MARK: - method
 extension SearchViewController {
