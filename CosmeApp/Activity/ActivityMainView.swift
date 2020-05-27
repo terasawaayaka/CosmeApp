@@ -10,7 +10,11 @@ import UIKit
 
 import PGFramework
 protocol ActivityMainViewDelegate: NSObjectProtocol {
-    func didSelectRowAt(indexPath:IndexPath)
+    func touchedProfilePageButton()
+    func touchedPostPageButton()
+    func touchedSecondProfileButton()
+    func touchedSecondPostPageButton()
+    func touchedThirdProfileButton()
 }
 extension ActivityMainViewDelegate {
 }
@@ -44,13 +48,13 @@ extension ActivityMainView:UITableViewDataSource {
              ActivityFollowTableViewCell else {return UITableViewCell()}
         switch indexPath {
         case [0,0]:
-            //cell.delegate = self
+            cell.delegate = self
             return cell
         case [0,1]:
-            //secondCell.delegate = self
+            secondCell.delegate = self
             return secondCell
         case [0,2]:
-            //thirdCell.delegate = self
+            thirdCell.delegate = self
             return thirdCell
         default:
             return cell
@@ -58,10 +62,37 @@ extension ActivityMainView:UITableViewDataSource {
     }
 }
 
-extension ActivityMainView: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+extension ActivityMainView: ActivityGoodTableViewCellDelegate {
+    func touchedProfilePageButton() {
         if let delegate = delegate {
-            delegate.didSelectRowAt(indexPath: indexPath)
+            delegate.touchedProfilePageButton()
+        }
+    }
+    
+    func touchedPostPageButton() {
+        if let delegate = delegate {
+            delegate.touchedPostPageButton()
+        }
+    }
+}
+
+extension ActivityMainView: ActivityCommentTableViewCellDelegate {
+    func touchedSecondProfileButton() {
+        if let delegate = delegate {
+            delegate.touchedSecondProfileButton()
+        }
+    }
+    func touchedSecondPostPageButton() {
+        if let delegate = delegate {
+            delegate.touchedSecondPostPageButton()
+        }
+    }
+}
+
+extension ActivityMainView: ActivityFollowTableViewCellDelegate {
+    func touchedThirdProfileButton() {
+        if let delegate = delegate {
+            delegate.touchedThirdProfileButton()
         }
     }
 }
@@ -70,6 +101,5 @@ extension ActivityMainView: UITableViewDelegate {
 extension ActivityMainView {
     func setDelegate() {
         tableView.dataSource = self
-        tableView.delegate = self
     }
 }
