@@ -103,7 +103,7 @@ extension ReviewDetailMainView {
         tableView.dataSource = self
         imageScrollView.delegate = self
     }
-    func getModel(commentPostModels:[CommentPostModel]){
+    func commentGetModel(commentPostModels:[CommentPostModel]){
         self.commentPostModels = commentPostModels
         tableView.reloadData()
     }

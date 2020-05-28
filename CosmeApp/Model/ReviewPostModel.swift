@@ -75,7 +75,6 @@ extension ReviewPostModel{
     }
 }
 
-
 //MARK: -Read
 extension ReviewPostModel{
     static func reads(success:@escaping ([ReviewPostModel]) -> Void) {
