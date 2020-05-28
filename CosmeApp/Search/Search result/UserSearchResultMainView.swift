@@ -53,8 +53,15 @@ extension UserSearchResultMainView {
     func setDelegate(){
         userTableView.dataSource = self
     }
-    func getModel(userModels: [UserModel]){
-        self.userModels = userModels
+    func getModel(userModels: [UserModel],text:String!=nil){
+        let filterdUserModels = userModels.filter { (userModel) -> Bool in
+            if userModel.nickname == text {
+                return true
+            }else {
+                return false
+            }
+        }
+        self.userModels = filterdUserModels
         userTableView.reloadData()
     }
 }

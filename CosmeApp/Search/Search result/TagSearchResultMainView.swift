@@ -55,8 +55,15 @@ extension TagSearchResultMainView {
     func setDelegate(){
         tagCollectionView.dataSource = self
     }
-    func getReviewPostModel(reviewPostModels: [ReviewPostModel]){
-        self.reviewPostModels = reviewPostModels
+    func getReviewPostModel(reviewPostModels: [ReviewPostModel],text: String?=nil) {
+        let filterdReviewPostModels = reviewPostModels.filter { (reviewPostModel) -> Bool in
+                        if reviewPostModel.tag == text {
+                            return true
+                        }else {
+                            return false
+                        }
+                    }
+        self.reviewPostModels = filterdReviewPostModels
         tagCollectionView.reloadData()
     }
 }

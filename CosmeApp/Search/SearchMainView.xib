@@ -9,7 +9,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchMainView" customModule="CosmeApp" customModuleProvider="target">
             <connections>
-                <outlet property="brandResultView" destination="63M-T8-pMZ" id="E4Y-Q4-o7f"/>
                 <outlet property="productNameResultView" destination="7IA-Oi-ULz" id="gNk-80-dJO"/>
                 <outlet property="searchCategoryButtonView" destination="00x-zD-qMy" id="yOe-H0-I7Q"/>
                 <outlet property="searchResultMainView" destination="Fhv-7i-Ol0" id="I1e-w2-vbL"/>
@@ -17,7 +16,6 @@
                 <outlet property="touchedProductNameButton" destination="ojC-1g-34m" id="ZDt-Na-QyL"/>
                 <outlet property="touchedTagButton" destination="o20-fw-gGm" id="neV-Ve-TLR"/>
                 <outlet property="touchedUserButton" destination="Wdr-Ok-Orj" id="qic-nV-WSc"/>
-                <outlet property="touchedbrandButton" destination="DgT-yx-KBZ" id="5bl-Hv-lWW"/>
                 <outlet property="userResultView" destination="iig-gC-uYj" id="cQD-NZ-0yM"/>
             </connections>
         </placeholder>
@@ -36,10 +34,10 @@
                                     <rect key="frame" x="5" y="0.0" width="404" height="50"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r9E-nK-IqR">
-                                            <rect key="frame" x="0.0" y="0.0" width="93.5" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="50"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o20-fw-gGm">
-                                                    <rect key="frame" x="16" y="10" width="62" height="30"/>
+                                                    <rect key="frame" x="33" y="10" width="62" height="30"/>
                                                     <state key="normal" title="　タグ　">
                                                         <color key="titleColor" red="0.71165133250000001" green="0.1774580224" blue="0.39658061729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
@@ -55,10 +53,10 @@
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ToM-Np-zpo">
-                                            <rect key="frame" x="103.5" y="0.0" width="93.5" height="50"/>
+                                            <rect key="frame" x="138" y="0.0" width="128" height="50"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wdr-Ok-Orj">
-                                                    <rect key="frame" x="1" y="10" width="92" height="30"/>
+                                                    <rect key="frame" x="18" y="10" width="92" height="30"/>
                                                     <state key="normal" title="　ユーザー　">
                                                         <color key="titleColor" red="0.71165133250000001" green="0.1774580224" blue="0.39658061729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
@@ -73,30 +71,11 @@
                                                 <constraint firstItem="Wdr-Ok-Orj" firstAttribute="centerY" secondItem="ToM-Np-zpo" secondAttribute="centerY" id="tr8-qO-SPW"/>
                                             </constraints>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fld-hc-SY8">
-                                            <rect key="frame" x="207" y="0.0" width="93.5" height="50"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DgT-yx-KBZ">
-                                                    <rect key="frame" x="1" y="10" width="92" height="30"/>
-                                                    <state key="normal" title="　ブランド　">
-                                                        <color key="titleColor" red="0.71165133250000001" green="0.1774580224" blue="0.39658061729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="touchedBrandButton:" destination="-1" eventType="touchUpInside" id="CrE-01-dHm"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
-                                            <color key="backgroundColor" red="1" green="0.99085296060000005" blue="0.86297983850000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <constraints>
-                                                <constraint firstItem="DgT-yx-KBZ" firstAttribute="centerY" secondItem="fld-hc-SY8" secondAttribute="centerY" id="1tx-w9-elL"/>
-                                                <constraint firstItem="DgT-yx-KBZ" firstAttribute="centerX" secondItem="fld-hc-SY8" secondAttribute="centerX" id="Irp-hC-RBV"/>
-                                            </constraints>
-                                        </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5lD-4M-Mt8">
-                                            <rect key="frame" x="310.5" y="0.0" width="93.5" height="50"/>
+                                            <rect key="frame" x="276" y="0.0" width="128" height="50"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ojC-1g-34m">
-                                                    <rect key="frame" x="8.5" y="10" width="77" height="30"/>
+                                                    <rect key="frame" x="25.5" y="10" width="77" height="30"/>
                                                     <state key="normal" title="　商品名　">
                                                         <color key="titleColor" red="0.71165133250000001" green="0.1774580224" blue="0.39658061729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
@@ -115,10 +94,8 @@
                                     <constraints>
                                         <constraint firstItem="r9E-nK-IqR" firstAttribute="leading" secondItem="EYf-ka-iBX" secondAttribute="leading" id="2JD-bB-aGq"/>
                                         <constraint firstAttribute="bottom" secondItem="r9E-nK-IqR" secondAttribute="bottom" id="Lgd-30-V3O"/>
-                                        <constraint firstItem="fld-hc-SY8" firstAttribute="top" secondItem="EYf-ka-iBX" secondAttribute="top" id="NcL-1n-rRL"/>
                                         <constraint firstAttribute="trailing" secondItem="5lD-4M-Mt8" secondAttribute="trailing" id="QIl-Wi-gSD"/>
                                         <constraint firstAttribute="bottom" secondItem="5lD-4M-Mt8" secondAttribute="bottom" id="WSH-AS-ZyW"/>
-                                        <constraint firstAttribute="bottom" secondItem="fld-hc-SY8" secondAttribute="bottom" id="g2t-FU-n9e"/>
                                         <constraint firstAttribute="bottom" secondItem="ToM-Np-zpo" secondAttribute="bottom" id="jns-a0-Mfe"/>
                                         <constraint firstItem="r9E-nK-IqR" firstAttribute="top" secondItem="EYf-ka-iBX" secondAttribute="top" id="kgW-b0-x7l"/>
                                         <constraint firstItem="ToM-Np-zpo" firstAttribute="top" secondItem="EYf-ka-iBX" secondAttribute="top" id="mGK-1p-Mdq"/>
@@ -144,10 +121,6 @@
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7IA-Oi-ULz" customClass="ProductNameSearchResultView" customModule="CosmeApp" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="50" width="414" height="0.0"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="63M-T8-pMZ" customClass="BrandSearchResultView" customModule="CosmeApp" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="50" width="414" height="0.0"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         </view>

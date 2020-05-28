@@ -58,8 +58,15 @@ extension ProductNameSearchResultView {
     func setDelegate(){
         productNameCollectionView.dataSource = self
     }
-    func getReviewPostModel(reviewPostModels: [ReviewPostModel]){
-    self.reviewPostModels = reviewPostModels
+    func getReviewPostModel(reviewPostModels: [ReviewPostModel],text: String!=nil){
+        let filterdReviewPostModels = reviewPostModels.filter { (reviewPostModel) -> Bool in
+                          if reviewPostModel.title == text {
+                              return true
+                          }else {
+                              return false
+                          }
+                      }
+    self.reviewPostModels = filterdReviewPostModels
     productNameCollectionView.reloadData()
     }
 }

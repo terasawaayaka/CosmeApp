@@ -62,8 +62,6 @@
 		3F96651E246E2A7F0083EBC2 /* SearchTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F96651C246E2A7F0083EBC2 /* SearchTextView.xib */; };
 		3F966521246E2B240083EBC2 /* SearchMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F96651F246E2B240083EBC2 /* SearchMainView.swift */; };
 		3F966522246E2B240083EBC2 /* SearchMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F966520246E2B240083EBC2 /* SearchMainView.xib */; };
-		3F966547246E56040083EBC2 /* BrandSearchResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F966545246E56040083EBC2 /* BrandSearchResultView.swift */; };
-		3F966548246E56040083EBC2 /* BrandSearchResultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F966546246E56040083EBC2 /* BrandSearchResultView.xib */; };
 		3FA0F795246E6DCA00D8DBA2 /* SearchResultMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA0F793246E6DCA00D8DBA2 /* SearchResultMainView.swift */; };
 		3FA0F796246E6DCA00D8DBA2 /* SearchResultMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FA0F794246E6DCA00D8DBA2 /* SearchResultMainView.xib */; };
 		3FBC60CE2477B70D007F78F2 /* SearchUserSelectResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBC60CC2477B70D007F78F2 /* SearchUserSelectResultViewController.swift */; };
@@ -243,8 +241,6 @@
 		3F96651C246E2A7F0083EBC2 /* SearchTextView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTextView.xib; sourceTree = "<group>"; };
 		3F96651F246E2B240083EBC2 /* SearchMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMainView.swift; sourceTree = "<group>"; };
 		3F966520246E2B240083EBC2 /* SearchMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchMainView.xib; sourceTree = "<group>"; };
-		3F966545246E56040083EBC2 /* BrandSearchResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandSearchResultView.swift; sourceTree = "<group>"; };
-		3F966546246E56040083EBC2 /* BrandSearchResultView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BrandSearchResultView.xib; sourceTree = "<group>"; };
 		3FA0F793246E6DCA00D8DBA2 /* SearchResultMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultMainView.swift; sourceTree = "<group>"; };
 		3FA0F794246E6DCA00D8DBA2 /* SearchResultMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultMainView.xib; sourceTree = "<group>"; };
 		3FBC60CC2477B70D007F78F2 /* SearchUserSelectResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUserSelectResultViewController.swift; sourceTree = "<group>"; };
@@ -577,8 +573,6 @@
 				3F7C5D8F247644ED007640E2 /* TagSearchResultMainView.xib */,
 				3F7C5D9424764510007640E2 /* UserSearchResultMainView.swift */,
 				3F7C5D9324764510007640E2 /* UserSearchResultMainView.xib */,
-				3F966545246E56040083EBC2 /* BrandSearchResultView.swift */,
-				3F966546246E56040083EBC2 /* BrandSearchResultView.xib */,
 				3F7C5D8B247644D7007640E2 /* ProductNameSearchResultView.swift */,
 				3F7C5D8D247644E0007640E2 /* ProductNameSearchResultView.xib */,
 				3FF1213A24724AE0001E0554 /* UserResultCell */,
@@ -956,7 +950,6 @@
 				5FA88A642472316600B84ACE /* ScrollMainView.xib in Resources */,
 				5F098A4B2477BB6300D033F4 /* BookmarkCollectionView.xib in Resources */,
 				5F098A3F2477AB1200D033F4 /* GoodCollectionView.xib in Resources */,
-				3F966548246E56040083EBC2 /* BrandSearchResultView.xib in Resources */,
 				D1B8AFC52472627C007BC6AD /* CreateMakeMainView.xib in Resources */,
 				3FA0F796246E6DCA00D8DBA2 /* SearchResultMainView.xib in Resources */,
 				FF8509F2246E2870003E2ACF /* TimeLineMainView.xib in Resources */,
@@ -1107,7 +1100,6 @@
 				3FBC60CE2477B70D007F78F2 /* SearchUserSelectResultViewController.swift in Sources */,
 				FF850A0A246E2AD3003E2ACF /* EditReviewViewController.swift in Sources */,
 				5F97F3C5247B8C7A00D68A0C /* FourthYourGenreCollectionViewCell.swift in Sources */,
-				3F966547246E56040083EBC2 /* BrandSearchResultView.swift in Sources */,
 				1F4B76E6246D2AC100FC3B27 /* SceneDelegate.swift in Sources */,
 				5F97F3B9247B7F2500D68A0C /* NinthYourGenreCollectionViewCell.swift in Sources */,
 				1F4B770E246D31FD00FC3B27 /* NewPostViewController.swift in Sources */,

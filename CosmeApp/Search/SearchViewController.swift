@@ -15,6 +15,7 @@ class SearchViewController: BaseViewController {
     @IBOutlet weak var mainView: SearchMainView!
     
     var userModels: [UserModel] = [UserModel]()
+    var reviewPostModels: [ReviewPostModel] = [ReviewPostModel]()
 }
 // MARK: - Life cycle
 extension SearchViewController {
@@ -35,6 +36,18 @@ extension SearchViewController {
 // MARK: - Protocol
 //検索バーのあるView
 extension SearchViewController: SearchTextViewDelegate {
+    func searchBarSearchButtonClicked(text: String) {
+      
+        mainView.searchCategoryButtonView.isHidden = false
+        mainView.searchResultMainView.isHidden = true
+        mainView.tagResultView.isHidden = false
+        mainView.userResultView.isHidden = true
+        mainView.productNameResultView.isHidden = true
+     
+        mainView.getReviewPostModel(reviewPostModels: reviewPostModels,text: text)
+        mainView.getModel(userModels: userModels,text: text)
+    }
+    
     func searchBarCancelButtonClicked() {
         
         mainView.searchCategoryButtonView.isHidden = true
@@ -42,21 +55,12 @@ extension SearchViewController: SearchTextViewDelegate {
         mainView.tagResultView.isHidden = true
         mainView.userResultView.isHidden = true
         mainView.productNameResultView.isHidden = true
-        mainView.brandResultView.isHidden = true
     }
-    
-    func searchBarSearchButtonClicked() {
-        mainView.searchCategoryButtonView.isHidden = false
-        mainView.searchResultMainView.isHidden = true
-        mainView.tagResultView.isHidden = false
-        mainView.userResultView.isHidden = true
-        mainView.productNameResultView.isHidden = true
-        mainView.brandResultView.isHidden = true
-    }
-  
 }
+    
 //タグとかユーザーとかが出てくるView
 extension SearchViewController: SearchMainViewDelegate {
+   
     //タグとかユーザーとかのセルをタッチしたら詳細画面へ遷移する
     func touchedUserCellButton() {
         let searchUserResultViewController = SearchUserSelectResultViewController()
@@ -65,12 +69,6 @@ extension SearchViewController: SearchMainViewDelegate {
     }
     
     func touchedProductNAmeCellButton() {
-        let reviewDatailViewController = ReviewDetailViewController()
-        navigationController?.pushViewController(reviewDatailViewController, animated: true)
-        animatorManager.navigationType = .slide_push
-    }
-    
-    func touchedBrandCellButton() {
         let reviewDatailViewController = ReviewDetailViewController()
         navigationController?.pushViewController(reviewDatailViewController, animated: true)
         animatorManager.navigationType = .slide_push
@@ -87,7 +85,6 @@ extension SearchViewController: SearchMainViewDelegate {
           mainView.tagResultView.isHidden = false
           mainView.userResultView.isHidden = true
           mainView.productNameResultView.isHidden = true
-          mainView.brandResultView.isHidden = true
           mainView.searchResultMainView.isHidden = true
       }
       func touchedUserButton() {
@@ -96,7 +93,6 @@ extension SearchViewController: SearchMainViewDelegate {
           mainView.userResultView.isHidden = false
           mainView.tagResultView.isHidden = true
           mainView.productNameResultView.isHidden = true
-          mainView.brandResultView.isHidden = true
           mainView.searchResultMainView.isHidden = true
       }
       func touchedProductNameButton() {
@@ -104,18 +100,9 @@ extension SearchViewController: SearchMainViewDelegate {
           mainView.productNameResultView.isHidden = false
           mainView.tagResultView.isHidden = true
           mainView.userResultView.isHidden = true
-          mainView.brandResultView.isHidden = true
           mainView.searchResultMainView.isHidden = true
       }
-      func touchedBrandButton() {
-          //SearchMainViewのView２がブランド名検索結果Viewを表示
-          mainView.brandResultView.isHidden = false
-          mainView.tagResultView.isHidden = true
-          mainView.userResultView.isHidden = true
-          mainView.productNameResultView.isHidden = true
-          mainView.searchResultMainView.isHidden = true
-      }
-    
+  
 //カテゴリ分けしたアイシャドウとかベースメイクとかボタン
     func touchedEyeShadowButton() {
         let categorySearchViewController = CategorySearchViewController()
@@ -203,6 +190,7 @@ extension SearchViewController {
 //            for userModel in userModels {
 //            print("ユーザーネーム:", userModel.nickname)
 //            }
+            self.userModels = userModels
         }
     }
     func getReviewPostModel(){
@@ -210,6 +198,7 @@ extension SearchViewController {
 //            for reviewPostModel in reviewPostModels {
 //                print("DESC: ",reviewPostModel.title) }
             self.mainView.getReviewPostModel(reviewPostModels: reviewPostModels)
+            self.reviewPostModels = reviewPostModels
         }
     }
     
