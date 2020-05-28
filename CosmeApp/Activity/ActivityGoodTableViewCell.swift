@@ -32,6 +32,8 @@ class ActivityGoodTableViewCell: BaseTableViewCell {
             delegate.touchedPostPageButton()
         }
     }
+    @IBOutlet weak var userNameLabel: UILabel!
+    
 }
 // MARK: - Life cycle
 extension ActivityGoodTableViewCell {
@@ -48,5 +50,8 @@ extension ActivityGoodTableViewCell {
 extension ActivityGoodTableViewCell {
     func setLayout() {
         iconImageView.layer.cornerRadius = iconImageView.frame.height / 2
+    }
+    func updateCell(reviewPostModel: ReviewPostModel) {
+        userNameLabel.text = reviewPostModel.id
     }
 }

@@ -13,6 +13,8 @@ import PGFramework
 class ActivityViewController: BaseViewController {
     @IBOutlet weak var headerView: HeaderView!
     @IBOutlet weak var mainView: ActivityMainView!
+    
+    var reviewPostModels: [ReviewPostModel] = [ReviewPostModel]()
 }
 // MARK: - Life cycle
 extension ActivityViewController {
@@ -26,6 +28,7 @@ extension ActivityViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        getModel()
     }
 }
 // MARK: - Protocol
@@ -38,6 +41,7 @@ extension ActivityViewController:ActivityMainViewDelegate {
     
     func touchedPostPageButton() {
         let reviewDetailViewController = ReviewDetailViewController()
+        reviewDetailViewController.reviewPostModel = reviewPostModels[0]
         navigationController?.pushViewController(reviewDetailViewController, animated: true)
         animatorManager.navigationType = .slide_push
     }
@@ -66,5 +70,11 @@ extension ActivityViewController {
     func setDelegate() {
         mainView.delegate = self
         
+    }
+    func getModel() {
+        ReviewPostModel.reads { (reviewPostModels) in
+            self.reviewPostModels = reviewPostModels
+            self.mainView.getModel(reviewPostModels: reviewPostModels)
+        }
     }
 }

@@ -22,6 +22,8 @@ extension ActivityMainViewDelegate {
 class ActivityMainView: BaseView {
     weak var delegate: ActivityMainViewDelegate? = nil
     @IBOutlet weak var tableView: UITableView!
+    
+    var reviewPostModels: [ReviewPostModel] = [ReviewPostModel]()
 }
 // MARK: - Life cycle
 extension ActivityMainView {
@@ -36,29 +38,30 @@ extension ActivityMainView {
 // MARK: - Protocol
 extension ActivityMainView:UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        5
+        return reviewPostModels.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ActivityGoodTableViewCell", for: indexPath) as?
              ActivityGoodTableViewCell else {return UITableViewCell()}
-        guard let secondCell = tableView.dequeueReusableCell(withIdentifier: "ActivityCommentTableViewCell", for: indexPath) as?
-             ActivityCommentTableViewCell else {return UITableViewCell()}
-        guard let thirdCell = tableView.dequeueReusableCell(withIdentifier: "ActivityFollowTableViewCell", for: indexPath) as?
-             ActivityFollowTableViewCell else {return UITableViewCell()}
-        switch indexPath {
-        case [0,0]:
+//        guard let secondCell = tableView.dequeueReusableCell(withIdentifier: "ActivityCommentTableViewCell", for: indexPath) as?
+//             ActivityCommentTableViewCell else {return UITableViewCell()}
+//        guard let thirdCell = tableView.dequeueReusableCell(withIdentifier: "ActivityFollowTableViewCell", for: indexPath) as?
+//             ActivityFollowTableViewCell else {return UITableViewCell()}
+//        switch indexPath {
+//        case [0,0]:
+            cell.updateCell(reviewPostModel: reviewPostModels[indexPath.row])
             cell.delegate = self
             return cell
-        case [0,1]:
-            secondCell.delegate = self
-            return secondCell
-        case [0,2]:
-            thirdCell.delegate = self
-            return thirdCell
-        default:
-            return cell
-        }
+//        case [0,1]:
+//            secondCell.delegate = self
+//            return secondCell
+//        case [0,2]:
+//            thirdCell.delegate = self
+//            return thirdCell
+//        default:
+//            return cell
+//        }
     }
 }
 
@@ -68,7 +71,6 @@ extension ActivityMainView: ActivityGoodTableViewCellDelegate {
             delegate.touchedProfilePageButton()
         }
     }
-    
     func touchedPostPageButton() {
         if let delegate = delegate {
             delegate.touchedPostPageButton()
@@ -101,5 +103,9 @@ extension ActivityMainView: ActivityFollowTableViewCellDelegate {
 extension ActivityMainView {
     func setDelegate() {
         tableView.dataSource = self
+    }
+    func getModel(reviewPostModels: [ReviewPostModel]) {
+        self.reviewPostModels = reviewPostModels
+        tableView.reloadData()
     }
 }
