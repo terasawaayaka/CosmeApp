@@ -13,7 +13,7 @@ import FirebaseAuth
 class YourProfileViewController: BaseViewController {
     //data
     var userModel: UserModel = UserModel()
-    var noticePostModel: NoticeModel = NoticeModel()
+    var reviewPostModel: ReviewPostModel = ReviewPostModel()
     //Outlet
     @IBOutlet weak var mainView: YourProfileMainView!
 }
@@ -28,7 +28,7 @@ extension YourProfileViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-       // getModel()
+        getModel()
     }
 }
 // MARK: - Protocol
@@ -50,13 +50,18 @@ extension YourProfileViewController {
         mainView.delegate = self
     }
 
-//    func getModel() {
-//        UserModel.readAt(userId: noticePostModel.post_user_id) { (userModel) in
-//            if let icon = userModel.photo_path {
-//                self .noticePostModel.post_user_icon = icon
-//            }
-//            self.mainView.getModel(userModel: userModel)
-//            self.userModel = userModel
-//        }
-//    }
+    func getModel() {
+        if reviewPostModel.post_user_id != "" {
+        UserModel.readAt(userId: reviewPostModel.post_user_id) { (userModel) in
+            if let icon = userModel.photo_path {
+                self.reviewPostModel.post_user_icon = icon
+            }
+              self.userModel = userModel
+              self.mainView.getModel(userModel: userModel)
+            }
+        } else {
+            //self.userModel = userModel
+            //self.mainView.getModel(userModel: userModel)
+        }
+    }
 }
