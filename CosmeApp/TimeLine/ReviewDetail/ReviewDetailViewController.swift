@@ -61,6 +61,13 @@ extension ReviewDetailViewController:ReviewDetailMainViewDelegate {
     }
     
     func commentSendButton() {
+        let noticeModel: NoticeModel = NoticeModel()
+        if let text = mainView.commentTextField.text {
+            noticeModel.description = text
+        }
+        NoticeModel.create(request: noticeModel) {
+            //todo
+        }
         let commentPostModel  : CommentPostModel = CommentPostModel()
         if let text = mainView.commentTextField.text{
             commentPostModel.description = text
