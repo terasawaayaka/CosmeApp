@@ -52,6 +52,7 @@ extension ActivityViewController:ActivityMainViewDelegate {
     }
     func touchedSecondPostPageButton() {
         let reviewDetailViewController = ReviewDetailViewController()
+        reviewDetailViewController.reviewPostModel = reviewPostModels[0]
         navigationController?.pushViewController(reviewDetailViewController, animated: true)
         animatorManager.navigationType = .slide_push
     }
@@ -72,9 +73,12 @@ extension ActivityViewController {
         
     }
     func getModel() {
-        ReviewPostModel.reads { (reviewPostModels) in
-            self.reviewPostModels = reviewPostModels
-            self.mainView.getModel(reviewPostModels: reviewPostModels)
+        NoticeModel.reads { (noticeModels) in
+//            self.noticePostModels = reviewPostModels
+//            self.mainView.getModel(reviewPostModels: reviewPostModels)
+            for noticeModel in noticeModels {
+                print("Desc:",noticeModel.description)
+            }
         }
     }
 }

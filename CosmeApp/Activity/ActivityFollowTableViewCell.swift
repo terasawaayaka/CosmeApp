@@ -41,4 +41,5 @@ extension ActivityFollowTableViewCell {
     func setLayout() {
         thirdIconImageView.layer.cornerRadius = thirdIconImageView.frame.height / 2
     }
+    
 }

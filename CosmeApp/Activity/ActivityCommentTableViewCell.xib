@@ -54,24 +54,34 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYo-QE-z9U">
+                                <rect key="frame" x="77" y="9" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Elo-FT-uds" secondAttribute="trailing" constant="9" id="5yQ-8B-hiP"/>
+                            <constraint firstItem="mYo-QE-z9U" firstAttribute="top" secondItem="HKE-gx-W1q" secondAttribute="top" constant="9" id="9nV-KK-1p0"/>
                             <constraint firstItem="IJc-hN-k4t" firstAttribute="leading" secondItem="38r-7m-o5D" secondAttribute="trailing" constant="8" symbolic="YES" id="AiH-BO-fjd"/>
                             <constraint firstItem="U0G-Ed-eEz" firstAttribute="leading" secondItem="HKE-gx-W1q" secondAttribute="leading" constant="9" id="CMW-O9-zDx"/>
                             <constraint firstItem="Elo-FT-uds" firstAttribute="top" secondItem="HKE-gx-W1q" secondAttribute="top" constant="10" id="GTO-6w-VN9"/>
                             <constraint firstItem="p6T-Fw-EdM" firstAttribute="firstBaseline" secondItem="IJc-hN-k4t" secondAttribute="baseline" id="J11-RD-GDa"/>
                             <constraint firstItem="p6T-Fw-EdM" firstAttribute="leading" secondItem="IJc-hN-k4t" secondAttribute="trailing" constant="7" id="MCe-RY-N2O"/>
                             <constraint firstItem="p6T-Fw-EdM" firstAttribute="width" secondItem="Elo-FT-uds" secondAttribute="width" id="Ppy-jz-LrW"/>
+                            <constraint firstItem="p6T-Fw-EdM" firstAttribute="leading" secondItem="mYo-QE-z9U" secondAttribute="trailing" constant="225" id="Sea-ti-yX9"/>
                             <constraint firstItem="U0G-Ed-eEz" firstAttribute="top" secondItem="HKE-gx-W1q" secondAttribute="top" constant="10" id="VIc-3k-EwZ"/>
                             <constraint firstItem="38r-7m-o5D" firstAttribute="leading" secondItem="U0G-Ed-eEz" secondAttribute="leading" id="Xda-nE-aHy"/>
                             <constraint firstItem="p6T-Fw-EdM" firstAttribute="top" secondItem="Elo-FT-uds" secondAttribute="top" id="Zg7-Ap-C4c"/>
                             <constraint firstItem="IJc-hN-k4t" firstAttribute="leading" secondItem="U0G-Ed-eEz" secondAttribute="trailing" constant="8" id="bAh-h5-4ls"/>
+                            <constraint firstItem="IJc-hN-k4t" firstAttribute="top" secondItem="mYo-QE-z9U" secondAttribute="bottom" constant="4" id="cQT-F5-bPn"/>
                             <constraint firstItem="IJc-hN-k4t" firstAttribute="baseline" secondItem="p6T-Fw-EdM" secondAttribute="baseline" id="ebC-mz-Tfy"/>
                             <constraint firstItem="Elo-FT-uds" firstAttribute="leading" secondItem="IJc-hN-k4t" secondAttribute="trailing" constant="8" id="etk-ry-kAM"/>
                             <constraint firstAttribute="bottom" secondItem="38r-7m-o5D" secondAttribute="bottom" constant="12" id="kyj-IW-F3P"/>
                             <constraint firstItem="U0G-Ed-eEz" firstAttribute="centerY" secondItem="HKE-gx-W1q" secondAttribute="centerY" id="l84-lA-YQR"/>
+                            <constraint firstItem="mYo-QE-z9U" firstAttribute="leading" secondItem="U0G-Ed-eEz" secondAttribute="trailing" constant="8" id="olr-C3-CWW"/>
                             <constraint firstItem="IJc-hN-k4t" firstAttribute="top" secondItem="HKE-gx-W1q" secondAttribute="top" constant="34" id="qO2-XR-5yr"/>
                             <constraint firstAttribute="width" constant="414" id="qss-5s-moX"/>
                             <constraint firstAttribute="height" constant="80" id="sd7-di-dDY"/>
@@ -90,6 +100,7 @@
             <connections>
                 <outlet property="secondIconImageView" destination="U0G-Ed-eEz" id="tKF-0Y-SSQ"/>
                 <outlet property="secondPostImageView" destination="Elo-FT-uds" id="TzQ-Tq-Ya4"/>
+                <outlet property="userNameLabel" destination="mYo-QE-z9U" id="XY4-vY-aDB"/>
             </connections>
             <point key="canvasLocation" x="34.782608695652179" y="2.6785714285714284"/>
         </tableViewCell>
