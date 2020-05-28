@@ -14,6 +14,8 @@ class EditMakeViewController: BaseViewController {
     @IBOutlet weak var headerView: HeaderView!
     @IBOutlet weak var mainView: EditMakeMainView!
     @IBOutlet weak var mainViewBottomMergin: NSLayoutConstraint!
+    
+    var makePostModel : MakePostModel = MakePostModel()
 }
 // MARK: - Life cycle
 extension EditMakeViewController {
@@ -30,6 +32,13 @@ extension EditMakeViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        makeGiveModel()
+    }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[.originalImage]as? UIImage{
+            mainView.makeImage.image = image
+            picker.dismiss(animated: true, completion: nil)
+        }
     }
 }
 // MARK: - Protocol
@@ -38,9 +47,43 @@ extension EditMakeViewController :HeaderViewDelegate{
         dismiss(animated: true, completion: nil)
     }
     func touchedRightButton(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
+        mainView.basemakeTextField.text = makePostModel.basemake
+        mainView.shadingTextField.text = makePostModel.shading
+        mainView.highLightTextField.text = makePostModel.highlight
+        mainView.cheekTextField.text = makePostModel.cheek
+        mainView.eyeshadowTextField.text = makePostModel.eyeshadow
+        mainView.eyeLinerTextField.text = makePostModel.eyeliner
+        mainView.mascaraTextField.text = makePostModel.mascara
+        mainView.colorcontactTextField.text = makePostModel.colorcontact
+        mainView.eyebrowTextField.text = makePostModel.eyebrow
+        mainView.lipTextField.text = makePostModel.lip
+        mainView.haircareTextField.text = makePostModel.haircare
+        mainView.skincareTextField.text = makePostModel.skincare
+        mainView.processTextView.text = makePostModel.process
+        var images : [UIImage] = []
+        if let image = mainView.makeImage.image{
+            images.append(image)
+        }
+        MakePostModel.update(request: makePostModel, images: images) {
+            self.dismiss(animated: true, completion: nil)
+        }
     }
 }
+
+extension EditMakeViewController:EditMakeMainViewDelegate{
+    func postDeleteButton() {
+        MakePostModel.delete(id: makePostModel.id) {
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    func addMakeImageButton() {
+        useCamera()
+    }
+    
+    
+}
+
 // MARK: - method
 extension EditMakeViewController {
     func setHeaderView(){
@@ -50,7 +93,13 @@ extension EditMakeViewController {
     }
     func setDelegate(){
         headerView.delegate = self
+        mainView.delegate = self
     }
+    func makeGiveModel(){
+        mainView.updateMake(makePostModel:makePostModel)
+    }
+    
+    
     //キーボードとテキストフィールド以外をタップでキーボードを隠す
     func hideKeybord() {
         let hideTap : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKyeoboardTap))

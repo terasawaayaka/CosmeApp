@@ -36,7 +36,7 @@ extension ReviewDetailViewController {
         super.viewWillAppear(animated)
         reviewUpdateView()
         reviewGetModel()
-        getModel()
+        commentGetModel()
         
     }
 }
@@ -92,9 +92,9 @@ extension ReviewDetailViewController {
         headerView.delegate = self
         mainView.delegate = self
     }
-    func getModel(){
+    func commentGetModel(){
         CommentPostModel.reads{(commentPostModels)in
-            self.mainView.getModel(commentPostModels: commentPostModels)
+            self.mainView.commentGetModel(commentPostModels: commentPostModels)
         }
     }
     func reviewGetModel(){

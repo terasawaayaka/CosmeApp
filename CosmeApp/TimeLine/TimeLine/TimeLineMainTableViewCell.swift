@@ -63,5 +63,6 @@ extension TimeLineMainTableViewCell {
     }
     func updateCell(makePostModels:[MakePostModel]){
         self.makePostModels = makePostModels
+        collectionView.reloadData()
     }
 }

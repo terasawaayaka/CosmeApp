@@ -29,6 +29,7 @@ extension MakeDetailViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        makeGetModel()
         makeUpdateView()
     }
 }
@@ -41,6 +42,7 @@ extension MakeDetailViewController :HeaderViewDelegate{
     }
     func touchedRightButton(_ sender: UIButton) {
         let editMakeViewController = EditMakeViewController()
+        editMakeViewController.makePostModel = makePostModel
         editMakeViewController.modalPresentationStyle = .fullScreen
         present(editMakeViewController, animated: true, completion: nil)
     }
@@ -64,20 +66,39 @@ extension MakeDetailViewController {
         headerView.delegate = self
         mainView.delegate = self
     }
+    func makeGetModel(){
+        MakePostModel.readAt(id: makePostModel.id, success: { (makePostModel) in
+            self.makePostModel = makePostModel
+        }) {
+            self.navigationController?.popViewController(animated: true)
+            self.animatorManager.navigationType = .slide_pop
+        }
+    }
     func makeUpdateView(){
-        mainView.basemakeLabel.text = makePostModel.basemake
-        mainView.shadingLabel.text = makePostModel.shading
-        mainView.highlightLabel.text = makePostModel.highlight
-        mainView.cheekLabel.text = makePostModel.cheek
-        mainView.eyeshadowLabel.text = makePostModel.eyeshadow
-        mainView.eyelinerLabel.text = makePostModel.eyeliner
-        mainView.mascaraLabel.text = makePostModel.mascara
-        mainView.colorcontactLabel.text = makePostModel.colorcontact
-        mainView.eyeblowLabel.text = makePostModel.eyebrow
-        mainView.lipLabel.text = makePostModel.lip
-        mainView.haircareLabel.text = makePostModel.haircare
-        mainView.skincareLabel.text = makePostModel.skincare
+        mainView.basemakeLabel.text = "ベースメイク：" + makePostModel.basemake
+        mainView.shadingLabel.text = "シェーディング：" + makePostModel.shading
+        mainView.highlightLabel.text = "ハイライト：" + makePostModel.highlight
+        mainView.cheekLabel.text = "チーク：" + makePostModel.cheek
+        mainView.eyeshadowLabel.text = "アイシャドウ：" + makePostModel.eyeshadow
+        mainView.eyelinerLabel.text = "アイライン：" + makePostModel.eyeliner
+        mainView.mascaraLabel.text = "マスカラ：" + makePostModel.mascara
+        mainView.colorcontactLabel.text = "カラコン：" + makePostModel.colorcontact
+        mainView.eyeblowLabel.text = "アイブロウ：" + makePostModel.eyebrow
+        mainView.lipLabel.text = "リップ：" + makePostModel.lip
+        mainView.haircareLabel.text = "ヘアケア：" + makePostModel.haircare
+        mainView.skincareLabel.text = "スキンケア：" + makePostModel.skincare
         mainView.processTextView.text = makePostModel.process
+        switch makePostModel.image_paths.count {
+        case 0:
+            mainView.makeImage.image = UIImage(named: "noimage.png")
+            
+        case 1:
+            if let url = URL(string: makePostModel.image_paths[0]){
+                mainView.makeImage.af_setImage(withURL: url)
+            }
+        default:
+            break
+        }
     }
 }
 
