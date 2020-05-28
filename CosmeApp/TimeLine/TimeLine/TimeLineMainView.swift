@@ -44,11 +44,12 @@ extension TimeLineMainView :UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "TimeLineMainTableViewCell") as? TimeLineMainTableViewCell else {return UITableViewCell()}
+        
         guard let secondCell = tableView.dequeueReusableCell(withIdentifier: "TimeLineMainTableViewSecondCell")as? TimeLineMainTableViewSecondCell else {return UITableViewCell()}
         switch indexPath.row {
         case 0:
             cell.delegate = self
-            cell.updateCell(makePostModel: makePostModels[indexPath.row])
+            cell.updateCell(makePostModels:makePostModels)
             return cell
         default:
             secondCell.delegate = self
@@ -84,12 +85,11 @@ extension TimeLineMainView {
         tableView.delegate = self
     }
     func reviewGetModel(reviewPostModels:[ReviewPostModel]){
-    self.reviewPostModels = reviewPostModels
+        self.reviewPostModels = reviewPostModels
         tableView.reloadData()
     }
     func makeGetModel(makePostModels:[MakePostModel]){
         self.makePostModels = makePostModels
         tableView.reloadData()
     }
-    
 }

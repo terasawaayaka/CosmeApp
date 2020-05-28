@@ -26,18 +26,12 @@ class TimeLineMainTableViewSecondCell: BaseTableViewCell, UIScrollViewDelegate {
     @IBOutlet weak var thirdImageView: UIImageView!
     @IBOutlet weak var fourthImageView: UIImageView!
     
+    //star
     @IBOutlet weak var firstStarImage: UIImageView!
     @IBOutlet weak var secondStarImage: UIImageView!
     @IBOutlet weak var thirdStarImage: UIImageView!
     @IBOutlet weak var fourthStarImage: UIImageView!
     @IBOutlet weak var fifthStarImage: UIImageView!
-    
-    //StarLabel
-    @IBOutlet weak var firstStarLabel: UILabel!
-    @IBOutlet weak var secondStarlabel: UILabel!
-    @IBOutlet weak var thirdStarLabel: UILabel!
-    @IBOutlet weak var fourthStarLabel: UILabel!
-    @IBOutlet weak var fifthStarLabel: UILabel!
     
     //投稿Label
     @IBOutlet weak var productLabel: UILabel!
@@ -82,23 +76,11 @@ extension TimeLineMainTableViewSecondCell {
         }
     }
     func updateCell(reviewPostModel:ReviewPostModel){
+        //text
         productLabel.text = "商品名：　" + reviewPostModel.title
         categoryLabel.text = "カテゴリ：　" + reviewPostModel.category
         
-//        switch reviewPostModel.review_num {
-//        case 0:
-//            if case let reviewPostModel.review_num = 5{
-//                firstStarImage.image = UIImage(named: "checkedStar")
-//            }
-//        case 1:
-//        case 2:
-//        case 3:
-//        case 4:
-//
-//            <#code#>
-//        default:
-//            break
-//        }
+        //星の数
         if case reviewPostModel.review_num = 5{
             firstStarImage.image = UIImage(named: "checkedStar")
             secondStarImage.image = UIImage(named: "checkedStar")
@@ -125,6 +107,7 @@ extension TimeLineMainTableViewSecondCell {
             firstStarImage.image = UIImage(named: "checkedStar")
         }
        
+        //画像
         switch reviewPostModel.image_paths.count {
         case 0:
             firstImageView.image = UIImage(named: "noimage.png")

@@ -32,6 +32,7 @@ extension MakeDetailViewController {
         makeUpdateView()
     }
 }
+    
 // MARK: - Protocol
 extension MakeDetailViewController :HeaderViewDelegate{
     func touchedLeftButton(_ sender: UIButton) {
@@ -40,8 +41,8 @@ extension MakeDetailViewController :HeaderViewDelegate{
     }
     func touchedRightButton(_ sender: UIButton) {
         let editMakeViewController = EditMakeViewController()
-        navigationController?.pushViewController(editMakeViewController, animated: true)
-        animatorManager.navigationType = .slide_push
+        editMakeViewController.modalPresentationStyle = .fullScreen
+        present(editMakeViewController, animated: true, completion: nil)
     }
 }
 
