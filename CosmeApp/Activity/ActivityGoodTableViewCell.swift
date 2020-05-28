@@ -51,7 +51,7 @@ extension ActivityGoodTableViewCell {
     func setLayout() {
         iconImageView.layer.cornerRadius = iconImageView.frame.height / 2
     }
-    func updateCell(reviewPostModel: ReviewPostModel) {
-        userNameLabel.text = reviewPostModel.id
+    func updateCell(noticeModel: NoticeModel) {
+        userNameLabel.text = noticeModel.id
     }
 }

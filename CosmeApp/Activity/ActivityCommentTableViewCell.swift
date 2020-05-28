@@ -50,7 +50,7 @@ extension ActivityCommentTableViewCell {
     func setLayout() {
         secondIconImageView.layer.cornerRadius = secondIconImageView.frame.height / 2
     }
-    func updateCell(reviewPostModel: ReviewPostModel) {
-        userNameLabel.text = reviewPostModel.id
+    func updateCell(noticeModel: NoticeModel) {
+        userNameLabel.text = noticeModel.id
     }
 }
