@@ -14,6 +14,7 @@ class ReviewDetailViewController: BaseViewController {
     
     var commentPostModel : CommentPostModel = CommentPostModel()
     var reviewPostModel : ReviewPostModel = ReviewPostModel()
+    var noticeModel: NoticeModel = NoticeModel()
     
     @IBOutlet weak var headerView: HeaderView!
     @IBOutlet weak var mainView: ReviewDetailMainView!

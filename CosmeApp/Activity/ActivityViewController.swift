@@ -14,7 +14,7 @@ class ActivityViewController: BaseViewController {
     @IBOutlet weak var headerView: HeaderView!
     @IBOutlet weak var mainView: ActivityMainView!
     
-    var reviewPostModels: [ReviewPostModel] = [ReviewPostModel]()
+    var noticeModels: [NoticeModel] = [NoticeModel]()
 }
 // MARK: - Life cycle
 extension ActivityViewController {
@@ -41,7 +41,7 @@ extension ActivityViewController:ActivityMainViewDelegate {
     
     func touchedPostPageButton() {
         let reviewDetailViewController = ReviewDetailViewController()
-        reviewDetailViewController.reviewPostModel = reviewPostModels[0]
+        reviewDetailViewController.noticeModel = noticeModels[0]
         navigationController?.pushViewController(reviewDetailViewController, animated: true)
         animatorManager.navigationType = .slide_push
     }
@@ -52,7 +52,7 @@ extension ActivityViewController:ActivityMainViewDelegate {
     }
     func touchedSecondPostPageButton() {
         let reviewDetailViewController = ReviewDetailViewController()
-        reviewDetailViewController.reviewPostModel = reviewPostModels[0]
+        reviewDetailViewController.noticeModel = noticeModels[0]
         navigationController?.pushViewController(reviewDetailViewController, animated: true)
         animatorManager.navigationType = .slide_push
     }
@@ -74,11 +74,11 @@ extension ActivityViewController {
     }
     func getModel() {
         NoticeModel.reads { (noticeModels) in
-//            self.noticePostModels = reviewPostModels
-//            self.mainView.getModel(reviewPostModels: reviewPostModels)
-            for noticeModel in noticeModels {
-                print("Desc:",noticeModel.description)
-            }
+            self.noticeModels = noticeModels
+            self.mainView.getModel(noticeModels: noticeModels)
+//            for noticeModel in noticeModels {
+//                print("Desc:",noticeModel.description)
+//            }
         }
     }
 }
