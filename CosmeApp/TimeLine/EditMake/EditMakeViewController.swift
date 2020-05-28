@@ -35,12 +35,10 @@ extension EditMakeViewController {
 // MARK: - Protocol
 extension EditMakeViewController :HeaderViewDelegate{
     func touchedLeftButton(_ sender: UIButton) {
-        navigationController?.popViewController(animated: true)
-        animatorManager.navigationType = .slide_pop
+        dismiss(animated: true, completion: nil)
     }
     func touchedRightButton(_ sender: UIButton) {
-        navigationController?.popViewController(animated: true)
-        animatorManager.navigationType = .slide_pop
+        dismiss(animated: true, completion: nil)
     }
 }
 // MARK: - method

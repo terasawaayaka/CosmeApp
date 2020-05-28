@@ -28,6 +28,7 @@ class ReviewDetailMainView: BaseView, UIScrollViewDelegate {
     @IBOutlet weak var thirdStarImage: UIImageView!
     @IBOutlet weak var fourthStarImage: UIImageView!
     @IBOutlet weak var fifthStarImage: UIImageView!
+    
     //image
     @IBOutlet weak var firstImageView: UIImageView!
     @IBOutlet weak var secondImageView: UIImageView!

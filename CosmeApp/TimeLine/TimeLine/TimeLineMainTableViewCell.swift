@@ -61,7 +61,7 @@ extension TimeLineMainTableViewCell {
     func setLayout(){
         collectionViewFlowLayout.estimatedItemSize = CGSize(width:80,height:80)
     }
-    func updateCell(makePostModel:MakePostModel){
-        
+    func updateCell(makePostModels:[MakePostModel]){
+        self.makePostModels = makePostModels
     }
 }

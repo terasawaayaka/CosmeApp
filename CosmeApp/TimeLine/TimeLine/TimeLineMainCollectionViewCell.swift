@@ -16,7 +16,9 @@ extension TimeLineMainCollectionViewCellDelegate {
 // MARK: - Property
 class TimeLineMainCollectionViewCell: BaseCollectionViewCell {
     weak var delegate: TimeLineMainCollectionViewCellDelegate? = nil
-
+    
+    @IBOutlet weak var iconLabel: UILabel!
+    
     @IBOutlet weak var makeIconView: UIImageView!
 }
 // MARK: - Life cycle
@@ -35,8 +37,16 @@ extension TimeLineMainCollectionViewCell {
         makeIconView.layer.cornerRadius = makeIconView.frame.width / 2
     }
     func updatecollectionView(makePostModel:MakePostModel){
-        if let url = URL(string: makePostModel.image_paths[0]){
-            makeIconView.af_setImage(withURL: url)
+        switch makePostModel.image_paths.count {
+        case 0:
+            makeIconView.image = UIImage(named: "noimage.png")
+            
+        case 1:
+            if let url = URL(string: makePostModel.image_paths[0]){
+                makeIconView.af_setImage(withURL: url)
+            }
+        default:
+            break
         }
     }
 }
