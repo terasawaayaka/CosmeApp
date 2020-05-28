@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -12,6 +12,8 @@
                 <outlet property="collectionViewFlowLayout" destination="HHz-mS-siT" id="2Oz-o3-54j"/>
                 <outlet property="scrollMainView" destination="yop-cf-RDX" id="Lh5-7N-oH7"/>
                 <outlet property="userIcon" destination="P2G-B9-CoY" id="hQp-EC-8wq"/>
+                <outlet property="userName" destination="ueY-lj-DMr" id="Gzw-OZ-ulC"/>
+                <outlet property="userText" destination="Q4C-RW-3n4" id="JEW-i8-1ax"/>
                 <outlet property="yourTodayCollectionView" destination="0mW-uu-dlO" id="6cg-fp-Z5o"/>
             </connections>
         </placeholder>
@@ -29,7 +31,7 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="af7-H1-pQY">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="445"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="P2G-B9-CoY">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="P2G-B9-CoY">
                                             <rect key="frame" x="20" y="0.0" width="128" height="128"/>
                                             <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
@@ -62,17 +64,6 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="o85-oX-SvI">
-                                            <rect key="frame" x="20" y="136" width="374" height="116.5"/>
-                                            <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="374" id="RSp-P0-cXZ"/>
-                                            </constraints>
-                                            <string key="text">texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext</string>
-                                            <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        </textView>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="0mW-uu-dlO">
                                             <rect key="frame" x="0.0" y="257" width="414" height="120"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -118,11 +109,18 @@
                                             <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="自己紹介文" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q4C-RW-3n4">
+                                            <rect key="frame" x="20" y="136" width="374" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     <constraints>
                                         <constraint firstItem="ueY-lj-DMr" firstAttribute="top" secondItem="af7-H1-pQY" secondAttribute="top" constant="8" id="40C-3m-9vg"/>
-                                        <constraint firstItem="o85-oX-SvI" firstAttribute="leading" secondItem="af7-H1-pQY" secondAttribute="leading" constant="20" id="6vL-Bx-DOu"/>
+                                        <constraint firstItem="Q4C-RW-3n4" firstAttribute="leading" secondItem="af7-H1-pQY" secondAttribute="leading" constant="20" id="573-ft-y4v"/>
+                                        <constraint firstItem="0mW-uu-dlO" firstAttribute="top" secondItem="Q4C-RW-3n4" secondAttribute="bottom" constant="100.5" id="8mT-Se-h7o"/>
                                         <constraint firstAttribute="trailing" secondItem="7Mm-td-khQ" secondAttribute="trailing" id="AdK-i6-epq"/>
                                         <constraint firstItem="sN7-Aj-sMa" firstAttribute="top" secondItem="zGD-cI-4oO" secondAttribute="bottom" constant="8" id="BQV-GZ-q6f"/>
                                         <constraint firstItem="6pq-ve-6D8" firstAttribute="leading" secondItem="P2G-B9-CoY" secondAttribute="trailing" constant="15" id="Bgy-LP-DCh"/>
@@ -141,15 +139,14 @@
                                         <constraint firstItem="RDK-ec-cDg" firstAttribute="top" secondItem="0mW-uu-dlO" secondAttribute="bottom" constant="8" id="XDQ-FL-xgW"/>
                                         <constraint firstAttribute="height" constant="445" id="Xz9-Rf-Kde"/>
                                         <constraint firstItem="P2G-B9-CoY" firstAttribute="leading" secondItem="af7-H1-pQY" secondAttribute="leading" constant="20" id="bJk-fx-Nq2"/>
+                                        <constraint firstItem="Q4C-RW-3n4" firstAttribute="top" secondItem="P2G-B9-CoY" secondAttribute="bottom" constant="8" id="bSt-mT-qam"/>
                                         <constraint firstItem="P2G-B9-CoY" firstAttribute="top" secondItem="af7-H1-pQY" secondAttribute="top" id="daq-Fs-Dax"/>
                                         <constraint firstAttribute="trailing" secondItem="ueY-lj-DMr" secondAttribute="trailing" constant="8" id="ddU-Ya-Te6"/>
                                         <constraint firstAttribute="bottom" secondItem="RDK-ec-cDg" secondAttribute="bottom" id="eTB-Ll-VvF"/>
-                                        <constraint firstItem="o85-oX-SvI" firstAttribute="top" secondItem="P2G-B9-CoY" secondAttribute="bottom" constant="8" id="fdw-Lu-Gr8"/>
-                                        <constraint firstItem="0mW-uu-dlO" firstAttribute="top" secondItem="o85-oX-SvI" secondAttribute="bottom" constant="4.5" id="gAK-7n-SaP"/>
+                                        <constraint firstAttribute="trailing" secondItem="Q4C-RW-3n4" secondAttribute="trailing" constant="20" id="fZK-7k-qsz"/>
                                         <constraint firstItem="6pq-ve-6D8" firstAttribute="top" secondItem="sN7-Aj-sMa" secondAttribute="bottom" constant="2" id="jXy-4P-yHH"/>
                                         <constraint firstItem="RDK-ec-cDg" firstAttribute="leading" secondItem="af7-H1-pQY" secondAttribute="leading" id="jba-Xp-h8o"/>
                                         <constraint firstAttribute="trailing" secondItem="sN7-Aj-sMa" secondAttribute="trailing" constant="20" id="kAx-L4-emz"/>
-                                        <constraint firstAttribute="trailing" secondItem="o85-oX-SvI" secondAttribute="trailing" constant="20" id="qvY-Ep-zh7"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yop-cf-RDX" customClass="YourScrollMainView" customModule="CosmeApp" customModuleProvider="target">

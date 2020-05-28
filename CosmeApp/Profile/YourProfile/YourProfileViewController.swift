@@ -8,8 +8,13 @@
 
 import UIKit
 import PGFramework
+import FirebaseAuth
 // MARK: - Property
 class YourProfileViewController: BaseViewController {
+    //data
+    var userModel: UserModel = UserModel()
+    var noticePostModel: NoticeModel = NoticeModel()
+    //Outlet
     @IBOutlet weak var mainView: YourProfileMainView!
 }
 // MARK: - Life cycle
@@ -23,6 +28,7 @@ extension YourProfileViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+       // getModel()
     }
 }
 // MARK: - Protocol
@@ -43,4 +49,14 @@ extension YourProfileViewController {
     func setDelegate() {
         mainView.delegate = self
     }
+
+//    func getModel() {
+//        UserModel.readAt(userId: noticePostModel.post_user_id) { (userModel) in
+//            if let icon = userModel.photo_path {
+//                self .noticePostModel.post_user_icon = icon
+//            }
+//            self.mainView.getModel(userModel: userModel)
+//            self.userModel = userModel
+//        }
+//    }
 }

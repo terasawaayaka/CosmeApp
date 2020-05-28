@@ -82,6 +82,7 @@ extension EditProfileViewController {
     func giveModel() {
         mainView.updateUserName(userModel: userModel)
         mainView.updateUserText(userModel: userModel)
+        mainView.updateUserIcon(userModel: userModel)
     }
     
     

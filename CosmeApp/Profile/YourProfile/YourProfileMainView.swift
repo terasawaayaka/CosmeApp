@@ -18,7 +18,9 @@ extension YourProfileMainViewDelegate {
 class YourProfileMainView: BaseView {
     weak var delegate: YourProfileMainViewDelegate? = nil
     //Outlet
+    @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var userIcon: UIImageView!
+    @IBOutlet weak var userText: UILabel!
     @IBOutlet weak var yourTodayCollectionView: UICollectionView!
     @IBOutlet weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
     
@@ -58,5 +60,24 @@ extension YourProfileMainView :UICollectionViewDataSource{
 extension YourProfileMainView {
     func setDelegate() {
         yourTodayCollectionView.dataSource = self
+    }
+    func getModel(userModel: UserModel) {
+        if userModel.nickname == "" {
+            userName.text =  "名無しさん"
+        }else{
+            userName.text = userModel.nickname
+        }
+        
+        if userModel.description == "" {
+            userText.text = "自己紹介文を入力"
+        }else{
+            userText.text = userModel.description
+        }
+        
+        if let photo_path = userModel.photo_path {
+            if let url = URL(string: photo_path) {
+                userIcon.af_setImage(withURL: url)
+            }
+        }
     }
 }
