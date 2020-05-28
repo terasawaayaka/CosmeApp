@@ -13,7 +13,6 @@ protocol SearchMainViewDelegate: NSObjectProtocol{
     func touchedTagButton()
     func touchedUserButton()
     func touchedProductNameButton()
-    func touchedBrandButton()
     //SearchResultMainViewのボタン
     func touchedEyeLinerButton()
     func touchedEyeShadowButton()
@@ -29,7 +28,6 @@ protocol SearchMainViewDelegate: NSObjectProtocol{
     func touchedHairCareButton()
     
     func touchedCellButton()
-    func touchedBrandCellButton()
     func touchedProductNAmeCellButton()
     func touchedUserCellButton()
     
@@ -46,7 +44,6 @@ class SearchMainView: BaseView {
     @IBOutlet weak var touchedTagButton: UIButton!
     @IBOutlet weak var touchedUserButton: UIButton!
     @IBOutlet weak var touchedProductNameButton: UIButton!
-    @IBOutlet weak var touchedbrandButton: UIButton!
     
     //検索結果画面のview
     @IBOutlet weak var searchResultMainView: SearchResultMainView!
@@ -54,7 +51,6 @@ class SearchMainView: BaseView {
     @IBOutlet weak var tagResultView: TagSearchResultMainView!
     @IBOutlet weak var userResultView: UserSearchResultMainView!
     @IBOutlet weak var productNameResultView: ProductNameSearchResultView!
-    @IBOutlet weak var brandResultView: BrandSearchResultView!
     
     
     //Action
@@ -69,10 +65,6 @@ class SearchMainView: BaseView {
     @IBAction func touchedProductNameButton(_ sender: UIButton) {
         if let delegate = delegate {
             delegate.touchedProductNameButton()}
-    }
-    @IBAction func touchedBrandButton(_ sender: UIButton) {
-        if let delegate = delegate {
-            delegate.touchedBrandButton()}
     }
     //Models
     var userModels: [UserModel] = [UserModel]()
@@ -150,7 +142,6 @@ extension SearchMainView {
         tagResultView.isHidden = true
         userResultView.isHidden = true
         productNameResultView.isHidden = true
-        brandResultView.isHidden = true
         
         setLayout()
         setDelegate()
@@ -159,12 +150,6 @@ extension SearchMainView {
 // MARK: - Protocol
 extension SearchMainView: TagSearchResultMainViewDelegate{
     func touchedCellButton() {
-        if let delegate = delegate {
-            delegate.touchedCellButton()}
-    }
-}
-extension SearchMainView: BrandSearchResultViewDelegate {
-    func touchedBrandCellButton() {
         if let delegate = delegate {
             delegate.touchedCellButton()}
     }
@@ -199,29 +184,21 @@ extension SearchMainView {
         touchedProductNameButton.layer.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         touchedProductNameButton.layer.cornerRadius = 5
         touchedProductNameButton.layer.borderColor = #colorLiteral(red: 0.8397446066, green: 0.3103108182, blue: 0.5394304367, alpha: 1)
-        //ブランドのボタン
-        touchedbrandButton.layer.borderWidth = 1
-        touchedbrandButton.layer.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        touchedbrandButton.layer.cornerRadius = 5
-        touchedbrandButton.layer.borderColor = #colorLiteral(red: 0.8397446066, green: 0.3103108182, blue: 0.5394304367, alpha: 1)
-        
     }
     func setDelegate(){
         searchResultMainView.delegate = self
         tagResultView.delegate = self
-        brandResultView.delegate = self
         productNameResultView.delegate = self
         userResultView.delegate = self
     }
-    func getModel(userModels: [UserModel]){
+    func getModel(userModels: [UserModel],text: String!=nil){
         self.userModels = userModels
-        userResultView.getModel(userModels: userModels)
+        userResultView.getModel(userModels: userModels,text: text)
     }
-    func getReviewPostModel(reviewPostModels: [ReviewPostModel]){
+    func getReviewPostModel(reviewPostModels: [ReviewPostModel],text: String?=nil){
         self.reviewPostModels = reviewPostModels
-        tagResultView.getReviewPostModel(reviewPostModels: reviewPostModels)
-        brandResultView.getReviewPostModel(reviewPostModels: reviewPostModels)
-        productNameResultView.getReviewPostModel(reviewPostModels: reviewPostModels)
+        tagResultView.getReviewPostModel(reviewPostModels: reviewPostModels,text: text)
+        productNameResultView.getReviewPostModel(reviewPostModels: reviewPostModels,text: text)
     }
     
 }
