@@ -54,6 +54,7 @@ extension ActivityMainView:UITableViewDataSource {
             cell.delegate = self
             return cell
 //        case [0,1]:
+//            secondCell.updateCell(reviewPostModel: reviewPostModels[indexPath.row])
 //            secondCell.delegate = self
 //            return secondCell
 //        case [0,2]:
