@@ -43,7 +43,6 @@ extension CategorySearchViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        changeCategory()
         getReviewPostModel()
     }
 }
@@ -96,11 +95,29 @@ extension CategorySearchViewController {
             if let image = UIImage(named: "EyeLinerLOGO") {
                 mainView.logoImage.image = image }
             
+            let filterdReviewPostModels = reviewPostModels.filter { (reviewPostModel) -> Bool in
+                if reviewPostModel.category == "アイライン"  {
+                    return true
+                }else {
+                    return false
+                }
+            }
+            mainView.getReviewPostModel(reviewPostModels: filterdReviewPostModels)
+            
         case .mascara:
             if let image = UIImage(named: "MascaraIllust") {
                 mainView.illustImage.image = image}
             if let image = UIImage(named: "MascaraLOGO") {
                 mainView.logoImage.image = image}
+            
+            let filterdReviewPostModels = reviewPostModels.filter { (reviewPostModel) -> Bool in
+                if reviewPostModel.category == "マスカラ"  {
+                    return true
+                }else {
+                    return false
+                }
+            }
+            mainView.getReviewPostModel(reviewPostModels: filterdReviewPostModels)
             
         case .colorContact:
             if let image = UIImage(named: "colorContackIllust"){
@@ -108,11 +125,29 @@ extension CategorySearchViewController {
             if let image = UIImage(named: "ColorContactLOGO") {
                 mainView.logoImage.image = image}
             
+            let filterdReviewPostModels = reviewPostModels.filter { (reviewPostModel) -> Bool in
+                if reviewPostModel.category == "カラコン"  {
+                    return true
+                }else {
+                    return false
+                }
+            }
+            mainView.getReviewPostModel(reviewPostModels: filterdReviewPostModels)
+            
         case .eyeBrow:
             if let image = UIImage(named: "EyebrowIllust") {
                 mainView.illustImage.image = image}
             if let image = UIImage(named: "EyeBrowLOGO") {
                 mainView.logoImage.image = image}
+            
+            let filterdReviewPostModels = reviewPostModels.filter { (reviewPostModel) -> Bool in
+                if reviewPostModel.category == "アイブロウ"  {
+                    return true
+                }else {
+                    return false
+                }
+            }
+            mainView.getReviewPostModel(reviewPostModels: filterdReviewPostModels)
             
         case .baseMake:
             if let image = UIImage(named: "baseIllust") {
@@ -120,11 +155,29 @@ extension CategorySearchViewController {
             if let image = UIImage(named: "BaseLOGO") {
                 mainView.logoImage.image = image}
             
+            let filterdReviewPostModels = reviewPostModels.filter { (reviewPostModel) -> Bool in
+                if reviewPostModel.category == "ベースメイク"  {
+                    return true
+                }else {
+                    return false
+                }
+            }
+            mainView.getReviewPostModel(reviewPostModels: filterdReviewPostModels)
+            
         case .hiLight:
             if let image = UIImage(named: "HiLightIllust") {
                 mainView.illustImage.image = image}
             if let image = UIImage(named: "HiLightLOGO") {
                 mainView.logoImage.image = image}
+            
+            let filterdReviewPostModels = reviewPostModels.filter { (reviewPostModel) -> Bool in
+                if reviewPostModel.category == "ハイライト"  {
+                    return true
+                }else {
+                    return false
+                }
+            }
+            mainView.getReviewPostModel(reviewPostModels: filterdReviewPostModels)
             
         case .shading:
             if let image = UIImage(named: "shadingIllust") {
@@ -132,11 +185,29 @@ extension CategorySearchViewController {
             if let image = UIImage(named: "ShadingLOGO") {
                 mainView.logoImage.image = image}
             
+            let filterdReviewPostModels = reviewPostModels.filter { (reviewPostModel) -> Bool in
+                if reviewPostModel.category == "シェーディング"  {
+                    return true
+                }else {
+                    return false
+                }
+            }
+            mainView.getReviewPostModel(reviewPostModels: filterdReviewPostModels)
+            
         case .cheek:
             if let image = UIImage(named: "cheekIllust") {
                 mainView.illustImage.image = image}
             if let image = UIImage(named: "CheekLOGO") {
                 mainView.logoImage.image = image}
+            
+            let filterdReviewPostModels = reviewPostModels.filter { (reviewPostModel) -> Bool in
+                if reviewPostModel.category == "チーク"  {
+                    return true
+                }else {
+                    return false
+                }
+            }
+            mainView.getReviewPostModel(reviewPostModels: filterdReviewPostModels)
             
         case .skinCare:
             if let image = UIImage(named: "skincareIllust") {
@@ -144,17 +215,42 @@ extension CategorySearchViewController {
             if let image = UIImage(named: "SkincareLOGO") {
                 mainView.logoImage.image = image}
             
+            let filterdReviewPostModels = reviewPostModels.filter { (reviewPostModel) -> Bool in
+                if reviewPostModel.category == "スキンケア"  {
+                    return true
+                }else {
+                    return false
+                }
+            }
+            mainView.getReviewPostModel(reviewPostModels: filterdReviewPostModels)
+            
         case .lip:
             if let image = UIImage(named: "LipIllust") {
                 mainView.illustImage.image = image}
             if let image = UIImage(named: "LipLOGO") {
                 mainView.logoImage.image = image}
+            let filterdReviewPostModels = reviewPostModels.filter { (reviewPostModel) -> Bool in
+                if reviewPostModel.category == "リップ"  {
+                    return true
+                }else {
+                    return false
+                }
+            }
+            mainView.getReviewPostModel(reviewPostModels: filterdReviewPostModels)
             
         case .hairCare:
             if let image = UIImage(named: "hairCareIllust") {
                 mainView.illustImage.image = image}
             if let image = UIImage(named: "HaircareLOGO") {
                 mainView.logoImage.image = image}
+            let filterdReviewPostModels = reviewPostModels.filter { (reviewPostModel) -> Bool in
+                if reviewPostModel.category == "ヘアケア"  {
+                    return true
+                }else {
+                    return false
+                }
+            }
+            mainView.getReviewPostModel(reviewPostModels: filterdReviewPostModels)
             
         default:
             if let image = UIImage(named: "EyeshadowIllust") {
@@ -165,7 +261,9 @@ extension CategorySearchViewController {
     }
     func getReviewPostModel(){
         ReviewPostModel.reads { (reviewPostModels) in
+            self.reviewPostModels = reviewPostModels
             self.mainView.getReviewPostModel(reviewPostModels: reviewPostModels)
+            self.changeCategory()
         }
     }
 }
