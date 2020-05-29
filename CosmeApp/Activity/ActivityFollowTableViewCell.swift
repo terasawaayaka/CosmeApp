@@ -24,6 +24,8 @@ class ActivityFollowTableViewCell: BaseTableViewCell {
             delegate.touchedThirdProfileButton()
         }
     }
+    
+    @IBOutlet weak var userNameLabel: UILabel!
 }
 // MARK: - Life cycle
 extension ActivityFollowTableViewCell {

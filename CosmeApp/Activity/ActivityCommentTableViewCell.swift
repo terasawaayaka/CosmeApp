@@ -32,6 +32,7 @@ class ActivityCommentTableViewCell: BaseTableViewCell {
             delegate.touchedSecondPostPageButton()
         }
     }
+
     @IBOutlet weak var userNameLabel: UILabel!
 }
 // MARK: - Life cycle
@@ -51,6 +52,6 @@ extension ActivityCommentTableViewCell {
         secondIconImageView.layer.cornerRadius = secondIconImageView.frame.height / 2
     }
     func updateCell(noticeModel: NoticeModel) {
-        userNameLabel.text = noticeModel.id
+        userNameLabel.text = noticeModel.post_user_id
     }
 }
