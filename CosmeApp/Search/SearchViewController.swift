@@ -60,6 +60,14 @@ extension SearchViewController: SearchTextViewDelegate {
     
 //タグとかユーザーとかが出てくるView
 extension SearchViewController: SearchMainViewDelegate {
+    func touchedCellButton(reviewPostModel: ReviewPostModel) {
+        let reviewDetailViewController = ReviewDetailViewController()
+        reviewDetailViewController.reviewPostModel = reviewPostModel
+        navigationController?.pushViewController(reviewDetailViewController, animated: true)
+        animatorManager.navigationType = .slide_push
+  
+    }
+    
    
     //タグとかユーザーとかのセルをタッチしたら詳細画面へ遷移する
     func touchedUserCellButton() {
@@ -74,11 +82,6 @@ extension SearchViewController: SearchMainViewDelegate {
         animatorManager.navigationType = .slide_push
     }
     
-    func touchedCellButton() {
-        let reviewDatailViewController = ReviewDetailViewController()
-        navigationController?.pushViewController(reviewDatailViewController, animated: true)
-        animatorManager.navigationType = .slide_push
-    }
     //タグとかユーザーとかのボタンを押した結果画面の表示
       func touchedTagButton() {
           //SearchMainViewがタグ検索結果Viewを表示

@@ -9,7 +9,8 @@
 import UIKit
 import PGFramework
 protocol CategorySearchMainViewDelegate: NSObjectProtocol{
-    func didSelectItemAt()
+//    func didSelectItemAt(indexPath: IndexPath)
+    func touchedCellButton(reviewPostModel: ReviewPostModel)
 }
 extension CategorySearchMainViewDelegate {
 }
@@ -46,22 +47,33 @@ extension CategorySearchMainView: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchResultCollectionViewCell", for: indexPath)
             as? SearchResultCollectionViewCell else {return UICollectionViewCell()}
         cell.updateReviewCell(reviewPostModel: reviewPostModels[indexPath.row])
+        cell.delegate = self
         return cell
     }
 }
 
-extension CategorySearchMainView: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let delegate = delegate {
-            delegate.didSelectItemAt()
-        }
+//extension CategorySearchMainView: UICollectionViewDelegate {
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        if let delegate = delegate {
+//            delegate.didSelectItemAt(indexPath: indexPath)
+//        }
+//    }
+//}
+extension CategorySearchMainView: SearchResultCollectionViewCellDelegate {
+    func touchedCellButton(reviewPostModel: ReviewPostModel) {
+         if let delegate = delegate {
+               delegate.touchedCellButton(reviewPostModel: reviewPostModel)
+           }
     }
+    
 }
+    
+    
 // MARK: - method
 extension CategorySearchMainView {
     func setDelegate(){
         collectionView.dataSource = self
-        collectionView.delegate = self
+//        collectionView.delegate = self
     }
     func getReviewPostModel(reviewPostModels: [ReviewPostModel]){
         self.reviewPostModels = reviewPostModels

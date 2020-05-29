@@ -9,7 +9,7 @@
 import UIKit
 import PGFramework
 protocol TagSearchResultMainViewDelegate: NSObjectProtocol{
-    func touchedCellButton()
+    func touchedCellButton(reviewPostModel: ReviewPostModel)
 }
 extension TagSearchResultMainViewDelegate {
 }
@@ -45,11 +45,11 @@ extension TagSearchResultMainView: UICollectionViewDataSource {
     }
 }
 extension TagSearchResultMainView: SearchResultCollectionViewCellDelegate {
-    func touchedCellButton() {
-        if let delegate = delegate {
-            delegate.touchedCellButton()}
+    func touchedCellButton(reviewPostModel: ReviewPostModel) {
+          if let delegate = delegate {
+                  delegate.touchedCellButton(reviewPostModel: reviewPostModel)}
+          }
     }
-}
 // MARK: - method
 extension TagSearchResultMainView {
     func setDelegate(){

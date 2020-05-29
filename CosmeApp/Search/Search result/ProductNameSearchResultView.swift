@@ -9,7 +9,7 @@
 import UIKit
 import PGFramework
 protocol ProductNameSearchResultViewDelegate: NSObjectProtocol{
-    func touchedProductNAmeCellButton()
+    func touchedProductNAmeCellButton(reviewPostModel: ReviewPostModel)
 }
 extension ProductNameSearchResultViewDelegate {
 }
@@ -45,12 +45,11 @@ extension ProductNameSearchResultView: UICollectionViewDataSource {
         return cell
     }
 }
-extension ProductNameSearchResultView {
-}
+
 extension ProductNameSearchResultView: SearchResultCollectionViewCellDelegate {
-    func touchedCellButton() {
-        if let delegate = delegate {
-            delegate.touchedProductNAmeCellButton()}
+    func touchedCellButton(reviewPostModel: ReviewPostModel) {
+          if let delegate = delegate {
+                  delegate.touchedProductNAmeCellButton(reviewPostModel: reviewPostModel)}
     }
 }
 // MARK: - method

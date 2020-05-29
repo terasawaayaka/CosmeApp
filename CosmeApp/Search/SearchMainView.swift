@@ -27,7 +27,7 @@ protocol SearchMainViewDelegate: NSObjectProtocol{
     func touchedLipButton()
     func touchedHairCareButton()
     
-    func touchedCellButton()
+    func touchedCellButton(reviewPostModel: ReviewPostModel)
     func touchedProductNAmeCellButton()
     func touchedUserCellButton()
     
@@ -149,17 +149,18 @@ extension SearchMainView {
 }
 // MARK: - Protocol
 extension SearchMainView: TagSearchResultMainViewDelegate{
-    func touchedCellButton() {
-        if let delegate = delegate {
-            delegate.touchedCellButton()}
+    func touchedCellButton(reviewPostModel: ReviewPostModel) {
+         if let delegate = delegate {
+                   delegate.touchedCellButton(reviewPostModel: reviewPostModel)}
+           }
     }
-}
+
 extension SearchMainView: ProductNameSearchResultViewDelegate {
-    func touchedProductNAmeCellButton() {
+    func touchedProductNAmeCellButton(reviewPostModel: ReviewPostModel) {
         if let delegate = delegate {
-            delegate.touchedProductNAmeCellButton()}
+                delegate.touchedProductNAmeCellButton()}
+        }
     }
-}
 extension SearchMainView: UserSearchResultMainViewDelegate {
     func touchedUserCellButton() {
         if let delegate = delegate{
