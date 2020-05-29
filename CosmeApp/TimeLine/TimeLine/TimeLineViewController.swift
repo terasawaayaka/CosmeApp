@@ -55,7 +55,7 @@ extension TimeLineViewController :TimeLineMainViewDelegate {
     
     func didSelectRowAt(indexPath:IndexPath) {
         let reviewDetailViewController = ReviewDetailViewController()
-        reviewDetailViewController.reviewPostModel = reviewPostModels[indexPath.row]
+        reviewDetailViewController.reviewPostModel = reviewPostModels[indexPath.row - 1]
         navigationController?.pushViewController(reviewDetailViewController, animated: true)
         animatorManager.navigationType = .slide_push
     }
