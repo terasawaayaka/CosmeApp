@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -16,13 +16,16 @@
                 <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sUf-Hk-H1c">
+                        <rect key="frame" x="-1" y="-1" width="101" height="101"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4lZ-ma-eXd">
-                        <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
-                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <rect key="frame" x="0.0" y="0.0" width="101" height="101"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="110" id="PHW-ET-haJ"/>
-                            <constraint firstAttribute="width" secondItem="4lZ-ma-eXd" secondAttribute="height" multiplier="1:1" id="SMI-kb-twu"/>
-                            <constraint firstAttribute="width" constant="110" id="eUb-sA-qxL"/>
+                            <constraint firstAttribute="height" constant="101" id="AIC-BT-cuc"/>
+                            <constraint firstAttribute="width" constant="101" id="ROt-ci-pCl"/>
+                            <constraint firstAttribute="width" secondItem="4lZ-ma-eXd" secondAttribute="height" multiplier="1:1" id="aOS-qa-kpy"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -35,6 +38,7 @@
             </collectionViewCellContentView>
             <size key="customSize" width="100" height="100"/>
             <connections>
+                <outlet property="imageView" destination="sUf-Hk-H1c" id="hak-4U-HHH"/>
                 <outlet property="roundView" destination="4lZ-ma-eXd" id="qXn-Nv-vg7"/>
             </connections>
             <point key="canvasLocation" x="243.47826086956525" y="3.3482142857142856"/>

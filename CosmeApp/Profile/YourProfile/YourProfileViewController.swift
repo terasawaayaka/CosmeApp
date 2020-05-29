@@ -60,8 +60,8 @@ extension YourProfileViewController {
               self.mainView.getModel(userModel: userModel)
             }
         } else {
-            //self.userModel = userModel
-            //self.mainView.getModel(userModel: userModel)
+//            self.userModel = userModel
+//            self.mainView.getModel(userModel: userModel)
         }
     }
 }

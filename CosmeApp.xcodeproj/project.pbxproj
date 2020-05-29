@@ -130,6 +130,14 @@
 		5F97F3C2247B8B4500D68A0C /* ThirdYourGenreCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F97F3C0247B8B4500D68A0C /* ThirdYourGenreCollectionViewCell.xib */; };
 		5F97F3C5247B8C7A00D68A0C /* FourthYourGenreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F97F3C3247B8C7A00D68A0C /* FourthYourGenreCollectionViewCell.swift */; };
 		5F97F3C6247B8C7A00D68A0C /* FourthYourGenreCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F97F3C4247B8C7A00D68A0C /* FourthYourGenreCollectionViewCell.xib */; };
+		5F97F3CB24809C6C00D68A0C /* ElevenYourGenreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F97F3C924809C6C00D68A0C /* ElevenYourGenreCollectionViewCell.swift */; };
+		5F97F3CC24809C6C00D68A0C /* ElevenYourGenreCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F97F3CA24809C6C00D68A0C /* ElevenYourGenreCollectionViewCell.xib */; };
+		5F97F3CF24809CA900D68A0C /* TwelveYourGenreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F97F3CD24809CA900D68A0C /* TwelveYourGenreCollectionViewCell.swift */; };
+		5F97F3D024809CA900D68A0C /* TwelveYourGenreCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F97F3CE24809CA900D68A0C /* TwelveYourGenreCollectionViewCell.xib */; };
+		5F97F3D324809F6D00D68A0C /* ElevenGenreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F97F3D124809F6D00D68A0C /* ElevenGenreCollectionViewCell.swift */; };
+		5F97F3D424809F6D00D68A0C /* ElevenGenreCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F97F3D224809F6D00D68A0C /* ElevenGenreCollectionViewCell.xib */; };
+		5F97F3D724809F8700D68A0C /* TwelveGenreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F97F3D524809F8700D68A0C /* TwelveGenreCollectionViewCell.swift */; };
+		5F97F3D824809F8700D68A0C /* TwelveGenreCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F97F3D624809F8700D68A0C /* TwelveGenreCollectionViewCell.xib */; };
 		5FA88A36246E271000B84ACE /* MyProfileMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA88A34246E271000B84ACE /* MyProfileMainView.swift */; };
 		5FA88A37246E271000B84ACE /* MyProfileMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FA88A35246E271000B84ACE /* MyProfileMainView.xib */; };
 		5FA88A3D246E3FA300B84ACE /* YourProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA88A3B246E3FA300B84ACE /* YourProfileViewController.swift */; };
@@ -310,6 +318,14 @@
 		5F97F3C0247B8B4500D68A0C /* ThirdYourGenreCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThirdYourGenreCollectionViewCell.xib; sourceTree = "<group>"; };
 		5F97F3C3247B8C7A00D68A0C /* FourthYourGenreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthYourGenreCollectionViewCell.swift; sourceTree = "<group>"; };
 		5F97F3C4247B8C7A00D68A0C /* FourthYourGenreCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FourthYourGenreCollectionViewCell.xib; sourceTree = "<group>"; };
+		5F97F3C924809C6C00D68A0C /* ElevenYourGenreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElevenYourGenreCollectionViewCell.swift; sourceTree = "<group>"; };
+		5F97F3CA24809C6C00D68A0C /* ElevenYourGenreCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ElevenYourGenreCollectionViewCell.xib; sourceTree = "<group>"; };
+		5F97F3CD24809CA900D68A0C /* TwelveYourGenreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwelveYourGenreCollectionViewCell.swift; sourceTree = "<group>"; };
+		5F97F3CE24809CA900D68A0C /* TwelveYourGenreCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TwelveYourGenreCollectionViewCell.xib; sourceTree = "<group>"; };
+		5F97F3D124809F6D00D68A0C /* ElevenGenreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElevenGenreCollectionViewCell.swift; sourceTree = "<group>"; };
+		5F97F3D224809F6D00D68A0C /* ElevenGenreCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ElevenGenreCollectionViewCell.xib; sourceTree = "<group>"; };
+		5F97F3D524809F8700D68A0C /* TwelveGenreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwelveGenreCollectionViewCell.swift; sourceTree = "<group>"; };
+		5F97F3D624809F8700D68A0C /* TwelveGenreCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TwelveGenreCollectionViewCell.xib; sourceTree = "<group>"; };
 		5FA88A34246E271000B84ACE /* MyProfileMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileMainView.swift; sourceTree = "<group>"; };
 		5FA88A35246E271000B84ACE /* MyProfileMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyProfileMainView.xib; sourceTree = "<group>"; };
 		5FA88A3B246E3FA300B84ACE /* YourProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourProfileViewController.swift; sourceTree = "<group>"; };
@@ -664,6 +680,10 @@
 				5F97F392247B6E3400D68A0C /* NinthCollectionViewCell.xib */,
 				5F97F395247B6E4500D68A0C /* TenthCollectionViewCell.swift */,
 				5F97F396247B6E4500D68A0C /* TenthCollectionViewCell.xib */,
+				5F97F3D124809F6D00D68A0C /* ElevenGenreCollectionViewCell.swift */,
+				5F97F3D224809F6D00D68A0C /* ElevenGenreCollectionViewCell.xib */,
+				5F97F3D524809F8700D68A0C /* TwelveGenreCollectionViewCell.swift */,
+				5F97F3D624809F8700D68A0C /* TwelveGenreCollectionViewCell.xib */,
 			);
 			path = genreCollectionViewCell;
 			sourceTree = "<group>";
@@ -691,6 +711,10 @@
 				5F97F3B8247B7F2500D68A0C /* NinthYourGenreCollectionViewCell.xib */,
 				5F97F3BB247B7F3800D68A0C /* TenthYourGenreCollectionViewCell.swift */,
 				5F97F3BC247B7F3800D68A0C /* TenthYourGenreCollectionViewCell.xib */,
+				5F97F3C924809C6C00D68A0C /* ElevenYourGenreCollectionViewCell.swift */,
+				5F97F3CA24809C6C00D68A0C /* ElevenYourGenreCollectionViewCell.xib */,
+				5F97F3CD24809CA900D68A0C /* TwelveYourGenreCollectionViewCell.swift */,
+				5F97F3CE24809CA900D68A0C /* TwelveYourGenreCollectionViewCell.xib */,
 			);
 			path = YourGenreCollectionViewCell;
 			sourceTree = "<group>";
@@ -899,6 +923,7 @@
 				3FF1213E24724B18001E0554 /* SearchUserResultTableViewCell.xib in Resources */,
 				5F97F378247B6C8100D68A0C /* SecondGenreCollectionViewCell.xib in Resources */,
 				3F96651E246E2A7F0083EBC2 /* SearchTextView.xib in Resources */,
+				5F97F3D424809F6D00D68A0C /* ElevenGenreCollectionViewCell.xib in Resources */,
 				3F18F06324722DC400957A2E /* SingInMainView.xib in Resources */,
 				5FA88A70247272C000B84ACE /* GoodCollectionViewCell.xib in Resources */,
 				3F966522246E2B240083EBC2 /* SearchMainView.xib in Resources */,
@@ -932,11 +957,13 @@
 				3FBC60CF2477B70D007F78F2 /* SearchUserSelectResultViewController.xib in Resources */,
 				5FA88A3E246E3FA300B84ACE /* YourProfileViewController.xib in Resources */,
 				5F97F3B2247B7EF400D68A0C /* SeventhYourGenreCollectionViewCell.xib in Resources */,
+				5F97F3CC24809C6C00D68A0C /* ElevenYourGenreCollectionViewCell.xib in Resources */,
 				FF850A17246E2BC2003E2ACF /* EditMakeMainView.xib in Resources */,
 				1F4B770A246D310F00FC3B27 /* TimeLineViewController.xib in Resources */,
 				5F97F398247B6E4500D68A0C /* TenthCollectionViewCell.xib in Resources */,
 				FF850A0F246E2B16003E2ACF /* EditReviewMainView.xib in Resources */,
 				3FC6EE862473BDF0008875B7 /* Assets.xcassets in Resources */,
+				5F97F3D024809CA900D68A0C /* TwelveYourGenreCollectionViewCell.xib in Resources */,
 				5F098A472477ACA000D033F4 /* GenreCollectionView.xib in Resources */,
 				5F97F3BE247B7F3800D68A0C /* TenthYourGenreCollectionViewCell.xib in Resources */,
 				1F4B7713246D329300FC3B27 /* SearchViewController.xib in Resources */,
@@ -976,6 +1003,7 @@
 				FF850A07246E29F4003E2ACF /* MakeDetailMainView.xib in Resources */,
 				5F97F388247B6DE600D68A0C /* SixthCollectionViewCell.xib in Resources */,
 				5F098A4F2477D94D00D033F4 /* YourPostCollectionView.xib in Resources */,
+				5F97F3D824809F8700D68A0C /* TwelveGenreCollectionViewCell.xib in Resources */,
 				1F3F5E7F247B5CD300F04090 /* LoadingView.xib in Resources */,
 				5F97F39E247B7E8700D68A0C /* SecondYourGenreCollectionViewCell.xib in Resources */,
 				FFEA536C246E317700694E1C /* TimeLineMainTableViewCell.xib in Resources */,
@@ -1035,12 +1063,14 @@
 			files = (
 				3FF1213824724716001E0554 /* SearchResultCollectionViewCell.swift in Sources */,
 				5FA88A45246E402700B84ACE /* EditProfileViewController.swift in Sources */,
+				5F97F3CF24809CA900D68A0C /* TwelveYourGenreCollectionViewCell.swift in Sources */,
 				5F098A3E2477AB1200D033F4 /* GoodCollectionView.swift in Sources */,
 				1F4B771A246E25CF00FC3B27 /* NewPostMainView.swift in Sources */,
 				D1B8AFC62472627C007BC6AD /* CreateMakeMainView.swift in Sources */,
 				3F8CA3E92476215C000EA5AF /* CategorySearchViewController.swift in Sources */,
 				1F3F5E7E247B5CD300F04090 /* LoadingView.swift in Sources */,
 				FF8509FE246E297C003E2ACF /* ReviewDetailMainView.swift in Sources */,
+				5F97F3D724809F8700D68A0C /* TwelveGenreCollectionViewCell.swift in Sources */,
 				1F7D444E247CFC6B00743829 /* NoticeModel.swift in Sources */,
 				5F098A362475000B00D033F4 /* YourPostCollectionViewCell.swift in Sources */,
 				1F4B774C2473B5D600FC3B27 /* (null) in Sources */,
@@ -1074,6 +1104,7 @@
 				5FA88A52246E581F00B84ACE /* TodayCollectionViewCell.swift in Sources */,
 				1F4B7724246E4FBD00FC3B27 /* CreateReviewMainView.swift in Sources */,
 				3F7C5D8C247644D7007640E2 /* ProductNameSearchResultView.swift in Sources */,
+				5F97F3D324809F6D00D68A0C /* ElevenGenreCollectionViewCell.swift in Sources */,
 				5F97F39D247B7E8700D68A0C /* SecondYourGenreCollectionViewCell.swift in Sources */,
 				FF850A16246E2BC2003E2ACF /* EditMakeMainView.swift in Sources */,
 				5F97F38F247B6E1F00D68A0C /* EighthCollectionViewCell.swift in Sources */,
@@ -1103,6 +1134,7 @@
 				1F4B76E6246D2AC100FC3B27 /* SceneDelegate.swift in Sources */,
 				5F97F3B9247B7F2500D68A0C /* NinthYourGenreCollectionViewCell.swift in Sources */,
 				1F4B770E246D31FD00FC3B27 /* NewPostViewController.swift in Sources */,
+				5F97F3CB24809C6C00D68A0C /* ElevenYourGenreCollectionViewCell.swift in Sources */,
 				5F098A4E2477D94D00D033F4 /* YourPostCollectionView.swift in Sources */,
 				1F4B774024736EE400FC3B27 /* ActivityGoodTableViewCell.swift in Sources */,
 				3FF1213D24724B18001E0554 /* SearchUserResultTableViewCell.swift in Sources */,
