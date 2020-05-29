@@ -62,7 +62,7 @@ extension ReviewDetailViewController:ReviewDetailMainViewDelegate {
         activityType = ActivityType.comment
         let noticeModel: NoticeModel = NoticeModel()
         if let text = mainView.commentTextField.text {
-            noticeModel.description = text
+            noticeModel.comment = text
         }
         NoticeModel.create(request: noticeModel) {
             //todo

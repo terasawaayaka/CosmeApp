@@ -14,7 +14,9 @@ import FirebaseStorage
 class NoticeModel {
     fileprivate static let PATH: String = "notice"
     var id: String = String()
-    var description: String = String()
+    var comment: String = String() //コメント
+    var good: String = String() //いいね
+    var follow: String = String() //フォロー
     var image_paths: [String] = [String]()
     
     //ユーザーの情報
@@ -27,7 +29,9 @@ extension NoticeModel {
     static func parse(data: [String: Any]) -> NoticeModel {
         let model: NoticeModel = NoticeModel()
         if let id = data["id"] as? String {model.id = id}
-        if let description = data["description"] as? String {model.description = description}
+        if let comment = data["comment"] as? String {model.comment = comment}
+        if let good = data["good"] as? String {model.good = good}
+        if let follow = data["follow"] as? String {model.follow = follow}
         if let image_paths = data["image_paths"] as? [String] {model.image_paths = image_paths}
         if let post_user_id = data["post_user_id"] as? String {model.post_user_id = post_user_id}
         return model
@@ -39,7 +43,9 @@ extension NoticeModel {
     static func setParameter(request: NoticeModel) -> [String: Any] {
         var parameter: [String: Any] = [:]
         parameter["id"] = request.id
-        parameter["description"] = request.description
+        parameter["comment"] = request.comment
+        parameter["good"] = request.good
+        parameter["follow"] = request.follow
         parameter["image_paths"] = request.image_paths
         parameter["post_user_id"] = request.post_user_id
         return parameter
@@ -50,6 +56,9 @@ extension NoticeModel {
 extension NoticeModel {
     static func create(request: NoticeModel,success:@escaping() -> Void) {
         let dbRef = Database.database().reference().child(PATH).childByAutoId()
+        if let key = dbRef.key {
+            request.id = key
+        }
         let parameter = setParameter(request: request)
         dbRef.setValue(parameter)
         success()
