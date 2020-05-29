@@ -25,6 +25,8 @@ enum CategoryType {
 }
 // MARK: - Property
 class CategorySearchViewController: BaseViewController {
+
+    
     @IBOutlet weak var headerView: HeaderView!
     @IBOutlet weak var mainView: CategorySearchMainView!
     
@@ -53,14 +55,22 @@ extension CategorySearchViewController: HeaderViewDelegate {
         navigationController?.pushViewController(searchViewController, animated: true)
         animatorManager.navigationType = .slide_pop
     }
+//    func didSelectItemAt(indexPath: IndexPath) {
+//        print("セルを押した")
+//        let reviewDetailViewController = ReviewDetailViewController()
+//        reviewDetailViewController.reviewPostModel = reviewPostModels[indexPath.row]
+//        navigationController?.pushViewController(reviewDetailViewController, animated: true)
+//        animatorManager.navigationType = .slide_push
+//    }
 }
-extension CategorySearchViewController: CategorySearchMainViewDelegate {
-    func didSelectItemAt() {
+
+extension  CategorySearchViewController:  CategorySearchMainViewDelegate {
+    func touchedCellButton(reviewPostModel: ReviewPostModel) {
         let reviewDetailViewController = ReviewDetailViewController()
+        reviewDetailViewController.reviewPostModel = reviewPostModel
         navigationController?.pushViewController(reviewDetailViewController, animated: true)
         animatorManager.navigationType = .slide_push
     }
-    
     
 }
 // MARK: - method

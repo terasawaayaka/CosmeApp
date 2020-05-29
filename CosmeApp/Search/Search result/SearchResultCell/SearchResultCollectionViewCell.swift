@@ -9,7 +9,7 @@
 import UIKit
 import PGFramework
 protocol SearchResultCollectionViewCellDelegate: NSObjectProtocol{
-    func touchedCellButton()
+    func touchedCellButton(reviewPostModel: ReviewPostModel)
 }
 extension SearchResultCollectionViewCellDelegate {
 }
@@ -22,9 +22,10 @@ class SearchResultCollectionViewCell: BaseCollectionViewCell {
     @IBOutlet weak var cellWidth: NSLayoutConstraint!
     @IBAction func touchedCellButton(_ sender: UIButton) {
         if let delegate = delegate{
-            delegate.touchedCellButton()
+            delegate.touchedCellButton(reviewPostModel: reviewPostModel)
         }
     }
+    var reviewPostModel: ReviewPostModel = ReviewPostModel()
 }
 // MARK: - Life cycle
 extension SearchResultCollectionViewCell {
@@ -44,6 +45,7 @@ extension SearchResultCollectionViewCell {
     }
     
     func updateReviewCell(reviewPostModel: ReviewPostModel){
+        self.reviewPostModel = reviewPostModel
         nameLabel.text = reviewPostModel.title
         if reviewPostModel.image_paths.count != 0 {
             if let url = URL(string: reviewPostModel.image_paths[0])  {
