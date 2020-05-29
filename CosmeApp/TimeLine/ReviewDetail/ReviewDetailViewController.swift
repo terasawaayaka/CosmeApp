@@ -19,6 +19,8 @@ class ReviewDetailViewController: BaseViewController {
     @IBOutlet weak var headerView: HeaderView!
     @IBOutlet weak var mainView: ReviewDetailMainView!
     @IBOutlet weak var mainViewBottomMergin: NSLayoutConstraint!
+    
+    var activityType: ActivityType = ActivityType.comment
 }
 // MARK: - Life cycle
 extension ReviewDetailViewController {
@@ -57,6 +59,7 @@ extension ReviewDetailViewController :HeaderViewDelegate{
 extension ReviewDetailViewController:ReviewDetailMainViewDelegate {
 
     func commentSendButton() {
+        activityType = ActivityType.comment
         let noticeModel: NoticeModel = NoticeModel()
         if let text = mainView.commentTextField.text {
             noticeModel.description = text

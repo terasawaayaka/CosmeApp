@@ -52,7 +52,7 @@ extension ActivityViewController:ActivityMainViewDelegate {
     }
     func touchedSecondPostPageButton() {
         let reviewDetailViewController = ReviewDetailViewController()
-        reviewDetailViewController.noticeModel = noticeModels[0]
+        reviewDetailViewController.noticeModel = noticeModels[1]
         navigationController?.pushViewController(reviewDetailViewController, animated: true)
         animatorManager.navigationType = .slide_push
     }
