@@ -37,7 +37,10 @@ class TimeLineMainTableViewSecondCell: BaseTableViewCell, UIScrollViewDelegate {
     @IBOutlet weak var productLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
     
+    //user
+    @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var iconView: UIButton!
+    
     @IBOutlet weak var imageScrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
     
@@ -159,5 +162,17 @@ extension TimeLineMainTableViewSecondCell {
         default:
             break
         }
+        
+        if reviewPostModel.post_user_name == ""{
+            userName.text = "メンバーがいません"
+        }else{
+            userName.text = reviewPostModel.post_user_name
+        }
+        if let photo_path = reviewPostModel.post_user_icon{
+            if let url = URL(string: photo_path){
+                iconView.af_setImage(for: .normal, url: url)
+            }
+        }
     }
+    
 }

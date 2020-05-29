@@ -17,6 +17,8 @@ extension MakeDetailMainViewDelegate {
 // MARK: - Property
 class MakeDetailMainView: BaseView {
     weak var delegate: MakeDetailMainViewDelegate? = nil
+    
+    @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var iconView: UIButton!
     @IBAction func iconViewButton(_ sender: UIButton) {
         if let delegate = delegate {delegate.iconViewButton()

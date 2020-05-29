@@ -46,6 +46,7 @@ class ReviewDetailMainView: BaseView, UIScrollViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var iconView: UIButton!
+    @IBOutlet weak var userName: UILabel!
     
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var imageScrollView: UIScrollView!

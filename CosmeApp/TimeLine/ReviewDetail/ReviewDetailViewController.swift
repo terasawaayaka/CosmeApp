@@ -38,7 +38,6 @@ extension ReviewDetailViewController {
         reviewUpdateView()
         reviewGetModel()
         commentGetModel()
-        
     }
 }
 // MARK: - Protocol
@@ -56,11 +55,7 @@ extension ReviewDetailViewController :HeaderViewDelegate{
 }
 
 extension ReviewDetailViewController:ReviewDetailMainViewDelegate {
-    func commentDeleteButton2() {
-        CommentPostModel.delete(id: commentPostModel.id) {
-        }
-    }
-    
+
     func commentSendButton() {
         let noticeModel: NoticeModel = NoticeModel()
         if let text = mainView.commentTextField.text {
@@ -78,6 +73,13 @@ extension ReviewDetailViewController:ReviewDetailMainViewDelegate {
             self.mainView.commentTextField.text = ""
         }
     }
+    func commentDeleteButton2() {
+        CommentPostModel.delete(id: commentPostModel.id) {
+            self.navigationController?.popViewController(animated: true)
+            }
+    }
+
+    
     
     func iconViewButton2() {
         //TODO : 自分か他人のprofile画面に遷移
@@ -86,8 +88,6 @@ extension ReviewDetailViewController:ReviewDetailMainViewDelegate {
     func touchedIconViewButton() {
         //TODO : 自分か他人のprofile画面に遷移
     }
-    
-    
 }
 // MARK: - method
 extension ReviewDetailViewController {
@@ -198,6 +198,16 @@ extension ReviewDetailViewController {
             }
         default:
             break
+        }
+        if reviewPostModel.post_user_name == ""{
+            mainView.userName.text = "メンバーがいません"
+        }else{
+            mainView.userName.text = reviewPostModel.post_user_name
+        }
+        if let photo_path = reviewPostModel.post_user_icon{
+            if let url = URL(string: photo_path){
+                mainView.iconView.af_setImage(for: .normal, url: url)
+            }
         }
     }
     

@@ -221,6 +221,7 @@
                 <outlet property="secondStarImage" destination="B5i-gI-pJy" id="5bh-Sz-wBv"/>
                 <outlet property="thirdImageView" destination="ngw-r1-I16" id="ULw-JP-We6"/>
                 <outlet property="thirdStarImage" destination="y21-aH-k1A" id="F4Q-45-vTi"/>
+                <outlet property="userName" destination="yEw-Dw-VQ8" id="upD-mS-ydo"/>
             </connections>
             <point key="canvasLocation" x="108.69565217391305" y="108.81696428571428"/>
         </tableViewCell>

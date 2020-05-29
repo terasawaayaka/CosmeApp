@@ -15,6 +15,7 @@ class MakeDetailViewController: BaseViewController {
     @IBOutlet weak var mainView: MakeDetailMainView!
     
     var makePostModel : MakePostModel = MakePostModel()
+    var reviewPostModel : ReviewPostModel = ReviewPostModel()
     
 }
 // MARK: - Life cycle
@@ -98,6 +99,16 @@ extension MakeDetailViewController {
             }
         default:
             break
+        }
+        if makePostModel.post_user_name == ""{
+            mainView.userName.text = "メンバーがいません"
+        }else{
+            mainView.userName.text = makePostModel.post_user_name
+        }
+        if let photo_path = makePostModel.post_user_icon{
+            if let url = URL(string: photo_path){
+                mainView.iconView.af_setImage(for: .normal, url: url)
+            }
         }
     }
 }
