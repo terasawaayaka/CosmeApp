@@ -16,6 +16,7 @@ extension ReviewDetailMainTableViewCellDelegate {
 // MARK: - Property
 class ReviewDetailMainTableViewCell: BaseTableViewCell {
     weak var delegate: ReviewDetailMainTableViewCellDelegate? = nil
+    @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var iconView: UIButton!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBAction func iconViewButton(_ sender: UIButton) {
@@ -39,5 +40,15 @@ extension ReviewDetailMainTableViewCell {
     }
     func updateCell(commentPostModel:CommentPostModel){
         descriptionLabel.text = commentPostModel.description
+        if commentPostModel.post_user_name == ""{
+            userName.text = "メンバーがいません"
+        }else{
+            userName.text = commentPostModel.post_user_name
+        }
+        if let photo_path = commentPostModel.post_user_icon{
+            if let url = URL(string: photo_path){
+                iconView.af_setImage(for: .normal, url: url)
+            }
+        }
     }
 }

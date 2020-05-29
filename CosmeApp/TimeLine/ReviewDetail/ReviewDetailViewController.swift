@@ -103,11 +103,35 @@ extension ReviewDetailViewController {
         headerView.delegate = self
         mainView.delegate = self
     }
+    
+    
     func commentGetModel(){
-        CommentPostModel.reads{(commentPostModels)in
-            self.mainView.commentGetModel(commentPostModels: commentPostModels)
+        CommentPostModel.reads { (commentPostModels) in
+        for commentPostModel in commentPostModels {
+            if commentPostModel.post_user_id != "" {
+                UserModel.readAt(userId: commentPostModel.post_user_id) { (userModel) in
+                    if let name = userModel.nickname{
+                        commentPostModel.post_user_name = name
+                    }
+                    if let icon = userModel.photo_path{
+                        commentPostModel.post_user_icon = icon
+                    }
+                    self.commentPostModels = commentPostModels
+                    self.mainView.commentGetModel(commentPostModels:commentPostModels)
+                }
+            }else{
+                self.mainView.commentGetModel(commentPostModels:commentPostModels)
+            }
+            }
         }
     }
+
+    
+//    func commentGetModel(){
+//        CommentPostModel.reads{(commentPostModels)in
+//            self.mainView.commentGetModel(commentPostModels: commentPostModels)
+//        }
+//    }
     func reviewGetModel(){
         ReviewPostModel.readAt(id: reviewPostModel.id, success: { (reviewPostModel) in
             self.reviewPostModel = reviewPostModel
