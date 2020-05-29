@@ -15,7 +15,7 @@ class MyProfileViewController: BaseViewController{
     //data
     var userModel: UserModel = UserModel()
     var makePostModel: MakePostModel = MakePostModel()
-    
+    var makePostModels: [MakePostModel] = [MakePostModel]()
     
     //Outlet
     @IBOutlet weak var mainView: MyProfileMainView!
@@ -41,6 +41,13 @@ extension MyProfileViewController {
 }
 // MARK: - Protocol
 extension MyProfileViewController :MyProfileMainViewDelegate{
+    func didSelectItemAt(indexPath: IndexPath) {
+        let makeDetailViewController = MakeDetailViewController()
+        makeDetailViewController.makePostModel = makePostModels[indexPath.row]
+        navigationController?.pushViewController(makeDetailViewController, animated: true)
+        animatorManager.navigationType = .push
+    }
+    
     func editProfileButton() {
         let editProfileViewController = EditProfileViewController()
         editProfileViewController.userModel = userModel
@@ -76,6 +83,21 @@ extension MyProfileViewController {
             }
             self.mainView.getModel(userModel: userModel)
             self.userModel = userModel
+        }
+        
+        MakePostModel.reads { (makePostModels) in
+//            self.makePostModels = makePostModels
+//            self.mainView.getMakeModel(makePostModels: makePostModels)
+            
+            for makePostModel in makePostModels {
+                UserModel.readAt(userId: makePostModel.post_user_id) { (userModel) in
+                    if let uid = userModel.id {
+                    makePostModel.post_user_id = uid
+                    }
+                    self.makePostModels = makePostModels
+                    self.mainView.getMakeModel(makePostModels: makePostModels)
+                }
+            }
         }
     }
 }

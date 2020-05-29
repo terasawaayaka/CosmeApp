@@ -13,6 +13,8 @@ protocol MyProfileMainViewDelegate: NSObjectProtocol{
     func touchedGoodButton()
     func touchedBookMarkButton()
     func touchedGenreButton()
+    
+    func didSelectItemAt(indexPath: IndexPath)
 }
 extension MyProfileMainViewDelegate {
 }
@@ -41,6 +43,9 @@ class MyProfileMainView: BaseView {
     @IBAction func touchedGenreButton(_ sender: UIButton) {
         if let delegate = delegate{delegate.touchedGenreButton()}
     }
+    
+    //data
+    var makePostModels: [MakePostModel] = [MakePostModel]()
 }
 // MARK: - Life cycle
 extension MyProfileMainView {
@@ -55,21 +60,27 @@ extension MyProfileMainView {
 //MARK: - Protocol
 extension MyProfileMainView :UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return makePostModels.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TodayCollectionViewCell", for: indexPath) as? TodayCollectionViewCell else {return UICollectionViewCell()}
+        cell.updataCell(makePostModel: makePostModels[indexPath.row])
 
         return cell
     }
-
 }
 
+extension MyProfileMainView: UICollectionViewDelegate{
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let delegate = delegate{delegate.didSelectItemAt(indexPath: indexPath)}
+    }
+}
 // MARK: - method
 extension MyProfileMainView {
     func setDelegate() {
         todayCollectionView.dataSource = self
+        todayCollectionView.delegate = self
     }
     func getModel(userModel: UserModel) {
         if userModel.nickname == "" {
@@ -77,17 +88,19 @@ extension MyProfileMainView {
         }else{
             userName.text = userModel.nickname
         }
-        
         if userModel.description == "" {
             userText.text = "自己紹介文を入力"
         }else{
             userText.text = userModel.description
         }
-        
         if let photo_path = userModel.photo_path {
             if let url = URL(string: photo_path) {
                 iconView.af_setImage(withURL: url)
             }
         }
+    }
+    func getMakeModel(makePostModels: [MakePostModel]) {
+        self.makePostModels = makePostModels
+        todayCollectionView.reloadData()
     }
 }

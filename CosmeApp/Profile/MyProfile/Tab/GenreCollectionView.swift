@@ -36,12 +36,14 @@ extension GenreCollectionView {
         loadCollectionViewCellFromXib(collectionView: collectionView, cellName: "EighthCollectionViewCell")
         loadCollectionViewCellFromXib(collectionView: collectionView, cellName: "NinthCollectionViewCell")
         loadCollectionViewCellFromXib(collectionView: collectionView, cellName: "TenthCollectionViewCell")
+        loadCollectionViewCellFromXib(collectionView: collectionView, cellName: "ElevenGenreCollectionViewCell")
+        loadCollectionViewCellFromXib(collectionView: collectionView, cellName: "TwelveGenreCollectionViewCell")
     }
 }
 // MARK: - Protocol
 extension GenreCollectionView :UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return 12
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -55,6 +57,8 @@ extension GenreCollectionView :UICollectionViewDataSource{
         guard let eighthCell = collectionView.dequeueReusableCell(withReuseIdentifier: "EighthCollectionViewCell", for: indexPath) as? EighthCollectionViewCell else {return UICollectionViewCell()}
         guard let ninthCell = collectionView.dequeueReusableCell(withReuseIdentifier: "NinthCollectionViewCell", for: indexPath) as? NinthCollectionViewCell else {return UICollectionViewCell()}
         guard let tenthCell = collectionView.dequeueReusableCell(withReuseIdentifier: "TenthCollectionViewCell", for: indexPath) as? TenthCollectionViewCell else {return UICollectionViewCell()}
+        guard let elvenCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ElevenGenreCollectionViewCell", for: indexPath) as? ElevenGenreCollectionViewCell else {return UICollectionViewCell()}
+        guard let twelveCell = collectionView.dequeueReusableCell(withReuseIdentifier: "TwelveGenreCollectionViewCell", for: indexPath) as? TwelveGenreCollectionViewCell else {return UICollectionViewCell()}
         switch indexPath.row {
         case 0:
             return cell
@@ -76,6 +80,10 @@ extension GenreCollectionView :UICollectionViewDataSource{
             return ninthCell
         case 9:
             return tenthCell
+        case 10:
+            return elvenCell
+        case 11:
+            return twelveCell
         default:
             return cell
         }
