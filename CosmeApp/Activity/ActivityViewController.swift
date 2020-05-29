@@ -74,11 +74,20 @@ extension ActivityViewController {
     }
     func getModel() {
         NoticeModel.reads { (noticeModels) in
-            self.noticeModels = noticeModels
-            self.mainView.getModel(noticeModels: noticeModels)
-//            for noticeModel in noticeModels {
-//                print("Desc:",noticeModel.description)
-//            }
+            for noticeModel in noticeModels {
+                if noticeModel.post_user_id != "" {
+                    UserModel.readAt(userId: noticeModel.post_user_id) { (userModel) in
+                        if let name = userModel.nickname {
+                            noticeModel.post_user_name = name
+                        }
+                        if let icon = userModel.photo_path {
+                            noticeModel.post_user_icon = icon
+                        }
+                        self.noticeModels = noticeModels
+                        self.mainView.getModel(noticeModels: noticeModels)
+                    }
+                }
+            }
         }
     }
 }
