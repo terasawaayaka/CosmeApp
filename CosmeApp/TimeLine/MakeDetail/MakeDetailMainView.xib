@@ -24,6 +24,7 @@
                 <outlet property="processTextView" destination="bex-O9-HRR" id="fjl-n7-MqG"/>
                 <outlet property="shadingLabel" destination="rhP-m7-zgq" id="5aU-1Z-wn2"/>
                 <outlet property="skincareLabel" destination="riX-Is-6e9" id="3CH-f1-7Nw"/>
+                <outlet property="userName" destination="FID-BF-EzM" id="Beb-C2-IpT"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
