@@ -8,6 +8,12 @@
 
 import UIKit
 
+enum ActivityType {
+    case comment
+    case good
+    case follow
+}
+
 import PGFramework
 protocol ActivityMainViewDelegate: NSObjectProtocol {
     func touchedProfilePageButton()
@@ -22,6 +28,8 @@ extension ActivityMainViewDelegate {
 class ActivityMainView: BaseView {
     weak var delegate: ActivityMainViewDelegate? = nil
     @IBOutlet weak var tableView: UITableView!
+    
+    var activityType: ActivityType = ActivityType.comment
     
     var noticeModels: [NoticeModel] = [NoticeModel]()
 }
@@ -42,27 +50,27 @@ extension ActivityMainView:UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ActivityGoodTableViewCell", for: indexPath) as?
-//             ActivityGoodTableViewCell else {return UITableViewCell()}
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ActivityGoodTableViewCell", for: indexPath) as?
+             ActivityGoodTableViewCell else {return UITableViewCell()}
         guard let secondCell = tableView.dequeueReusableCell(withIdentifier: "ActivityCommentTableViewCell", for: indexPath) as?
              ActivityCommentTableViewCell else {return UITableViewCell()}
-//        guard let thirdCell = tableView.dequeueReusableCell(withIdentifier: "ActivityFollowTableViewCell", for: indexPath) as?
-//             ActivityFollowTableViewCell else {return UITableViewCell()}
-//        switch indexPath {
-//        case [0,0]:
-//            cell.updateCell(noticeModel: noticeModels[0])
-//            cell.delegate = self
-//            return cell
-//        case [0,1]:
+        guard let thirdCell = tableView.dequeueReusableCell(withIdentifier: "ActivityFollowTableViewCell", for: indexPath) as?
+             ActivityFollowTableViewCell else {return UITableViewCell()}
+        switch activityType {
+        case .good:
+            cell.updateCell(noticeModel: noticeModels[0])
+            cell.delegate = self
+            return cell
+        case .comment:
             secondCell.updateCell(noticeModel: noticeModels[indexPath.row])
             secondCell.delegate = self
             return secondCell
-//        case [0,2]:
-//            thirdCell.delegate = self
-//            return thirdCell
-//        default:
-//            return cell
-//        }
+        case .follow:
+            thirdCell.delegate = self
+            return thirdCell
+        default:
+            break
+        }
     }
 }
 
