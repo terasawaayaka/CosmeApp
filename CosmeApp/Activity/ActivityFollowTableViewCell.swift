@@ -43,5 +43,16 @@ extension ActivityFollowTableViewCell {
     func setLayout() {
         thirdIconImageView.layer.cornerRadius = thirdIconImageView.frame.height / 2
     }
-    
+    func updateCell(noticeModel: NoticeModel) {
+        if noticeModel.post_user_name == "" {
+            userNameLabel.text = "メンバーがいません"
+        } else {
+            userNameLabel.text = noticeModel.post_user_name
+        }
+        if let photo_path = noticeModel.post_user_icon {
+            if let url = URL(string: photo_path) {
+                thirdIconImageView.af_setImage(withURL: url)
+            }
+        }
+    }
 }
