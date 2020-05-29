@@ -39,11 +39,12 @@ extension TimeLineMainView {
 // MARK: - Protocol
 extension TimeLineMainView :UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return reviewPostModels.count
+        return reviewPostModels.count + 1
     }
     
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "TimeLineMainTableViewCell") as? TimeLineMainTableViewCell else {return UITableViewCell()}
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "TimeLineMainTableViewCell" ) as? TimeLineMainTableViewCell else {return UITableViewCell()}
         
         guard let secondCell = tableView.dequeueReusableCell(withIdentifier: "TimeLineMainTableViewSecondCell")as? TimeLineMainTableViewSecondCell else {return UITableViewCell()}
         switch indexPath.row {
@@ -53,7 +54,7 @@ extension TimeLineMainView :UITableViewDataSource{
             return cell
         default:
             secondCell.delegate = self
-            secondCell.updateCell(reviewPostModel: reviewPostModels[indexPath.row])
+            secondCell.updateCell(reviewPostModel: reviewPostModels[indexPath.row - 1])
             return secondCell
         }
     }
