@@ -53,5 +53,6 @@ extension ActivityGoodTableViewCell {
     }
     func updateCell(noticeModel: NoticeModel) {
         userNameLabel.text = noticeModel.id
+        
     }
 }

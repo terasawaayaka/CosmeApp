@@ -9,6 +9,7 @@
 import UIKit
 
 import PGFramework
+import  FirebaseAuth
 // MARK: - Property
 class ReviewDetailViewController: BaseViewController {
     
@@ -64,6 +65,9 @@ extension ReviewDetailViewController:ReviewDetailMainViewDelegate {
         if let text = mainView.commentTextField.text {
             noticeModel.comment = text
         }
+        if let uid = Auth.auth().currentUser?.uid {
+            noticeModel.post_user_id = uid
+        }
         NoticeModel.create(request: noticeModel) {
             //todo
         }
@@ -71,6 +75,9 @@ extension ReviewDetailViewController:ReviewDetailMainViewDelegate {
         if let text = mainView.commentTextField.text{
             commentPostModel.description = text
         }
+        if let uid = Auth.auth().currentUser?.uid {
+                   commentPostModel.post_user_id = uid
+               }
         CommentPostModel.create(request: commentPostModel) {
             self.mainView.commentTextField.endEditing(true)
             self.mainView.commentTextField.text = ""
