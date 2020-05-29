@@ -13,6 +13,7 @@ import PGFramework
 class ReviewDetailViewController: BaseViewController {
     
     var commentPostModel : CommentPostModel = CommentPostModel()
+    var commentPostModels : [CommentPostModel] = [CommentPostModel]()
     var reviewPostModel : ReviewPostModel = ReviewPostModel()
     var noticeModel: NoticeModel = NoticeModel()
     
@@ -57,7 +58,6 @@ extension ReviewDetailViewController :HeaderViewDelegate{
 }
 
 extension ReviewDetailViewController:ReviewDetailMainViewDelegate {
-
     func commentSendButton() {
         activityType = ActivityType.comment
         let noticeModel: NoticeModel = NoticeModel()
@@ -76,13 +76,6 @@ extension ReviewDetailViewController:ReviewDetailMainViewDelegate {
             self.mainView.commentTextField.text = ""
         }
     }
-    func commentDeleteButton2() {
-        CommentPostModel.delete(id: commentPostModel.id) {
-            self.navigationController?.popViewController(animated: true)
-            }
-    }
-
-    
     
     func iconViewButton2() {
         //TODO : 自分か他人のprofile画面に遷移
