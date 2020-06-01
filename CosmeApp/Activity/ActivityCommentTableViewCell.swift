@@ -10,7 +10,7 @@ import UIKit
 
 import PGFramework
 protocol ActivityCommentTableViewCellDelegate: NSObjectProtocol{
-    func touchedSecondProfileButton()
+    func touchedSecondProfileButton(indexPath: IndexPath)
     func touchedSecondPostPageButton()
 }
 extension ActivityCommentTableViewCellDelegate {
@@ -22,7 +22,7 @@ class ActivityCommentTableViewCell: BaseTableViewCell {
     @IBOutlet weak var secondIconImageView: UIImageView!
     @IBAction func touchedSecondProfilePageButton(_ sender: UIButton) {
         if let delegate = delegate {
-            delegate.touchedSecondProfileButton()
+            delegate.touchedSecondProfileButton(indexPath: indexPath)
         }
     }
 
@@ -34,6 +34,7 @@ class ActivityCommentTableViewCell: BaseTableViewCell {
     }
 
     @IBOutlet weak var userNameLabel: UILabel!
+    var indexPath: IndexPath = IndexPath()
 }
 // MARK: - Life cycle
 extension ActivityCommentTableViewCell {

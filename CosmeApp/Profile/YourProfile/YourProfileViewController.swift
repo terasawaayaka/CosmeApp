@@ -14,6 +14,7 @@ class YourProfileViewController: BaseViewController {
     //data
     var userModel: UserModel = UserModel()
     var reviewPostModel: ReviewPostModel = ReviewPostModel()
+    var noticeModel: NoticeModel = NoticeModel()
     //Outlet
     @IBOutlet weak var mainView: YourProfileMainView!
 }
@@ -29,6 +30,7 @@ extension YourProfileViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         getModel()
+        noticeGetModel()
     }
 }
 // MARK: - Protocol
@@ -63,5 +65,19 @@ extension YourProfileViewController {
 //            self.userModel = userModel
 //            self.mainView.getModel(userModel: userModel)
         }
+    }
+    func noticeGetModel() {
+        if noticeModel.post_user_id != "" {
+                UserModel.readAt(userId: noticeModel.post_user_id) { (userModel) in
+                    if let icon = userModel.photo_path {
+                        self.noticeModel.post_user_icon = icon
+                    }
+                      self.userModel = userModel
+                      self.mainView.getModel(userModel: userModel)
+                    }
+                } else {
+        //            self.userModel = userModel
+        //            self.mainView.getModel(userModel: userModel)
+                }
     }
 }

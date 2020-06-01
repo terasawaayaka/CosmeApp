@@ -33,8 +33,9 @@ extension ActivityViewController {
 }
 // MARK: - Protocol
 extension ActivityViewController:ActivityMainViewDelegate {
-    func touchedProfilePageButton() {
+    func touchedProfilePageButton(indexPath: IndexPath) {
         let yourProfileViewController = YourProfileViewController()
+        yourProfileViewController.noticeModel = noticeModels[indexPath.row]
         navigationController?.pushViewController(yourProfileViewController, animated: true)
         animatorManager.navigationType = .slide_push
     }
@@ -45,8 +46,9 @@ extension ActivityViewController:ActivityMainViewDelegate {
         navigationController?.pushViewController(reviewDetailViewController, animated: true)
         animatorManager.navigationType = .slide_push
     }
-    func touchedSecondProfileButton() {
+    func touchedSecondProfileButton(indexPath: IndexPath) {
         let yourProfileViewController = YourProfileViewController()
+        yourProfileViewController.noticeModel = noticeModels[indexPath.row]
         navigationController?.pushViewController(yourProfileViewController, animated: true)
         animatorManager.navigationType = .slide_push
     }
