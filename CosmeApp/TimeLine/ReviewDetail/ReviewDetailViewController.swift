@@ -59,6 +59,35 @@ extension ReviewDetailViewController :HeaderViewDelegate{
 }
 
 extension ReviewDetailViewController:ReviewDetailMainViewDelegate {
+    func iconViewButton2(commentPostModel: CommentPostModel) {
+        if let uid = Auth.auth().currentUser?.uid {
+            if commentPostModel.post_user_id == uid {
+                let myProfileViewController = MyProfileViewController()
+                navigationController?.pushViewController(myProfileViewController, animated: true)
+                animatorManager.navigationType = .slide_push
+            }else{
+                let yourPlofileViewController = YourProfileViewController()
+                yourPlofileViewController.commentPostModel = commentPostModel
+                navigationController?.pushViewController(yourPlofileViewController, animated: true)
+                animatorManager.navigationType = .slide_push
+            }
+        }
+    }
+    
+    func touchedIconViewButton(reviewPostModel: ReviewPostModel) {
+        if let uid = Auth.auth().currentUser?.uid {
+                if reviewPostModel.post_user_id == uid {
+                    let myProfileViewController = MyProfileViewController()
+                    navigationController?.pushViewController(myProfileViewController, animated: true)
+                    animatorManager.navigationType = .slide_push
+                }else{
+                    let yourPlofileViewController = YourProfileViewController()
+                    yourPlofileViewController.reviewPostModel = reviewPostModel
+                    navigationController?.pushViewController(yourPlofileViewController, animated: true)
+                    animatorManager.navigationType = .slide_push
+                }
+            }
+        }
     func commentSendButton() {
         activityType = ActivityType.comment
         let noticeModel: NoticeModel = NoticeModel()
@@ -83,34 +112,6 @@ extension ReviewDetailViewController:ReviewDetailMainViewDelegate {
             self.mainView.commentTextField.text = ""
         }
     }
-    func iconViewButton2() {
-        if let uid = Auth.auth().currentUser?.uid {
-            if reviewPostModel.post_user_id == uid {
-                let myProfileViewController = MyProfileViewController()
-                navigationController?.pushViewController(myProfileViewController, animated: true)
-                animatorManager.navigationType = .slide_push
-            }else{
-                let yourPlofileViewController = YourProfileViewController()
-                navigationController?.pushViewController(yourPlofileViewController, animated: true)
-                animatorManager.navigationType = .slide_push
-            }
-        }
-    }
-    
-    func touchedIconViewButton() {
-        if let uid = Auth.auth().currentUser?.uid {
-            if commentPostModel.post_user_id == uid {
-                let myProfileViewController = MyProfileViewController()
-                navigationController?.pushViewController(myProfileViewController, animated: true)
-                animatorManager.navigationType = .slide_push
-            }else{
-                let yourPlofileViewController = YourProfileViewController()
-                navigationController?.pushViewController(yourPlofileViewController, animated: true)
-                animatorManager.navigationType = .slide_push
-            }
-        }
-    }
-    
 }
 // MARK: - method
 extension ReviewDetailViewController {

@@ -14,6 +14,8 @@ class YourProfileViewController: BaseViewController {
     //data
     var userModel: UserModel = UserModel()
     var reviewPostModel: ReviewPostModel = ReviewPostModel()
+    var makePostModel : MakePostModel = MakePostModel()
+    var commentPostModel : CommentPostModel = CommentPostModel()
     var noticeModel: NoticeModel = NoticeModel()
     //Outlet
     @IBOutlet weak var mainView: YourProfileMainView!

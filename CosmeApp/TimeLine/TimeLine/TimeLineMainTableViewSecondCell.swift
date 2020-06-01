@@ -10,7 +10,7 @@ import UIKit
 
 import PGFramework
 protocol TimeLineMainTableViewSecondCellDelegate: NSObjectProtocol{
-    func iconViewButton()
+    func iconViewButton(reviewPostModel :ReviewPostModel)
 }
 extension TimeLineMainTableViewSecondCellDelegate {
 }
@@ -46,7 +46,7 @@ class TimeLineMainTableViewSecondCell: BaseTableViewCell, UIScrollViewDelegate {
     
     //Button
     @IBAction func iconViewButton(_ sender: UIButton) {
-        if let delegate = delegate{delegate.iconViewButton()}
+        if let delegate = delegate{delegate.iconViewButton(reviewPostModel: reviewPostModel)}
     }
     @IBAction func goodButton(_ sender: UIButton) {
     }
@@ -79,6 +79,7 @@ extension TimeLineMainTableViewSecondCell {
         }
     }
     func updateCell(reviewPostModel:ReviewPostModel){
+        self.reviewPostModel = reviewPostModel
         //text
         productLabel.text = "商品名：　" + reviewPostModel.title
         categoryLabel.text = "カテゴリ：　" + reviewPostModel.category
