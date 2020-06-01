@@ -86,18 +86,19 @@ extension MyProfileViewController {
         }
         
         MakePostModel.reads { (makePostModels) in
-//            self.makePostModels = makePostModels
-//            self.mainView.getMakeModel(makePostModels: makePostModels)
-            
-            for makePostModel in makePostModels {
-                UserModel.readAt(userId: makePostModel.post_user_id) { (userModel) in
-                    if let uid = userModel.id {
-                    makePostModel.post_user_id = uid
+            let filterdMakePostModels = makePostModels.filter { (makePostModel) -> Bool in
+                if let uid = Auth.auth().currentUser?.uid {
+                    if makePostModel.post_user_id == uid {
+                        return true
+                    } else {
+                        return false
                     }
-                    self.makePostModels = makePostModels
-                    self.mainView.getMakeModel(makePostModels: makePostModels)
+                } else {
+                    return false
                 }
             }
+            self.mainView.getMakeModel(makePostModels: filterdMakePostModels)
+            self.makePostModels = filterdMakePostModels
         }
     }
 }
