@@ -9,6 +9,7 @@
 import UIKit
 
 import PGFramework
+import FirebaseAuth
 
 protocol ReviewDetailMainViewDelegate: NSObjectProtocol{
     func touchedIconViewButton()
@@ -85,7 +86,7 @@ extension ReviewDetailMainView :UITableViewDataSource{
         return cell
     }
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == UITableViewCell.EditingStyle.delete{
+            if editingStyle == UITableViewCell.EditingStyle.delete{
             print("削除")
             commentPostModels.remove(at: indexPath.row)
             tableView.reloadData()
