@@ -12,8 +12,8 @@ import PGFramework
 import FirebaseAuth
 
 protocol ReviewDetailMainViewDelegate: NSObjectProtocol{
-    func touchedIconViewButton()
-    func iconViewButton2()
+    func touchedIconViewButton(reviewPostModel:ReviewPostModel)
+    func iconViewButton2(commentPostModel: CommentPostModel)
     func commentSendButton()
 }
 extension ReviewDetailMainViewDelegate {
@@ -43,6 +43,7 @@ class ReviewDetailMainView: BaseView, UIScrollViewDelegate {
     
     var commentPostModels : [CommentPostModel]=[CommentPostModel]()
     var commentPostModel : CommentPostModel = CommentPostModel()
+    var reviewPostModel : ReviewPostModel = ReviewPostModel()
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var iconView: UIButton!
@@ -55,7 +56,7 @@ class ReviewDetailMainView: BaseView, UIScrollViewDelegate {
     
     //button
     @IBAction func iconViewButton(_ sender: UIButton) {
-        if let delegate = delegate {delegate.iconViewButton2()}
+        if let delegate = delegate {delegate.iconViewButton2(commentPostModel: commentPostModel)}
     }
     @IBAction func commentSendButton(_ sender: UIButton) {
         if let delegate = delegate {delegate.commentSendButton()}
@@ -95,12 +96,11 @@ extension ReviewDetailMainView :UITableViewDataSource{
 }
 
 extension ReviewDetailMainView:ReviewDetailMainTableViewCellDelegate{
-    func iconViewButton() {
-        if let delegate = delegate {delegate.touchedIconViewButton()}
-    }
-    
-    
+    func iconViewButton(commentPostModel: CommentPostModel) {
+        if let delegate = delegate {delegate.iconViewButton2(commentPostModel: commentPostModel)}
+        }
 }
+
 // MARK: - method
 extension ReviewDetailMainView {
     func setDelegate(){

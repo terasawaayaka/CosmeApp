@@ -9,7 +9,7 @@
 import UIKit
 import PGFramework
 protocol ReviewDetailMainTableViewCellDelegate: NSObjectProtocol{
-    func iconViewButton()
+    func iconViewButton(commentPostModel:CommentPostModel)
 }
 extension ReviewDetailMainTableViewCellDelegate {
 }
@@ -20,8 +20,11 @@ class ReviewDetailMainTableViewCell: BaseTableViewCell {
     @IBOutlet weak var iconView: UIButton!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBAction func iconViewButton(_ sender: UIButton) {
-        if let delegate = delegate {delegate.iconViewButton()}
+        if let delegate = delegate {delegate.iconViewButton(commentPostModel: commentPostModel)}
     }
+    
+    var reviewPostModel : ReviewPostModel = ReviewPostModel()
+    var commentPostModel :CommentPostModel = CommentPostModel()
 }
 // MARK: - Life cycle
 extension ReviewDetailMainTableViewCell {
@@ -39,6 +42,7 @@ extension ReviewDetailMainTableViewCell {
         iconView.layer.cornerRadius = iconView.frame.width / 2
     }
     func updateCell(commentPostModel:CommentPostModel){
+        self.commentPostModel = commentPostModel
         descriptionLabel.text = commentPostModel.description
         if commentPostModel.post_user_name == ""{
             userName.text = "メンバーがいません"

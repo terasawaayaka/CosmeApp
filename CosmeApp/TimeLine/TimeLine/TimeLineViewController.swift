@@ -42,14 +42,7 @@ extension TimeLineViewController {
 }
 // MARK: - Protocol
 extension TimeLineViewController :TimeLineMainViewDelegate {
-    func didSelectCollectionViewCell(indexPath: IndexPath) {
-        let makeDetailViewController = MakeDetailViewController()
-        makeDetailViewController.makePostModel = makePostModels[indexPath.row]
-        navigationController?.pushViewController(makeDetailViewController, animated: true)
-        animatorManager.navigationType = .slide_push
-    }
-    
-    func touchedIconViewButton() {
+    func touchedIconViewButton(reviewPostModel: ReviewPostModel) {
         if let uid = Auth.auth().currentUser?.uid {
             if reviewPostModel.post_user_id == uid {
                 let myProfileViewController = MyProfileViewController()
@@ -57,11 +50,21 @@ extension TimeLineViewController :TimeLineMainViewDelegate {
                 animatorManager.navigationType = .slide_push
             }else{
                 let yourPlofileViewController = YourProfileViewController()
+                yourPlofileViewController.reviewPostModel = reviewPostModel
                 navigationController?.pushViewController(yourPlofileViewController, animated: true)
                 animatorManager.navigationType = .slide_push
             }
         }
     }
+    
+    func didSelectCollectionViewCell(indexPath: IndexPath) {
+        let makeDetailViewController = MakeDetailViewController()
+        makeDetailViewController.makePostModel = makePostModels[indexPath.row]
+        navigationController?.pushViewController(makeDetailViewController, animated: true)
+        animatorManager.navigationType = .slide_push
+    }
+
+
     func didSelectRowAt(indexPath:IndexPath) {
         let reviewDetailViewController = ReviewDetailViewController()
         reviewDetailViewController.reviewPostModel = reviewPostModels[indexPath.row - 1]

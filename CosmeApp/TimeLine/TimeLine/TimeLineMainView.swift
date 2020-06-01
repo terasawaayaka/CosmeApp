@@ -13,7 +13,7 @@ protocol TimeLineMainViewDelegate: NSObjectProtocol{
     
     func didSelectRowAt(indexPath:IndexPath)
     func didSelectCollectionViewCell(indexPath:IndexPath)
-    func touchedIconViewButton()
+    func touchedIconViewButton(reviewPostModel:ReviewPostModel)
 }
 extension TimeLineMainViewDelegate {
 }
@@ -72,12 +72,10 @@ extension TimeLineMainView:TimeLineMainTableViewCellDelegate {
     }
 }
 
-extension TimeLineMainView:TimeLineMainTableViewSecondCellDelegate{
-    func iconViewButton() {
-        if let delegate = delegate {delegate.touchedIconViewButton()}
+extension TimeLineMainView:TimeLineMainTableViewSecondCellDelegate {
+    func iconViewButton(reviewPostModel: ReviewPostModel) {
+        if let delegate = delegate {delegate.touchedIconViewButton(reviewPostModel: reviewPostModel)}
     }
-    
-    
 }
 // MARK: - method
 extension TimeLineMainView {

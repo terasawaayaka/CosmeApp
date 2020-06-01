@@ -52,19 +52,20 @@ extension MakeDetailViewController :HeaderViewDelegate{
 }
 
 extension MakeDetailViewController:MakeDetailMainViewDelegate{
-    func iconViewButton() {
+    func iconViewButton(makePostModel: MakePostModel) {
         if let uid = Auth.auth().currentUser?.uid {
-            if makePostModel.post_user_id == uid {
-                let myProfileViewController = MyProfileViewController()
-                navigationController?.pushViewController(myProfileViewController, animated: true)
-                animatorManager.navigationType = .slide_push
-            }else{
-                let yourPlofileViewController = YourProfileViewController()
-                navigationController?.pushViewController(yourPlofileViewController, animated: true)
-                animatorManager.navigationType = .slide_push
+                if makePostModel.post_user_id == uid {
+                    let myProfileViewController = MyProfileViewController()
+                    navigationController?.pushViewController(myProfileViewController, animated: true)
+                    animatorManager.navigationType = .slide_push
+                }else{
+                    let yourPlofileViewController = YourProfileViewController()
+                    yourPlofileViewController.makePostModel = makePostModel
+                    navigationController?.pushViewController(yourPlofileViewController, animated: true)
+                    animatorManager.navigationType = .slide_push
+                }
             }
         }
-    }
 }
 // MARK: - method
 extension MakeDetailViewController {
