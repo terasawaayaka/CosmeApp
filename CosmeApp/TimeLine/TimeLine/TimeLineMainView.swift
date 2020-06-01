@@ -23,7 +23,7 @@ class TimeLineMainView: BaseView {
     
     var reviewPostModels : [ReviewPostModel] = [ReviewPostModel]()
     var makePostModels : [MakePostModel] = [MakePostModel]()
-    
+
     @IBOutlet weak var tableView: UITableView!
 }
 // MARK: - Life cycle

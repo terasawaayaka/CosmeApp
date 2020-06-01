@@ -53,10 +53,18 @@ extension MakeDetailViewController :HeaderViewDelegate{
 
 extension MakeDetailViewController:MakeDetailMainViewDelegate{
     func iconViewButton() {
-        //TODO : 自分か他人のprofile画面に遷移
+        if let uid = Auth.auth().currentUser?.uid {
+            if makePostModel.post_user_id == uid {
+                let myProfileViewController = MyProfileViewController()
+                navigationController?.pushViewController(myProfileViewController, animated: true)
+                animatorManager.navigationType = .slide_push
+            }else{
+                let yourPlofileViewController = YourProfileViewController()
+                navigationController?.pushViewController(yourPlofileViewController, animated: true)
+                animatorManager.navigationType = .slide_push
+            }
+        }
     }
-    
-    
 }
 // MARK: - method
 extension MakeDetailViewController {
