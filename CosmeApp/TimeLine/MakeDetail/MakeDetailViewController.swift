@@ -17,6 +17,8 @@ class MakeDetailViewController: BaseViewController {
     var makePostModel : MakePostModel = MakePostModel()
     var reviewPostModel : ReviewPostModel = ReviewPostModel()
     
+    var fromProfile: Bool = false
+    
 }
 // MARK: - Life cycle
 extension MakeDetailViewController {
@@ -39,7 +41,15 @@ extension MakeDetailViewController {
 extension MakeDetailViewController :HeaderViewDelegate{
     func touchedLeftButton(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
-        animatorManager.navigationType = .slide_pop
+        
+        if fromProfile {
+            //プロフィールから戻るとき
+            animatorManager.navigationType = .pop
+        } else {
+            //それ以外
+            animatorManager.navigationType = .slide_pop
+        }
+        
     }
     func touchedRightButton(_ sender: UIButton) {
         let editMakeViewController = EditMakeViewController()
@@ -59,7 +69,14 @@ extension MakeDetailViewController:MakeDetailMainViewDelegate{
 // MARK: - method
 extension MakeDetailViewController {
     func setHeaderView(){
-        headerView.setLeft(text: "＜", fontSize: 18, color: #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1))
+        if fromProfile {
+            //プロフィールから戻るとき
+            headerView.setLeft(text: "閉じる", fontSize: 18, color: #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1))
+        } else {
+            //それ以外
+            headerView.setLeft(text: "＜", fontSize: 18, color: #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1))
+        }
+        
         headerView.setCenter(text: "メイク詳細", fontSize: 20, color: #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1))
         headerView.setRight(text: "編集", fontSize: 18, color: #colorLiteral(red: 1, green: 0.6230913235, blue: 0.7894609614, alpha: 1))
     }
