@@ -55,12 +55,25 @@ extension UserSearchResultMainView {
     }
     func getModel(userModels: [UserModel],text:String!=nil){
         let filterdUserModels = userModels.filter { (userModel) -> Bool in
-            if userModel.nickname == text {
-                return true
-            }else {
+            
+            if let text = text {
+                if let name = userModel.nickname {
+                    return name.contains(text)
+                    
+                    
+                } else {
+                    return false
+                }
+            } else {
                 return false
             }
         }
+            //            if userModel.nickname == text {
+            //                return true
+            //            }else {
+            //                return false
+            //            }
+            //        }
         self.userModels = filterdUserModels
         userTableView.reloadData()
     }

@@ -16,9 +16,9 @@ enum ActivityType {
 
 import PGFramework
 protocol ActivityMainViewDelegate: NSObjectProtocol {
-    func touchedProfilePageButton()
+    func touchedProfilePageButton(indexPath: IndexPath)
     func touchedPostPageButton()
-    func touchedSecondProfileButton()
+    func touchedSecondProfileButton(indexPath: IndexPath)
     func touchedSecondPostPageButton()
     func touchedThirdProfileButton()
 }
@@ -58,11 +58,13 @@ extension ActivityMainView:UITableViewDataSource {
              ActivityFollowTableViewCell else {return UITableViewCell()}
         switch activityType {
         case .good:
-            cell.updateCell(noticeModel: noticeModels[0])
+            cell.updateCell(noticeModel: noticeModels[indexPath.row])
+            cell.indexPath = indexPath
             cell.delegate = self
             return cell
         case .comment:
             secondCell.updateCell(noticeModel: noticeModels[indexPath.row])
+            secondCell.indexPath = indexPath
             secondCell.delegate = self
             return secondCell
         case .follow:
@@ -75,9 +77,9 @@ extension ActivityMainView:UITableViewDataSource {
 }
 
 extension ActivityMainView: ActivityGoodTableViewCellDelegate {
-    func touchedProfilePageButton() {
+    func touchedProfilePageButton(indexPath:IndexPath) {
         if let delegate = delegate {
-            delegate.touchedProfilePageButton()
+            delegate.touchedProfilePageButton(indexPath: indexPath)
         }
     }
     func touchedPostPageButton() {
@@ -88,9 +90,9 @@ extension ActivityMainView: ActivityGoodTableViewCellDelegate {
 }
 
 extension ActivityMainView: ActivityCommentTableViewCellDelegate {
-    func touchedSecondProfileButton() {
+    func touchedSecondProfileButton(indexPath: IndexPath) {
         if let delegate = delegate {
-            delegate.touchedSecondProfileButton()
+            delegate.touchedSecondProfileButton(indexPath: indexPath)
         }
     }
     func touchedSecondPostPageButton() {

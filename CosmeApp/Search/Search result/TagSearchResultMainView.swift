@@ -57,12 +57,14 @@ extension TagSearchResultMainView {
     }
     func getReviewPostModel(reviewPostModels: [ReviewPostModel],text: String?=nil) {
         let filterdReviewPostModels = reviewPostModels.filter { (reviewPostModel) -> Bool in
-                        if reviewPostModel.tag == text {
-                            return true
-                        }else {
-                            return false
-                        }
-                    }
+            
+            if let text = text {
+                return reviewPostModel.tag.contains(text)
+            } else {
+                return false
+            }
+        }
+            
         self.reviewPostModels = filterdReviewPostModels
         tagCollectionView.reloadData()
     }

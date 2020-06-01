@@ -44,6 +44,7 @@ extension MyProfileViewController :MyProfileMainViewDelegate{
     func didSelectItemAt(indexPath: IndexPath) {
         let makeDetailViewController = MakeDetailViewController()
         makeDetailViewController.makePostModel = makePostModels[indexPath.row]
+        makeDetailViewController.fromProfile = true
         navigationController?.pushViewController(makeDetailViewController, animated: true)
         animatorManager.navigationType = .push
     }
