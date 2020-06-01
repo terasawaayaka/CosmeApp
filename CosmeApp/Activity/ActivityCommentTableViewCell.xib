@@ -39,7 +39,9 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="38r-7m-o5D" secondAttribute="height" multiplier="1:1" id="PMi-Hl-o3Q"/>
                                 </constraints>
-                                <state key="normal" title="+"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="touchedSecondProfilePageButton:" destination="K2T-EE-7HC" eventType="touchUpInside" id="9b5-Hg-TeU"/>
                                 </connections>

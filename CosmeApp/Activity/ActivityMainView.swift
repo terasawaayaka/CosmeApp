@@ -74,6 +74,12 @@ extension ActivityMainView:UITableViewDataSource {
             break
         }
     }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCell.EditingStyle.delete {
+            noticeModels.remove(at: indexPath.row)
+            tableView.reloadData()
+        }
+    }
 }
 
 extension ActivityMainView: ActivityGoodTableViewCellDelegate {

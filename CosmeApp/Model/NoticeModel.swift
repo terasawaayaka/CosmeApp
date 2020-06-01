@@ -15,9 +15,10 @@ class NoticeModel {
     fileprivate static let PATH: String = "notice"
     var id: String = String()
     var comment: String = String() //コメント
-    var good: String = String() //いいね
+//    var good: String = String() //いいね
     var follow: String = String() //フォロー
     var image_paths: [String] = [String]()
+    var noticeType: String = String()
     
     //ユーザーの情報
     var post_user_name: String = String()
@@ -30,7 +31,7 @@ extension NoticeModel {
         let model: NoticeModel = NoticeModel()
         if let id = data["id"] as? String {model.id = id}
         if let comment = data["comment"] as? String {model.comment = comment}
-        if let good = data["good"] as? String {model.good = good}
+        if let noticeType = data["noticeType"] as? String {model.noticeType = noticeType}
         if let follow = data["follow"] as? String {model.follow = follow}
         if let image_paths = data["image_paths"] as? [String] {model.image_paths = image_paths}
         if let post_user_id = data["post_user_id"] as? String {model.post_user_id = post_user_id}
@@ -44,7 +45,7 @@ extension NoticeModel {
         var parameter: [String: Any] = [:]
         parameter["id"] = request.id
         parameter["comment"] = request.comment
-        parameter["good"] = request.good
+        parameter["noticeType"] = request.noticeType
         parameter["follow"] = request.follow
         parameter["image_paths"] = request.image_paths
         parameter["post_user_id"] = request.post_user_id
