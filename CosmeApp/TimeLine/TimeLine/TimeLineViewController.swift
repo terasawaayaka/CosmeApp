@@ -17,6 +17,8 @@ class TimeLineViewController: BaseViewController {
     
     var reviewPostModels : [ReviewPostModel] = [ReviewPostModel]()
     var makePostModels : [MakePostModel] = [MakePostModel]()
+    var reviewPostModel : ReviewPostModel = ReviewPostModel()
+    
 }
 // MARK: - Life cycle
 extension TimeLineViewController {
@@ -47,12 +49,19 @@ extension TimeLineViewController :TimeLineMainViewDelegate {
         animatorManager.navigationType = .slide_push
     }
     
-    
     func touchedIconViewButton() {
-        //TODO : 自分か他人のprofile画面に遷移
+        if let uid = Auth.auth().currentUser?.uid {
+            if reviewPostModel.post_user_id == uid {
+                let myProfileViewController = MyProfileViewController()
+                navigationController?.pushViewController(myProfileViewController, animated: true)
+                animatorManager.navigationType = .slide_push
+            }else{
+                let yourPlofileViewController = YourProfileViewController()
+                navigationController?.pushViewController(yourPlofileViewController, animated: true)
+                animatorManager.navigationType = .slide_push
+            }
+        }
     }
-    
-    
     func didSelectRowAt(indexPath:IndexPath) {
         let reviewDetailViewController = ReviewDetailViewController()
         reviewDetailViewController.reviewPostModel = reviewPostModels[indexPath.row - 1]
@@ -65,8 +74,6 @@ extension TimeLineViewController {
     func setDelegate(){
         mainView.delegate = self
     }
-    
-    
     func reviewGetModel(){
         ReviewPostModel.reads { (reviewPostModels) in
             for reviewPostModel in reviewPostModels {

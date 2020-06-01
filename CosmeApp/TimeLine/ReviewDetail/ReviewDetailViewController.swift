@@ -11,7 +11,7 @@ import UIKit
 import PGFramework
 import  FirebaseAuth
 // MARK: - Property
-class ReviewDetailViewController: BaseViewController {
+class ReviewDetailViewController: BaseViewController, UITableViewDelegate {
     
     var commentPostModel : CommentPostModel = CommentPostModel()
     var commentPostModels : [CommentPostModel] = [CommentPostModel]()
@@ -83,14 +83,34 @@ extension ReviewDetailViewController:ReviewDetailMainViewDelegate {
             self.mainView.commentTextField.text = ""
         }
     }
-    
     func iconViewButton2() {
-        //TODO : 自分か他人のprofile画面に遷移
+        if let uid = Auth.auth().currentUser?.uid {
+            if reviewPostModel.post_user_id == uid {
+                let myProfileViewController = MyProfileViewController()
+                navigationController?.pushViewController(myProfileViewController, animated: true)
+                animatorManager.navigationType = .slide_push
+            }else{
+                let yourPlofileViewController = YourProfileViewController()
+                navigationController?.pushViewController(yourPlofileViewController, animated: true)
+                animatorManager.navigationType = .slide_push
+            }
+        }
     }
     
     func touchedIconViewButton() {
-        //TODO : 自分か他人のprofile画面に遷移
+        if let uid = Auth.auth().currentUser?.uid {
+            if commentPostModel.post_user_id == uid {
+                let myProfileViewController = MyProfileViewController()
+                navigationController?.pushViewController(myProfileViewController, animated: true)
+                animatorManager.navigationType = .slide_push
+            }else{
+                let yourPlofileViewController = YourProfileViewController()
+                navigationController?.pushViewController(yourPlofileViewController, animated: true)
+                animatorManager.navigationType = .slide_push
+            }
+        }
     }
+    
 }
 // MARK: - method
 extension ReviewDetailViewController {
@@ -106,6 +126,7 @@ extension ReviewDetailViewController {
     func setDelegate(){
         headerView.delegate = self
         mainView.delegate = self
+        mainView.tableView.delegate = self
     }
     
     
