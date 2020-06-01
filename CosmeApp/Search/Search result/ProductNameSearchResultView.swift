@@ -59,14 +59,16 @@ extension ProductNameSearchResultView {
     }
     func getReviewPostModel(reviewPostModels: [ReviewPostModel],text: String!=nil){
         let filterdReviewPostModels = reviewPostModels.filter { (reviewPostModel) -> Bool in
-                          if reviewPostModel.title == text {
-                              return true
-                          }else {
-                              return false
-                          }
-                      }
-    self.reviewPostModels = filterdReviewPostModels
-    productNameCollectionView.reloadData()
+            
+            if let text = text {
+                return reviewPostModel.title.contains(text)
+            } else {
+                return false
+            }
+        }
+
+        self.reviewPostModels = filterdReviewPostModels
+        productNameCollectionView.reloadData()
     }
 }
 
