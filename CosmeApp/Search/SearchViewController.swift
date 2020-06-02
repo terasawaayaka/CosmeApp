@@ -9,6 +9,7 @@
 import UIKit
 
 import PGFramework
+import FirebaseAuth
 // MARK: - Property
 class SearchViewController: BaseViewController {
     @IBOutlet weak var searchTextView: SearchTextView!
@@ -70,14 +71,16 @@ extension SearchViewController: SearchMainViewDelegate {
     
    
     //タグとかユーザーとかのセルをタッチしたら詳細画面へ遷移する
-    func touchedUserCellButton() {
+    func touchedUserCellButton(userModel: UserModel) {
         let searchUserResultViewController = SearchUserSelectResultViewController()
+        searchUserResultViewController.userModel = userModel
         navigationController?.pushViewController(searchUserResultViewController, animated: true)
         animatorManager.navigationType = .slide_push
     }
     
-    func touchedProductNAmeCellButton() {
+    func touchedProductNAmeCellButton(reviewPostModel: ReviewPostModel) {
         let reviewDatailViewController = ReviewDetailViewController()
+        reviewDatailViewController.reviewPostModel = reviewPostModel
         navigationController?.pushViewController(reviewDatailViewController, animated: true)
         animatorManager.navigationType = .slide_push
     }
