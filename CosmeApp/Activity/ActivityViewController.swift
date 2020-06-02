@@ -40,9 +40,9 @@ extension ActivityViewController:ActivityMainViewDelegate {
         animatorManager.navigationType = .slide_push
     }
     
-    func touchedPostPageButton() {
+    func touchedPostPageButton(indexPath: IndexPath) {
         let reviewDetailViewController = ReviewDetailViewController()
-//        reviewDetailViewController.noticeModel = noticeModels[]
+        reviewDetailViewController.noticeModel = noticeModels[indexPath.row]
         navigationController?.pushViewController(reviewDetailViewController, animated: true)
         animatorManager.navigationType = .slide_push
     }

@@ -65,7 +65,14 @@ class ReviewDetailMainView: BaseView, UIScrollViewDelegate {
     }
     @IBAction func goodButton(_ sender: UIButton) {
         delegate?.goodButton(reviewPostModel: reviewPostModel)
+        UIView.animate(withDuration: 0.5) {
+            self.goodButton.transform = CGAffineTransform(rotationAngle: CGFloat.pi/180*180)
+            self.goodButton.transform = CGAffineTransform(rotationAngle: CGFloat.pi/180*360)
+        }
     }
+    @IBOutlet weak var goodButton: UIButton!
+    
+    var isGoodButtonTouched: Bool = false
 }
 // MARK: - Life cycle
 extension ReviewDetailMainView {
@@ -121,6 +128,15 @@ extension ReviewDetailMainView {
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         if fmod(imageScrollView.contentOffset.x, imageScrollView.frame.maxX) == 0 {
             pageControl.currentPage = Int(scrollView.contentOffset.x / imageScrollView.frame.maxX)
+        }
+    }
+    func updateGood() {
+        if isGoodButtonTouched {
+           let image = UIImage(named: "good")
+            goodButton.setImage(image, for: .normal)
+        } else {
+            let image = UIImage(named: "notgood")
+            goodButton.setImage(image, for: .normal)
         }
     }
 }

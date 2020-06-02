@@ -11,7 +11,7 @@ import UIKit
 import PGFramework
 protocol ActivityGoodTableViewCellDelegate: NSObjectProtocol{
     func touchedProfilePageButton(indexPath: IndexPath)
-    func touchedPostPageButton()
+    func touchedPostPageButton(indexPath: IndexPath)
 }
 extension ActivityGoodTableViewCellDelegate {
 }
@@ -29,7 +29,7 @@ class ActivityGoodTableViewCell: BaseTableViewCell {
     
     @IBAction func touchedPostPageButton(_ sender: UIButton) {
         if let delegate = delegate {
-            delegate.touchedPostPageButton()
+            delegate.touchedPostPageButton(indexPath: indexPath)
         }
     }
     @IBOutlet weak var userNameLabel: UILabel!
