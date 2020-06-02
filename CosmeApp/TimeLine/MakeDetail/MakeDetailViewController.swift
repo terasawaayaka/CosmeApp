@@ -66,11 +66,13 @@ extension MakeDetailViewController:MakeDetailMainViewDelegate{
         if let uid = Auth.auth().currentUser?.uid {
                 if makePostModel.post_user_id == uid {
                     let myProfileViewController = MyProfileViewController()
+                    myProfileViewController.fromPost = true
                     navigationController?.pushViewController(myProfileViewController, animated: true)
                     animatorManager.navigationType = .slide_push
                 }else{
                     let yourPlofileViewController = YourProfileViewController()
                     yourPlofileViewController.makePostModel = makePostModel
+                    yourPlofileViewController.fromPost = true
                     navigationController?.pushViewController(yourPlofileViewController, animated: true)
                     animatorManager.navigationType = .slide_push
                 }
@@ -102,6 +104,7 @@ extension MakeDetailViewController {
     func makeGetModel(){
         MakePostModel.readAt(id: makePostModel.id, success: { (makePostModel) in
             self.makePostModel = makePostModel
+            self.mainView.makeGetModel(makePostModel: makePostModel)
         }) {
             self.navigationController?.popViewController(animated: true)
             self.animatorManager.navigationType = .slide_pop

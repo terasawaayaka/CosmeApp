@@ -58,11 +58,13 @@ extension TimeLineViewController :TimeLineMainViewDelegate {
         if let uid = Auth.auth().currentUser?.uid {
             if reviewPostModel.post_user_id == uid {
                 let myProfileViewController = MyProfileViewController()
+                myProfileViewController.fromPost = true
                 navigationController?.pushViewController(myProfileViewController, animated: true)
                 animatorManager.navigationType = .slide_push
             }else{
                 let yourPlofileViewController = YourProfileViewController()
                 yourPlofileViewController.reviewPostModel = reviewPostModel
+                yourPlofileViewController.fromPost = true
                 navigationController?.pushViewController(yourPlofileViewController, animated: true)
                 animatorManager.navigationType = .slide_push
             }

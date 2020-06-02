@@ -12,8 +12,8 @@ import PGFramework
 import FirebaseAuth
 
 protocol ReviewDetailMainViewDelegate: NSObjectProtocol{
-    func touchedIconViewButton(reviewPostModel:ReviewPostModel)
-    func iconViewButton2(commentPostModel: CommentPostModel)
+    func iconViewButton(reviewPostModel:ReviewPostModel)
+    func commentIconViewCutton(commentPostModel:CommentPostModel)
     func commentSendButton()
     func goodButton(reviewPostModel: ReviewPostModel)
 }
@@ -57,7 +57,7 @@ class ReviewDetailMainView: BaseView, UIScrollViewDelegate {
     
     //button
     @IBAction func iconViewButton(_ sender: UIButton) {
-        if let delegate = delegate {delegate.iconViewButton2(commentPostModel: commentPostModel)}
+        if let delegate = delegate {delegate.iconViewButton(reviewPostModel: reviewPostModel)}
     }
     @IBAction func commentSendButton(_ sender: UIButton) {
         if let delegate = delegate {delegate.commentSendButton()}
@@ -99,10 +99,10 @@ extension ReviewDetailMainView :UITableViewDataSource{
     }
 }
 
-extension ReviewDetailMainView:ReviewDetailMainTableViewCellDelegate{
-    func iconViewButton(commentPostModel: CommentPostModel) {
-        if let delegate = delegate {delegate.iconViewButton2(commentPostModel: commentPostModel)}
-        }
+extension ReviewDetailMainView:ReviewDetailMainTableViewCellDelegate {
+    func commentIconViewButton(commentPostModel: CommentPostModel) {
+        if let delegate = delegate {delegate.commentIconViewCutton(commentPostModel: commentPostModel)}
+    }
 }
 
 // MARK: - method
@@ -115,6 +115,10 @@ extension ReviewDetailMainView {
         self.commentPostModels = commentPostModels
         tableView.reloadData()
     }
+    func reviewGetModel(reviewPostModel:ReviewPostModel){
+        self.reviewPostModel = reviewPostModel
+    }
+    
     func setLayout(){
         iconView.layer.cornerRadius = iconView.frame.width / 2
     }

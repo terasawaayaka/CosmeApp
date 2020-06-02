@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -186,8 +186,8 @@
             <constraints>
                 <constraint firstItem="ZiK-Ht-bai" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="27E-nl-B0e"/>
                 <constraint firstItem="ZiK-Ht-bai" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="86B-cp-ace"/>
-                <constraint firstItem="ZiK-Ht-bai" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Cd3-TN-4Ss"/>
                 <constraint firstItem="ZiK-Ht-bai" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="egQ-h0-Vek"/>
+                <constraint firstItem="ZiK-Ht-bai" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="wFR-GI-xxK"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="-5859.420289855073" y="21.428571428571427"/>

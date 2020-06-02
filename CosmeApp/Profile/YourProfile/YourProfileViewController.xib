@@ -2,13 +2,14 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YourProfileViewController" customModule="CosmeApp" customModuleProvider="target">
             <connections>
+                <outlet property="headerView" destination="BDn-UV-5dM" id="NMH-2Q-Cmt"/>
                 <outlet property="mainView" destination="olL-AF-seX" id="frj-vW-hst"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -19,15 +20,25 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="olL-AF-seX" customClass="YourProfileMainView" customModule="CosmeApp" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <rect key="frame" x="0.0" y="92" width="414" height="770"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BDn-UV-5dM" customClass="HeaderView" customModule="PGFramework">
+                    <rect key="frame" x="0.0" y="44" width="414" height="48"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="xoM-rB-xzt"/>
+                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
+                <constraint firstItem="BDn-UV-5dM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="8e7-1E-YH4"/>
                 <constraint firstItem="olL-AF-seX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Pgv-wi-b2X"/>
-                <constraint firstItem="olL-AF-seX" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Ufu-vP-RSK"/>
+                <constraint firstItem="olL-AF-seX" firstAttribute="top" secondItem="BDn-UV-5dM" secondAttribute="bottom" id="QOm-EV-9Y6"/>
+                <constraint firstItem="BDn-UV-5dM" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="edE-qO-8SG"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="olL-AF-seX" secondAttribute="bottom" id="fVe-KQ-f5q"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="BDn-UV-5dM" secondAttribute="trailing" id="lcL-3O-BMY"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="olL-AF-seX" secondAttribute="trailing" id="qpA-zx-pbZ"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
