@@ -9,6 +9,7 @@
 import UIKit
 import PGFramework
 protocol GenreCollectionViewDelegate: NSObjectProtocol{
+    func touchedEyeShadowButton()
 }
 extension GenreCollectionViewDelegate {
 }
@@ -88,6 +89,14 @@ extension GenreCollectionView :UICollectionViewDataSource{
             return cell
         }
     }
+    
+}
+
+extension GenreCollectionView :GenreCollectionViewCellDelegate{
+    func touchedEyeShadowButton() {
+        if let delegate = delegate{delegate.touchedEyeShadowButton()}
+    }
+    
     
 }
 // MARK: - method

@@ -41,6 +41,12 @@ extension MyProfileViewController {
 }
 // MARK: - Protocol
 extension MyProfileViewController :MyProfileMainViewDelegate{
+    func touchedEyeShadowButton() {
+        let searchGenreCollectionViewController = SerchGenreViewController()
+        navigationController?.pushViewController(searchGenreCollectionViewController, animated: false)
+    
+    }
+    
     func didSelectItemAt(indexPath: IndexPath) {
         let makeDetailViewController = MakeDetailViewController()
         makeDetailViewController.makePostModel = makePostModels[indexPath.row]

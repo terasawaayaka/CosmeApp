@@ -9,6 +9,7 @@
 import UIKit
 import PGFramework
 protocol ScrollMainViewDelegate: NSObjectProtocol{
+    func touchedEyeShadowButton()
 }
 extension ScrollMainViewDelegate {
 }
@@ -27,7 +28,10 @@ extension ScrollMainView {
     }
 }
 // MARK: - Protocol
-extension ScrollMainView {
+extension ScrollMainView:GenreCollectionViewDelegate{
+    func touchedEyeShadowButton() {
+        if let delegate = delegate{delegate.touchedEyeShadowButton()}
+    }
 }
 // MARK: - method
 extension ScrollMainView {
