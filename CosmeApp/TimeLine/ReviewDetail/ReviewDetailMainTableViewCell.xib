@@ -23,7 +23,7 @@
                             <constraint firstAttribute="width" secondItem="q5U-Kp-gSZ" secondAttribute="height" multiplier="1:1" id="lzB-RC-6h1"/>
                         </constraints>
                         <connections>
-                            <action selector="iconViewButton:" destination="1wg-iN-cef" eventType="touchUpInside" id="kab-ds-FbP"/>
+                            <action selector="commentIconViewButton:" destination="1wg-iN-cef" eventType="touchUpInside" id="cVK-y4-8Uq"/>
                         </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uG1-hw-1Ya">

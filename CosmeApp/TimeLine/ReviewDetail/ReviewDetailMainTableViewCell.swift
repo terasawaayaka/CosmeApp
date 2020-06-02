@@ -9,7 +9,7 @@
 import UIKit
 import PGFramework
 protocol ReviewDetailMainTableViewCellDelegate: NSObjectProtocol{
-    func iconViewButton(commentPostModel:CommentPostModel)
+    func commentIconViewButton(commentPostModel:CommentPostModel)
 }
 extension ReviewDetailMainTableViewCellDelegate {
 }
@@ -19,8 +19,9 @@ class ReviewDetailMainTableViewCell: BaseTableViewCell {
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var iconView: UIButton!
     @IBOutlet weak var descriptionLabel: UILabel!
-    @IBAction func iconViewButton(_ sender: UIButton) {
-        if let delegate = delegate {delegate.iconViewButton(commentPostModel: commentPostModel)}
+
+    @IBAction func commentIconViewButton(_ sender: UIButton) {
+        if let delegate = delegate {delegate.commentIconViewButton(commentPostModel: commentPostModel)}
     }
     
     var reviewPostModel : ReviewPostModel = ReviewPostModel()

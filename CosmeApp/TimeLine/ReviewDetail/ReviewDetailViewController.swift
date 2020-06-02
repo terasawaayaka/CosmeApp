@@ -59,35 +59,41 @@ extension ReviewDetailViewController :HeaderViewDelegate{
 }
 
 extension ReviewDetailViewController:ReviewDetailMainViewDelegate {
-    func iconViewButton2(commentPostModel: CommentPostModel) {
+    func iconViewButton(reviewPostModel: ReviewPostModel) {
         if let uid = Auth.auth().currentUser?.uid {
-            if commentPostModel.post_user_id == uid {
+            if reviewPostModel.post_user_id == uid {
                 let myProfileViewController = MyProfileViewController()
+                myProfileViewController.fromPost = true
                 navigationController?.pushViewController(myProfileViewController, animated: true)
                 animatorManager.navigationType = .slide_push
             }else{
                 let yourPlofileViewController = YourProfileViewController()
-                yourPlofileViewController.commentPostModel = commentPostModel
+                yourPlofileViewController.reviewPostModel = reviewPostModel
+                yourPlofileViewController.fromPost = true
                 navigationController?.pushViewController(yourPlofileViewController, animated: true)
                 animatorManager.navigationType = .slide_push
             }
         }
     }
     
-    func touchedIconViewButton(reviewPostModel: ReviewPostModel) {
+    func commentIconViewCutton(commentPostModel: CommentPostModel) {
         if let uid = Auth.auth().currentUser?.uid {
-                if reviewPostModel.post_user_id == uid {
+                if commentPostModel.post_user_id == uid {
                     let myProfileViewController = MyProfileViewController()
+                    myProfileViewController.fromPost = true
                     navigationController?.pushViewController(myProfileViewController, animated: true)
                     animatorManager.navigationType = .slide_push
                 }else{
                     let yourPlofileViewController = YourProfileViewController()
-                    yourPlofileViewController.reviewPostModel = reviewPostModel
+                    yourPlofileViewController.commentPostModel = commentPostModel
+                    yourPlofileViewController.fromPost = true
                     navigationController?.pushViewController(yourPlofileViewController, animated: true)
                     animatorManager.navigationType = .slide_push
                 }
             }
         }
+    
+  
     func commentSendButton() {
         activityType = ActivityType.comment
         let noticeModel: NoticeModel = NoticeModel()
@@ -168,6 +174,7 @@ extension ReviewDetailViewController {
     func reviewGetModel(){
         ReviewPostModel.readAt(id: reviewPostModel.id, success: { (reviewPostModel) in
             self.reviewPostModel = reviewPostModel
+            self.mainView.reviewGetModel(reviewPostModel: reviewPostModel)
         }) {
             self.navigationController?.popViewController(animated: true)
             self.animatorManager.navigationType = .slide_pop

@@ -58,4 +58,7 @@ extension MakeDetailMainView {
     func setLayout(){
         iconView.layer.cornerRadius = iconView.frame.width / 2
     }
+    func makeGetModel(makePostModel:MakePostModel){
+        self.makePostModel = makePostModel
+    }
 }

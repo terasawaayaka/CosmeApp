@@ -19,12 +19,16 @@ class MyProfileViewController: BaseViewController{
     
     //Outlet
     @IBOutlet weak var mainView: MyProfileMainView!
+    @IBOutlet weak var headerView: HeaderView!
+    
+    var fromPost: Bool = false
 }
 // MARK: - Life cycle
 extension MyProfileViewController {
     override func loadView() {
         super.loadView()
         setDelegate()
+        setHeaderView()
         
     }
     override func viewDidLoad() {
@@ -78,11 +82,32 @@ extension MyProfileViewController :MyProfileMainViewDelegate{
     }
 }
 
+extension MyProfileViewController:HeaderViewDelegate{
+    func touchedLeftButton(_ sender: UIButton) {
+        if fromPost{
+        navigationController?.popViewController(animated: true)
+        animatorManager.navigationType = .slide_pop
+        }
+    }
+}
+
 // MARK: - method
 extension MyProfileViewController {
     func setDelegate(){
         mainView.delegate = self
+        headerView.delegate = self
     }
+    
+    func setHeaderView(){
+        if fromPost{
+        headerView.setCenter(text: "- profile -", fontSize: 20, color: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))
+        headerView.setLeft(text: "戻る", fontSize: 18, color: #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1))
+        }else{
+            headerView.setCenter(text: "- profile -", fontSize: 20, color: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))
+            headerView.setLeft(text: "")
+        }
+    }
+    
     func getModel() {
         UserModel.readMe { (userModel) in
             if let icon = userModel.photo_path {
