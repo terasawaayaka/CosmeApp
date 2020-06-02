@@ -13,6 +13,7 @@ protocol MyProfileMainViewDelegate: NSObjectProtocol{
     func touchedGoodButton()
     func touchedBookMarkButton()
     func touchedGenreButton()
+    func touchedEyeShadowButton()
     
     func didSelectItemAt(indexPath: IndexPath)
 }
@@ -76,11 +77,18 @@ extension MyProfileMainView: UICollectionViewDelegate{
         if let delegate = delegate{delegate.didSelectItemAt(indexPath: indexPath)}
     }
 }
+extension MyProfileMainView:ScrollMainViewDelegate{
+    func touchedEyeShadowButton() {
+        if let delegate = delegate{delegate.touchedEyeShadowButton()}
+    }
+    
+}
 // MARK: - method
 extension MyProfileMainView {
     func setDelegate() {
         todayCollectionView.dataSource = self
         todayCollectionView.delegate = self
+        scrollMainView.delegate = self
     }
     func getModel(userModel: UserModel) {
         if userModel.nickname == "" {

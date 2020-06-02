@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="AYd-ZK-8L3" customClass="SearchGenreCollectionViewCell" customModule="CosmeApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="115" height="115"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="a81-uZ-sNN">
+                <rect key="frame" x="0.0" y="0.0" width="115" height="115"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jwo-fK-gU8">
+                        <rect key="frame" x="0.0" y="0.0" width="115" height="115"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Jwo-fK-gU8" secondAttribute="height" multiplier="1:1" id="Txd-3y-Hnl"/>
+                            <constraint firstAttribute="width" constant="115" id="U0A-eA-Ive"/>
+                            <constraint firstAttribute="height" constant="115" id="h04-UQ-bch"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Jwo-fK-gU8" firstAttribute="top" secondItem="a81-uZ-sNN" secondAttribute="top" id="Fcz-TI-e3e"/>
+                    <constraint firstItem="Jwo-fK-gU8" firstAttribute="leading" secondItem="a81-uZ-sNN" secondAttribute="leading" id="PUn-yz-PKp"/>
+                    <constraint firstAttribute="bottom" secondItem="Jwo-fK-gU8" secondAttribute="bottom" id="x9X-hn-bte"/>
+                    <constraint firstAttribute="trailing" secondItem="Jwo-fK-gU8" secondAttribute="trailing" id="ztZ-fn-RJ6"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="115" height="115"/>
+            <point key="canvasLocation" x="-115.21739130434783" y="-60.602678571428569"/>
+        </collectionViewCell>
+    </objects>
+</document>

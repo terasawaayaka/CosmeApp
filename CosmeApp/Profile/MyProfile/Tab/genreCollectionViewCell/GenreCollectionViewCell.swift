@@ -9,12 +9,17 @@
 import UIKit
 import PGFramework
 protocol GenreCollectionViewCellDelegate: NSObjectProtocol{
+    func touchedEyeShadowButton()
 }
 extension GenreCollectionViewCellDelegate {
 }
 // MARK: - Property
 class GenreCollectionViewCell: BaseCollectionViewCell {
     weak var delegate: GenreCollectionViewCellDelegate? = nil
+
+    @IBAction func touchedEyeShadowButton(_ sender: UIButton) {
+        if let delegate = delegate{delegate.touchedEyeShadowButton()}
+    }
 }
 // MARK: - Life cycle
 extension GenreCollectionViewCell {
