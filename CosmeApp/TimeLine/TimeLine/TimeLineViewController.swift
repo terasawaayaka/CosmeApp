@@ -19,6 +19,7 @@ class TimeLineViewController: BaseViewController {
     var makePostModels : [MakePostModel] = [MakePostModel]()
     var reviewPostModel : ReviewPostModel = ReviewPostModel()
     
+    var activityType: ActivityType = ActivityType.comment
 }
 // MARK: - Life cycle
 extension TimeLineViewController {
@@ -43,7 +44,11 @@ extension TimeLineViewController {
 // MARK: - Protocol
 extension TimeLineViewController :TimeLineMainViewDelegate {
     func goodButton(reviewPostModel: ReviewPostModel) {
-        let noticeModel = NoticeModel()
+        activityType = ActivityType.good
+        let noticeModel : NoticeModel = NoticeModel()
+        if let uid = Auth.auth().currentUser?.uid {
+            noticeModel.post_user_id = uid
+        }
         noticeModel.noticeType = ActivityType.good.rawValue
         NoticeModel.create(request: noticeModel) {
         }
