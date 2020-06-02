@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,17 +25,17 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="メールアドレス" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G2K-U7-W2Y">
-                    <rect key="frame" x="100" y="250" width="214" height="34"/>
+                    <rect key="frame" x="83" y="250" width="248" height="34"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="パスワード" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rf7-GM-e4g">
-                    <rect key="frame" x="100" y="304" width="214" height="34"/>
+                    <rect key="frame" x="83" y="304" width="248" height="34"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HXD-Dm-j15">
-                    <rect key="frame" x="170" y="388" width="74" height="30"/>
+                    <rect key="frame" x="165.5" y="388" width="83" height="30"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal" title="　SignIn　">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -57,18 +57,16 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qeW-6T-2tD" secondAttribute="trailing" constant="100" id="3Uk-pn-UDr"/>
                 <constraint firstItem="rf7-GM-e4g" firstAttribute="top" secondItem="G2K-U7-W2Y" secondAttribute="bottom" constant="20" id="4lT-CI-hMq"/>
                 <constraint firstItem="G2K-U7-W2Y" firstAttribute="top" secondItem="fsH-ff-JA3" secondAttribute="bottom" constant="70" id="CoW-w7-FJ6"/>
-                <constraint firstItem="G2K-U7-W2Y" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="100" id="HNn-Dd-oXo"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="qeW-6T-2tD" secondAttribute="bottom" constant="334" id="QdG-sv-gLL"/>
                 <constraint firstItem="HXD-Dm-j15" firstAttribute="top" secondItem="rf7-GM-e4g" secondAttribute="bottom" constant="50" id="U3Z-8f-Vfh"/>
                 <constraint firstItem="HXD-Dm-j15" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Xsq-iD-jkj"/>
                 <constraint firstItem="rf7-GM-e4g" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="aXL-au-bUk"/>
                 <constraint firstItem="G2K-U7-W2Y" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ej2-if-D5v"/>
-                <constraint firstItem="rf7-GM-e4g" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="100" id="foi-wQ-Qjg"/>
+                <constraint firstItem="G2K-U7-W2Y" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.6" id="fqs-Zq-z9y"/>
+                <constraint firstItem="HXD-Dm-j15" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.2" id="ilS-RZ-0uI"/>
                 <constraint firstItem="fsH-ff-JA3" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="kcX-8r-Ayv"/>
                 <constraint firstItem="fsH-ff-JA3" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="kmX-Aj-YRj"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rf7-GM-e4g" secondAttribute="trailing" constant="100" id="l4s-lM-yA5"/>
                 <constraint firstItem="qeW-6T-2tD" firstAttribute="top" secondItem="HXD-Dm-j15" secondAttribute="bottom" constant="80" id="m0Z-2O-AhA"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="G2K-U7-W2Y" secondAttribute="trailing" constant="100" id="sqJ-zT-HIs"/>
+                <constraint firstItem="rf7-GM-e4g" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.6" id="tEd-oX-anS"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="139" y="108"/>

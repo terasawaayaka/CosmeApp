@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,22 +20,22 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ユーザーネーム" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j4f-2r-7xw">
-                    <rect key="frame" x="100" y="250" width="214" height="34"/>
+                    <rect key="frame" x="83" y="250" width="248" height="34"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="メールアドレス" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sSl-sd-CEe">
-                    <rect key="frame" x="100" y="304" width="214" height="34"/>
+                    <rect key="frame" x="83" y="304" width="248" height="34"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="パスワード" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a5J-mo-0dR">
-                    <rect key="frame" x="100" y="358" width="214" height="34"/>
+                    <rect key="frame" x="83" y="358" width="248" height="34"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20j-KU-MpK">
-                    <rect key="frame" x="166.5" y="442" width="81" height="30"/>
+                    <rect key="frame" x="165.5" y="442" width="83" height="30"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal" title="　SignUp　">
                         <color key="titleColor" red="1" green="0.82663194559999997" blue="0.99836927620000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -61,22 +61,20 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
                 <constraint firstItem="a5J-mo-0dR" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="64r-IY-E7W"/>
+                <constraint firstItem="20j-KU-MpK" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.2" id="C0k-ZO-ZKv"/>
+                <constraint firstItem="j4f-2r-7xw" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.6" id="ChR-tQ-OOP"/>
                 <constraint firstItem="YDO-rl-ifM" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="F3B-8J-G4r"/>
                 <constraint firstItem="20j-KU-MpK" firstAttribute="top" secondItem="a5J-mo-0dR" secondAttribute="bottom" constant="50" id="J8V-8G-eWY"/>
                 <constraint firstItem="sSl-sd-CEe" firstAttribute="top" secondItem="j4f-2r-7xw" secondAttribute="bottom" constant="20" id="J9x-jg-6fe"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="NZj-bJ-06y" secondAttribute="trailing" constant="100" id="QVA-VE-huC"/>
+                <constraint firstItem="a5J-mo-0dR" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.6" id="TE0-rO-7ak"/>
                 <constraint firstItem="j4f-2r-7xw" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="X7G-rL-jv9"/>
-                <constraint firstItem="a5J-mo-0dR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="100" id="XWv-Ik-qU2"/>
                 <constraint firstItem="sSl-sd-CEe" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Y4Q-V9-gg8"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="sSl-sd-CEe" secondAttribute="trailing" constant="100" id="ZgJ-Ff-KXX"/>
                 <constraint firstItem="20j-KU-MpK" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="adQ-Zo-2w4"/>
-                <constraint firstItem="sSl-sd-CEe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="100" id="hBb-K5-Ysy"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="j4f-2r-7xw" secondAttribute="trailing" constant="100" id="i2o-Rj-1k6"/>
-                <constraint firstItem="j4f-2r-7xw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="100" id="lJm-JD-CfX"/>
                 <constraint firstItem="a5J-mo-0dR" firstAttribute="top" secondItem="sSl-sd-CEe" secondAttribute="bottom" constant="20" id="mgI-xe-r7V"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="a5J-mo-0dR" secondAttribute="trailing" constant="100" id="p4B-ic-Hf2"/>
                 <constraint firstItem="NZj-bJ-06y" firstAttribute="top" secondItem="20j-KU-MpK" secondAttribute="bottom" constant="80" id="uhX-uj-pmY"/>
                 <constraint firstItem="j4f-2r-7xw" firstAttribute="top" secondItem="YDO-rl-ifM" secondAttribute="bottom" constant="70" id="yV3-De-yFy"/>
+                <constraint firstItem="sSl-sd-CEe" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.6" id="yyG-Ih-iob"/>
                 <constraint firstItem="YDO-rl-ifM" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="zxe-Io-sTo"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
