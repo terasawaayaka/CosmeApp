@@ -12,6 +12,7 @@ import PGFramework
 class SearchUserSelectResultViewController: BaseViewController {
     @IBOutlet weak var headerView: HeaderView!
     @IBOutlet weak var yourProfileView: YourProfileMainView!
+    var userModel: UserModel = UserModel()
 }
 // MARK: - Life cycle
 extension SearchUserSelectResultViewController {
@@ -25,6 +26,7 @@ extension SearchUserSelectResultViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        giveModel()
     }
 }
 // MARK: - Protocol
@@ -41,6 +43,9 @@ extension SearchUserSelectResultViewController {
     }
     func setDelegate(){
         headerView.delegate = self
+    }
+    func giveModel(){
+        yourProfileView.getModel(userModel: userModel)
     }
 }
 

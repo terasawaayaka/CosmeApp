@@ -9,7 +9,7 @@
 import UIKit
 import PGFramework
 protocol SearchUserResultTableViewCellDelegate: NSObjectProtocol{
-    func touchedUserButton()
+    func touchedUserButton(userModel: UserModel)
 }
 extension SearchUserResultTableViewCellDelegate {
 }
@@ -20,8 +20,9 @@ class SearchUserResultTableViewCell: BaseTableViewCell {
     @IBOutlet weak var userNameLabel: UILabel!
     @IBAction func touchedUserButton(_ sender: UIButton) {
         if let delegate = delegate {
-            delegate.touchedUserButton()}
+            delegate.touchedUserButton(userModel: userModel)}
     }
+    var userModel: UserModel = UserModel()
 }
 // MARK: - Life cycle
 extension SearchUserResultTableViewCell {
@@ -39,6 +40,7 @@ extension SearchUserResultTableViewCell {
         profileImageView.layer.cornerRadius = profileImageView.frame.height / 2
     }
     func updateCell(userModel: UserModel){
+        self.userModel = userModel
         userNameLabel.text = userModel.nickname
     }
 }
