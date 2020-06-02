@@ -11,6 +11,7 @@ import PGFramework
 protocol YourProfileMainViewDelegate: NSObjectProtocol{
     func touchedPostButton()
     func touchedGenreButton()
+    func followButton()
 }
 extension YourProfileMainViewDelegate {
 }
@@ -33,6 +34,14 @@ class YourProfileMainView: BaseView {
     @IBAction func touchedGenreButton(_ sender: UIButton) {
         if let delegate = delegate{delegate.touchedGenreButton()}
     }
+    @IBAction func followButton(_ sender: UIButton) {
+        if let delegate = delegate {
+            delegate.followButton()
+        }
+    }
+    @IBOutlet weak var followButton: UIButton!
+    
+    var isFollowButtonTouched: Bool = false
 }
 // MARK: - Life cycle
 extension YourProfileMainView {
@@ -78,6 +87,13 @@ extension YourProfileMainView {
             if let url = URL(string: photo_path) {
                 userIcon.af_setImage(withURL: url)
             }
+        }
+    }
+    func updateFollow() {
+        if isFollowButtonTouched {
+            followButton.setTitle("フォロー中", for: .normal)
+        } else {
+            followButton.setTitle("フォローする", for: .normal)
         }
     }
 }
