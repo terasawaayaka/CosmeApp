@@ -42,6 +42,13 @@ extension TimeLineViewController {
 }
 // MARK: - Protocol
 extension TimeLineViewController :TimeLineMainViewDelegate {
+    func goodButton(reviewPostModel: ReviewPostModel) {
+        let noticeModel = NoticeModel()
+        noticeModel.noticeType = ActivityType.good.rawValue
+        NoticeModel.create(request: noticeModel) {
+        }
+    }
+    
     func touchedIconViewButton(reviewPostModel: ReviewPostModel) {
         if let uid = Auth.auth().currentUser?.uid {
             if reviewPostModel.post_user_id == uid {

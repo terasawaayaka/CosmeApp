@@ -11,6 +11,7 @@ import UIKit
 import PGFramework
 protocol TimeLineMainTableViewSecondCellDelegate: NSObjectProtocol{
     func iconViewButton(reviewPostModel :ReviewPostModel)
+    func goodButton(reviewPostModel: ReviewPostModel)
 }
 extension TimeLineMainTableViewSecondCellDelegate {
 }
@@ -49,6 +50,7 @@ class TimeLineMainTableViewSecondCell: BaseTableViewCell, UIScrollViewDelegate {
         if let delegate = delegate{delegate.iconViewButton(reviewPostModel: reviewPostModel)}
     }
     @IBAction func goodButton(_ sender: UIButton) {
+        delegate?.goodButton(reviewPostModel: reviewPostModel)
     }
     @IBAction func favoriteButton(_ sender: UIButton) {
     }
