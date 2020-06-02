@@ -15,6 +15,7 @@ protocol ReviewDetailMainViewDelegate: NSObjectProtocol{
     func touchedIconViewButton(reviewPostModel:ReviewPostModel)
     func iconViewButton2(commentPostModel: CommentPostModel)
     func commentSendButton()
+    func goodButton(reviewPostModel: ReviewPostModel)
 }
 extension ReviewDetailMainViewDelegate {
 }
@@ -61,6 +62,9 @@ class ReviewDetailMainView: BaseView, UIScrollViewDelegate {
     @IBAction func commentSendButton(_ sender: UIButton) {
         if let delegate = delegate {delegate.commentSendButton()}
         
+    }
+    @IBAction func goodButton(_ sender: UIButton) {
+        delegate?.goodButton(reviewPostModel: reviewPostModel)
     }
 }
 // MARK: - Life cycle

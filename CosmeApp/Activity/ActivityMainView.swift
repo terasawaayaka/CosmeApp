@@ -8,10 +8,10 @@
 
 import UIKit
 
-enum ActivityType {
-    case comment
-    case good
-    case follow
+enum ActivityType: String {
+    case comment = "コメント"
+    case good = "いいね"
+    case follow = "フォロー"
 }
 
 import PGFramework
@@ -56,6 +56,16 @@ extension ActivityMainView:UITableViewDataSource {
              ActivityCommentTableViewCell else {return UITableViewCell()}
         guard let thirdCell = tableView.dequeueReusableCell(withIdentifier: "ActivityFollowTableViewCell", for: indexPath) as?
              ActivityFollowTableViewCell else {return UITableViewCell()}
+        switch noticeModels[indexPath.row].noticeType {
+        case "コメント":
+            activityType = .comment
+        case "いいね":
+            activityType = .good
+        case "フォロー":
+            activityType = .follow
+        default:
+            activityType = .comment
+        }
         switch activityType {
         case .good:
             cell.updateCell(noticeModel: noticeModels[indexPath.row])

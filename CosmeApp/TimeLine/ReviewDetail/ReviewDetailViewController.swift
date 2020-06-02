@@ -97,8 +97,8 @@ extension ReviewDetailViewController:ReviewDetailMainViewDelegate {
         if let uid = Auth.auth().currentUser?.uid {
             noticeModel.post_user_id = uid
         }
+        noticeModel.noticeType = ActivityType.comment.rawValue
         NoticeModel.create(request: noticeModel) {
-            //todo
         }
         let commentPostModel  : CommentPostModel = CommentPostModel()
         if let text = mainView.commentTextField.text{
@@ -112,6 +112,13 @@ extension ReviewDetailViewController:ReviewDetailMainViewDelegate {
             self.mainView.commentTextField.text = ""
         }
     }
+    func goodButton(reviewPostModel: ReviewPostModel) {
+        let noticeModel = NoticeModel()
+        noticeModel.noticeType = ActivityType.good.rawValue
+        NoticeModel.create(request: noticeModel) {
+        }
+    }
+    
 }
 // MARK: - method
 extension ReviewDetailViewController {
