@@ -27,7 +27,7 @@ class EditReviewViewController: BaseViewController {
     var reviewPostModel : ReviewPostModel = ReviewPostModel()
     
     let items = ["ベースメイク", "シェーディング", "ハイライト", "チーク", "アイシャドウ","アイライン","マスカラ","カラコン","アイブロウ","リップ","ヘアケア","スキンケア","その他"]
-}
+    }
 
 // MARK: - Life cycle
 extension EditReviewViewController {
@@ -116,6 +116,7 @@ extension EditReviewViewController :HeaderViewDelegate{
         } else if mainView.isFirstStarSelected == true {
             reviewPostModel.review_num = 1
         }
+        
         
         ReviewPostModel.update(request: reviewPostModel, images: images) {
             self.dismiss(animated: true, completion: nil)
@@ -213,7 +214,8 @@ extension EditReviewViewController {
     func giveModel(){
         mainView.updateReview(reviewPostModel:reviewPostModel)
     }
-    
+
+
     
     
     //キーボードとテキストフィールド以外をタップでキーボードを隠す

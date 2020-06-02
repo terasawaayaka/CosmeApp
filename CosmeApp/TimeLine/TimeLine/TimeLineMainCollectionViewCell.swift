@@ -17,8 +17,7 @@ extension TimeLineMainCollectionViewCellDelegate {
 class TimeLineMainCollectionViewCell: BaseCollectionViewCell {
     weak var delegate: TimeLineMainCollectionViewCellDelegate? = nil
     
-    @IBOutlet weak var iconLabel: UILabel!
-    
+    @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var makeIconView: UIImageView!
 }
 // MARK: - Life cycle
@@ -37,6 +36,13 @@ extension TimeLineMainCollectionViewCell {
         makeIconView.layer.cornerRadius = makeIconView.frame.width / 2
     }
     func updatecollectionView(makePostModel:MakePostModel){
+        //userName
+        if makePostModel.post_user_name == ""{
+            userNameLabel.text = "no member"
+        }else{
+            userNameLabel.text = makePostModel.post_user_name
+        }
+        //icon
         switch makePostModel.image_paths.count {
         case 0:
             makeIconView.image = UIImage(named: "noimage.png")

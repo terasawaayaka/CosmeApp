@@ -23,6 +23,7 @@ class ReviewDetailViewController: BaseViewController, UITableViewDelegate {
     @IBOutlet weak var mainViewBottomMergin: NSLayoutConstraint!
     
     var activityType: ActivityType = ActivityType.comment
+
 }
 // MARK: - Life cycle
 extension ReviewDetailViewController {
@@ -39,9 +40,10 @@ extension ReviewDetailViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        commentGetModel()
         reviewUpdateView()
         reviewGetModel()
-        commentGetModel()
+       
     }
 }
 // MARK: - Protocol
@@ -59,6 +61,12 @@ extension ReviewDetailViewController :HeaderViewDelegate{
 }
 
 extension ReviewDetailViewController:ReviewDetailMainViewDelegate {
+    
+    func deleteButton(commentPostModel: CommentPostModel) {
+        CommentPostModel.delete(id: commentPostModel.id) {
+        }
+    }
+    
     func iconViewButton(reviewPostModel: ReviewPostModel) {
         if let uid = Auth.auth().currentUser?.uid {
             if reviewPostModel.post_user_id == uid {
@@ -78,22 +86,20 @@ extension ReviewDetailViewController:ReviewDetailMainViewDelegate {
     
     func commentIconViewCutton(commentPostModel: CommentPostModel) {
         if let uid = Auth.auth().currentUser?.uid {
-                if commentPostModel.post_user_id == uid {
-                    let myProfileViewController = MyProfileViewController()
-                    myProfileViewController.fromPost = true
-                    navigationController?.pushViewController(myProfileViewController, animated: true)
-                    animatorManager.navigationType = .slide_push
-                }else{
-                    let yourPlofileViewController = YourProfileViewController()
-                    yourPlofileViewController.commentPostModel = commentPostModel
-                    yourPlofileViewController.fromPost = true
-                    navigationController?.pushViewController(yourPlofileViewController, animated: true)
-                    animatorManager.navigationType = .slide_push
-                }
+            if commentPostModel.post_user_id == uid {
+                let myProfileViewController = MyProfileViewController()
+                myProfileViewController.fromPost = true
+                navigationController?.pushViewController(myProfileViewController, animated: true)
+                animatorManager.navigationType = .slide_push
+            }else{
+                let yourPlofileViewController = YourProfileViewController()
+                yourPlofileViewController.commentPostModel = commentPostModel
+                yourPlofileViewController.fromPost = true
+                navigationController?.pushViewController(yourPlofileViewController, animated: true)
+                animatorManager.navigationType = .slide_push
             }
         }
-    
-  
+    }
     func commentSendButton() {
         activityType = ActivityType.comment
         let noticeModel: NoticeModel = NoticeModel()
