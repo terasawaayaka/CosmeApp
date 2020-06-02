@@ -25,7 +25,9 @@
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="haN-nw-Jwg">
                         <rect key="frame" x="9" y="10" width="60" height="60"/>
-                        <state key="normal" title="+"/>
+                        <state key="normal" title="+">
+                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
                         <connections>
                             <action selector="touchedProfilePageButton:" destination="Obi-G9-O5c" eventType="touchUpInside" id="Vo6-wi-iJw"/>
                         </connections>

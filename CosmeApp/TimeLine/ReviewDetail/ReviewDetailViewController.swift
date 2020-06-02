@@ -113,7 +113,11 @@ extension ReviewDetailViewController:ReviewDetailMainViewDelegate {
         }
     }
     func goodButton(reviewPostModel: ReviewPostModel) {
-        let noticeModel = NoticeModel()
+        activityType = ActivityType.good
+        let noticeModel : NoticeModel = NoticeModel()
+        if let uid = Auth.auth().currentUser?.uid {
+            noticeModel.post_user_id = uid
+        }
         noticeModel.noticeType = ActivityType.good.rawValue
         NoticeModel.create(request: noticeModel) {
         }
