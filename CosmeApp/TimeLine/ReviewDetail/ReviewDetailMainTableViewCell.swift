@@ -8,8 +8,10 @@
 
 import UIKit
 import PGFramework
+import FirebaseAuth
 protocol ReviewDetailMainTableViewCellDelegate: NSObjectProtocol{
     func commentIconViewButton(commentPostModel:CommentPostModel)
+    func deleteButton(commentPostModel:CommentPostModel)
 }
 extension ReviewDetailMainTableViewCellDelegate {
 }
@@ -19,7 +21,13 @@ class ReviewDetailMainTableViewCell: BaseTableViewCell {
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var iconView: UIButton!
     @IBOutlet weak var descriptionLabel: UILabel!
-
+    
+    @IBOutlet weak var commentDelete: UIButton!
+    
+    @IBAction func deleteButton(_ sender: UIButton) {
+        if let delegate = delegate {delegate.deleteButton(commentPostModel: commentPostModel)}
+    }
+ 
     @IBAction func commentIconViewButton(_ sender: UIButton) {
         if let delegate = delegate {delegate.commentIconViewButton(commentPostModel: commentPostModel)}
     }
@@ -32,6 +40,14 @@ extension ReviewDetailMainTableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         setLayout()
+        
+//        if let uid = Auth.auth().currentUser?.uid {
+//             if commentPostModel.post_user_id == uid {
+//                 commentDelete.isHidden = false
+//             }else{
+//                 commentDelete.isHidden = true
+//                 }
+//             }
     }
 }
 // MARK: - Protocol

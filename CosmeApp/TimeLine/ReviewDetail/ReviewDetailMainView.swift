@@ -16,6 +16,7 @@ protocol ReviewDetailMainViewDelegate: NSObjectProtocol{
     func commentIconViewCutton(commentPostModel:CommentPostModel)
     func commentSendButton()
     func goodButton(reviewPostModel: ReviewPostModel)
+    func deleteButton(commentPostModel:CommentPostModel)
 }
 extension ReviewDetailMainViewDelegate {
 }
@@ -90,16 +91,13 @@ extension ReviewDetailMainView :UITableViewDataSource{
         cell.updateCell(commentPostModel:commentPostModels[indexPath.row])
         return cell
     }
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-            if editingStyle == UITableViewCell.EditingStyle.delete{
-            print("削除")
-            commentPostModels.remove(at: indexPath.row)
-            tableView.reloadData()
-        }
-    }
 }
 
-extension ReviewDetailMainView:ReviewDetailMainTableViewCellDelegate {
+extension ReviewDetailMainView:ReviewDetailMainTableViewCellDelegate{
+    func deleteButton(commentPostModel: CommentPostModel) {
+        if let delegate = delegate {delegate.deleteButton(commentPostModel: commentPostModel)}
+    }
+    
     func commentIconViewButton(commentPostModel: CommentPostModel) {
         if let delegate = delegate {delegate.commentIconViewCutton(commentPostModel: commentPostModel)}
     }
