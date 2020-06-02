@@ -10,7 +10,7 @@ import UIKit
 
 import PGFramework
 protocol ActivityFollowTableViewCellDelegate: NSObjectProtocol{
-    func touchedThirdProfileButton()
+    func touchedThirdProfileButton(indexPath: IndexPath)
 }
 extension ActivityFollowTableViewCellDelegate {
 }
@@ -21,11 +21,13 @@ class ActivityFollowTableViewCell: BaseTableViewCell {
     @IBOutlet weak var thirdIconImageView: UIImageView!
     @IBAction func touchedThirdProfilePageButton(_ sender: UIButton) {
         if let delegate = delegate {
-            delegate.touchedThirdProfileButton()
+            delegate.touchedThirdProfileButton(indexPath: indexPath)
         }
     }
     
     @IBOutlet weak var userNameLabel: UILabel!
+    
+    var indexPath: IndexPath = IndexPath()
 }
 // MARK: - Life cycle
 extension ActivityFollowTableViewCell {

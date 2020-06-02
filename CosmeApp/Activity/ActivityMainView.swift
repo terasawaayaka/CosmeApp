@@ -20,7 +20,7 @@ protocol ActivityMainViewDelegate: NSObjectProtocol {
     func touchedPostPageButton(indexPath: IndexPath)
     func touchedSecondProfileButton(indexPath: IndexPath)
     func touchedSecondPostPageButton()
-    func touchedThirdProfileButton()
+    func touchedThirdProfileButton(indexPath: IndexPath)
 }
 extension ActivityMainViewDelegate {
 }
@@ -78,6 +78,8 @@ extension ActivityMainView:UITableViewDataSource {
             secondCell.delegate = self
             return secondCell
         case .follow:
+            thirdCell.updateCell(noticeModel: noticeModels[indexPath.row])
+            thirdCell.indexPath = indexPath
             thirdCell.delegate = self
             return thirdCell
         default:
@@ -119,9 +121,10 @@ extension ActivityMainView: ActivityCommentTableViewCellDelegate {
 }
 
 extension ActivityMainView: ActivityFollowTableViewCellDelegate {
-    func touchedThirdProfileButton() {
+    
+    func touchedThirdProfileButton(indexPath: IndexPath) {
         if let delegate = delegate {
-            delegate.touchedThirdProfileButton()
+            delegate.touchedThirdProfileButton(indexPath: indexPath)
         }
     }
 }

@@ -52,6 +52,18 @@ extension YourProfileViewController :YourProfileMainViewDelegate{
         let secondPoint = CGPoint(x: mainView.frame.width, y: 0)
         mainView.scrollMainView.scrollView.setContentOffset(secondPoint, animated: true)
     }
+    func followButton() {
+        mainView.isFollowButtonTouched = !mainView.isFollowButtonTouched
+        mainView.updateFollow()
+        let noticeModel : NoticeModel = NoticeModel()
+        if let uid = Auth.auth().currentUser?.uid {
+            noticeModel.post_user_id = uid
+        }
+        noticeModel.noticeType = ActivityType.follow.rawValue
+        NoticeModel.create(request: noticeModel) {
+        }
+       }
+       
 }
 
 extension YourProfileViewController:HeaderViewDelegate{
