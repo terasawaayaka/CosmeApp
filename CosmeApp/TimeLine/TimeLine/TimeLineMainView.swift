@@ -26,12 +26,14 @@ class TimeLineMainView: BaseView {
     var makePostModels : [MakePostModel] = [MakePostModel]()
 
     @IBOutlet weak var tableView: UITableView!
+    
 }
 // MARK: - Life cycle
 extension TimeLineMainView {
     override func awakeFromNib() {
         super.awakeFromNib()
         setDelegate()
+        
         
         loadTableViewCellFromXib(tableView: tableView, cellName: "TimeLineMainTableViewCell")
         loadTableViewCellFromXib(tableView: tableView, cellName: "TimeLineMainTableViewSecondCell")
@@ -96,4 +98,5 @@ extension TimeLineMainView {
         self.makePostModels = makePostModels
         tableView.reloadData()
     }
+    
 }

@@ -17,7 +17,7 @@ enum ActivityType: String {
 import PGFramework
 protocol ActivityMainViewDelegate: NSObjectProtocol {
     func touchedProfilePageButton(indexPath: IndexPath)
-    func touchedPostPageButton()
+    func touchedPostPageButton(indexPath: IndexPath)
     func touchedSecondProfileButton(indexPath: IndexPath)
     func touchedSecondPostPageButton()
     func touchedThirdProfileButton()
@@ -98,9 +98,9 @@ extension ActivityMainView: ActivityGoodTableViewCellDelegate {
             delegate.touchedProfilePageButton(indexPath: indexPath)
         }
     }
-    func touchedPostPageButton() {
+    func touchedPostPageButton(indexPath: IndexPath) {
         if let delegate = delegate {
-            delegate.touchedPostPageButton()
+            delegate.touchedPostPageButton(indexPath: indexPath)
         }
     }
 }

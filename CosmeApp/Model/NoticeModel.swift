@@ -19,6 +19,7 @@ class NoticeModel {
     var follow: String = String() //フォロー
     var image_paths: [String] = [String]()
     var noticeType: String = String()
+    var post_icon: String = String()
     
     //ユーザーの情報
     var post_user_name: String = String()

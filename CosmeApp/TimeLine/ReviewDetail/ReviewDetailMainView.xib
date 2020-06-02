@@ -16,6 +16,7 @@
                 <outlet property="firstStarImage" destination="FUj-tz-vTp" id="pHp-Xe-M0i"/>
                 <outlet property="fourthImageView" destination="A69-QI-DCk" id="B7P-wq-fmY"/>
                 <outlet property="fourthStarImage" destination="GOm-Zm-btA" id="7BG-yC-pdy"/>
+                <outlet property="goodButton" destination="aXZ-nC-mwu" id="EtD-1N-tta"/>
                 <outlet property="iconView" destination="jCH-yG-hqv" id="19U-Pn-Ila"/>
                 <outlet property="imageScrollView" destination="Yw9-sS-72U" id="CAZ-rU-aQt"/>
                 <outlet property="pageControl" destination="859-xC-lF7" id="5xg-ub-WKj"/>
@@ -67,7 +68,7 @@
                                                 <constraint firstAttribute="width" constant="30" id="Z6Y-gM-oeq"/>
                                                 <constraint firstAttribute="height" constant="30" id="mGa-wp-qSj"/>
                                             </constraints>
-                                            <state key="normal" image="favorite"/>
+                                            <state key="normal" image="notfavorite"/>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXZ-nC-mwu">
                                             <rect key="frame" x="324" y="504" width="30" height="30"/>
@@ -75,7 +76,7 @@
                                                 <constraint firstAttribute="width" constant="30" id="uCg-2N-eNw"/>
                                                 <constraint firstAttribute="height" constant="30" id="z2s-9j-yBJ"/>
                                             </constraints>
-                                            <state key="normal" image="good"/>
+                                            <state key="normal" image="notgood"/>
                                             <connections>
                                                 <action selector="goodButton:" destination="-1" eventType="touchUpInside" id="pQN-yN-d0C"/>
                                             </connections>
@@ -389,8 +390,8 @@
         </view>
     </objects>
     <resources>
-        <image name="favorite" width="256" height="256"/>
-        <image name="good" width="256" height="256"/>
+        <image name="notfavorite" width="256" height="256"/>
+        <image name="notgood" width="256" height="256"/>
         <image name="star" width="64" height="64"/>
     </resources>
 </document>
