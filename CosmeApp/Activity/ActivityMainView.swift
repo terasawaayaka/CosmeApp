@@ -19,7 +19,7 @@ protocol ActivityMainViewDelegate: NSObjectProtocol {
     func touchedProfilePageButton(indexPath: IndexPath)
     func touchedPostPageButton(indexPath: IndexPath)
     func touchedSecondProfileButton(indexPath: IndexPath)
-    func touchedSecondPostPageButton()
+    func touchedSecondPostPageButton(indexPath: IndexPath)
     func touchedThirdProfileButton(indexPath: IndexPath)
 }
 extension ActivityMainViewDelegate {
@@ -113,15 +113,14 @@ extension ActivityMainView: ActivityCommentTableViewCellDelegate {
             delegate.touchedSecondProfileButton(indexPath: indexPath)
         }
     }
-    func touchedSecondPostPageButton() {
+    func touchedSecondPostPageButton(indexPath: IndexPath) {
         if let delegate = delegate {
-            delegate.touchedSecondPostPageButton()
+            delegate.touchedSecondPostPageButton(indexPath: indexPath)
         }
     }
 }
 
 extension ActivityMainView: ActivityFollowTableViewCellDelegate {
-    
     func touchedThirdProfileButton(indexPath: IndexPath) {
         if let delegate = delegate {
             delegate.touchedThirdProfileButton(indexPath: indexPath)

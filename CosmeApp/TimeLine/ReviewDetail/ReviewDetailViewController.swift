@@ -101,7 +101,7 @@ extension ReviewDetailViewController:ReviewDetailMainViewDelegate {
             noticeModel.comment = text
         }
         if let uid = Auth.auth().currentUser?.uid {
-            noticeModel.post_user_id = uid
+            noticeModel.notice_user_id = uid
         }
         noticeModel.noticeType = ActivityType.comment.rawValue
         NoticeModel.create(request: noticeModel) {
@@ -121,14 +121,7 @@ extension ReviewDetailViewController:ReviewDetailMainViewDelegate {
     func goodButton(reviewPostModel: ReviewPostModel) {
         mainView.isGoodButtonTouched = !mainView.isGoodButtonTouched
         mainView.updateGood()
-        activityType = ActivityType.good
-        let noticeModel : NoticeModel = NoticeModel()
-        if let uid = Auth.auth().currentUser?.uid {
-            noticeModel.post_user_id = uid
-        }
-        noticeModel.noticeType = ActivityType.good.rawValue
-        NoticeModel.create(request: noticeModel) {
-        }
+        
     }
     
 }

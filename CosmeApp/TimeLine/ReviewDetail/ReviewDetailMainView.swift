@@ -138,6 +138,13 @@ extension ReviewDetailMainView {
         if isGoodButtonTouched {
            let image = UIImage(named: "good")
             goodButton.setImage(image, for: .normal)
+            let noticeModel : NoticeModel = NoticeModel()
+            if let uid = Auth.auth().currentUser?.uid {
+                noticeModel.notice_user_id = uid
+            }
+            noticeModel.noticeType = ActivityType.good.rawValue
+            NoticeModel.create(request: noticeModel) {
+            }
         } else {
             let image = UIImage(named: "notgood")
             goodButton.setImage(image, for: .normal)

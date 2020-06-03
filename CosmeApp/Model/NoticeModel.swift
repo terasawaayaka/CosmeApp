@@ -15,16 +15,15 @@ class NoticeModel {
     fileprivate static let PATH: String = "notice"
     var id: String = String()
     var comment: String = String() //コメント
-//    var good: String = String() //いいね
-//    var follow: String = String() //フォロー
     var image_paths: [String] = [String]()
     var noticeType: String = String()
+    var post_id: String = String()
     var post_icon: String = String()
     
     //ユーザーの情報
-    var post_user_name: String = String()
-    var post_user_id: String = String()
-    var post_user_icon: String?
+    var notice_user_name: String = String()
+    var notice_user_id: String = String()
+    var notice_user_icon: String?
 }
 
 extension NoticeModel {
@@ -33,9 +32,9 @@ extension NoticeModel {
         if let id = data["id"] as? String {model.id = id}
         if let comment = data["comment"] as? String {model.comment = comment}
         if let noticeType = data["noticeType"] as? String {model.noticeType = noticeType}
-//        if let follow = data["follow"] as? String {model.follow = follow}
         if let image_paths = data["image_paths"] as? [String] {model.image_paths = image_paths}
-        if let post_user_id = data["post_user_id"] as? String {model.post_user_id = post_user_id}
+        if let post_id = data["post_id"] as? String {model.post_id = post_id}
+        if let notice_user_id = data["notice_user_id"] as? String {model.notice_user_id = notice_user_id}
         return model
     }
 }
@@ -47,9 +46,9 @@ extension NoticeModel {
         parameter["id"] = request.id
         parameter["comment"] = request.comment
         parameter["noticeType"] = request.noticeType
-//        parameter["follow"] = request.follow
         parameter["image_paths"] = request.image_paths
-        parameter["post_user_id"] = request.post_user_id
+        parameter["post_id"] = request.post_id
+        parameter["notice_user_id"] = request.notice_user_id
         return parameter
     }
 }
@@ -73,6 +72,7 @@ extension NoticeModel {
         let dbRef = Database.database().reference().child(PATH)
         dbRef.observe(.value, with: { snapshot in
             var models: [NoticeModel] = [NoticeModel]()
+            var sortedModels :[NoticeModel] = []
             for item in (snapshot.children) {
                 let snapshot = item as! DataSnapshot
                 let data = snapshot.value as! [String: Any]
@@ -80,7 +80,13 @@ extension NoticeModel {
                 model.id = snapshot.key
                 models.append(model)
             }
-            success(models)
+            var num : Int = 0
+            num = models.count
+            models.forEach { (model) in
+                num -= 1
+                sortedModels.append(models[num])
+            }
+            success(sortedModels)
         })
     }
     static func readAt(id: String,success:@escaping(NoticeModel) -> Void,failure:@escaping() -> Void) {

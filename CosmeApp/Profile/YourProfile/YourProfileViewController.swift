@@ -22,6 +22,7 @@ class YourProfileViewController: BaseViewController {
     @IBOutlet weak var headerView: HeaderView!
     
     var fromPost: Bool = false
+    var isFollowed: Bool = false
 }
 // MARK: - Life cycle
 extension YourProfileViewController {
@@ -39,6 +40,7 @@ extension YourProfileViewController {
         makeGetModel()
         commentGetModel()
         noticeGetModel()
+        getNoticeModels()
     }
 }
 // MARK: - Protocol
@@ -57,13 +59,15 @@ extension YourProfileViewController :YourProfileMainViewDelegate{
         mainView.updateFollow()
         let noticeModel : NoticeModel = NoticeModel()
         if let uid = Auth.auth().currentUser?.uid {
-            noticeModel.post_user_id = uid
+            noticeModel.notice_user_id = uid
         }
         noticeModel.noticeType = ActivityType.follow.rawValue
-        NoticeModel.create(request: noticeModel) {
+        if isFollowed == false {
+            NoticeModel.create(request: noticeModel) {
+            }
         }
-       }
-       
+    }
+    
 }
 
 extension YourProfileViewController:HeaderViewDelegate{
@@ -137,17 +141,31 @@ extension YourProfileViewController {
     
     
     func noticeGetModel() {
-        if noticeModel.post_user_id != "" {
-                UserModel.readAt(userId: noticeModel.post_user_id) { (userModel) in
-                    if let icon = userModel.photo_path {
-                        self.noticeModel.post_user_icon = icon
-                    }
-                      self.userModel = userModel
-                      self.mainView.getModel(userModel: userModel)
-                    }
-                } else {
-        //            self.userModel = userModel
-        //            self.mainView.getModel(userModel: userModel)
+        if noticeModel.notice_user_id != "" {
+            UserModel.readAt(userId: noticeModel.notice_user_id) { (userModel) in
+                if let icon = userModel.photo_path {
+                    self.noticeModel.notice_user_icon = icon
                 }
+                self.userModel = userModel
+                self.mainView.getModel(userModel: userModel)
+            }
+        } else {
+            //            self.userModel = userModel
+            //            self.mainView.getModel(userModel: userModel)
+        }
+    }
+    func getNoticeModels() {
+        NoticeModel.reads { (noticeModels) in
+            for noticeModel in noticeModels {
+                if let uid = Auth.auth().currentUser?.uid {
+                    if noticeModel.notice_user_id == uid {
+                        self.isFollowed = true
+                    } else {
+                        self.isFollowed = false
+                    }
+                    
+                }
+            }
+        }
     }
 }

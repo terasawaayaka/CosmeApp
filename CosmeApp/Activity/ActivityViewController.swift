@@ -37,6 +37,7 @@ extension ActivityViewController:ActivityMainViewDelegate {
     func touchedProfilePageButton(indexPath: IndexPath) {
         let yourProfileViewController = YourProfileViewController()
         yourProfileViewController.noticeModel = noticeModels[indexPath.row]
+        yourProfileViewController.fromPost = true
         navigationController?.pushViewController(yourProfileViewController, animated: true)
         animatorManager.navigationType = .slide_push
     }
@@ -50,18 +51,20 @@ extension ActivityViewController:ActivityMainViewDelegate {
     func touchedSecondProfileButton(indexPath: IndexPath) {
         let yourProfileViewController = YourProfileViewController()
         yourProfileViewController.noticeModel = noticeModels[indexPath.row]
+        yourProfileViewController.fromPost = true
         navigationController?.pushViewController(yourProfileViewController, animated: true)
         animatorManager.navigationType = .slide_push
     }
-    func touchedSecondPostPageButton() {
+    func touchedSecondPostPageButton(indexPath: IndexPath) {
         let reviewDetailViewController = ReviewDetailViewController()
-        reviewDetailViewController.noticeModel = noticeModels[1]
+        reviewDetailViewController.noticeModel = noticeModels[indexPath.row]
         navigationController?.pushViewController(reviewDetailViewController, animated: true)
         animatorManager.navigationType = .slide_push
     }
     func touchedThirdProfileButton(indexPath: IndexPath) {
         let yourProfileViewController = YourProfileViewController()
         yourProfileViewController.noticeModel = noticeModels[indexPath.row]
+        yourProfileViewController.fromPost = true
         navigationController?.pushViewController(yourProfileViewController, animated: true)
         animatorManager.navigationType = .slide_push
     }
@@ -79,13 +82,14 @@ extension ActivityViewController {
     func getModel() {
         NoticeModel.reads { (noticeModels) in
             for noticeModel in noticeModels {
-                if noticeModel.post_user_id != "" {
-                    UserModel.readAt(userId: noticeModel.post_user_id) { (userModel) in
+                
+                if noticeModel.notice_user_id != "" {
+                    UserModel.readAt(userId: noticeModel.notice_user_id) { (userModel) in
                         if let name = userModel.nickname {
-                            noticeModel.post_user_name = name
+                            noticeModel.notice_user_name = name
                         }
                         if let icon = userModel.photo_path {
-                            noticeModel.post_user_icon = icon
+                            noticeModel.notice_user_icon = icon
                         }
                         self.noticeModels = noticeModels
                         self.mainView.getModel(noticeModels: noticeModels)
