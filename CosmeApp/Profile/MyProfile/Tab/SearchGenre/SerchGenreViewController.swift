@@ -10,6 +10,7 @@ import UIKit
 import PGFramework
 // MARK: - Property
 class SerchGenreViewController: BaseViewController {
+    @IBOutlet weak var mainView: SearchGenreCollectionView!
 }
 // MARK: - Life cycle
 extension SerchGenreViewController {

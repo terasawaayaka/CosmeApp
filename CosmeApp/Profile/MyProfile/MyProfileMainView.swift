@@ -13,9 +13,9 @@ protocol MyProfileMainViewDelegate: NSObjectProtocol{
     func touchedGoodButton()
     func touchedBookMarkButton()
     func touchedGenreButton()
-    func touchedEyeShadowButton()
     
     func didSelectItemAt(indexPath: IndexPath)
+    func didSelectItemAtGenre(indexPath: IndexPath)
 }
 extension MyProfileMainViewDelegate {
 }
@@ -78,9 +78,11 @@ extension MyProfileMainView: UICollectionViewDelegate{
     }
 }
 extension MyProfileMainView:ScrollMainViewDelegate{
-    func touchedEyeShadowButton() {
-        if let delegate = delegate{delegate.touchedEyeShadowButton()}
+    func didSelectItemAtGenre(indexPath: IndexPath) {
+        if let delegate = delegate{delegate.didSelectItemAtGenre(indexPath: indexPath)}
     }
+    
+
     
 }
 // MARK: - method
