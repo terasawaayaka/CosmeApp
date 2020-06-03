@@ -45,11 +45,11 @@ extension MyProfileViewController {
 }
 // MARK: - Protocol
 extension MyProfileViewController :MyProfileMainViewDelegate{
-    func touchedEyeShadowButton() {
-        let searchGenreCollectionViewController = SerchGenreViewController()
-        navigationController?.pushViewController(searchGenreCollectionViewController, animated: false)
-    
+    func didSelectItemAtGenre(indexPath: IndexPath) {
+        //タップしたときのコードを書く
+        mainView.scrollMainView.genreCollectionView.isHidden = true
     }
+    
     
     func didSelectItemAt(indexPath: IndexPath) {
         let makeDetailViewController = MakeDetailViewController()
@@ -79,6 +79,7 @@ extension MyProfileViewController :MyProfileMainViewDelegate{
     func touchedGenreButton() {
         let thirdPoint = CGPoint(x: mainView.frame.width * 2, y: 0)
         mainView.scrollMainView.scrollView.setContentOffset(thirdPoint, animated: true)
+        mainView.scrollMainView.genreCollectionView.isHidden = false
     }
 }
 

@@ -9,7 +9,7 @@
 import UIKit
 import PGFramework
 protocol ScrollMainViewDelegate: NSObjectProtocol{
-    func touchedEyeShadowButton()
+    func didSelectItemAtGenre(indexPath: IndexPath)
 }
 extension ScrollMainViewDelegate {
 }
@@ -19,20 +19,28 @@ class ScrollMainView: BaseView {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var goodMainView: UIView!
     @IBOutlet weak var bookMarkMainView: UIView!
-    @IBOutlet weak var genreMainView: UIView!
+    @IBOutlet weak var genreCollectionView: GenreCollectionView!
+    @IBOutlet weak var searchGenreCollectionView: SearchGenreCollectionView!
+    
 }
 // MARK: - Life cycle
 extension ScrollMainView {
     override func awakeFromNib() {
         super.awakeFromNib()
+        setDelegate()
     }
 }
 // MARK: - Protocol
 extension ScrollMainView:GenreCollectionViewDelegate{
-    func touchedEyeShadowButton() {
-        if let delegate = delegate{delegate.touchedEyeShadowButton()}
+    func didSelectItemAtGenre(indexPath: IndexPath) {
+        if let delegate = delegate{delegate.didSelectItemAtGenre(indexPath: indexPath)}
     }
+    
+    
 }
 // MARK: - method
 extension ScrollMainView {
+    func setDelegate() {
+        genreCollectionView.delegate = self
+    }
 }

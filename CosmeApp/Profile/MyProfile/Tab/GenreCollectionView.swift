@@ -9,7 +9,7 @@
 import UIKit
 import PGFramework
 protocol GenreCollectionViewDelegate: NSObjectProtocol{
-    func touchedEyeShadowButton()
+    func didSelectItemAtGenre(indexPath: IndexPath)
 }
 extension GenreCollectionViewDelegate {
 }
@@ -92,16 +92,16 @@ extension GenreCollectionView :UICollectionViewDataSource{
     
 }
 
-extension GenreCollectionView :GenreCollectionViewCellDelegate{
-    func touchedEyeShadowButton() {
-        if let delegate = delegate{delegate.touchedEyeShadowButton()}
+extension GenreCollectionView :UICollectionViewDelegate{
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let delegate = delegate{delegate.didSelectItemAtGenre(indexPath: indexPath)}
     }
-    
-    
+   
 }
 // MARK: - method
 extension GenreCollectionView {
     func setDelegate() {
         collectionView.dataSource = self
+        collectionView.delegate = self
     }
 }
