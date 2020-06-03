@@ -11,7 +11,7 @@ import UIKit
 import PGFramework
 protocol ActivityCommentTableViewCellDelegate: NSObjectProtocol{
     func touchedSecondProfileButton(indexPath: IndexPath)
-    func touchedSecondPostPageButton()
+    func touchedSecondPostPageButton(indexPath: IndexPath)
 }
 extension ActivityCommentTableViewCellDelegate {
 }
@@ -29,7 +29,7 @@ class ActivityCommentTableViewCell: BaseTableViewCell {
     @IBOutlet weak var secondPostImageView: UIImageView!
     @IBAction func touchedSecondPostPageButton(_ sender: UIButton) {
         if let delegate = delegate {
-            delegate.touchedSecondPostPageButton()
+            delegate.touchedSecondPostPageButton(indexPath: indexPath)
         }
     }
 
@@ -53,12 +53,12 @@ extension ActivityCommentTableViewCell {
         secondIconImageView.layer.cornerRadius = secondIconImageView.frame.height / 2
     }
     func updateCell(noticeModel: NoticeModel) {
-        if noticeModel.post_user_name == "" {
+        if noticeModel.notice_user_name == "" {
             userNameLabel.text = "メンバーがいません"
         } else {
-            userNameLabel.text = noticeModel.post_user_name
+            userNameLabel.text = noticeModel.notice_user_name
         }
-        if let photo_path = noticeModel.post_user_icon {
+        if let photo_path = noticeModel.notice_user_icon {
             if let url = URL(string: photo_path) {
                 secondIconImageView.af_setImage(withURL: url)
             }

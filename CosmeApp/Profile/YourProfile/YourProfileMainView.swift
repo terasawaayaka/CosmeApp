@@ -8,6 +8,8 @@
 
 import UIKit
 import PGFramework
+import FirebaseAuth
+
 protocol YourProfileMainViewDelegate: NSObjectProtocol{
     func touchedPostButton()
     func touchedGenreButton()
@@ -92,6 +94,7 @@ extension YourProfileMainView {
     func updateFollow() {
         if isFollowButtonTouched {
             followButton.setTitle("フォロー中", for: .normal)
+           
         } else {
             followButton.setTitle("フォローする", for: .normal)
         }
