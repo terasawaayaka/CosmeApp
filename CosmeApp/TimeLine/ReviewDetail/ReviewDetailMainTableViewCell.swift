@@ -40,14 +40,7 @@ extension ReviewDetailMainTableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         setLayout()
-        
-//        if let uid = Auth.auth().currentUser?.uid {
-//             if commentPostModel.post_user_id == uid {
-//                 commentDelete.isHidden = false
-//             }else{
-//                 commentDelete.isHidden = true
-//                 }
-//             }
+
     }
 }
 // MARK: - Protocol
@@ -71,5 +64,13 @@ extension ReviewDetailMainTableViewCell {
                 iconView.af_setImage(for: .normal, url: url)
             }
         }
+        if let uid = Auth.auth().currentUser?.uid {
+        if commentPostModel.post_user_id == uid {
+            commentDelete.isHidden = false
+        }else{
+            commentDelete.isHidden = true
+            }
+        }
     }
+
 }
