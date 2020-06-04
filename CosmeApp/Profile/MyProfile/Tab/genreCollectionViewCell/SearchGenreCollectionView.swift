@@ -9,15 +9,20 @@
 import UIKit
 import PGFramework
 protocol SearchGenreCollectionViewDelegate: NSObjectProtocol{
-    func didSelectItemAt(indexPath: IndexPath)
+    func didSelectItemAtSearchGenre(indexPath: IndexPath)
+    
 }
 extension SearchGenreCollectionViewDelegate {
 }
 // MARK: - Property
 class SearchGenreCollectionView: BaseView {
     weak var delegate: SearchGenreCollectionViewDelegate? = nil
+    //Outlet
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
+    
+    //data
+    var makePostModels: [MakePostModel] = [MakePostModel]()
 }
 // MARK: - Life cycle
 extension SearchGenreCollectionView {
@@ -33,11 +38,12 @@ extension SearchGenreCollectionView {
 // MARK: - Protocol
 extension SearchGenreCollectionView :UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 12
+        return makePostModels.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchGenreCollectionViewCell", for: indexPath) as? SearchGenreCollectionViewCell else {return UICollectionViewCell()}
+        cell.updateCell(makePostModel: makePostModels[indexPath.row])
         return cell
     }
     
@@ -45,7 +51,7 @@ extension SearchGenreCollectionView :UICollectionViewDataSource{
 
 extension SearchGenreCollectionView: UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let delegate = delegate{delegate.didSelectItemAt(indexPath: indexPath)}
+        if let delegate = delegate{delegate.didSelectItemAtSearchGenre(indexPath: indexPath)}
     }
 }
 // MARK: - method
@@ -53,5 +59,9 @@ extension SearchGenreCollectionView {
     func setDelegate() {
         collectionView.dataSource = self
         collectionView.delegate = self
+    }
+    func getModel(makePostModels: [MakePostModel]) {
+        self.makePostModels = makePostModels
+        collectionView.reloadData()
     }
 }

@@ -16,9 +16,12 @@
                 <rect key="frame" x="0.0" y="0.0" width="115" height="115"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gpz-4d-7CL">
+                        <rect key="frame" x="0.0" y="0.0" width="115" height="115"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jwo-fK-gU8">
                         <rect key="frame" x="0.0" y="0.0" width="115" height="115"/>
-                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="Jwo-fK-gU8" secondAttribute="height" multiplier="1:1" id="Txd-3y-Hnl"/>
                             <constraint firstAttribute="width" constant="115" id="U0A-eA-Ive"/>
@@ -34,6 +37,9 @@
                 </constraints>
             </collectionViewCellContentView>
             <size key="customSize" width="115" height="115"/>
+            <connections>
+                <outlet property="imageView" destination="Gpz-4d-7CL" id="fOV-7l-vtj"/>
+            </connections>
             <point key="canvasLocation" x="-115.21739130434783" y="-60.602678571428569"/>
         </collectionViewCell>
     </objects>

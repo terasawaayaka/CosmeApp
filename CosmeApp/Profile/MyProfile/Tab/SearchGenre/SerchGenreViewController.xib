@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SerchGenreViewController" customModule="CosmeApp" customModuleProvider="target">
             <connections>
-                <outlet property="mainView" destination="Jy8-Pf-YuR" id="NTw-Ud-4BP"/>
+                <outlet property="mainView" destination="Jy8-Pf-YuR" id="JZR-MM-g5P"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
