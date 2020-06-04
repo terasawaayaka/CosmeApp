@@ -117,8 +117,9 @@ extension ReviewDetailViewController:ReviewDetailMainViewDelegate {
             commentPostModel.description = text
         }
         if let uid = Auth.auth().currentUser?.uid {
-                   commentPostModel.post_user_id = uid
-               }
+            commentPostModel.post_user_id = uid
+        }
+        commentPostModel.review_post_id = reviewPostModel.id
         CommentPostModel.create(request: commentPostModel) {
             self.mainView.commentTextField.endEditing(true)
             self.mainView.commentTextField.text = ""
@@ -151,21 +152,29 @@ extension ReviewDetailViewController {
     
     func commentGetModel(){
         CommentPostModel.reads { (commentPostModels) in
-        for commentPostModel in commentPostModels {
-            if commentPostModel.post_user_id != "" {
-                UserModel.readAt(userId: commentPostModel.post_user_id) { (userModel) in
-                    if let name = userModel.nickname{
-                        commentPostModel.post_user_name = name
+            for commentPostModel in commentPostModels {
+                if commentPostModel.post_user_id != "" {
+                    UserModel.readAt(userId: commentPostModel.post_user_id) { (userModel) in
+                        if let name = userModel.nickname{
+                            commentPostModel.post_user_name = name
+                        }
+                        if let icon = userModel.photo_path{
+                            commentPostModel.post_user_icon = icon
+                        }
+                        let filterdCommentPostModels = commentPostModels.filter { (commentPostModel) -> Bool in
+                            if commentPostModel.review_post_id == self.reviewPostModel.id {
+                                return true
+                            }else {
+                                return false
+                            }
+                        }
+                        self.commentPostModels = filterdCommentPostModels
+                        self.mainView.commentGetModel(commentPostModels: filterdCommentPostModels)
+                        // self.mainView.commentGetModel(commentPostModels:commentPostModels)
                     }
-                    if let icon = userModel.photo_path{
-                        commentPostModel.post_user_icon = icon
-                    }
-                    self.commentPostModels = commentPostModels
+                }else{
                     self.mainView.commentGetModel(commentPostModels:commentPostModels)
                 }
-            }else{
-                self.mainView.commentGetModel(commentPostModels:commentPostModels)
-            }
             }
         }
     }
