@@ -15,6 +15,7 @@ class CommentPostModel{
     fileprivate static let PATH: String = "commentPost"
     var id  :String = String()
     var description: String = String()
+    var review_post_id : String = String()
     //ユーザーの情報
     var post_user_name: String = String()
     var post_user_id: String = String()
@@ -27,6 +28,7 @@ extension CommentPostModel{
         if let id = data["id"]as? String{model.id = id}
         if let post_user_id = data["post_user_id"]as? String{model.post_user_id = post_user_id}
         if let description = data["description"]as? String{model.description = description}
+        if let review_post_id = data["review_post_id"]as? String{model.review_post_id = review_post_id}
         return model
     }
     
@@ -36,6 +38,7 @@ extension CommentPostModel{
         parameter["id"] = request.id
         parameter["description"] = request.description
         parameter["post_user_id"] = request.post_user_id
+        parameter["review_post_id"] = request.review_post_id
         return parameter
     }
     
