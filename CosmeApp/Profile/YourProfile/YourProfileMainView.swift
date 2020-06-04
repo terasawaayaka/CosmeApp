@@ -14,6 +14,8 @@ protocol YourProfileMainViewDelegate: NSObjectProtocol{
     func touchedPostButton()
     func touchedGenreButton()
     func followButton()
+    
+    func didSelectItemAt(indexPath: IndexPath)
 }
 extension YourProfileMainViewDelegate {
 }
@@ -68,10 +70,20 @@ extension YourProfileMainView :UICollectionViewDataSource{
     }
     
 }
+extension YourProfileMainView :YourScrollMainViewDelegate {
+    func didSelectItemAt(indexPath: IndexPath) {
+        if let delegate = delegate {
+            delegate.didSelectItemAt(indexPath: indexPath)
+        }
+    }
+    
+    
+}
 // MARK: - method
 extension YourProfileMainView {
     func setDelegate() {
         yourTodayCollectionView.dataSource = self
+        scrollMainView.delegate = self
     }
     func getModel(userModel: UserModel) {
         if userModel.nickname == "" {

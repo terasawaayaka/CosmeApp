@@ -9,6 +9,7 @@
 import UIKit
 import PGFramework
 protocol YourPostCollectionViewDelegate: NSObjectProtocol{
+    func didSelectItemAt(indexPath: IndexPath)
 }
 extension YourPostCollectionViewDelegate {
 }
@@ -38,15 +39,23 @@ extension YourPostCollectionView :UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "YourPostCollectionViewCell", for: indexPath) as? YourPostCollectionViewCell else {return UICollectionViewCell()}
-        cell.updateCell(reviewPostModel: reviewPostModels[indexPath.row])
+        cell.updateCell(reviewPostModel: reviewPostModels[indexPath.row], userModel: userModel)
         return cell
     }
-    
+}
+
+extension YourPostCollectionView: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let delegate = delegate {
+            delegate.didSelectItemAt(indexPath: indexPath)
+        }
+    }
 }
 // MARK: - method
 extension YourPostCollectionView {
     func setDelegate() {
         collectionView.dataSource = self
+        collectionView.delegate = self
     }
     func getModel(reviewPostModels: [ReviewPostModel],userModel: UserModel){
         let filterdReviewPostModels = reviewPostModels.filter { (reviewPostModel) -> Bool in

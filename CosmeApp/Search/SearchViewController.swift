@@ -74,7 +74,7 @@ extension SearchViewController: SearchMainViewDelegate {
     func touchedUserCellButton(userModel: UserModel,reviewPostModel: ReviewPostModel) {
         let searchUserResultViewController = SearchUserSelectResultViewController()
         searchUserResultViewController.userModel = userModel
-        searchUserResultViewController.reviewPostModel = reviewPostModel
+        searchUserResultViewController.reviewPostModels = reviewPostModels
         navigationController?.pushViewController(searchUserResultViewController, animated: true)
         animatorManager.navigationType = .slide_push
     }

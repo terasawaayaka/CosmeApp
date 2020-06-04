@@ -47,6 +47,13 @@ extension YourProfileViewController {
 }
 // MARK: - Protocol
 extension YourProfileViewController :YourProfileMainViewDelegate{
+    func didSelectItemAt(indexPath: IndexPath) {
+        let reviewDetailViewController = ReviewDetailViewController()
+        reviewDetailViewController.reviewPostModel = reviewPostModels[indexPath.row]
+        navigationController?.pushViewController(reviewDetailViewController, animated: true)
+        animatorManager.navigationType = .slide_pop
+    }
+    
     func touchedPostButton() {
         let firstPosint = CGPoint(x: 0, y: 0)
         mainView.scrollMainView.scrollView.setContentOffset(firstPosint, animated: true)

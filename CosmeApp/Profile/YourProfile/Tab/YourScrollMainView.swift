@@ -9,6 +9,7 @@
 import UIKit
 import PGFramework
 protocol YourScrollMainViewDelegate: NSObjectProtocol{
+    func didSelectItemAt(indexPath: IndexPath)
 }
 extension YourScrollMainViewDelegate {
 }
@@ -25,13 +26,23 @@ class YourScrollMainView: BaseView {
 extension YourScrollMainView {
     override func awakeFromNib() {
         super.awakeFromNib()
+        setDelegate()
     }
 }
 // MARK: - Protocol
-extension YourScrollMainView {
+extension YourScrollMainView : YourPostCollectionViewDelegate{
+    func didSelectItemAt(indexPath: IndexPath) {
+        if let delegate = delegate {
+            delegate.didSelectItemAt(indexPath: indexPath)
+        }
+    }
+    
 }
 // MARK: - method
 extension YourScrollMainView {
+    func setDelegate(){
+        yourPostMainView.delegate = self
+    }
     func getModel(reviewPostModels: [ReviewPostModel],userModel: UserModel){
         self.reviewPostModels = reviewPostModels
         self.userModel = userModel
