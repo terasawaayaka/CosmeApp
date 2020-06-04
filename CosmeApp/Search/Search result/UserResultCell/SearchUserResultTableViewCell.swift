@@ -9,7 +9,7 @@
 import UIKit
 import PGFramework
 protocol SearchUserResultTableViewCellDelegate: NSObjectProtocol{
-    func touchedUserButton(userModel: UserModel)
+    func touchedUserButton(userModel: UserModel,reviewPostModel: ReviewPostModel)
 }
 extension SearchUserResultTableViewCellDelegate {
 }
@@ -20,9 +20,10 @@ class SearchUserResultTableViewCell: BaseTableViewCell {
     @IBOutlet weak var userNameLabel: UILabel!
     @IBAction func touchedUserButton(_ sender: UIButton) {
         if let delegate = delegate {
-            delegate.touchedUserButton(userModel: userModel)}
+            delegate.touchedUserButton(userModel: userModel,reviewPostModel: reviewPostModel)}
     }
     var userModel: UserModel = UserModel()
+    var reviewPostModel: ReviewPostModel = ReviewPostModel()
 }
 // MARK: - Life cycle
 extension SearchUserResultTableViewCell {

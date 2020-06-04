@@ -29,7 +29,7 @@ protocol SearchMainViewDelegate: NSObjectProtocol{
     
     func touchedCellButton(reviewPostModel: ReviewPostModel)
     func touchedProductNAmeCellButton(reviewPostModel: ReviewPostModel)
-    func touchedUserCellButton(userModel: UserModel)
+    func touchedUserCellButton(userModel: UserModel,reviewPostModel: ReviewPostModel)
     
 }
 extension SearchMainViewDelegate {
@@ -162,9 +162,9 @@ extension SearchMainView: ProductNameSearchResultViewDelegate {
         }
     }
 extension SearchMainView: UserSearchResultMainViewDelegate {
-    func touchedUserCellButton(userModel: UserModel) {
+    func touchedUserCellButton(userModel: UserModel,reviewPostModel: ReviewPostModel) {
                 if let delegate = delegate{
-                    delegate.touchedUserCellButton(userModel: userModel)}
+                    delegate.touchedUserCellButton(userModel: userModel,reviewPostModel: reviewPostModel)}
         }
 }
 // MARK: - method
