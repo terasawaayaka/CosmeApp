@@ -15,6 +15,10 @@ extension YourPostCollectionViewCellDelegate {
 // MARK: - Property
 class YourPostCollectionViewCell: BaseCollectionViewCell {
     weak var delegate: YourPostCollectionViewCellDelegate? = nil
+    @IBOutlet weak var productLabel: UILabel!
+    @IBOutlet weak var yourPostImsge: UIImageView!
+    
+    var reviewPostModel: ReviewPostModel = ReviewPostModel()
 }
 // MARK: - Life cycle
 extension YourPostCollectionViewCell {
@@ -27,4 +31,12 @@ extension YourPostCollectionViewCell {
 }
 // MARK: - method
 extension YourPostCollectionViewCell {
+    func updateCell(reviewPostModel: ReviewPostModel){
+       if reviewPostModel.image_paths.count != 0 {
+        if let url = URL(string: reviewPostModel.image_paths[0]){
+            yourPostImsge.af_setImage(withURL: url) }
+        }
+        productLabel.text = reviewPostModel.title
+    }
+    
 }

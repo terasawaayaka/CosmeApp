@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -18,10 +18,30 @@
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ph2-5A-UOc">
                         <rect key="frame" x="0.0" y="0.0" width="115" height="115"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cIx-a1-Gb5">
+                                <rect key="frame" x="0.0" y="0.0" width="115" height="115"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nEf-iF-bMe">
+                                <rect key="frame" x="0.0" y="92" width="115" height="23"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.002814282426" blue="0.29152125629999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemGray3Color" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="nEf-iF-bMe" secondAttribute="bottom" id="5lr-be-e5Y"/>
+                            <constraint firstAttribute="bottom" secondItem="cIx-a1-Gb5" secondAttribute="bottom" id="CZy-LD-yQ0"/>
+                            <constraint firstAttribute="trailing" secondItem="cIx-a1-Gb5" secondAttribute="trailing" id="DSP-0j-fvc"/>
+                            <constraint firstItem="cIx-a1-Gb5" firstAttribute="leading" secondItem="ph2-5A-UOc" secondAttribute="leading" id="SxC-JQ-DW3"/>
+                            <constraint firstItem="nEf-iF-bMe" firstAttribute="leading" secondItem="ph2-5A-UOc" secondAttribute="leading" id="VgO-xQ-ZBk"/>
+                            <constraint firstItem="nEf-iF-bMe" firstAttribute="height" secondItem="ph2-5A-UOc" secondAttribute="height" multiplier="0.2" id="Vtm-xs-vd6"/>
                             <constraint firstAttribute="width" secondItem="ph2-5A-UOc" secondAttribute="height" multiplier="1:1" id="YaA-WS-aXK"/>
+                            <constraint firstAttribute="trailing" secondItem="nEf-iF-bMe" secondAttribute="trailing" id="cAy-xP-vmT"/>
                             <constraint firstAttribute="width" constant="115" id="iyH-8g-hop"/>
+                            <constraint firstItem="cIx-a1-Gb5" firstAttribute="top" secondItem="ph2-5A-UOc" secondAttribute="top" id="jNi-YG-I91"/>
                             <constraint firstAttribute="height" constant="115" id="ygM-RD-Urj"/>
                         </constraints>
                     </view>
@@ -34,6 +54,10 @@
                 </constraints>
             </collectionViewCellContentView>
             <size key="customSize" width="115" height="115"/>
+            <connections>
+                <outlet property="productLabel" destination="nEf-iF-bMe" id="wD3-LW-fCR"/>
+                <outlet property="yourPostImsge" destination="cIx-a1-Gb5" id="11K-Kg-xb8"/>
+            </connections>
             <point key="canvasLocation" x="148.55072463768118" y="42.522321428571423"/>
         </collectionViewCell>
     </objects>

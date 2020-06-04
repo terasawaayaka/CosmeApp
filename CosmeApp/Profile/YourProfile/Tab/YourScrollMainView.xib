@@ -11,7 +11,7 @@
             <connections>
                 <outlet property="scrollView" destination="t6k-gf-o2e" id="udF-ql-h9T"/>
                 <outlet property="yourGenreMainView" destination="yUP-B8-w12" id="XfN-nQ-xCW"/>
-                <outlet property="yourPostMainView" destination="KZo-uh-LE2" id="Thd-Eq-qc3"/>
+                <outlet property="yourPostMainView" destination="KZo-uh-LE2" id="sMW-f9-HXh"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

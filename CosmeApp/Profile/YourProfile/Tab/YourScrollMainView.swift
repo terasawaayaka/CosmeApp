@@ -16,8 +16,10 @@ extension YourScrollMainViewDelegate {
 class YourScrollMainView: BaseView {
     weak var delegate: YourScrollMainViewDelegate? = nil
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var yourPostMainView: UIView!
     @IBOutlet weak var yourGenreMainView: UIView!
+    @IBOutlet weak var yourPostMainView: YourPostCollectionView!
+    var reviewPostModels: [ReviewPostModel] = [ReviewPostModel]()
+    var userModel: UserModel = UserModel()
 }
 // MARK: - Life cycle
 extension YourScrollMainView {
@@ -30,4 +32,9 @@ extension YourScrollMainView {
 }
 // MARK: - method
 extension YourScrollMainView {
+    func getModel(reviewPostModels: [ReviewPostModel],userModel: UserModel){
+        self.reviewPostModels = reviewPostModels
+        self.userModel = userModel
+        self.yourPostMainView.getModel(reviewPostModels: reviewPostModels,userModel: userModel)
+    }
 }
