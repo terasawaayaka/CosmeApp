@@ -17,6 +17,8 @@ class YourProfileViewController: BaseViewController {
     var makePostModel : MakePostModel = MakePostModel()
     var commentPostModel : CommentPostModel = CommentPostModel()
     var noticeModel: NoticeModel = NoticeModel()
+    var reviewPostModels: [ReviewPostModel] = [ReviewPostModel]()
+    
     //Outlet
     @IBOutlet weak var mainView: YourProfileMainView!
     @IBOutlet weak var headerView: HeaderView!
@@ -108,7 +110,14 @@ extension YourProfileViewController {
 //            self.userModel = userModel
 //            self.mainView.getModel(userModel: userModel)
         }
-    }
+        ReviewPostModel.reads { (reviewPostModels) in
+            //メインビューにreviewPostModelを渡す
+            self.reviewPostModels = reviewPostModels
+            self.mainView.reviewPostModels = reviewPostModels
+            self.mainView.getModelforCell(reviewPostModels: reviewPostModels, userModel: self.userModel)
+            }
+        }
+        
     func makeGetModel() {
         if makePostModel.post_user_id != "" {
             UserModel.readAt(userId: makePostModel.post_user_id) { (userModel) in

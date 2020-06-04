@@ -9,7 +9,7 @@
 import UIKit
 import PGFramework
 protocol UserSearchResultMainViewDelegate: NSObjectProtocol{
-    func touchedUserCellButton(userModel: UserModel)
+    func touchedUserCellButton(userModel: UserModel,reviewPostModel: ReviewPostModel)
 }
 extension UserSearchResultMainViewDelegate {
 }
@@ -44,9 +44,9 @@ extension UserSearchResultMainView: UITableViewDataSource {
     }
 }
 extension UserSearchResultMainView: SearchUserResultTableViewCellDelegate {
-    func touchedUserButton(userModel: UserModel) {
+    func touchedUserButton(userModel: UserModel,reviewPostModel: ReviewPostModel) {
                if let delegate = delegate {
-                delegate.touchedUserCellButton(userModel: userModel)}
+                delegate.touchedUserCellButton(userModel: userModel,reviewPostModel: reviewPostModel)}
         }
 }
 // MARK: - method

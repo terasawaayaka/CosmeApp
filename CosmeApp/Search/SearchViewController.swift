@@ -71,9 +71,10 @@ extension SearchViewController: SearchMainViewDelegate {
     
    
     //タグとかユーザーとかのセルをタッチしたら詳細画面へ遷移する
-    func touchedUserCellButton(userModel: UserModel) {
+    func touchedUserCellButton(userModel: UserModel,reviewPostModel: ReviewPostModel) {
         let searchUserResultViewController = SearchUserSelectResultViewController()
         searchUserResultViewController.userModel = userModel
+        searchUserResultViewController.reviewPostModel = reviewPostModel
         navigationController?.pushViewController(searchUserResultViewController, animated: true)
         animatorManager.navigationType = .slide_push
     }

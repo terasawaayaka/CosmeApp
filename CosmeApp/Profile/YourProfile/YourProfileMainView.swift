@@ -44,6 +44,7 @@ class YourProfileMainView: BaseView {
     @IBOutlet weak var followButton: UIButton!
     
     var isFollowButtonTouched: Bool = false
+    var reviewPostModels: [ReviewPostModel] = [ReviewPostModel]()
 }
 // MARK: - Life cycle
 extension YourProfileMainView {
@@ -98,5 +99,8 @@ extension YourProfileMainView {
         } else {
             followButton.setTitle("フォローする", for: .normal)
         }
+    }
+    func getModelforCell(reviewPostModels: [ReviewPostModel],userModel: UserModel){
+        scrollMainView.getModel(reviewPostModels: reviewPostModels,userModel: userModel)
     }
 }
