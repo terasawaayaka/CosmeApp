@@ -43,6 +43,7 @@ extension SearchUserResultTableViewCell {
     func updateCell(userModel: UserModel){
         self.userModel = userModel
         userNameLabel.text = userModel.nickname
+        
     }
 }
 

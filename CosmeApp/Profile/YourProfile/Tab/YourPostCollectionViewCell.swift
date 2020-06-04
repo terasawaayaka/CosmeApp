@@ -19,6 +19,7 @@ class YourPostCollectionViewCell: BaseCollectionViewCell {
     @IBOutlet weak var yourPostImsge: UIImageView!
     
     var reviewPostModel: ReviewPostModel = ReviewPostModel()
+    var userModel: UserModel = UserModel()
 }
 // MARK: - Life cycle
 extension YourPostCollectionViewCell {
@@ -31,7 +32,7 @@ extension YourPostCollectionViewCell {
 }
 // MARK: - method
 extension YourPostCollectionViewCell {
-    func updateCell(reviewPostModel: ReviewPostModel){
+    func updateCell(reviewPostModel: ReviewPostModel,userModel: UserModel){
        if reviewPostModel.image_paths.count != 0 {
         if let url = URL(string: reviewPostModel.image_paths[0]){
             yourPostImsge.af_setImage(withURL: url) }

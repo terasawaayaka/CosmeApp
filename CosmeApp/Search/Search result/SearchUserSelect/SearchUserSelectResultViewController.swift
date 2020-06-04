@@ -13,7 +13,7 @@ class SearchUserSelectResultViewController: BaseViewController {
     @IBOutlet weak var headerView: HeaderView!
     @IBOutlet weak var yourProfileView: YourProfileMainView!
     var userModel: UserModel = UserModel()
-    var reviewPostModel: ReviewPostModel = ReviewPostModel()
+    var reviewPostModels: [ReviewPostModel] = [ReviewPostModel]()
 }
 // MARK: - Life cycle
 extension SearchUserSelectResultViewController {
@@ -47,6 +47,7 @@ extension SearchUserSelectResultViewController {
     }
     func giveModel(){
         yourProfileView.getModel(userModel: userModel)
+        yourProfileView.getModelforCell(reviewPostModels: reviewPostModels, userModel: userModel)
         
     }
 }
