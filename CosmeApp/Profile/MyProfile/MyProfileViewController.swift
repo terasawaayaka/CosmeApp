@@ -41,13 +41,219 @@ extension MyProfileViewController {
             navigationController?.pushViewController(signUpViewController, animated: false)
         }
         getModel()
+ //       getSearchGenrehModel()
     }
 }
 // MARK: - Protocol
 extension MyProfileViewController :MyProfileMainViewDelegate{
+    func didSelectItemAtSearchGenre(indexPath: IndexPath) {
+        let makeDetailViewController = MakeDetailViewController()
+        makeDetailViewController.makePostModel = makePostModels[indexPath.row]
+        makeDetailViewController.fromProfile = true
+        navigationController?.pushViewController(makeDetailViewController, animated: true)
+        animatorManager.navigationType = .push
+    }
+    
     func didSelectItemAtGenre(indexPath: IndexPath) {
-        //タップしたときのコードを書く
+        //ジャンルをタップしたとき
         mainView.scrollMainView.genreCollectionView.isHidden = true
+        
+        switch indexPath.row {
+        case 0:
+            MakePostModel.reads { (makePostModels) in
+                let filters = makePostModels.filter { (makePostModel) -> Bool in
+                    if let uid = Auth.auth().currentUser?.uid {
+                        if makePostModel.post_user_id == uid && makePostModel.eyeshadow != "" {
+                        return true
+                    } else {
+                        return false
+                    }
+                    } else {
+                        return false
+                    }
+                }
+                self.mainView.scrollMainView.searchGenreCollectionView.getModel(makePostModels: filters)
+                self.makePostModels = filters
+            }
+        case 1:
+            MakePostModel.reads { (makePostModels) in
+                let filters = makePostModels.filter { (makePostModel) -> Bool in
+                    if let uid = Auth.auth().currentUser?.uid {
+                        if makePostModel.post_user_id == uid && makePostModel.eyeliner != "" {
+                        return true
+                    } else {
+                        return false
+                    }
+                    } else {
+                        return false
+                    }
+                }
+                self.mainView.scrollMainView.searchGenreCollectionView.getModel(makePostModels: filters)
+                self.makePostModels = filters
+            }
+        case 2:
+            MakePostModel.reads { (makePostModels) in
+                let filters = makePostModels.filter { (makePostModel) -> Bool in
+                    if let uid = Auth.auth().currentUser?.uid {
+                        if makePostModel.post_user_id == uid && makePostModel.mascara != "" {
+                        return true
+                    } else {
+                        return false
+                    }
+                    } else {
+                        return false
+                    }
+                }
+                self.mainView.scrollMainView.searchGenreCollectionView.getModel(makePostModels: filters)
+                self.makePostModels = filters
+            }
+        case 3:
+            MakePostModel.reads { (makePostModels) in
+                let filters = makePostModels.filter { (makePostModel) -> Bool in
+                    if let uid = Auth.auth().currentUser?.uid {
+                        if makePostModel.post_user_id == uid && makePostModel.colorcontact != "" {
+                        return true
+                    } else {
+                        return false
+                    }
+                    } else {
+                        return false
+                    }
+                }
+                self.mainView.scrollMainView.searchGenreCollectionView.getModel(makePostModels: filters)
+                self.makePostModels = filters
+            }
+        case 4:
+            MakePostModel.reads { (makePostModels) in
+                let filters = makePostModels.filter { (makePostModel) -> Bool in
+                    if let uid = Auth.auth().currentUser?.uid {
+                        if makePostModel.post_user_id == uid && makePostModel.eyebrow != "" {
+                        return true
+                    } else {
+                        return false
+                    }
+                    } else {
+                        return false
+                    }
+                }
+                self.mainView.scrollMainView.searchGenreCollectionView.getModel(makePostModels: filters)
+                self.makePostModels = filters
+            }
+        case 5:
+            MakePostModel.reads { (makePostModels) in
+                let filters = makePostModels.filter { (makePostModel) -> Bool in
+                    if let uid = Auth.auth().currentUser?.uid {
+                        if makePostModel.post_user_id == uid && makePostModel.basemake != "" {
+                        return true
+                    } else {
+                        return false
+                    }
+                    } else {
+                        return false
+                    }
+                }
+                self.mainView.scrollMainView.searchGenreCollectionView.getModel(makePostModels: filters)
+                self.makePostModels = filters
+            }
+        case 6:
+            MakePostModel.reads { (makePostModels) in
+                let filters = makePostModels.filter { (makePostModel) -> Bool in
+                    if let uid = Auth.auth().currentUser?.uid {
+                        if makePostModel.post_user_id == uid && makePostModel.highlight != "" {
+                        return true
+                    } else {
+                        return false
+                    }
+                    } else {
+                        return false
+                    }
+                }
+                self.mainView.scrollMainView.searchGenreCollectionView.getModel(makePostModels: filters)
+                self.makePostModels = filters
+            }
+        case 7:
+            MakePostModel.reads { (makePostModels) in
+                let filters = makePostModels.filter { (makePostModel) -> Bool in
+                    if let uid = Auth.auth().currentUser?.uid {
+                        if makePostModel.post_user_id == uid && makePostModel.shading != "" {
+                        return true
+                    } else {
+                        return false
+                    }
+                    } else {
+                        return false
+                    }
+                }
+                self.mainView.scrollMainView.searchGenreCollectionView.getModel(makePostModels: filters)
+                self.makePostModels = filters
+            }
+        case 8:
+            MakePostModel.reads { (makePostModels) in
+                let filters = makePostModels.filter { (makePostModel) -> Bool in
+                    if let uid = Auth.auth().currentUser?.uid {
+                        if makePostModel.post_user_id == uid && makePostModel.cheek != "" {
+                        return true
+                    } else {
+                        return false
+                    }
+                    } else {
+                        return false
+                    }
+                }
+                self.mainView.scrollMainView.searchGenreCollectionView.getModel(makePostModels: filters)
+                self.makePostModels = filters
+            }
+        case 9:
+            MakePostModel.reads { (makePostModels) in
+                let filters = makePostModels.filter { (makePostModel) -> Bool in
+                    if let uid = Auth.auth().currentUser?.uid {
+                        if makePostModel.post_user_id == uid && makePostModel.skincare != "" {
+                        return true
+                    } else {
+                        return false
+                    }
+                    } else {
+                        return false
+                    }
+                }
+                self.mainView.scrollMainView.searchGenreCollectionView.getModel(makePostModels: filters)
+                self.makePostModels = filters
+            }
+        case 10:
+            MakePostModel.reads { (makePostModels) in
+                let filters = makePostModels.filter { (makePostModel) -> Bool in
+                    if let uid = Auth.auth().currentUser?.uid {
+                        if makePostModel.post_user_id == uid && makePostModel.lip != "" {
+                        return true
+                    } else {
+                        return false
+                    }
+                    } else {
+                        return false
+                    }
+                }
+                self.mainView.scrollMainView.searchGenreCollectionView.getModel(makePostModels: filters)
+                self.makePostModels = filters
+            }
+        case 11:
+            MakePostModel.reads { (makePostModels) in
+                let filters = makePostModels.filter { (makePostModel) -> Bool in
+                    if let uid = Auth.auth().currentUser?.uid {
+                        if makePostModel.post_user_id == uid && makePostModel.haircare != "" {
+                        return true
+                    } else {
+                        return false
+                    }
+                    } else {
+                        return false
+                    }
+                }
+                self.mainView.scrollMainView.searchGenreCollectionView.getModel(makePostModels: filters)
+                self.makePostModels = filters
+            }
+        default:
+            break
+        }
     }
     
     
@@ -134,4 +340,23 @@ extension MyProfileViewController {
             self.makePostModels = filterdMakePostModels
         }
     }
+    
+//    func getSearchGenrehModel() {
+//        MakePostModel.reads { (makePostModels) in
+//            let filterdMakePostModels = makePostModels.filter { (makePostModel) -> Bool in
+//                           if let uid = Auth.auth().currentUser?.uid {
+//                               if makePostModel.post_user_id == uid {
+//                                   return true
+//                               } else {
+//                                   return false
+//                               }
+//                           } else {
+//                               return false
+//                           }
+//                       }
+//            self.mainView.scrollMainView.searchGenreCollectionView.getModel(makePostModels: filterdMakePostModels)
+//                       self.makePostModels = filterdMakePostModels
+//        }
+//
+//    }
 }

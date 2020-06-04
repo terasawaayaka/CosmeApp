@@ -10,6 +10,7 @@ import UIKit
 import PGFramework
 protocol ScrollMainViewDelegate: NSObjectProtocol{
     func didSelectItemAtGenre(indexPath: IndexPath)
+    func didSelectItemAtSearchGenre(indexPath: IndexPath)
 }
 extension ScrollMainViewDelegate {
 }
@@ -21,6 +22,7 @@ class ScrollMainView: BaseView {
     @IBOutlet weak var bookMarkMainView: UIView!
     @IBOutlet weak var genreCollectionView: GenreCollectionView!
     @IBOutlet weak var searchGenreCollectionView: SearchGenreCollectionView!
+    
     
 }
 // MARK: - Life cycle
@@ -35,6 +37,11 @@ extension ScrollMainView:GenreCollectionViewDelegate{
     func didSelectItemAtGenre(indexPath: IndexPath) {
         if let delegate = delegate{delegate.didSelectItemAtGenre(indexPath: indexPath)}
     }
+}
+extension ScrollMainView: SearchGenreCollectionViewDelegate {
+    func didSelectItemAtSearchGenre(indexPath: IndexPath) {
+        if let delegate = delegate{delegate.didSelectItemAtSearchGenre(indexPath: indexPath)}
+    }
     
     
 }
@@ -42,5 +49,6 @@ extension ScrollMainView:GenreCollectionViewDelegate{
 extension ScrollMainView {
     func setDelegate() {
         genreCollectionView.delegate = self
+        searchGenreCollectionView.delegate = self
     }
 }

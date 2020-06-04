@@ -13,7 +13,7 @@
                 <outlet property="genreCollectionView" destination="KcX-yQ-HHN" id="eM2-YK-PNd"/>
                 <outlet property="goodMainView" destination="1sp-zw-FiG" id="mZA-fO-3vc"/>
                 <outlet property="scrollView" destination="h6B-Xc-l6M" id="rse-3R-8Vw"/>
-                <outlet property="searchGenreCollectionView" destination="9AV-3t-AuV" id="WtD-kO-hY2"/>
+                <outlet property="searchGenreCollectionView" destination="9AV-3t-AuV" id="kQE-lg-kg5"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

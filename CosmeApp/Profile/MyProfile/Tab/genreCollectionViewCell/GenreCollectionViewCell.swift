@@ -16,8 +16,6 @@ extension GenreCollectionViewCellDelegate {
 // MARK: - Property
 class GenreCollectionViewCell: BaseCollectionViewCell {
     weak var delegate: GenreCollectionViewCellDelegate? = nil
-
-
 }
 // MARK: - Life cycle
 extension GenreCollectionViewCell {
