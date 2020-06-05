@@ -20,8 +20,8 @@ class TimeLineViewController: BaseViewController {
     var reviewPostModel : ReviewPostModel = ReviewPostModel()
     
     var activityType: ActivityType = ActivityType.comment
-//    var isGood: Bool = false
-//    var isGooded: Bool = false
+    var isGood: Bool = false
+    var isGooded: Bool = false
 }
 // MARK: - Life cycle
 extension TimeLineViewController {
@@ -48,14 +48,36 @@ extension TimeLineViewController {
 extension TimeLineViewController :TimeLineMainViewDelegate {
     func goodButton(reviewPostModel: ReviewPostModel) {
         
-
-        let noticeModel : NoticeModel = NoticeModel()
         if let uid = Auth.auth().currentUser?.uid {
-            noticeModel.notice_user_id = uid
-        }
-        noticeModel.noticeType = ActivityType.good.rawValue
-        NoticeModel.create(request: noticeModel) {
-        }
+                   var isGooded: Bool = false
+                   reviewPostModel.good_users.forEach { (goodUser) in
+                       goodUser.forEach { (key,val) in
+                           if key == uid {
+                               isGood = !isGood
+                               isGooded = true
+                           }
+                       }
+                   }
+                   if isGooded == false {
+                       let noticeModel : NoticeModel = NoticeModel()
+                       if let uid = Auth.auth().currentUser?.uid {
+                           noticeModel.notice_user_id = uid
+                       }
+                       noticeModel.noticeType = ActivityType.good.rawValue
+                       NoticeModel.create(request: noticeModel) {
+                       }
+                       isGood = true
+                   }
+                   ReviewPostModel.addGoodUser(request: reviewPostModel, isGood: isGood)
+               }
+
+//        let noticeModel : NoticeModel = NoticeModel()
+//        if let uid = Auth.auth().currentUser?.uid {
+//            noticeModel.notice_user_id = uid
+//        }
+//        noticeModel.noticeType = ActivityType.good.rawValue
+//        NoticeModel.create(request: noticeModel) {
+//        }
     }
     
     func touchedIconViewButton(reviewPostModel: ReviewPostModel) {
@@ -106,15 +128,34 @@ extension TimeLineViewController {
                         if let icon = userModel.photo_path{
                             reviewPostModel.post_user_icon = icon
                         }
-                        self.reviewPostModels = reviewPostModels
-                        self.mainView.reviewGetModel(reviewPostModels:reviewPostModels)
+                        ReviewPostModel.readAt(id: reviewPostModel.id, success: { (reviewPostModel) in
+                            if let uid = Auth.auth().currentUser?.uid {
+                                var isGood: Bool = false
+                                reviewPostModel.good_users.forEach { (goodUser) in
+                                    goodUser.forEach { (key,val) in
+                                        if key == uid {
+                                            self.isGood = val
+                                            
+                                            reviewPostModel.isGood = self.isGood
+                                        }
+                                    }
+                                }
+                            }
+                            self.reviewPostModel = reviewPostModel
+                            self.mainView.reviewGetModel(reviewPostModels:reviewPostModels)
+                        }) {
+                        }
                     }
+                    
                 }else{
                     self.reviewPostModels = reviewPostModels
                     self.mainView.reviewGetModel(reviewPostModels:reviewPostModels)
                 }
+                
             }
+            
         }
+        
     }
 //    func reviewGetModel(){
 //        ReviewPostModel.reads { (reviewPostModels) in
@@ -123,26 +164,21 @@ extension TimeLineViewController {
 //        }
 //    }
     
-//    func reviewGetModel2() {
-//        ReviewPostModel.readAt(id: reviewPostModel.id, success: { (reviewPostModel) in
-//            if let uid = Auth.auth().currentUser?.uid {
-//                var isGood: Bool = false
-//                reviewPostModel.good_users.forEach { (goodUser) in
-//                    goodUser.forEach { (key,val) in
-//                        if key == uid {
-//                            self.isGood = val
-//                            self.mainView.isGoodTouched = self.isGood
-//                        }
-//                    }
-//                }
-//            }
-//            self.reviewPostModel = reviewPostModel
-//            self.mainView.reviewGetModel(reviewPostModel: reviewPostModel)
-//        }) {
-//            self
-//        }
-//    }
-    
+    func getNoticeModel() {
+        NoticeModel.reads { (noticeModels) in
+            for noticeModel in noticeModels {
+                if noticeModel.post_id == self.reviewPostModel.id {
+                    if let uid = Auth.auth().currentUser?.uid {
+                        if noticeModel.notice_user_id == uid {
+                            self.isGood = true
+                        } else {
+                            self.isGood = false
+                        }
+                    }
+                }
+            }
+        }
+    }
     
     func makeGetModel(){
         MakePostModel.reads { (makePostModels) in

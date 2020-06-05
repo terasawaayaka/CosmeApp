@@ -52,18 +52,19 @@ class TimeLineMainTableViewSecondCell: BaseTableViewCell, UIScrollViewDelegate {
         if let delegate = delegate{delegate.iconViewButton(reviewPostModel: reviewPostModel)}
     }
     @IBAction func goodButton(_ sender: UIButton) {
-        delegate?.goodButton(reviewPostModel: reviewPostModel)
-        updateGood()
         UIView.animate(withDuration: 0.5) {
-            self.goodButton.transform = CGAffineTransform(rotationAngle: CGFloat.pi/180*180)
-            self.goodButton.transform = CGAffineTransform(rotationAngle: CGFloat.pi/180*360)
-        }
+                   self.goodButton.transform = CGAffineTransform(rotationAngle: CGFloat.pi/180*180)
+                   self.goodButton.transform = CGAffineTransform(rotationAngle: CGFloat.pi/180*360)
+               }
+        delegate?.goodButton(reviewPostModel: reviewPostModel)
+//        updateGood()
+       
     }
     @IBOutlet weak var goodButton: UIButton!
     @IBAction func favoriteButton(_ sender: UIButton) {
     }
     
-    var isGoodButtonTouched : Bool = false
+//    var isGoodButtonTouched : Bool = false
 }
 // MARK: - Life cycle
 extension TimeLineMainTableViewSecondCell {
@@ -187,16 +188,25 @@ extension TimeLineMainTableViewSecondCell {
                 iconView.af_setImage(for: .normal, url: url)
             }
         }
-    }
-    func updateGood() {
-        isGoodButtonTouched = !isGoodButtonTouched
-        if isGoodButtonTouched {
-            let image = UIImage(named: "good")
-            goodButton.setImage(image, for: .normal)
-            
+        if reviewPostModel.isGood == true {
+           let image = UIImage(named: "good")
+                goodButton.setImage(image, for: .normal)
         } else {
             let image = UIImage(named: "notgood")
             goodButton.setImage(image, for: .normal)
+        
         }
+        
     }
+//    func updateGood() {
+//        isGoodButtonTouched = !isGoodButtonTouched
+//        if isGoodButtonTouched {
+//            let image = UIImage(named: "good")
+//            goodButton.setImage(image, for: .normal)
+//        } else {
+//            let image = UIImage(named: "notgood")
+//            goodButton.setImage(image, for: .normal)
+//        }
+//    }
+
 }

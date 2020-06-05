@@ -58,6 +58,7 @@ extension TimeLineMainView :UITableViewDataSource{
         default:
             secondCell.delegate = self
             secondCell.updateCell(reviewPostModel: reviewPostModels[indexPath.row - 1])
+//            secondCell.updateGood()
             return secondCell
         }
     }
