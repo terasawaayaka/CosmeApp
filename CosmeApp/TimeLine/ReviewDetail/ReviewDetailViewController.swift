@@ -17,6 +17,7 @@ class ReviewDetailViewController: BaseViewController, UITableViewDelegate {
     var commentPostModels : [CommentPostModel] = [CommentPostModel]()
     var reviewPostModel : ReviewPostModel = ReviewPostModel()
     var noticeModel: NoticeModel = NoticeModel()
+    var userModel: UserModel = UserModel()
     
     @IBOutlet weak var headerView: HeaderView!
     @IBOutlet weak var mainView: ReviewDetailMainView!
@@ -187,8 +188,15 @@ extension ReviewDetailViewController {
 //    }
     func reviewGetModel(){
         ReviewPostModel.readAt(id: reviewPostModel.id, success: { (reviewPostModel) in
-            self.reviewPostModel = reviewPostModel
-            self.mainView.reviewGetModel(reviewPostModel: reviewPostModel)
+            
+            UserModel.readAt(userId: reviewPostModel.post_user_id) { (userModel) in
+                if let name = userModel.nickname {
+                    reviewPostModel.post_user_name = name }
+                if let icon = userModel.photo_path{
+                    reviewPostModel.post_user_icon = icon }
+                self.reviewPostModel = reviewPostModel
+                self.mainView.reviewGetModel(reviewPostModel: reviewPostModel)
+            }
         }) {
             self.navigationController?.popViewController(animated: true)
             self.animatorManager.navigationType = .slide_pop
