@@ -22,6 +22,7 @@ class ReviewPostModel{
     var image_paths: [String] = [String]()
     var review_num: Int = Int() //星の数
     var good_users: [[String: Bool]] = [[String: Bool]]() //いいねした人の一覧
+    var isGood: Bool = false //いいねしたか否か
     
     //ユーザーの情報
     var post_user_name: String = String()

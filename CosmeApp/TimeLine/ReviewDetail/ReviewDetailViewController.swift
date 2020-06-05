@@ -113,6 +113,8 @@ extension ReviewDetailViewController:ReviewDetailMainViewDelegate {
         if let uid = Auth.auth().currentUser?.uid {
             noticeModel.notice_user_id = uid
         }
+        noticeModel.post_id = reviewPostModel.id
+        noticeModel.notice_my_id = reviewPostModel.post_user_id
         noticeModel.noticeType = ActivityType.comment.rawValue
         NoticeModel.create(request: noticeModel) {
         }
@@ -149,6 +151,7 @@ extension ReviewDetailViewController:ReviewDetailMainViewDelegate {
                     noticeModel.notice_user_id = uid
                 }
                 noticeModel.post_id = reviewPostModel.id
+                noticeModel.notice_my_id = reviewPostModel.post_user_id
                 noticeModel.noticeType = ActivityType.good.rawValue
                 NoticeModel.create(request: noticeModel) {
                 }

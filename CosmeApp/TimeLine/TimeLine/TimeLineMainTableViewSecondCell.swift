@@ -54,11 +54,12 @@ class TimeLineMainTableViewSecondCell: BaseTableViewCell, UIScrollViewDelegate {
     }
     
     @IBAction func goodButton(_ sender: UIButton) {
-        delegate?.goodButton(reviewPostModel: reviewPostModel)
-        updateGood()
         UIView.animate(withDuration: 0.5) {
-            self.goodButton.transform = CGAffineTransform(rotationAngle: CGFloat.pi/180*180)
-            self.goodButton.transform = CGAffineTransform(rotationAngle: CGFloat.pi/180*360)
+                   self.goodButton.transform = CGAffineTransform(rotationAngle: CGFloat.pi/180*180)
+                   self.goodButton.transform = CGAffineTransform(rotationAngle: CGFloat.pi/180*360)
+               }
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5) {
+            self.delegate?.goodButton(reviewPostModel: self.reviewPostModel)
         }
     }
     @IBOutlet weak var goodButton: UIButton!
@@ -198,16 +199,13 @@ extension TimeLineMainTableViewSecondCell {
                 iconView.af_setImage(for: .normal, url: url)
             }
         }
-    }
-    func updateGood() {
-        isGoodButtonTouched = !isGoodButtonTouched
-        if isGoodButtonTouched {
-            let image = UIImage(named: "good")
-            goodButton.setImage(image, for: .normal)
-            
+        if reviewPostModel.isGood == true {
+           let image = UIImage(named: "good")
+                goodButton.setImage(image, for: .normal)
         } else {
             let image = UIImage(named: "notgood")
             goodButton.setImage(image, for: .normal)
+        
         }
     }
     func updateFavorite(){

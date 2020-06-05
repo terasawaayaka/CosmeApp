@@ -23,6 +23,8 @@ class UserModel{
     var gender: String?
     var photo_path: String?
     var updated: Int? // firebaseではDate型保存不可のため、yyyyMMddHHmmssのIntとする。
+    
+    var follow_users: [[String: Bool]] = [[String: Bool]]() //フォローした人の一覧
 }
 // MARK: - Parse
 extension UserModel {
@@ -36,6 +38,11 @@ extension UserModel {
         model.gender = data["gender"] as? String
         model.photo_path = data["photo_path"] as? String
         model.updated = data["updated"] as? Int
+        if let follow_users = data["follow_users"] as? [String: Bool] {
+                   follow_users.forEach { (key, value) in
+                       model.follow_users.append([key:value])
+                   }
+               }
         return model
     }
     static func setParameter(request: UserModel) -> [String: Any] {
@@ -239,5 +246,11 @@ extension UserModel {
             success(text)
         }
     }
+//    static func addFollowUser(request: UserModel,isFollow: Bool) {
+//        if let uid = Auth.auth().currentUser?.uid {
+//            let dbRef = Database.database().reference().child(PATH).child(request.id).child("follow_users").child(uid)
+//            dbRef.setValue(isFollow)
+//        }
+//    }
 }
 
