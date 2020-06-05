@@ -103,6 +103,14 @@ extension MakeDetailViewController {
     }
     func makeGetModel(){
         MakePostModel.readAt(id: makePostModel.id, success: { (makePostModel) in
+            UserModel.readAt(userId: makePostModel.post_user_id) { (userModel) in
+                if let name = userModel.nickname {
+                    makePostModel.post_user_name = name }
+                if let icon = userModel.photo_path{
+                    makePostModel.post_user_icon = icon }
+                self.makePostModel = makePostModel
+                self.mainView.makeGetModel(makePostModel: makePostModel)
+            }
             self.makePostModel = makePostModel
             self.mainView.makeGetModel(makePostModel: makePostModel)
         }) {
