@@ -208,6 +208,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="categoryLabel" destination="jWQ-Qu-YRn" id="Jzk-3i-BOB"/>
+                <outlet property="favoriteButton" destination="H22-jq-AEz" id="EZT-4e-b09"/>
                 <outlet property="fifthStarImage" destination="nAD-Jw-hG3" id="XqX-OW-tr6"/>
                 <outlet property="firstImageView" destination="NPL-Q1-5DZ" id="nI9-O5-doY"/>
                 <outlet property="firstStarImage" destination="pXe-aA-LnZ" id="iXd-jY-frA"/>

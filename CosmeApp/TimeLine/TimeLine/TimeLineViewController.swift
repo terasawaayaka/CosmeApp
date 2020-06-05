@@ -45,7 +45,12 @@ extension TimeLineViewController {
     }
 }
 // MARK: - Protocol
-extension TimeLineViewController :TimeLineMainViewDelegate {
+extension TimeLineViewController :TimeLineMainViewDelegate{
+    func favoriteButton(reviewPostModel: ReviewPostModel) {
+        //TODO お気に入り機能
+    }
+    
+    
     func goodButton(reviewPostModel: ReviewPostModel) {
         
 

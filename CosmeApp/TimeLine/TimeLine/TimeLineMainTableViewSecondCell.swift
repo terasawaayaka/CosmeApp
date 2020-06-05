@@ -14,6 +14,7 @@ import FirebaseAuth
 protocol TimeLineMainTableViewSecondCellDelegate: NSObjectProtocol{
     func iconViewButton(reviewPostModel :ReviewPostModel)
     func goodButton(reviewPostModel: ReviewPostModel)
+    func favoriteButton(reviewPostModel:ReviewPostModel)
 }
 extension TimeLineMainTableViewSecondCellDelegate {
 }
@@ -51,6 +52,7 @@ class TimeLineMainTableViewSecondCell: BaseTableViewCell, UIScrollViewDelegate {
     @IBAction func iconViewButton(_ sender: UIButton) {
         if let delegate = delegate{delegate.iconViewButton(reviewPostModel: reviewPostModel)}
     }
+    
     @IBAction func goodButton(_ sender: UIButton) {
         delegate?.goodButton(reviewPostModel: reviewPostModel)
         updateGood()
@@ -60,10 +62,19 @@ class TimeLineMainTableViewSecondCell: BaseTableViewCell, UIScrollViewDelegate {
         }
     }
     @IBOutlet weak var goodButton: UIButton!
+    
     @IBAction func favoriteButton(_ sender: UIButton) {
+        if let delegate = delegate{delegate.favoriteButton(reviewPostModel: reviewPostModel)}
+        updateFavorite()
+        UIView.animate(withDuration: 0.5) {
+            self.favoriteButton.transform = CGAffineTransform(rotationAngle: CGFloat.pi/180*180)
+            self.favoriteButton.transform = CGAffineTransform(rotationAngle: CGFloat.pi/180*360)
+        }
     }
+    @IBOutlet weak var favoriteButton: UIButton!
     
     var isGoodButtonTouched : Bool = false
+    var isFavoriteButtonTouched : Bool = false
 }
 // MARK: - Life cycle
 extension TimeLineMainTableViewSecondCell {
@@ -197,6 +208,16 @@ extension TimeLineMainTableViewSecondCell {
         } else {
             let image = UIImage(named: "notgood")
             goodButton.setImage(image, for: .normal)
+        }
+    }
+    func updateFavorite(){
+        isFavoriteButtonTouched = !isFavoriteButtonTouched
+        if isFavoriteButtonTouched{
+            let image = UIImage(named: "favorite")
+            favoriteButton.setImage(image, for: .normal)
+        }else{
+            let image = UIImage(named: "notfavorite")
+            favoriteButton.setImage(image, for: .normal)
         }
     }
 }
