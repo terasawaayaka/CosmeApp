@@ -16,6 +16,8 @@ class MyProfileViewController: BaseViewController{
     var userModel: UserModel = UserModel()
     var makePostModel: MakePostModel = MakePostModel()
     var makePostModels: [MakePostModel] = [MakePostModel]()
+    var noticeModel: [NoticeModel] = [NoticeModel]()
+    var noticeModels: [NoticeModel] = [NoticeModel]()
     
     //Outlet
     @IBOutlet weak var mainView: MyProfileMainView!
@@ -41,11 +43,28 @@ extension MyProfileViewController {
             navigationController?.pushViewController(signUpViewController, animated: false)
         }
         getModel()
- //       getSearchGenrehModel()
     }
 }
 // MARK: - Protocol
 extension MyProfileViewController :MyProfileMainViewDelegate{
+    func didSelectItemAtGood(indexPath: IndexPath) {
+//        NoticeModel.reads { (noticeModels) in
+//            let goodFilters = noticeModels.filter { (noticeModel) -> Bool in
+//                if let uid = Auth.auth().currentUser?.uid {
+//                    if noticeModel.noticeType == "いいね" && {
+//                        return true
+//                        } else {
+//                        return false
+//                    }
+//                } else {
+//                    return false
+//                }
+//            }
+//            self.mainView.scrollMainView.goodCollectionView.getModel(noticeModels: goodFilters)
+//            self.noticeModels = goodFilters
+//        }
+    }
+    
     func didSelectItemAtSearchGenre(indexPath: IndexPath) {
         let makeDetailViewController = MakeDetailViewController()
         makeDetailViewController.makePostModel = makePostModels[indexPath.row]
@@ -340,23 +359,4 @@ extension MyProfileViewController {
             self.makePostModels = filterdMakePostModels
         }
     }
-    
-//    func getSearchGenrehModel() {
-//        MakePostModel.reads { (makePostModels) in
-//            let filterdMakePostModels = makePostModels.filter { (makePostModel) -> Bool in
-//                           if let uid = Auth.auth().currentUser?.uid {
-//                               if makePostModel.post_user_id == uid {
-//                                   return true
-//                               } else {
-//                                   return false
-//                               }
-//                           } else {
-//                               return false
-//                           }
-//                       }
-//            self.mainView.scrollMainView.searchGenreCollectionView.getModel(makePostModels: filterdMakePostModels)
-//                       self.makePostModels = filterdMakePostModels
-//        }
-//
-//    }
 }

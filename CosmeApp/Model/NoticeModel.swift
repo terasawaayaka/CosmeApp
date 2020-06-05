@@ -17,13 +17,15 @@ class NoticeModel {
     var comment: String = String() //コメント
     var image_paths: [String] = [String]()
     var noticeType: String = String()
-    var post_id: String = String()
+    var post_id: String = String() //反応があった投稿
     var post_icon: String = String()
+   
     
     //ユーザーの情報
-    var notice_user_name: String = String()
+    var notice_user_name: String = String() //コメントフォローいいねをした人の名前
     var notice_user_id: String = String()
     var notice_user_icon: String?
+    var notice_my_id: String = String() //コメントフォローいいねをされた人のid
 }
 
 extension NoticeModel {
@@ -35,6 +37,7 @@ extension NoticeModel {
         if let image_paths = data["image_paths"] as? [String] {model.image_paths = image_paths}
         if let post_id = data["post_id"] as? String {model.post_id = post_id}
         if let notice_user_id = data["notice_user_id"] as? String {model.notice_user_id = notice_user_id}
+        if let notice_my_id = data ["notice_my_id"] as? String {model.notice_my_id = notice_my_id}
         return model
     }
 }
@@ -49,6 +52,7 @@ extension NoticeModel {
         parameter["image_paths"] = request.image_paths
         parameter["post_id"] = request.post_id
         parameter["notice_user_id"] = request.notice_user_id
+        parameter["notice_my_id"] = request.notice_my_id
         return parameter
     }
 }

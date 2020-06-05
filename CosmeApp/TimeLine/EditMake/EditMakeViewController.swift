@@ -47,19 +47,45 @@ extension EditMakeViewController :HeaderViewDelegate{
         dismiss(animated: true, completion: nil)
     }
     func touchedRightButton(_ sender: UIButton) {
-        mainView.basemakeTextField.text = makePostModel.basemake
-        mainView.shadingTextField.text = makePostModel.shading
-        mainView.highLightTextField.text = makePostModel.highlight
-        mainView.cheekTextField.text = makePostModel.cheek
-        mainView.eyeshadowTextField.text = makePostModel.eyeshadow
-        mainView.eyeLinerTextField.text = makePostModel.eyeliner
-        mainView.mascaraTextField.text = makePostModel.mascara
-        mainView.colorcontactTextField.text = makePostModel.colorcontact
-        mainView.eyebrowTextField.text = makePostModel.eyebrow
-        mainView.lipTextField.text = makePostModel.lip
-        mainView.haircareTextField.text = makePostModel.haircare
-        mainView.skincareTextField.text = makePostModel.skincare
-        mainView.processTextView.text = makePostModel.process
+        if let text = mainView.basemakeTextField.text {
+            makePostModel.basemake = text
+               }
+        if let text = mainView.shadingTextField.text{
+            makePostModel.shading = text
+        }
+        if let text = mainView.highLightTextField.text{
+            makePostModel.highlight = text
+        }
+        if let text = mainView.cheekTextField.text{
+            makePostModel.cheek = text
+        }
+        if let text = mainView.eyeshadowTextField.text{
+            makePostModel.eyeshadow = text
+        }
+        if let text = mainView.eyeLinerTextField.text{
+            makePostModel.eyeliner = text
+        }
+        if let text = mainView.mascaraTextField.text{
+            makePostModel.mascara = text
+        }
+        if let text = mainView.colorcontactTextField.text{
+            makePostModel.colorcontact = text
+        }
+        if let text = mainView.eyebrowTextField.text{
+            makePostModel.eyebrow = text
+        }
+        if let text = mainView.lipTextField.text{
+            makePostModel.lip = text
+        }
+        if let text = mainView.haircareTextField.text{
+            makePostModel.haircare = text
+        }
+        if let text = mainView.skincareTextField.text{
+            makePostModel.skincare = text
+        }
+        if let text = mainView.processTextView.text{
+            makePostModel.process = text
+        }
         var images : [UIImage] = []
         if let image = mainView.makeImage.image{
             images.append(image)

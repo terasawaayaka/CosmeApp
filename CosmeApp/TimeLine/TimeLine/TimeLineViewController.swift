@@ -20,6 +20,8 @@ class TimeLineViewController: BaseViewController {
     var reviewPostModel : ReviewPostModel = ReviewPostModel()
     
     var activityType: ActivityType = ActivityType.comment
+//    var isGood: Bool = false
+//    var isGooded: Bool = false
 }
 // MARK: - Life cycle
 extension TimeLineViewController {
@@ -39,14 +41,21 @@ extension TimeLineViewController {
         }
         reviewGetModel()
         makeGetModel()
+//        getNoticeModel()
     }
 }
 // MARK: - Protocol
 extension TimeLineViewController :TimeLineMainViewDelegate {
     func goodButton(reviewPostModel: ReviewPostModel) {
         
-        activityType = ActivityType.good
-       
+
+        let noticeModel : NoticeModel = NoticeModel()
+        if let uid = Auth.auth().currentUser?.uid {
+            noticeModel.notice_user_id = uid
+        }
+        noticeModel.noticeType = ActivityType.good.rawValue
+        NoticeModel.create(request: noticeModel) {
+        }
     }
     
     func touchedIconViewButton(reviewPostModel: ReviewPostModel) {
@@ -113,6 +122,27 @@ extension TimeLineViewController {
 //            self.reviewPostModels = reviewPostModels
 //        }
 //    }
+    
+//    func reviewGetModel2() {
+//        ReviewPostModel.readAt(id: reviewPostModel.id, success: { (reviewPostModel) in
+//            if let uid = Auth.auth().currentUser?.uid {
+//                var isGood: Bool = false
+//                reviewPostModel.good_users.forEach { (goodUser) in
+//                    goodUser.forEach { (key,val) in
+//                        if key == uid {
+//                            self.isGood = val
+//                            self.mainView.isGoodTouched = self.isGood
+//                        }
+//                    }
+//                }
+//            }
+//            self.reviewPostModel = reviewPostModel
+//            self.mainView.reviewGetModel(reviewPostModel: reviewPostModel)
+//        }) {
+//            self
+//        }
+//    }
+    
     
     func makeGetModel(){
         MakePostModel.reads { (makePostModels) in

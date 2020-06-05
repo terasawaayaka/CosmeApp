@@ -15,6 +15,7 @@ extension GoodCollectionViewCellDelegate {
 // MARK: - Property
 class GoodCollectionViewCell: BaseCollectionViewCell {
     weak var delegate: GoodCollectionViewCellDelegate? = nil
+    @IBOutlet weak var imageView: UIImageView!
 }
 // MARK: - Life cycle
 extension GoodCollectionViewCell {
@@ -27,4 +28,16 @@ extension GoodCollectionViewCell {
 }
 // MARK: - method
 extension GoodCollectionViewCell {
+    func updateCell(noticeModel:NoticeModel) {
+        switch noticeModel.image_paths.count {
+        case 0:
+            imageView.image = UIImage(named: "noimage.png")
+        case 1:
+            if let url = URL(string: noticeModel.image_paths[0]){
+                imageView.af_setImage(withURL: url)
+            }
+        default:
+            break
+        }
+    }
 }
