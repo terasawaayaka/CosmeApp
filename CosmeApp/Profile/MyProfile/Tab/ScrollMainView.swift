@@ -11,6 +11,7 @@ import PGFramework
 protocol ScrollMainViewDelegate: NSObjectProtocol{
     func didSelectItemAtGenre(indexPath: IndexPath)
     func didSelectItemAtSearchGenre(indexPath: IndexPath)
+    func didSelectItemAtGood(indexPath: IndexPath)
 }
 extension ScrollMainViewDelegate {
 }
@@ -18,8 +19,8 @@ extension ScrollMainViewDelegate {
 class ScrollMainView: BaseView {
     weak var delegate: ScrollMainViewDelegate? = nil
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var goodMainView: UIView!
-    @IBOutlet weak var bookMarkMainView: UIView!
+    @IBOutlet weak var goodCollectionView: GoodCollectionView!
+    @IBOutlet weak var bookMarkCollectionView: BookmarkCollectionView!
     @IBOutlet weak var genreCollectionView: GenreCollectionView!
     @IBOutlet weak var searchGenreCollectionView: SearchGenreCollectionView!
     
@@ -33,7 +34,7 @@ extension ScrollMainView {
     }
 }
 // MARK: - Protocol
-extension ScrollMainView:GenreCollectionViewDelegate{
+extension ScrollMainView: GenreCollectionViewDelegate {
     func didSelectItemAtGenre(indexPath: IndexPath) {
         if let delegate = delegate{delegate.didSelectItemAtGenre(indexPath: indexPath)}
     }
@@ -41,6 +42,11 @@ extension ScrollMainView:GenreCollectionViewDelegate{
 extension ScrollMainView: SearchGenreCollectionViewDelegate {
     func didSelectItemAtSearchGenre(indexPath: IndexPath) {
         if let delegate = delegate{delegate.didSelectItemAtSearchGenre(indexPath: indexPath)}
+    }
+}
+extension ScrollMainView: GoodCollectionViewDelegate {
+    func didSelectItemAtGood(indexPath: IndexPath) {
+        if let delegate = delegate{delegate.didSelectItemAtGood(indexPath: indexPath)}
     }
     
     
@@ -50,5 +56,6 @@ extension ScrollMainView {
     func setDelegate() {
         genreCollectionView.delegate = self
         searchGenreCollectionView.delegate = self
+        goodCollectionView.delegate = self
     }
 }
