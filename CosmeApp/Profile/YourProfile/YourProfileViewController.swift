@@ -22,7 +22,7 @@ class YourProfileViewController: BaseViewController {
     @IBOutlet weak var headerView: HeaderView!
     
     var fromPost: Bool = false
-    var isFollowed: Bool = false
+    var isFollowd: Bool = false
 }
 // MARK: - Life cycle
 extension YourProfileViewController {
@@ -40,7 +40,7 @@ extension YourProfileViewController {
         makeGetModel()
         commentGetModel()
         noticeGetModel()
-        getNoticeModels()
+//        getNoticeModels()
     }
 }
 // MARK: - Protocol
@@ -61,8 +61,9 @@ extension YourProfileViewController :YourProfileMainViewDelegate{
         if let uid = Auth.auth().currentUser?.uid {
             noticeModel.notice_user_id = uid
         }
+        noticeModel.notice_my_id = reviewPostModel.post_user_id
         noticeModel.noticeType = ActivityType.follow.rawValue
-        if isFollowed == false {
+        if isFollowd == false {
             NoticeModel.create(request: noticeModel) {
             }
         }
@@ -159,9 +160,9 @@ extension YourProfileViewController {
             for noticeModel in noticeModels {
                 if let uid = Auth.auth().currentUser?.uid {
                     if noticeModel.notice_user_id == uid {
-                        self.isFollowed = true
+                        self.isFollowd = true
                     } else {
-                        self.isFollowed = false
+                        self.isFollowd = false
                     }
                     
                 }
