@@ -17,6 +17,7 @@ protocol MyProfileMainViewDelegate: NSObjectProtocol{
     func didSelectItemAt(indexPath: IndexPath)
     func didSelectItemAtGenre(indexPath: IndexPath)
     func didSelectItemAtSearchGenre(indexPath: IndexPath)
+    func didSelectItemAtGood(indexPath: IndexPath)
 }
 extension MyProfileMainViewDelegate {
 }
@@ -79,6 +80,10 @@ extension MyProfileMainView: UICollectionViewDelegate{
     }
 }
 extension MyProfileMainView:ScrollMainViewDelegate{
+    func didSelectItemAtGood(indexPath: IndexPath) {
+        if let delegate = delegate{delegate.didSelectItemAtGood(indexPath: indexPath)}
+    }
+    
     func didSelectItemAtSearchGenre(indexPath: IndexPath) {
         if let delegate = delegate{delegate.didSelectItemAtSearchGenre(indexPath: indexPath)}
     }

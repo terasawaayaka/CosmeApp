@@ -9,6 +9,7 @@
 import UIKit
 import PGFramework
 protocol GoodCollectionViewDelegate: NSObjectProtocol{
+    func didSelectItemAtGood(indexPath: IndexPath)
 }
 extension GoodCollectionViewDelegate {
 }
@@ -17,6 +18,8 @@ class GoodCollectionView: BaseView {
     weak var delegate: GoodCollectionViewDelegate? = nil
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
+    
+    var noticeModels: [NoticeModel] = [NoticeModel]()
 }
 // MARK: - Life cycle
 extension GoodCollectionView {
@@ -31,18 +34,28 @@ extension GoodCollectionView {
 // MARK: - Protocol
 extension GoodCollectionView :UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 9
+        return noticeModels.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GoodCollectionViewCell", for: indexPath) as? GoodCollectionViewCell else {return UICollectionViewCell()}
+        cell.updateCell(noticeModel: noticeModels[indexPath.row])
         return cell
     }
     
+}
+extension GoodCollectionView: UICollectionViewDelegate{
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let delegate = delegate{delegate.didSelectItemAtGood(indexPath:indexPath)}
+    }
 }
 // MARK: - method
 extension GoodCollectionView {
     func setDelegate() {
         collectionView.dataSource = self
+    }
+    func getModel(noticeModels: [NoticeModel]) {
+        self.noticeModels = noticeModels
+        collectionView.reloadData()
     }
 }

@@ -16,8 +16,10 @@ extension GenreCollectionViewDelegate {
 // MARK: - Property
 class GenreCollectionView: BaseView {
     weak var delegate: GenreCollectionViewDelegate? = nil
+    //Outlet
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
+    
 }
 // MARK: - Life cycle
 extension GenreCollectionView {

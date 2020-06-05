@@ -15,6 +15,7 @@ protocol TimeLineMainViewDelegate: NSObjectProtocol{
     func didSelectCollectionViewCell(indexPath:IndexPath)
     func touchedIconViewButton(reviewPostModel:ReviewPostModel)
     func goodButton(reviewPostModel: ReviewPostModel)
+    func favoriteButton(reviewPostModel:ReviewPostModel)
 }
 extension TimeLineMainViewDelegate {
 }
@@ -76,6 +77,10 @@ extension TimeLineMainView:TimeLineMainTableViewCellDelegate {
 }
 
 extension TimeLineMainView:TimeLineMainTableViewSecondCellDelegate {
+    func favoriteButton(reviewPostModel: ReviewPostModel) {
+        if let delegate = delegate{delegate.favoriteButton(reviewPostModel: reviewPostModel)}
+    }
+    
     func goodButton(reviewPostModel: ReviewPostModel) {
         delegate?.goodButton(reviewPostModel: reviewPostModel)
     }

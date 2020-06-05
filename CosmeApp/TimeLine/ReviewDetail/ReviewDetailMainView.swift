@@ -126,6 +126,17 @@ extension ReviewDetailMainView {
     }
     func reviewGetModel(reviewPostModel:ReviewPostModel){
         self.reviewPostModel = reviewPostModel
+      
+        if reviewPostModel.post_user_name == ""{
+            userName.text = "メンバーがいません"
+        }else{
+            userName.text = reviewPostModel.post_user_name
+        }
+        if let photo_path = reviewPostModel.post_user_icon{
+            if let url = URL(string: photo_path){
+                iconView.af_setImage(for: .normal, url: url)
+            }
+        }
         updateGood()
     }
     
@@ -147,5 +158,4 @@ extension ReviewDetailMainView {
             goodButton.setImage(image, for: .normal)
         }
     }
-    
 }
