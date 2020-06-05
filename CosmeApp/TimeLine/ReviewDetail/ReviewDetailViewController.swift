@@ -43,6 +43,7 @@ extension ReviewDetailViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        reviewGetModel()
         commentGetModel()
         reviewUpdateView()
         reviewGetModel()
