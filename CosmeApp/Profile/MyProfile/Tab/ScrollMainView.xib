@@ -9,9 +9,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScrollMainView" customModule="CosmeApp" customModuleProvider="target">
             <connections>
-                <outlet property="bookMarkMainView" destination="OTp-xI-1ar" id="XSg-VG-7eI"/>
+                <outlet property="bookMarkCollectionView" destination="OTp-xI-1ar" id="WTs-vh-GiC"/>
                 <outlet property="genreCollectionView" destination="KcX-yQ-HHN" id="eM2-YK-PNd"/>
-                <outlet property="goodMainView" destination="1sp-zw-FiG" id="mZA-fO-3vc"/>
+                <outlet property="goodCollectionView" destination="1sp-zw-FiG" id="hQc-dR-dnp"/>
                 <outlet property="scrollView" destination="h6B-Xc-l6M" id="rse-3R-8Vw"/>
                 <outlet property="searchGenreCollectionView" destination="9AV-3t-AuV" id="kQE-lg-kg5"/>
             </connections>
