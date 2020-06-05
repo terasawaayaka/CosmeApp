@@ -24,6 +24,7 @@ class YourProfileViewController: BaseViewController {
     @IBOutlet weak var headerView: HeaderView!
     
     var fromPost: Bool = false
+    var isFollow: Bool = false
     var isFollowd: Bool = false
 }
 // MARK: - Life cycle
@@ -66,16 +67,32 @@ extension YourProfileViewController :YourProfileMainViewDelegate{
     func followButton() {
         mainView.isFollowButtonTouched = !mainView.isFollowButtonTouched
         mainView.updateFollow()
-        let noticeModel : NoticeModel = NoticeModel()
-        if let uid = Auth.auth().currentUser?.uid {
-            noticeModel.notice_user_id = uid
-        }
-        noticeModel.notice_my_id = reviewPostModel.post_user_id
-        noticeModel.noticeType = ActivityType.follow.rawValue
-        if isFollowd == false {
-            NoticeModel.create(request: noticeModel) {
-            }
-        }
+//
+//        if let uid = Auth.auth().currentUser?.uid {
+//            var isFollowd: Bool = false
+//            userModel.follow_users.forEach { (goodUser) in
+//                goodUser.forEach { (key,val) in
+//                    if key == uid {
+//                        isFollow = !isFollow
+//                        isFollowd = true
+//                    }
+//                }
+//            }
+//            if isFollowd == false {
+//                let noticeModel : NoticeModel = NoticeModel()
+//                if let uid = Auth.auth().currentUser?.uid {
+//                    noticeModel.notice_user_id = uid
+//                }
+//                noticeModel.notice_my_id = reviewPostModel.post_user_id
+//                noticeModel.noticeType = ActivityType.follow.rawValue
+//                NoticeModel.create(request: noticeModel) {
+//
+//                }
+//                isFollow = true
+//            }
+//            UserModel.addFollowUser(request:userModel,isFollow: isFollow)
+//        }
+//
     }
     
 }

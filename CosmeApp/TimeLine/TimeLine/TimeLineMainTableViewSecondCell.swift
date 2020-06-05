@@ -56,15 +56,13 @@ class TimeLineMainTableViewSecondCell: BaseTableViewCell, UIScrollViewDelegate {
                    self.goodButton.transform = CGAffineTransform(rotationAngle: CGFloat.pi/180*180)
                    self.goodButton.transform = CGAffineTransform(rotationAngle: CGFloat.pi/180*360)
                }
-        delegate?.goodButton(reviewPostModel: reviewPostModel)
-//        updateGood()
-       
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5) {
+            self.delegate?.goodButton(reviewPostModel: self.reviewPostModel)
+        }
     }
     @IBOutlet weak var goodButton: UIButton!
     @IBAction func favoriteButton(_ sender: UIButton) {
     }
-    
-//    var isGoodButtonTouched : Bool = false
 }
 // MARK: - Life cycle
 extension TimeLineMainTableViewSecondCell {
@@ -196,17 +194,5 @@ extension TimeLineMainTableViewSecondCell {
             goodButton.setImage(image, for: .normal)
         
         }
-        
     }
-//    func updateGood() {
-//        isGoodButtonTouched = !isGoodButtonTouched
-//        if isGoodButtonTouched {
-//            let image = UIImage(named: "good")
-//            goodButton.setImage(image, for: .normal)
-//        } else {
-//            let image = UIImage(named: "notgood")
-//            goodButton.setImage(image, for: .normal)
-//        }
-//    }
-
 }

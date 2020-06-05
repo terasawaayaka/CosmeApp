@@ -41,7 +41,7 @@ extension TimeLineViewController {
         }
         reviewGetModel()
         makeGetModel()
-//        getNoticeModel()
+        getNoticeModel()
     }
 }
 // MARK: - Protocol
@@ -49,35 +49,30 @@ extension TimeLineViewController :TimeLineMainViewDelegate {
     func goodButton(reviewPostModel: ReviewPostModel) {
         
         if let uid = Auth.auth().currentUser?.uid {
-                   var isGooded: Bool = false
-                   reviewPostModel.good_users.forEach { (goodUser) in
-                       goodUser.forEach { (key,val) in
-                           if key == uid {
-                               isGood = !isGood
-                               isGooded = true
-                           }
-                       }
-                   }
-                   if isGooded == false {
-                       let noticeModel : NoticeModel = NoticeModel()
-                       if let uid = Auth.auth().currentUser?.uid {
-                           noticeModel.notice_user_id = uid
-                       }
-                       noticeModel.noticeType = ActivityType.good.rawValue
-                       NoticeModel.create(request: noticeModel) {
-                       }
-                       isGood = true
-                   }
-                   ReviewPostModel.addGoodUser(request: reviewPostModel, isGood: isGood)
-               }
-
-//        let noticeModel : NoticeModel = NoticeModel()
-//        if let uid = Auth.auth().currentUser?.uid {
-//            noticeModel.notice_user_id = uid
-//        }
-//        noticeModel.noticeType = ActivityType.good.rawValue
-//        NoticeModel.create(request: noticeModel) {
-//        }
+            var isGooded: Bool = false
+            reviewPostModel.good_users.forEach { (goodUser) in
+                goodUser.forEach { (key,val) in
+                    if key == uid {
+                        isGood = val
+                        isGood = !isGood
+                        isGooded = true
+                    }
+                }
+            }
+            if isGooded == false {
+                let noticeModel : NoticeModel = NoticeModel()
+                if let uid = Auth.auth().currentUser?.uid {
+                    noticeModel.notice_user_id = uid
+                }
+                noticeModel.post_id = reviewPostModel.id
+                noticeModel.notice_my_id = reviewPostModel.post_user_id
+                noticeModel.noticeType = ActivityType.good.rawValue
+                NoticeModel.create(request: noticeModel) {
+                }
+                isGood = true
+            }
+            ReviewPostModel.addGoodUser(request: reviewPostModel, isGood: isGood)
+        }
     }
     
     func touchedIconViewButton(reviewPostModel: ReviewPostModel) {
@@ -128,28 +123,22 @@ extension TimeLineViewController {
                         if let icon = userModel.photo_path{
                             reviewPostModel.post_user_icon = icon
                         }
-                        ReviewPostModel.readAt(id: reviewPostModel.id, success: { (reviewPostModel) in
                             if let uid = Auth.auth().currentUser?.uid {
                                 var isGood: Bool = false
                                 reviewPostModel.good_users.forEach { (goodUser) in
                                     goodUser.forEach { (key,val) in
                                         if key == uid {
                                             self.isGood = val
-                                            
-                                            reviewPostModel.isGood = self.isGood
+                                            reviewPostModel.isGood = val
                                         }
                                     }
                                 }
-                            }
+                        
                             self.reviewPostModel = reviewPostModel
+                            self.reviewPostModels = reviewPostModels
                             self.mainView.reviewGetModel(reviewPostModels:reviewPostModels)
-                        }) {
                         }
                     }
-                    
-                }else{
-                    self.reviewPostModels = reviewPostModels
-                    self.mainView.reviewGetModel(reviewPostModels:reviewPostModels)
                 }
                 
             }
