@@ -46,6 +46,7 @@ class ReviewDetailMainView: BaseView, UIScrollViewDelegate {
     var commentPostModels : [CommentPostModel]=[CommentPostModel]()
     var commentPostModel : CommentPostModel = CommentPostModel()
     var reviewPostModel : ReviewPostModel = ReviewPostModel()
+    var noticeModels: [NoticeModel] = [NoticeModel]()
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var iconView: UIButton!
@@ -55,6 +56,7 @@ class ReviewDetailMainView: BaseView, UIScrollViewDelegate {
     @IBOutlet weak var imageScrollView: UIScrollView!
     
     @IBOutlet weak var commentTextField: UITextField!
+    @IBOutlet weak var goodButton: UIButton!
     
     //button
     @IBAction func iconViewButton(_ sender: UIButton) {
@@ -71,9 +73,10 @@ class ReviewDetailMainView: BaseView, UIScrollViewDelegate {
             self.goodButton.transform = CGAffineTransform(rotationAngle: CGFloat.pi/180*360)
         }
     }
-    @IBOutlet weak var goodButton: UIButton!
+    
     
     var isGoodButtonTouched: Bool = false
+    
 }
 // MARK: - Life cycle
 extension ReviewDetailMainView {
@@ -82,6 +85,7 @@ extension ReviewDetailMainView {
         setDelegate()
         setLayout()
         scrollViewDidEndDecelerating(imageScrollView)
+       
         
         loadTableViewCellFromXib(tableView: tableView, cellName: "ReviewDetailMainTableViewCell")
     }
@@ -122,6 +126,7 @@ extension ReviewDetailMainView {
     }
     func reviewGetModel(reviewPostModel:ReviewPostModel){
         self.reviewPostModel = reviewPostModel
+        updateGood()
     }
     
     func setLayout(){
@@ -132,20 +137,15 @@ extension ReviewDetailMainView {
             pageControl.currentPage = Int(scrollView.contentOffset.x / imageScrollView.frame.maxX)
         }
     }
+    
     func updateGood() {
         if isGoodButtonTouched {
-           let image = UIImage(named: "good")
+            let image = UIImage(named: "good")
             goodButton.setImage(image, for: .normal)
-            let noticeModel : NoticeModel = NoticeModel()
-            if let uid = Auth.auth().currentUser?.uid {
-                noticeModel.notice_user_id = uid
-            }
-            noticeModel.noticeType = ActivityType.good.rawValue
-            NoticeModel.create(request: noticeModel) {
-            }
         } else {
             let image = UIImage(named: "notgood")
             goodButton.setImage(image, for: .normal)
         }
     }
+    
 }

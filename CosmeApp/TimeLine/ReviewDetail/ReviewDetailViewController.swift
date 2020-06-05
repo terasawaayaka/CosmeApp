@@ -23,6 +23,8 @@ class ReviewDetailViewController: BaseViewController, UITableViewDelegate {
     @IBOutlet weak var mainViewBottomMergin: NSLayoutConstraint!
     
     var activityType: ActivityType = ActivityType.comment
+    var isGood: Bool = false
+    var isGooded: Bool = false
 
 }
 // MARK: - Life cycle
@@ -43,7 +45,7 @@ extension ReviewDetailViewController {
         commentGetModel()
         reviewUpdateView()
         reviewGetModel()
-       
+        getNoticeModel()
     }
 }
 // MARK: - Protocol
@@ -129,8 +131,31 @@ extension ReviewDetailViewController:ReviewDetailMainViewDelegate {
         mainView.isGoodButtonTouched = !mainView.isGoodButtonTouched
         mainView.updateGood()
         
+        if let uid = Auth.auth().currentUser?.uid {
+            var isGooded: Bool = false
+            reviewPostModel.good_users.forEach { (goodUser) in
+                goodUser.forEach { (key,val) in
+                    if key == uid {
+                        isGood = !isGood
+                        isGooded = true
+                    }
+                }
+            }
+            if isGooded == false {
+                let noticeModel : NoticeModel = NoticeModel()
+                if let uid = Auth.auth().currentUser?.uid {
+                    noticeModel.notice_user_id = uid
+                }
+                noticeModel.post_id = reviewPostModel.id
+                noticeModel.noticeType = ActivityType.good.rawValue
+                NoticeModel.create(request: noticeModel) {
+                }
+                isGood = true
+            }
+            ReviewPostModel.addGoodUser(request:reviewPostModel,isGood: isGood)
+        }
+        
     }
-    
 }
 // MARK: - method
 extension ReviewDetailViewController {
@@ -187,11 +212,23 @@ extension ReviewDetailViewController {
 //    }
     func reviewGetModel(){
         ReviewPostModel.readAt(id: reviewPostModel.id, success: { (reviewPostModel) in
+            if let uid = Auth.auth().currentUser?.uid {
+                var isGooded: Bool = false
+                reviewPostModel.good_users.forEach { (goodUser) in
+                    goodUser.forEach { (key,val) in
+                        if key == uid {
+                            self.isGood = val
+                            self.mainView.isGoodButtonTouched = self.isGood
+                        }
+                    }
+                }
+            }
             self.reviewPostModel = reviewPostModel
             self.mainView.reviewGetModel(reviewPostModel: reviewPostModel)
         }) {
             self.navigationController?.popViewController(animated: true)
             self.animatorManager.navigationType = .slide_pop
+            
         }
     }
     
@@ -308,6 +345,23 @@ extension ReviewDetailViewController {
             }
         }
     }
+    
+    func getNoticeModel() {
+        NoticeModel.reads { (noticeModels) in
+            for noticeModel in noticeModels {
+                if noticeModel.post_id == self.reviewPostModel.id {
+                    if let uid = Auth.auth().currentUser?.uid {
+                        if noticeModel.notice_user_id == uid {
+                            self.isGood = true
+                        } else {
+                            self.isGood = false
+                    }
+                }
+            }
+        }
+    }
+}
+    
     
     
     //キーボードとテキストフィールド以外をタップでキーボードを隠す

@@ -10,6 +10,7 @@ import UIKit
 import PGFramework
 import FirebaseDatabase
 import FirebaseStorage
+import FirebaseAuth
 
 class ReviewPostModel{
     fileprivate static let PATH: String = "reviewPost"
@@ -20,6 +21,7 @@ class ReviewPostModel{
     var tag: String = String()
     var image_paths: [String] = [String]()
     var review_num: Int = Int() //星の数
+    var good_users: [[String: Bool]] = [[String: Bool]]() //いいねした人の一覧
     
     //ユーザーの情報
     var post_user_name: String = String()
@@ -38,6 +40,11 @@ extension ReviewPostModel{
         if let tag = data["tag"]as? String{model.tag = tag}
         if let image_paths = data["image_paths"]as? [String]{model.image_paths = image_paths}
         if let review_num = data["review_num"]as? Int{model.review_num = review_num}
+        if let good_users = data["good_users"] as? [String: Bool] {
+            good_users.forEach { (key, value) in
+                model.good_users.append([key:value])
+            }
+        }
         return model
     }
     
@@ -130,6 +137,12 @@ extension ReviewPostModel{
         })
         {
             print("updateエラー：")
+        }
+    }
+    static func addGoodUser(request: ReviewPostModel,isGood: Bool) {
+        if let uid = Auth.auth().currentUser?.uid {
+            let dbRef = Database.database().reference().child(PATH).child(request.id).child("good_users").child(uid)
+            dbRef.setValue(isGood)
         }
     }
 }
