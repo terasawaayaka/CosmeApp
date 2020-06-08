@@ -47,7 +47,7 @@ extension SearchUserSelectResultViewController {
     }
     func giveModel(){
         yourProfileView.getModel(userModel: userModel)
-        yourProfileView.getModelforCell(reviewPostModels: reviewPostModels, userModel: userModel)
+        yourProfileView.getModelforCell(filterdReviewPostModels: reviewPostModels, userModel: userModel)
         
     }
 }

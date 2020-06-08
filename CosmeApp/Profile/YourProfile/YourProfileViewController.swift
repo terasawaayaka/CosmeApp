@@ -120,9 +120,16 @@ extension YourProfileViewController {
         }
         ReviewPostModel.reads { (reviewPostModels) in
             //メインビューにreviewPostModelを渡す
-            self.reviewPostModels = reviewPostModels
-            self.mainView.reviewPostModels = reviewPostModels
-            self.mainView.getModelforCell(reviewPostModels: reviewPostModels, userModel: self.userModel)
+            let filterdReviewPostModels = reviewPostModels.filter { (reviewPostModel) -> Bool in
+                if reviewPostModel.post_user_id == self.userModel.id {
+                    return true
+                }else {
+                    return false
+                }
+            }
+            self.reviewPostModels = filterdReviewPostModels
+            self.mainView.reviewPostModels = filterdReviewPostModels
+            self.mainView.getModelforCell(filterdReviewPostModels: reviewPostModels, userModel: self.userModel)
             }
         }
         
