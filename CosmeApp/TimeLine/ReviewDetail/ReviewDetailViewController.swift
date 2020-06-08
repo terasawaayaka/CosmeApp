@@ -26,6 +26,8 @@ class ReviewDetailViewController: BaseViewController, UITableViewDelegate {
     var activityType: ActivityType = ActivityType.comment
     var isGood: Bool = false
     var isGooded: Bool = false
+    var isFavorite: Bool = false
+    var isFavorited: Bool = false
 
 }
 // MARK: - Life cycle
@@ -65,6 +67,28 @@ extension ReviewDetailViewController :HeaderViewDelegate{
 }
 
 extension ReviewDetailViewController:ReviewDetailMainViewDelegate {
+    func favoriteButton(reviewPostModel: ReviewPostModel) {
+        mainView.isFavoriteButtonTouched = !mainView.isFavoriteButtonTouched
+        mainView.updateFavorite()
+        
+        if let uid = Auth.auth().currentUser?.uid {
+            var isFavorited : Bool = false
+            reviewPostModel.favorite_users.forEach { (favoriteUser) in
+                favoriteUser.forEach { (key,val) in
+                    if key == uid {
+                        isFavorite = !isFavorite
+                        isFavorited = true
+                    }
+                }
+            }
+            if isFavorited == false{
+                isFavorite = true
+            }
+            ReviewPostModel.addFavoriteUser(request: reviewPostModel, isFavorite: isFavorite)
+        }
+
+    }
+    
     
     func deleteButton(commentPostModel: CommentPostModel) {
         CommentPostModel.delete(id: commentPostModel.id) {
@@ -235,15 +259,23 @@ extension ReviewDetailViewController {
                         }
                     }
                 }
+                var isFavorited: Bool = false
+                reviewPostModel.favorite_users.forEach { (favoriteUser) in
+                    favoriteUser.forEach { (key,val) in
+                        if key == uid {
+                            self.isFavorite = val
+                            self.mainView.isFavoriteButtonTouched = self.isFavorite
+                        }
+                    }
+                }
             }
             self.reviewPostModel = reviewPostModel
             self.mainView.reviewGetModel(reviewPostModel: reviewPostModel)
         }) {
             self.navigationController?.popViewController(animated: true)
             self.animatorManager.navigationType = .slide_pop
-            
+            }
         }
-    }
     
 //    func reviewGetModel2(){
 //        ReviewPostModel.reads { (reviewPostModels) in
