@@ -52,6 +52,7 @@ extension SearchResultCollectionViewCell {
             imaveView.af_setImage(withURL: url)
             }
         }
+        
     }
 }
 
