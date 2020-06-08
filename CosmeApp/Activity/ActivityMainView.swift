@@ -32,6 +32,7 @@ class ActivityMainView: BaseView {
     var activityType: ActivityType = ActivityType.comment
     
     var noticeModels: [NoticeModel] = [NoticeModel]()
+    var reviewPostModels: [ReviewPostModel] = [ReviewPostModel]()
 }
 // MARK: - Life cycle
 extension ActivityMainView {

@@ -63,5 +63,23 @@ extension ActivityGoodTableViewCell {
                 iconImageView.af_setImage(withURL: url)
             }
         }
+        if let image_path = noticeModel.post_icon {
+            if let url = URL(string: image_path) {
+                postImageView.af_setImage(withURL: url)
+            }
+        }
+    
+//    switch noticeModel.image_paths.count {
+//           case 0:
+//               postImageView.image = UIImage(named: "noimage.png")
+//               
+//           case 1:
+//               if let url = URL(string: noticeModel.image_paths[0]){
+//                   postImageView.af_setImage(withURL: url)
+//               }
+//           default:
+//               break
+//    
+//        }
     }
 }
