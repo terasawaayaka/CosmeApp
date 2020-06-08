@@ -15,6 +15,10 @@ class ActivityViewController: BaseViewController {
     @IBOutlet weak var mainView: ActivityMainView!
     
     var noticeModels: [NoticeModel] = [NoticeModel]()
+    var notieModel: NoticeModel = NoticeModel()
+    var reviewPostModel: ReviewPostModel = ReviewPostModel()
+    var reviewPostModels: [ReviewPostModel] = [ReviewPostModel]()
+    
 }
 // MARK: - Life cycle
 extension ActivityViewController {
@@ -91,10 +95,21 @@ extension ActivityViewController {
                         if let icon = userModel.photo_path {
                             noticeModel.notice_user_icon = icon
                         }
+                        
                         self.noticeModels = noticeModels
                         self.mainView.getModel(noticeModels: noticeModels)
                     }
+                    if noticeModel.post_id != "" {
+                        ReviewPostModel.readAt(id: noticeModel.post_id, success: { (reviewPostModel) in
+                            if reviewPostModel.image_paths.count != 0 {
+                                noticeModel.post_icon = reviewPostModel.image_paths[0]
+                            }
+                        }) {
+                            print("read at reviewPoatModel error")
+                        }
+                    }
                 }
+               
             }
         }
     }

@@ -63,5 +63,10 @@ extension ActivityCommentTableViewCell {
                 secondIconImageView.af_setImage(withURL: url)
             }
         }
+        if let image_path = noticeModel.post_icon {
+            if let url = URL(string: image_path) {
+                secondPostImageView.af_setImage(withURL: url)
+            }
+        }
     }
 }
