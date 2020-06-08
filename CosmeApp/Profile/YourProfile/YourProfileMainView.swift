@@ -112,7 +112,7 @@ extension YourProfileMainView {
             followButton.setTitle("フォローする", for: .normal)
         }
     }
-    func getModelforCell(reviewPostModels: [ReviewPostModel],userModel: UserModel){
-        scrollMainView.getModel(reviewPostModels: reviewPostModels,userModel: userModel)
+    func getModelforCell(filterdReviewPostModels: [ReviewPostModel],userModel: UserModel){
+        scrollMainView.getModel(filterdReviewPostModels: reviewPostModels,userModel: userModel)
     }
 }

@@ -39,7 +39,7 @@ extension YourPostCollectionView :UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "YourPostCollectionViewCell", for: indexPath) as? YourPostCollectionViewCell else {return UICollectionViewCell()}
-        cell.updateCell(reviewPostModel: reviewPostModels[indexPath.row], userModel: userModel)
+        cell.updateCell(filterdReviewPostModels: reviewPostModels[indexPath.row], userModel: userModel)
         return cell
     }
 }
@@ -57,17 +57,10 @@ extension YourPostCollectionView {
         collectionView.dataSource = self
         collectionView.delegate = self
     }
-    func getModel(reviewPostModels: [ReviewPostModel],userModel: UserModel){
-        let filterdReviewPostModels = reviewPostModels.filter { (reviewPostModel) -> Bool in
-            if reviewPostModel.post_user_id == userModel.id {
-                return true
-            }else {
-                return false
-            }
-        }
-        
-    self.reviewPostModels = filterdReviewPostModels
+    func getModel(filterdReviewPostModels: [ReviewPostModel],userModel: UserModel){
+        self.reviewPostModels = filterdReviewPostModels
         self.userModel = userModel
         collectionView.reloadData()
     }
+      
 }

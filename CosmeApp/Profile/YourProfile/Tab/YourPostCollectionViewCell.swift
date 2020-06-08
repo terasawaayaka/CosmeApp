@@ -32,12 +32,12 @@ extension YourPostCollectionViewCell {
 }
 // MARK: - method
 extension YourPostCollectionViewCell {
-    func updateCell(reviewPostModel: ReviewPostModel,userModel: UserModel){
-       if reviewPostModel.image_paths.count != 0 {
-        if let url = URL(string: reviewPostModel.image_paths[0]){
+    func updateCell(filterdReviewPostModels: ReviewPostModel,userModel: UserModel){
+       if filterdReviewPostModels.image_paths.count != 0 {
+        if let url = URL(string: filterdReviewPostModels.image_paths[0]){
             yourPostImsge.af_setImage(withURL: url) }
         }
-        productLabel.text = reviewPostModel.title
+        productLabel.text = filterdReviewPostModels.title
     }
     
 }

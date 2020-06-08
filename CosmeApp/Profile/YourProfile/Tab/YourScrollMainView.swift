@@ -43,9 +43,9 @@ extension YourScrollMainView {
     func setDelegate(){
         yourPostMainView.delegate = self
     }
-    func getModel(reviewPostModels: [ReviewPostModel],userModel: UserModel){
-        self.reviewPostModels = reviewPostModels
+    func getModel(filterdReviewPostModels: [ReviewPostModel],userModel: UserModel){
+        self.reviewPostModels = filterdReviewPostModels
         self.userModel = userModel
-        self.yourPostMainView.getModel(reviewPostModels: reviewPostModels,userModel: userModel)
+        self.yourPostMainView.getModel(filterdReviewPostModels: reviewPostModels,userModel: userModel)
     }
 }
