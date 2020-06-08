@@ -43,6 +43,11 @@ extension SearchUserResultTableViewCell {
     func updateCell(userModel: UserModel){
         self.userModel = userModel
         userNameLabel.text = userModel.nickname
+        if let photo_path = userModel.photo_path {
+            if let url = URL(string: photo_path) {
+                profileImageView.af_setImage(withURL: url)
+            }
+        }
         
     }
 }
