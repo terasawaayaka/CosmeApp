@@ -27,6 +27,7 @@ extension SearchUserSelectResultViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        getReviewPostModel()
         giveModel()
     }
 }
@@ -45,9 +46,22 @@ extension SearchUserSelectResultViewController {
     func setDelegate(){
         headerView.delegate = self
     }
+    func getReviewPostModel(){
+        ReviewPostModel.reads { (reviewPostModels) in
+            let filterdReviewPostModels = reviewPostModels.filter { (reviewPostModel) -> Bool in
+                if reviewPostModel.post_user_id == self.userModel.id {
+                    return true
+                }else {
+                    return false
+                }
+            }
+            self.reviewPostModels = filterdReviewPostModels
+            self.yourProfileView.reviewPostModels = filterdReviewPostModels
+            self.yourProfileView.getModelforCell(filterdReviewPostModels: reviewPostModels, userModel: self.userModel)
+        }
+    }
     func giveModel(){
         yourProfileView.getModel(userModel: userModel)
-        yourProfileView.getModelforCell(filterdReviewPostModels: reviewPostModels, userModel: userModel)
         
     }
 }
