@@ -22,6 +22,8 @@ class TimeLineViewController: BaseViewController {
     var activityType: ActivityType = ActivityType.comment
     var isGood: Bool = false
     var isGooded: Bool = false
+    var isFavorite:Bool = false
+    var isFavorited:Bool = false
 }
 // MARK: - Life cycle
 extension TimeLineViewController {
@@ -48,6 +50,22 @@ extension TimeLineViewController {
 extension TimeLineViewController :TimeLineMainViewDelegate{
     func favoriteButton(reviewPostModel: ReviewPostModel) {
         //TODO お気に入り機能
+        if let uid = Auth.auth().currentUser?.uid {
+            var isFavorited : Bool = false
+            reviewPostModel.favorite_users.forEach { (favoriteUser) in
+                favoriteUser.forEach { (key,val) in
+                    if key == uid {
+                        isFavorite = val
+                        isFavorite = !isFavorite
+                        isFavorited = true
+                    }
+                }
+            }
+            if isFavorited == false{
+                isFavorite = true
+            }
+            ReviewPostModel.addFavoriteUser(request: reviewPostModel, isFavorite: isFavorite)
+        }
     }
     
     
@@ -135,6 +153,15 @@ extension TimeLineViewController {
                                         if key == uid {
                                             self.isGood = val
                                             reviewPostModel.isGood = val
+                                        }
+                                    }
+                                }
+                                var isFavorite: Bool = false
+                                reviewPostModel.favorite_users.forEach { (favoriteUser) in
+                                    favoriteUser.forEach { (key,val) in
+                                        if key == uid {
+                                            self.isFavorite = val
+                                            reviewPostModel.isFavorite = val
                                         }
                                     }
                                 }

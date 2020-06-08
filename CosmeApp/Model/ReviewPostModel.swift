@@ -23,6 +23,8 @@ class ReviewPostModel{
     var review_num: Int = Int() //星の数
     var good_users: [[String: Bool]] = [[String: Bool]]() //いいねした人の一覧
     var isGood: Bool = false //いいねしたか否か
+    var favorite_users:[[String: Bool]] = [[String: Bool]]()
+    var isFavorite:Bool = false
     
     //ユーザーの情報
     var post_user_name: String = String()
@@ -44,6 +46,11 @@ extension ReviewPostModel{
         if let good_users = data["good_users"] as? [String: Bool] {
             good_users.forEach { (key, value) in
                 model.good_users.append([key:value])
+            }
+        }
+        if let favorite_users = data["favorite_users"] as? [String: Bool] {
+            favorite_users.forEach { (key, value) in
+                model.favorite_users.append([key:value])
             }
         }
         return model
@@ -144,6 +151,12 @@ extension ReviewPostModel{
         if let uid = Auth.auth().currentUser?.uid {
             let dbRef = Database.database().reference().child(PATH).child(request.id).child("good_users").child(uid)
             dbRef.setValue(isGood)
+        }
+    }
+    static func addFavoriteUser(request: ReviewPostModel,isFavorite: Bool) {
+        if let uid = Auth.auth().currentUser?.uid {
+            let dbRef = Database.database().reference().child(PATH).child(request.id).child("favorite_users").child(uid)
+            dbRef.setValue(isFavorite)
         }
     }
 }

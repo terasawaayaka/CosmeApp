@@ -16,6 +16,7 @@ protocol ReviewDetailMainViewDelegate: NSObjectProtocol{
     func commentIconViewCutton(commentPostModel:CommentPostModel)
     func commentSendButton()
     func goodButton(reviewPostModel: ReviewPostModel)
+    func favoriteButton(reviewPostModel:ReviewPostModel)
     func deleteButton(commentPostModel:CommentPostModel)
 }
 extension ReviewDetailMainViewDelegate {
@@ -57,6 +58,7 @@ class ReviewDetailMainView: BaseView, UIScrollViewDelegate {
     
     @IBOutlet weak var commentTextField: UITextField!
     @IBOutlet weak var goodButton: UIButton!
+    @IBOutlet weak var favoriteButton: UIButton!
     
     //button
     @IBAction func iconViewButton(_ sender: UIButton) {
@@ -73,9 +75,17 @@ class ReviewDetailMainView: BaseView, UIScrollViewDelegate {
             self.goodButton.transform = CGAffineTransform(rotationAngle: CGFloat.pi/180*360)
         }
     }
+    @IBAction func favoriteButton(_ sender: UIButton) {
+        if let delegate = delegate {delegate.favoriteButton(reviewPostModel: reviewPostModel)}
+        UIView.animate(withDuration: 0.5) {
+            self.favoriteButton.transform = CGAffineTransform(rotationAngle: CGFloat.pi/180*180)
+            self.favoriteButton.transform = CGAffineTransform(rotationAngle: CGFloat.pi/180*360)
+        }
+    }
     
     
     var isGoodButtonTouched: Bool = false
+    var isFavoriteButtonTouched : Bool = false
     
 }
 // MARK: - Life cycle
@@ -138,6 +148,7 @@ extension ReviewDetailMainView {
             }
         }
         updateGood()
+        updateFavorite()
     }
     
     func setLayout(){
@@ -156,6 +167,15 @@ extension ReviewDetailMainView {
         } else {
             let image = UIImage(named: "notgood")
             goodButton.setImage(image, for: .normal)
+        }
+    }
+    func updateFavorite() {
+        if isFavoriteButtonTouched {
+            let image = UIImage(named: "favorite")
+            favoriteButton.setImage(image, for: .normal)
+        } else {
+            let image = UIImage(named: "notfavorite")
+            favoriteButton.setImage(image, for: .normal)
         }
     }
 }
