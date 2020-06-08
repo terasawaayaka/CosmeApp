@@ -94,6 +94,15 @@ extension ActivityViewController {
                         self.noticeModels = noticeModels
                         self.mainView.getModel(noticeModels: noticeModels)
                     }
+                    if noticeModel.post_id != "" {
+                        ReviewPostModel.readAt(id: noticeModel.post_id, success: { (reviewPostModel) in
+                            if reviewPostModel.image_paths.count != 0 {
+                                noticeModel.post_icon = reviewPostModel.image_paths[0]
+                            }
+                        }) {
+                            print("read at reviewPostModel error")
+                        }
+                    }
                 }
             }
         }

@@ -18,7 +18,7 @@ class NoticeModel {
     var image_paths: [String] = [String]()
     var noticeType: String = String()
     var post_id: String = String() //反応があった投稿
-    var post_icon: String = String()
+    var post_icon: String?
     
     //ユーザーの情報
     var notice_user_name: String = String() //コメントフォローいいねをした人の名前
