@@ -34,7 +34,7 @@
                     </button>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wtD-uw-5l6">
                         <rect key="frame" x="345" y="10" width="60" height="60"/>
-                        <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="60" id="dw1-Fc-mE9"/>
                             <constraint firstAttribute="width" secondItem="wtD-uw-5l6" secondAttribute="height" multiplier="1:1" id="lRn-Qa-g7K"/>
