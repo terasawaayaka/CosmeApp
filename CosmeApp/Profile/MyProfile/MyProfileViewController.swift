@@ -48,21 +48,12 @@ extension MyProfileViewController {
 // MARK: - Protocol
 extension MyProfileViewController :MyProfileMainViewDelegate{
     func didSelectItemAtGood(indexPath: IndexPath) {
-//        NoticeModel.reads { (noticeModels) in
-//            let goodFilters = noticeModels.filter { (noticeModel) -> Bool in
-//                if let uid = Auth.auth().currentUser?.uid {
-//                    if noticeModel.noticeType == "いいね" && {
-//                        return true
-//                        } else {
-//                        return false
-//                    }
-//                } else {
-//                    return false
-//                }
-//            }
-//            self.mainView.scrollMainView.goodCollectionView.getModel(noticeModels: goodFilters)
-//            self.noticeModels = goodFilters
-//        }
+        let makeDetailViewController = MakeDetailViewController()
+        //todo
+        makeDetailViewController.makePostModel = makePostModels[indexPath.row]
+        makeDetailViewController.fromProfile = true
+        navigationController?.pushViewController(makeDetailViewController, animated: true)
+        animatorManager.navigationType = .push
     }
     
     func didSelectItemAtSearchGenre(indexPath: IndexPath) {
@@ -358,5 +349,21 @@ extension MyProfileViewController {
             self.mainView.getMakeModel(makePostModels: filterdMakePostModels)
             self.makePostModels = filterdMakePostModels
         }
+        
+        NoticeModel.reads { (noticeModels) in
+             let goodFilters = noticeModels.filter { (noticeModel) -> Bool in
+                 if let uid = Auth.auth().currentUser?.uid {
+                     if noticeModel.noticeType == "いいね" && noticeModel.notice_my_id == uid {
+                         return true
+                         } else {
+                         return false
+                     }
+                 } else {
+                     return false
+                 }
+             }
+             self.mainView.scrollMainView.goodCollectionView.getModel(noticeModels: goodFilters)
+             self.noticeModels = goodFilters
+         }
     }
 }
