@@ -71,7 +71,6 @@ extension TimeLineViewController :TimeLineMainViewDelegate{
                 }
                 noticeModel.post_id = reviewPostModel.id
                 noticeModel.notice_my_id = reviewPostModel.post_user_id
-                noticeModel.image_paths = reviewPostModel.image_paths
                 noticeModel.noticeType = ActivityType.good.rawValue
                 NoticeModel.create(request: noticeModel) {
                 }
