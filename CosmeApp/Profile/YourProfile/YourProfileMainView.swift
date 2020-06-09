@@ -47,11 +47,13 @@ class YourProfileMainView: BaseView {
     
     var isFollowButtonTouched: Bool = false
     var reviewPostModels: [ReviewPostModel] = [ReviewPostModel]()
+    var userModel: UserModel = UserModel()
 }
 // MARK: - Life cycle
 extension YourProfileMainView {
     override func awakeFromNib() {
         super.awakeFromNib()
+        getModel(userModel: userModel)
         setDelegate()
         
         collectionViewFlowLayout.estimatedItemSize = CGSize(width: yourTodayCollectionView.frame.width, height: yourTodayCollectionView.frame.height)
