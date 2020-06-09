@@ -156,7 +156,22 @@ extension TimeLineViewController {
                         }
                     }
                 }
+                //誰もフォローしていない場合自分の投稿だけを抽出
+                if userModel.follow_users.count == 0{
+                    filterdReviewPostModels = reviewPostModels.filter { (reviewPostModel) -> Bool in
+                        if let uid = Auth.auth().currentUser?.uid {
+                            if reviewPostModel.post_user_id == uid{
+                                return true
+                            }else{
+                                return false
+                            }
+                        }else{
+                            return false
+                        }
+                    }
+                }
             }
+                
             self.reviewPostModels = filterdReviewPostModels
             self.mainView.reviewGetModel(reviewPostModels:filterdReviewPostModels)
             print("カウント:", filterdReviewPostModels.count)
@@ -230,6 +245,44 @@ extension TimeLineViewController {
     
     func makeGetModel(){
         MakePostModel.reads { (makePostModels) in
+            var filterdMakePostModels: [MakePostModel] = []
+            UserModel.readMe { (userModel) in
+                for followUser in userModel.follow_users {
+                    followUser.forEach { (key, val) in
+                        //フォローしている人と自分のみを抽出
+                        filterdMakePostModels = makePostModels.filter { (makePostModel) -> Bool in
+                            if let uid = Auth.auth().currentUser?.uid {
+                                if key == makePostModel.post_user_id && val == true || makePostModel.post_user_id == uid {
+                                    return true
+                                } else {
+                                    return false
+                                }
+                            } else {
+                                return false
+                            }
+                        }
+                    }
+                }
+                //誰もフォローしていない場合自分の投稿だけを抽出
+                if userModel.follow_users.count == 0{
+                    filterdMakePostModels = makePostModels.filter { (makePostModel) -> Bool in
+                        if let uid = Auth.auth().currentUser?.uid {
+                            if makePostModel.post_user_id == uid{
+                                return true
+                            }else{
+                                return false
+                            }
+                        }else{
+                            return false
+                        }
+                    }
+                }
+            }
+            self.makePostModels = filterdMakePostModels
+            self.mainView.makeGetModel(makePostModels:filterdMakePostModels)
+            
+            
+            
             for makePostModel in makePostModels {
                 if makePostModel.post_user_id != "" {
                     UserModel.readAt(userId: makePostModel.post_user_id) { (userModel) in
@@ -239,12 +292,13 @@ extension TimeLineViewController {
                         if let icon = userModel.photo_path{
                             makePostModel.post_user_icon = icon
                         }
-                        self.makePostModels = makePostModels
-                        self.mainView.makeGetModel(makePostModels:makePostModels)
+                        self.makePostModels = filterdMakePostModels
+                        self.mainView.makeGetModel(makePostModels:filterdMakePostModels)
                     }
-                }else{
-                    self.makePostModels = makePostModels
-                    self.mainView.makeGetModel(makePostModels:makePostModels)
+//                }else{
+//                    self.makePostModels = makePostModels
+//                    self.mainView.makeGetModel(makePostModels:makePostModels)
+//                }
                 }
             }
         }
