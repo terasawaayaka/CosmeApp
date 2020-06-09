@@ -136,7 +136,7 @@ extension YourProfileViewController {
             }
         } else {
 //            self.userModel = userModel
-//            self.mainView.getModel(userModel: userModel)
+            self.mainView.getModel(userModel: userModel)
         }
         ReviewPostModel.reads { (reviewPostModels) in
             //メインビューにreviewPostModelを渡す
