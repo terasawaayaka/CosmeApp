@@ -45,6 +45,7 @@ extension ActivityViewController:ActivityMainViewDelegate {
     func touchedPostPageButton(indexPath: IndexPath) {
         let reviewDetailViewController = ReviewDetailViewController()
         reviewDetailViewController.noticeModel = noticeModels[indexPath.row]
+        reviewDetailViewController.reviewPostModel.id = noticeModels[indexPath.row].post_id
         navigationController?.pushViewController(reviewDetailViewController, animated: true)
         animatorManager.navigationType = .slide_push
     }
@@ -58,6 +59,7 @@ extension ActivityViewController:ActivityMainViewDelegate {
     func touchedSecondPostPageButton(indexPath: IndexPath) {
         let reviewDetailViewController = ReviewDetailViewController()
         reviewDetailViewController.noticeModel = noticeModels[indexPath.row]
+        reviewDetailViewController.reviewPostModel.id = noticeModels[indexPath.row].post_id
         navigationController?.pushViewController(reviewDetailViewController, animated: true)
         animatorManager.navigationType = .slide_push
     }
