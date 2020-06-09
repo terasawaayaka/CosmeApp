@@ -9,6 +9,8 @@
 import UIKit
 
 import PGFramework
+import FirebaseAuth
+
 protocol ActivityGoodTableViewCellDelegate: NSObjectProtocol{
     func touchedProfilePageButton(indexPath: IndexPath)
     func touchedPostPageButton(indexPath: IndexPath)
@@ -68,5 +70,10 @@ extension ActivityGoodTableViewCell {
                 postImageView.af_setImage(withURL: url)
             }
         }
+//        if let my = Auth.auth().currentUser?.uid {
+//            if noticeModel.notice_my_id == my {
+//                
+//            }
+//        }
     }
 }
