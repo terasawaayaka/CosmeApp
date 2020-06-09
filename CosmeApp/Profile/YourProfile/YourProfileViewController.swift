@@ -67,32 +67,33 @@ extension YourProfileViewController :YourProfileMainViewDelegate{
     func followButton() {
         mainView.isFollowButtonTouched = !mainView.isFollowButtonTouched
         mainView.updateFollow()
-//
-//        if let uid = Auth.auth().currentUser?.uid {
-//            var isFollowd: Bool = false
-//            userModel.follow_users.forEach { (goodUser) in
-//                goodUser.forEach { (key,val) in
-//                    if key == uid {
-//                        isFollow = !isFollow
-//                        isFollowd = true
-//                    }
-//                }
-//            }
-//            if isFollowd == false {
-//                let noticeModel : NoticeModel = NoticeModel()
-//                if let uid = Auth.auth().currentUser?.uid {
-//                    noticeModel.notice_user_id = uid
-//                }
-//                noticeModel.notice_my_id = reviewPostModel.post_user_id
-//                noticeModel.noticeType = ActivityType.follow.rawValue
-//                NoticeModel.create(request: noticeModel) {
-//
-//                }
-//                isFollow = true
-//            }
-//            UserModel.addFollowUser(request:userModel,isFollow: isFollow)
-//        }
-//
+
+        
+        if let uid = Auth.auth().currentUser?.uid {
+            var isFollowd: Bool = false
+            userModel.follower_users.forEach { (goodUser) in
+                goodUser.forEach { (key,val) in
+                    if key == uid {
+                        isFollow = !isFollow
+                        isFollowd = true
+                    }
+                }
+            }
+            if isFollowd == false {
+                let noticeModel : NoticeModel = NoticeModel()
+                if let uid = Auth.auth().currentUser?.uid {
+                    noticeModel.notice_user_id = uid
+                }
+                noticeModel.notice_my_id = reviewPostModel.post_user_id
+                noticeModel.noticeType = ActivityType.follow.rawValue
+                NoticeModel.create(request: noticeModel) {
+
+                }
+                isFollow = true
+            }
+            UserModel.addFollowerUser(request:userModel,isFollow: isFollow)
+        }
+
     }
     
 }

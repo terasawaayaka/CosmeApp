@@ -24,7 +24,8 @@ class UserModel{
     var photo_path: String?
     var updated: Int? // firebaseではDate型保存不可のため、yyyyMMddHHmmssのIntとする。
     
-    var follow_users: [[String: Bool]] = [[String: Bool]]() //フォローした人の一覧
+    var follow_users: [[String: Bool]] = [[String: Bool]]() //フォローしてる人の一覧
+    var follower_users: [[String: Bool]] = [[String: Bool]]() //フォローしてる人の一覧
 }
 // MARK: - Parse
 extension UserModel {
@@ -39,10 +40,15 @@ extension UserModel {
         model.photo_path = data["photo_path"] as? String
         model.updated = data["updated"] as? Int
         if let follow_users = data["follow_users"] as? [String: Bool] {
-                   follow_users.forEach { (key, value) in
-                       model.follow_users.append([key:value])
-                   }
-               }
+            follow_users.forEach { (key, value) in
+                model.follow_users.append([key:value])
+            }
+        }
+        if let follower_users = data["follower_users"] as? [String: Bool] {
+            follower_users.forEach { (key, value) in
+                model.follower_users.append([key:value])
+            }
+        }
         return model
     }
     static func setParameter(request: UserModel) -> [String: Any] {
@@ -246,11 +252,20 @@ extension UserModel {
             success(text)
         }
     }
-//    static func addFollowUser(request: UserModel,isFollow: Bool) {
-//        if let uid = Auth.auth().currentUser?.uid {
-//            let dbRef = Database.database().reference().child(PATH).child(request.id).child("follow_users").child(uid)
-//            dbRef.setValue(isFollow)
-//        }
-//    }
+    static func addFollowUser(request: UserModel,isFollow: Bool) {
+            if let id = request.id {
+                let dbRef = Database.database().reference().child(PATH).child(id).child("follow_users").child(id)
+                dbRef.setValue(isFollow)
+            
+        }
+    }
+    static func addFollowerUser(request: UserModel,isFollow: Bool) {
+        if let uid = Auth.auth().currentUser?.uid {
+            if let id = request.id {
+                let dbRef = Database.database().reference().child(PATH).child(id).child("follower_users").child(uid)
+                dbRef.setValue(isFollow)
+            }
+        }
+    }
 }
 
