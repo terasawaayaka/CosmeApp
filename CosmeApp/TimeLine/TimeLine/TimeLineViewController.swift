@@ -18,6 +18,7 @@ class TimeLineViewController: BaseViewController {
     var reviewPostModels : [ReviewPostModel] = [ReviewPostModel]()
     var makePostModels : [MakePostModel] = [MakePostModel]()
     var reviewPostModel : ReviewPostModel = ReviewPostModel()
+    var userModel : UserModel = UserModel()
     
     var activityType: ActivityType = ActivityType.comment
     var isGood: Bool = false
@@ -146,26 +147,37 @@ extension TimeLineViewController {
                         if let icon = userModel.photo_path{
                             reviewPostModel.post_user_icon = icon
                         }
-                            if let uid = Auth.auth().currentUser?.uid {
-                                var isGood: Bool = false
-                                reviewPostModel.good_users.forEach { (goodUser) in
-                                    goodUser.forEach { (key,val) in
-                                        if key == uid {
-                                            self.isGood = val
-                                            reviewPostModel.isGood = val
-                                        }
-                                    }
-                                }
-                                var isFavorite: Bool = false
-                                reviewPostModel.favorite_users.forEach { (favoriteUser) in
-                                    favoriteUser.forEach { (key,val) in
-                                        if key == uid {
-                                            self.isFavorite = val
-                                            reviewPostModel.isFavorite = val
-                                        }
-                                    }
-                                }
+                        //フォローしている人と自分のみを抽出
+//                        let filterdReviewPostModels = reviewPostModels.filter { (reviewPostModel) -> Bool in
+//                            if let uid = Auth.auth().currentUser?.uid {
+//                                if reviewPostModel.post_user_id == uid || userModel.follow_users{
+//                            }
+//                                return true
+//                            }else {
+//                                return false
+//                            }
+//                        }
                         
+                        if let uid = Auth.auth().currentUser?.uid {
+                            var isGood: Bool = false
+                            reviewPostModel.good_users.forEach { (goodUser) in
+                                goodUser.forEach { (key,val) in
+                                    if key == uid {
+                                        self.isGood = val
+                                        reviewPostModel.isGood = val
+                                    }
+                                }
+                            }
+                            var isFavorite: Bool = false
+                            reviewPostModel.favorite_users.forEach { (favoriteUser) in
+                                favoriteUser.forEach { (key,val) in
+                                    if key == uid {
+                                        self.isFavorite = val
+                                        reviewPostModel.isFavorite = val
+                                    }
+                                }
+                            }
+                            
                             self.reviewPostModel = reviewPostModel
                             self.reviewPostModels = reviewPostModels
                             self.mainView.reviewGetModel(reviewPostModels:reviewPostModels)
