@@ -299,12 +299,12 @@ extension MyProfileViewController :MyProfileMainViewDelegate{
     }
     
     func touchedBookMarkButton() {
-        let secondPoint = CGPoint(x: mainView.frame.width, y: 0)
+        let secondPoint = CGPoint(x: 0, y: 0)
         mainView.scrollMainView.scrollView.setContentOffset(secondPoint, animated: true)
     }
     
     func touchedGenreButton() {
-        let thirdPoint = CGPoint(x: mainView.frame.width * 2, y: 0)
+        let thirdPoint = CGPoint(x: mainView.frame.width , y: 0)
         mainView.scrollMainView.scrollView.setContentOffset(thirdPoint, animated: true)
         mainView.scrollMainView.genreCollectionView.isHidden = false
     }
@@ -373,7 +373,7 @@ extension MyProfileViewController {
                      return false
                  }
              }
-             self.mainView.scrollMainView.goodCollectionView.getModel(noticeModels: goodFilters)
+//             self.mainView.scrollMainView.goodCollectionView.getModel(noticeModels: goodFilters)
              self.noticeModels = goodFilters
          }
     }

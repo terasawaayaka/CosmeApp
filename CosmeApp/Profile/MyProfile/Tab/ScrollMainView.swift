@@ -56,6 +56,6 @@ extension ScrollMainView {
     func setDelegate() {
         genreCollectionView.delegate = self
         searchGenreCollectionView.delegate = self
-        goodCollectionView.delegate = self
+//        goodCollectionView.delegate = self
     }
 }
