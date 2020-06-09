@@ -46,7 +46,7 @@ extension TimeLineMainCollectionViewCell {
         switch makePostModel.image_paths.count {
         case 0:
             makeIconView.image = UIImage(named: "noimage.png")
-            
+
         case 1:
             if let url = URL(string: makePostModel.image_paths[0]){
                 makeIconView.af_setImage(withURL: url)
