@@ -101,7 +101,7 @@ extension ActivityMainView: ActivityGoodTableViewCellDelegate {
             delegate.touchedProfilePageButton(indexPath: indexPath)
         }
     }
-    func touchedPostPageButton(indexPath: IndexPath) {
+    func touchedPostPageButton(indexPath:IndexPath) {
         if let delegate = delegate {
             delegate.touchedPostPageButton(indexPath: indexPath)
         }

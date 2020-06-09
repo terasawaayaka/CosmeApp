@@ -51,7 +51,9 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="p6T-Fw-EdM" secondAttribute="height" multiplier="1:1" id="S4B-ib-13a"/>
                                 </constraints>
-                                <state key="normal" title="+"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="touchedSecondPostPageButton:" destination="K2T-EE-7HC" eventType="touchUpInside" id="lI9-gH-WX6"/>
                                 </connections>

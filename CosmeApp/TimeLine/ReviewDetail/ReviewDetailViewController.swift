@@ -270,6 +270,7 @@ extension ReviewDetailViewController {
                 }
             }
             self.reviewPostModel = reviewPostModel
+            self.reviewUpdateView()
             self.mainView.reviewGetModel(reviewPostModel: reviewPostModel)
         }) {
             self.navigationController?.popViewController(animated: true)
