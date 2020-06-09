@@ -47,9 +47,20 @@ extension MyProfileViewController {
 }
 // MARK: - Protocol
 extension MyProfileViewController :MyProfileMainViewDelegate{
+    func touchedFollowButton() {
+        let followViewController = FollowViewController()
+        navigationController?.pushViewController(followViewController, animated: true)
+        animatorManager.navigationType = .slide_push
+    }
+    
+    func touchedFollowerButton() {
+        let followViewController = FollowViewController()
+        navigationController?.pushViewController(followViewController, animated: true)
+        animatorManager.navigationType = .slide_push
+    }
+    
     func didSelectItemAtGood(indexPath: IndexPath) {
         let makeDetailViewController = MakeDetailViewController()
-        //todo
         makeDetailViewController.makePostModel = makePostModels[indexPath.row]
         makeDetailViewController.fromProfile = true
         navigationController?.pushViewController(makeDetailViewController, animated: true)
@@ -71,7 +82,7 @@ extension MyProfileViewController :MyProfileMainViewDelegate{
         switch indexPath.row {
         case 0:
             MakePostModel.reads { (makePostModels) in
-                let filters = makePostModels.filter { (makePostModel) -> Bool in
+                let eyeshadow = makePostModels.filter { (makePostModel) -> Bool in
                     if let uid = Auth.auth().currentUser?.uid {
                         if makePostModel.post_user_id == uid && makePostModel.eyeshadow != "" {
                         return true
@@ -82,12 +93,12 @@ extension MyProfileViewController :MyProfileMainViewDelegate{
                         return false
                     }
                 }
-                self.mainView.scrollMainView.searchGenreCollectionView.getModel(makePostModels: filters)
-                self.makePostModels = filters
+                self.mainView.scrollMainView.searchGenreCollectionView.getModel(makePostModels: eyeshadow)
+                self.makePostModels = eyeshadow
             }
         case 1:
             MakePostModel.reads { (makePostModels) in
-                let filters = makePostModels.filter { (makePostModel) -> Bool in
+                let eyeliner = makePostModels.filter { (makePostModel) -> Bool in
                     if let uid = Auth.auth().currentUser?.uid {
                         if makePostModel.post_user_id == uid && makePostModel.eyeliner != "" {
                         return true
@@ -98,12 +109,12 @@ extension MyProfileViewController :MyProfileMainViewDelegate{
                         return false
                     }
                 }
-                self.mainView.scrollMainView.searchGenreCollectionView.getModel(makePostModels: filters)
-                self.makePostModels = filters
+                self.mainView.scrollMainView.searchGenreCollectionView.getModel(makePostModels: eyeliner)
+                self.makePostModels = eyeliner
             }
         case 2:
             MakePostModel.reads { (makePostModels) in
-                let filters = makePostModels.filter { (makePostModel) -> Bool in
+                let mascara = makePostModels.filter { (makePostModel) -> Bool in
                     if let uid = Auth.auth().currentUser?.uid {
                         if makePostModel.post_user_id == uid && makePostModel.mascara != "" {
                         return true
@@ -114,12 +125,12 @@ extension MyProfileViewController :MyProfileMainViewDelegate{
                         return false
                     }
                 }
-                self.mainView.scrollMainView.searchGenreCollectionView.getModel(makePostModels: filters)
-                self.makePostModels = filters
+                self.mainView.scrollMainView.searchGenreCollectionView.getModel(makePostModels: mascara)
+                self.makePostModels = mascara
             }
         case 3:
             MakePostModel.reads { (makePostModels) in
-                let filters = makePostModels.filter { (makePostModel) -> Bool in
+                let colorcontact = makePostModels.filter { (makePostModel) -> Bool in
                     if let uid = Auth.auth().currentUser?.uid {
                         if makePostModel.post_user_id == uid && makePostModel.colorcontact != "" {
                         return true
@@ -130,12 +141,12 @@ extension MyProfileViewController :MyProfileMainViewDelegate{
                         return false
                     }
                 }
-                self.mainView.scrollMainView.searchGenreCollectionView.getModel(makePostModels: filters)
-                self.makePostModels = filters
+                self.mainView.scrollMainView.searchGenreCollectionView.getModel(makePostModels: colorcontact)
+                self.makePostModels = colorcontact
             }
         case 4:
             MakePostModel.reads { (makePostModels) in
-                let filters = makePostModels.filter { (makePostModel) -> Bool in
+                let eyebrow = makePostModels.filter { (makePostModel) -> Bool in
                     if let uid = Auth.auth().currentUser?.uid {
                         if makePostModel.post_user_id == uid && makePostModel.eyebrow != "" {
                         return true
@@ -146,12 +157,12 @@ extension MyProfileViewController :MyProfileMainViewDelegate{
                         return false
                     }
                 }
-                self.mainView.scrollMainView.searchGenreCollectionView.getModel(makePostModels: filters)
-                self.makePostModels = filters
+                self.mainView.scrollMainView.searchGenreCollectionView.getModel(makePostModels: eyebrow)
+                self.makePostModels = eyebrow
             }
         case 5:
             MakePostModel.reads { (makePostModels) in
-                let filters = makePostModels.filter { (makePostModel) -> Bool in
+                let basemake = makePostModels.filter { (makePostModel) -> Bool in
                     if let uid = Auth.auth().currentUser?.uid {
                         if makePostModel.post_user_id == uid && makePostModel.basemake != "" {
                         return true
@@ -162,12 +173,12 @@ extension MyProfileViewController :MyProfileMainViewDelegate{
                         return false
                     }
                 }
-                self.mainView.scrollMainView.searchGenreCollectionView.getModel(makePostModels: filters)
-                self.makePostModels = filters
+                self.mainView.scrollMainView.searchGenreCollectionView.getModel(makePostModels: basemake)
+                self.makePostModels = basemake
             }
         case 6:
             MakePostModel.reads { (makePostModels) in
-                let filters = makePostModels.filter { (makePostModel) -> Bool in
+                let highlight = makePostModels.filter { (makePostModel) -> Bool in
                     if let uid = Auth.auth().currentUser?.uid {
                         if makePostModel.post_user_id == uid && makePostModel.highlight != "" {
                         return true
@@ -178,12 +189,12 @@ extension MyProfileViewController :MyProfileMainViewDelegate{
                         return false
                     }
                 }
-                self.mainView.scrollMainView.searchGenreCollectionView.getModel(makePostModels: filters)
-                self.makePostModels = filters
+                self.mainView.scrollMainView.searchGenreCollectionView.getModel(makePostModels: highlight)
+                self.makePostModels = highlight
             }
         case 7:
             MakePostModel.reads { (makePostModels) in
-                let filters = makePostModels.filter { (makePostModel) -> Bool in
+                let shading = makePostModels.filter { (makePostModel) -> Bool in
                     if let uid = Auth.auth().currentUser?.uid {
                         if makePostModel.post_user_id == uid && makePostModel.shading != "" {
                         return true
@@ -194,12 +205,12 @@ extension MyProfileViewController :MyProfileMainViewDelegate{
                         return false
                     }
                 }
-                self.mainView.scrollMainView.searchGenreCollectionView.getModel(makePostModels: filters)
-                self.makePostModels = filters
+                self.mainView.scrollMainView.searchGenreCollectionView.getModel(makePostModels: shading)
+                self.makePostModels = shading
             }
         case 8:
             MakePostModel.reads { (makePostModels) in
-                let filters = makePostModels.filter { (makePostModel) -> Bool in
+                let cheek = makePostModels.filter { (makePostModel) -> Bool in
                     if let uid = Auth.auth().currentUser?.uid {
                         if makePostModel.post_user_id == uid && makePostModel.cheek != "" {
                         return true
@@ -210,12 +221,12 @@ extension MyProfileViewController :MyProfileMainViewDelegate{
                         return false
                     }
                 }
-                self.mainView.scrollMainView.searchGenreCollectionView.getModel(makePostModels: filters)
-                self.makePostModels = filters
+                self.mainView.scrollMainView.searchGenreCollectionView.getModel(makePostModels: cheek)
+                self.makePostModels = cheek
             }
         case 9:
             MakePostModel.reads { (makePostModels) in
-                let filters = makePostModels.filter { (makePostModel) -> Bool in
+                let skincare = makePostModels.filter { (makePostModel) -> Bool in
                     if let uid = Auth.auth().currentUser?.uid {
                         if makePostModel.post_user_id == uid && makePostModel.skincare != "" {
                         return true
@@ -226,12 +237,12 @@ extension MyProfileViewController :MyProfileMainViewDelegate{
                         return false
                     }
                 }
-                self.mainView.scrollMainView.searchGenreCollectionView.getModel(makePostModels: filters)
-                self.makePostModels = filters
+                self.mainView.scrollMainView.searchGenreCollectionView.getModel(makePostModels: skincare)
+                self.makePostModels = skincare
             }
         case 10:
             MakePostModel.reads { (makePostModels) in
-                let filters = makePostModels.filter { (makePostModel) -> Bool in
+                let lip = makePostModels.filter { (makePostModel) -> Bool in
                     if let uid = Auth.auth().currentUser?.uid {
                         if makePostModel.post_user_id == uid && makePostModel.lip != "" {
                         return true
@@ -242,12 +253,12 @@ extension MyProfileViewController :MyProfileMainViewDelegate{
                         return false
                     }
                 }
-                self.mainView.scrollMainView.searchGenreCollectionView.getModel(makePostModels: filters)
-                self.makePostModels = filters
+                self.mainView.scrollMainView.searchGenreCollectionView.getModel(makePostModels: lip)
+                self.makePostModels = lip
             }
         case 11:
             MakePostModel.reads { (makePostModels) in
-                let filters = makePostModels.filter { (makePostModel) -> Bool in
+                let haircare = makePostModels.filter { (makePostModel) -> Bool in
                     if let uid = Auth.auth().currentUser?.uid {
                         if makePostModel.post_user_id == uid && makePostModel.haircare != "" {
                         return true
@@ -258,8 +269,8 @@ extension MyProfileViewController :MyProfileMainViewDelegate{
                         return false
                     }
                 }
-                self.mainView.scrollMainView.searchGenreCollectionView.getModel(makePostModels: filters)
-                self.makePostModels = filters
+                self.mainView.scrollMainView.searchGenreCollectionView.getModel(makePostModels: haircare)
+                self.makePostModels = haircare
             }
         default:
             break

@@ -160,6 +160,12 @@
 		5FA88A642472316600B84ACE /* ScrollMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FA88A622472316600B84ACE /* ScrollMainView.xib */; };
 		5FA88A6F247272C000B84ACE /* GoodCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA88A6D247272C000B84ACE /* GoodCollectionViewCell.swift */; };
 		5FA88A70247272C000B84ACE /* GoodCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FA88A6E247272C000B84ACE /* GoodCollectionViewCell.xib */; };
+		5FCD8FC5248E0CA400DF8106 /* FollowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCD8FC3248E0CA400DF8106 /* FollowViewController.swift */; };
+		5FCD8FC6248E0CA400DF8106 /* FollowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FCD8FC4248E0CA400DF8106 /* FollowViewController.xib */; };
+		5FCD8FC9248E0CD800DF8106 /* FollowMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCD8FC7248E0CD800DF8106 /* FollowMainView.swift */; };
+		5FCD8FCA248E0CD800DF8106 /* FollowMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FCD8FC8248E0CD800DF8106 /* FollowMainView.xib */; };
+		5FCD8FCD248E0DCD00DF8106 /* FollowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCD8FCB248E0DCD00DF8106 /* FollowTableViewCell.swift */; };
+		5FCD8FCE248E0DCD00DF8106 /* FollowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FCD8FCC248E0DCD00DF8106 /* FollowTableViewCell.xib */; };
 		6016174123F66658AB01FA2E /* Pods_CosmeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F9FC5609CFCED43F9A89ED8 /* Pods_CosmeApp.framework */; };
 		D1B8AFC42472627C007BC6AD /* CreateMakeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1B8AFC02472627B007BC6AD /* CreateMakeViewController.xib */; };
 		D1B8AFC52472627C007BC6AD /* CreateMakeMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1B8AFC12472627B007BC6AD /* CreateMakeMainView.xib */; };
@@ -354,6 +360,12 @@
 		5FA88A622472316600B84ACE /* ScrollMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScrollMainView.xib; sourceTree = "<group>"; };
 		5FA88A6D247272C000B84ACE /* GoodCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodCollectionViewCell.swift; sourceTree = "<group>"; };
 		5FA88A6E247272C000B84ACE /* GoodCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoodCollectionViewCell.xib; sourceTree = "<group>"; };
+		5FCD8FC3248E0CA400DF8106 /* FollowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowViewController.swift; sourceTree = "<group>"; };
+		5FCD8FC4248E0CA400DF8106 /* FollowViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowViewController.xib; sourceTree = "<group>"; };
+		5FCD8FC7248E0CD800DF8106 /* FollowMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowMainView.swift; sourceTree = "<group>"; };
+		5FCD8FC8248E0CD800DF8106 /* FollowMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowMainView.xib; sourceTree = "<group>"; };
+		5FCD8FCB248E0DCD00DF8106 /* FollowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowTableViewCell.swift; sourceTree = "<group>"; };
+		5FCD8FCC248E0DCD00DF8106 /* FollowTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowTableViewCell.xib; sourceTree = "<group>"; };
 		D1B8AFC02472627B007BC6AD /* CreateMakeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateMakeViewController.xib; sourceTree = "<group>"; };
 		D1B8AFC12472627B007BC6AD /* CreateMakeMainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateMakeMainView.xib; sourceTree = "<group>"; };
 		D1B8AFC22472627B007BC6AD /* CreateMakeMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateMakeMainView.swift; sourceTree = "<group>"; };
@@ -747,6 +759,7 @@
 		5FA88A38246E3F2A00B84ACE /* MyProfile */ = {
 			isa = PBXGroup;
 			children = (
+				5FCD8FC2248E0BA500DF8106 /* Follow */,
 				5FA88A54246E816D00B84ACE /* Tab */,
 				5FA88A4F246E57F600B84ACE /* CollectionViewCell */,
 				1F4B7703246D30D900FC3B27 /* MyProfileViewController.swift */,
@@ -809,6 +822,19 @@
 				5F97F350247B5FA600D68A0C /* genreCollectionViewCell */,
 			);
 			path = Tab;
+			sourceTree = "<group>";
+		};
+		5FCD8FC2248E0BA500DF8106 /* Follow */ = {
+			isa = PBXGroup;
+			children = (
+				5FCD8FC3248E0CA400DF8106 /* FollowViewController.swift */,
+				5FCD8FC4248E0CA400DF8106 /* FollowViewController.xib */,
+				5FCD8FC7248E0CD800DF8106 /* FollowMainView.swift */,
+				5FCD8FC8248E0CD800DF8106 /* FollowMainView.xib */,
+				5FCD8FCB248E0DCD00DF8106 /* FollowTableViewCell.swift */,
+				5FCD8FCC248E0DCD00DF8106 /* FollowTableViewCell.xib */,
+			);
+			path = Follow;
 			sourceTree = "<group>";
 		};
 		FF3F38DB247796D10023FAAC /* Model */ = {
@@ -947,6 +973,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FF1213E24724B18001E0554 /* SearchUserResultTableViewCell.xib in Resources */,
+				5FCD8FC6248E0CA400DF8106 /* FollowViewController.xib in Resources */,
 				5F97F378247B6C8100D68A0C /* SecondGenreCollectionViewCell.xib in Resources */,
 				3F96651E246E2A7F0083EBC2 /* SearchTextView.xib in Resources */,
 				5F97F3D424809F6D00D68A0C /* ElevenGenreCollectionViewCell.xib in Resources */,
@@ -965,6 +992,7 @@
 				FFD02825246E3866009EE2E4 /* TimeLineMainCollectionViewCell.xib in Resources */,
 				1F4B7745247379A700FC3B27 /* ActivityCommentTableViewCell.xib in Resources */,
 				5F098A332474F0E700D033F4 /* YourScrollMainView.xib in Resources */,
+				5FCD8FCE248E0DCD00DF8106 /* FollowTableViewCell.xib in Resources */,
 				1F4B774124736EE400FC3B27 /* ActivityGoodTableViewCell.xib in Resources */,
 				D1B8AFC42472627C007BC6AD /* CreateMakeViewController.xib in Resources */,
 				FF8509FB246E294F003E2ACF /* ReviewDetailViewController.xib in Resources */,
@@ -973,6 +1001,7 @@
 				5F098A532477D98800D033F4 /* YourGenreCollectionView.xib in Resources */,
 				5FA88A4A246E405900B84ACE /* EditProfileMainView.xib in Resources */,
 				FF850A0B246E2AD3003E2ACF /* EditReviewViewController.xib in Resources */,
+				5FCD8FCA248E0CD800DF8106 /* FollowMainView.xib in Resources */,
 				5F098A2E2474D1A800D033F4 /* YourTodayCollectionViewCell.xib in Resources */,
 				3F7C5D90247644ED007640E2 /* TagSearchResultMainView.xib in Resources */,
 				1F4B7706246D30D900FC3B27 /* MyProfileViewController.xib in Resources */,
@@ -1124,11 +1153,13 @@
 				3FD7CE552477AB4D00B31D8A /* AuthModel.swift in Sources */,
 				1F4B7720246E4F8F00FC3B27 /* CreateReviewViewController.swift in Sources */,
 				3F8CA3ED24762185000EA5AF /* CategorySearchMainView.swift in Sources */,
+				5FCD8FC9248E0CD800DF8106 /* FollowMainView.swift in Sources */,
 				3F96651D246E2A7F0083EBC2 /* SearchTextView.swift in Sources */,
 				5F098A3A2475006900D033F4 /* YourGenreCollectionViewCell.swift in Sources */,
 				5F97F3AD247B7EE000D68A0C /* SixthYourGenreCollectionViewCell.swift in Sources */,
 				5FA88A3D246E3FA300B84ACE /* YourProfileViewController.swift in Sources */,
 				5F098A4A2477BB6300D033F4 /* BookmarkCollectionView.swift in Sources */,
+				5FCD8FC5248E0CA400DF8106 /* FollowViewController.swift in Sources */,
 				5FA88A6F247272C000B84ACE /* GoodCollectionViewCell.swift in Sources */,
 				FF3F38E22477B6B90023FAAC /* CommentModel.swift in Sources */,
 				5FA88A52246E581F00B84ACE /* TodayCollectionViewCell.swift in Sources */,
@@ -1146,6 +1177,7 @@
 				5F97F3E02484BD5600D68A0C /* SearchGenreCollectionViewCell.swift in Sources */,
 				5F098A462477ACA000D033F4 /* GenreCollectionView.swift in Sources */,
 				5F098A242474C0CF00D033F4 /* GenreCollectionViewCell.swift in Sources */,
+				5FCD8FCD248E0DCD00DF8106 /* FollowTableViewCell.swift in Sources */,
 				5F098A522477D98800D033F4 /* YourGenreCollectionView.swift in Sources */,
 				1F4B76F9246D2F7700FC3B27 /* AppDelegate.swift in Sources */,
 				1F4B7716246D32C000FC3B27 /* ActivityViewController.swift in Sources */,

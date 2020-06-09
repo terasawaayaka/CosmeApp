@@ -13,6 +13,8 @@ protocol MyProfileMainViewDelegate: NSObjectProtocol{
     func touchedGoodButton()
     func touchedBookMarkButton()
     func touchedGenreButton()
+    func touchedFollowButton()
+    func touchedFollowerButton()
     
     func didSelectItemAt(indexPath: IndexPath)
     func didSelectItemAtGenre(indexPath: IndexPath)
@@ -45,6 +47,12 @@ class MyProfileMainView: BaseView {
     }
     @IBAction func touchedGenreButton(_ sender: UIButton) {
         if let delegate = delegate{delegate.touchedGenreButton()}
+    }
+    @IBAction func touchedFollowButton(_ sender: UIButton) {
+        if let delegate = delegate{delegate.touchedFollowButton()}
+    }
+    @IBAction func touchedFollowerButton(_ sender: UIButton) {
+        if let delegate = delegate{delegate.touchedFollowerButton()}
     }
     
     //data
