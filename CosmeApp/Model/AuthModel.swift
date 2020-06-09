@@ -253,10 +253,11 @@ extension UserModel {
         }
     }
     static func addFollowUser(request: UserModel,isFollow: Bool) {
+         if let uid = Auth.auth().currentUser?.uid {
             if let id = request.id {
-                let dbRef = Database.database().reference().child(PATH).child(id).child("follow_users").child(id)
+                let dbRef = Database.database().reference().child(PATH).child(uid).child("follow_users").child(id)
                 dbRef.setValue(isFollow)
-            
+            }
         }
     }
     static func addFollowerUser(request: UserModel,isFollow: Bool) {

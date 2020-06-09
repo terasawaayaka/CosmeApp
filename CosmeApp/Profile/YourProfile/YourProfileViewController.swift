@@ -69,6 +69,7 @@ extension YourProfileViewController :YourProfileMainViewDelegate{
         mainView.updateFollow()
 
         
+        
         if let uid = Auth.auth().currentUser?.uid {
             var isFollowd: Bool = false
             userModel.follower_users.forEach { (goodUser) in
@@ -92,6 +93,7 @@ extension YourProfileViewController :YourProfileMainViewDelegate{
                 isFollow = true
             }
             UserModel.addFollowerUser(request:userModel,isFollow: isFollow)
+            UserModel.addFollowUser(request: userModel, isFollow: isFollow)
         }
 
     }
