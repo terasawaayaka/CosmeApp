@@ -198,9 +198,9 @@ extension CreateReviewViewController:CreateReviewMainViewDelegate {
 // MARK: - method
 extension CreateReviewViewController {
     func setHeaderView() {
-        headerView.setLeft(text: "戻る", fontSize: 16, color: UIColor.blue)
-        headerView.setCenter(text: "新規レビュー", fontSize: 19, color: UIColor.black)
-        headerView.setRight(text: "シェア", fontSize: 16, color: UIColor.blue)
+        headerView.setLeft(text: "<", fontSize: 18, color: #colorLiteral(red: 0.7404877639, green: 0.7449720201, blue: 1, alpha: 1))
+        headerView.setCenter(text: "- new review -", fontSize: 19, color: #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1))
+        headerView.setRight(text: "シェア", fontSize: 18, color: #colorLiteral(red: 1, green: 0.6230913235, blue: 0.7894609614, alpha: 1))
     }
     func setDelegate() {
         headerView.delegate = self

@@ -15,6 +15,8 @@ enum ActivityType: String {
 }
 
 import PGFramework
+import FirebaseAuth
+
 protocol ActivityMainViewDelegate: NSObjectProtocol {
     func touchedProfilePageButton(indexPath: IndexPath)
     func touchedPostPageButton(indexPath: IndexPath)
@@ -32,6 +34,7 @@ class ActivityMainView: BaseView {
     var activityType: ActivityType = ActivityType.comment
     
     var noticeModels: [NoticeModel] = [NoticeModel]()
+    var noticeModel: NoticeModel = NoticeModel()
 }
 // MARK: - Life cycle
 extension ActivityMainView {
