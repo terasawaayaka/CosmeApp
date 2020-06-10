@@ -49,6 +49,7 @@ class ReviewDetailMainView: BaseView, UIScrollViewDelegate {
     var reviewPostModel : ReviewPostModel = ReviewPostModel()
     var noticeModels: [NoticeModel] = [NoticeModel]()
     
+    @IBOutlet weak var tableHeight: NSLayoutConstraint!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var iconView: UIButton!
     @IBOutlet weak var userName: UILabel!

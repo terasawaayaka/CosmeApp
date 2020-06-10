@@ -24,6 +24,7 @@
                 <outlet property="reviewLabel" destination="nuP-FO-sms" id="8Mc-NV-Ek2"/>
                 <outlet property="secondImageView" destination="p8h-QR-Ayq" id="c5f-1m-vTr"/>
                 <outlet property="secondStarImage" destination="qge-Cg-Y2v" id="W3H-PE-kT6"/>
+                <outlet property="tableHeight" destination="wDT-CT-drQ" id="TVx-rR-iVt"/>
                 <outlet property="tableView" destination="vP6-f0-HO1" id="mnZ-k6-Ps1"/>
                 <outlet property="tagLabel" destination="QEw-QU-ABq" id="OXj-oA-f62"/>
                 <outlet property="thirdImageView" destination="NUq-d6-HOg" id="Qws-xq-N4I"/>
@@ -133,7 +134,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vP6-f0-HO1">
+                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vP6-f0-HO1">
                                             <rect key="frame" x="0.0" y="967" width="414" height="100"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             <constraints>
