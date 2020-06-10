@@ -223,24 +223,17 @@ extension YourProfileViewController {
     func judgedFollow() {
         if let uid = Auth.auth().currentUser?.uid {
             var isFollowd: Bool = false
-            userModel.follow_users.forEach { (followUser) in
-                followUser.forEach { (key,val) in
-                    if key == uid {
-                        self.isFollow = val
-                        self.mainView.isFollowButtonTouched = self.isFollow
-                        self.mainView.updateFollow()
+            UserModel.readMe { (userModel) in
+                userModel.follow_users.forEach { (followUser) in
+                    followUser.forEach { (key,val) in
+                        if key == uid {
+                            self.isFollow = val
+                            self.mainView.isFollowButtonTouched = self.isFollow
+                            self.mainView.updateFollow()
+                        }
                     }
                 }
             }
-//            userModel.follower_users.forEach { (followerUser) in
-//                followerUser.forEach { (key,val) in
-//                    if key == uid {
-//                        self.isFollow = val
-//                        self.mainView.isFollowButtonTouched = self.isFollow
-//                        self.mainView.updateFollow()
-//                    }
-//                }
-//            }
         }
     }
 }
