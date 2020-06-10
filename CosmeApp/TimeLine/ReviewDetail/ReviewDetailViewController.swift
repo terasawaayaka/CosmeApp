@@ -32,6 +32,12 @@ class ReviewDetailViewController: BaseViewController, UITableViewDelegate {
 }
 // MARK: - Life cycle
 extension ReviewDetailViewController {
+    
+    override func viewWillLayoutSubviews() {
+        super.updateViewConstraints()
+        self.mainView.tableHeight.constant = self.mainView.tableView.contentSize.height
+    }
+    
     override func loadView() {
         super.loadView()
         setDelegate()
@@ -92,6 +98,7 @@ extension ReviewDetailViewController:ReviewDetailMainViewDelegate {
     
     func deleteButton(commentPostModel: CommentPostModel) {
         CommentPostModel.delete(id: commentPostModel.id) {
+            self.mainView.tableHeight?.constant = self.mainView.tableView.contentSize.height
         }
     }
     
@@ -151,9 +158,11 @@ extension ReviewDetailViewController:ReviewDetailMainViewDelegate {
         }
         commentPostModel.review_post_id = reviewPostModel.id
         CommentPostModel.create(request: commentPostModel) {
+            self.mainView.tableHeight.constant = self.mainView.tableView.contentSize.height
             self.mainView.commentTextField.endEditing(true)
             self.mainView.commentTextField.text = ""
         }
+        
     }
     func goodButton(reviewPostModel: ReviewPostModel) {
         mainView.isGoodButtonTouched = !mainView.isGoodButtonTouched

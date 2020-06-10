@@ -14,6 +14,7 @@ protocol YourProfileMainViewDelegate: NSObjectProtocol{
     func touchedPostButton()
     func touchedGenreButton()
     func followButton()
+    func blockButton()
     
     func didSelectItemAt(indexPath: IndexPath)
 }
@@ -44,8 +45,16 @@ class YourProfileMainView: BaseView {
         }
     }
     @IBOutlet weak var followButton: UIButton!
+    @IBAction func blockButton(_ sender: UIButton) {
+        if let delegate = delegate {delegate.blockButton()}
+    }
+    
+    @IBOutlet weak var blockButton: UIButton!
+    
     
     var isFollowButtonTouched: Bool = false
+    var isBlockButtonTouched:Bool = false
+    
     var reviewPostModels: [ReviewPostModel] = [ReviewPostModel]()
     var userModel: UserModel = UserModel()
 }
@@ -114,6 +123,16 @@ extension YourProfileMainView {
             followButton.setTitle("フォローする", for: .normal)
         }
     }
+    
+    func updateBlock() {
+        if isBlockButtonTouched {
+            blockButton.setTitle("ブロック中", for: .normal)
+           
+        } else {
+            blockButton.setTitle("ブロックする", for: .normal)
+        }
+    }
+    
     func getModelforCell(filterdReviewPostModels: [ReviewPostModel],userModel: UserModel){
         scrollMainView.getModel(filterdReviewPostModels: reviewPostModels,userModel: userModel)
     }

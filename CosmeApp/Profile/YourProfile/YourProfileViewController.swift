@@ -26,6 +26,8 @@ class YourProfileViewController: BaseViewController {
     var fromPost: Bool = false
     var isFollow: Bool = false
     var isFollowd: Bool = false
+    var isBlock: Bool = false
+    var isBlocked: Bool = false
 }
 // MARK: - Life cycle
 extension YourProfileViewController {
@@ -49,6 +51,30 @@ extension YourProfileViewController {
 }
 // MARK: - Protocol
 extension YourProfileViewController :YourProfileMainViewDelegate{
+    func blockButton() {
+        mainView.isBlockButtonTouched = !mainView.isBlockButtonTouched
+        mainView.updateBlock()
+        if let uid = Auth.auth().currentUser?.uid {
+            var isBlocked : Bool = false
+            userModel.block_users.forEach { (blockUser) in
+                blockUser.forEach { (key,val) in
+                    if key == uid {
+                        isBlock = val
+                        isBlock = !isBlock
+                        isBlocked = true
+                    }
+                }
+            }
+            if isBlocked == false{
+                isBlock = true
+            }
+            UserModel.addBlockUser(request: userModel, isBlock: isBlock)
+            UserModel.addBlockedUser(request: userModel, isBlock: isBlock)
+            
+        }
+
+    }
+    
     func didSelectItemAt(indexPath: IndexPath) {
         let reviewDetailViewController = ReviewDetailViewController()
         reviewDetailViewController.reviewPostModel = reviewPostModels[indexPath.row]

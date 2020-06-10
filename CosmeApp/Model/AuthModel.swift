@@ -26,6 +26,9 @@ class UserModel{
     
     var follow_users: [[String: Bool]] = [[String: Bool]]() //フォローしてる人の一覧
     var follower_users: [[String: Bool]] = [[String: Bool]]() //フォローしてる人の一覧
+    var block_users :[[String: Bool]] = [[String: Bool]]() //ブロックしている人
+    var blocked_users :[[String: Bool]] = [[String: Bool]]() //ブロックされている人
+    
 }
 // MARK: - Parse
 extension UserModel {
@@ -47,6 +50,16 @@ extension UserModel {
         if let follower_users = data["follower_users"] as? [String: Bool] {
             follower_users.forEach { (key, value) in
                 model.follower_users.append([key:value])
+            }
+        }
+        if let block_users = data["block_users"] as? [String: Bool] {
+            block_users.forEach { (key, value) in
+                model.block_users.append([key:value])
+            }
+        }
+        if let blocked_users = data["blocked_users"] as? [String: Bool] {
+            blocked_users.forEach { (key, value) in
+                model.blocked_users.append([key:value])
             }
         }
         return model
@@ -265,6 +278,22 @@ extension UserModel {
             if let id = request.id {
                 let dbRef = Database.database().reference().child(PATH).child(id).child("follower_users").child(uid)
                 dbRef.setValue(isFollow)
+            }
+        }
+    }
+    static func addBlockUser(request: UserModel,isBlock: Bool) {
+         if let uid = Auth.auth().currentUser?.uid {
+            if let id = request.id {
+                let dbRef = Database.database().reference().child(PATH).child(uid).child("block_users").child(id)
+                dbRef.setValue(isBlock)
+            }
+        }
+    }
+    static func addBlockedUser(request: UserModel,isBlock: Bool) {
+         if let uid = Auth.auth().currentUser?.uid {
+            if let id = request.id {
+                let dbRef = Database.database().reference().child(PATH).child(id).child("blocked_users").child(uid)
+                dbRef.setValue(isBlock)
             }
         }
     }
