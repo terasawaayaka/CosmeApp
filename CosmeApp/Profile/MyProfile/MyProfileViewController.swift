@@ -50,22 +50,22 @@ extension MyProfileViewController {
 // MARK: - Protocol
 extension MyProfileViewController :MyProfileMainViewDelegate{
     func didSelectItemAtBookmark(indexPath: IndexPath) {
-        ReviewPostModel.reads { (reviewPostModels) in
-            let bookmark = reviewPostModels.filter { (reviewPostModel) -> Bool in
-                if let uid = Auth.auth().currentUser?.uid {
-                    if reviewPostModel.favorite_users {
-                        return true
-                    }else {
-                        return false
-                    }
-
-                }else {
-                    return false
-                }
-            }
-            self.mainView.scrollMainView.bookMarkCollectionView.getModel(reviewPostModels: bookmark)
-            self.reviewPostModels = bookmark
-        }
+//        ReviewPostModel.reads { (reviewPostModels) in
+//            let bookmark = reviewPostModels.filter { (reviewPostModel) -> Bool in
+//                if let uid = Auth.auth().currentUser?.uid {
+//                    if reviewPostModel.favorite_users {
+//                        return true
+//                    }else {
+//                        return false
+//                    }
+//
+//                }else {
+//                    return false
+//                }
+//            }
+//            self.mainView.scrollMainView.bookMarkCollectionView.getModel(reviewPostModels: bookmark)
+//            self.reviewPostModels = bookmark
+//        }
     }
     
     func touchedFollowButton() {
