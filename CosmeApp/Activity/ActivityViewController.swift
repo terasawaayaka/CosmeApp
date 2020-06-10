@@ -74,7 +74,7 @@ extension ActivityViewController:ActivityMainViewDelegate {
 // MARK: - method
 extension ActivityViewController {
     func setHeaderView() {
-        headerView.setCenter(text: "アクティビティ", fontSize: 19, color: UIColor.black)
+        headerView.setCenter(text: "- activity -", fontSize: 19, color: UIColor.black)
         headerView.setLeft(text: "")
     }
     func setDelegate() {

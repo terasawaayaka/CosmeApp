@@ -43,7 +43,8 @@ extension YourProfileViewController {
         makeGetModel()
         commentGetModel()
         noticeGetModel()
-//        getNoticeModels()
+        getNoticeModels()
+        judgedFollow()
     }
 }
 // MARK: - Protocol
@@ -72,8 +73,16 @@ extension YourProfileViewController :YourProfileMainViewDelegate{
         
         if let uid = Auth.auth().currentUser?.uid {
             var isFollowd: Bool = false
-            userModel.follower_users.forEach { (goodUser) in
-                goodUser.forEach { (key,val) in
+            userModel.follower_users.forEach { (followerUser) in
+                followerUser.forEach { (key,val) in
+                    if key == uid {
+                        isFollow = !isFollow
+                        isFollowd = true
+                    }
+                }
+            }
+            userModel.follow_users.forEach { (followUser) in
+                followUser.forEach { (key,val) in
                     if key == uid {
                         isFollow = !isFollow
                         isFollowd = true
@@ -207,7 +216,22 @@ extension YourProfileViewController {
                     } else {
                         self.isFollowd = false
                     }
-                    
+                }
+            }
+        }
+    }
+    func judgedFollow() {
+        if let uid = Auth.auth().currentUser?.uid {
+            var isFollowd: Bool = false
+            UserModel.readMe { (userModel) in
+                userModel.follow_users.forEach { (followUser) in
+                    followUser.forEach { (key,val) in
+                        if key == uid {
+                            self.isFollow = val
+                            self.mainView.isFollowButtonTouched = self.isFollow
+                            self.mainView.updateFollow()
+                        }
+                    }
                 }
             }
         }
