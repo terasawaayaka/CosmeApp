@@ -16,8 +16,10 @@ class MyProfileViewController: BaseViewController{
     var userModel: UserModel = UserModel()
     var makePostModel: MakePostModel = MakePostModel()
     var makePostModels: [MakePostModel] = [MakePostModel]()
-    var noticeModel: [NoticeModel] = [NoticeModel]()
+    var noticeModel: NoticeModel = NoticeModel()
     var noticeModels: [NoticeModel] = [NoticeModel]()
+    var reviewPostModel: ReviewPostModel = ReviewPostModel()
+    var reviewPostModels: [ReviewPostModel] = [ReviewPostModel]()
     
     //Outlet
     @IBOutlet weak var mainView: MyProfileMainView!
@@ -47,6 +49,25 @@ extension MyProfileViewController {
 }
 // MARK: - Protocol
 extension MyProfileViewController :MyProfileMainViewDelegate{
+    func didSelectItemAtBookmark(indexPath: IndexPath) {
+        ReviewPostModel.reads { (reviewPostModels) in
+            let bookmark = reviewPostModels.filter { (reviewPostModel) -> Bool in
+                if let uid = Auth.auth().currentUser?.uid {
+                    if reviewPostModel.favorite_users {
+                        return true
+                    }else {
+                        return false
+                    }
+
+                }else {
+                    return false
+                }
+            }
+            self.mainView.scrollMainView.bookMarkCollectionView.getModel(reviewPostModels: bookmark)
+            self.reviewPostModels = bookmark
+        }
+    }
+    
     func touchedFollowButton() {
         let followViewController = FollowViewController()
         navigationController?.pushViewController(followViewController, animated: true)
