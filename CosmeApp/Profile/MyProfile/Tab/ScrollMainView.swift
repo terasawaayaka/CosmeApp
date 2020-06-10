@@ -12,6 +12,7 @@ protocol ScrollMainViewDelegate: NSObjectProtocol{
     func didSelectItemAtGenre(indexPath: IndexPath)
     func didSelectItemAtSearchGenre(indexPath: IndexPath)
     func didSelectItemAtGood(indexPath: IndexPath)
+    func didSelectItemAtBookmark(indexPath: IndexPath)
 }
 extension ScrollMainViewDelegate {
 }
@@ -48,8 +49,11 @@ extension ScrollMainView: GoodCollectionViewDelegate {
     func didSelectItemAtGood(indexPath: IndexPath) {
         if let delegate = delegate{delegate.didSelectItemAtGood(indexPath: indexPath)}
     }
-    
-    
+}
+extension ScrollMainView :BookmarkCollectionViewDelegate{
+    func didSelectItemAtBookmark(indexPath: IndexPath) {
+        if let delegate = delegate{delegate.didSelectItemAtBookmark(indexPath: indexPath)}
+    }
 }
 // MARK: - method
 extension ScrollMainView {

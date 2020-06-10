@@ -15,6 +15,7 @@ extension BookmarkCollectionViewCellDelegate {
 // MARK: - Property
 class BookmarkCollectionViewCell: BaseCollectionViewCell {
     weak var delegate: BookmarkCollectionViewCellDelegate? = nil
+    @IBOutlet weak var imageView: UIImageView!
 }
 // MARK: - Life cycle
 extension BookmarkCollectionViewCell {
@@ -27,4 +28,16 @@ extension BookmarkCollectionViewCell {
 }
 // MARK: - method
 extension BookmarkCollectionViewCell {
+    func updateCell(reviewPostModel:ReviewPostModel) {
+        switch reviewPostModel.image_paths.count {
+        case 0:
+            imageView.image = UIImage(named: "noimage.png")
+        case 1:
+            if let url = URL(string: reviewPostModel.image_paths[0]){
+                imageView.af_setImage(withURL: url)
+            }
+        default:
+            break
+        }
+    }
 }
