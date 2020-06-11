@@ -45,27 +45,16 @@ extension MyProfileViewController {
             navigationController?.pushViewController(signUpViewController, animated: false)
         }
         getModel()
+        getModelBookmark()
     }
 }
 // MARK: - Protocol
 extension MyProfileViewController :MyProfileMainViewDelegate{
     func didSelectItemAtBookmark(indexPath: IndexPath) {
-//        ReviewPostModel.reads { (reviewPostModels) in
-//            let bookmark = reviewPostModels.filter { (reviewPostModel) -> Bool in
-//                if let uid = Auth.auth().currentUser?.uid {
-//                    if reviewPostModel.favorite_users {
-//                        return true
-//                    }else {
-//                        return false
-//                    }
-//
-//                }else {
-//                    return false
-//                }
-//            }
-//            self.mainView.scrollMainView.bookMarkCollectionView.getModel(reviewPostModels: bookmark)
-//            self.reviewPostModels = bookmark
-//        }
+        let makeDetailViewController = MakeDetailViewController()
+        makeDetailViewController.reviewPostModel = reviewPostModels[indexPath.row]
+        navigationController?.pushViewController(makeDetailViewController, animated: true)
+        animatorManager.navigationType = .slide_push
     }
     
     func touchedFollowButton() {
@@ -397,5 +386,26 @@ extension MyProfileViewController {
 //             self.mainView.scrollMainView.goodCollectionView.getModel(noticeModels: goodFilters)
              self.noticeModels = goodFilters
          }
+    }
+    func getModelBookmark() {
+    ReviewPostModel.reads { (reviewPostModels) in
+        let bookmark = reviewPostModels.filter { (reviewPostModel) -> Bool in
+            if let uid = Auth.auth().currentUser?.uid {
+                var isFavorite: Bool = false
+                reviewPostModel.favorite_users.forEach { (favoriteUser) in
+                    favoriteUser.forEach { (key, val) in
+                        if key == uid && val == true {
+                            isFavorite = true
+                        }
+                    }
+                }
+                return isFavorite
+            }else {
+                return false
+            }
+        }
+        self.mainView.scrollMainView.bookMarkCollectionView.getModel(reviewPostModels: bookmark)
+        self.reviewPostModels = bookmark
+    }
     }
 }

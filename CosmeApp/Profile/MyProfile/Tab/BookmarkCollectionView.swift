@@ -42,7 +42,6 @@ extension BookmarkCollectionView :UICollectionViewDataSource{
         cell.updateCell(reviewPostModel: reviewPostModels[indexPath.row])
         return cell
     }
-    
 }
 extension BookmarkCollectionView :UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
