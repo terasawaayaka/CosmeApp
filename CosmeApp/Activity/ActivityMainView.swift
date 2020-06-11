@@ -97,6 +97,9 @@ extension ActivityMainView:UITableViewDataSource {
 //    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
 //        if editingStyle == UITableViewCell.EditingStyle.delete {
 //            noticeModels.remove(at: indexPath.row)
+//            NoticeModel.delete(id: noticeModel.id) {
+//            }
+//            tableView.deleteRows(at: [indexPath as IndexPath], with: UITableView.RowAnimation.automatic)
 //            tableView.reloadData()
 //            
 //        }
