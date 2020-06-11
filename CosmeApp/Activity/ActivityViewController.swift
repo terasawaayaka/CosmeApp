@@ -9,6 +9,7 @@
 import UIKit
 
 import PGFramework
+import FirebaseAuth
 // MARK: - Property
 class ActivityViewController: BaseViewController {
     @IBOutlet weak var headerView: HeaderView!
@@ -83,8 +84,22 @@ extension ActivityViewController {
     }
     func getModel() {
         NoticeModel.reads { (noticeModels) in
+            let noticefilters = noticeModels.filter { (noticeModel) -> Bool in
+                if let uid = Auth.auth().currentUser?.uid {
+                    if noticeModel.notice_my_id == uid {
+                        return true
+                    } else {
+                        return false
+                    }
+                } else {
+                    return false
+                }
+            }
+            self.noticeModels = noticefilters
+            self.mainView.getModel(noticeModels: noticeModels)
+            
+            
             for noticeModel in noticeModels {
-                
                 if noticeModel.notice_user_id != "" {
                     UserModel.readAt(userId: noticeModel.notice_user_id) { (userModel) in
                         if let name = userModel.nickname {
@@ -93,8 +108,7 @@ extension ActivityViewController {
                         if let icon = userModel.photo_path {
                             noticeModel.notice_user_icon = icon
                         }
-                        self.noticeModels = noticeModels
-                        self.mainView.getModel(noticeModels: noticeModels)
+                        self.mainView.getModel(noticeModels: self.noticeModels)
                     }
                     if noticeModel.post_id != "" {
                         ReviewPostModel.readAt(id: noticeModel.post_id, success: { (reviewPostModel) in

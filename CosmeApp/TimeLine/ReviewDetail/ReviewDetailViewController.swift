@@ -28,15 +28,12 @@ class ReviewDetailViewController: BaseViewController, UITableViewDelegate {
     var isGooded: Bool = false
     var isFavorite: Bool = false
     var isFavorited: Bool = false
+    
 
 }
 // MARK: - Life cycle
 extension ReviewDetailViewController {
     
-    override func viewWillLayoutSubviews() {
-        super.updateViewConstraints()
-        self.mainView.tableHeight.constant = self.mainView.tableView.contentSize.height
-    }
     
     override func loadView() {
         super.loadView()
@@ -57,8 +54,15 @@ extension ReviewDetailViewController {
         reviewGetModel()
         getNoticeModel()
     }
+    
+    override func viewWillLayoutSubviews() {
+        super.updateViewConstraints()
+        mainView.tableHeight.constant = CGFloat(mainView.tableView.contentSize.height)
+        //self.mainView.tableHeight.constant = self.mainView.tableView.contentSize.height
+    }
 }
 // MARK: - Protocol
+
 extension ReviewDetailViewController :HeaderViewDelegate{
     func touchedLeftButton(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
@@ -98,7 +102,7 @@ extension ReviewDetailViewController:ReviewDetailMainViewDelegate {
     
     func deleteButton(commentPostModel: CommentPostModel) {
         CommentPostModel.delete(id: commentPostModel.id) {
-            self.mainView.tableHeight?.constant = self.mainView.tableView.contentSize.height
+            self.mainView.tableHeight.constant = CGFloat(self.mainView.tableView.contentSize.height)
         }
     }
     
@@ -158,7 +162,6 @@ extension ReviewDetailViewController:ReviewDetailMainViewDelegate {
         }
         commentPostModel.review_post_id = reviewPostModel.id
         CommentPostModel.create(request: commentPostModel) {
-            self.mainView.tableHeight.constant = self.mainView.tableView.contentSize.height
             self.mainView.commentTextField.endEditing(true)
             self.mainView.commentTextField.text = ""
         }

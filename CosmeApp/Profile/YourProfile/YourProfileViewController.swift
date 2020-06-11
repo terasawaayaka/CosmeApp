@@ -263,13 +263,13 @@ extension YourProfileViewController {
         }
     }
     func judgedBlock() {
-        UserModel.readMe { (userModel) in
-            userModel.block_users.forEach { (blockUser) in
-                blockUser.forEach { (key,val) in
-                    if key == self.userModel.id {
-                        self.isBlock = val
-                        self.mainView.isBlockButtonTouched = self.isBlock
-                        self.mainView.updateBlock()
+            UserModel.readMe { (userModel) in
+                userModel.block_users.forEach { (blockUser) in
+                    blockUser.forEach { (key,val) in
+                        if key == self.userModel.id {
+                            self.isBlock = val
+                            self.mainView.isBlockButtonTouched = self.isBlock
+                            self.mainView.updateBlock()
                     }
                 }
             }
