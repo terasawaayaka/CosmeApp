@@ -27,7 +27,7 @@ extension BookmarkCollectionView {
         super.awakeFromNib()
         setDelegate()
         
-        collectionViewFlowLayout.estimatedItemSize = CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
+        collectionViewFlowLayout.estimatedItemSize = CGSize(width: 115, height: 115)
         loadCollectionViewCellFromXib(collectionView: collectionView, cellName: "BookmarkCollectionViewCell")
     }
 }

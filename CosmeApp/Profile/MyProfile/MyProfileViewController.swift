@@ -51,10 +51,11 @@ extension MyProfileViewController {
 // MARK: - Protocol
 extension MyProfileViewController :MyProfileMainViewDelegate{
     func didSelectItemAtBookmark(indexPath: IndexPath) {
-        let makeDetailViewController = MakeDetailViewController()
-        makeDetailViewController.reviewPostModel = reviewPostModels[indexPath.row]
-        navigationController?.pushViewController(makeDetailViewController, animated: true)
-        animatorManager.navigationType = .slide_push
+        let reviewDetailViewController = ReviewDetailViewController()
+        reviewDetailViewController.reviewPostModel = reviewPostModels[indexPath.row]
+        reviewDetailViewController.fromProfile = true
+        navigationController?.pushViewController(reviewDetailViewController, animated: true)
+        animatorManager.navigationType = .push
     }
     
     func touchedFollowButton() {
