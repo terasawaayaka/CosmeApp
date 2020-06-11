@@ -28,6 +28,7 @@ class ReviewDetailViewController: BaseViewController, UITableViewDelegate {
     var isGooded: Bool = false
     var isFavorite: Bool = false
     var isFavorited: Bool = false
+    var fromProfile: Bool = false
     
 
 }
@@ -66,7 +67,11 @@ extension ReviewDetailViewController {
 extension ReviewDetailViewController :HeaderViewDelegate{
     func touchedLeftButton(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
-        animatorManager.navigationType = .slide_pop
+        if fromProfile {
+            animatorManager.navigationType = .pop
+        } else {
+            animatorManager.navigationType = .slide_pop
+        }
     }
     func touchedRightButton(_ sender: UIButton) {
         let editReviewViewController = EditReviewViewController()
@@ -201,7 +206,11 @@ extension ReviewDetailViewController:ReviewDetailMainViewDelegate {
 // MARK: - method
 extension ReviewDetailViewController {
     func setHeaderView(){
-        headerView.setLeft(text: "＜", fontSize: 18, color: #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1))
+        if fromProfile {
+            headerView.setLeft(text: "閉じる", fontSize: 18, color: #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1))
+        } else {
+            headerView.setLeft(text: "＜", fontSize: 18, color: #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1))
+        }
         headerView.setCenter(text: "レビュー詳細", fontSize: 20, color: #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1))
         if let uid = Auth.auth().currentUser?.uid {
             if reviewPostModel.post_user_id == uid {

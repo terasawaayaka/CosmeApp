@@ -61,5 +61,6 @@ extension ScrollMainView {
         genreCollectionView.delegate = self
         searchGenreCollectionView.delegate = self
 //        goodCollectionView.delegate = self
+        bookMarkCollectionView.delegate = self
     }
 }

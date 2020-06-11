@@ -27,7 +27,7 @@ extension BookmarkCollectionView {
         super.awakeFromNib()
         setDelegate()
         
-        collectionViewFlowLayout.estimatedItemSize = CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
+        collectionViewFlowLayout.estimatedItemSize = CGSize(width: 115, height: 115)
         loadCollectionViewCellFromXib(collectionView: collectionView, cellName: "BookmarkCollectionViewCell")
     }
 }
@@ -42,7 +42,6 @@ extension BookmarkCollectionView :UICollectionViewDataSource{
         cell.updateCell(reviewPostModel: reviewPostModels[indexPath.row])
         return cell
     }
-    
 }
 extension BookmarkCollectionView :UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
