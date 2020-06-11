@@ -147,14 +147,14 @@ extension TimeLineViewController {
                                 //フォローしている人と自分のみを抽出 ブロックした人を非表示
                                 filterdReviewPostModels = reviewPostModels.filter { (reviewPostModel) -> Bool in
                                     if let uid = Auth.auth().currentUser?.uid {
-                                    if key2 == reviewPostModel.post_user_id && val2 == true {
-                                    return false
-                                    }else if key == reviewPostModel.post_user_id && val == true || reviewPostModel.post_user_id == uid {
+                                        if key == reviewPostModel.post_user_id && val == true || reviewPostModel.post_user_id == uid {
                                             return true
+                                        } else if key2 == reviewPostModel.post_user_id && val2 == true {
+                                            return false
                                         }else{
                                             return false
                                         }
-                                    } else{
+                                    } else {
                                         return false
                                     }
                                 }
