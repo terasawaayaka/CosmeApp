@@ -134,6 +134,9 @@ extension ReviewDetailMainView {
     func commentGetModel(commentPostModels:[CommentPostModel]){
         self.commentPostModels = commentPostModels
         tableView.reloadData()
+        layoutIfNeeded()
+        updateConstraintsIfNeeded()
+        
     }
     func reviewGetModel(reviewPostModel:ReviewPostModel){
         self.reviewPostModel = reviewPostModel
