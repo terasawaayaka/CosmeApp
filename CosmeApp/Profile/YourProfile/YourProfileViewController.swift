@@ -69,6 +69,7 @@ extension YourProfileViewController :YourProfileMainViewDelegate{
             if isBlocked == false{
                 isBlock = true
             }
+            
             UserModel.addBlockUser(request: userModel, isBlock: isBlock)
             UserModel.addBlockedUser(request: userModel, isBlock: isBlock)
             
