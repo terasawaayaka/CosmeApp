@@ -27,7 +27,7 @@ class UserModel{
     var follow_users: [[String: Bool]] = [[String: Bool]]() //フォローしてる人の一覧
     var follower_users: [[String: Bool]] = [[String: Bool]]() //フォローしてる人の一覧
     var block_users :[[String: Bool]] = [[String: Bool]]() //ブロックしている人
-    var blocked_users :[[String: Bool]] = [[String: Bool]]() //ブロックされている人
+    var blocked_users :[[String: Bool]] = [[String: Bool]]() //自分をブロックしている人
     
 }
 // MARK: - Parse
