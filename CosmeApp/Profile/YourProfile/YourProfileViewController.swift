@@ -47,6 +47,7 @@ extension YourProfileViewController {
         noticeGetModel()
         getNoticeModels()
         judgedFollow()
+        judgedBlock()
     }
 }
 // MARK: - Protocol
@@ -54,23 +55,33 @@ extension YourProfileViewController :YourProfileMainViewDelegate{
     func blockButton() {
         mainView.isBlockButtonTouched = !mainView.isBlockButtonTouched
         mainView.updateBlock()
+        
+        
         if let uid = Auth.auth().currentUser?.uid {
             var isBlocked : Bool = false
+            
             userModel.block_users.forEach { (blockUser) in
                 blockUser.forEach { (key,val) in
                     if key == uid {
-                        isBlock = val
+                        //isBlock = val
                         isBlock = !isBlock
                         isBlocked = true
                     }
                 }
             }
-            if isBlocked == false{
+            userModel.blocked_users.forEach { (blockedUser) in
+                blockedUser.forEach { (key,val) in
+                    if key == uid {
+                        isBlock = !isBlock
+                        isBlocked = true
+                    }
+                }
+            }
+            if isBlocked == false {
                 isBlock = true
             }
             UserModel.addBlockUser(request: userModel, isBlock: isBlock)
             UserModel.addBlockedUser(request: userModel, isBlock: isBlock)
-            
         }
 
     }
@@ -99,6 +110,7 @@ extension YourProfileViewController :YourProfileMainViewDelegate{
         
         if let uid = Auth.auth().currentUser?.uid {
             var isFollowd: Bool = false
+            
             userModel.follower_users.forEach { (followerUser) in
                 followerUser.forEach { (key,val) in
                     if key == uid {
@@ -255,6 +267,19 @@ extension YourProfileViewController {
                             self.mainView.isFollowButtonTouched = self.isFollow
                             self.mainView.updateFollow()
                         
+                    }
+                }
+            }
+        }
+    }
+    func judgedBlock() {
+            UserModel.readMe { (userModel) in
+                userModel.block_users.forEach { (blockUser) in
+                    blockUser.forEach { (key,val) in
+                        if key == self.userModel.id {
+                            self.isBlock = val
+                            self.mainView.isBlockButtonTouched = self.isBlock
+                            self.mainView.updateBlock()
                     }
                 }
             }

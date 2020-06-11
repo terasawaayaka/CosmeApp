@@ -64,12 +64,18 @@
 		3F966522246E2B240083EBC2 /* SearchMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F966520246E2B240083EBC2 /* SearchMainView.xib */; };
 		3FA0F795246E6DCA00D8DBA2 /* SearchResultMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA0F793246E6DCA00D8DBA2 /* SearchResultMainView.swift */; };
 		3FA0F796246E6DCA00D8DBA2 /* SearchResultMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FA0F794246E6DCA00D8DBA2 /* SearchResultMainView.xib */; };
+		3FC4EEB72491E518000D313D /* ReportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC4EEB52491E518000D313D /* ReportTableViewCell.swift */; };
+		3FC4EEB82491E518000D313D /* ReportTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FC4EEB62491E518000D313D /* ReportTableViewCell.xib */; };
 		3FC6EE862473BDF0008875B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FC6EE852473BDF0008875B7 /* Assets.xcassets */; };
 		3FD7CE552477AB4D00B31D8A /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7CE542477AB4D00B31D8A /* AuthModel.swift */; };
 		3FF1213824724716001E0554 /* SearchResultCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF1213624724716001E0554 /* SearchResultCollectionViewCell.swift */; };
 		3FF1213924724716001E0554 /* SearchResultCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FF1213724724716001E0554 /* SearchResultCollectionViewCell.xib */; };
 		3FF1213D24724B18001E0554 /* SearchUserResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF1213B24724B18001E0554 /* SearchUserResultTableViewCell.swift */; };
 		3FF1213E24724B18001E0554 /* SearchUserResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FF1213C24724B18001E0554 /* SearchUserResultTableViewCell.xib */; };
+		3FF47EDF2490CADB00A8DCCD /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF47EDD2490CADB00A8DCCD /* ReportViewController.swift */; };
+		3FF47EE02490CADB00A8DCCD /* ReportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FF47EDE2490CADB00A8DCCD /* ReportViewController.xib */; };
+		3FF47EE32490CB1100A8DCCD /* ReportMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF47EE12490CB1100A8DCCD /* ReportMainView.swift */; };
+		3FF47EE42490CB1100A8DCCD /* ReportMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FF47EE22490CB1100A8DCCD /* ReportMainView.xib */; };
 		5F098A202474BE5800D033F4 /* BookmarkCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F098A1E2474BE5800D033F4 /* BookmarkCollectionViewCell.swift */; };
 		5F098A212474BE5800D033F4 /* BookmarkCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F098A1F2474BE5800D033F4 /* BookmarkCollectionViewCell.xib */; };
 		5F098A242474C0CF00D033F4 /* GenreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F098A222474C0CF00D033F4 /* GenreCollectionViewCell.swift */; };
@@ -261,12 +267,18 @@
 		3F966520246E2B240083EBC2 /* SearchMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchMainView.xib; sourceTree = "<group>"; };
 		3FA0F793246E6DCA00D8DBA2 /* SearchResultMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultMainView.swift; sourceTree = "<group>"; };
 		3FA0F794246E6DCA00D8DBA2 /* SearchResultMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultMainView.xib; sourceTree = "<group>"; };
+		3FC4EEB52491E518000D313D /* ReportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportTableViewCell.swift; sourceTree = "<group>"; };
+		3FC4EEB62491E518000D313D /* ReportTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportTableViewCell.xib; sourceTree = "<group>"; };
 		3FC6EE852473BDF0008875B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FD7CE542477AB4D00B31D8A /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
 		3FF1213624724716001E0554 /* SearchResultCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCollectionViewCell.swift; sourceTree = "<group>"; };
 		3FF1213724724716001E0554 /* SearchResultCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultCollectionViewCell.xib; sourceTree = "<group>"; };
 		3FF1213B24724B18001E0554 /* SearchUserResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUserResultTableViewCell.swift; sourceTree = "<group>"; };
 		3FF1213C24724B18001E0554 /* SearchUserResultTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchUserResultTableViewCell.xib; sourceTree = "<group>"; };
+		3FF47EDD2490CADB00A8DCCD /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
+		3FF47EDE2490CADB00A8DCCD /* ReportViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportViewController.xib; sourceTree = "<group>"; };
+		3FF47EE12490CB1100A8DCCD /* ReportMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportMainView.swift; sourceTree = "<group>"; };
+		3FF47EE22490CB1100A8DCCD /* ReportMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportMainView.xib; sourceTree = "<group>"; };
 		50AAD213D38C52F89A7C4FBE /* Pods-CosmeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CosmeApp.release.xcconfig"; path = "Target Support Files/Pods-CosmeApp/Pods-CosmeApp.release.xcconfig"; sourceTree = "<group>"; };
 		5F098A1E2474BE5800D033F4 /* BookmarkCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkCollectionViewCell.swift; sourceTree = "<group>"; };
 		5F098A1F2474BE5800D033F4 /* BookmarkCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookmarkCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -432,6 +444,7 @@
 		1F4B76E2246D2AC000FC3B27 /* CosmeApp */ = {
 			isa = PBXGroup;
 			children = (
+				3FF47EDC2490CAA900A8DCCD /* Report */,
 				FF3F38DB247796D10023FAAC /* Model */,
 				3F6648EA247227E200D4D950 /* Auth */,
 				1F4B76FA246D2FFE00FC3B27 /* Profile */,
@@ -615,6 +628,15 @@
 			path = "Search result";
 			sourceTree = "<group>";
 		};
+		3FC4EEB42491E4FB000D313D /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				3FC4EEB52491E518000D313D /* ReportTableViewCell.swift */,
+				3FC4EEB62491E518000D313D /* ReportTableViewCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
 		3FF12135247246C9001E0554 /* SearchResultCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -631,6 +653,18 @@
 				3FF1213C24724B18001E0554 /* SearchUserResultTableViewCell.xib */,
 			);
 			path = UserResultCell;
+			sourceTree = "<group>";
+		};
+		3FF47EDC2490CAA900A8DCCD /* Report */ = {
+			isa = PBXGroup;
+			children = (
+				3FC4EEB42491E4FB000D313D /* cell */,
+				3FF47EDD2490CADB00A8DCCD /* ReportViewController.swift */,
+				3FF47EDE2490CADB00A8DCCD /* ReportViewController.xib */,
+				3FF47EE12490CB1100A8DCCD /* ReportMainView.swift */,
+				3FF47EE22490CB1100A8DCCD /* ReportMainView.xib */,
+			);
+			path = Report;
 			sourceTree = "<group>";
 		};
 		4360F9E917DBF64E840CB96A /* Pods */ = {
@@ -998,6 +1032,8 @@
 				1F4B76EB246D2AC100FC3B27 /* Main.storyboard in Resources */,
 				5FA88A3E246E3FA300B84ACE /* YourProfileViewController.xib in Resources */,
 				5F97F3B2247B7EF400D68A0C /* SeventhYourGenreCollectionViewCell.xib in Resources */,
+				3FF47EE02490CADB00A8DCCD /* ReportViewController.xib in Resources */,
+				3FC4EEB82491E518000D313D /* ReportTableViewCell.xib in Resources */,
 				5F97F3F12484D80600D68A0C /* SerchGenreViewController.xib in Resources */,
 				5F97F3CC24809C6C00D68A0C /* ElevenYourGenreCollectionViewCell.xib in Resources */,
 				FF850A17246E2BC2003E2ACF /* EditMakeMainView.xib in Resources */,
@@ -1020,6 +1056,7 @@
 				5F098A4B2477BB6300D033F4 /* BookmarkCollectionView.xib in Resources */,
 				5F098A3F2477AB1200D033F4 /* GoodCollectionView.xib in Resources */,
 				D1B8AFC52472627C007BC6AD /* CreateMakeMainView.xib in Resources */,
+				3FF47EE42490CB1100A8DCCD /* ReportMainView.xib in Resources */,
 				3FA0F796246E6DCA00D8DBA2 /* SearchResultMainView.xib in Resources */,
 				FF8509F2246E2870003E2ACF /* TimeLineMainView.xib in Resources */,
 				1F4B7717246D32C000FC3B27 /* ActivityViewController.xib in Resources */,
@@ -1124,6 +1161,8 @@
 				FF3F38E02477AD850023FAAC /* MakePostModel.swift in Sources */,
 				FF850A12246E2B3C003E2ACF /* EditMakeViewController.swift in Sources */,
 				5F97F3F02484D80600D68A0C /* SerchGenreViewController.swift in Sources */,
+				3FF47EDF2490CADB00A8DCCD /* ReportViewController.swift in Sources */,
+				3FF47EE32490CB1100A8DCCD /* ReportMainView.swift in Sources */,
 				5F97F37F247B6DC000D68A0C /* FourthCollectionViewCell.swift in Sources */,
 				1F4B7712246D329300FC3B27 /* SearchViewController.swift in Sources */,
 				5FA88A36246E271000B84ACE /* MyProfileMainView.swift in Sources */,
@@ -1165,6 +1204,7 @@
 				5FCD8FCD248E0DCD00DF8106 /* FollowTableViewCell.swift in Sources */,
 				5F098A522477D98800D033F4 /* YourGenreCollectionView.swift in Sources */,
 				1F4B76F9246D2F7700FC3B27 /* AppDelegate.swift in Sources */,
+				3FC4EEB72491E518000D313D /* ReportTableViewCell.swift in Sources */,
 				1F4B7716246D32C000FC3B27 /* ActivityViewController.swift in Sources */,
 				3F18F06224722DC400957A2E /* SingInMainView.swift in Sources */,
 				5F098A202474BE5800D033F4 /* BookmarkCollectionViewCell.swift in Sources */,
