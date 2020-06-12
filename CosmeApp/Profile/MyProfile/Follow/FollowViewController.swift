@@ -12,6 +12,7 @@ import FirebaseAuth
 // MARK: - Property
 class FollowViewController: BaseViewController {
     @IBOutlet weak var mainView: FollowMainView!
+    @IBOutlet weak var headerView: HeaderView!
     
     var userModel : UserModel = UserModel()
     var userModels : [UserModel] = [UserModel]()
@@ -25,6 +26,7 @@ extension FollowViewController {
     override func loadView() {
         super.loadView()
         setDelegate()
+        setHeaderView()
         
     }
     override func viewDidLoad() {
@@ -45,12 +47,29 @@ extension FollowViewController :FollowMainViewDelegate{
     }
     
 }
+extension FollowViewController :HeaderViewDelegate{
+    func touchedLeftButton(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+        animatorManager.navigationType = .slide_pop
+    }
+}
 // MARK: - method
 extension FollowViewController {
     func setDelegate() {
         mainView.delegate = self
+        headerView.delegate = self
+    }
+    func setHeaderView() {
+        if follow {
+            headerView.setCenter(text: "フォロー", fontSize: 20, color: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))
+        }
+        if follower {
+            headerView.setCenter(text: "フォロワー", fontSize: 20, color: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))
+        }
+        headerView.setLeft(text: "戻る", fontSize: 20, color: #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1))
     }
     func getModel() {
+        if follow {
         var followUsers = [UserModel]()
         UserModel.readMe { (userModel) in
             userModel.follow_users.forEach { (followUser) in
@@ -58,43 +77,30 @@ extension FollowViewController {
                     if val == true {
                         UserModel.readAt(userId: key) { (userModel) in
                             followUsers.append(userModel)
+                            self.mainView.getModel(userModels: followUsers)
+                            self.userModels = followUsers
                         }
                     }
                 }
             }
-            self.mainView.getModel(userModels: followUsers)
-            self.userModels = followUsers
+        }
+        }
+        if follower {
+            var followerUsers = [UserModel]()
+            UserModel.readMe { (userModel) in
+                userModel.follower_users.forEach { (followerUser) in
+                    followerUser.forEach { (key, val) in
+                        if val == true {
+                            UserModel.readAt(userId: key) { (userModel) in
+                                followerUsers.append(userModel)
+                                self.mainView.getModel(userModels: followerUsers)
+                                self.userModels = followerUsers
+                                
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
-//    func getModel(){
-//        NoticeModel.reads { (noticeModels) in
-//            let follow = noticeModels.filter { (noticeModel) -> Bool in
-//                if let uid = Auth.auth().currentUser?.uid {
-//                    if noticeModel.notice_user_id == uid && noticeModel.noticeType == "フォロー" {
-//                        return true
-//                    }else {
-//                        return false
-//                    }
-//                } else{
-//                    return false
-//                }
-//            }
-//            self.noticeModels = follow
-//            self.mainView.getModel(noticeModels: follow)
-//
-//            for noticeModel in noticeModels {
-//                if noticeModel.notice_my_id != "" {
-//                    UserModel.readAt(userId: noticeModel.notice_my_id) { (userModel) in
-//                        if let name = userModel.nickname {
-//                            noticeModel.notice_user_name = name
-//                        }
-//                        if let icon = userModel.photo_path {
-//                            noticeModel.notice_user_icon = icon
-//                        }
-//                        self.mainView.getModel(noticeModels: self.noticeModels)
-//                    }
-//                }
-//            }
-//        }
-//    }
 }
