@@ -108,23 +108,21 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NM2-8z-MtT">
-                                            <rect key="frame" x="168" y="100" width="100" height="30"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="100" id="fwC-Dm-O9z"/>
-                                            </constraints>
-                                            <state key="normal" title="フォローする"/>
+                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NM2-8z-MtT">
+                                            <rect key="frame" x="168" y="100" width="108" height="30"/>
+                                            <color key="backgroundColor" red="1" green="0.62309132349999996" blue="0.78946096139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <state key="normal" title="フォローする">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
                                             <connections>
                                                 <action selector="followButton:" destination="-1" eventType="touchUpInside" id="eef-yU-wOQ"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbv-FZ-hk4">
-                                            <rect key="frame" x="302" y="100" width="92" height="30"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="92" id="c31-su-FX8"/>
-                                            </constraints>
+                                            <rect key="frame" x="286" y="100" width="108" height="30"/>
+                                            <color key="backgroundColor" red="0.54293201770528587" green="0.6178396012271703" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <state key="normal" title="ブロックする">
-                                                <color key="titleColor" red="1" green="0.62309132349999996" blue="0.78946096139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
                                             <connections>
                                                 <action selector="blockButton:" destination="-1" eventType="touchUpInside" id="Kp2-sb-L1U"/>
@@ -136,6 +134,7 @@
                                         <constraint firstItem="ueY-lj-DMr" firstAttribute="top" secondItem="af7-H1-pQY" secondAttribute="top" constant="8" id="40C-3m-9vg"/>
                                         <constraint firstItem="Q4C-RW-3n4" firstAttribute="leading" secondItem="af7-H1-pQY" secondAttribute="leading" constant="20" id="573-ft-y4v"/>
                                         <constraint firstItem="0mW-uu-dlO" firstAttribute="top" secondItem="Q4C-RW-3n4" secondAttribute="bottom" constant="100.5" id="8mT-Se-h7o"/>
+                                        <constraint firstItem="wbv-FZ-hk4" firstAttribute="leading" secondItem="NM2-8z-MtT" secondAttribute="trailing" constant="10" id="9wq-kU-U1M"/>
                                         <constraint firstAttribute="trailing" secondItem="wbv-FZ-hk4" secondAttribute="trailing" constant="20" id="9yV-e1-GRp"/>
                                         <constraint firstAttribute="trailing" secondItem="7Mm-td-khQ" secondAttribute="trailing" id="AdK-i6-epq"/>
                                         <constraint firstItem="sN7-Aj-sMa" firstAttribute="top" secondItem="zGD-cI-4oO" secondAttribute="bottom" constant="8" id="BQV-GZ-q6f"/>
@@ -161,6 +160,7 @@
                                         <constraint firstAttribute="trailing" secondItem="Q4C-RW-3n4" secondAttribute="trailing" constant="20" id="fZK-7k-qsz"/>
                                         <constraint firstItem="RDK-ec-cDg" firstAttribute="leading" secondItem="af7-H1-pQY" secondAttribute="leading" id="jba-Xp-h8o"/>
                                         <constraint firstAttribute="trailing" secondItem="sN7-Aj-sMa" secondAttribute="trailing" constant="20" id="kAx-L4-emz"/>
+                                        <constraint firstItem="NM2-8z-MtT" firstAttribute="width" secondItem="wbv-FZ-hk4" secondAttribute="width" id="l5p-9S-Epj"/>
                                         <constraint firstItem="wbv-FZ-hk4" firstAttribute="top" secondItem="sN7-Aj-sMa" secondAttribute="bottom" constant="10" id="q9H-9K-zay"/>
                                         <constraint firstItem="NM2-8z-MtT" firstAttribute="leading" secondItem="P2G-B9-CoY" secondAttribute="trailing" constant="20" id="y0I-Br-YTE"/>
                                     </constraints>
