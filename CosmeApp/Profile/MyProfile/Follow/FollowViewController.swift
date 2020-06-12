@@ -27,7 +27,6 @@ extension FollowViewController {
         super.loadView()
         setDelegate()
         setHeaderView()
-        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +44,6 @@ extension FollowViewController :FollowMainViewDelegate{
         navigationController?.pushViewController(yourProfileViewController, animated: true)
         animatorManager.navigationType = .slide_push
     }
-    
 }
 extension FollowViewController :HeaderViewDelegate{
     func touchedLeftButton(_ sender: UIButton) {
