@@ -26,28 +26,18 @@
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KbU-al-h7m">
                     <rect key="frame" x="0.0" y="163.5" width="414" height="537.5"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <color key="sectionIndexBackgroundColor" red="1" green="0.54001407779999999" blue="0.77211574660000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </tableView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yjS-tj-iCe">
-                    <rect key="frame" x="145" y="731" width="124" height="38"/>
-                    <color key="backgroundColor" red="0.0" green="0.0014402571740000001" blue="0.14919098980000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                    <state key="normal" title="投稿を通報">
-                        <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                    </state>
-                </button>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="yjS-tj-iCe" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.3" id="8c8-dw-DSE"/>
                 <constraint firstItem="hlV-Qz-DAP" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="Cm3-np-eiP"/>
                 <constraint firstAttribute="trailing" secondItem="hlV-Qz-DAP" secondAttribute="trailing" constant="20" id="HKY-Uv-fMa"/>
-                <constraint firstItem="yjS-tj-iCe" firstAttribute="top" secondItem="KbU-al-h7m" secondAttribute="bottom" constant="30" id="LE2-2A-tHr"/>
                 <constraint firstItem="hlV-Qz-DAP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="VHD-sN-lTp"/>
                 <constraint firstItem="KbU-al-h7m" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.6" id="itu-Vy-8kC"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KbU-al-h7m" secondAttribute="trailing" id="je6-uu-8dL"/>
                 <constraint firstItem="KbU-al-h7m" firstAttribute="top" secondItem="hlV-Qz-DAP" secondAttribute="bottom" constant="30" id="o12-c0-KzE"/>
                 <constraint firstItem="KbU-al-h7m" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="pgS-dN-MIN"/>
-                <constraint firstItem="yjS-tj-iCe" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="pvb-Ro-hNh"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="107.8125"/>
