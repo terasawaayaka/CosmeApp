@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FollowViewController" customModule="CosmeApp" customModuleProvider="target">
             <connections>
+                <outlet property="headerView" destination="nTg-pv-imd" id="UI4-bk-KFO"/>
                 <outlet property="mainView" destination="dzh-w5-Udv" id="LId-Lq-vIs"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -19,19 +20,29 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dzh-w5-Udv" customClass="FollowMainView" customModule="CosmeApp" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <rect key="frame" x="0.0" y="92" width="414" height="770"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nTg-pv-imd" customClass="HeaderView" customModule="PGFramework">
+                    <rect key="frame" x="0.0" y="44" width="414" height="48"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="Aeb-Af-Mgd"/>
+                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dzh-w5-Udv" secondAttribute="trailing" id="0A5-hJ-O55"/>
-                <constraint firstItem="dzh-w5-Udv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="4ye-py-QgN"/>
-                <constraint firstItem="dzh-w5-Udv" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Ayc-q6-ljh"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="dzh-w5-Udv" secondAttribute="bottom" id="liC-bL-E7K"/>
+                <constraint firstItem="dzh-w5-Udv" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="05Z-PH-dDY"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="nTg-pv-imd" secondAttribute="trailing" id="5tc-LG-Nqk"/>
+                <constraint firstItem="dzh-w5-Udv" firstAttribute="top" secondItem="nTg-pv-imd" secondAttribute="bottom" id="ITN-Mq-u1g"/>
+                <constraint firstItem="nTg-pv-imd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="SNi-De-yrt"/>
+                <constraint firstItem="dzh-w5-Udv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="aaG-gm-cCb"/>
+                <constraint firstItem="dzh-w5-Udv" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="ky9-qm-Stq"/>
+                <constraint firstItem="nTg-pv-imd" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="uhe-cF-pNf"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="139" y="122"/>
+            <point key="canvasLocation" x="137.68115942028987" y="121.875"/>
         </view>
     </objects>
 </document>
