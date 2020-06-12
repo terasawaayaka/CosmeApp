@@ -14,8 +14,9 @@ class FollowViewController: BaseViewController {
     @IBOutlet weak var mainView: FollowMainView!
     @IBOutlet weak var headerView: HeaderView!
     
-    var userModel: UserModel = UserModel()
-    var userModels: [UserModel] = [UserModel]()
+    var userModel : UserModel = UserModel()
+    var userModels : [UserModel] = [UserModel]()
+    var noticeModels: [NoticeModel] = [NoticeModel]()
     
     var follow: Bool = false
     var follower: Bool = false

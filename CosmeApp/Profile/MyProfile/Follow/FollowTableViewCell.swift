@@ -15,8 +15,8 @@ extension FollowTableViewCellDelegate {
 // MARK: - Property
 class FollowTableViewCell: BaseTableViewCell {
     weak var delegate: FollowTableViewCellDelegate? = nil
-    @IBOutlet weak var userIcon: UIImageView!
     @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var userIcon: UIImageView!
 }
 // MARK: - Life cycle
 extension FollowTableViewCell {
@@ -30,7 +30,7 @@ extension FollowTableViewCell {
 }
 // MARK: - method
 extension FollowTableViewCell {
-    func setLayout() {
+    func setLayout(){
         userIcon.layer.cornerRadius = userIcon.frame.width / 2
     }
     func updateCell(userModel: UserModel) {

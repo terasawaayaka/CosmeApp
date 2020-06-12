@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FollowViewController" customModule="CosmeApp" customModuleProvider="target">
             <connections>
-                <outlet property="headerView" destination="nTg-pv-imd" id="UI4-bk-KFO"/>
+                <outlet property="headerView" destination="PlK-eT-9Y5" id="1YZ-Sa-ar8"/>
                 <outlet property="mainView" destination="dzh-w5-Udv" id="LId-Lq-vIs"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -23,23 +23,23 @@
                     <rect key="frame" x="0.0" y="92" width="414" height="770"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nTg-pv-imd" customClass="HeaderView" customModule="PGFramework">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PlK-eT-9Y5" customClass="HeaderView" customModule="PGFramework">
                     <rect key="frame" x="0.0" y="44" width="414" height="48"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="48" id="Aeb-Af-Mgd"/>
+                        <constraint firstAttribute="height" constant="48" id="a7X-e0-SyG"/>
                     </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="dzh-w5-Udv" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="05Z-PH-dDY"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="nTg-pv-imd" secondAttribute="trailing" id="5tc-LG-Nqk"/>
-                <constraint firstItem="dzh-w5-Udv" firstAttribute="top" secondItem="nTg-pv-imd" secondAttribute="bottom" id="ITN-Mq-u1g"/>
-                <constraint firstItem="nTg-pv-imd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="SNi-De-yrt"/>
-                <constraint firstItem="dzh-w5-Udv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="aaG-gm-cCb"/>
-                <constraint firstItem="dzh-w5-Udv" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="ky9-qm-Stq"/>
-                <constraint firstItem="nTg-pv-imd" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="uhe-cF-pNf"/>
+                <constraint firstItem="PlK-eT-9Y5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="0ef-QV-UDg"/>
+                <constraint firstItem="dzh-w5-Udv" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="0mQ-WF-NNh"/>
+                <constraint firstItem="PlK-eT-9Y5" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="8cx-5C-Anb"/>
+                <constraint firstItem="dzh-w5-Udv" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="OXa-p6-5FM"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="PlK-eT-9Y5" secondAttribute="trailing" id="icE-qy-fr6"/>
+                <constraint firstItem="dzh-w5-Udv" firstAttribute="top" secondItem="PlK-eT-9Y5" secondAttribute="bottom" id="tY1-ES-4s2"/>
+                <constraint firstItem="dzh-w5-Udv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="wri-iJ-cAX"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="121.875"/>

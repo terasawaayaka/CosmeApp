@@ -144,18 +144,26 @@ extension TimeLineViewController {
                     followUser.forEach { (key, val) in
                         for blockUser in userModel.block_users {
                             blockUser.forEach { (key2, val2) in
-                                //フォローしている人と自分のみを抽出 ブロックした人を非表示
-                                filterdReviewPostModels = reviewPostModels.filter { (reviewPostModel) -> Bool in
-                                    if let uid = Auth.auth().currentUser?.uid {
-                                        if key == reviewPostModel.post_user_id && val == true || reviewPostModel.post_user_id == uid {
-                                            return true
-                                        } else if key2 == reviewPostModel.post_user_id && val2 == true {
-                                            return false
-                                        }else{
-                                            return false
+                                for blockedUser in userModel.blocked_users {
+                                    blockedUser.forEach { (key3, val3) in
+                                        //フォローしている人と自分のみを抽出 ブロックした人を非表示 自分をブロックしている人を非表示
+                                        filterdReviewPostModels = reviewPostModels.filter { (reviewPostModel) -> Bool in
+                                            if let uid = Auth.auth().currentUser?.uid {
+                                                if key == reviewPostModel.post_user_id && val{
+                                                    return true
+                                                }else if reviewPostModel.post_user_id == uid {
+                                                    return true
+                                                } else if key2 == reviewPostModel.post_user_id && val2 == true {
+                                                    return false
+                                                }else if key3 == reviewPostModel.post_user_id && val3 == true {
+                                                    return false
+                                                }else{
+                                                    return false
+                                                }
+                                            } else {
+                                                return false
+                                            }
                                         }
-                                    } else {
-                                        return false
                                     }
                                 }
                             }
@@ -257,18 +265,24 @@ extension TimeLineViewController {
                     followUser.forEach { (key, val) in
                         for blockUser in userModel.block_users {
                             blockUser.forEach { (key2, val2) in
-                                //フォローしている人と自分のみを抽出 ブロックしている人を非表示
-                                filterdMakePostModels = makePostModels.filter { (makePostModel) -> Bool in
-                                    if let uid = Auth.auth().currentUser?.uid {
-                                        if key == makePostModel.post_user_id && val == true || makePostModel.post_user_id == uid {
-                                            return true
-                                        } else if key2 == makePostModel.post_user_id && val2 == true {
-                                            return false
-                                        }else{
-                                            return false
+                                for blockedUser in userModel.blocked_users {
+                                    blockedUser.forEach { (key3, val3) in
+                                        //フォローしている人と自分のみを抽出 ブロックした人を非表示 自分をブロックしている人を非表示
+                                        filterdMakePostModels = makePostModels.filter { (makePostModel) -> Bool in
+                                            if let uid = Auth.auth().currentUser?.uid {
+                                                if key == makePostModel.post_user_id && val == true || makePostModel.post_user_id == uid {
+                                                    return true
+                                                } else if key2 == makePostModel.post_user_id && val2 == true {
+                                                    return false
+                                                }else if key3 == makePostModel.post_user_id && val3 == true {
+                                                    return false
+                                                }else{
+                                                    return false
+                                                }
+                                            } else {
+                                                return false
+                                            }
                                         }
-                                    } else {
-                                        return false
                                     }
                                 }
                             }

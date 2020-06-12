@@ -17,9 +17,11 @@ extension FollowMainViewDelegate {
 class FollowMainView: BaseView {
     weak var delegate: FollowMainViewDelegate? = nil
     @IBOutlet weak var tableView: UITableView!
-    
+
     var userModel: UserModel = UserModel()
     var userModels: [UserModel] = [UserModel]()
+    var noticeModel: NoticeModel = NoticeModel()
+    var noticeModels: [NoticeModel] = [NoticeModel]()
 }
 // MARK: - Life cycle
 extension FollowMainView {
@@ -43,9 +45,9 @@ extension FollowMainView :UITableViewDataSource{
     }
     
 }
-extension FollowMainView :UITableViewDelegate{
+extension FollowMainView :UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let delegate = delegate{delegate.didSelectRowAt(indexPath: indexPath)}
+        if let delegate = delegate{delegate.didSelectRowAt(indexPath:indexPath)}
     }
 }
 // MARK: - method

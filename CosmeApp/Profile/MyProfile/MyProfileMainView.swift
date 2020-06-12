@@ -28,6 +28,8 @@ extension MyProfileMainViewDelegate {
 class MyProfileMainView: BaseView {
     weak var delegate: MyProfileMainViewDelegate? = nil
     //Outlet
+    @IBOutlet weak var followCount: UILabel!
+    @IBOutlet weak var followerCount: UILabel!
     @IBOutlet weak var iconView: UIImageView!
     @IBOutlet weak var todayCollectionView: UICollectionView!
     @IBOutlet weak var collectionViewFlowlayout: UICollectionViewFlowLayout!
@@ -57,6 +59,7 @@ class MyProfileMainView: BaseView {
     }
     
     //data
+    var userModels: [UserModel] = [UserModel]()
     var makePostModels: [MakePostModel] = [MakePostModel]()
 }
 // MARK: - Life cycle
@@ -131,6 +134,10 @@ extension MyProfileMainView {
                 iconView.af_setImage(withURL: url)
             }
         }
+//        var follow : Int = 0
+//        followCount.text =
+//        follow = userModel.follow_users.count
+        
     }
     func getMakeModel(makePostModels: [MakePostModel]) {
         self.makePostModels = makePostModels
