@@ -80,6 +80,17 @@ extension YourProfileViewController :YourProfileMainViewDelegate{
             if isBlocked == false {
                 isBlock = true
             }
+            //ブロックボタンを押したら投稿非表示、解除したら表示
+            if isBlock == true {
+                self.mainView.yourTodayCollectionView.isHidden = true
+                self.mainView.scrollMainView.isHidden = true
+                self.mainView.followButton.isHidden = true
+            }else{
+                self.mainView.yourTodayCollectionView.isHidden = false
+                self.mainView.scrollMainView.isHidden = false
+                self.mainView.followButton.isHidden = false
+            }
+            
             UserModel.addBlockUser(request: userModel, isBlock: isBlock)
             UserModel.addBlockedUser(request: userModel, isBlock: isBlock)
         }
@@ -273,13 +284,31 @@ extension YourProfileViewController {
         }
     }
     func judgedBlock() {
-            UserModel.readMe { (userModel) in
-                userModel.block_users.forEach { (blockUser) in
-                    blockUser.forEach { (key,val) in
-                        if key == self.userModel.id {
-                            self.isBlock = val
-                            self.mainView.isBlockButtonTouched = self.isBlock
-                            self.mainView.updateBlock()
+        UserModel.readMe { (userModel) in
+            userModel.block_users.forEach { (blockUser) in
+                blockUser.forEach { (key,val) in
+                    userModel.blocked_users.forEach { (blockedUser) in
+                        blockedUser.forEach { (key2,val2) in
+                            if key == self.userModel.id {
+                                self.isBlock = val
+                                self.mainView.isBlockButtonTouched = self.isBlock
+                                self.mainView.updateBlock()
+                            }
+                            //ブロック中だったら投稿とフォローボタンを非表示
+                            if key == self.userModel.id && val == true {
+                                self.mainView.yourTodayCollectionView.isHidden = true
+                                self.mainView.scrollMainView.isHidden = true
+                                self.mainView.followButton.isHidden = true
+                            }
+                            //ブロックされていたらそのユーザーの投稿とフォローボタンとブロックボタンを非表示
+                            if key2 == self.userModel.id && val2 == true {
+                                self.mainView.yourTodayCollectionView.isHidden = true
+                                self.mainView.scrollMainView.isHidden = true
+                                self.mainView.followButton.isHidden = true
+                                self.mainView.blockButton.isHidden = true
+                                
+                            }
+                        }
                     }
                 }
             }

@@ -118,18 +118,26 @@ extension YourProfileMainView {
     func updateFollow() {
         if isFollowButtonTouched {
             followButton.setTitle("フォロー中", for: .normal)
+            followButton.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
+            followButton.backgroundColor = #colorLiteral(red: 1, green: 0.6230913235, blue: 0.7894609614, alpha: 1)
            
         } else {
             followButton.setTitle("フォローする", for: .normal)
+            followButton.setTitleColor(#colorLiteral(red: 1, green: 0.6230913235, blue: 0.7894609614, alpha: 1), for: .normal)
+            followButton.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         }
     }
     
     func updateBlock() {
         if isBlockButtonTouched {
             blockButton.setTitle("ブロック中", for: .normal)
+            blockButton.setTitleColor(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
+            blockButton.backgroundColor = #colorLiteral(red: 0.5429320177, green: 0.6178396012, blue: 1, alpha: 1)
            
         } else {
             blockButton.setTitle("ブロックする", for: .normal)
+            blockButton.setTitleColor(#colorLiteral(red: 0.5429320177, green: 0.6178396012, blue: 1, alpha: 1), for: .normal)
+            blockButton.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         }
     }
     
