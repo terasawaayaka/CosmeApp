@@ -34,7 +34,14 @@ extension ActivityViewController {
 }
 // MARK: - Protocol
 extension ActivityViewController:ActivityMainViewDelegate {
+    func didSelectRowAt(indexPath: IndexPath) {
+    }
     
+    func deleteCell(indexPath: IndexPath) {
+        NoticeModel.delete(id: noticeModels[indexPath.row].id) {
+        }
+    }
+ 
     func touchedProfilePageButton(indexPath: IndexPath) {
         let yourProfileViewController = YourProfileViewController()
         yourProfileViewController.noticeModel = noticeModels[indexPath.row]
@@ -123,4 +130,5 @@ extension ActivityViewController {
             }
         }
     }
+    
 }

@@ -23,6 +23,8 @@ protocol ActivityMainViewDelegate: NSObjectProtocol {
     func touchedSecondProfileButton(indexPath: IndexPath)
     func touchedSecondPostPageButton(indexPath: IndexPath)
     func touchedThirdProfileButton(indexPath: IndexPath)
+    func didSelectRowAt(indexPath: IndexPath)
+    func deleteCell(indexPath: IndexPath)
 }
 extension ActivityMainViewDelegate {
 }
@@ -89,21 +91,26 @@ extension ActivityMainView:UITableViewDataSource {
             break
         }
     }
-//    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool
-//    {
-//        return true
-//    }
-//
-//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-//        if editingStyle == UITableViewCell.EditingStyle.delete {
-//            noticeModels.remove(at: indexPath.row)
-//            NoticeModel.delete(id: noticeModel.id) {
-//            }
-//            tableView.deleteRows(at: [indexPath as IndexPath], with: UITableView.RowAnimation.automatic)
-//            tableView.reloadData()
-//            
-//        }
-//    }
+    
+}
+
+extension ActivityMainView: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool
+    {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        //dataを消す
+        noticeModels.remove(at: indexPath.row)
+        if let delegate = delegate {
+            delegate.deleteCell(indexPath: indexPath)
+        }
+        //tableViewCellの削除
+        tableView.deleteRows(at: [indexPath], with: .automatic)
+        tableView.reloadData()
+    }
+
 }
 
 extension ActivityMainView: ActivityGoodTableViewCellDelegate {
@@ -144,6 +151,7 @@ extension ActivityMainView: ActivityFollowTableViewCellDelegate {
 extension ActivityMainView {
     func setDelegate() {
         tableView.dataSource = self
+        tableView.delegate = self
     }
     func getModel(noticeModels: [NoticeModel]) {
         self.noticeModels = noticeModels
