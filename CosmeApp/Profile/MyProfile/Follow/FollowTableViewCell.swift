@@ -22,7 +22,7 @@ class FollowTableViewCell: BaseTableViewCell {
 extension FollowTableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
-//        setLayout()
+        setLayout()
     }
 }
 // MARK: - Protocol
@@ -30,9 +30,9 @@ extension FollowTableViewCell {
 }
 // MARK: - method
 extension FollowTableViewCell {
-//    func setLayout(){
-//        userIcon.layer.cornerRadius = userIcon.frame.width / 2
-//    }
+    func setLayout(){
+        userIcon.layer.cornerRadius = userIcon.frame.width / 2
+    }
     func updateCell(userModel: UserModel) {
         if userModel.nickname == "" {
             userName.text = "メンバーがいません"
