@@ -112,19 +112,10 @@ extension CreateReviewMainView {
         if isFirstStarSelected {
             let image = UIImage(named: "checkedStar")
             firstStarButton.setImage(image, for: .normal)
-//            _ = UIImage(named: "star")
-//            fifthStarButton.setImage(image, for: .normal)
-//            fourthStarButton.setImage(image, for: .normal)
-//            thirdStarButton.setImage(image, for: .normal)
-//            secondStarButton.setImage(image, for: .normal)
             
         } else {
             let image = UIImage(named: "star")
             firstStarButton.setImage(image, for: .normal)
-            fifthStarButton.setImage(image, for: .normal)
-            fourthStarButton.setImage(image, for: .normal)
-            thirdStarButton.setImage(image, for: .normal)
-            secondStarButton.setImage(image, for: .normal)
         }
         if isSecondStarSelected {
             let image = UIImage(named: "checkedStar")
@@ -134,9 +125,6 @@ extension CreateReviewMainView {
         } else {
         
             let image = UIImage(named: "star")
-            fifthStarButton.setImage(image, for: .normal)
-            fourthStarButton.setImage(image, for: .normal)
-            thirdStarButton.setImage(image, for: .normal)
             secondStarButton.setImage(image, for: .normal)
             
         }
@@ -148,8 +136,6 @@ extension CreateReviewMainView {
         } else {
             let image = UIImage(named: "star")
             thirdStarButton.setImage(image, for: .normal)
-            fifthStarButton.setImage(image, for: .normal)
-            fourthStarButton.setImage(image, for: .normal)
         }
         if isFourthStarSelected {
             let image = UIImage(named: "checkedStar")
