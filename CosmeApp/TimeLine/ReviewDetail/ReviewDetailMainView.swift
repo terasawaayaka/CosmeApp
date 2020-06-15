@@ -18,6 +18,7 @@ protocol ReviewDetailMainViewDelegate: NSObjectProtocol{
     func goodButton(reviewPostModel: ReviewPostModel)
     func favoriteButton(reviewPostModel:ReviewPostModel)
     func deleteButton(commentPostModel:CommentPostModel)
+    func touchedReportButton()
 }
 extension ReviewDetailMainViewDelegate {
 }
@@ -81,6 +82,11 @@ class ReviewDetailMainView: BaseView, UIScrollViewDelegate {
         UIView.animate(withDuration: 0.5) {
             self.favoriteButton.transform = CGAffineTransform(rotationAngle: CGFloat.pi/180*180)
             self.favoriteButton.transform = CGAffineTransform(rotationAngle: CGFloat.pi/180*360)
+        }
+    }
+    @IBAction func touchedReportButton(_ sender: UIButton) {
+        if let delegate = delegate {
+            delegate.touchedReportButton()
         }
     }
     
