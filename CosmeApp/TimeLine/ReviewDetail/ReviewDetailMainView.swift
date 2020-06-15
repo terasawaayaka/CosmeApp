@@ -171,6 +171,13 @@ extension ReviewDetailMainView {
     }
     
     func updateGood() {
+        if let uid = Auth.auth().currentUser?.uid {
+            if reviewPostModel.post_user_id == uid {
+                goodButton.isHidden = true
+            } else {
+                goodButton.isHidden = false
+            }
+        }
         if isGoodButtonTouched {
             let image = UIImage(named: "good")
             goodButton.setImage(image, for: .normal)
@@ -180,6 +187,13 @@ extension ReviewDetailMainView {
         }
     }
     func updateFavorite() {
+        if let uid = Auth.auth().currentUser?.uid {
+                 if reviewPostModel.post_user_id == uid {
+                     favoriteButton.isHidden = true
+                 } else {
+                     favoriteButton.isHidden = false
+                 }
+             }
         if isFavoriteButtonTouched {
             let image = UIImage(named: "favorite")
             favoriteButton.setImage(image, for: .normal)
