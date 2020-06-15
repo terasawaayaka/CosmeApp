@@ -23,6 +23,7 @@ class ReportDoneMainView: BaseView {
     }
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var reportLabel: UILabel!
+
 }
 // MARK: - Life cycle
 extension ReportDoneMainView {
