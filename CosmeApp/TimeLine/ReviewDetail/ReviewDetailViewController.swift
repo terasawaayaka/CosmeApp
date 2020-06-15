@@ -173,6 +173,7 @@ extension ReviewDetailViewController:ReviewDetailMainViewDelegate {
         }
         commentPostModel.review_post_id = reviewPostModel.id
         CommentPostModel.create(request: commentPostModel) {
+            self.mainView.tableHeight.constant = CGFloat(self.mainView.tableView.contentSize.height)
             self.mainView.commentTextField.endEditing(true)
             self.mainView.commentTextField.text = ""
         }
