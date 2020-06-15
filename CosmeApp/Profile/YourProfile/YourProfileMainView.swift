@@ -17,6 +17,7 @@ protocol YourProfileMainViewDelegate: NSObjectProtocol{
     func blockButton()
     
     func didSelectItemAt(indexPath: IndexPath)
+    func secondDidSelectItemAt(indexPath: IndexPath)
 }
 extension YourProfileMainViewDelegate {
 }
@@ -56,6 +57,7 @@ class YourProfileMainView: BaseView {
     var isBlockButtonTouched:Bool = false
     
     var reviewPostModels: [ReviewPostModel] = [ReviewPostModel]()
+    var makePostModels: [MakePostModel] = [MakePostModel]()
     var userModel: UserModel = UserModel()
 }
 // MARK: - Life cycle
@@ -72,11 +74,12 @@ extension YourProfileMainView {
 // MARK: - Protocol
 extension YourProfileMainView :UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return makePostModels.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "YourTodayCollectionViewCell", for: indexPath) as? YourTodayCollectionViewCell else {return UICollectionViewCell()}
+        cell.updateCell(makePostModel: makePostModels[indexPath.row])
         return cell
     }
     
@@ -87,13 +90,17 @@ extension YourProfileMainView :YourScrollMainViewDelegate {
             delegate.didSelectItemAt(indexPath: indexPath)
         }
     }
-    
-    
+}
+extension YourProfileMainView: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let delegate = delegate{delegate.secondDidSelectItemAt(indexPath: indexPath)}
+    }
 }
 // MARK: - method
 extension YourProfileMainView {
     func setDelegate() {
         yourTodayCollectionView.dataSource = self
+        yourTodayCollectionView.delegate = self
         scrollMainView.delegate = self
     }
     func getModel(userModel: UserModel) {
@@ -143,5 +150,9 @@ extension YourProfileMainView {
     
     func getModelforCell(filterdReviewPostModels: [ReviewPostModel],userModel: UserModel){
         scrollMainView.getModel(filterdReviewPostModels: reviewPostModels,userModel: userModel)
+    }
+    func getTodayModel(makePostModels: [MakePostModel]) {
+        self.makePostModels = makePostModels
+        yourTodayCollectionView.reloadData()
     }
 }

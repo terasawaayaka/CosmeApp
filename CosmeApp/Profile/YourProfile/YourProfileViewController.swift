@@ -15,6 +15,7 @@ class YourProfileViewController: BaseViewController {
     var userModel: UserModel = UserModel()
     var reviewPostModel: ReviewPostModel = ReviewPostModel()
     var makePostModel : MakePostModel = MakePostModel()
+    var makePostModels: [MakePostModel] = [MakePostModel]()
     var commentPostModel : CommentPostModel = CommentPostModel()
     var noticeModel: NoticeModel = NoticeModel()
     var reviewPostModels: [ReviewPostModel] = [ReviewPostModel]()
@@ -52,6 +53,13 @@ extension YourProfileViewController {
 }
 // MARK: - Protocol
 extension YourProfileViewController :YourProfileMainViewDelegate{
+    func secondDidSelectItemAt(indexPath: IndexPath) {
+        let makeDetailViewController = MakeDetailViewController()
+        makeDetailViewController.makePostModel = makePostModels[indexPath.row]
+        navigationController?.pushViewController(makeDetailViewController, animated: true)
+        animatorManager.navigationType = .slide_push
+    }
+    
     func blockButton() {
         mainView.isBlockButtonTouched = !mainView.isBlockButtonTouched
         mainView.updateBlock()
@@ -101,7 +109,7 @@ extension YourProfileViewController :YourProfileMainViewDelegate{
         let reviewDetailViewController = ReviewDetailViewController()
         reviewDetailViewController.reviewPostModel = reviewPostModels[indexPath.row]
         navigationController?.pushViewController(reviewDetailViewController, animated: true)
-        animatorManager.navigationType = .slide_pop
+        animatorManager.navigationType = .slide_push
     }
     
     func touchedPostButton() {
@@ -209,7 +217,20 @@ extension YourProfileViewController {
             self.mainView.reviewPostModels = filterdReviewPostModels
             self.mainView.getModelforCell(filterdReviewPostModels: reviewPostModels, userModel: self.userModel)
             }
+        
+        MakePostModel.reads { (makePostModels) in
+            let filterMakePostModels = makePostModels.filter { (makePostModel) -> Bool in
+                if makePostModel.post_user_id == self.userModel.id {
+                    return true
+                } else {
+                    return false
+                }
+            }
+            self.mainView.getTodayModel(makePostModels: filterMakePostModels)
+            self.makePostModels = filterMakePostModels
         }
+        }
+    
         
     func makeGetModel() {
         if makePostModel.post_user_id != "" {
