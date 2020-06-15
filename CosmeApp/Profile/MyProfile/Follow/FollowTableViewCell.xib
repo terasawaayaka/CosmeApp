@@ -8,14 +8,44 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="62" id="otQ-Qj-T0I" customClass="FollowTableViewCell" customModule="CosmeApp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="589" height="62"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="95" id="otQ-Qj-T0I" customClass="FollowTableViewCell" customModule="CosmeApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="392" height="95"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="otQ-Qj-T0I" id="qxl-gh-T1M">
-                <rect key="frame" x="0.0" y="0.0" width="589" height="62"/>
+                <rect key="frame" x="0.0" y="0.0" width="392" height="95"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noimage" translatesAutoresizingMaskIntoConstraints="NO" id="UTe-3A-Qdz">
+                        <rect key="frame" x="20" y="17" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="UTe-3A-Qdz" secondAttribute="height" multiplier="1:1" id="2Do-5Y-mMU"/>
+                            <constraint firstAttribute="width" constant="60" id="y3k-rW-3MC"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LER-oL-ZBB">
+                        <rect key="frame" x="88" y="39" width="33" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="LER-oL-ZBB" firstAttribute="top" secondItem="qxl-gh-T1M" secondAttribute="top" constant="39" id="H0g-wQ-rXw"/>
+                    <constraint firstAttribute="bottom" secondItem="UTe-3A-Qdz" secondAttribute="bottom" constant="18" id="Xdu-F0-RvY"/>
+                    <constraint firstItem="UTe-3A-Qdz" firstAttribute="top" secondItem="qxl-gh-T1M" secondAttribute="top" constant="17" id="fCu-e9-leK"/>
+                    <constraint firstItem="UTe-3A-Qdz" firstAttribute="leading" secondItem="qxl-gh-T1M" secondAttribute="leading" constant="20" id="hf8-bQ-bhq"/>
+                    <constraint firstAttribute="bottom" secondItem="LER-oL-ZBB" secondAttribute="bottom" constant="40" id="hhw-yx-4GJ"/>
+                    <constraint firstItem="LER-oL-ZBB" firstAttribute="leading" secondItem="UTe-3A-Qdz" secondAttribute="trailing" constant="8" id="rrb-pp-SKi"/>
+                </constraints>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="122.46376811594205" y="77.678571428571431"/>
+            <connections>
+                <outlet property="userIcon" destination="UTe-3A-Qdz" id="Jsm-xz-VAs"/>
+                <outlet property="userName" destination="LER-oL-ZBB" id="xHG-1w-hrg"/>
+            </connections>
+            <point key="canvasLocation" x="-86.956521739130437" y="85.379464285714278"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="noimage" width="2048" height="2048"/>
+    </resources>
 </document>

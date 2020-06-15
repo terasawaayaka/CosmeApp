@@ -61,12 +61,14 @@ extension MyProfileViewController :MyProfileMainViewDelegate{
     func touchedFollowButton() {
         let followViewController = FollowViewController()
         navigationController?.pushViewController(followViewController, animated: true)
+        followViewController.follow = true
         animatorManager.navigationType = .slide_push
     }
     
     func touchedFollowerButton() {
         let followViewController = FollowViewController()
         navigationController?.pushViewController(followViewController, animated: true)
+        followViewController.follower = true
         animatorManager.navigationType = .slide_push
     }
     
