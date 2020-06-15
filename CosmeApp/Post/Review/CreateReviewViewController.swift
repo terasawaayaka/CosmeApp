@@ -94,13 +94,13 @@ extension CreateReviewViewController:HeaderViewDelegate {
             reviewPostModel.tag = text
         }
         
-        if mainView.isFirstStarSelected == true && mainView.isSecondStarSelected == true && mainView.isThirdStarSelected == true && mainView.isFourthStarSelected == true && mainView.isFifthStarSelected == true {
+            if mainView.isFifthStarSelected == true {
             reviewPostModel.review_num = 5
-        } else if mainView.isFirstStarSelected == true && mainView.isSecondStarSelected == true && mainView.isThirdStarSelected == true && mainView.isFourthStarSelected == true {
+        } else if mainView.isFourthStarSelected == true {
             reviewPostModel.review_num = 4
-        } else if mainView.isFirstStarSelected == true && mainView.isSecondStarSelected == true && mainView.isThirdStarSelected == true {
+        } else if mainView.isThirdStarSelected == true {
             reviewPostModel.review_num = 3
-        } else if mainView.isFirstStarSelected == true && mainView.isSecondStarSelected == true {
+        } else if mainView.isSecondStarSelected == true {
             reviewPostModel.review_num = 2
         } else if mainView.isFirstStarSelected == true {
             reviewPostModel.review_num = 1
@@ -173,20 +173,30 @@ extension CreateReviewViewController:CreateReviewMainViewDelegate {
     }
     func firstStarButton() {
         mainView.isFirstStarSelected = !mainView.isFirstStarSelected
+        mainView.isSecondStarSelected = false
+        mainView.isThirdStarSelected = false
+        mainView.isFourthStarSelected = false
+        mainView.isFifthStarSelected = false
         mainView.updateStar()
     }
     func secondStarButton() {
         mainView.isSecondStarSelected = !mainView.isSecondStarSelected
+        mainView.isThirdStarSelected = false
+        mainView.isFourthStarSelected = false
+        mainView.isFifthStarSelected = false
         mainView.updateStar()
     }
     
     func thirdStarButton() {
         mainView.isThirdStarSelected = !mainView.isThirdStarSelected
+        mainView.isFourthStarSelected = false
+        mainView.isFifthStarSelected = false
         mainView.updateStar()
     }
     
     func fourthStarButton() {
         mainView.isFourthStarSelected = !mainView.isFourthStarSelected
+        mainView.isFifthStarSelected = false
         mainView.updateStar()
     }
     
