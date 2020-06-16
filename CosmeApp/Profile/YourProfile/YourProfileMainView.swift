@@ -17,6 +17,8 @@ protocol YourProfileMainViewDelegate: NSObjectProtocol{
     func blockButton()
     
     func didSelectItemAt(indexPath: IndexPath)
+    func didSelectItemAtYourGenre(indexPath: IndexPath)
+    func didSelectItemAtSearchYourGenre(indexPath: IndexPath)
     func secondDidSelectItemAt(indexPath: IndexPath)
 }
 extension YourProfileMainViewDelegate {
@@ -85,6 +87,14 @@ extension YourProfileMainView :UICollectionViewDataSource{
     
 }
 extension YourProfileMainView :YourScrollMainViewDelegate {
+    func didSelectItemAtSearchYourGenre(indexPath: IndexPath) {
+        if let delegate = delegate{delegate.didSelectItemAtSearchYourGenre(indexPath: indexPath)}
+    }
+    
+    func didSelectItemAtYourGenre(indexPath: IndexPath) {
+        if let delegate = delegate{delegate.didSelectItemAtYourGenre(indexPath: indexPath)}
+    }
+    
     func didSelectItemAt(indexPath: IndexPath) {
         if let delegate = delegate {
             delegate.didSelectItemAt(indexPath: indexPath)

@@ -53,6 +53,167 @@ extension YourProfileViewController {
 }
 // MARK: - Protocol
 extension YourProfileViewController :YourProfileMainViewDelegate{
+    func didSelectItemAtSearchYourGenre(indexPath: IndexPath) {
+        let makeDetailViewController = MakeDetailViewController()
+        makeDetailViewController.makePostModel = makePostModels[indexPath.row]
+        navigationController?.pushViewController(makeDetailViewController, animated: true)
+        animatorManager.navigationType = .push
+    }
+    
+    func didSelectItemAtYourGenre(indexPath: IndexPath) {
+        mainView.scrollMainView.yourGenreMainView.isHidden = true
+        
+        switch indexPath.row {
+        case 0:
+            MakePostModel.reads { (makePostModels) in
+                let eyeshadow = makePostModels.filter { (makePostModel) -> Bool in
+                    if makePostModel.post_user_id == self.userModel.id && makePostModel.eyeshadow != ""{
+                        return true
+                    } else {
+                        return false
+                    }
+                }
+                self.mainView.scrollMainView.searchYourGenreMainView.getModel(makePostModels: eyeshadow)
+                self.makePostModels = eyeshadow
+            }
+        case 1:
+            MakePostModel.reads { (makePostModels) in
+                let eyeliner = makePostModels.filter { (makePostModel) -> Bool in
+                    if makePostModel.post_user_id == self.userModel.id && makePostModel.eyeliner != ""{
+                        return true
+                    } else {
+                        return false
+                    }
+                }
+                self.mainView.scrollMainView.searchYourGenreMainView.getModel(makePostModels: eyeliner)
+                self.makePostModels = eyeliner
+            }
+        case 2:
+            MakePostModel.reads { (makePostModels) in
+                let mascara = makePostModels.filter { (makePostModel) -> Bool in
+                    if makePostModel.post_user_id == self.userModel.id && makePostModel.mascara != ""{
+                        return true
+                    } else {
+                        return false
+                    }
+                }
+                self.mainView.scrollMainView.searchYourGenreMainView.getModel(makePostModels: mascara)
+                self.makePostModels = mascara
+            }
+        case 3:
+            MakePostModel.reads { (makePostModels) in
+                let colorcontact = makePostModels.filter { (makePostModel) -> Bool in
+                    if makePostModel.post_user_id == self.userModel.id && makePostModel.colorcontact != ""{
+                        return true
+                    } else {
+                        return false
+                    }
+                }
+                self.mainView.scrollMainView.searchYourGenreMainView.getModel(makePostModels: colorcontact)
+                self.makePostModels = colorcontact
+            }
+        case 4:
+            MakePostModel.reads { (makePostModels) in
+                let eyebrow = makePostModels.filter { (makePostModel) -> Bool in
+                    if makePostModel.post_user_id == self.userModel.id && makePostModel.eyebrow != ""{
+                        return true
+                    } else {
+                        return false
+                    }
+                }
+                self.mainView.scrollMainView.searchYourGenreMainView.getModel(makePostModels: eyebrow)
+                self.makePostModels = eyebrow
+            }
+        case 5:
+            MakePostModel.reads { (makePostModels) in
+                let basemake = makePostModels.filter { (makePostModel) -> Bool in
+                    if makePostModel.post_user_id == self.userModel.id && makePostModel.basemake
+                        != ""{
+                        return true
+                    } else {
+                        return false
+                    }
+                }
+                self.mainView.scrollMainView.searchYourGenreMainView.getModel(makePostModels: basemake)
+                self.makePostModels = basemake
+            }
+        case 6:
+            MakePostModel.reads { (makePostModels) in
+                let highlight = makePostModels.filter { (makePostModel) -> Bool in
+                    if makePostModel.post_user_id == self.userModel.id && makePostModel.highlight != ""{
+                        return true
+                    } else {
+                        return false
+                    }
+                }
+                self.mainView.scrollMainView.searchYourGenreMainView.getModel(makePostModels: highlight)
+                self.makePostModels = highlight
+            }
+        case 7:
+            MakePostModel.reads { (makePostModels) in
+                let shading = makePostModels.filter { (makePostModel) -> Bool in
+                    if makePostModel.post_user_id == self.userModel.id && makePostModel.shading != ""{
+                        return true
+                    } else {
+                        return false
+                    }
+                }
+                self.mainView.scrollMainView.searchYourGenreMainView.getModel(makePostModels: shading)
+                self.makePostModels = shading
+            }
+        case 8:
+            MakePostModel.reads { (makePostModels) in
+                let cheek = makePostModels.filter { (makePostModel) -> Bool in
+                    if makePostModel.post_user_id == self.userModel.id && makePostModel.cheek != ""{
+                        return true
+                    } else {
+                        return false
+                    }
+                }
+                self.mainView.scrollMainView.searchYourGenreMainView.getModel(makePostModels: cheek)
+                self.makePostModels = cheek
+            }
+        case 9:
+            MakePostModel.reads { (makePostModels) in
+                let skincare = makePostModels.filter { (makePostModel) -> Bool in
+                    if makePostModel.post_user_id == self.userModel.id && makePostModel.skincare != ""{
+                        return true
+                    } else {
+                        return false
+                    }
+                }
+                self.mainView.scrollMainView.searchYourGenreMainView.getModel(makePostModels: skincare)
+                self.makePostModels = skincare
+            }
+        case 10:
+            MakePostModel.reads { (makePostModels) in
+                let lip = makePostModels.filter { (makePostModel) -> Bool in
+                    if makePostModel.post_user_id == self.userModel.id && makePostModel.lip != ""{
+                        return true
+                    } else {
+                        return false
+                    }
+                }
+                self.mainView.scrollMainView.searchYourGenreMainView.getModel(makePostModels: lip)
+                self.makePostModels = lip
+            }
+        case 11:
+            MakePostModel.reads { (makePostModels) in
+                let haircare = makePostModels.filter { (makePostModel) -> Bool in
+                    if makePostModel.post_user_id == self.userModel.id && makePostModel.haircare != ""{
+                        return true
+                    } else {
+                        return false
+                    }
+                }
+                self.mainView.scrollMainView.searchYourGenreMainView.getModel(makePostModels: haircare)
+                self.makePostModels = haircare
+            }
+        default:
+            break
+        }
+    }
+    
     func secondDidSelectItemAt(indexPath: IndexPath) {
         let makeDetailViewController = MakeDetailViewController()
         makeDetailViewController.makePostModel = makePostModels[indexPath.row]
@@ -120,6 +281,7 @@ extension YourProfileViewController :YourProfileMainViewDelegate{
     func touchedGenreButton() {
         let secondPoint = CGPoint(x: mainView.frame.width, y: 0)
         mainView.scrollMainView.scrollView.setContentOffset(secondPoint, animated: true)
+        mainView.scrollMainView.yourGenreMainView.isHidden = false
     }
     func followButton() {
         mainView.isFollowButtonTouched = !mainView.isFollowButtonTouched
