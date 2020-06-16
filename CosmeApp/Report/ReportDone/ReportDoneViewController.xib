@@ -11,7 +11,6 @@
             <connections>
                 <outlet property="headerView" destination="4Qh-Gt-c5v" id="y22-c3-tqc"/>
                 <outlet property="mainView" destination="tbT-yb-vlM" id="LX9-t9-aSb"/>
-                <outlet property="reportedView" destination="QdU-UU-XbZ" id="Gph-wE-bo4"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -29,20 +28,7 @@
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tbT-yb-vlM" customClass="ReportDoneMainView" customModule="CosmeApp" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="92" width="414" height="770"/>
-                    <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QdU-UU-XbZ" customClass="ReportedMainView" customModule="CosmeApp" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="770"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        </view>
-                    </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                    <constraints>
-                        <constraint firstItem="QdU-UU-XbZ" firstAttribute="top" secondItem="tbT-yb-vlM" secondAttribute="top" id="5g2-BW-FO8"/>
-                        <constraint firstAttribute="trailing" secondItem="QdU-UU-XbZ" secondAttribute="trailing" id="CEe-X6-ajE"/>
-                        <constraint firstAttribute="bottom" secondItem="QdU-UU-XbZ" secondAttribute="bottom" id="DIm-gk-cUd"/>
-                        <constraint firstItem="QdU-UU-XbZ" firstAttribute="height" secondItem="tbT-yb-vlM" secondAttribute="height" id="FuY-AW-o8y"/>
-                        <constraint firstItem="QdU-UU-XbZ" firstAttribute="leading" secondItem="tbT-yb-vlM" secondAttribute="leading" id="sN4-VB-hdi"/>
-                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

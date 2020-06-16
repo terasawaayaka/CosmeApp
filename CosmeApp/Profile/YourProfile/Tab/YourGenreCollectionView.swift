@@ -9,6 +9,7 @@
 import UIKit
 import PGFramework
 protocol YourGenreCollectionViewDelegate: NSObjectProtocol{
+    func didSelectItemAtYourGenre(indexPath: IndexPath)
 }
 extension YourGenreCollectionViewDelegate {
 }
@@ -91,9 +92,15 @@ extension YourGenreCollectionView :UICollectionViewDataSource{
         
     }
 }
+extension YourGenreCollectionView :UICollectionViewDelegate{
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let delegate = delegate{delegate.didSelectItemAtYourGenre(indexPath: indexPath)}
+    }
+}
 // MARK: - method
 extension YourGenreCollectionView {
     func setDelegate() {
         collectionView.dataSource = self
+        collectionView.delegate = self
     }
 }

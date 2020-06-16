@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="C32-Po-DAR" customClass="SearchYourGenreCollectionViewCell" customModule="CosmeApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="115" height="115"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="izR-Pg-giL">
+                <rect key="frame" x="0.0" y="0.0" width="115" height="115"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jdv-74-rZJ">
+                        <rect key="frame" x="0.0" y="0.0" width="115" height="115"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="jdv-74-rZJ" secondAttribute="height" multiplier="1:1" id="Drh-gC-MJw"/>
+                            <constraint firstAttribute="height" constant="115" id="qCP-eU-utf"/>
+                            <constraint firstAttribute="width" constant="115" id="wp9-g6-9kf"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="anh-Qd-DWx">
+                        <rect key="frame" x="0.0" y="0.0" width="115" height="115"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="115" id="E7Z-Jh-uR5"/>
+                            <constraint firstAttribute="height" constant="115" id="P8t-gY-9XI"/>
+                            <constraint firstAttribute="width" secondItem="anh-Qd-DWx" secondAttribute="height" multiplier="1:1" id="ibF-Zw-5VJ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="anh-Qd-DWx" firstAttribute="leading" secondItem="izR-Pg-giL" secondAttribute="leading" id="LYK-J5-Q8J"/>
+                    <constraint firstItem="jdv-74-rZJ" firstAttribute="leading" secondItem="izR-Pg-giL" secondAttribute="leading" id="SAk-o4-5oV"/>
+                    <constraint firstAttribute="trailing" secondItem="jdv-74-rZJ" secondAttribute="trailing" id="bhh-TQ-era"/>
+                    <constraint firstAttribute="trailing" secondItem="anh-Qd-DWx" secondAttribute="trailing" id="ccI-6G-Kn9"/>
+                    <constraint firstAttribute="bottom" secondItem="jdv-74-rZJ" secondAttribute="bottom" id="g9W-aD-KjI"/>
+                    <constraint firstItem="jdv-74-rZJ" firstAttribute="top" secondItem="izR-Pg-giL" secondAttribute="top" id="ixM-Me-Z3H"/>
+                    <constraint firstAttribute="bottom" secondItem="anh-Qd-DWx" secondAttribute="bottom" id="ooU-pI-hyd"/>
+                    <constraint firstItem="anh-Qd-DWx" firstAttribute="top" secondItem="izR-Pg-giL" secondAttribute="top" id="uAu-df-oEE"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="115" height="115"/>
+            <connections>
+                <outlet property="imageView" destination="jdv-74-rZJ" id="aqe-0R-XwZ"/>
+            </connections>
+            <point key="canvasLocation" x="165.94202898550725" y="124.21875"/>
+        </collectionViewCell>
+    </objects>
+</document>

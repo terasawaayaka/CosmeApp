@@ -15,6 +15,7 @@ class ActivityViewController: BaseViewController {
     @IBOutlet weak var headerView: HeaderView!
     @IBOutlet weak var mainView: ActivityMainView!
     
+    var noticeModel: NoticeModel = NoticeModel()
     var noticeModels: [NoticeModel] = [NoticeModel]()
 }
 // MARK: - Life cycle
@@ -45,6 +46,7 @@ extension ActivityViewController:ActivityMainViewDelegate {
     func touchedProfilePageButton(indexPath: IndexPath) {
         let yourProfileViewController = YourProfileViewController()
         yourProfileViewController.noticeModel = noticeModels[indexPath.row]
+        yourProfileViewController.userModel.id = noticeModels[indexPath.row].notice_user_id
         yourProfileViewController.fromPost = true
         navigationController?.pushViewController(yourProfileViewController, animated: true)
         animatorManager.navigationType = .slide_push
@@ -60,6 +62,7 @@ extension ActivityViewController:ActivityMainViewDelegate {
     func touchedSecondProfileButton(indexPath: IndexPath) {
         let yourProfileViewController = YourProfileViewController()
         yourProfileViewController.noticeModel = noticeModels[indexPath.row]
+        yourProfileViewController.userModel.id = noticeModels[indexPath.row].notice_user_id
         yourProfileViewController.fromPost = true
         navigationController?.pushViewController(yourProfileViewController, animated: true)
         animatorManager.navigationType = .slide_push
@@ -79,15 +82,31 @@ extension ActivityViewController:ActivityMainViewDelegate {
         animatorManager.navigationType = .slide_push
     }
 }
+
+extension ActivityViewController: HeaderViewDelegate {
+    func touchedRightButton(_ sender: UIButton) {
+        //delete
+//        if let uid = Auth.auth().currentUser?.uid {
+//            if noticeModel.notice_my_id == uid {
+                NoticeModel.delete(id: noticeModel.id) {
+                    self.dismiss(animated: true, completion: nil)
+                }
+            }
+        }
+        
+//    }
+//}
+
 // MARK: - method
 extension ActivityViewController {
     func setHeaderView() {
-        headerView.setCenter(text: "- activity -", fontSize: 19, color: UIColor.black)
+        headerView.setCenter(text: "- activity -", fontSize: 20, color: UIColor.black)
+        headerView.setRight(text: "全削除", fontSize: 16, color: #colorLiteral(red: 1, green: 0.6230913235, blue: 0.7894609614, alpha: 1))
         headerView.setLeft(text: "")
     }
     func setDelegate() {
         mainView.delegate = self
-        
+        headerView.delegate = self
     }
     func getModel() {
         NoticeModel.reads { (noticeModels) in
@@ -104,7 +123,6 @@ extension ActivityViewController {
             }
             self.noticeModels = noticefilters
             self.mainView.getModel(noticeModels: noticeModels)
-            
             
             for noticeModel in noticeModels {
                 if noticeModel.notice_user_id != "" {
