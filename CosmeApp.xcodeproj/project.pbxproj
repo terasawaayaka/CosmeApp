@@ -181,6 +181,8 @@
 		FF3F38DE2477977B0023FAAC /* ReviewPostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3F38DD2477977A0023FAAC /* ReviewPostModel.swift */; };
 		FF3F38E02477AD850023FAAC /* MakePostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3F38DF2477AD850023FAAC /* MakePostModel.swift */; };
 		FF3F38E22477B6B90023FAAC /* CommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3F38E12477B6B90023FAAC /* CommentModel.swift */; };
+		FF44077E24973B6B0076058C /* TimeLineImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF44077C24973B6B0076058C /* TimeLineImageCollectionViewCell.swift */; };
+		FF44077F24973B6B0076058C /* TimeLineImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF44077D24973B6B0076058C /* TimeLineImageCollectionViewCell.xib */; };
 		FF8509F1246E2870003E2ACF /* TimeLineMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8509EF246E2870003E2ACF /* TimeLineMainView.swift */; };
 		FF8509F2246E2870003E2ACF /* TimeLineMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF8509F0246E2870003E2ACF /* TimeLineMainView.xib */; };
 		FF8509FA246E294F003E2ACF /* ReviewDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8509F8246E294F003E2ACF /* ReviewDetailViewController.swift */; };
@@ -384,6 +386,8 @@
 		FF3F38DD2477977A0023FAAC /* ReviewPostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewPostModel.swift; sourceTree = "<group>"; };
 		FF3F38DF2477AD850023FAAC /* MakePostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakePostModel.swift; sourceTree = "<group>"; };
 		FF3F38E12477B6B90023FAAC /* CommentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentModel.swift; sourceTree = "<group>"; };
+		FF44077C24973B6B0076058C /* TimeLineImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		FF44077D24973B6B0076058C /* TimeLineImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeLineImageCollectionViewCell.xib; sourceTree = "<group>"; };
 		FF8509EF246E2870003E2ACF /* TimeLineMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineMainView.swift; sourceTree = "<group>"; };
 		FF8509F0246E2870003E2ACF /* TimeLineMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeLineMainView.xib; sourceTree = "<group>"; };
 		FF8509F8246E294F003E2ACF /* ReviewDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewDetailViewController.swift; sourceTree = "<group>"; };
@@ -882,6 +886,8 @@
 				FFD0281F246E3745009EE2E4 /* TimeLineMainTableViewSecondCell.xib */,
 				FFD02822246E3866009EE2E4 /* TimeLineMainCollectionViewCell.swift */,
 				FFD02823246E3866009EE2E4 /* TimeLineMainCollectionViewCell.xib */,
+				FF44077C24973B6B0076058C /* TimeLineImageCollectionViewCell.swift */,
+				FF44077D24973B6B0076058C /* TimeLineImageCollectionViewCell.xib */,
 			);
 			path = TimeLine;
 			sourceTree = "<group>";
@@ -1089,6 +1095,7 @@
 				FFEA536C246E317700694E1C /* TimeLineMainTableViewCell.xib in Resources */,
 				1F4B7733246E7EC300FC3B27 /* ActivityMainView.xib in Resources */,
 				5F97F3C2247B8B4500D68A0C /* ThirdYourGenreCollectionViewCell.xib in Resources */,
+				FF44077F24973B6B0076058C /* TimeLineImageCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1152,6 +1159,7 @@
 				FF8509FE246E297C003E2ACF /* ReviewDetailMainView.swift in Sources */,
 				5F97F3D724809F8700D68A0C /* TwelveGenreCollectionViewCell.swift in Sources */,
 				1F7D444E247CFC6B00743829 /* NoticeModel.swift in Sources */,
+				FF44077E24973B6B0076058C /* TimeLineImageCollectionViewCell.swift in Sources */,
 				5F098A362475000B00D033F4 /* YourPostCollectionViewCell.swift in Sources */,
 				1F4B774C2473B5D600FC3B27 /* (null) in Sources */,
 				5F97F3B1247B7EF400D68A0C /* SeventhYourGenreCollectionViewCell.swift in Sources */,

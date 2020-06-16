@@ -24,6 +24,9 @@ class TimeLineMainTableViewSecondCell: BaseTableViewCell, UIScrollViewDelegate {
     
     var reviewPostModel : ReviewPostModel = ReviewPostModel()
     
+    @IBOutlet weak var imageCollectionView: UICollectionView!
+    @IBOutlet weak var imageCollectionViewFlowLayout: UICollectionViewFlowLayout!
+    
     //Image
     @IBOutlet weak var firstImageView: UIImageView!
     @IBOutlet weak var secondImageView: UIImageView!
@@ -85,20 +88,35 @@ extension TimeLineMainTableViewSecondCell {
         super.awakeFromNib()
         setLayout()
         setDelegate()
-        scrollViewDidEndDecelerating(imageScrollView)
+//        scrollViewDidEndDecelerating(imageScrollView)
+        
+        loadCollectionViewCellFromXib(collectionView: imageCollectionView, cellName: "TimeLineImageCollectionViewCell")
         
     }
 }
 // MARK: - Protocol
-extension TimeLineMainTableViewSecondCell {
+extension TimeLineMainTableViewSecondCell :UICollectionViewDataSource{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return reviewPostModel.image_paths.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = imageCollectionView.dequeueReusableCell(withReuseIdentifier: "TimeLineImageCollectionViewCell", for: indexPath)as? TimeLineImageCollectionViewCell else{return UICollectionViewCell()}
+        //cell.imageView.image 
+        cell.updatecollectionView(image_path: reviewPostModel.image_paths[indexPath.row])
+        return cell
+    }
+    
 }
 // MARK: - method
 extension TimeLineMainTableViewSecondCell {
     func setLayout(){
         iconView.layer.cornerRadius = iconView.frame.width / 2
+        imageCollectionViewFlowLayout.estimatedItemSize = CGSize(width: imageCollectionView.frame.width, height: imageCollectionView.frame.width)
     }
     func setDelegate(){
-        imageScrollView.delegate = self
+        //imageScrollView.delegate = self
+        imageCollectionView.dataSource = self
     }
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
     if fmod(imageScrollView.contentOffset.x, imageScrollView.frame.maxX) == 0 {
@@ -139,58 +157,58 @@ extension TimeLineMainTableViewSecondCell {
         }
        
         //画像
-        switch reviewPostModel.image_paths.count {
-        case 0:
-            firstImageView.image = UIImage(named: "noimage.png")
-            secondImageView.image = UIImage(named: "noimage.png")
-            thirdImageView.image = UIImage(named: "noimage.png")
-            fourthImageView.image = UIImage(named: "noimage.png")
-            
-        case 1:
-            if let url = URL(string: reviewPostModel.image_paths[0]){
-                firstImageView.af_setImage(withURL: url)
-            }
-            secondImageView.image = UIImage(named: "noimage.png")
-            thirdImageView.image = UIImage(named: "noimage.png")
-            fourthImageView.image = UIImage(named: "noimage.png")
-        case 2:
-            if let url = URL(string: reviewPostModel.image_paths[0]){
-                firstImageView.af_setImage(withURL: url)
-            }
-            if let url = URL(string: reviewPostModel.image_paths[1]){
-                secondImageView.af_setImage(withURL: url)
-            }
-            thirdImageView.image = UIImage(named: "noimage.png")
-            fourthImageView.image = UIImage(named: "noimage.png")
-        case 3:
-            if let url = URL(string: reviewPostModel.image_paths[0]){
-                firstImageView.af_setImage(withURL: url)
-            }
-            if let url = URL(string: reviewPostModel.image_paths[1]){
-                secondImageView.af_setImage(withURL: url)
-            }
-            if let url = URL(string: reviewPostModel.image_paths[2]){
-                thirdImageView.af_setImage(withURL: url)
-            }
-            fourthImageView.image = UIImage(named: "noimage.png")
-
-        case 4:
-            if let url = URL(string: reviewPostModel.image_paths[0]){
-                firstImageView.af_setImage(withURL: url)
-            }
-            if let url = URL(string: reviewPostModel.image_paths[1]){
-                secondImageView.af_setImage(withURL: url)
-            }
-            if let url = URL(string: reviewPostModel.image_paths[2]){
-                thirdImageView.af_setImage(withURL: url)
-            }
-            if let url = URL(string: reviewPostModel.image_paths[3]){
-                fourthImageView.af_setImage(withURL: url)
-            }
-        default:
-            break
-        }
-        
+//        switch reviewPostModel.image_paths.count {
+//        case 0:
+//            firstImageView.image = UIImage(named: "noimage.png")
+//            secondImageView.image = UIImage(named: "noimage.png")
+//            thirdImageView.image = UIImage(named: "noimage.png")
+//            fourthImageView.image = UIImage(named: "noimage.png")
+//
+//        case 1:
+//            if let url = URL(string: reviewPostModel.image_paths[0]){
+//                firstImageView.af_setImage(withURL: url)
+//            }
+//            secondImageView.image = UIImage(named: "noimage.png")
+//            thirdImageView.image = UIImage(named: "noimage.png")
+//            fourthImageView.image = UIImage(named: "noimage.png")
+//        case 2:
+//            if let url = URL(string: reviewPostModel.image_paths[0]){
+//                firstImageView.af_setImage(withURL: url)
+//            }
+//            if let url = URL(string: reviewPostModel.image_paths[1]){
+//                secondImageView.af_setImage(withURL: url)
+//            }
+//            thirdImageView.image = UIImage(named: "noimage.png")
+//            fourthImageView.image = UIImage(named: "noimage.png")
+//        case 3:
+//            if let url = URL(string: reviewPostModel.image_paths[0]){
+//                firstImageView.af_setImage(withURL: url)
+//            }
+//            if let url = URL(string: reviewPostModel.image_paths[1]){
+//                secondImageView.af_setImage(withURL: url)
+//            }
+//            if let url = URL(string: reviewPostModel.image_paths[2]){
+//                thirdImageView.af_setImage(withURL: url)
+//            }
+//            fourthImageView.image = UIImage(named: "noimage.png")
+//
+//        case 4:
+//            if let url = URL(string: reviewPostModel.image_paths[0]){
+//                firstImageView.af_setImage(withURL: url)
+//            }
+//            if let url = URL(string: reviewPostModel.image_paths[1]){
+//                secondImageView.af_setImage(withURL: url)
+//            }
+//            if let url = URL(string: reviewPostModel.image_paths[2]){
+//                thirdImageView.af_setImage(withURL: url)
+//            }
+//            if let url = URL(string: reviewPostModel.image_paths[3]){
+//                fourthImageView.af_setImage(withURL: url)
+//            }
+//        default:
+//            break
+//        }
+//
         if reviewPostModel.post_user_name == ""{
             userName.text = "メンバーがいません"
         }else{
@@ -217,5 +235,5 @@ extension TimeLineMainTableViewSecondCell {
         }
 
     }
-    
+
 }
