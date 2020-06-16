@@ -37,6 +37,7 @@ class ActivityGoodTableViewCell: BaseTableViewCell {
     @IBOutlet weak var userNameLabel: UILabel!
     
     var indexPath: IndexPath = IndexPath()
+    var noticeModel: NoticeModel = NoticeModel()
 }
 // MARK: - Life cycle
 extension ActivityGoodTableViewCell {
