@@ -10,7 +10,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YourScrollMainView" customModule="CosmeApp" customModuleProvider="target">
             <connections>
                 <outlet property="scrollView" destination="t6k-gf-o2e" id="udF-ql-h9T"/>
-                <outlet property="yourGenreMainView" destination="yUP-B8-w12" id="XfN-nQ-xCW"/>
+                <outlet property="searchYourGenreMainView" destination="DM5-Oe-SAh" id="qoZ-3R-n2p"/>
+                <outlet property="yourGenreMainView" destination="yUP-B8-w12" id="77Z-4T-fHl"/>
                 <outlet property="yourPostMainView" destination="KZo-uh-LE2" id="sMW-f9-HXh"/>
             </connections>
         </placeholder>
@@ -28,6 +29,11 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KZo-uh-LE2" customClass="YourPostCollectionView" customModule="CosmeApp" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                                     <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </view>
+                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DM5-Oe-SAh" customClass="SearchYourGenreMainView" customModule="CosmeApp" customModuleProvider="target">
+                                    <rect key="frame" x="414" y="0.0" width="414" height="818"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yUP-B8-w12" customClass="YourGenreCollectionView" customModule="CosmeApp" customModuleProvider="target">
                                     <rect key="frame" x="414" y="0.0" width="414" height="818"/>

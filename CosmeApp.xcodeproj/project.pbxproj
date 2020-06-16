@@ -110,6 +110,10 @@
 		5F098A4F2477D94D00D033F4 /* YourPostCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F098A4D2477D94C00D033F4 /* YourPostCollectionView.xib */; };
 		5F098A522477D98800D033F4 /* YourGenreCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F098A502477D98800D033F4 /* YourGenreCollectionView.swift */; };
 		5F098A532477D98800D033F4 /* YourGenreCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F098A512477D98800D033F4 /* YourGenreCollectionView.xib */; };
+		5F480A2C2498629E000D67E3 /* SearchYourGenreMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F480A2A2498629E000D67E3 /* SearchYourGenreMainView.swift */; };
+		5F480A2D2498629E000D67E3 /* SearchYourGenreMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F480A2B2498629E000D67E3 /* SearchYourGenreMainView.xib */; };
+		5F480A302498630F000D67E3 /* SearchYourGenreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F480A2E2498630F000D67E3 /* SearchYourGenreCollectionViewCell.swift */; };
+		5F480A312498630F000D67E3 /* SearchYourGenreCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F480A2F2498630F000D67E3 /* SearchYourGenreCollectionViewCell.xib */; };
 		5F97F377247B6C8100D68A0C /* SecondGenreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F97F375247B6C8100D68A0C /* SecondGenreCollectionViewCell.swift */; };
 		5F97F378247B6C8100D68A0C /* SecondGenreCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F97F376247B6C8100D68A0C /* SecondGenreCollectionViewCell.xib */; };
 		5F97F37B247B6D9500D68A0C /* ThirdCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F97F379247B6D9500D68A0C /* ThirdCollectionViewCell.swift */; };
@@ -326,6 +330,10 @@
 		5F098A4D2477D94C00D033F4 /* YourPostCollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YourPostCollectionView.xib; sourceTree = "<group>"; };
 		5F098A502477D98800D033F4 /* YourGenreCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourGenreCollectionView.swift; sourceTree = "<group>"; };
 		5F098A512477D98800D033F4 /* YourGenreCollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YourGenreCollectionView.xib; sourceTree = "<group>"; };
+		5F480A2A2498629E000D67E3 /* SearchYourGenreMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchYourGenreMainView.swift; sourceTree = "<group>"; };
+		5F480A2B2498629E000D67E3 /* SearchYourGenreMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchYourGenreMainView.xib; sourceTree = "<group>"; };
+		5F480A2E2498630F000D67E3 /* SearchYourGenreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchYourGenreCollectionViewCell.swift; sourceTree = "<group>"; };
+		5F480A2F2498630F000D67E3 /* SearchYourGenreCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchYourGenreCollectionViewCell.xib; sourceTree = "<group>"; };
 		5F97F375247B6C8100D68A0C /* SecondGenreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondGenreCollectionViewCell.swift; sourceTree = "<group>"; };
 		5F97F376247B6C8100D68A0C /* SecondGenreCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondGenreCollectionViewCell.xib; sourceTree = "<group>"; };
 		5F97F379247B6D9500D68A0C /* ThirdCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -732,6 +740,7 @@
 		5F098A2F2474F0C100D033F4 /* Tab */ = {
 			isa = PBXGroup;
 			children = (
+				5F480A2924986259000D67E3 /* SearchYourGenre */,
 				5F098A302474F0E700D033F4 /* YourScrollMainView.swift */,
 				5F098A312474F0E700D033F4 /* YourScrollMainView.xib */,
 				5F098A4C2477D94C00D033F4 /* YourPostCollectionView.swift */,
@@ -743,6 +752,17 @@
 				5F97F39A247B7D9100D68A0C /* YourGenreCollectionViewCell */,
 			);
 			path = Tab;
+			sourceTree = "<group>";
+		};
+		5F480A2924986259000D67E3 /* SearchYourGenre */ = {
+			isa = PBXGroup;
+			children = (
+				5F480A2A2498629E000D67E3 /* SearchYourGenreMainView.swift */,
+				5F480A2B2498629E000D67E3 /* SearchYourGenreMainView.xib */,
+				5F480A2E2498630F000D67E3 /* SearchYourGenreCollectionViewCell.swift */,
+				5F480A2F2498630F000D67E3 /* SearchYourGenreCollectionViewCell.xib */,
+			);
+			path = SearchYourGenre;
 			sourceTree = "<group>";
 		};
 		5F97F350247B5FA600D68A0C /* genreCollectionViewCell */ = {
@@ -1102,6 +1122,7 @@
 				3F7C5D8E247644E0007640E2 /* ProductNameSearchResultView.xib in Resources */,
 				3F6648F32472287900D4D950 /* SignUpMainView.xib in Resources */,
 				5FA88A642472316600B84ACE /* ScrollMainView.xib in Resources */,
+				5F480A2D2498629E000D67E3 /* SearchYourGenreMainView.xib in Resources */,
 				5F098A4B2477BB6300D033F4 /* BookmarkCollectionView.xib in Resources */,
 				3F6FD4952491F49400C6536B /* ReportTableViewSpamCell.xib in Resources */,
 				5F098A3F2477AB1200D033F4 /* GoodCollectionView.xib in Resources */,
@@ -1130,6 +1151,7 @@
 				FF850A13246E2B3C003E2ACF /* EditMakeViewController.xib in Resources */,
 				FFD02821246E3745009EE2E4 /* TimeLineMainTableViewSecondCell.xib in Resources */,
 				FF850A07246E29F4003E2ACF /* MakeDetailMainView.xib in Resources */,
+				5F480A312498630F000D67E3 /* SearchYourGenreCollectionViewCell.xib in Resources */,
 				5F97F388247B6DE600D68A0C /* SixthCollectionViewCell.xib in Resources */,
 				5F098A4F2477D94D00D033F4 /* YourPostCollectionView.xib in Resources */,
 				5F97F3E12484BD5600D68A0C /* SearchGenreCollectionViewCell.xib in Resources */,
@@ -1242,6 +1264,7 @@
 				5FA88A52246E581F00B84ACE /* TodayCollectionViewCell.swift in Sources */,
 				1F4B7724246E4FBD00FC3B27 /* CreateReviewMainView.swift in Sources */,
 				3F7C5D8C247644D7007640E2 /* ProductNameSearchResultView.swift in Sources */,
+				5F480A302498630F000D67E3 /* SearchYourGenreCollectionViewCell.swift in Sources */,
 				5F97F3D324809F6D00D68A0C /* ElevenGenreCollectionViewCell.swift in Sources */,
 				5F97F39D247B7E8700D68A0C /* SecondYourGenreCollectionViewCell.swift in Sources */,
 				FF850A16246E2BC2003E2ACF /* EditMakeMainView.swift in Sources */,
@@ -1255,6 +1278,7 @@
 				5F098A462477ACA000D033F4 /* GenreCollectionView.swift in Sources */,
 				5F098A242474C0CF00D033F4 /* GenreCollectionViewCell.swift in Sources */,
 				3F6FD4982491FBD300C6536B /* ReportTableViewSensitiveCell.swift in Sources */,
+				5F480A2C2498629E000D67E3 /* SearchYourGenreMainView.swift in Sources */,
 				5FCD8FCD248E0DCD00DF8106 /* FollowTableViewCell.swift in Sources */,
 				3F1EE731249205B800753461 /* ReportTableViewSuicideCell.swift in Sources */,
 				5F098A522477D98800D033F4 /* YourGenreCollectionView.swift in Sources */,
