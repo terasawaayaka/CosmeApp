@@ -114,6 +114,12 @@
 		5F480A2D2498629E000D67E3 /* SearchYourGenreMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F480A2B2498629E000D67E3 /* SearchYourGenreMainView.xib */; };
 		5F480A302498630F000D67E3 /* SearchYourGenreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F480A2E2498630F000D67E3 /* SearchYourGenreCollectionViewCell.swift */; };
 		5F480A312498630F000D67E3 /* SearchYourGenreCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F480A2F2498630F000D67E3 /* SearchYourGenreCollectionViewCell.xib */; };
+		5F480A35249882ED000D67E3 /* YourFollowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F480A33249882ED000D67E3 /* YourFollowViewController.swift */; };
+		5F480A36249882ED000D67E3 /* YourFollowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F480A34249882ED000D67E3 /* YourFollowViewController.xib */; };
+		5F480A3924988351000D67E3 /* YourFollowMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F480A3724988351000D67E3 /* YourFollowMainView.swift */; };
+		5F480A3A24988351000D67E3 /* YourFollowMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F480A3824988351000D67E3 /* YourFollowMainView.xib */; };
+		5F480A3D2498871A000D67E3 /* YourFollowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F480A3B2498871A000D67E3 /* YourFollowTableViewCell.swift */; };
+		5F480A3E2498871A000D67E3 /* YourFollowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F480A3C2498871A000D67E3 /* YourFollowTableViewCell.xib */; };
 		5F97F377247B6C8100D68A0C /* SecondGenreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F97F375247B6C8100D68A0C /* SecondGenreCollectionViewCell.swift */; };
 		5F97F378247B6C8100D68A0C /* SecondGenreCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F97F376247B6C8100D68A0C /* SecondGenreCollectionViewCell.xib */; };
 		5F97F37B247B6D9500D68A0C /* ThirdCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F97F379247B6D9500D68A0C /* ThirdCollectionViewCell.swift */; };
@@ -334,6 +340,12 @@
 		5F480A2B2498629E000D67E3 /* SearchYourGenreMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchYourGenreMainView.xib; sourceTree = "<group>"; };
 		5F480A2E2498630F000D67E3 /* SearchYourGenreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchYourGenreCollectionViewCell.swift; sourceTree = "<group>"; };
 		5F480A2F2498630F000D67E3 /* SearchYourGenreCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchYourGenreCollectionViewCell.xib; sourceTree = "<group>"; };
+		5F480A33249882ED000D67E3 /* YourFollowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourFollowViewController.swift; sourceTree = "<group>"; };
+		5F480A34249882ED000D67E3 /* YourFollowViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YourFollowViewController.xib; sourceTree = "<group>"; };
+		5F480A3724988351000D67E3 /* YourFollowMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourFollowMainView.swift; sourceTree = "<group>"; };
+		5F480A3824988351000D67E3 /* YourFollowMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YourFollowMainView.xib; sourceTree = "<group>"; };
+		5F480A3B2498871A000D67E3 /* YourFollowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourFollowTableViewCell.swift; sourceTree = "<group>"; };
+		5F480A3C2498871A000D67E3 /* YourFollowTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YourFollowTableViewCell.xib; sourceTree = "<group>"; };
 		5F97F375247B6C8100D68A0C /* SecondGenreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondGenreCollectionViewCell.swift; sourceTree = "<group>"; };
 		5F97F376247B6C8100D68A0C /* SecondGenreCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondGenreCollectionViewCell.xib; sourceTree = "<group>"; };
 		5F97F379247B6D9500D68A0C /* ThirdCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -765,6 +777,19 @@
 			path = SearchYourGenre;
 			sourceTree = "<group>";
 		};
+		5F480A32249882CB000D67E3 /* YourFollow */ = {
+			isa = PBXGroup;
+			children = (
+				5F480A33249882ED000D67E3 /* YourFollowViewController.swift */,
+				5F480A34249882ED000D67E3 /* YourFollowViewController.xib */,
+				5F480A3724988351000D67E3 /* YourFollowMainView.swift */,
+				5F480A3824988351000D67E3 /* YourFollowMainView.xib */,
+				5F480A3B2498871A000D67E3 /* YourFollowTableViewCell.swift */,
+				5F480A3C2498871A000D67E3 /* YourFollowTableViewCell.xib */,
+			);
+			path = YourFollow;
+			sourceTree = "<group>";
+		};
 		5F97F350247B5FA600D68A0C /* genreCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -857,6 +882,7 @@
 		5FA88A39246E3F4400B84ACE /* YourProfile */ = {
 			isa = PBXGroup;
 			children = (
+				5F480A32249882CB000D67E3 /* YourFollow */,
 				5F098A2F2474F0C100D033F4 /* Tab */,
 				5F098A262474CFBF00D033F4 /* CollecTionViewCell */,
 				5FA88A3B246E3FA300B84ACE /* YourProfileViewController.swift */,
@@ -1089,6 +1115,7 @@
 				5FA88A4A246E405900B84ACE /* EditProfileMainView.xib in Resources */,
 				FF850A0B246E2AD3003E2ACF /* EditReviewViewController.xib in Resources */,
 				5FCD8FCA248E0CD800DF8106 /* FollowMainView.xib in Resources */,
+				5F480A3E2498871A000D67E3 /* YourFollowTableViewCell.xib in Resources */,
 				3F1EE73F249329B100753461 /* ReportedMainView.xib in Resources */,
 				5F098A2E2474D1A800D033F4 /* YourTodayCollectionViewCell.xib in Resources */,
 				3F7C5D90247644ED007640E2 /* TagSearchResultMainView.xib in Resources */,
@@ -1108,6 +1135,7 @@
 				FF850A17246E2BC2003E2ACF /* EditMakeMainView.xib in Resources */,
 				1F4B770A246D310F00FC3B27 /* TimeLineViewController.xib in Resources */,
 				5F97F398247B6E4500D68A0C /* TenthCollectionViewCell.xib in Resources */,
+				5F480A3A24988351000D67E3 /* YourFollowMainView.xib in Resources */,
 				FF850A0F246E2B16003E2ACF /* EditReviewMainView.xib in Resources */,
 				3FC6EE862473BDF0008875B7 /* Assets.xcassets in Resources */,
 				5F97F3D024809CA900D68A0C /* TwelveYourGenreCollectionViewCell.xib in Resources */,
@@ -1156,6 +1184,7 @@
 				5F098A4F2477D94D00D033F4 /* YourPostCollectionView.xib in Resources */,
 				5F97F3E12484BD5600D68A0C /* SearchGenreCollectionViewCell.xib in Resources */,
 				5F97F3D824809F8700D68A0C /* TwelveGenreCollectionViewCell.xib in Resources */,
+				5F480A36249882ED000D67E3 /* YourFollowViewController.xib in Resources */,
 				1F3F5E7F247B5CD300F04090 /* LoadingView.xib in Resources */,
 				5F97F39E247B7E8700D68A0C /* SecondYourGenreCollectionViewCell.xib in Resources */,
 				FFEA536C246E317700694E1C /* TimeLineMainTableViewCell.xib in Resources */,
@@ -1218,6 +1247,7 @@
 				5F97F3CF24809CA900D68A0C /* TwelveYourGenreCollectionViewCell.swift in Sources */,
 				5F098A3E2477AB1200D033F4 /* GoodCollectionView.swift in Sources */,
 				3F1EE73E249329B100753461 /* ReportedMainView.swift in Sources */,
+				5F480A3D2498871A000D67E3 /* YourFollowTableViewCell.swift in Sources */,
 				1F4B771A246E25CF00FC3B27 /* NewPostMainView.swift in Sources */,
 				D1B8AFC62472627C007BC6AD /* CreateMakeMainView.swift in Sources */,
 				3F8CA3E92476215C000EA5AF /* CategorySearchViewController.swift in Sources */,
@@ -1296,6 +1326,7 @@
 				5F97F383247B6DD500D68A0C /* FifthCollectionViewCell.swift in Sources */,
 				FF850A06246E29F4003E2ACF /* MakeDetailMainView.swift in Sources */,
 				FF850A0A246E2AD3003E2ACF /* EditReviewViewController.swift in Sources */,
+				5F480A3924988351000D67E3 /* YourFollowMainView.swift in Sources */,
 				5F97F3C5247B8C7A00D68A0C /* FourthYourGenreCollectionViewCell.swift in Sources */,
 				1F4B76E6246D2AC100FC3B27 /* SceneDelegate.swift in Sources */,
 				3F1EE73A2493173800753461 /* ReportDoneMainView.swift in Sources */,
@@ -1304,6 +1335,7 @@
 				5F97F3CB24809C6C00D68A0C /* ElevenYourGenreCollectionViewCell.swift in Sources */,
 				5F098A4E2477D94D00D033F4 /* YourPostCollectionView.swift in Sources */,
 				1F4B774024736EE400FC3B27 /* ActivityGoodTableViewCell.swift in Sources */,
+				5F480A35249882ED000D67E3 /* YourFollowViewController.swift in Sources */,
 				3FF1213D24724B18001E0554 /* SearchUserResultTableViewCell.swift in Sources */,
 				1F49BB02247509940092AF96 /* ActivityFollowTableViewCell.swift in Sources */,
 				FFD02824246E3866009EE2E4 /* TimeLineMainCollectionViewCell.swift in Sources */,

@@ -53,6 +53,22 @@ extension YourProfileViewController {
 }
 // MARK: - Protocol
 extension YourProfileViewController :YourProfileMainViewDelegate{
+    func touchedFollowButton() {
+        let yourFollowViewController = YourFollowViewController()
+        navigationController?.pushViewController(yourFollowViewController, animated: true)
+        yourFollowViewController.userModel = userModel
+        yourFollowViewController.yourFollow = true
+        animatorManager.navigationType = .slide_push
+    }
+    
+    func touchedFollowerButton() {
+        let yourFollowViewController = YourFollowViewController()
+        navigationController?.pushViewController(yourFollowViewController, animated: true)
+        yourFollowViewController.userModel = userModel
+        yourFollowViewController.yourFollower = true
+        animatorManager.navigationType = .slide_push
+    }
+    
     func didSelectItemAtSearchYourGenre(indexPath: IndexPath) {
         let makeDetailViewController = MakeDetailViewController()
         makeDetailViewController.makePostModel = makePostModels[indexPath.row]

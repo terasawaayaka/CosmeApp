@@ -15,6 +15,8 @@ protocol YourProfileMainViewDelegate: NSObjectProtocol{
     func touchedGenreButton()
     func followButton()
     func blockButton()
+    func touchedFollowButton()
+    func touchedFollowerButton()
     
     func didSelectItemAt(indexPath: IndexPath)
     func didSelectItemAtYourGenre(indexPath: IndexPath)
@@ -36,6 +38,12 @@ class YourProfileMainView: BaseView {
     @IBOutlet weak var scrollMainView: YourScrollMainView!
     
     //Action
+    @IBAction func touchedFollowButton(_ sender: UIButton) {
+        if let delegate = delegate{delegate.touchedFollowButton()}
+    }
+    @IBAction func touchedFollowerButton(_ sender: UIButton) {
+        if let delegate = delegate{delegate.touchedFollowerButton()}
+    }
     @IBAction func touchedPostedButton(_ sender: UIButton) {
         if let delegate = delegate{delegate.touchedPostButton()}
     }
