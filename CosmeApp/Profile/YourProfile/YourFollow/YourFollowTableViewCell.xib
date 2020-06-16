@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="95" id="GYN-Ay-d0u" customClass="YourFollowTableViewCell" customModule="CosmeApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="392" height="95"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GYN-Ay-d0u" id="OpR-Di-Cni">
+                <rect key="frame" x="0.0" y="0.0" width="392" height="95"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noimage" translatesAutoresizingMaskIntoConstraints="NO" id="BHr-vX-dJo">
+                        <rect key="frame" x="20" y="17" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="Kce-10-cXx"/>
+                            <constraint firstAttribute="height" constant="60" id="P5e-Ip-hCr"/>
+                            <constraint firstAttribute="width" secondItem="BHr-vX-dJo" secondAttribute="height" multiplier="1:1" id="zU2-AH-tuq"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oPE-8M-L7j">
+                        <rect key="frame" x="88" y="39" width="284" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="284" id="Jbp-eN-fuW"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="oPE-8M-L7j" firstAttribute="top" secondItem="OpR-Di-Cni" secondAttribute="top" constant="39" id="36G-cT-32r"/>
+                    <constraint firstAttribute="trailing" secondItem="oPE-8M-L7j" secondAttribute="trailing" constant="20" id="DSq-Hv-KqR"/>
+                    <constraint firstAttribute="bottom" secondItem="BHr-vX-dJo" secondAttribute="bottom" constant="18" id="DoL-lg-LcR"/>
+                    <constraint firstItem="oPE-8M-L7j" firstAttribute="leading" secondItem="BHr-vX-dJo" secondAttribute="trailing" constant="8" id="IqF-0Z-Zs5"/>
+                    <constraint firstAttribute="bottom" secondItem="oPE-8M-L7j" secondAttribute="bottom" constant="40" id="PyB-q2-Bsk"/>
+                    <constraint firstItem="BHr-vX-dJo" firstAttribute="top" secondItem="OpR-Di-Cni" secondAttribute="top" constant="17" id="Ye6-5m-Hm3"/>
+                    <constraint firstItem="BHr-vX-dJo" firstAttribute="leading" secondItem="OpR-Di-Cni" secondAttribute="leading" constant="20" id="fTe-7x-4S0"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="userIcon" destination="BHr-vX-dJo" id="OJ3-Jl-mak"/>
+                <outlet property="userName" destination="oPE-8M-L7j" id="PLQ-Jw-V3P"/>
+            </connections>
+            <point key="canvasLocation" x="-300" y="86.71875"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="noimage" width="2048" height="2048"/>
+    </resources>
+</document>
