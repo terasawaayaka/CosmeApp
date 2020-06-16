@@ -16,7 +16,8 @@ extension TimeLineImageCollectionViewCellDelegate {
 class TimeLineImageCollectionViewCell: BaseCollectionViewCell {
     weak var delegate: TimeLineImageCollectionViewCellDelegate? = nil
     @IBOutlet weak var imageView: UIImageView!
-
+    @IBOutlet weak var cellHeight: NSLayoutConstraint!
+    
 }
 // MARK: - Life cycle
 extension TimeLineImageCollectionViewCell {
@@ -29,12 +30,13 @@ extension TimeLineImageCollectionViewCell {
 }
 // MARK: - method
 extension TimeLineImageCollectionViewCell {
-    func updatecollectionView(image_path:String){
-                        if let url = URL(string: image_path){
-                            imageView.af_setImage(withURL: url)
-                        }
-                    }
+    func updatecollectionView(imagePath:String){
+        if let url = URL(string: imagePath){
+            imageView.af_setImage(withURL: url)
+        }
+    }
 }
+
      
 //        switch reviewPostModel.image_paths.count {
 //        case 0:

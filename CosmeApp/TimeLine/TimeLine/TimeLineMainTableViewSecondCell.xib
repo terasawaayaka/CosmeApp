@@ -119,7 +119,7 @@
                         <constraints>
                             <constraint firstAttribute="width" secondItem="Quv-sL-Y15" secondAttribute="height" multiplier="1:1" id="cQK-aq-KhZ"/>
                         </constraints>
-                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ftZ-K6-Gy3">
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="ftZ-K6-Gy3">
                             <size key="itemSize" width="128" height="128"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>

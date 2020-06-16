@@ -28,10 +28,10 @@ class TimeLineMainTableViewSecondCell: BaseTableViewCell, UIScrollViewDelegate {
     @IBOutlet weak var imageCollectionViewFlowLayout: UICollectionViewFlowLayout!
     
     //Image
-    @IBOutlet weak var firstImageView: UIImageView!
-    @IBOutlet weak var secondImageView: UIImageView!
-    @IBOutlet weak var thirdImageView: UIImageView!
-    @IBOutlet weak var fourthImageView: UIImageView!
+//    @IBOutlet weak var firstImageView: UIImageView!
+//    @IBOutlet weak var secondImageView: UIImageView!
+//    @IBOutlet weak var thirdImageView: UIImageView!
+//    @IBOutlet weak var fourthImageView: UIImageView!
     
     //star
     @IBOutlet weak var firstStarImage: UIImageView!
@@ -97,13 +97,13 @@ extension TimeLineMainTableViewSecondCell {
 // MARK: - Protocol
 extension TimeLineMainTableViewSecondCell :UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return reviewPostModel.image_paths.count
+            return reviewPostModel.image_paths.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = imageCollectionView.dequeueReusableCell(withReuseIdentifier: "TimeLineImageCollectionViewCell", for: indexPath)as? TimeLineImageCollectionViewCell else{return UICollectionViewCell()}
-        //cell.imageView.image 
-        cell.updatecollectionView(image_path: reviewPostModel.image_paths[indexPath.row])
+        cell.cellHeight.constant = imageCollectionView.frame.height
+        cell.updatecollectionView(imagePath: reviewPostModel.image_paths[indexPath.row])
         return cell
     }
     
@@ -112,7 +112,7 @@ extension TimeLineMainTableViewSecondCell :UICollectionViewDataSource{
 extension TimeLineMainTableViewSecondCell {
     func setLayout(){
         iconView.layer.cornerRadius = iconView.frame.width / 2
-        imageCollectionViewFlowLayout.estimatedItemSize = CGSize(width: imageCollectionView.frame.width, height: imageCollectionView.frame.width)
+        imageCollectionViewFlowLayout.estimatedItemSize = CGSize(width: 10, height: 10)
     }
     func setDelegate(){
         //imageScrollView.delegate = self
