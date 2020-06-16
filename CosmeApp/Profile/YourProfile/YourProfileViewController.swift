@@ -130,22 +130,14 @@ extension YourProfileViewController :YourProfileMainViewDelegate{
         if let uid = Auth.auth().currentUser?.uid {
             var isFollowd: Bool = false
             
-            userModel.follower_users.forEach { (followerUser) in
-                followerUser.forEach { (key,val) in
-                    if key == uid {
-                        isFollow = !isFollow
-                        isFollowd = true
-                    }
-                }
-            }
             userModel.follow_users.forEach { (followUser) in
                 followUser.forEach { (key,val) in
                     if key == uid {
-                        isFollow = !isFollow
                         isFollowd = true
                     }
                 }
             }
+            isFollow = !isFollow
             if isFollowd == false {
                 let noticeModel : NoticeModel = NoticeModel()
                 if let uid = Auth.auth().currentUser?.uid {

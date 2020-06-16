@@ -86,11 +86,16 @@ extension ActivityViewController:ActivityMainViewDelegate {
 extension ActivityViewController: HeaderViewDelegate {
     func touchedRightButton(_ sender: UIButton) {
         //delete
-//        NoticeModel.delete(id: noticeModel.id) {
-//            <#code#>
-//        }
-    }
-}
+//        if let uid = Auth.auth().currentUser?.uid {
+//            if noticeModel.notice_my_id == uid {
+                NoticeModel.delete(id: noticeModel.id) {
+                    self.dismiss(animated: true, completion: nil)
+                }
+            }
+        }
+        
+//    }
+//}
 
 // MARK: - method
 extension ActivityViewController {
