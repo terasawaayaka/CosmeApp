@@ -86,15 +86,16 @@ extension ActivityViewController:ActivityMainViewDelegate {
 //全削除ボタン
 extension ActivityViewController: HeaderViewDelegate {
     func touchedRightButton(_ sender: UIButton) {
-        
-//        if let uid = Auth.auth().currentUser?.uid {
-//            if noticeModel.notice_my_id == uid {
-//                NoticeModel.delete(id: noticeModel.id) {
-//                    self.dismiss(animated: true, completion: nil)
-//                }
-//            }
-//        }
-
+            for noticeModel in noticeModels {
+                if let uid = Auth.auth().currentUser?.uid {
+                    if noticeModel.notice_my_id == uid {
+                        NoticeModel.delete(id: noticeModel.id) {
+                            self.dismiss(animated: true, completion: nil)
+                        
+                    }
+                }
+            }
+        }
     }
 }
 

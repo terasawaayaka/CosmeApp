@@ -225,6 +225,11 @@ extension ReviewDetailViewController {
                 headerView.setRight(text: "編集", fontSize: 18, color: #colorLiteral(red: 1, green: 0.6230913235, blue: 0.7894609614, alpha: 1))
             }
         }
+        if let uid = Auth.auth().currentUser?.uid {
+            if noticeModel.notice_my_id == uid {
+                headerView.setRight(text: "編集", fontSize: 18, color: #colorLiteral(red: 1, green: 0.6230913235, blue: 0.7894609614, alpha: 1))
+            }
+        }
     }
     func setDelegate(){
         headerView.delegate = self
