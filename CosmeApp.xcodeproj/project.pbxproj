@@ -52,8 +52,6 @@
 		3F1EE7372493162900753461 /* ReportDoneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F1EE7352493162900753461 /* ReportDoneViewController.xib */; };
 		3F1EE73A2493173800753461 /* ReportDoneMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1EE7382493173800753461 /* ReportDoneMainView.swift */; };
 		3F1EE73B2493173800753461 /* ReportDoneMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F1EE7392493173800753461 /* ReportDoneMainView.xib */; };
-		3F1EE73E249329B100753461 /* ReportedMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1EE73C249329B100753461 /* ReportedMainView.swift */; };
-		3F1EE73F249329B100753461 /* ReportedMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F1EE73D249329B100753461 /* ReportedMainView.xib */; };
 		3F6648ED2472280300D4D950 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6648EB2472280300D4D950 /* SignUpViewController.swift */; };
 		3F6648EE2472280300D4D950 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F6648EC2472280300D4D950 /* SignUpViewController.xib */; };
 		3F6648F22472287900D4D950 /* SignUpMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6648F02472287900D4D950 /* SignUpMainView.swift */; };
@@ -267,8 +265,6 @@
 		3F1EE7352493162900753461 /* ReportDoneViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportDoneViewController.xib; sourceTree = "<group>"; };
 		3F1EE7382493173800753461 /* ReportDoneMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportDoneMainView.swift; sourceTree = "<group>"; };
 		3F1EE7392493173800753461 /* ReportDoneMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportDoneMainView.xib; sourceTree = "<group>"; };
-		3F1EE73C249329B100753461 /* ReportedMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportedMainView.swift; sourceTree = "<group>"; };
-		3F1EE73D249329B100753461 /* ReportedMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportedMainView.xib; sourceTree = "<group>"; };
 		3F6648EB2472280300D4D950 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		3F6648EC2472280300D4D950 /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
 		3F6648F02472287900D4D950 /* SignUpMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpMainView.swift; sourceTree = "<group>"; };
@@ -611,8 +607,6 @@
 				3F1EE7352493162900753461 /* ReportDoneViewController.xib */,
 				3F1EE7382493173800753461 /* ReportDoneMainView.swift */,
 				3F1EE7392493173800753461 /* ReportDoneMainView.xib */,
-				3F1EE73C249329B100753461 /* ReportedMainView.swift */,
-				3F1EE73D249329B100753461 /* ReportedMainView.xib */,
 			);
 			path = ReportDone;
 			sourceTree = "<group>";
@@ -1069,7 +1063,6 @@
 				5FA88A4A246E405900B84ACE /* EditProfileMainView.xib in Resources */,
 				FF850A0B246E2AD3003E2ACF /* EditReviewViewController.xib in Resources */,
 				5FCD8FCA248E0CD800DF8106 /* FollowMainView.xib in Resources */,
-				3F1EE73F249329B100753461 /* ReportedMainView.xib in Resources */,
 				5F098A2E2474D1A800D033F4 /* YourTodayCollectionViewCell.xib in Resources */,
 				3F7C5D90247644ED007640E2 /* TagSearchResultMainView.xib in Resources */,
 				1F4B7706246D30D900FC3B27 /* MyProfileViewController.xib in Resources */,
@@ -1195,7 +1188,6 @@
 				5FA88A45246E402700B84ACE /* EditProfileViewController.swift in Sources */,
 				5F97F3CF24809CA900D68A0C /* TwelveYourGenreCollectionViewCell.swift in Sources */,
 				5F098A3E2477AB1200D033F4 /* GoodCollectionView.swift in Sources */,
-				3F1EE73E249329B100753461 /* ReportedMainView.swift in Sources */,
 				1F4B771A246E25CF00FC3B27 /* NewPostMainView.swift in Sources */,
 				D1B8AFC62472627C007BC6AD /* CreateMakeMainView.swift in Sources */,
 				3F8CA3E92476215C000EA5AF /* CategorySearchViewController.swift in Sources */,

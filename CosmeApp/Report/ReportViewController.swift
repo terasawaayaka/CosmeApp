@@ -12,6 +12,8 @@ import PGFramework
 class ReportViewController: BaseViewController {
     @IBOutlet weak var headerView: HeaderView!
     @IBOutlet weak var mainView: ReportMainView!
+    
+    var reviewPostModel: ReviewPostModel = ReviewPostModel()
 }
 // MARK: - Life cycle
 extension ReportViewController {
@@ -34,26 +36,31 @@ extension ReportViewController: ReportMainViewDelegate {
         case 0:
             let reportDoneViewController = ReportDoneViewController()
             reportDoneViewController.reportMessege = ReportMessege.spam
+            reportDoneViewController.reviewPostModel = reviewPostModel
             navigationController?.pushViewController(reportDoneViewController, animated: true)
             animatorManager.navigationType = .slide_push
         case 1:
             let reportDoneViewController = ReportDoneViewController()
             reportDoneViewController.reportMessege = ReportMessege.Sensitive
+            reportDoneViewController.reviewPostModel = reviewPostModel
             navigationController?.pushViewController(reportDoneViewController, animated: true)
             animatorManager.navigationType = .slide_push
         case 2:
             let reportDoneViewController = ReportDoneViewController()
             reportDoneViewController.reportMessege = ReportMessege.Aggressive
+            reportDoneViewController.reviewPostModel = reviewPostModel
             navigationController?.pushViewController(reportDoneViewController, animated: true)
             animatorManager.navigationType = .slide_push
         case 3:
             let reportDoneViewController = ReportDoneViewController()
             reportDoneViewController.reportMessege = ReportMessege.Suicide
+            reportDoneViewController.reviewPostModel = reviewPostModel
             navigationController?.pushViewController(reportDoneViewController, animated: true)
             animatorManager.navigationType = .slide_push
         
         default:
             let reportDoneViewController = ReportDoneViewController()
+            reportDoneViewController.reviewPostModel = reviewPostModel
             navigationController?.pushViewController(reportDoneViewController, animated: true)
             animatorManager.navigationType = .slide_push
         }

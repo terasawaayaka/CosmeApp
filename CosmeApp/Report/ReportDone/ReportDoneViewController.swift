@@ -22,9 +22,7 @@ class ReportDoneViewController: BaseViewController {
     @IBOutlet weak var mainView: ReportDoneMainView!
     
     var reportMessege: ReportMessege = ReportMessege.spam
-    @IBOutlet weak var reportedViewHeight: NSLayoutConstraint!
-    
-    
+    var reviewPostModel: ReviewPostModel = ReviewPostModel()
 }
 // MARK: - Life cycle
 extension ReportDoneViewController {
@@ -46,10 +44,6 @@ extension ReportDoneViewController: HeaderViewDelegate{
     func touchedLeftButton(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
-    func touchedRightButton(_ sender: UIButton) {
-        let index = navigationController!.viewControllers.count - 4
-        navigationController?.popToViewController(navigationController!.viewControllers[index], animated: true)
-    }
 }
 extension ReportDoneViewController: ReportDoneMainViewDelegate {
     func reportButton() {
@@ -58,12 +52,20 @@ extension ReportDoneViewController: ReportDoneMainViewDelegate {
             // ボタンが押された時の処理を書く（クロージャ実装）
             (action: UIAlertAction!) -> Void in
             print("OK")
+            let index = self.navigationController!.viewControllers.count - 4
+            self.navigationController?.popToViewController(self.navigationController!.viewControllers[index], animated: true)
         })
-        alert.addAction(defaultAction)
-
-        present(alert, animated: true, completion: nil)
+        if let text = self.mainView.textView.text {
+            self.reviewPostModel.reportText = [text] }
+        reviewPostModel.review_num = +1
+        ReviewPostModel.update(request: reviewPostModel) {
+            alert.addAction(defaultAction)
+            self.present(alert, animated: true, completion: nil)
+            
+        }
     }
 }
+
 // MARK: - method
 extension ReportDoneViewController {
     func setDelegate(){
@@ -72,7 +74,6 @@ extension ReportDoneViewController {
     }
     func setHeaderView(){
         headerView.setLeft(text: "戻る", fontSize: 16, color: #colorLiteral(red: 0.7116513325, green: 0.1774580224, blue: 0.3965806173, alpha: 1))
-        headerView.setRight(text: "完了", fontSize: 16, color: #colorLiteral(red: 0.7116513325, green: 0.1774580224, blue: 0.3965806173, alpha: 1))
     }
     func changeLabel(){
         switch reportMessege {
