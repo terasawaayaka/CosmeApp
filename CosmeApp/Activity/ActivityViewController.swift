@@ -83,19 +83,20 @@ extension ActivityViewController:ActivityMainViewDelegate {
     }
 }
 
+//全削除ボタン
 extension ActivityViewController: HeaderViewDelegate {
     func touchedRightButton(_ sender: UIButton) {
-        //delete
+        
 //        if let uid = Auth.auth().currentUser?.uid {
 //            if noticeModel.notice_my_id == uid {
-                NoticeModel.delete(id: noticeModel.id) {
-                    self.dismiss(animated: true, completion: nil)
-                }
-            }
-        }
-        
-//    }
-//}
+//                NoticeModel.delete(id: noticeModel.id) {
+//                    self.dismiss(animated: true, completion: nil)
+//                }
+//            }
+//        }
+//
+    }
+}
 
 // MARK: - method
 extension ActivityViewController {
