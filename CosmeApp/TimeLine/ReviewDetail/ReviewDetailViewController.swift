@@ -126,10 +126,10 @@ extension ReviewDetailViewController:ReviewDetailMainViewDelegate {
                 navigationController?.pushViewController(myProfileViewController, animated: true)
                 animatorManager.navigationType = .slide_push
             }else{
-                let yourPlofileViewController = YourProfileViewController()
-                yourPlofileViewController.reviewPostModel = reviewPostModel
-                yourPlofileViewController.fromPost = true
-                navigationController?.pushViewController(yourPlofileViewController, animated: true)
+                let yourProfileViewController = YourProfileViewController()
+                yourProfileViewController.reviewPostModel = reviewPostModel
+                yourProfileViewController.fromPost = true
+                navigationController?.pushViewController(yourProfileViewController, animated: true)
                 animatorManager.navigationType = .slide_push
             }
         }
@@ -143,10 +143,10 @@ extension ReviewDetailViewController:ReviewDetailMainViewDelegate {
                 navigationController?.pushViewController(myProfileViewController, animated: true)
                 animatorManager.navigationType = .slide_push
             }else{
-                let yourPlofileViewController = YourProfileViewController()
-                yourPlofileViewController.commentPostModel = commentPostModel
-                yourPlofileViewController.fromPost = true
-                navigationController?.pushViewController(yourPlofileViewController, animated: true)
+                let yourProfileViewController = YourProfileViewController()
+                yourProfileViewController.commentPostModel = commentPostModel
+                yourProfileViewController.fromPost = true
+                navigationController?.pushViewController(yourProfileViewController, animated: true)
                 animatorManager.navigationType = .slide_push
             }
         }

@@ -25,6 +25,7 @@ class YourProfileViewController: BaseViewController {
     @IBOutlet weak var headerView: HeaderView!
     
     var fromPost: Bool = false
+    var fromfollow: Bool = false
     var isFollow: Bool = false
     var isFollowd: Bool = false
     var isBlock: Bool = false
@@ -342,6 +343,10 @@ extension YourProfileViewController:HeaderViewDelegate{
         navigationController?.popViewController(animated: true)
         animatorManager.navigationType = .slide_pop
         }
+        if fromfollow {
+            navigationController?.popViewController(animated: true)
+            animatorManager.navigationType = .slide_pop
+        }
     }
 }
 // MARK: - method
@@ -355,6 +360,13 @@ extension YourProfileViewController {
         if fromPost{
         headerView.setCenter(text: "- profile -", fontSize: 20, color: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))
         headerView.setLeft(text: "戻る", fontSize: 18, color: #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1))
+        }else{
+            headerView.setCenter(text: "- profile -", fontSize: 20, color: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))
+            headerView.setLeft(text: "")
+        }
+        if fromfollow {
+            headerView.setCenter(text: "- profile -", fontSize: 20, color: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))
+            headerView.setLeft(text: "戻る", fontSize: 18, color: #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1))
         }else{
             headerView.setCenter(text: "- profile -", fontSize: 20, color: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))
             headerView.setLeft(text: "")
