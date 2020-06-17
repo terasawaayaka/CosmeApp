@@ -107,7 +107,9 @@ extension CreateMakeViewController:HeaderViewDelegate {
             let timeLineViewController = TimeLineViewController()
             self.navigationController?.pushViewController(timeLineViewController, animated: true)
             self.animatorManager.navigationType = .pop
-            
+            let newPostViewController = NewPostViewController()
+            self.navigationController?.pushViewController(newPostViewController, animated: true)
+            self.animatorManager.navigationType = .pop
         }
     }
 }
