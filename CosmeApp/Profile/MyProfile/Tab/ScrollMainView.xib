@@ -29,27 +29,44 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OTp-xI-1ar" customClass="BookmarkCollectionView" customModule="CosmeApp" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                                     <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="414" id="Mlk-TI-d4c"/>
+                                    </constraints>
                                 </view>
-                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9AV-3t-AuV" customClass="SearchGenreCollectionView" customModule="CosmeApp" customModuleProvider="target">
-                                    <rect key="frame" x="415" y="0.0" width="414" height="818"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9AV-3t-AuV" customClass="SearchGenreCollectionView" customModule="CosmeApp" customModuleProvider="target">
+                                    <rect key="frame" x="414" y="0.0" width="414" height="818"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="414" id="DMN-EU-02X"/>
+                                    </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KcX-yQ-HHN" customClass="GenreCollectionView" customModule="CosmeApp" customModuleProvider="target">
                                     <rect key="frame" x="414" y="0.0" width="414" height="818"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="414" id="8wQ-Uk-O5h"/>
+                                    </constraints>
                                 </view>
                             </subviews>
                             <constraints>
                                 <constraint firstItem="OTp-xI-1ar" firstAttribute="top" secondItem="h6B-Xc-l6M" secondAttribute="top" id="1pr-Uh-1qI"/>
                                 <constraint firstAttribute="trailing" secondItem="KcX-yQ-HHN" secondAttribute="trailing" id="2SD-eo-quw"/>
                                 <constraint firstItem="KcX-yQ-HHN" firstAttribute="top" secondItem="h6B-Xc-l6M" secondAttribute="top" id="AMn-Xc-a2J"/>
+                                <constraint firstItem="9AV-3t-AuV" firstAttribute="bottom" secondItem="0Dy-XU-R2B" secondAttribute="bottom" id="DsD-sz-m0B"/>
+                                <constraint firstItem="KcX-yQ-HHN" firstAttribute="leading" secondItem="OTp-xI-1ar" secondAttribute="trailing" id="EHh-pX-i2O"/>
+                                <constraint firstItem="KcX-yQ-HHN" firstAttribute="bottom" secondItem="0Dy-XU-R2B" secondAttribute="bottom" id="KjE-qB-P87"/>
+                                <constraint firstItem="9AV-3t-AuV" firstAttribute="width" secondItem="KcX-yQ-HHN" secondAttribute="width" id="Ldc-bZ-yUE"/>
                                 <constraint firstItem="OTp-xI-1ar" firstAttribute="leading" secondItem="h6B-Xc-l6M" secondAttribute="leading" id="Mkj-fy-0lQ"/>
                                 <constraint firstItem="KcX-yQ-HHN" firstAttribute="leading" secondItem="OTp-xI-1ar" secondAttribute="trailing" id="Uqp-5F-8eS"/>
                                 <constraint firstAttribute="bottom" secondItem="OTp-xI-1ar" secondAttribute="bottom" id="ZN0-kP-fXU"/>
                                 <constraint firstAttribute="bottom" secondItem="KcX-yQ-HHN" secondAttribute="bottom" id="aSD-O5-25O"/>
+                                <constraint firstItem="KcX-yQ-HHN" firstAttribute="top" secondItem="0Dy-XU-R2B" secondAttribute="top" id="dtc-1t-mTW"/>
                                 <constraint firstItem="KcX-yQ-HHN" firstAttribute="height" secondItem="OTp-xI-1ar" secondAttribute="height" id="edq-AC-IIq"/>
+                                <constraint firstItem="9AV-3t-AuV" firstAttribute="leading" secondItem="OTp-xI-1ar" secondAttribute="trailing" id="fJz-YP-Tqa"/>
+                                <constraint firstItem="KcX-yQ-HHN" firstAttribute="trailing" secondItem="0Dy-XU-R2B" secondAttribute="trailing" id="how-2F-g1X"/>
+                                <constraint firstItem="9AV-3t-AuV" firstAttribute="top" secondItem="0Dy-XU-R2B" secondAttribute="top" id="kMJ-7B-bet"/>
                                 <constraint firstItem="KcX-yQ-HHN" firstAttribute="width" secondItem="OTp-xI-1ar" secondAttribute="width" id="shj-bR-jaW"/>
+                                <constraint firstAttribute="trailing" secondItem="9AV-3t-AuV" secondAttribute="trailing" id="tAU-Wz-02f"/>
                             </constraints>
                             <viewLayoutGuide key="contentLayoutGuide" id="0Dy-XU-R2B"/>
                             <viewLayoutGuide key="frameLayoutGuide" id="Tga-ij-MYM"/>
