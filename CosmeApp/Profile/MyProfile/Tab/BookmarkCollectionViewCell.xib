@@ -24,21 +24,43 @@
                             <constraint firstAttribute="height" constant="115" id="Et5-Hc-xai"/>
                         </constraints>
                     </view>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bMj-wm-1gw">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bMj-wm-1gw">
                         <rect key="frame" x="0.0" y="0.0" width="115" height="115"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="115" id="dpV-GC-Rmq"/>
+                            <constraint firstAttribute="width" constant="115" id="fip-OM-rS3"/>
+                        </constraints>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Hf-uK-ZY8">
+                        <rect key="frame" x="0.0" y="92" width="115" height="23"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="23" id="cwX-jN-y56"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="bMj-wm-1gw" firstAttribute="leading" secondItem="QFy-K1-Rr7" secondAttribute="leading" id="5Un-Yp-2cS"/>
                     <constraint firstItem="hjl-aI-e51" firstAttribute="top" secondItem="QFy-K1-Rr7" secondAttribute="top" id="8Tl-vZ-1qq"/>
+                    <constraint firstAttribute="bottom" secondItem="bMj-wm-1gw" secondAttribute="bottom" id="8fD-8h-eKw"/>
                     <constraint firstAttribute="trailing" secondItem="hjl-aI-e51" secondAttribute="trailing" id="EIz-uf-22G"/>
+                    <constraint firstAttribute="bottom" secondItem="4Hf-uK-ZY8" secondAttribute="bottom" id="TXY-kF-zq4"/>
                     <constraint firstAttribute="bottom" secondItem="hjl-aI-e51" secondAttribute="bottom" id="fVD-hp-Vcx"/>
+                    <constraint firstItem="4Hf-uK-ZY8" firstAttribute="height" secondItem="bMj-wm-1gw" secondAttribute="height" multiplier="0.2" id="ufZ-R9-RM7"/>
                     <constraint firstItem="hjl-aI-e51" firstAttribute="leading" secondItem="QFy-K1-Rr7" secondAttribute="leading" id="vIf-oB-frG"/>
+                    <constraint firstAttribute="trailing" secondItem="bMj-wm-1gw" secondAttribute="trailing" id="w7b-6s-oZF"/>
+                    <constraint firstItem="4Hf-uK-ZY8" firstAttribute="leading" secondItem="QFy-K1-Rr7" secondAttribute="leading" id="wGZ-15-1hd"/>
+                    <constraint firstAttribute="trailing" secondItem="4Hf-uK-ZY8" secondAttribute="trailing" id="wTv-2U-rau"/>
+                    <constraint firstItem="bMj-wm-1gw" firstAttribute="top" secondItem="QFy-K1-Rr7" secondAttribute="top" id="zjE-Oh-fsO"/>
                 </constraints>
             </collectionViewCellContentView>
             <size key="customSize" width="115" height="115"/>
             <connections>
                 <outlet property="imageView" destination="bMj-wm-1gw" id="mGM-aL-dTV"/>
+                <outlet property="postTitle" destination="4Hf-uK-ZY8" id="ARA-PZ-WJ4"/>
             </connections>
             <point key="canvasLocation" x="264.49275362318843" y="86.049107142857139"/>
         </collectionViewCell>

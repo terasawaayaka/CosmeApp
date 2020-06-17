@@ -61,6 +61,7 @@ class MyProfileMainView: BaseView {
     //data
     var userModels: [UserModel] = [UserModel]()
     var makePostModels: [MakePostModel] = [MakePostModel]()
+    var userModel: UserModel = UserModel()
 }
 // MARK: - Life cycle
 extension MyProfileMainView {

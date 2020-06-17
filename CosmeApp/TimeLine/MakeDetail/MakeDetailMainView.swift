@@ -20,6 +20,7 @@ class MakeDetailMainView: BaseView {
     
     var makePostModel : MakePostModel = MakePostModel()
     
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var iconView: UIButton!
     @IBAction func iconViewButton(_ sender: UIButton) {
@@ -58,7 +59,18 @@ extension MakeDetailMainView {
     func setLayout(){
         iconView.layer.cornerRadius = iconView.frame.width / 2
     }
-    func makeGetModel(makePostModel:MakePostModel){
+    func makeGetModel(makePostModel:MakePostModel, userModel: UserModel){
         self.makePostModel = makePostModel
+        
+        if userModel.nickname == "" {
+            userName.text =  "名無しさん"
+        }else{
+            userName.text = userModel.nickname
+        }
+        if let photo_path = userModel.photo_path {
+            if let url = URL(string: photo_path) {
+                imageView.af_setImage(withURL: url)
+            }
+        }
     }
 }

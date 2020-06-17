@@ -18,6 +18,7 @@ class MakeDetailViewController: BaseViewController {
     
     var makePostModel : MakePostModel = MakePostModel()
     var reviewPostModel : ReviewPostModel = ReviewPostModel()
+    var userModel: UserModel = UserModel()
     
     var fromProfile: Bool = false
     
@@ -109,10 +110,10 @@ extension MakeDetailViewController {
                 if let icon = userModel.photo_path{
                     makePostModel.post_user_icon = icon }
                 self.makePostModel = makePostModel
-                self.mainView.makeGetModel(makePostModel: makePostModel)
+                self.mainView.makeGetModel(makePostModel: makePostModel, userModel: userModel)
             }
             self.makePostModel = makePostModel
-            self.mainView.makeGetModel(makePostModel: makePostModel)
+            self.mainView.makeGetModel(makePostModel: makePostModel, userModel: self.userModel)
         }) {
             self.navigationController?.popViewController(animated: true)
             self.animatorManager.navigationType = .slide_pop

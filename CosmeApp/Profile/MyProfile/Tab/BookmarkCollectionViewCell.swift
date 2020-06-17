@@ -16,6 +16,7 @@ extension BookmarkCollectionViewCellDelegate {
 class BookmarkCollectionViewCell: BaseCollectionViewCell {
     weak var delegate: BookmarkCollectionViewCellDelegate? = nil
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var postTitle: UILabel!
 }
 // MARK: - Life cycle
 extension BookmarkCollectionViewCell {
@@ -42,5 +43,6 @@ extension BookmarkCollectionViewCell {
         if let url = URL(string: reviewPostModel.image_paths[0]){
             imageView.af_setImage(withURL: url)
         }
+        postTitle.text = reviewPostModel.title
     }
 }

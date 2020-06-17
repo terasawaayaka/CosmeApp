@@ -30,10 +30,12 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                                     <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </view>
-                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DM5-Oe-SAh" customClass="SearchYourGenreMainView" customModule="CosmeApp" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DM5-Oe-SAh" customClass="SearchYourGenreMainView" customModule="CosmeApp" customModuleProvider="target">
                                     <rect key="frame" x="414" y="0.0" width="414" height="818"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="414" id="dmd-tH-A72"/>
+                                    </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yUP-B8-w12" customClass="YourGenreCollectionView" customModule="CosmeApp" customModuleProvider="target">
                                     <rect key="frame" x="414" y="0.0" width="414" height="818"/>
@@ -43,12 +45,17 @@
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="yUP-B8-w12" secondAttribute="trailing" id="9Vl-0h-BT2"/>
                                 <constraint firstAttribute="bottom" secondItem="yUP-B8-w12" secondAttribute="bottom" id="9wQ-Pm-gPf"/>
+                                <constraint firstItem="DM5-Oe-SAh" firstAttribute="trailing" secondItem="HA1-LU-fa5" secondAttribute="trailing" id="B7i-Fu-OXJ"/>
+                                <constraint firstItem="DM5-Oe-SAh" firstAttribute="width" secondItem="yUP-B8-w12" secondAttribute="width" id="CQu-DI-cWK"/>
                                 <constraint firstItem="KZo-uh-LE2" firstAttribute="top" secondItem="t6k-gf-o2e" secondAttribute="top" id="JV1-Hs-5qi"/>
                                 <constraint firstItem="KZo-uh-LE2" firstAttribute="leading" secondItem="t6k-gf-o2e" secondAttribute="leading" id="KQD-e5-fXX"/>
                                 <constraint firstItem="yUP-B8-w12" firstAttribute="height" secondItem="KZo-uh-LE2" secondAttribute="height" id="LE4-hc-nR2"/>
+                                <constraint firstItem="DM5-Oe-SAh" firstAttribute="top" secondItem="HA1-LU-fa5" secondAttribute="top" id="Q5U-df-1bM"/>
                                 <constraint firstAttribute="bottom" secondItem="KZo-uh-LE2" secondAttribute="bottom" id="QaC-T2-K5n"/>
+                                <constraint firstItem="DM5-Oe-SAh" firstAttribute="leading" secondItem="KZo-uh-LE2" secondAttribute="trailing" id="WnG-Tc-sZc"/>
                                 <constraint firstItem="yUP-B8-w12" firstAttribute="leading" secondItem="KZo-uh-LE2" secondAttribute="trailing" id="Xpo-XC-Ene"/>
                                 <constraint firstItem="yUP-B8-w12" firstAttribute="width" secondItem="KZo-uh-LE2" secondAttribute="width" id="rBy-cj-5hh"/>
+                                <constraint firstItem="DM5-Oe-SAh" firstAttribute="bottom" secondItem="HA1-LU-fa5" secondAttribute="bottom" id="uEQ-5T-qeS"/>
                                 <constraint firstItem="yUP-B8-w12" firstAttribute="top" secondItem="t6k-gf-o2e" secondAttribute="top" id="yI9-Ne-Htc"/>
                             </constraints>
                             <viewLayoutGuide key="contentLayoutGuide" id="HA1-LU-fa5"/>
