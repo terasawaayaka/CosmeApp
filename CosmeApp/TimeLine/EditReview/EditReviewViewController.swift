@@ -25,6 +25,7 @@ class EditReviewViewController: BaseViewController {
     var imageViewType : ImageViewType = ImageViewType.first
     
     var reviewPostModel : ReviewPostModel = ReviewPostModel()
+    var noticeModel: NoticeModel = NoticeModel()
     
     let items = ["ベースメイク", "シェーディング", "ハイライト", "チーク", "アイシャドウ","アイライン","マスカラ","カラコン","アイブロウ","リップ","ヘアケア","スキンケア","その他"]
     }
@@ -171,6 +172,15 @@ extension EditReviewViewController:EditReviewMainViewDelegate{
     }
     
     func postDeleteButton() {
+        NoticeModel.reads { (noticeModels) in
+            for noticeModel in noticeModels {
+                if noticeModel.post_id == self.reviewPostModel.id {
+                    NoticeModel.delete(id: noticeModel.id) {
+                        self.dismiss(animated: true, completion: nil)
+                    }
+                }
+            }
+        }
         ReviewPostModel.delete(id: reviewPostModel.id) {
             self.dismiss(animated: true, completion: nil)
         }
