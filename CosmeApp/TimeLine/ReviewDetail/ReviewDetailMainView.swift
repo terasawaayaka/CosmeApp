@@ -23,7 +23,7 @@ protocol ReviewDetailMainViewDelegate: NSObjectProtocol{
 extension ReviewDetailMainViewDelegate {
 }
 // MARK: - Property
-class ReviewDetailMainView: BaseView, UIScrollViewDelegate {
+class ReviewDetailMainView: BaseView, UIScrollViewDelegate, UICollectionViewDelegate {
     weak var delegate: ReviewDetailMainViewDelegate? = nil
     
     //star
@@ -55,8 +55,8 @@ class ReviewDetailMainView: BaseView, UIScrollViewDelegate {
     @IBOutlet weak var iconView: UIButton!
     @IBOutlet weak var userName: UILabel!
     
+   
     @IBOutlet weak var pageControl: UIPageControl!
-    @IBOutlet weak var imageScrollView: UIScrollView!
     
     @IBOutlet weak var commentTextField: UITextField!
     @IBOutlet weak var goodButton: UIButton!
@@ -103,7 +103,7 @@ extension ReviewDetailMainView {
         super.awakeFromNib()
         setDelegate()
         setLayout()
-//        scrollViewDidEndDecelerating(imageScrollView)
+        scrollViewDidEndDecelerating(imageCollectionView)
        
         
         loadTableViewCellFromXib(tableView: tableView, cellName: "ReviewDetailMainTableViewCell")
@@ -160,19 +160,21 @@ extension ReviewDetailMainView:ReviewDetailMainTableViewCellDelegate{
 extension ReviewDetailMainView {
     func setDelegate(){
         tableView.dataSource = self
-//        imageScrollView.delegate = self
+        imageCollectionView.delegate = self
         imageCollectionView.dataSource = self
     }
+    
     func commentGetModel(commentPostModels:[CommentPostModel]){
         self.commentPostModels = commentPostModels
         tableView.reloadData()
         layoutIfNeeded()
         updateConstraintsIfNeeded()
-        
     }
+    
     func reviewGetModel(reviewPostModel:ReviewPostModel){
         self.reviewPostModel = reviewPostModel
-        
+        //pageControlの数
+        pageControl.numberOfPages = reviewPostModel.image_paths.count
       
         if reviewPostModel.post_user_name == ""{
             userName.text = "メンバーがいません"
@@ -192,12 +194,13 @@ extension ReviewDetailMainView {
         iconView.layer.cornerRadius = iconView.frame.width / 2
         imageCollectionViewFlowLayout.estimatedItemSize = CGSize(width: 10, height: 10)
     }
-//    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-//        if fmod(imageScrollView.contentOffset.x, imageScrollView.frame.maxX) == 0 {
-//            pageControl.currentPage = Int(scrollView.contentOffset.x / imageScrollView.frame.maxX)
-//        }
-//    }
-//
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        if fmod(imageCollectionView.contentOffset.x, imageCollectionView.frame.maxX) == 0 {
+            pageControl.currentPage = Int(scrollView.contentOffset.x / imageCollectionView.frame.maxX)
+        }
+    }
+
     func updateGood() {
         if let uid = Auth.auth().currentUser?.uid {
             if reviewPostModel.post_user_id == uid {
