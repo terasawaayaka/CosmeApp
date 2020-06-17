@@ -218,7 +218,7 @@ extension ReviewPostModel{
                         } else {
                             paths.append(url?.description ?? "")
                             group.leave()
-                        }
+                        } 
                     }
                 }
             }

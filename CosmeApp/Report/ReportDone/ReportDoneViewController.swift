@@ -56,7 +56,7 @@ extension ReportDoneViewController: ReportDoneMainViewDelegate {
             self.navigationController?.popToViewController(self.navigationController!.viewControllers[index], animated: true)
         })
         if let text = self.mainView.textView.text {
-            self.reviewPostModel.reportText = [text] }
+            self.reviewPostModel.reportText.append(text) }
         reviewPostModel.review_num = +1
         ReviewPostModel.update(request: reviewPostModel) {
             alert.addAction(defaultAction)
