@@ -128,6 +128,7 @@ extension CreateReviewViewController:HeaderViewDelegate {
         addLoadingView()
         
         ReviewPostModel.create(request: reviewPostModel, images: images) {
+            self.tabBarController?.selectedIndex = 0 //タブの切り替え
             let timeLineViewController = TimeLineViewController()
             self.navigationController?.pushViewController(timeLineViewController, animated: true)
             self.animatorManager.navigationType = .pop
