@@ -11,6 +11,7 @@
             <connections>
                 <outlet property="collectionView" destination="IaX-LX-NcL" id="zfI-ch-BQW"/>
                 <outlet property="collectionViewFlowLayout" destination="cKm-VP-ujn" id="ra8-JK-QsP"/>
+                <outlet property="textLabel" destination="oDC-LY-l6x" id="WTl-7i-47M"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -28,16 +29,25 @@
                         <inset key="sectionInset" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oDC-LY-l6x">
+                    <rect key="frame" x="20" y="89" width="374" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
+                <constraint firstItem="oDC-LY-l6x" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="45" id="0j2-sT-GiK"/>
                 <constraint firstItem="IaX-LX-NcL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="AZF-40-HpD"/>
                 <constraint firstItem="IaX-LX-NcL" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="hTR-oi-ShZ"/>
+                <constraint firstItem="oDC-LY-l6x" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="iWf-0K-RCJ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="IaX-LX-NcL" secondAttribute="bottom" id="oZ2-O3-9Os"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="IaX-LX-NcL" secondAttribute="trailing" id="ua7-I4-Lls"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="oDC-LY-l6x" secondAttribute="trailing" constant="20" id="utJ-0c-W6n"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="139" y="108"/>
+            <point key="canvasLocation" x="137.68115942028987" y="107.8125"/>
         </view>
     </objects>
 </document>
