@@ -140,37 +140,37 @@ extension TimeLineViewController {
         ReviewPostModel.reads { (reviewPostModels) in
             var filterdReviewPostModels: [ReviewPostModel] = []
             UserModel.readMe { (userModel) in
-                for followUser in userModel.follow_users {
-                    followUser.forEach { (key, val) in
-                        for blockUser in userModel.block_users {
-                            blockUser.forEach { (key2, val2) in
-                                for blockedUser in userModel.blocked_users {
-                                    blockedUser.forEach { (key3, val3) in
-                                        //フォローしている人と自分のみを抽出 ブロックした人を非表示 自分をブロックしている人を非表示
-                                        filterdReviewPostModels = reviewPostModels.filter { (reviewPostModel) -> Bool in
-                                            if let uid = Auth.auth().currentUser?.uid {
-                                                if key == reviewPostModel.post_user_id && val{
-                                                    return true
-                                                }else if reviewPostModel.post_user_id == uid {
-                                                    return true
-                                                } else if key2 == reviewPostModel.post_user_id && val2 == true {
-                                                    return false
-                                                }else if key3 == reviewPostModel.post_user_id && val3 == true {
-                                                    return false
-                                                }else{
-                                                    return false
-                                                }
-                                            } else {
-                                                return false
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                //誰もフォローしていない場合自分の投稿だけを抽出
+//                for followUser in userModel.follow_users {
+//                    followUser.forEach { (key, val) in
+//                        for blockUser in userModel.block_users {
+//                            blockUser.forEach { (key2, val2) in
+//                                for blockedUser in userModel.blocked_users {
+//                                    blockedUser.forEach { (key3, val3) in
+//                                        //フォローしている人と自分のみを抽出 ブロックした人を非表示 自分をブロックしている人を非表示
+//                                        filterdReviewPostModels = reviewPostModels.filter { (reviewPostModel) -> Bool in
+//                                            if let uid = Auth.auth().currentUser?.uid {
+//                                                if key == reviewPostModel.post_user_id && val{
+//                                                    return true
+//                                                }else if reviewPostModel.post_user_id == uid {
+//                                                    return true
+//                                                } else if key2 == reviewPostModel.post_user_id && val2 == true {
+//                                                    return false
+//                                                }else if key3 == reviewPostModel.post_user_id && val3 == true {
+//                                                    return false
+//                                                }else{
+//                                                    return false
+//                                                }
+//                                            } else {
+//                                                return false
+//                                            }
+//                                        }
+//                                    }
+//                                }
+//                            }
+//                        }
+//                    }
+//                }
+                //誰もフォローしていない場合自分だけを抽出
                 if userModel.follow_users.count == 0{
                     filterdReviewPostModels = reviewPostModels.filter { (reviewPostModel) -> Bool in
                         if let uid = Auth.auth().currentUser?.uid {
@@ -178,18 +178,60 @@ extension TimeLineViewController {
                                 return true
                             }else{
                                 return false
-                            }
+                        }
                         }else{
                             return false
                         }
                     }
                 }
+                
+                //フォローしている人と自分を抽出
+                for followUser in userModel.follow_users {
+                    followUser.forEach { (followUserId, isFollow) in
+                        filterdReviewPostModels = reviewPostModels.filter{ (reviewPostModel) -> Bool in
+                            if let uid = Auth.auth().currentUser?.uid {
+                                if reviewPostModel.post_user_id == uid {
+                                    return true
+                                }else if followUserId == reviewPostModel.post_user_id && isFollow == true{
+                                    return true
+                                }else{
+                                    return false
+                                }
+                            }
+                            return false
+                        }
+                    }
+                }
+                //ブロックしている人を排除
+                for blockUser in userModel.block_users {
+                    blockUser.forEach { (blockUserId, isBlock) in
+                        filterdReviewPostModels = filterdReviewPostModels.filter{ (reviewPostModel) -> Bool in
+                            if blockUserId == reviewPostModel.post_user_id && isBlock == true{
+                                return false
+                            }else{
+                                return true
+                            }
+                        }
+                    }
+                }
+                //自分をブロックしている人を排除
+                for blockedUser in userModel.blocked_users {
+                    blockedUser.forEach { (blockedUserId, isBlocked) in
+                        filterdReviewPostModels = filterdReviewPostModels.filter{ (reviewPostModel) -> Bool in
+                            if blockedUserId == reviewPostModel.post_user_id && isBlocked == true {
+                                return false
+                            }else{
+                                return true
+                            }
+                        }
+                    }
+                }
+                
+                self.reviewPostModels = filterdReviewPostModels
+                self.mainView.reviewGetModel(reviewPostModels:filterdReviewPostModels)
+                print("カウント:", filterdReviewPostModels.count)
             }
                 
-            self.reviewPostModels = filterdReviewPostModels
-            self.mainView.reviewGetModel(reviewPostModels:filterdReviewPostModels)
-            print("カウント:", filterdReviewPostModels.count)
-   
             for reviewPostModel in reviewPostModels {
                 if reviewPostModel.post_user_id != "" {
                     UserModel.readAt(userId: reviewPostModel.post_user_id) { (userModel) in
@@ -234,12 +276,7 @@ extension TimeLineViewController {
         }
         
     }
-//    func reviewGetModel(){
-//        ReviewPostModel.reads { (reviewPostModels) in
-//            self.mainView.reviewGetModel(reviewPostModels: reviewPostModels)
-//            self.reviewPostModels = reviewPostModels
-//        }
-//    }
+
     
     func getNoticeModel() {
         NoticeModel.reads { (noticeModels) in
@@ -261,39 +298,39 @@ extension TimeLineViewController {
         MakePostModel.reads { (makePostModels) in
             var filterdMakePostModels: [MakePostModel] = []
             UserModel.readMe { (userModel) in
-                for followUser in userModel.follow_users {
-                    followUser.forEach { (key, val) in
-                        for blockUser in userModel.block_users {
-                            blockUser.forEach { (key2, val2) in
-                                for blockedUser in userModel.blocked_users {
-                                    blockedUser.forEach { (key3, val3) in
-                                        //フォローしている人と自分のみを抽出 ブロックした人を非表示 自分をブロックしている人を非表示
-                                        filterdMakePostModels = makePostModels.filter { (makePostModel) -> Bool in
-                                            if let uid = Auth.auth().currentUser?.uid {
-                                                if key == makePostModel.post_user_id && val == true || makePostModel.post_user_id == uid {
-                                                    return true
-                                                } else if key2 == makePostModel.post_user_id && val2 == true {
-                                                    return false
-                                                }else if key3 == makePostModel.post_user_id && val3 == true {
-                                                    return false
-                                                }else{
-                                                    return false
-                                                }
-                                            } else {
-                                                return false
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                //誰もフォローしていない場合自分の投稿だけを抽出
+                //                for followUser in userModel.follow_users {
+                //                    followUser.forEach { (key, val) in
+                //                        for blockUser in userModel.block_users {
+                //                            blockUser.forEach { (key2, val2) in
+                //                                for blockedUser in userModel.blocked_users {
+                //                                    blockedUser.forEach { (key3, val3) in
+                //                                        //フォローしている人と自分のみを抽出 ブロックした人を非表示 自分をブロックしている人を非表示
+                //                                        filterdMakePostModels = makePostModels.filter { (makePostModel) -> Bool in
+                //                                            if let uid = Auth.auth().currentUser?.uid {
+                //                                                if key == makePostModel.post_user_id && val == true || makePostModel.post_user_id == uid {
+                //                                                    return true
+                //                                                } else if key2 == makePostModel.post_user_id && val2 == true {
+                //                                                    return false
+                //                                                }else if key3 == makePostModel.post_user_id && val3 == true {
+                //                                                    return false
+                //                                                }else{
+                //                                                    return false
+                //                                                }
+                //                                            } else {
+                //                                                return false
+                //                                            }
+                //                                        }
+                //                                    }
+                //                                }
+                //                            }
+                //                        }
+                //                    }
+                //                }
+                //誰もフォローしていない場合自分だけを抽出
                 if userModel.follow_users.count == 0{
-                    filterdMakePostModels = makePostModels.filter { (makePostModel) -> Bool in
+                    filterdMakePostModels = makePostModels.filter { (reviewPostModel) -> Bool in
                         if let uid = Auth.auth().currentUser?.uid {
-                            if makePostModel.post_user_id == uid{
+                            if reviewPostModel.post_user_id == uid{
                                 return true
                             }else{
                                 return false
@@ -303,10 +340,52 @@ extension TimeLineViewController {
                         }
                     }
                 }
+                //フォローしている人と自分を抽出
+                for followUser in userModel.follow_users {
+                    followUser.forEach { (followUserId, isFollow) in
+                        filterdMakePostModels = makePostModels.filter{ (reviewPostModel) -> Bool in
+                            if let uid = Auth.auth().currentUser?.uid {
+                                if reviewPostModel.post_user_id == uid {
+                                    return true
+                                }else if followUserId == reviewPostModel.post_user_id && isFollow == true{
+                                    return true
+                                }else{
+                                    return false
+                                }
+                            }
+                            return false
+                        }
+                    }
+                }
+                //ブロックしている人を排除
+                for blockUser in userModel.block_users {
+                    blockUser.forEach { (blockUserId, isBlock) in
+                        filterdMakePostModels = filterdMakePostModels.filter{ (reviewPostModel) -> Bool in
+                            if blockUserId == reviewPostModel.post_user_id && isBlock == true{
+                                return false
+                            }else{
+                                return true
+                            }
+                        }
+                    }
+                }
+                //自分をブロックしている人を排除
+                for blockedUser in userModel.blocked_users {
+                    blockedUser.forEach { (blockedUserId, isBlocked) in
+                        filterdMakePostModels = filterdMakePostModels.filter{ (reviewPostModel) -> Bool in
+                            if blockedUserId == reviewPostModel.post_user_id && isBlocked == true {
+                                return false
+                            }else{
+                                return true
+                            }
+                        }
+                    }
+                }
+                
+                self.makePostModels = filterdMakePostModels
+                self.mainView.makeGetModel(makePostModels:filterdMakePostModels)
+                print("カウント:", filterdMakePostModels.count)
             }
-            self.makePostModels = filterdMakePostModels
-            self.mainView.makeGetModel(makePostModels:filterdMakePostModels)
-            
             
             
             for makePostModel in makePostModels {
@@ -331,10 +410,4 @@ extension TimeLineViewController {
     }
 }
     
-//    func makeGetModel(){
-//        MakePostModel.reads { (makePostModels) in
-//            self.mainView.makeGetModel(makePostModels: makePostModels)
-//            self.makePostModels = makePostModels
-//        }
-//    }
-//}
+
