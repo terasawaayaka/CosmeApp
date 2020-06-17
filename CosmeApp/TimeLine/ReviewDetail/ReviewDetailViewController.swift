@@ -74,6 +74,7 @@ extension ReviewDetailViewController :HeaderViewDelegate{
         }
     }
     func touchedRightButton(_ sender: UIButton) {
+        mainView.imageCollectionView.reloadData()
         let editReviewViewController = EditReviewViewController()
         editReviewViewController.reviewPostModel = reviewPostModel
         editReviewViewController.modalPresentationStyle = .fullScreen
