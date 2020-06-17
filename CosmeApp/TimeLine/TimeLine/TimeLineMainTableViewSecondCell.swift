@@ -97,13 +97,21 @@ extension TimeLineMainTableViewSecondCell {
 // MARK: - Protocol
 extension TimeLineMainTableViewSecondCell :UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if reviewPostModel.image_paths.count == 0{
+            return 1
+        }else{
             return reviewPostModel.image_paths.count
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = imageCollectionView.dequeueReusableCell(withReuseIdentifier: "TimeLineImageCollectionViewCell", for: indexPath)as? TimeLineImageCollectionViewCell else{return UICollectionViewCell()}
         cell.cellHeight.constant = imageCollectionView.frame.height
-        cell.updatecollectionView(imagePath: reviewPostModel.image_paths[indexPath.row])
+        if reviewPostModel.image_paths.count == 0{
+            cell.imageView.image = UIImage(named: "noimage")
+        }else{
+            cell.updatecollectionView(imagePath: reviewPostModel.image_paths[indexPath.row])
+        }
         return cell
     }
     
@@ -125,6 +133,8 @@ extension TimeLineMainTableViewSecondCell {
     }
     func updateCell(reviewPostModel:ReviewPostModel){
         self.reviewPostModel = reviewPostModel
+        imageCollectionView.reloadData()
+        
         //text
         productLabel.text = "商品名：　" + reviewPostModel.title
         categoryLabel.text = "カテゴリ：　" + reviewPostModel.category

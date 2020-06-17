@@ -113,18 +113,18 @@ extension EditReviewMainView {
         //画像
         switch reviewPostModel.image_paths.count {
         case 0:
-            firstImageView.image = UIImage(named: "noimage.png")
-            secondImageView.image = UIImage(named: "noimage.png")
-            thirdImageView.image = UIImage(named: "noimage.png")
-            fourthImageView.image = UIImage(named: "noimage.png")
+            firstImageView.image = UIImage(named: "")
+            secondImageView.image = UIImage(named: "")
+            thirdImageView.image = UIImage(named: "")
+            fourthImageView.image = UIImage(named: "")
             
         case 1:
             if let url = URL(string: reviewPostModel.image_paths[0]){
                 firstImageView.af_setImage(withURL: url)
             }
-            secondImageView.image = UIImage(named: "noimage.png")
-            thirdImageView.image = UIImage(named: "noimage.png")
-            fourthImageView.image = UIImage(named: "noimage.png")
+            secondImageView.image = UIImage(named: "")
+            thirdImageView.image = UIImage(named: "")
+            fourthImageView.image = UIImage(named: "")
         case 2:
             if let url = URL(string: reviewPostModel.image_paths[0]){
                 firstImageView.af_setImage(withURL: url)
@@ -132,8 +132,8 @@ extension EditReviewMainView {
             if let url = URL(string: reviewPostModel.image_paths[1]){
                 secondImageView.af_setImage(withURL: url)
             }
-            thirdImageView.image = UIImage(named: "noimage.png")
-            fourthImageView.image = UIImage(named: "noimage.png")
+            thirdImageView.image = UIImage(named: "")
+            fourthImageView.image = UIImage(named: "")
         case 3:
             if let url = URL(string: reviewPostModel.image_paths[0]){
                 firstImageView.af_setImage(withURL: url)
@@ -144,7 +144,7 @@ extension EditReviewMainView {
             if let url = URL(string: reviewPostModel.image_paths[2]){
                 thirdImageView.af_setImage(withURL: url)
             }
-            fourthImageView.image = UIImage(named: "noimage.png")
+            fourthImageView.image = UIImage(named: "")
 
         case 4:
             if let url = URL(string: reviewPostModel.image_paths[0]){

@@ -33,11 +33,11 @@ class ReviewDetailMainView: BaseView, UIScrollViewDelegate {
     @IBOutlet weak var fifthStarImage: UIImageView!
     
     //image
-    @IBOutlet weak var firstImageView: UIImageView!
-    @IBOutlet weak var secondImageView: UIImageView!
-    @IBOutlet weak var thirdImageView: UIImageView!
-    @IBOutlet weak var fourthImageView: UIImageView!
-    
+//    @IBOutlet weak var firstImageView: UIImageView!
+//    @IBOutlet weak var secondImageView: UIImageView!
+//    @IBOutlet weak var thirdImageView: UIImageView!
+//    @IBOutlet weak var fourthImageView: UIImageView!
+//    
     //review
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
@@ -84,6 +84,8 @@ class ReviewDetailMainView: BaseView, UIScrollViewDelegate {
         }
     }
     
+    @IBOutlet weak var imageCollectionView: UICollectionView!
+    @IBOutlet weak var imageCollectionViewFlowLayout: UICollectionViewFlowLayout!
     
     var isGoodButtonTouched: Bool = false
     var isFavoriteButtonTouched : Bool = false
@@ -95,10 +97,12 @@ extension ReviewDetailMainView {
         super.awakeFromNib()
         setDelegate()
         setLayout()
-        scrollViewDidEndDecelerating(imageScrollView)
+//        scrollViewDidEndDecelerating(imageScrollView)
        
         
         loadTableViewCellFromXib(tableView: tableView, cellName: "ReviewDetailMainTableViewCell")
+        loadCollectionViewCellFromXib(collectionView: imageCollectionView, cellName: "ReviewDetailImageCollectionViewCell")
+        
     }
 }
 // MARK: - Protocol
@@ -111,6 +115,27 @@ extension ReviewDetailMainView :UITableViewDataSource{
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ReviewDetailMainTableViewCell")as? ReviewDetailMainTableViewCell else {return UITableViewCell()}
         cell.delegate = self
         cell.updateCell(commentPostModel:commentPostModels[indexPath.row])
+        return cell
+    }
+}
+
+extension ReviewDetailMainView :UICollectionViewDataSource{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if reviewPostModel.image_paths.count == 0{
+            return 1
+        }else{
+            return reviewPostModel.image_paths.count
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = imageCollectionView.dequeueReusableCell(withReuseIdentifier: "ReviewDetailImageCollectionViewCell", for: indexPath)as? ReviewDetailImageCollectionViewCell else{return UICollectionViewCell()}
+        cell.cellHeight.constant = imageCollectionView.frame.height
+        if reviewPostModel.image_paths.count == 0{
+            cell.imageView.image = UIImage(named: "noimage")
+        }else{
+            cell.updatecollectionView(imagePath: reviewPostModel.image_paths[indexPath.row])
+        }
         return cell
     }
 }
@@ -129,7 +154,8 @@ extension ReviewDetailMainView:ReviewDetailMainTableViewCellDelegate{
 extension ReviewDetailMainView {
     func setDelegate(){
         tableView.dataSource = self
-        imageScrollView.delegate = self
+//        imageScrollView.delegate = self
+        imageCollectionView.dataSource = self
     }
     func commentGetModel(commentPostModels:[CommentPostModel]){
         self.commentPostModels = commentPostModels
@@ -140,6 +166,7 @@ extension ReviewDetailMainView {
     }
     func reviewGetModel(reviewPostModel:ReviewPostModel){
         self.reviewPostModel = reviewPostModel
+        
       
         if reviewPostModel.post_user_name == ""{
             userName.text = "メンバーがいません"
@@ -157,13 +184,14 @@ extension ReviewDetailMainView {
     
     func setLayout(){
         iconView.layer.cornerRadius = iconView.frame.width / 2
+        imageCollectionViewFlowLayout.estimatedItemSize = CGSize(width: 10, height: 10)
     }
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        if fmod(imageScrollView.contentOffset.x, imageScrollView.frame.maxX) == 0 {
-            pageControl.currentPage = Int(scrollView.contentOffset.x / imageScrollView.frame.maxX)
-        }
-    }
-    
+//    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+//        if fmod(imageScrollView.contentOffset.x, imageScrollView.frame.maxX) == 0 {
+//            pageControl.currentPage = Int(scrollView.contentOffset.x / imageScrollView.frame.maxX)
+//        }
+//    }
+//
     func updateGood() {
         if isGoodButtonTouched {
             let image = UIImage(named: "good")
