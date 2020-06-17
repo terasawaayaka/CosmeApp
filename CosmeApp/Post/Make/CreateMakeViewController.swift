@@ -103,9 +103,11 @@ extension CreateMakeViewController:HeaderViewDelegate {
         addLoadingView()
         
         MakePostModel.create(request: makePostModel, images: images) {
+            self.tabBarController?.selectedIndex = 0 //タブの切り替え
             let timeLineViewController = TimeLineViewController()
             self.navigationController?.pushViewController(timeLineViewController, animated: true)
             self.animatorManager.navigationType = .pop
+            
         }
     }
 }
