@@ -58,7 +58,7 @@
                 <outlet property="productLabel" destination="nEf-iF-bMe" id="wD3-LW-fCR"/>
                 <outlet property="yourPostImsge" destination="cIx-a1-Gb5" id="11K-Kg-xb8"/>
             </connections>
-            <point key="canvasLocation" x="148.55072463768118" y="42.522321428571423"/>
+            <point key="canvasLocation" x="148.55072463768118" y="41.852678571428569"/>
         </collectionViewCell>
     </objects>
 </document>
