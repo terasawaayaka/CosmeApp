@@ -8,26 +8,26 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="hjS-JS-ctv" customClass="ReportTableViewCell" customModule="CosmeApp" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="3Zq-U0-P6w" customClass="ReportTableViewSensitiveCell" customModule="CosmeApp" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
             <autoresizingMask key="autoresizingMask"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hjS-JS-ctv" id="xCT-e3-UMS">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3Zq-U0-P6w" id="Lkl-oQ-tLQ">
                 <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="内容がスパムである" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awp-0N-JYe">
-                        <rect key="frame" x="10" y="11.5" width="156" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="センシティブな画像または動画を表示している" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jSx-Gm-DqQ">
+                        <rect key="frame" x="20" y="11.5" width="364" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="awp-0N-JYe" firstAttribute="centerY" secondItem="xCT-e3-UMS" secondAttribute="centerY" id="fgJ-u7-iEo"/>
-                    <constraint firstItem="awp-0N-JYe" firstAttribute="leading" secondItem="xCT-e3-UMS" secondAttribute="leading" constant="10" id="we4-Rd-4Fg"/>
+                    <constraint firstItem="jSx-Gm-DqQ" firstAttribute="leading" secondItem="Lkl-oQ-tLQ" secondAttribute="leading" constant="20" id="3U5-Nt-i4L"/>
+                    <constraint firstItem="jSx-Gm-DqQ" firstAttribute="centerY" secondItem="Lkl-oQ-tLQ" secondAttribute="centerY" id="BgS-Oo-Fae"/>
                 </constraints>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="99" y="-28"/>
+            <point key="canvasLocation" x="68" y="71"/>
         </tableViewCell>
     </objects>
 </document>

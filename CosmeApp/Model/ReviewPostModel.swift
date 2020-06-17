@@ -26,6 +26,9 @@ class ReviewPostModel{
     var favorite_users:[[String: Bool]] = [[String: Bool]]()
     var isFavorite:Bool = false
     
+    var reportText: [String] = [String]()//通報の文章
+    var report_num: Int = Int()//通報の数
+    
     //ユーザーの情報
     var post_user_name: String = String()
     var post_user_id: String = String()
@@ -53,6 +56,8 @@ extension ReviewPostModel{
                 model.favorite_users.append([key:value])
             }
         }
+        if let reportText = data["reportText"]as? [String]{model.reportText = reportText }
+        if let report_num = data["report_num"]as? Int{model.report_num = report_num}
         return model
     }
     
@@ -67,6 +72,8 @@ extension ReviewPostModel{
         parameter["tag"] = request.tag
         parameter["image_paths"] = request.image_paths
         parameter["review_num"] = request.review_num
+        parameter["reportText"] = request.reportText
+        parameter["report_num"] = request.report_num
         return parameter
     }
     
@@ -129,12 +136,11 @@ extension ReviewPostModel{
 
 //MARK: -Update
 extension ReviewPostModel{
-    static func update(request:ReviewPostModel,images:[UIImage],success:@escaping() -> Void){
+    static func update(request:ReviewPostModel,images:[UIImage]?=nil,success:@escaping() -> Void){
             let id = request.id
             let dbRef = Database.database().reference().child(PATH).child(id)
         var parameter = setParameter(request: request)
-        uploadPhoto(photoName: request.id, image: images, success: { (downloadPaths) in
-            parameter["image_paths"] = downloadPaths
+        if images == nil {
             dbRef.updateChildValues(parameter){(error,dbRef)in
                 if error != nil{
                     print("updateエラー：",error)
@@ -142,9 +148,20 @@ extension ReviewPostModel{
                     success()
                 }
             }
-        })
-        {
-            print("updateエラー：")
+        }else {
+            uploadPhoto(photoName: request.id, image: images, success: { (downloadPaths) in
+                parameter["image_paths"] = downloadPaths
+                dbRef.updateChildValues(parameter){(error,dbRef)in
+                    if error != nil{
+                        print("updateエラー：",error)
+                    }else{
+                        success()
+                    }
+                }
+            })
+            {
+                print("updateエラー：")
+            }
         }
     }
     static func addGoodUser(request: ReviewPostModel,isGood: Bool) {

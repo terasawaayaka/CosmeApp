@@ -15,8 +15,13 @@ protocol YourProfileMainViewDelegate: NSObjectProtocol{
     func touchedGenreButton()
     func followButton()
     func blockButton()
+    func touchedFollowButton()
+    func touchedFollowerButton()
     
     func didSelectItemAt(indexPath: IndexPath)
+    func didSelectItemAtYourGenre(indexPath: IndexPath)
+    func didSelectItemAtSearchYourGenre(indexPath: IndexPath)
+    func secondDidSelectItemAt(indexPath: IndexPath)
 }
 extension YourProfileMainViewDelegate {
 }
@@ -33,6 +38,12 @@ class YourProfileMainView: BaseView {
     @IBOutlet weak var scrollMainView: YourScrollMainView!
     
     //Action
+    @IBAction func touchedFollowButton(_ sender: UIButton) {
+        if let delegate = delegate{delegate.touchedFollowButton()}
+    }
+    @IBAction func touchedFollowerButton(_ sender: UIButton) {
+        if let delegate = delegate{delegate.touchedFollowerButton()}
+    }
     @IBAction func touchedPostedButton(_ sender: UIButton) {
         if let delegate = delegate{delegate.touchedPostButton()}
     }
@@ -56,6 +67,7 @@ class YourProfileMainView: BaseView {
     var isBlockButtonTouched:Bool = false
     
     var reviewPostModels: [ReviewPostModel] = [ReviewPostModel]()
+    var makePostModels: [MakePostModel] = [MakePostModel]()
     var userModel: UserModel = UserModel()
 }
 // MARK: - Life cycle
@@ -72,28 +84,41 @@ extension YourProfileMainView {
 // MARK: - Protocol
 extension YourProfileMainView :UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return makePostModels.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "YourTodayCollectionViewCell", for: indexPath) as? YourTodayCollectionViewCell else {return UICollectionViewCell()}
+        cell.updateCell(makePostModel: makePostModels[indexPath.row])
         return cell
     }
     
 }
 extension YourProfileMainView :YourScrollMainViewDelegate {
+    func didSelectItemAtSearchYourGenre(indexPath: IndexPath) {
+        if let delegate = delegate{delegate.didSelectItemAtSearchYourGenre(indexPath: indexPath)}
+    }
+    
+    func didSelectItemAtYourGenre(indexPath: IndexPath) {
+        if let delegate = delegate{delegate.didSelectItemAtYourGenre(indexPath: indexPath)}
+    }
+    
     func didSelectItemAt(indexPath: IndexPath) {
         if let delegate = delegate {
             delegate.didSelectItemAt(indexPath: indexPath)
         }
     }
-    
-    
+}
+extension YourProfileMainView: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let delegate = delegate{delegate.secondDidSelectItemAt(indexPath: indexPath)}
+    }
 }
 // MARK: - method
 extension YourProfileMainView {
     func setDelegate() {
         yourTodayCollectionView.dataSource = self
+        yourTodayCollectionView.delegate = self
         scrollMainView.delegate = self
     }
     func getModel(userModel: UserModel) {
@@ -143,5 +168,9 @@ extension YourProfileMainView {
     
     func getModelforCell(filterdReviewPostModels: [ReviewPostModel],userModel: UserModel){
         scrollMainView.getModel(filterdReviewPostModels: reviewPostModels,userModel: userModel)
+    }
+    func getTodayModel(makePostModels: [MakePostModel]) {
+        self.makePostModels = makePostModels
+        yourTodayCollectionView.reloadData()
     }
 }

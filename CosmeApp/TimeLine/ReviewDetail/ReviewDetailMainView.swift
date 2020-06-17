@@ -18,6 +18,7 @@ protocol ReviewDetailMainViewDelegate: NSObjectProtocol{
     func goodButton(reviewPostModel: ReviewPostModel)
     func favoriteButton(reviewPostModel:ReviewPostModel)
     func deleteButton(commentPostModel:CommentPostModel)
+    func touchedReportButton()
 }
 extension ReviewDetailMainViewDelegate {
 }
@@ -81,6 +82,11 @@ class ReviewDetailMainView: BaseView, UIScrollViewDelegate {
         UIView.animate(withDuration: 0.5) {
             self.favoriteButton.transform = CGAffineTransform(rotationAngle: CGFloat.pi/180*180)
             self.favoriteButton.transform = CGAffineTransform(rotationAngle: CGFloat.pi/180*360)
+        }
+    }
+    @IBAction func touchedReportButton(_ sender: UIButton) {
+        if let delegate = delegate {
+            delegate.touchedReportButton()
         }
     }
     
@@ -193,6 +199,13 @@ extension ReviewDetailMainView {
 //    }
 //
     func updateGood() {
+        if let uid = Auth.auth().currentUser?.uid {
+            if reviewPostModel.post_user_id == uid {
+                goodButton.isHidden = true
+            } else {
+                goodButton.isHidden = false
+            }
+        }
         if isGoodButtonTouched {
             let image = UIImage(named: "good")
             goodButton.setImage(image, for: .normal)
@@ -202,6 +215,13 @@ extension ReviewDetailMainView {
         }
     }
     func updateFavorite() {
+        if let uid = Auth.auth().currentUser?.uid {
+                 if reviewPostModel.post_user_id == uid {
+                     favoriteButton.isHidden = true
+                 } else {
+                     favoriteButton.isHidden = false
+                 }
+             }
         if isFavoriteButtonTouched {
             let image = UIImage(named: "favorite")
             favoriteButton.setImage(image, for: .normal)
