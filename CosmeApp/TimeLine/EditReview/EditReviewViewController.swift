@@ -108,6 +108,7 @@ extension EditReviewViewController :HeaderViewDelegate{
             images.append(image)
         }
         
+        
         //星
         if mainView.isFifthStarSelected == true {
             reviewPostModel.review_num = 5

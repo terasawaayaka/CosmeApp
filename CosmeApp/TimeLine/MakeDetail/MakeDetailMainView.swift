@@ -57,6 +57,7 @@ extension MakeDetailMainView {
 // MARK: - method
 extension MakeDetailMainView {
     func setLayout(){
+        iconView.layer.masksToBounds = true
         iconView.layer.cornerRadius = iconView.frame.width / 2
         imageView.layer.cornerRadius = imageView.frame.height / 2
     }
