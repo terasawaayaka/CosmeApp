@@ -32,6 +32,7 @@ extension SearchViewController {
         super.viewWillAppear(animated)
         getModel()
         getReviewPostModel()
+
     }
 }
 // MARK: - Protocol
@@ -44,7 +45,7 @@ extension SearchViewController: SearchTextViewDelegate {
         mainView.tagResultView.isHidden = false
         mainView.userResultView.isHidden = true
         mainView.productNameResultView.isHidden = true
-     
+        
         mainView.getReviewPostModel(reviewPostModels: reviewPostModels,text: text)
         mainView.getModel(userModels: userModels,text: text)
     }
@@ -194,7 +195,7 @@ extension SearchViewController {
     }
     func getModel(){
         UserModel.reads { userModels in
-            self.mainView.getModel(userModels: userModels)
+            self.mainView.getModel(userModels: userModels,text: self.searchTextView.searchBar.text)
 //            for userModel in userModels {
 //            print("ユーザーネーム:", userModel.nickname)
 //            }
@@ -205,7 +206,7 @@ extension SearchViewController {
         ReviewPostModel.reads { (reviewPostModels) in
 //            for reviewPostModel in reviewPostModels {
 //                print("DESC: ",reviewPostModel.title) }
-            self.mainView.getReviewPostModel(reviewPostModels: reviewPostModels)
+            self.mainView.getReviewPostModel(reviewPostModels: reviewPostModels,text: self.searchTextView.searchBar.text)
             self.reviewPostModels = reviewPostModels
         }
     }
@@ -219,4 +220,15 @@ extension SearchViewController {
     @objc func hideKyeoboardTap(recognizer : UITapGestureRecognizer){
         self.view.endEditing(true)
     }
+//    func returnSearchVC(){
+//        mainView.searchCategoryButtonView.isHidden = false
+//        mainView.searchResultMainView.isHidden = true
+//        mainView.tagResultView.isHidden = true
+//        mainView.userResultView.isHidden = true
+//        mainView.productNameResultView.isHidden = false
+//
+//        if let text = searchTextView.searchBar.text {
+//            mainView.getReviewPostModel(reviewPostModels: reviewPostModels,text: text)
+//            mainView.getModel(userModels: userModels,text: text) }
+//    }
 }
