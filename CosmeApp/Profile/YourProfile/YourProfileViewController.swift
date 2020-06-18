@@ -276,9 +276,10 @@ extension YourProfileViewController :YourProfileMainViewDelegate{
                 self.mainView.scrollMainView.isHidden = false
                 self.mainView.followButton.isHidden = false
             }
-            
-            UserModel.addBlockUser(request: userModel, isBlock: isBlock)
-            UserModel.addBlockedUser(request: userModel, isBlock: isBlock)
+            //ブロックしたらblockUserのその人のidをtrueに、followUserのその人のidをfalseに（ブロックした相手のフォローを外す）
+            UserModel.addBlockUser(request: userModel, isBlock: isBlock, isFollow: isFollowd)
+            //ブロックされたらblockedUserのその人のidをtrueに、followUserのその人のidをfalseに（ブロックしてきた相手のフォローを外す）
+            UserModel.addBlockedUser(request: userModel, isBlock: isBlock, isFollow: isFollowd)
         }
 
     }
