@@ -30,6 +30,8 @@ class EditReviewViewController: BaseViewController {
     let items = ["ベースメイク", "シェーディング", "ハイライト", "チーク", "アイシャドウ","アイライン","マスカラ","カラコン","アイブロウ","リップ","ヘアケア","スキンケア","その他"]
     }
 
+    let loadingView: LoadingView = LoadingView()
+
 // MARK: - Life cycle
 extension EditReviewViewController {
     override func loadView() {
@@ -122,6 +124,7 @@ extension EditReviewViewController :HeaderViewDelegate{
             reviewPostModel.review_num = 1
         }
         
+        addLoadingView()
         
         ReviewPostModel.update(request: reviewPostModel, images: images) {
             self.dismiss(animated: true, completion: nil)
@@ -238,6 +241,15 @@ extension EditReviewViewController {
     func giveModel(){
         mainView.updateReview(reviewPostModel:reviewPostModel)
     }
+    
+    func addLoadingView() {
+        loadingView.frame = self.view.frame
+        self.view.addSubview(loadingView)
+    }
+    func removeLoadingView() {
+        loadingView.removeFromSuperview()
+    }
+    
 
 
     
