@@ -118,6 +118,7 @@ extension TimeLineMainTableViewSecondCell :UICollectionViewDataSource{
 // MARK: - method
 extension TimeLineMainTableViewSecondCell {
     func setLayout(){
+        iconView.layer.masksToBounds = true
         iconView.layer.cornerRadius = iconView.frame.width / 2
         imageCollectionViewFlowLayout.estimatedItemSize = CGSize(width: 10, height: 10)
     }
