@@ -76,6 +76,7 @@ extension YourProfileMainView {
         super.awakeFromNib()
         getModel(userModel: userModel)
         setDelegate()
+        setLayout()
         
         collectionViewFlowLayout.estimatedItemSize = CGSize(width: yourTodayCollectionView.frame.width, height: yourTodayCollectionView.frame.height)
         loadCollectionViewCellFromXib(collectionView: yourTodayCollectionView, cellName: "YourTodayCollectionViewCell")
@@ -116,6 +117,9 @@ extension YourProfileMainView: UICollectionViewDelegate {
 }
 // MARK: - method
 extension YourProfileMainView {
+    func setLayout() {
+        userIcon.layer.cornerRadius = userIcon.frame.width / 2
+    }
     func setDelegate() {
         yourTodayCollectionView.dataSource = self
         yourTodayCollectionView.delegate = self

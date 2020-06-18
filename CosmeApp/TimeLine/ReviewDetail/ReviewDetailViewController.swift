@@ -72,6 +72,9 @@ extension ReviewDetailViewController :HeaderViewDelegate{
         } else {
             animatorManager.navigationType = .slide_pop
         }
+//        let index = self.navigationController!.viewControllers.count - 1
+//        let vc: SearchViewController = self.navigationController?.viewControllers[index] as? SearchViewController ?? UIViewController() as! SearchViewController
+//        vc.returnSearchVC()
     }
     func touchedRightButton(_ sender: UIButton) {
         mainView.imageCollectionView.reloadData()
