@@ -265,7 +265,7 @@ extension UserModel {
             success(text)
         }
     }
-    static func addFollowUser(request: UserModel,isFollow: Bool) {
+    static func addFollowUser(request: UserModel,isFollow: Bool){
          if let uid = Auth.auth().currentUser?.uid {
             if let id = request.id {
                 let dbRef = Database.database().reference().child(PATH).child(uid).child("follow_users").child(id)
@@ -281,19 +281,23 @@ extension UserModel {
             }
         }
     }
-    static func addBlockUser(request: UserModel,isBlock: Bool) {
+    static func addBlockUser(request: UserModel,isBlock: Bool, isFollow: Bool) {
          if let uid = Auth.auth().currentUser?.uid {
             if let id = request.id {
-                let dbRef = Database.database().reference().child(PATH).child(uid).child("block_users").child(id)
-                dbRef.setValue(isBlock)
+                let blockDbRef = Database.database().reference().child(PATH).child(uid).child("block_users").child(id)
+                blockDbRef.setValue(isBlock)
+                let followDbRef = Database.database().reference().child(PATH).child(uid).child("follow_users").child(id)
+                followDbRef.setValue(isFollow)
             }
         }
     }
-    static func addBlockedUser(request: UserModel,isBlock: Bool) {
+    static func addBlockedUser(request: UserModel,isBlock: Bool, isFollow: Bool) {
          if let uid = Auth.auth().currentUser?.uid {
             if let id = request.id {
-                let dbRef = Database.database().reference().child(PATH).child(id).child("blocked_users").child(uid)
-                dbRef.setValue(isBlock)
+                let blockedDbRef = Database.database().reference().child(PATH).child(id).child("blocked_users").child(uid)
+                blockedDbRef.setValue(isBlock)
+                let followDbRef = Database.database().reference().child(PATH).child(id).child("follow_users").child(uid)
+                followDbRef.setValue(isFollow)
             }
         }
     }
