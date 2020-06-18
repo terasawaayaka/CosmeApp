@@ -34,13 +34,18 @@ class EditProfileMainView: BaseView {
 extension EditProfileMainView {
     override func awakeFromNib() {
         super.awakeFromNib()
+        setlayout()
     }
+
 }
 // MARK: - Protocol
 extension EditProfileMainView {
 }
 // MARK: - method
 extension EditProfileMainView {
+    func setlayout() {
+        iconView.layer.cornerRadius = iconView.frame.width / 2
+    }
     func updateUserName(userModel: UserModel) {
         editNameTextField.text = userModel.nickname
     }

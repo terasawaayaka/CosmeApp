@@ -68,6 +68,7 @@ extension MyProfileMainView {
     override func awakeFromNib() {
         super.awakeFromNib()
         setDelegate()
+        setLayout()
         
         collectionViewFlowlayout.estimatedItemSize = CGSize(width: todayCollectionView.frame.width, height: todayCollectionView.frame.height)
         loadCollectionViewCellFromXib(collectionView: todayCollectionView, cellName: "TodayCollectionViewCell")
@@ -114,6 +115,9 @@ extension MyProfileMainView:ScrollMainViewDelegate{
 }
 // MARK: - method
 extension MyProfileMainView {
+    func setLayout() {
+        iconView.layer.cornerRadius = iconView.frame.width / 2
+    }
     func setDelegate() {
         todayCollectionView.dataSource = self
         todayCollectionView.delegate = self
