@@ -9,21 +9,33 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MakeDetailMainView" customModule="CosmeApp" customModuleProvider="target">
             <connections>
+                <outlet property="baseHeight" destination="B3l-8a-0Jb" id="w0M-wE-XLL"/>
                 <outlet property="basemakeLabel" destination="7kF-LO-BlI" id="1dX-rX-kXB"/>
+                <outlet property="cheekHeight" destination="EOG-hf-IWd" id="K5j-lp-CeD"/>
                 <outlet property="cheekLabel" destination="W3j-QC-uZC" id="ujL-fK-z78"/>
+                <outlet property="colorconHeight" destination="0Du-TK-K2V" id="A12-kg-ruO"/>
                 <outlet property="colorcontactLabel" destination="xmU-c4-k41" id="kIZ-mR-4Tg"/>
+                <outlet property="eyeBrowHeight" destination="Wwx-Nv-5Vh" id="sYq-RA-tTy"/>
+                <outlet property="eyeLinerHeight" destination="vmw-SL-fi5" id="4p4-hG-g4a"/>
                 <outlet property="eyeblowLabel" destination="JF8-hB-nzG" id="bPi-qW-cW6"/>
                 <outlet property="eyelinerLabel" destination="djG-Go-pCb" id="3jK-AW-zDS"/>
+                <outlet property="eyeshadowHeight" destination="bTA-8M-6vO" id="qKn-qd-0dd"/>
                 <outlet property="eyeshadowLabel" destination="fg7-3i-gxc" id="uSb-o2-Pxi"/>
+                <outlet property="haircareHeight" destination="pAr-qH-1z8" id="RBi-uW-RdU"/>
                 <outlet property="haircareLabel" destination="wik-sZ-9eJ" id="wHj-Y8-UpA"/>
+                <outlet property="hiLightHeight" destination="oOu-sM-TeP" id="kqb-nZ-PgK"/>
                 <outlet property="highlightLabel" destination="oop-Cm-a4T" id="azq-Rd-ek7"/>
                 <outlet property="iconView" destination="T2i-hv-zaE" id="qFO-kb-2w5"/>
                 <outlet property="imageView" destination="XOj-hH-aZV" id="Fbd-0t-gMF"/>
+                <outlet property="lipHeight" destination="CC9-6k-UYw" id="utd-F2-kiK"/>
                 <outlet property="lipLabel" destination="E2M-vz-g07" id="OYk-gP-6AF"/>
                 <outlet property="makeImage" destination="ZyV-Pp-GCM" id="5mN-Ry-33d"/>
+                <outlet property="mascaraHeight" destination="Owx-gM-IzL" id="RKx-cD-P8E"/>
                 <outlet property="mascaraLabel" destination="BCO-hd-VVo" id="Abp-bX-Y7V"/>
                 <outlet property="processTextView" destination="bex-O9-HRR" id="fjl-n7-MqG"/>
+                <outlet property="shadingHeight" destination="7nH-6h-R5v" id="qrz-cs-Klj"/>
                 <outlet property="shadingLabel" destination="rhP-m7-zgq" id="5aU-1Z-wn2"/>
+                <outlet property="skincareHeight" destination="blW-MQ-w08" id="ONE-s2-Adb"/>
                 <outlet property="skincareLabel" destination="riX-Is-6e9" id="3CH-f1-7Nw"/>
                 <outlet property="userName" destination="FID-BF-EzM" id="Beb-C2-IpT"/>
             </connections>
@@ -80,72 +92,108 @@
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="マスカラ：" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BCO-hd-VVo">
                                             <rect key="frame" x="30" y="722" width="354" height="20.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20.5" id="Owx-gM-IzL"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="758" text="ハイライト：" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oop-Cm-a4T">
                                             <rect key="frame" x="30" y="608" width="354" height="20.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20.5" id="oOu-sM-TeP"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="759" text="アイブロウ：" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JF8-hB-nzG">
                                             <rect key="frame" x="30" y="779" width="354" height="20.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20.5" id="Wwx-Nv-5Vh"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="758" text="リップ：" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E2M-vz-g07">
                                             <rect key="frame" x="30" y="807.5" width="354" height="20.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20.5" id="CC9-6k-UYw"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="754" text="スキンケア：" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="riX-Is-6e9">
                                             <rect key="frame" x="30" y="864.5" width="354" height="20.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20.5" id="blW-MQ-w08"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="753" text="ヘアケア：" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wik-sZ-9eJ">
                                             <rect key="frame" x="30" y="836" width="354" height="20.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20.5" id="pAr-qH-1z8"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="755" text="チーク：" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W3j-QC-uZC">
                                             <rect key="frame" x="30" y="636.5" width="354" height="20.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20.5" id="EOG-hf-IWd"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="シェーディング：" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rhP-m7-zgq">
                                             <rect key="frame" x="30" y="579.5" width="354" height="20.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20.5" id="7nH-6h-R5v"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="756" text="アイシャドウ：" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fg7-3i-gxc">
                                             <rect key="frame" x="30" y="665" width="354" height="20.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20.5" id="bTA-8M-6vO"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="757" text="カラコン：" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xmU-c4-k41">
                                             <rect key="frame" x="30" y="750.5" width="354" height="20.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20.5" id="0Du-TK-K2V"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="755" text="ベースメイク：" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7kF-LO-BlI">
                                             <rect key="frame" x="30" y="551" width="354" height="20.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20.5" id="B3l-8a-0Jb"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="アイライン：" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djG-Go-pCb">
                                             <rect key="frame" x="30" y="693.5" width="354" height="20.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20.5" id="vmw-SL-fi5"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
