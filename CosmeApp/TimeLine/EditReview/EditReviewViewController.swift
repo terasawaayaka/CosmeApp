@@ -133,6 +133,22 @@ extension EditReviewViewController :HeaderViewDelegate{
 }
 
 extension EditReviewViewController:EditReviewMainViewDelegate{
+    func firstDeleteButton() {
+        mainView.firstImageView.image = UIImage(named: "")
+    }
+    
+    func secondDeleteButton() {
+        mainView.secondImageView.image = UIImage(named: "")
+    }
+    
+    func thirdDeleteButton() {
+        mainView.thirdImageView.image = UIImage(named: "")
+    }
+    
+    func fourthDeleteButton() {
+        mainView.fourthImageView.image = UIImage(named: "")
+    }
+    
     func firstStarButton() {
         mainView.isFirstStarSelected = !mainView.isFirstStarSelected
         mainView.isSecondStarSelected = false

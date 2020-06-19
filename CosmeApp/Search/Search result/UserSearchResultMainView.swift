@@ -60,8 +60,6 @@ extension UserSearchResultMainView {
             if let text = text {
                 if let name = userModel.nickname {
                     return name.contains(text)
-                    
-                    
                 } else {
                     return false
                 }
@@ -69,13 +67,13 @@ extension UserSearchResultMainView {
                 return false
             }
         }
-            //            if userModel.nickname == text {
-            //                return true
-            //            }else {
-            //                return false
-            //            }
-            //        }
-        self.userModels = filterdUserModels
+        if filterdUserModels.count != 0 {
+            print("検索結果がある")
+            self.userModels = filterdUserModels
+        } else {
+            print("検索結果がない")
+            self.userModels = userModels
+        }
         userTableView.reloadData()
     }
 }
