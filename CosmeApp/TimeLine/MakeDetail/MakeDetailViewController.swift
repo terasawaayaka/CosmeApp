@@ -123,6 +123,7 @@ extension MakeDetailViewController {
         mainView.basemakeLabel.text = "ベースメイク：" + makePostModel.basemake
         if makePostModel.basemake != "" {
             mainView.basemakeLabel.isHidden = false
+            mainView.baseHeight.constant = 20.5
         } else {
             mainView.basemakeLabel.isHidden = true
             mainView.baseHeight.constant = 0
@@ -130,6 +131,7 @@ extension MakeDetailViewController {
         mainView.shadingLabel.text = "シェーディング：" + makePostModel.shading
         if makePostModel.shading != ""{
             mainView.shadingLabel.isHidden = false
+            mainView.shadingHeight.constant = 20.5
         } else {
             mainView.shadingLabel.isHidden = true
             mainView.shadingHeight.constant = 0
@@ -137,6 +139,7 @@ extension MakeDetailViewController {
         mainView.highlightLabel.text = "ハイライト：" + makePostModel.highlight
         if makePostModel.highlight != ""{
             mainView.highlightLabel.isHidden = false
+            mainView.hiLightHeight.constant = 20.5
         } else {
             mainView.highlightLabel.isHidden = true
             mainView.hiLightHeight.constant = 0
@@ -144,6 +147,7 @@ extension MakeDetailViewController {
         mainView.cheekLabel.text = "チーク：" + makePostModel.cheek
         if makePostModel.cheek != ""{
             mainView.cheekLabel.isHidden = false
+            mainView.cheekHeight.constant = 20.5
         } else {
             mainView.cheekLabel.isHidden = true
             mainView.cheekHeight.constant = 0
@@ -151,6 +155,7 @@ extension MakeDetailViewController {
         mainView.eyeshadowLabel.text = "アイシャドウ：" + makePostModel.eyeshadow
         if makePostModel.eyeshadow != ""{
             mainView.eyeshadowLabel.isHidden = false
+            mainView.eyeshadowHeight.constant = 20.5
         } else {
             mainView.eyeshadowLabel.isHidden = true
             mainView.eyeshadowHeight.constant = 0
@@ -158,6 +163,7 @@ extension MakeDetailViewController {
         mainView.eyelinerLabel.text = "アイライン：" + makePostModel.eyeliner
         if makePostModel.eyeliner != ""{
             mainView.eyelinerLabel.isHidden = false
+            mainView.eyeLinerHeight.constant = 20.5
         } else {
             mainView.eyelinerLabel.isHidden = true
             mainView.eyeLinerHeight.constant = 0
@@ -165,6 +171,7 @@ extension MakeDetailViewController {
         mainView.mascaraLabel.text = "マスカラ：" + makePostModel.mascara
         if makePostModel.mascara != ""{
             mainView.mascaraLabel.isHidden = false
+            mainView.mascaraHeight.constant = 20.5
         } else {
             mainView.mascaraLabel.isHidden = true
             mainView.mascaraHeight.constant = 0
@@ -172,6 +179,7 @@ extension MakeDetailViewController {
         mainView.colorcontactLabel.text = "カラコン：" + makePostModel.colorcontact
         if makePostModel.colorcontact != ""{
             mainView.colorcontactLabel.isHidden = false
+            mainView.colorconHeight.constant = 20.5
         } else {
             mainView.colorcontactLabel.isHidden = true
             mainView.colorconHeight.constant = 0
@@ -179,6 +187,7 @@ extension MakeDetailViewController {
         mainView.eyeblowLabel.text = "アイブロウ：" + makePostModel.eyebrow
         if makePostModel.eyebrow != ""{
             mainView.eyeblowLabel.isHidden = false
+            mainView.eyeBrowHeight.constant = 20.5
         } else {
             mainView.eyeblowLabel.isHidden = true
             mainView.eyeBrowHeight.constant = 0
@@ -186,6 +195,7 @@ extension MakeDetailViewController {
         mainView.lipLabel.text = "リップ：" + makePostModel.lip
         if makePostModel.lip != ""{
             mainView.lipLabel.isHidden = false
+            mainView.lipHeight.constant = 20.5
         } else {
             mainView.lipLabel.isHidden = true
             mainView.lipHeight.constant = 0
@@ -193,6 +203,7 @@ extension MakeDetailViewController {
         mainView.haircareLabel.text = "ヘアケア：" + makePostModel.haircare
         if makePostModel.haircare != "" {
             mainView.haircareLabel.isHidden = false
+            mainView.haircareHeight.constant = 20.5
         } else {
             mainView.haircareLabel.isHidden = true
             mainView.haircareHeight.constant = 0
@@ -200,6 +211,7 @@ extension MakeDetailViewController {
         mainView.skincareLabel.text = "スキンケア：" + makePostModel.skincare
         if makePostModel.skincare != "" {
             mainView.skincareLabel.isHidden = false
+            mainView.skincareHeight.constant = 20.5
         } else {
             mainView.skincareLabel.isHidden = true
             mainView.skincareHeight.constant = 0
