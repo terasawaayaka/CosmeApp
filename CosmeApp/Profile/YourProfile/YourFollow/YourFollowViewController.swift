@@ -41,6 +41,7 @@ extension YourFollowViewController :YourFollowMainViewDelegate{
     func didSelectRowAt(indexPath: IndexPath) {
         let yourProfileViewController = YourProfileViewController()
         yourProfileViewController.userModel = userModels[indexPath.row]
+        yourProfileViewController.fromfollow = true
         navigationController?.pushViewController(yourProfileViewController, animated: true)
         animatorManager.navigationType = .slide_push
     }
