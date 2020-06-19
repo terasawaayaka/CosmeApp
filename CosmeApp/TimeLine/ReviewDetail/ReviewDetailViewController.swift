@@ -86,7 +86,10 @@ extension ReviewDetailViewController :HeaderViewDelegate{
 }
 
 extension ReviewDetailViewController:ReviewDetailMainViewDelegate {
+    
     func touchedReportButton() {
+        mainView.updateReport()
+        
         let reportViewController = ReportViewController()
         reportViewController.reviewPostModel = reviewPostModel
         navigationController?.pushViewController(reportViewController, animated: true)

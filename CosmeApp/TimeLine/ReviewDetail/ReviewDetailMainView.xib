@@ -27,6 +27,7 @@
                 <outlet property="tagLabel" destination="QEw-QU-ABq" id="OXj-oA-f62"/>
                 <outlet property="thirdStarImage" destination="jTs-4n-7ak" id="gTO-9d-gsl"/>
                 <outlet property="titleLabel" destination="5I7-1k-RaQ" id="Zj8-cn-BMb"/>
+                <outlet property="touchedReportButton" destination="Xi5-Oj-kRI" id="P2s-LB-R7g"/>
                 <outlet property="userName" destination="sND-vf-aqR" id="05K-gE-csU"/>
             </connections>
         </placeholder>

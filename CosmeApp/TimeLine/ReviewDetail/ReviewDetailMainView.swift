@@ -62,6 +62,9 @@ class ReviewDetailMainView: BaseView, UIScrollViewDelegate, UICollectionViewDele
     @IBOutlet weak var goodButton: UIButton!
     @IBOutlet weak var favoriteButton: UIButton!
     
+    @IBOutlet weak var touchedReportButton: UIButton!
+    
+    
     //button
     @IBAction func iconViewButton(_ sender: UIButton) {
         if let delegate = delegate {delegate.iconViewButton(reviewPostModel: reviewPostModel)}
@@ -188,6 +191,7 @@ extension ReviewDetailMainView {
         }
         updateGood()
         updateFavorite()
+        updateReport()
     }
     
     func setLayout(){
@@ -232,6 +236,15 @@ extension ReviewDetailMainView {
         } else {
             let image = UIImage(named: "notfavorite")
             favoriteButton.setImage(image, for: .normal)
+        }
+    }
+    func updateReport() {
+        if let uid = Auth.auth().currentUser?.uid {
+            if reviewPostModel.post_user_id == uid {
+                touchedReportButton.isHidden = true
+            } else {
+                touchedReportButton.isHidden = false
+            }
         }
     }
 }
