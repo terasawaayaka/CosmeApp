@@ -181,6 +181,7 @@ extension ReviewDetailViewController:ReviewDetailMainViewDelegate {
             self.mainView.commentTextField.endEditing(true)
             self.mainView.commentTextField.text = ""
             self.mainView.tableHeight.constant = CGFloat(self.mainView.tableView.contentSize.height)
+            self.mainView.tableView.reloadData()
         }
         
     }
@@ -219,9 +220,9 @@ extension ReviewDetailViewController:ReviewDetailMainViewDelegate {
 extension ReviewDetailViewController {
     func setHeaderView(){
         if fromProfile {
-            headerView.setLeft(text: "閉じる", fontSize: 16, color: #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1))
+            headerView.setLeft(text: "閉じる", fontSize: 16, color: #colorLiteral(red: 0.7404877639, green: 0.7449720201, blue: 1, alpha: 1))
         } else {
-            headerView.setLeft(text: "＜", fontSize: 16, color: #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1))
+            headerView.setLeft(text: "＜", fontSize: 16, color: #colorLiteral(red: 0.7404877639, green: 0.7449720201, blue: 1, alpha: 1))
         }
         headerView.setCenter(text: "レビュー詳細", fontSize: 20, color: #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1))
         if let uid = Auth.auth().currentUser?.uid {
@@ -367,58 +368,7 @@ extension ReviewDetailViewController {
             mainView.firstStarImage.image = UIImage(named: "checkedStar")
         }
         
-        //画像
-//        switch reviewPostModel.image_paths.count {
-//        case 0:
-//            mainView.firstImageView.image = UIImage(named: "noimage.png")
-//            mainView.secondImageView.image = UIImage(named: "noimage.png")
-//            mainView.thirdImageView.image = UIImage(named: "noimage.png")
-//            mainView.fourthImageView.image = UIImage(named: "noimage.png")
-//
-//        case 1:
-//            if let url = URL(string: reviewPostModel.image_paths[0]){
-//                mainView.firstImageView.af_setImage(withURL: url)
-//            }
-//            mainView.secondImageView.image = UIImage(named: "noimage.png")
-//            mainView.thirdImageView.image = UIImage(named: "noimage.png")
-//            mainView.fourthImageView.image = UIImage(named: "noimage.png")
-//        case 2:
-//            if let url = URL(string: reviewPostModel.image_paths[0]){
-//                mainView.firstImageView.af_setImage(withURL: url)
-//            }
-//            if let url = URL(string: reviewPostModel.image_paths[1]){
-//                mainView.secondImageView.af_setImage(withURL: url)
-//            }
-//            mainView.thirdImageView.image = UIImage(named: "noimage.png")
-//            mainView.fourthImageView.image = UIImage(named: "noimage.png")
-//        case 3:
-//            if let url = URL(string: reviewPostModel.image_paths[0]){
-//                mainView.firstImageView.af_setImage(withURL: url)
-//            }
-//            if let url = URL(string: reviewPostModel.image_paths[1]){
-//                mainView.secondImageView.af_setImage(withURL: url)
-//            }
-//            if let url = URL(string: reviewPostModel.image_paths[2]){
-//                mainView.thirdImageView.af_setImage(withURL: url)
-//            }
-//            mainView.fourthImageView.image = UIImage(named: "noimage.png")
-//
-//        case 4:
-//            if let url = URL(string: reviewPostModel.image_paths[0]){
-//                mainView.firstImageView.af_setImage(withURL: url)
-//            }
-//            if let url = URL(string: reviewPostModel.image_paths[1]){
-//                mainView.secondImageView.af_setImage(withURL: url)
-//            }
-//            if let url = URL(string: reviewPostModel.image_paths[2]){
-//                mainView.thirdImageView.af_setImage(withURL: url)
-//            }
-//            if let url = URL(string: reviewPostModel.image_paths[3]){
-//                mainView.fourthImageView.af_setImage(withURL: url)
-//            }
-//        default:
-//            break
-//        }
+        //ユーザー情報
         if reviewPostModel.post_user_name == ""{
             mainView.userName.text = "メンバーがいません"
         }else{

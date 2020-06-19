@@ -47,11 +47,8 @@
                                             </constraints>
                                         </imageView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ubv-ui-Xyk">
-                                            <rect key="frame" x="164.5" y="391" width="85" height="30"/>
+                                            <rect key="frame" x="103.5" y="391" width="207" height="30"/>
                                             <color key="backgroundColor" red="1" green="0.62309132349999996" blue="0.78946096139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="85" id="DcL-90-H42"/>
-                                            </constraints>
                                             <state key="normal" title="写真を変更">
                                                 <color key="titleColor" red="0.99040381629999996" green="0.96976935239999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
@@ -265,11 +262,8 @@
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                         <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4of-wu-c7I">
-                                            <rect key="frame" x="157" y="960" width="100" height="30"/>
+                                            <rect key="frame" x="103.5" y="960" width="207" height="30"/>
                                             <color key="backgroundColor" red="0.74048776390000004" green="0.74497202009999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="100" id="fu4-6y-o1H"/>
-                                            </constraints>
                                             <state key="normal" title="投稿を削除">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
@@ -281,6 +275,7 @@
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     <constraints>
                                         <constraint firstItem="Ebh-19-eBy" firstAttribute="top" secondItem="M5c-Is-hTv" secondAttribute="bottom" constant="70" id="0PL-F7-Fgw"/>
+                                        <constraint firstItem="4of-wu-c7I" firstAttribute="width" secondItem="8xY-cO-qpg" secondAttribute="width" multiplier="0.5" id="0fs-kl-40P"/>
                                         <constraint firstItem="ANx-M8-pi7" firstAttribute="leading" secondItem="8xY-cO-qpg" secondAttribute="leading" constant="30" id="18q-SP-GgH"/>
                                         <constraint firstAttribute="trailing" secondItem="014-CM-MQ4" secondAttribute="trailing" constant="30" id="2rh-ct-Ll0"/>
                                         <constraint firstItem="4fx-II-Xbw" firstAttribute="top" secondItem="UqL-mJ-Hef" secondAttribute="bottom" constant="8" id="3oG-uD-Y2y"/>
@@ -296,6 +291,7 @@
                                         <constraint firstItem="jP5-sS-fyn" firstAttribute="top" secondItem="J44-M4-lOP" secondAttribute="bottom" constant="8" id="7kU-Ul-8YR"/>
                                         <constraint firstItem="3zx-Ne-ai0" firstAttribute="leading" secondItem="8xY-cO-qpg" secondAttribute="leading" constant="30" id="85t-ZO-cwf"/>
                                         <constraint firstAttribute="trailing" secondItem="dqb-cO-aNY" secondAttribute="trailing" constant="30" id="8ZZ-Yi-QLs"/>
+                                        <constraint firstItem="Ubv-ui-Xyk" firstAttribute="width" secondItem="8xY-cO-qpg" secondAttribute="width" multiplier="0.5" id="8gK-oJ-aVE"/>
                                         <constraint firstItem="M5c-Is-hTv" firstAttribute="width" secondItem="8xY-cO-qpg" secondAttribute="width" multiplier="0.8" id="8mJ-dK-fLh"/>
                                         <constraint firstItem="jP5-sS-fyn" firstAttribute="leading" secondItem="8xY-cO-qpg" secondAttribute="leading" constant="30" id="8tz-ws-ZJX"/>
                                         <constraint firstItem="J44-M4-lOP" firstAttribute="top" secondItem="IUe-OZ-FUM" secondAttribute="bottom" constant="8" id="CQQ-MK-etL"/>

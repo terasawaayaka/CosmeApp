@@ -112,7 +112,9 @@
                                                 <constraint firstAttribute="width" constant="207" id="AUe-N0-YG3"/>
                                                 <constraint firstAttribute="height" constant="60" id="bqj-oh-n2E"/>
                                             </constraints>
-                                            <state key="normal" title="投稿"/>
+                                            <state key="normal" title="投稿">
+                                                <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
                                             <connections>
                                                 <action selector="touchedPostedButton:" destination="-1" eventType="touchUpInside" id="UfD-FT-Ggi"/>
                                             </connections>
@@ -123,7 +125,9 @@
                                                 <constraint firstAttribute="height" constant="60" id="joa-HV-8Go"/>
                                                 <constraint firstAttribute="width" constant="207" id="tAY-zY-F49"/>
                                             </constraints>
-                                            <state key="normal" title="ジャンル"/>
+                                            <state key="normal" title="ジャンル">
+                                                <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
                                             <connections>
                                                 <action selector="touchedGenreButton:" destination="-1" eventType="touchUpInside" id="E6w-nR-tWY"/>
                                             </connections>
@@ -135,7 +139,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NM2-8z-MtT">
-                                            <rect key="frame" x="168" y="100" width="108" height="30"/>
+                                            <rect key="frame" x="167" y="100" width="92" height="30"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <state key="normal" title="フォローする">
                                                 <color key="titleColor" red="1" green="0.62309132349999996" blue="0.78946096139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -145,7 +149,7 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbv-FZ-hk4">
-                                            <rect key="frame" x="286" y="100" width="108" height="30"/>
+                                            <rect key="frame" x="269" y="100" width="92" height="30"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <state key="normal" title="ブロックする">
                                                 <color key="titleColor" red="0.54293201769999999" green="0.61783960120000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
