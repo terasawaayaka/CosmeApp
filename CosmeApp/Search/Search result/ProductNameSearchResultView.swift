@@ -68,7 +68,13 @@ extension ProductNameSearchResultView {
             }
         }
 
-        self.reviewPostModels = filterdReviewPostModels
+        if filterdReviewPostModels.count != 0 {
+            print("検索結果がある")
+            self.reviewPostModels = filterdReviewPostModels
+        } else {
+            print("検索結果がない")
+            self.reviewPostModels = reviewPostModels
+        }
         productNameCollectionView.reloadData()
     }
 }
