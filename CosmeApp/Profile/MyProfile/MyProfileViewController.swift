@@ -33,7 +33,7 @@ extension MyProfileViewController {
         super.loadView()
         setDelegate()
         setHeaderView()
-        
+        mainView.secondScrollBar.isHidden = true
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -314,12 +314,17 @@ extension MyProfileViewController :MyProfileMainViewDelegate{
     func touchedBookMarkButton() {
         let secondPoint = CGPoint(x: 0, y: 0)
         mainView.scrollMainView.scrollView.setContentOffset(secondPoint, animated: true)
+        mainView.scrollBar.isHidden = false
+        mainView.secondScrollBar.isHidden = true
     }
     
     func touchedGenreButton() {
         let thirdPoint = CGPoint(x: mainView.frame.width , y: 0)
         mainView.scrollMainView.scrollView.setContentOffset(thirdPoint, animated: true)
         mainView.scrollMainView.genreCollectionView.isHidden = false
+        
+        mainView.scrollBar.isHidden = true
+        mainView.secondScrollBar.isHidden = false
     }
 }
 

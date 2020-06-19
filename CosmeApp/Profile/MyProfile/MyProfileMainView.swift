@@ -28,6 +28,8 @@ extension MyProfileMainViewDelegate {
 class MyProfileMainView: BaseView {
     weak var delegate: MyProfileMainViewDelegate? = nil
     //Outlet
+    @IBOutlet weak var scrollBar: UILabel!
+    @IBOutlet weak var secondScrollBar: UILabel!
     @IBOutlet weak var followCount: UILabel!
     @IBOutlet weak var followerCount: UILabel!
     @IBOutlet weak var iconView: UIImageView!
