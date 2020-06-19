@@ -72,8 +72,12 @@ extension ReviewDetailViewController :HeaderViewDelegate{
         } else {
             animatorManager.navigationType = .slide_pop
         }
+//        let index = self.navigationController!.viewControllers.count - 1
+//        let vc: SearchViewController = self.navigationController?.viewControllers[index] as? SearchViewController ?? UIViewController() as! SearchViewController
+//        vc.returnSearchVC()
     }
     func touchedRightButton(_ sender: UIButton) {
+        mainView.imageCollectionView.reloadData()
         let editReviewViewController = EditReviewViewController()
         editReviewViewController.reviewPostModel = reviewPostModel
         editReviewViewController.modalPresentationStyle = .fullScreen
@@ -126,10 +130,10 @@ extension ReviewDetailViewController:ReviewDetailMainViewDelegate {
                 navigationController?.pushViewController(myProfileViewController, animated: true)
                 animatorManager.navigationType = .slide_push
             }else{
-                let yourPlofileViewController = YourProfileViewController()
-                yourPlofileViewController.reviewPostModel = reviewPostModel
-                yourPlofileViewController.fromPost = true
-                navigationController?.pushViewController(yourPlofileViewController, animated: true)
+                let yourProfileViewController = YourProfileViewController()
+                yourProfileViewController.reviewPostModel = reviewPostModel
+                yourProfileViewController.fromPost = true
+                navigationController?.pushViewController(yourProfileViewController, animated: true)
                 animatorManager.navigationType = .slide_push
             }
         }
@@ -143,10 +147,10 @@ extension ReviewDetailViewController:ReviewDetailMainViewDelegate {
                 navigationController?.pushViewController(myProfileViewController, animated: true)
                 animatorManager.navigationType = .slide_push
             }else{
-                let yourPlofileViewController = YourProfileViewController()
-                yourPlofileViewController.commentPostModel = commentPostModel
-                yourPlofileViewController.fromPost = true
-                navigationController?.pushViewController(yourPlofileViewController, animated: true)
+                let yourProfileViewController = YourProfileViewController()
+                yourProfileViewController.commentPostModel = commentPostModel
+                yourProfileViewController.fromPost = true
+                navigationController?.pushViewController(yourProfileViewController, animated: true)
                 animatorManager.navigationType = .slide_push
             }
         }
@@ -222,6 +226,11 @@ extension ReviewDetailViewController {
         headerView.setCenter(text: "レビュー詳細", fontSize: 20, color: #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1))
         if let uid = Auth.auth().currentUser?.uid {
             if reviewPostModel.post_user_id == uid {
+                headerView.setRight(text: "編集", fontSize: 18, color: #colorLiteral(red: 1, green: 0.6230913235, blue: 0.7894609614, alpha: 1))
+            }
+        }
+        if let uid = Auth.auth().currentUser?.uid {
+            if noticeModel.notice_my_id == uid {
                 headerView.setRight(text: "編集", fontSize: 18, color: #colorLiteral(red: 1, green: 0.6230913235, blue: 0.7894609614, alpha: 1))
             }
         }

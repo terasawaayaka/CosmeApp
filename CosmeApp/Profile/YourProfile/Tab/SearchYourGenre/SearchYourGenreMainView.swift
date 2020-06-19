@@ -18,6 +18,7 @@ class SearchYourGenreMainView: BaseView {
     weak var delegate: SearchYourGenreMainViewDelegate? = nil
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
+    @IBOutlet weak var textLabel: UILabel!
     
     var makePostModels: [MakePostModel] = [MakePostModel]()
 }
@@ -58,5 +59,11 @@ extension SearchYourGenreMainView {
     func getModel(makePostModels: [MakePostModel]) {
         self.makePostModels = makePostModels
         collectionView.reloadData()
+        
+        if makePostModels.count == 0 {
+            textLabel.text = "投稿がありません"
+        } else {
+            textLabel.text = ""
+        }
     }
 }

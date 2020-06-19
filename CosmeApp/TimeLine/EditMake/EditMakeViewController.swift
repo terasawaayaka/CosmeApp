@@ -16,6 +16,7 @@ class EditMakeViewController: BaseViewController {
     @IBOutlet weak var mainViewBottomMergin: NSLayoutConstraint!
     
     var makePostModel : MakePostModel = MakePostModel()
+    let loadingView: LoadingView = LoadingView()
 }
 // MARK: - Life cycle
 extension EditMakeViewController {
@@ -90,6 +91,8 @@ extension EditMakeViewController :HeaderViewDelegate{
         if let image = mainView.makeImage.image{
             images.append(image)
         }
+        
+        addLoadingView()
         MakePostModel.update(request: makePostModel, images: images) {
             self.dismiss(animated: true, completion: nil)
         }
@@ -123,6 +126,14 @@ extension EditMakeViewController {
     }
     func makeGiveModel(){
         mainView.updateMake(makePostModel:makePostModel)
+    }
+    
+    func addLoadingView() {
+        loadingView.frame = self.view.frame
+        self.view.addSubview(loadingView)
+    }
+    func removeLoadingView() {
+        loadingView.removeFromSuperview()
     }
     
     

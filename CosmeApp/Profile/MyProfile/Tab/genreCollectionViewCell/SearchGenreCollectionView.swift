@@ -20,6 +20,7 @@ class SearchGenreCollectionView: BaseView {
     //Outlet
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
+    @IBOutlet weak var textLabel: UILabel!
     
     //data
     var makePostModels: [MakePostModel] = [MakePostModel]()
@@ -63,5 +64,11 @@ extension SearchGenreCollectionView {
     func getModel(makePostModels: [MakePostModel]) {
         self.makePostModels = makePostModels
         collectionView.reloadData()
+        
+        if makePostModels.count == 0 {
+            textLabel.text = "投稿がありません"
+        } else {
+            textLabel.text = ""
+        }
     }
 }

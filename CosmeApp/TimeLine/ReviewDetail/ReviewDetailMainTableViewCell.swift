@@ -49,6 +49,7 @@ extension ReviewDetailMainTableViewCell {
 // MARK: - method
 extension ReviewDetailMainTableViewCell {
     func setLayout(){
+        iconView.layer.masksToBounds = true
         iconView.layer.cornerRadius = iconView.frame.width / 2
     }
     func updateCell(commentPostModel:CommentPostModel){

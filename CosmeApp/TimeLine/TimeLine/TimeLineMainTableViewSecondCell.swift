@@ -19,7 +19,7 @@ protocol TimeLineMainTableViewSecondCellDelegate: NSObjectProtocol{
 extension TimeLineMainTableViewSecondCellDelegate {
 }
 // MARK: - Property
-class TimeLineMainTableViewSecondCell: BaseTableViewCell, UIScrollViewDelegate {
+class TimeLineMainTableViewSecondCell: BaseTableViewCell, UIScrollViewDelegate, UICollectionViewDelegate {
     weak var delegate: TimeLineMainTableViewSecondCellDelegate? = nil
     
     var reviewPostModel : ReviewPostModel = ReviewPostModel()
@@ -48,7 +48,6 @@ class TimeLineMainTableViewSecondCell: BaseTableViewCell, UIScrollViewDelegate {
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var iconView: UIButton!
     
-    @IBOutlet weak var imageScrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
     
     //Button
@@ -88,7 +87,7 @@ extension TimeLineMainTableViewSecondCell {
         super.awakeFromNib()
         setLayout()
         setDelegate()
-//        scrollViewDidEndDecelerating(imageScrollView)
+        scrollViewDidEndDecelerating(imageCollectionView)
         
         loadCollectionViewCellFromXib(collectionView: imageCollectionView, cellName: "TimeLineImageCollectionViewCell")
         
@@ -119,21 +118,26 @@ extension TimeLineMainTableViewSecondCell :UICollectionViewDataSource{
 // MARK: - method
 extension TimeLineMainTableViewSecondCell {
     func setLayout(){
+        iconView.layer.masksToBounds = true
         iconView.layer.cornerRadius = iconView.frame.width / 2
         imageCollectionViewFlowLayout.estimatedItemSize = CGSize(width: 10, height: 10)
     }
     func setDelegate(){
-        //imageScrollView.delegate = self
+        imageCollectionView.delegate = self
         imageCollectionView.dataSource = self
     }
+
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-    if fmod(imageScrollView.contentOffset.x, imageScrollView.frame.maxX) == 0 {
-        pageControl.currentPage = Int(scrollView.contentOffset.x / imageScrollView.frame.maxX)
+    if fmod(imageCollectionView.contentOffset.x, imageCollectionView.frame.maxX) == 0 {
+        pageControl.currentPage = Int(scrollView.contentOffset.x / imageCollectionView.frame.maxX)
         }
     }
     func updateCell(reviewPostModel:ReviewPostModel){
         self.reviewPostModel = reviewPostModel
         imageCollectionView.reloadData()
+        
+        //pageControlの数
+        pageControl.numberOfPages = reviewPostModel.image_paths.count
         
         //text
         productLabel.text = "商品名：　" + reviewPostModel.title
@@ -166,59 +170,7 @@ extension TimeLineMainTableViewSecondCell {
             firstStarImage.image = UIImage(named: "checkedStar")
         }
        
-        //画像
-//        switch reviewPostModel.image_paths.count {
-//        case 0:
-//            firstImageView.image = UIImage(named: "noimage.png")
-//            secondImageView.image = UIImage(named: "noimage.png")
-//            thirdImageView.image = UIImage(named: "noimage.png")
-//            fourthImageView.image = UIImage(named: "noimage.png")
-//
-//        case 1:
-//            if let url = URL(string: reviewPostModel.image_paths[0]){
-//                firstImageView.af_setImage(withURL: url)
-//            }
-//            secondImageView.image = UIImage(named: "noimage.png")
-//            thirdImageView.image = UIImage(named: "noimage.png")
-//            fourthImageView.image = UIImage(named: "noimage.png")
-//        case 2:
-//            if let url = URL(string: reviewPostModel.image_paths[0]){
-//                firstImageView.af_setImage(withURL: url)
-//            }
-//            if let url = URL(string: reviewPostModel.image_paths[1]){
-//                secondImageView.af_setImage(withURL: url)
-//            }
-//            thirdImageView.image = UIImage(named: "noimage.png")
-//            fourthImageView.image = UIImage(named: "noimage.png")
-//        case 3:
-//            if let url = URL(string: reviewPostModel.image_paths[0]){
-//                firstImageView.af_setImage(withURL: url)
-//            }
-//            if let url = URL(string: reviewPostModel.image_paths[1]){
-//                secondImageView.af_setImage(withURL: url)
-//            }
-//            if let url = URL(string: reviewPostModel.image_paths[2]){
-//                thirdImageView.af_setImage(withURL: url)
-//            }
-//            fourthImageView.image = UIImage(named: "noimage.png")
-//
-//        case 4:
-//            if let url = URL(string: reviewPostModel.image_paths[0]){
-//                firstImageView.af_setImage(withURL: url)
-//            }
-//            if let url = URL(string: reviewPostModel.image_paths[1]){
-//                secondImageView.af_setImage(withURL: url)
-//            }
-//            if let url = URL(string: reviewPostModel.image_paths[2]){
-//                thirdImageView.af_setImage(withURL: url)
-//            }
-//            if let url = URL(string: reviewPostModel.image_paths[3]){
-//                fourthImageView.af_setImage(withURL: url)
-//            }
-//        default:
-//            break
-//        }
-//
+        //user
         if reviewPostModel.post_user_name == ""{
             userName.text = "メンバーがいません"
         }else{
@@ -230,6 +182,7 @@ extension TimeLineMainTableViewSecondCell {
             }
         }
         
+        //good
         if let uid = Auth.auth().currentUser?.uid {
             if reviewPostModel.post_user_id == uid {
                 goodButton.isHidden = true
@@ -237,6 +190,7 @@ extension TimeLineMainTableViewSecondCell {
                 goodButton.isHidden = false
             }
         }
+        //favorite
         if let uid = Auth.auth().currentUser?.uid {
             if reviewPostModel.post_user_id == uid {
                 favoriteButton.isHidden = true
