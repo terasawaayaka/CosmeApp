@@ -11,6 +11,7 @@
             <connections>
                 <outlet property="makeImageView" destination="gOg-7v-9zF" id="Ipf-Jy-IKf"/>
                 <outlet property="reviewImageView" destination="iKT-eX-aOh" id="PRD-4P-4JD"/>
+                <outlet property="ribbonView" destination="D5t-RC-DwH" id="Aez-fA-c7W"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -155,7 +156,7 @@
         </view>
     </objects>
     <resources>
-        <image name="Image" width="360" height="360"/>
+        <image name="Image" width="256" height="256"/>
         <image name="brush" width="256" height="256"/>
         <image name="diamond" width="256" height="256"/>
         <image name="fondation" width="256" height="256"/>
