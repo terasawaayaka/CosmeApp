@@ -67,6 +67,16 @@
                                                 <action selector="secondAddButton:" destination="-1" eventType="touchUpInside" id="Dtv-G1-aa9"/>
                                             </connections>
                                         </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jx5-VJ-2q0">
+                                            <rect key="frame" x="310.5" y="227" width="103.5" height="30"/>
+                                            <color key="backgroundColor" red="0.86463886440000004" green="0.96760103959999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <state key="normal" title="削除">
+                                                <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="secondDeleteButton:" destination="-1" eventType="touchUpInside" id="enB-Mb-P35"/>
+                                            </connections>
+                                        </button>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1g2-E3-7fb">
                                             <rect key="frame" x="0.0" y="257" width="207" height="207"/>
                                             <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -237,11 +247,8 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mt4-2G-0EQ">
-                                            <rect key="frame" x="157" y="1082" width="100" height="30"/>
+                                            <rect key="frame" x="103.5" y="1082" width="207" height="30"/>
                                             <color key="backgroundColor" red="0.74048776390000004" green="0.74497202009999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="100" id="Tx6-Pc-mEQ"/>
-                                            </constraints>
                                             <state key="normal" title="投稿を削除">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
@@ -249,21 +256,57 @@
                                                 <action selector="postDeleteButton:" destination="-1" eventType="touchUpInside" id="lsP-0A-DVj"/>
                                             </connections>
                                         </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEP-DB-JDZ">
+                                            <rect key="frame" x="0.0" y="227" width="103.5" height="30"/>
+                                            <color key="backgroundColor" red="1" green="0.95143340730000003" blue="0.99422200599999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <state key="normal" title="削除">
+                                                <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="firstDeleteButton:" destination="-1" eventType="touchUpInside" id="uWd-Ss-8b2"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rg5-41-hBJ">
+                                            <rect key="frame" x="310.5" y="434" width="103.5" height="30"/>
+                                            <color key="backgroundColor" red="1" green="0.95143340730000003" blue="0.99422200599999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <state key="normal" title="削除">
+                                                <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="fourthDeleteButton:" destination="-1" eventType="touchUpInside" id="R0Z-zu-Ur7"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fw3-Oh-SoN">
+                                            <rect key="frame" x="0.0" y="434" width="103.5" height="30"/>
+                                            <color key="backgroundColor" red="0.86463886440000004" green="0.96760103959999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <state key="normal" title="削除">
+                                                <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="thirdDeleteButton:" destination="-1" eventType="touchUpInside" id="Igj-lq-wqi"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     <constraints>
+                                        <constraint firstItem="dEP-DB-JDZ" firstAttribute="bottom" secondItem="Qm8-8Q-cYF" secondAttribute="bottom" id="0Hx-Mj-Qvy"/>
+                                        <constraint firstItem="Fw3-Oh-SoN" firstAttribute="bottom" secondItem="1g2-E3-7fb" secondAttribute="bottom" id="1dP-NN-M24"/>
                                         <constraint firstItem="goe-O2-0xR" firstAttribute="top" secondItem="1g2-E3-7fb" secondAttribute="bottom" constant="10" id="1hK-9H-Ytp"/>
                                         <constraint firstAttribute="trailing" secondItem="74c-wL-fzF" secondAttribute="trailing" id="3MY-7l-XQT"/>
+                                        <constraint firstItem="dEP-DB-JDZ" firstAttribute="width" secondItem="3aY-ir-3Z6" secondAttribute="width" multiplier="0.5" id="4Ic-CO-Gwf"/>
                                         <constraint firstItem="0Va-iO-eAi" firstAttribute="top" secondItem="nmV-Pb-dRU" secondAttribute="bottom" id="5Zo-WR-XV2"/>
                                         <constraint firstItem="UfL-gS-Sb8" firstAttribute="top" secondItem="cAt-Ic-Be5" secondAttribute="bottom" constant="15" id="6PD-ve-t42"/>
                                         <constraint firstItem="xBs-kL-eO7" firstAttribute="top" secondItem="02e-hF-5A1" secondAttribute="bottom" constant="15" id="7La-kr-c25"/>
                                         <constraint firstItem="DvM-a1-0tQ" firstAttribute="top" secondItem="xBs-kL-eO7" secondAttribute="bottom" constant="19" id="7dO-K6-xaL"/>
+                                        <constraint firstItem="dEP-DB-JDZ" firstAttribute="leading" secondItem="3aY-ir-3Z6" secondAttribute="leading" id="9tz-g7-4qc"/>
                                         <constraint firstItem="Qm8-8Q-cYF" firstAttribute="top" secondItem="HDi-DS-6P3" secondAttribute="top" constant="50" id="ANB-1I-dgF"/>
+                                        <constraint firstItem="Jx5-VJ-2q0" firstAttribute="trailing" secondItem="nmV-Pb-dRU" secondAttribute="trailing" id="APV-cg-R2S"/>
                                         <constraint firstItem="72D-bc-X0j" firstAttribute="leading" secondItem="9Il-FL-Nve" secondAttribute="trailing" constant="2" id="C33-Qg-I7n"/>
                                         <constraint firstItem="rHn-7h-A5z" firstAttribute="top" secondItem="erY-qp-fSB" secondAttribute="bottom" constant="10" id="CUA-az-xtG"/>
                                         <constraint firstItem="9Il-FL-Nve" firstAttribute="top" secondItem="1g2-E3-7fb" secondAttribute="bottom" constant="10" id="ChG-G5-ydP"/>
                                         <constraint firstItem="xBs-kL-eO7" firstAttribute="leading" secondItem="HDi-DS-6P3" secondAttribute="leading" constant="20" id="Dc8-02-lQS"/>
                                         <constraint firstItem="Dlk-9d-5fX" firstAttribute="top" secondItem="Qa3-Ll-p8t" secondAttribute="bottom" constant="10" id="Dd2-Ox-TAH"/>
+                                        <constraint firstItem="Fw3-Oh-SoN" firstAttribute="width" secondItem="1g2-E3-7fb" secondAttribute="width" multiplier="0.5" id="EDW-YM-7wm"/>
                                         <constraint firstItem="02e-hF-5A1" firstAttribute="top" secondItem="1g2-E3-7fb" secondAttribute="bottom" constant="70" id="F7a-fb-ZnA"/>
                                         <constraint firstItem="uKU-QL-0mZ" firstAttribute="top" secondItem="t4M-T6-Nc1" secondAttribute="bottom" constant="10" id="FWn-8v-cWo"/>
                                         <constraint firstItem="cAt-Ic-Be5" firstAttribute="leading" secondItem="02e-hF-5A1" secondAttribute="trailing" constant="5" id="Fl4-Qp-WZI"/>
@@ -271,6 +314,7 @@
                                         <constraint firstItem="UfL-gS-Sb8" firstAttribute="leading" secondItem="xBs-kL-eO7" secondAttribute="trailing" constant="5" id="Hln-tb-TTv"/>
                                         <constraint firstItem="rdT-Hk-qKA" firstAttribute="top" secondItem="Qm8-8Q-cYF" secondAttribute="bottom" id="HxO-Rn-XLu"/>
                                         <constraint firstItem="t4M-T6-Nc1" firstAttribute="leading" secondItem="HDi-DS-6P3" secondAttribute="leading" constant="20" id="IZN-CO-d2T"/>
+                                        <constraint firstItem="Fw3-Oh-SoN" firstAttribute="leading" secondItem="1g2-E3-7fb" secondAttribute="leading" id="LWl-fZ-uRB"/>
                                         <constraint firstAttribute="trailing" secondItem="uKU-QL-0mZ" secondAttribute="trailing" constant="30" id="Lgj-op-AAP"/>
                                         <constraint firstItem="mt4-2G-0EQ" firstAttribute="centerX" secondItem="HDi-DS-6P3" secondAttribute="centerX" id="Lof-st-s5y"/>
                                         <constraint firstItem="cAt-Ic-Be5" firstAttribute="top" secondItem="1g2-E3-7fb" secondAttribute="bottom" constant="65" id="Lpu-UF-FSs"/>
@@ -282,6 +326,7 @@
                                         <constraint firstItem="1g2-E3-7fb" firstAttribute="width" secondItem="nmV-Pb-dRU" secondAttribute="width" id="P95-cR-IXF"/>
                                         <constraint firstItem="mt4-2G-0EQ" firstAttribute="top" secondItem="rHn-7h-A5z" secondAttribute="bottom" constant="30" id="S6N-Yy-Onu"/>
                                         <constraint firstAttribute="trailing" secondItem="rHn-7h-A5z" secondAttribute="trailing" constant="30" id="Syt-lt-ac1"/>
+                                        <constraint firstItem="rg5-41-hBJ" firstAttribute="bottom" secondItem="Qa3-Ll-p8t" secondAttribute="bottom" id="Tuj-LQ-YTF"/>
                                         <constraint firstItem="Qm8-8Q-cYF" firstAttribute="leading" secondItem="HDi-DS-6P3" secondAttribute="leading" id="U02-FQ-noD"/>
                                         <constraint firstAttribute="trailing" secondItem="0Va-iO-eAi" secondAttribute="trailing" id="UT0-JJ-xK1"/>
                                         <constraint firstItem="0Va-iO-eAi" firstAttribute="width" secondItem="Qa3-Ll-p8t" secondAttribute="width" id="V3Q-vi-fr8"/>
@@ -298,18 +343,23 @@
                                         <constraint firstItem="t4M-T6-Nc1" firstAttribute="top" secondItem="DvM-a1-0tQ" secondAttribute="bottom" constant="5" id="dr7-bK-8wy"/>
                                         <constraint firstItem="3aY-ir-3Z6" firstAttribute="top" secondItem="HDi-DS-6P3" secondAttribute="top" constant="50" id="fCc-xm-F1P"/>
                                         <constraint firstItem="rdT-Hk-qKA" firstAttribute="width" secondItem="0Va-iO-eAi" secondAttribute="width" id="hDJ-ov-hN3"/>
+                                        <constraint firstItem="Jx5-VJ-2q0" firstAttribute="bottom" secondItem="nmV-Pb-dRU" secondAttribute="bottom" id="hgq-lV-cUr"/>
+                                        <constraint firstItem="Jx5-VJ-2q0" firstAttribute="width" secondItem="nmV-Pb-dRU" secondAttribute="width" multiplier="0.5" id="jnz-Os-zea"/>
                                         <constraint firstItem="Dlk-9d-5fX" firstAttribute="leading" secondItem="72D-bc-X0j" secondAttribute="trailing" constant="2" id="kdA-T9-rJC"/>
                                         <constraint firstItem="nmV-Pb-dRU" firstAttribute="width" secondItem="Qm8-8Q-cYF" secondAttribute="width" id="lgS-zg-bqB"/>
                                         <constraint firstItem="uKU-QL-0mZ" firstAttribute="leading" secondItem="HDi-DS-6P3" secondAttribute="leading" constant="30" id="llR-GH-R4Y"/>
                                         <constraint firstItem="rHn-7h-A5z" firstAttribute="leading" secondItem="HDi-DS-6P3" secondAttribute="leading" constant="30" id="nWg-tC-daU"/>
                                         <constraint firstAttribute="trailing" secondItem="nmV-Pb-dRU" secondAttribute="trailing" id="npl-F3-RjY"/>
                                         <constraint firstItem="9Il-FL-Nve" firstAttribute="leading" secondItem="gyg-S2-ZFe" secondAttribute="trailing" constant="2" id="oh4-ca-Irn"/>
+                                        <constraint firstItem="mt4-2G-0EQ" firstAttribute="width" secondItem="HDi-DS-6P3" secondAttribute="width" multiplier="0.5" id="oxj-Qr-KGP"/>
                                         <constraint firstItem="gyg-S2-ZFe" firstAttribute="top" secondItem="1g2-E3-7fb" secondAttribute="bottom" constant="10" id="pal-l4-z48"/>
                                         <constraint firstItem="74c-wL-fzF" firstAttribute="top" secondItem="HDi-DS-6P3" secondAttribute="top" constant="50" id="q8O-ot-dMe"/>
                                         <constraint firstItem="1g2-E3-7fb" firstAttribute="width" secondItem="1g2-E3-7fb" secondAttribute="height" multiplier="1:1" id="ryS-8X-j2R"/>
                                         <constraint firstItem="erY-qp-fSB" firstAttribute="leading" secondItem="HDi-DS-6P3" secondAttribute="leading" constant="20" id="u9d-7G-kC0"/>
+                                        <constraint firstItem="rg5-41-hBJ" firstAttribute="width" secondItem="Qa3-Ll-p8t" secondAttribute="width" multiplier="0.5" id="uNj-y1-RhJ"/>
                                         <constraint firstItem="Qa3-Ll-p8t" firstAttribute="width" secondItem="Qa3-Ll-p8t" secondAttribute="height" multiplier="1:1" id="uwy-ac-oYd"/>
                                         <constraint firstItem="74c-wL-fzF" firstAttribute="width" secondItem="Qa3-Ll-p8t" secondAttribute="width" id="xsJ-xp-aq9"/>
+                                        <constraint firstItem="rg5-41-hBJ" firstAttribute="trailing" secondItem="Qa3-Ll-p8t" secondAttribute="trailing" id="yPR-Fb-LFq"/>
                                         <constraint firstItem="72D-bc-X0j" firstAttribute="top" secondItem="1g2-E3-7fb" secondAttribute="bottom" constant="10" id="zmd-tP-gek"/>
                                     </constraints>
                                 </view>

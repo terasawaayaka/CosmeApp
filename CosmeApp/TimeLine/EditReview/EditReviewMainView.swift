@@ -20,6 +20,10 @@ protocol EditReviewMainViewDelegate: NSObjectProtocol{
     func thirdStarButton()
     func fourthStarButton()
     func fifthStarButton()
+    func firstDeleteButton()
+    func secondDeleteButton()
+    func thirdDeleteButton()
+    func fourthDeleteButton()
     
 }
 
@@ -74,10 +78,11 @@ class EditReviewMainView: BaseView {
     @IBOutlet weak var reviewTextField: UITextView!
     @IBOutlet weak var tagTextField: UITextView!
     
-    //button
+    //投稿削除ボタン
     @IBAction func postDeleteButton(_ sender: UIButton) {
         if let delegate = delegate {delegate.postDeleteButton()}
     }
+    //写真追加ボタン
     @IBAction func firstAddButton(_ sender: UIButton) {
         if let delegate = delegate {delegate.firstAddButton()}
     }
@@ -89,6 +94,19 @@ class EditReviewMainView: BaseView {
     }
     @IBAction func fourthAddButton(_ sender: UIButton) {
         if let delegate = delegate {delegate.fourthAddButton()}
+    }
+    //写真削除ボタン
+    @IBAction func firstDeleteButton(_ sender: UIButton) {
+        if let delegate = delegate{delegate.firstDeleteButton()}
+    }
+    @IBAction func secondDeleteButton(_ sender: UIButton) {
+        if let delegate = delegate{delegate.secondDeleteButton()}
+    }
+    @IBAction func thirdDeleteButton(_ sender: UIButton) {
+        if let delegate = delegate{delegate.thirdDeleteButton()}
+    }
+    @IBAction func fourthDeleteButton(_ sender: UIButton) {
+        if let delegate = delegate{delegate.fourthDeleteButton()}
     }
 }
 // MARK: - Life cycle
