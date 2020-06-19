@@ -50,6 +50,16 @@ extension MyProfileViewController {
 }
 // MARK: - Protocol
 extension MyProfileViewController :MyProfileMainViewDelegate{
+    func didEndScroll(scrollView: UIScrollView) {
+        if scrollView.contentOffset == CGPoint(x: 0, y: 0) {
+            mainView.scrollBar.isHidden = false
+            mainView.secondScrollBar.isHidden = true
+        }else {
+            mainView.scrollBar.isHidden = true
+            mainView.secondScrollBar.isHidden = false
+        }
+    }
+    
     func didSelectItemAtBookmark(indexPath: IndexPath) {
         let reviewDetailViewController = ReviewDetailViewController()
         reviewDetailViewController.reviewPostModel = reviewPostModels[indexPath.row]

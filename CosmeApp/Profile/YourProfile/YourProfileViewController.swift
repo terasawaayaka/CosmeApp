@@ -37,6 +37,7 @@ extension YourProfileViewController {
         super.loadView()
         setDelegate()
         setHeaderView()
+        mainView.secondScrollBar.isHidden = true
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,6 +55,16 @@ extension YourProfileViewController {
 }
 // MARK: - Protocol
 extension YourProfileViewController :YourProfileMainViewDelegate{
+    func didEndYourScroll(scrollView: UIScrollView) {
+        if scrollView.contentOffset == CGPoint(x: 0, y: 0) {
+            mainView.scrollBar.isHidden = false
+            mainView.secondScrollBar.isHidden = true
+        }else {
+            mainView.scrollBar.isHidden = true
+            mainView.secondScrollBar.isHidden = false
+        }
+    }
+    
     func touchedFollowButton() {
         let yourFollowViewController = YourFollowViewController()
         navigationController?.pushViewController(yourFollowViewController, animated: true)
@@ -294,12 +305,17 @@ extension YourProfileViewController :YourProfileMainViewDelegate{
     func touchedPostButton() {
         let firstPosint = CGPoint(x: 0, y: 0)
         mainView.scrollMainView.scrollView.setContentOffset(firstPosint, animated: true)
+        mainView.scrollBar.isHidden = false
+        mainView.secondScrollBar.isHidden = true
     }
     
     func touchedGenreButton() {
         let secondPoint = CGPoint(x: mainView.frame.width, y: 0)
         mainView.scrollMainView.scrollView.setContentOffset(secondPoint, animated: true)
         mainView.scrollMainView.yourGenreMainView.isHidden = false
+        
+        mainView.scrollBar.isHidden = true
+        mainView.secondScrollBar.isHidden = false
     }
     func followButton() {
         mainView.isFollowButtonTouched = !mainView.isFollowButtonTouched
