@@ -22,6 +22,7 @@ protocol YourProfileMainViewDelegate: NSObjectProtocol{
     func didSelectItemAtYourGenre(indexPath: IndexPath)
     func didSelectItemAtSearchYourGenre(indexPath: IndexPath)
     func secondDidSelectItemAt(indexPath: IndexPath)
+    func didEndYourScroll(scrollView: UIScrollView)
 }
 extension YourProfileMainViewDelegate {
 }
@@ -34,9 +35,9 @@ class YourProfileMainView: BaseView {
     @IBOutlet weak var userText: UILabel!
     @IBOutlet weak var yourTodayCollectionView: UICollectionView!
     @IBOutlet weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
-    
     @IBOutlet weak var scrollMainView: YourScrollMainView!
-    
+    @IBOutlet weak var scrollBar: UILabel!
+    @IBOutlet weak var secondScrollBar: UILabel!
     //Action
     @IBAction func touchedFollowButton(_ sender: UIButton) {
         if let delegate = delegate{delegate.touchedFollowButton()}
@@ -96,6 +97,10 @@ extension YourProfileMainView :UICollectionViewDataSource{
     
 }
 extension YourProfileMainView :YourScrollMainViewDelegate {
+    func didEndYourScroll(scrollView: UIScrollView) {
+        delegate?.didEndYourScroll(scrollView: scrollView)
+    }
+    
     func didSelectItemAtSearchYourGenre(indexPath: IndexPath) {
         if let delegate = delegate{delegate.didSelectItemAtSearchYourGenre(indexPath: indexPath)}
     }
@@ -115,6 +120,8 @@ extension YourProfileMainView: UICollectionViewDelegate {
         if let delegate = delegate{delegate.secondDidSelectItemAt(indexPath: indexPath)}
     }
 }
+
+    
 // MARK: - method
 extension YourProfileMainView {
     func setLayout() {
