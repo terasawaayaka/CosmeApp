@@ -219,19 +219,19 @@ extension ReviewDetailViewController:ReviewDetailMainViewDelegate {
 extension ReviewDetailViewController {
     func setHeaderView(){
         if fromProfile {
-            headerView.setLeft(text: "閉じる", fontSize: 18, color: #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1))
+            headerView.setLeft(text: "閉じる", fontSize: 16, color: #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1))
         } else {
-            headerView.setLeft(text: "＜", fontSize: 18, color: #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1))
+            headerView.setLeft(text: "＜", fontSize: 16, color: #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1))
         }
         headerView.setCenter(text: "レビュー詳細", fontSize: 20, color: #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1))
         if let uid = Auth.auth().currentUser?.uid {
             if reviewPostModel.post_user_id == uid {
-                headerView.setRight(text: "編集", fontSize: 18, color: #colorLiteral(red: 1, green: 0.6230913235, blue: 0.7894609614, alpha: 1))
+                headerView.setRight(text: "編集", fontSize: 16, color: #colorLiteral(red: 1, green: 0.6230913235, blue: 0.7894609614, alpha: 1))
             }
         }
         if let uid = Auth.auth().currentUser?.uid {
             if noticeModel.notice_my_id == uid {
-                headerView.setRight(text: "編集", fontSize: 18, color: #colorLiteral(red: 1, green: 0.6230913235, blue: 0.7894609614, alpha: 1))
+                headerView.setRight(text: "編集", fontSize: 16, color: #colorLiteral(red: 1, green: 0.6230913235, blue: 0.7894609614, alpha: 1))
             }
         }
     }
