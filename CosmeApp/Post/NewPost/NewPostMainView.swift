@@ -21,6 +21,7 @@ class NewPostMainView: BaseView {
     @IBOutlet weak var reviewImageView: UIView!
     @IBOutlet weak var makeImageView: UIView!
     
+    @IBOutlet weak var ribbonView: UIImageView!
     @IBAction func touchedReviewButton(_ sender: UIButton) {
         if let delegate = delegate {
             delegate.touchedReviewButton()
@@ -38,6 +39,8 @@ extension NewPostMainView {
     override func awakeFromNib() {
         super.awakeFromNib()
         setLayout()
+        let angle = 30 * CGFloat.pi / 180 // Viewを30度回転
+        ribbonView.transform = CGAffineTransform(rotationAngle: CGFloat(angle))
     }
 }
 // MARK: - Protocol
