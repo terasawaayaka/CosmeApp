@@ -23,6 +23,23 @@ class MakeDetailMainView: BaseView {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var iconView: UIButton!
+    
+    //ラベルの高さ
+  
+    @IBOutlet weak var mascaraHeight: NSLayoutConstraint!
+    @IBOutlet weak var hiLightHeight: NSLayoutConstraint!
+    @IBOutlet weak var eyeBrowHeight: NSLayoutConstraint!
+    @IBOutlet weak var lipHeight: NSLayoutConstraint!
+    @IBOutlet weak var skincareHeight: NSLayoutConstraint!
+    @IBOutlet weak var haircareHeight: NSLayoutConstraint!
+    @IBOutlet weak var cheekHeight: NSLayoutConstraint!
+    @IBOutlet weak var shadingHeight: NSLayoutConstraint!
+    @IBOutlet weak var eyeshadowHeight: NSLayoutConstraint!
+    @IBOutlet weak var colorconHeight: NSLayoutConstraint!
+    @IBOutlet weak var baseHeight: NSLayoutConstraint!
+    @IBOutlet weak var eyeLinerHeight: NSLayoutConstraint!
+    
+    
     @IBAction func iconViewButton(_ sender: UIButton) {
         if let delegate = delegate {delegate.iconViewButton(makePostModel: makePostModel)
         }

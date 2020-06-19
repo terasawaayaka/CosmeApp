@@ -30,6 +30,8 @@ class EditReviewViewController: BaseViewController {
     let items = ["ベースメイク", "シェーディング", "ハイライト", "チーク", "アイシャドウ","アイライン","マスカラ","カラコン","アイブロウ","リップ","ヘアケア","スキンケア","その他"]
     }
 
+    let loadingView: LoadingView = LoadingView()
+
 // MARK: - Life cycle
 extension EditReviewViewController {
     override func loadView() {
@@ -122,6 +124,7 @@ extension EditReviewViewController :HeaderViewDelegate{
             reviewPostModel.review_num = 1
         }
         
+        addLoadingView()
         
         ReviewPostModel.update(request: reviewPostModel, images: images) {
             self.dismiss(animated: true, completion: nil)
@@ -130,6 +133,22 @@ extension EditReviewViewController :HeaderViewDelegate{
 }
 
 extension EditReviewViewController:EditReviewMainViewDelegate{
+    func firstDeleteButton() {
+        mainView.firstImageView.image = UIImage(named: "")
+    }
+    
+    func secondDeleteButton() {
+        mainView.secondImageView.image = UIImage(named: "")
+    }
+    
+    func thirdDeleteButton() {
+        mainView.thirdImageView.image = UIImage(named: "")
+    }
+    
+    func fourthDeleteButton() {
+        mainView.fourthImageView.image = UIImage(named: "")
+    }
+    
     func firstStarButton() {
         mainView.isFirstStarSelected = !mainView.isFirstStarSelected
         mainView.isSecondStarSelected = false
@@ -225,9 +244,9 @@ extension EditReviewViewController:UIPickerViewDelegate{
 // MARK: - method
 extension EditReviewViewController {
     func setHeaderView(){
-        headerView.setLeft(text: "キャンセル", fontSize: 18, color: #colorLiteral(red: 0.7404877639, green: 0.7449720201, blue: 1, alpha: 1))
+        headerView.setLeft(text: "キャンセル", fontSize: 16, color: #colorLiteral(red: 0.7404877639, green: 0.7449720201, blue: 1, alpha: 1))
         headerView.setCenter(text: "レビュー編集", fontSize: 20, color: #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1))
-        headerView.setRight(text: "完了", fontSize: 18, color: #colorLiteral(red: 1, green: 0.6230913235, blue: 0.7894609614, alpha: 1))
+        headerView.setRight(text: "完了", fontSize: 16, color: #colorLiteral(red: 1, green: 0.6230913235, blue: 0.7894609614, alpha: 1))
     }
     func setDelegate(){
         headerView.delegate = self
@@ -238,6 +257,15 @@ extension EditReviewViewController {
     func giveModel(){
         mainView.updateReview(reviewPostModel:reviewPostModel)
     }
+    
+    func addLoadingView() {
+        loadingView.frame = self.view.frame
+        self.view.addSubview(loadingView)
+    }
+    func removeLoadingView() {
+        loadingView.removeFromSuperview()
+    }
+    
 
 
     

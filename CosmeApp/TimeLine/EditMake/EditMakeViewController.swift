@@ -16,6 +16,7 @@ class EditMakeViewController: BaseViewController {
     @IBOutlet weak var mainViewBottomMergin: NSLayoutConstraint!
     
     var makePostModel : MakePostModel = MakePostModel()
+    let loadingView: LoadingView = LoadingView()
 }
 // MARK: - Life cycle
 extension EditMakeViewController {
@@ -90,6 +91,8 @@ extension EditMakeViewController :HeaderViewDelegate{
         if let image = mainView.makeImage.image{
             images.append(image)
         }
+        
+        addLoadingView()
         MakePostModel.update(request: makePostModel, images: images) {
             self.dismiss(animated: true, completion: nil)
         }
@@ -113,9 +116,9 @@ extension EditMakeViewController:EditMakeMainViewDelegate{
 // MARK: - method
 extension EditMakeViewController {
     func setHeaderView(){
-        headerView.setLeft(text: "キャンセル", fontSize: 18, color: #colorLiteral(red: 0.7404877639, green: 0.7449720201, blue: 1, alpha: 1))
+        headerView.setLeft(text: "キャンセル", fontSize: 16, color: #colorLiteral(red: 0.7404877639, green: 0.7449720201, blue: 1, alpha: 1))
         headerView.setCenter(text: "メイク編集", fontSize: 20, color: #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1))
-        headerView.setRight(text: "完了", fontSize: 18, color: #colorLiteral(red: 1, green: 0.6230913235, blue: 0.7894609614, alpha: 1))
+        headerView.setRight(text: "完了", fontSize: 16, color: #colorLiteral(red: 1, green: 0.6230913235, blue: 0.7894609614, alpha: 1))
     }
     func setDelegate(){
         headerView.delegate = self
@@ -123,6 +126,14 @@ extension EditMakeViewController {
     }
     func makeGiveModel(){
         mainView.updateMake(makePostModel:makePostModel)
+    }
+    
+    func addLoadingView() {
+        loadingView.frame = self.view.frame
+        self.view.addSubview(loadingView)
+    }
+    func removeLoadingView() {
+        loadingView.removeFromSuperview()
     }
     
     
