@@ -46,7 +46,9 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZj-bJ-06y">
                     <rect key="frame" x="191" y="552" width="123" height="30"/>
-                    <state key="normal" title="ログインはこちら"/>
+                    <state key="normal" title="ログインはこちら">
+                        <color key="titleColor" red="1" green="0.088543030649999993" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
                     <connections>
                         <action selector="touchedSignInButton:" destination="-1" eventType="touchUpInside" id="aiK-He-BcX"/>
                     </connections>

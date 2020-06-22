@@ -75,7 +75,7 @@ extension ReportViewController: HeaderViewDelegate {
 // MARK: - method
 extension ReportViewController {
     func setHeaderView(){
-        headerView.setLeft(text: "キャンセル", fontSize:16 , color: #colorLiteral(red: 0.8397446066, green: 0.3103108182, blue: 0.5394304367, alpha: 1))
+        headerView.setLeft(text: "キャンセル", fontSize:16 , color: #colorLiteral(red: 0.6392156863, green: 0.3450980392, blue: 1, alpha: 1))
     }
     func setDelegate(){
         mainView.delegate = self
