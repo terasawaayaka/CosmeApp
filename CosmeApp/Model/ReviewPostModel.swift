@@ -149,6 +149,7 @@ extension ReviewPostModel{
                 }
             }
         }else {
+            
             uploadPhoto(photoName: request.id, image: images, success: { (downloadPaths) in
                 parameter["image_paths"] = downloadPaths
                 dbRef.updateChildValues(parameter){(error,dbRef)in
