@@ -76,7 +76,7 @@ extension  CategorySearchViewController:  CategorySearchMainViewDelegate {
 // MARK: - method
 extension CategorySearchViewController {
     func setHeaderView(){
-        headerView.setLeft(text: "検索画面へ戻る", fontSize: 16, color: #colorLiteral(red: 0.7116513325, green: 0.1774580224, blue: 0.3965806173, alpha: 1))
+        headerView.setLeft(text: "検索画面へ戻る", fontSize: 16, color: #colorLiteral(red: 0.6392156863, green: 0.3450980392, blue: 1, alpha: 1))
     }
     func setDelegate(){
         headerView.delegate = self

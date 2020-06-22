@@ -65,7 +65,7 @@ extension FollowViewController {
         if follower {
             headerView.setCenter(text: "フォロワーリスト", fontSize: 20, color: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))
         }
-        headerView.setLeft(text: "戻る", fontSize: 20, color: #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1))
+        headerView.setLeft(text: "戻る", fontSize: 16, color: #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1))
     }
     func getModel() {
         if follow {

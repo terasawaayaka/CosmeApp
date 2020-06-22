@@ -12,6 +12,7 @@ protocol YourScrollMainViewDelegate: NSObjectProtocol{
     func didSelectItemAt(indexPath: IndexPath)
     func didSelectItemAtYourGenre(indexPath: IndexPath)
     func didSelectItemAtSearchYourGenre(indexPath: IndexPath)
+        func didEndYourScroll(scrollView: UIScrollView)
 }
 extension YourScrollMainViewDelegate {
 }
@@ -52,14 +53,18 @@ extension YourScrollMainView: SearchYourGenreMainViewDelegate {
     func didSelectItemAtSearchYourGenre(indexPath: IndexPath) {
         if let delegate = delegate{delegate.didSelectItemAtSearchYourGenre(indexPath: indexPath)}
     }
-    
-    
+}
+extension YourScrollMainView :UIScrollViewDelegate{
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        delegate?.didEndYourScroll(scrollView: scrollView)
+    }
 }
 // MARK: - method
 extension YourScrollMainView {
     func setDelegate(){
         yourPostMainView.delegate = self
         yourGenreMainView.delegate = self
+        scrollView.delegate = self
     }
     func getModel(filterdReviewPostModels: [ReviewPostModel],userModel: UserModel){
         self.reviewPostModels = filterdReviewPostModels
