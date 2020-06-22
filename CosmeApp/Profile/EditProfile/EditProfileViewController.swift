@@ -75,9 +75,9 @@ extension EditProfileViewController {
         mainView.delegate = self
     }
     func setHeaderView() {
-        headerView.setLeft(text: "キャンセル",fontSize: 15,color:#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))
-        headerView.setCenter(text: "プロフィールを編集", fontSize: 15, color: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))
-        headerView.setRight(text: "完了", fontSize: 15, color: #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1))
+        headerView.setLeft(text: "キャンセル",fontSize: 16,color: #colorLiteral(red: 0.7404877639, green: 0.7449720201, blue: 1, alpha: 1))
+        headerView.setCenter(text: "プロフィールを編集", fontSize: 20, color: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))
+        headerView.setRight(text: "完了", fontSize: 16, color: #colorLiteral(red: 1, green: 0.6230913235, blue: 0.7894609614, alpha: 1))
     }
     func giveModel() {
         mainView.updateUserName(userModel: userModel)
