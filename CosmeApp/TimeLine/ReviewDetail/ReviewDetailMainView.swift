@@ -140,10 +140,14 @@ extension ReviewDetailMainView :UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = imageCollectionView.dequeueReusableCell(withReuseIdentifier: "ReviewDetailImageCollectionViewCell", for: indexPath)as? ReviewDetailImageCollectionViewCell else{return UICollectionViewCell()}
         cell.cellHeight.constant = imageCollectionView.frame.height
-        if reviewPostModel.image_paths.count == 0{
+        if reviewPostModel.image_paths.count == 0 {
             cell.imageView.image = UIImage(named: "noimage")
-        }else{
-            cell.updatecollectionView(imagePath: reviewPostModel.image_paths[indexPath.row])
+        } else {
+            reviewPostModel.image_paths.forEach { (imagePath) in
+                if imagePath.contains("\(indexPath.row)?") {
+                    cell.updatecollectionView(imagePath: reviewPostModel.image_paths[indexPath.row])
+                }
+            }
         }
         return cell
     }
