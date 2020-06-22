@@ -1122,7 +1122,6 @@
 				FF850A0B246E2AD3003E2ACF /* EditReviewViewController.xib in Resources */,
 				5FCD8FCA248E0CD800DF8106 /* FollowMainView.xib in Resources */,
 				5F480A3E2498871A000D67E3 /* YourFollowTableViewCell.xib in Resources */,
-				3F1EE73F249329B100753461 /* ReportedMainView.xib in Resources */,
 				5F098A2E2474D1A800D033F4 /* YourTodayCollectionViewCell.xib in Resources */,
 				3F7C5D90247644ED007640E2 /* TagSearchResultMainView.xib in Resources */,
 				1F4B7706246D30D900FC3B27 /* MyProfileViewController.xib in Resources */,
@@ -1254,7 +1253,6 @@
 				5FA88A45246E402700B84ACE /* EditProfileViewController.swift in Sources */,
 				5F97F3CF24809CA900D68A0C /* TwelveYourGenreCollectionViewCell.swift in Sources */,
 				5F098A3E2477AB1200D033F4 /* GoodCollectionView.swift in Sources */,
-				3F1EE73E249329B100753461 /* ReportedMainView.swift in Sources */,
 				5F480A3D2498871A000D67E3 /* YourFollowTableViewCell.swift in Sources */,
 				1F4B771A246E25CF00FC3B27 /* NewPostMainView.swift in Sources */,
 				D1B8AFC62472627C007BC6AD /* CreateMakeMainView.swift in Sources */,
@@ -1514,7 +1512,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "ASW-inc.CosmeApp";
+				PRODUCT_BUNDLE_IDENTIFIER = "ASW-inc.CosmeApp.release";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1533,7 +1531,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "ASW-inc.CosmeApp";
+				PRODUCT_BUNDLE_IDENTIFIER = "ASW-inc.CosmeApp.release";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

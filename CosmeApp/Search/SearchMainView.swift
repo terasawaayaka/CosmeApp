@@ -174,17 +174,17 @@ extension SearchMainView {
         touchedTagButton.layer.borderWidth = 1
         touchedTagButton.layer.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         touchedTagButton.layer.cornerRadius = 5
-        touchedTagButton.layer.borderColor = #colorLiteral(red: 0.8397446066, green: 0.3103108182, blue: 0.5394304367, alpha: 1)
+        touchedTagButton.layer.borderColor = #colorLiteral(red: 0, green: 0.9406710267, blue: 1, alpha: 0.49)
         //ユーザーのボタン
         touchedUserButton.layer.borderWidth = 1
         touchedUserButton.layer.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         touchedUserButton.layer.cornerRadius = 5
-        touchedUserButton.layer.borderColor = #colorLiteral(red: 0.8397446066, green: 0.3103108182, blue: 0.5394304367, alpha: 1)
+        touchedUserButton.layer.borderColor = #colorLiteral(red: 0, green: 0.9406710267, blue: 1, alpha: 0.49)
         //商品名のボタン
         touchedProductNameButton.layer.borderWidth = 1
         touchedProductNameButton.layer.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         touchedProductNameButton.layer.cornerRadius = 5
-        touchedProductNameButton.layer.borderColor = #colorLiteral(red: 0.8397446066, green: 0.3103108182, blue: 0.5394304367, alpha: 1)
+        touchedProductNameButton.layer.borderColor = #colorLiteral(red: 0, green: 0.9406710267, blue: 1, alpha: 0.49)
     }
     func setDelegate(){
         searchResultMainView.delegate = self
