@@ -198,7 +198,7 @@ extension ReviewPostModel{
         let group = DispatchGroup()
         let queue = DispatchQueue(label: ".photo")
         guard let images = image else {return}
-        var num = 1
+        var num = 0
         var paths: [String] = []
         images.forEach { (image) in
             group.enter()

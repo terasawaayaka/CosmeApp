@@ -106,10 +106,14 @@ extension TimeLineMainTableViewSecondCell :UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = imageCollectionView.dequeueReusableCell(withReuseIdentifier: "TimeLineImageCollectionViewCell", for: indexPath)as? TimeLineImageCollectionViewCell else{return UICollectionViewCell()}
         cell.cellHeight.constant = imageCollectionView.frame.height
-        if reviewPostModel.image_paths.count == 0{
-            cell.imageView.image = UIImage(named: "noimage")
-        }else{
-            cell.updatecollectionView(imagePath: reviewPostModel.image_paths[indexPath.row])
+        reviewPostModel.image_paths.forEach { (imagePath) in
+            if imagePath.contains("\(indexPath.row)?") {
+                if reviewPostModel.image_paths.count == 0{
+                    cell.imageView.image = UIImage(named: "noimage")
+                }else{
+                    cell.updatecollectionView(imagePath: reviewPostModel.image_paths[indexPath.row])
+                }
+            }
         }
         return cell
     }
