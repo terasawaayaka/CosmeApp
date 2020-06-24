@@ -339,7 +339,9 @@ extension YourProfileViewController :YourProfileMainViewDelegate{
                 if let uid = Auth.auth().currentUser?.uid {
                     noticeModel.notice_user_id = uid
                 }
-                noticeModel.notice_my_id = reviewPostModel.post_user_id
+                if let userId = userModel.id {
+                    noticeModel.notice_my_id = userId
+                }
                 noticeModel.noticeType = ActivityType.follow.rawValue
                 NoticeModel.create(request: noticeModel) {
 
