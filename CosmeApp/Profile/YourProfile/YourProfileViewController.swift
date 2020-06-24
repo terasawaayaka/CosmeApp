@@ -84,6 +84,7 @@ extension YourProfileViewController :YourProfileMainViewDelegate{
     func didSelectItemAtSearchYourGenre(indexPath: IndexPath) {
         let reviewDetailViewController = ReviewDetailViewController()
         reviewDetailViewController.reviewPostModel = reviewPostModels[indexPath.row]
+        reviewDetailViewController.fromProfile = true
         navigationController?.pushViewController(reviewDetailViewController, animated: true)
         animatorManager.navigationType = .push
     }
