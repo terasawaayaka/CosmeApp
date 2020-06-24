@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YourProfileMainView" customModule="CosmeApp" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YourProfileMainView" customModule="Choupinet" customModuleProvider="target">
             <connections>
                 <outlet property="blockButton" destination="wbv-FZ-hk4" id="FBW-Ui-uSf"/>
                 <outlet property="collectionViewFlowLayout" destination="HHz-mS-siT" id="2Oz-o3-54j"/>
@@ -126,7 +126,7 @@
                                                 <constraint firstAttribute="height" constant="60" id="joa-HV-8Go"/>
                                                 <constraint firstAttribute="width" constant="207" id="tAY-zY-F49"/>
                                             </constraints>
-                                            <state key="normal" title="ジャンル">
+                                            <state key="normal" title="レビュー">
                                                 <color key="titleColor" red="0.99985879659999999" green="0.62168782950000001" blue="0.78930741550000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
                                             <connections>
@@ -275,7 +275,7 @@
                                         <constraint firstItem="d0g-x0-2aM" firstAttribute="leading" secondItem="RDK-ec-cDg" secondAttribute="trailing" id="ytI-ye-CrE"/>
                                     </constraints>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yop-cf-RDX" customClass="YourScrollMainView" customModule="CosmeApp" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yop-cf-RDX" customClass="YourScrollMainView" customModule="Choupinet" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="445" width="414" height="484"/>
                                     <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
