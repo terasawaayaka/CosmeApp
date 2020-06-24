@@ -73,12 +73,23 @@ extension SearchViewController: SearchMainViewDelegate {
    
     //タグとかユーザーとかのセルをタッチしたら詳細画面へ遷移する
     func touchedUserCellButton(userModel: UserModel,reviewPostModel: ReviewPostModel) {
-        let yourProfileViewController = YourProfileViewController()
-        yourProfileViewController.userModel = userModel
-        yourProfileViewController.fromPost = true
-        yourProfileViewController.reviewPostModels = reviewPostModels
-        navigationController?.pushViewController(yourProfileViewController, animated: true)
-        animatorManager.navigationType = .slide_push
+        if let uid = Auth.auth().currentUser?.uid {
+            if userModel.id == uid {
+                let myProfileViewController = MyProfileViewController()
+                    myProfileViewController.userModel = userModel
+                    myProfileViewController.reviewPostModels = reviewPostModels
+                    myProfileViewController.fromPost = true
+                    navigationController?.pushViewController(myProfileViewController, animated: true)
+                    animatorManager.navigationType = .slide_push
+                }else{
+                    let yourProfileViewController = YourProfileViewController()
+                    yourProfileViewController.userModel = userModel
+                    yourProfileViewController.reviewPostModels = reviewPostModels
+                    yourProfileViewController.fromPost = true
+                    navigationController?.pushViewController(yourProfileViewController, animated: true)
+                    animatorManager.navigationType = .slide_push
+            }
+        }
     }
     
     func touchedProductNAmeCellButton(reviewPostModel: ReviewPostModel) {
