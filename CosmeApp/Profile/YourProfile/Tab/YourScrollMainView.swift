@@ -65,6 +65,7 @@ extension YourScrollMainView {
         yourPostMainView.delegate = self
         yourGenreMainView.delegate = self
         scrollView.delegate = self
+        searchYourGenreMainView.delegate = self
     }
     func getModel(filterdReviewPostModels: [ReviewPostModel],userModel: UserModel){
         self.reviewPostModels = filterdReviewPostModels
