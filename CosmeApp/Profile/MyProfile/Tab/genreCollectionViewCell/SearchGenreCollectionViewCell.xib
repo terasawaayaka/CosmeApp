@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="AYd-ZK-8L3" customClass="SearchGenreCollectionViewCell" customModule="CosmeApp" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="AYd-ZK-8L3" customClass="SearchGenreCollectionViewCell" customModule="Choupinet" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="115" height="115"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="a81-uZ-sNN">
@@ -22,7 +22,22 @@
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jwo-fK-gU8">
                         <rect key="frame" x="0.0" y="0.0" width="115" height="115"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wKU-3p-4q5">
+                                <rect key="frame" x="0.0" y="92" width="115" height="23"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="Y7I-b3-05W"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="wKU-3p-4q5" secondAttribute="bottom" id="0ec-hm-28X"/>
+                            <constraint firstAttribute="trailing" secondItem="wKU-3p-4q5" secondAttribute="trailing" id="H4W-YK-AOc"/>
+                            <constraint firstItem="wKU-3p-4q5" firstAttribute="leading" secondItem="Jwo-fK-gU8" secondAttribute="leading" id="MYZ-1i-yRu"/>
                             <constraint firstAttribute="width" secondItem="Jwo-fK-gU8" secondAttribute="height" multiplier="1:1" id="Txd-3y-Hnl"/>
                             <constraint firstAttribute="width" constant="115" id="U0A-eA-Ive"/>
                             <constraint firstAttribute="height" constant="115" id="h04-UQ-bch"/>
@@ -39,6 +54,7 @@
             <size key="customSize" width="115" height="115"/>
             <connections>
                 <outlet property="imageView" destination="Gpz-4d-7CL" id="fOV-7l-vtj"/>
+                <outlet property="postTitle" destination="wKU-3p-4q5" id="DNr-pj-yW8"/>
             </connections>
             <point key="canvasLocation" x="-115.21739130434783" y="-60.602678571428569"/>
         </collectionViewCell>
