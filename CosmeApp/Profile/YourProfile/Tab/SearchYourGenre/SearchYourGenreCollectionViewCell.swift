@@ -16,6 +16,7 @@ extension SearchYourGenreCollectionViewCellDelegate {
 class SearchYourGenreCollectionViewCell: BaseCollectionViewCell {
     weak var delegate: SearchYourGenreCollectionViewCellDelegate? = nil
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var postTitle: UILabel!
     
 }
 // MARK: - Life cycle
@@ -29,16 +30,17 @@ extension SearchYourGenreCollectionViewCell {
 }
 // MARK: - method
 extension SearchYourGenreCollectionViewCell {
-    func updateCell(makePostModel:MakePostModel) {
-        switch makePostModel.image_paths.count {
+    func updateCell(reviewPostModel:ReviewPostModel) {
+        switch reviewPostModel.image_paths.count {
         case 0:
             imageView.image = UIImage(named: "noimage.png")
         case 1:
-            if let url = URL(string: makePostModel.image_paths[0]){
+            if let url = URL(string: reviewPostModel.image_paths[0]){
                 imageView.af_setImage(withURL: url)
             }
         default:
             break
         }
+        postTitle.text = reviewPostModel.title
     }
 }

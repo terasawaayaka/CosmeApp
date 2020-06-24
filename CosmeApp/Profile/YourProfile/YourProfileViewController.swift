@@ -82,9 +82,9 @@ extension YourProfileViewController :YourProfileMainViewDelegate{
     }
     
     func didSelectItemAtSearchYourGenre(indexPath: IndexPath) {
-        let makeDetailViewController = MakeDetailViewController()
-        makeDetailViewController.makePostModel = makePostModels[indexPath.row]
-        navigationController?.pushViewController(makeDetailViewController, animated: true)
+        let reviewDetailViewController = ReviewDetailViewController()
+        reviewDetailViewController.reviewPostModel = reviewPostModels[indexPath.row]
+        navigationController?.pushViewController(reviewDetailViewController, animated: true)
         animatorManager.navigationType = .push
     }
     
@@ -93,149 +93,149 @@ extension YourProfileViewController :YourProfileMainViewDelegate{
         
         switch indexPath.row {
         case 0:
-            MakePostModel.reads { (makePostModels) in
-                let eyeshadow = makePostModels.filter { (makePostModel) -> Bool in
-                    if makePostModel.post_user_id == self.userModel.id && makePostModel.eyeshadow != ""{
+            ReviewPostModel.reads { (reviewPostModels) in
+                let eyeshadow = reviewPostModels.filter { (reviewPostModel) -> Bool in
+                    if reviewPostModel.post_user_id == self.userModel.id && reviewPostModel.category == "アイシャドウ"{
                         return true
                     } else {
                         return false
                     }
                 }
-                self.mainView.scrollMainView.searchYourGenreMainView.getModel(makePostModels: eyeshadow)
-                self.makePostModels = eyeshadow
+                self.mainView.scrollMainView.searchYourGenreMainView.getModel(reviewPostModels: eyeshadow)
+                self.reviewPostModels = eyeshadow
             }
         case 1:
-            MakePostModel.reads { (makePostModels) in
-                let eyeliner = makePostModels.filter { (makePostModel) -> Bool in
-                    if makePostModel.post_user_id == self.userModel.id && makePostModel.eyeliner != ""{
+            ReviewPostModel.reads { (reviewPostModels) in
+                let eyeliner = reviewPostModels.filter { (reviewPostModel) -> Bool in
+                    if reviewPostModel.post_user_id == self.userModel.id && reviewPostModel.category == "アイライナー"{
                         return true
                     } else {
                         return false
                     }
                 }
-                self.mainView.scrollMainView.searchYourGenreMainView.getModel(makePostModels: eyeliner)
-                self.makePostModels = eyeliner
+                self.mainView.scrollMainView.searchYourGenreMainView.getModel(reviewPostModels: eyeliner)
+                self.reviewPostModels = eyeliner
             }
         case 2:
-            MakePostModel.reads { (makePostModels) in
-                let mascara = makePostModels.filter { (makePostModel) -> Bool in
-                    if makePostModel.post_user_id == self.userModel.id && makePostModel.mascara != ""{
+            ReviewPostModel.reads { (reviewPostModels) in
+                let mascara = reviewPostModels.filter { (reviewPostModel) -> Bool in
+                    if reviewPostModel.post_user_id == self.userModel.id && reviewPostModel.category == "マスカラ"{
                         return true
                     } else {
                         return false
                     }
                 }
-                self.mainView.scrollMainView.searchYourGenreMainView.getModel(makePostModels: mascara)
-                self.makePostModels = mascara
+                self.mainView.scrollMainView.searchYourGenreMainView.getModel(reviewPostModels: mascara)
+                self.reviewPostModels = mascara
             }
         case 3:
-            MakePostModel.reads { (makePostModels) in
-                let colorcontact = makePostModels.filter { (makePostModel) -> Bool in
-                    if makePostModel.post_user_id == self.userModel.id && makePostModel.colorcontact != ""{
+            ReviewPostModel.reads { (reviewPostModels) in
+                let colorcontact = reviewPostModels.filter { (reviewPostModel) -> Bool in
+                    if reviewPostModel.post_user_id == self.userModel.id && reviewPostModel.category != "カラコン"{
                         return true
                     } else {
                         return false
                     }
                 }
-                self.mainView.scrollMainView.searchYourGenreMainView.getModel(makePostModels: colorcontact)
-                self.makePostModels = colorcontact
+                self.mainView.scrollMainView.searchYourGenreMainView.getModel(reviewPostModels: colorcontact)
+                self.reviewPostModels = colorcontact
             }
         case 4:
-            MakePostModel.reads { (makePostModels) in
-                let eyebrow = makePostModels.filter { (makePostModel) -> Bool in
-                    if makePostModel.post_user_id == self.userModel.id && makePostModel.eyebrow != ""{
+            ReviewPostModel.reads { (reviewPostModels) in
+                let eyebrow = reviewPostModels.filter { (reviewPostModel) -> Bool in
+                    if reviewPostModel.post_user_id == self.userModel.id && reviewPostModel.category == "アイブロウ"{
                         return true
                     } else {
                         return false
                     }
                 }
-                self.mainView.scrollMainView.searchYourGenreMainView.getModel(makePostModels: eyebrow)
-                self.makePostModels = eyebrow
+                self.mainView.scrollMainView.searchYourGenreMainView.getModel(reviewPostModels: eyebrow)
+                self.reviewPostModels = eyebrow
             }
         case 5:
-            MakePostModel.reads { (makePostModels) in
-                let basemake = makePostModels.filter { (makePostModel) -> Bool in
-                    if makePostModel.post_user_id == self.userModel.id && makePostModel.basemake
-                        != ""{
+            ReviewPostModel.reads { (reviewPostModels) in
+                let basemake = reviewPostModels.filter { (reviewPostModel) -> Bool in
+                    if reviewPostModel.post_user_id == self.userModel.id && reviewPostModel.category
+                        == "ベースメイク"{
                         return true
                     } else {
                         return false
                     }
                 }
-                self.mainView.scrollMainView.searchYourGenreMainView.getModel(makePostModels: basemake)
-                self.makePostModels = basemake
+                self.mainView.scrollMainView.searchYourGenreMainView.getModel(reviewPostModels: basemake)
+                self.reviewPostModels = basemake
             }
         case 6:
-            MakePostModel.reads { (makePostModels) in
-                let highlight = makePostModels.filter { (makePostModel) -> Bool in
-                    if makePostModel.post_user_id == self.userModel.id && makePostModel.highlight != ""{
+            ReviewPostModel.reads { (reviewPostModels) in
+                let highlight = reviewPostModels.filter { (reviewPostModel) -> Bool in
+                    if reviewPostModel.post_user_id == self.userModel.id && reviewPostModel.category == "ハイライト"{
                         return true
                     } else {
                         return false
                     }
                 }
-                self.mainView.scrollMainView.searchYourGenreMainView.getModel(makePostModels: highlight)
-                self.makePostModels = highlight
+                self.mainView.scrollMainView.searchYourGenreMainView.getModel(reviewPostModels: highlight)
+                self.reviewPostModels = highlight
             }
         case 7:
-            MakePostModel.reads { (makePostModels) in
-                let shading = makePostModels.filter { (makePostModel) -> Bool in
-                    if makePostModel.post_user_id == self.userModel.id && makePostModel.shading != ""{
+            ReviewPostModel.reads { (reviewPostModels) in
+                let shading = reviewPostModels.filter { (reviewPostModel) -> Bool in
+                    if reviewPostModel.post_user_id == self.userModel.id && reviewPostModel.category == "シェーディング"{
                         return true
                     } else {
                         return false
                     }
                 }
-                self.mainView.scrollMainView.searchYourGenreMainView.getModel(makePostModels: shading)
-                self.makePostModels = shading
+                self.mainView.scrollMainView.searchYourGenreMainView.getModel(reviewPostModels: shading)
+                self.reviewPostModels = shading
             }
         case 8:
-            MakePostModel.reads { (makePostModels) in
-                let cheek = makePostModels.filter { (makePostModel) -> Bool in
-                    if makePostModel.post_user_id == self.userModel.id && makePostModel.cheek != ""{
+            ReviewPostModel.reads { (reviewPostModels) in
+                let cheek = reviewPostModels.filter { (reviewPostModel) -> Bool in
+                    if reviewPostModel.post_user_id == self.userModel.id && reviewPostModel.category == "チーク"{
                         return true
                     } else {
                         return false
                     }
                 }
-                self.mainView.scrollMainView.searchYourGenreMainView.getModel(makePostModels: cheek)
-                self.makePostModels = cheek
+                self.mainView.scrollMainView.searchYourGenreMainView.getModel(reviewPostModels: cheek)
+                self.reviewPostModels = cheek
             }
         case 9:
-            MakePostModel.reads { (makePostModels) in
-                let skincare = makePostModels.filter { (makePostModel) -> Bool in
-                    if makePostModel.post_user_id == self.userModel.id && makePostModel.skincare != ""{
+            ReviewPostModel.reads { (reviewPostModels) in
+                let skincare = reviewPostModels.filter { (reviewPostModel) -> Bool in
+                    if reviewPostModel.post_user_id == self.userModel.id && reviewPostModel.category == "スキンケア"{
                         return true
                     } else {
                         return false
                     }
                 }
-                self.mainView.scrollMainView.searchYourGenreMainView.getModel(makePostModels: skincare)
-                self.makePostModels = skincare
+                self.mainView.scrollMainView.searchYourGenreMainView.getModel(reviewPostModels: skincare)
+                self.reviewPostModels = skincare
             }
         case 10:
-            MakePostModel.reads { (makePostModels) in
-                let lip = makePostModels.filter { (makePostModel) -> Bool in
-                    if makePostModel.post_user_id == self.userModel.id && makePostModel.lip != ""{
+            ReviewPostModel.reads { (reviewPostModels) in
+                let lip = reviewPostModels.filter { (reviewPostModel) -> Bool in
+                    if reviewPostModel.post_user_id == self.userModel.id && reviewPostModel.category == "リップ"{
                         return true
                     } else {
                         return false
                     }
                 }
-                self.mainView.scrollMainView.searchYourGenreMainView.getModel(makePostModels: lip)
-                self.makePostModels = lip
+                self.mainView.scrollMainView.searchYourGenreMainView.getModel(reviewPostModels: lip)
+                self.reviewPostModels = lip
             }
         case 11:
-            MakePostModel.reads { (makePostModels) in
-                let haircare = makePostModels.filter { (makePostModel) -> Bool in
-                    if makePostModel.post_user_id == self.userModel.id && makePostModel.haircare != ""{
+            ReviewPostModel.reads { (reviewPostModels) in
+                let haircare = reviewPostModels.filter { (reviewPostModel) -> Bool in
+                    if reviewPostModel.post_user_id == self.userModel.id && reviewPostModel.category == "ヘアケア"{
                         return true
                     } else {
                         return false
                     }
                 }
-                self.mainView.scrollMainView.searchYourGenreMainView.getModel(makePostModels: haircare)
-                self.makePostModels = haircare
+                self.mainView.scrollMainView.searchYourGenreMainView.getModel(reviewPostModels: haircare)
+                self.reviewPostModels = haircare
             }
         default:
             break
@@ -378,11 +378,11 @@ extension YourProfileViewController {
     func setHeaderView(){
         if fromPost{
         headerView.setCenter(text: "- profile -", fontSize: 20, color: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))
-        headerView.setLeft(text: "戻る", fontSize: 16, color: #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1))
+        headerView.setLeft(text: "＜", fontSize: 16, color: #colorLiteral(red: 0.7390006781, green: 0.7434574962, blue: 1, alpha: 1))
         }
         if fromfollow {
             headerView.setCenter(text: "- profile -", fontSize: 20, color: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))
-            headerView.setLeft(text: "戻る", fontSize: 16, color: #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1))
+            headerView.setLeft(text: "＜", fontSize: 16, color: #colorLiteral(red: 0.7390006781, green: 0.7434574962, blue: 1, alpha: 1))
         }
         headerView.setCenter(text: "- profile -", fontSize: 20, color: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))
     }

@@ -91,10 +91,10 @@ extension MyProfileViewController :MyProfileMainViewDelegate{
     }
     
     func didSelectItemAtSearchGenre(indexPath: IndexPath) {
-        let makeDetailViewController = MakeDetailViewController()
-        makeDetailViewController.makePostModel = makePostModels[indexPath.row]
-        makeDetailViewController.fromProfile = true
-        navigationController?.pushViewController(makeDetailViewController, animated: true)
+        let reviewDetailViewController = ReviewDetailViewController()
+        reviewDetailViewController.reviewPostModel = reviewPostModels[indexPath.row]
+        reviewDetailViewController.fromProfile = true
+        navigationController?.pushViewController(reviewDetailViewController, animated: true)
         animatorManager.navigationType = .push
     }
     
@@ -357,7 +357,7 @@ extension MyProfileViewController {
     func setHeaderView(){
         if fromPost{
         headerView.setCenter(text: "- profile -", fontSize: 20, color: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))
-        headerView.setLeft(text: "戻る", fontSize: 16, color: #colorLiteral(red: 0.7404877639, green: 0.7449720201, blue: 1, alpha: 1))
+        headerView.setLeft(text: "＜", fontSize: 16, color: #colorLiteral(red: 0.7390006781, green: 0.7434574962, blue: 1, alpha: 1))
         }else{
             headerView.setCenter(text: "- profile -", fontSize: 20, color: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))
             headerView.setLeft(text: "")
