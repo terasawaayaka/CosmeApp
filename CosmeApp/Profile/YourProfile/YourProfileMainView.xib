@@ -126,7 +126,7 @@
                                                 <constraint firstAttribute="height" constant="60" id="joa-HV-8Go"/>
                                                 <constraint firstAttribute="width" constant="207" id="tAY-zY-F49"/>
                                             </constraints>
-                                            <state key="normal" title="レビュー">
+                                            <state key="normal" title="ジャンル">
                                                 <color key="titleColor" red="0.99985879659999999" green="0.62168782950000001" blue="0.78930741550000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
                                             <connections>

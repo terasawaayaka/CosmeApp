@@ -20,7 +20,7 @@ class SearchYourGenreMainView: BaseView {
     @IBOutlet weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
     @IBOutlet weak var textLabel: UILabel!
     
-    var makePostModels: [MakePostModel] = [MakePostModel]()
+    var reviewPostModels: [ReviewPostModel] = [ReviewPostModel]()
 }
 // MARK: - Life cycle
 extension SearchYourGenreMainView {
@@ -35,12 +35,12 @@ extension SearchYourGenreMainView {
 // MARK: - Protocol
 extension SearchYourGenreMainView :UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return makePostModels.count
+        return reviewPostModels.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchYourGenreCollectionViewCell", for: indexPath) as? SearchYourGenreCollectionViewCell else {return UICollectionViewCell()}
-        cell.updateCell(makePostModel: makePostModels[indexPath.row])
+        cell.updateCell(reviewPostModel: reviewPostModels[indexPath.row])
         return cell
     }
     
@@ -56,11 +56,11 @@ extension SearchYourGenreMainView {
         collectionView.dataSource = self
         collectionView.delegate = self
     }
-    func getModel(makePostModels: [MakePostModel]) {
-        self.makePostModels = makePostModels
+    func getModel(reviewPostModels: [ReviewPostModel]) {
+        self.reviewPostModels = reviewPostModels
         collectionView.reloadData()
         
-        if makePostModels.count == 0 {
+        if reviewPostModels.count == 0 {
             textLabel.text = "投稿がありません"
         } else {
             textLabel.text = ""
