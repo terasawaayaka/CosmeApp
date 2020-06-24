@@ -40,8 +40,7 @@ extension SearchResultCollectionViewCell {
 // MARK: - method
 extension SearchResultCollectionViewCell {
     func updateCell(){
-        let cellWidthConstant = UIScreen.main.bounds.size.width - 40
-        cellWidth.constant = cellWidthConstant / 3
+        cellWidth.constant = (UIScreen.main.bounds.size.width - 60) / 3
     }
     
     func updateReviewCell(reviewPostModel: ReviewPostModel){
