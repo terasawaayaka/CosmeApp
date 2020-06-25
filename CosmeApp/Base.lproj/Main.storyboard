@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZUm-08-96O">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZUm-08-96O">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Search View Controller-->
         <scene sceneID="MbW-yH-XtQ">
             <objects>
-                <viewController id="fsy-VX-TEh" customClass="SearchViewController" customModule="CosmeApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fsy-VX-TEh" customClass="SearchViewController" customModule="Choupinet" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="ZIP-dZ-UC4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tjL-OL-4VE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -19,7 +19,7 @@
         <!--New Post View Controller-->
         <scene sceneID="qe4-Un-yzN">
             <objects>
-                <viewController id="VCy-Xw-kjx" customClass="NewPostViewController" customModule="CosmeApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="VCy-Xw-kjx" customClass="NewPostViewController" customModule="Choupinet" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="UyC-xF-IS8"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zIO-TO-v11" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -29,7 +29,7 @@
         <!--Time Line View Controller-->
         <scene sceneID="JvE-lU-5Hn">
             <objects>
-                <viewController id="Per-C8-AC0" customClass="TimeLineViewController" customModule="CosmeApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Per-C8-AC0" customClass="TimeLineViewController" customModule="Choupinet" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Sd2-nS-v7T"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zxa-kc-2dM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -39,7 +39,7 @@
         <!--Activity View Controller-->
         <scene sceneID="qW2-Sb-8Ml">
             <objects>
-                <viewController id="SQc-JB-yWY" customClass="ActivityViewController" customModule="CosmeApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="SQc-JB-yWY" customClass="ActivityViewController" customModule="Choupinet" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="0FS-l6-3qm"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1N2-Bg-6Sf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -49,7 +49,7 @@
         <!--My Profile View Controller-->
         <scene sceneID="ui9-HE-UB0">
             <objects>
-                <viewController id="dfP-zE-iLz" customClass="MyProfileViewController" customModule="CosmeApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dfP-zE-iLz" customClass="MyProfileViewController" customModule="Choupinet" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="y3C-7h-q5G"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O3H-0P-K1M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
