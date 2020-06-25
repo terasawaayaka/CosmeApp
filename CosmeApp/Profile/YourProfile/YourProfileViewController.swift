@@ -132,7 +132,7 @@ extension YourProfileViewController :YourProfileMainViewDelegate{
         case 3:
             ReviewPostModel.reads { (reviewPostModels) in
                 let colorcontact = reviewPostModels.filter { (reviewPostModel) -> Bool in
-                    if reviewPostModel.post_user_id == self.userModel.id && reviewPostModel.category != "カラコン"{
+                    if reviewPostModel.post_user_id == self.userModel.id && reviewPostModel.category == "カラコン"{
                         return true
                     } else {
                         return false
