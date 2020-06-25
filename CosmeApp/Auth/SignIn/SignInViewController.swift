@@ -37,6 +37,7 @@ extension SignInViewController: SingInMainViewDelegate {
         guard let mail = mainView.mailTextField.text else {return}
         guard let password = mainView.passwordTextField.text else {return}
         UserModel.signIn(email: mail, pass: password, failure: { (error) in
+            self.alert(message: error)
             print("SignInエラー",error)
         }) {
             let timelineViewController = TimeLineViewController()
