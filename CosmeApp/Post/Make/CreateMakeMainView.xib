@@ -9,8 +9,20 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateMakeMainView" customModule="Choupinet" customModuleProvider="target">
             <connections>
+                <outlet property="baseMakeTextField" destination="ew5-86-SkR" id="bod-aV-oor"/>
+                <outlet property="cheekTextField" destination="PT9-zk-GOX" id="cMW-nG-Nzz"/>
+                <outlet property="colorContactTextField" destination="o6x-KR-pOU" id="kiu-Wh-FFH"/>
+                <outlet property="eyebrowTextField" destination="hyA-A7-QmX" id="K0p-XZ-p4e"/>
+                <outlet property="eyelinerTextField" destination="5sH-7k-dR2" id="6JG-xG-MhA"/>
+                <outlet property="eyeshadowTextField" destination="han-hn-clo" id="Csc-gV-2te"/>
+                <outlet property="hairCareTextField" destination="KOC-eS-UoO" id="B0M-2b-VWB"/>
+                <outlet property="highlightTextField" destination="deu-dT-GWC" id="qvb-8C-zKt"/>
+                <outlet property="lipTextField" destination="gQw-Qw-BSB" id="kpT-Wz-0lq"/>
                 <outlet property="makeImageView" destination="Wnx-sL-Y1F" id="khf-eC-TvQ"/>
+                <outlet property="mascaraTextField" destination="Z3A-kT-Xy3" id="0iQ-3d-VJL"/>
                 <outlet property="processTextView" destination="j2A-pO-CN5" id="uPV-je-04X"/>
+                <outlet property="shadingTextField" destination="CiC-Ge-fag" id="jRW-nc-TFh"/>
+                <outlet property="skinCareTextField" destination="5G2-EA-RBp" id="35v-zK-UP8"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
