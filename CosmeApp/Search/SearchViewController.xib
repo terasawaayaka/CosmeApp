@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModule="CosmeApp" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModule="Choupinet" customModuleProvider="target">
             <connections>
                 <outlet property="mainView" destination="21f-nY-csk" id="SPA-TE-UUY"/>
                 <outlet property="searchTextView" destination="RZs-wU-wFq" id="WY2-fn-MvR"/>
@@ -19,16 +19,13 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="21f-nY-csk" customClass="SearchMainView" customModule="CosmeApp" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="100" width="414" height="762"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="21f-nY-csk" customClass="SearchMainView" customModule="Choupinet" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="98" width="414" height="764"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RZs-wU-wFq" customClass="SearchTextView" customModule="CosmeApp" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RZs-wU-wFq" customClass="SearchTextView" customModule="Choupinet" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="44" width="414" height="54"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="56" id="qfP-Qm-Jcq"/>
-                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -39,6 +36,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="RZs-wU-wFq" secondAttribute="trailing" id="ZDJ-Bn-wQX"/>
                 <constraint firstItem="RZs-wU-wFq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="bk4-ST-0CU"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="21f-nY-csk" secondAttribute="trailing" id="dYE-Ne-r4c"/>
+                <constraint firstItem="RZs-wU-wFq" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.06" id="g7L-ld-B6J"/>
                 <constraint firstItem="21f-nY-csk" firstAttribute="top" secondItem="RZs-wU-wFq" secondAttribute="bottom" id="vCh-8e-p4s"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
