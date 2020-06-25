@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditMakeMainView" customModule="CosmeApp" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditMakeMainView" customModule="Choupinet" customModuleProvider="target">
             <connections>
                 <outlet property="basemakeTextField" destination="jpT-Pg-Fhh" id="eqf-EA-Bvq"/>
                 <outlet property="cheekTextField" destination="Lwt-P2-YEF" id="16s-XK-JE9"/>
@@ -100,7 +100,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="755" text="チーク：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IUe-OZ-FUM">
-                                            <rect key="frame" x="30" y="574.5" width="71.5" height="21"/>
+                                            <rect key="frame" x="30" y="574.5" width="69.5" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -309,7 +309,6 @@
                                         <constraint firstItem="Ptk-Hv-22z" firstAttribute="leading" secondItem="8xY-cO-qpg" secondAttribute="leading" constant="30" id="Ml0-4c-4On"/>
                                         <constraint firstAttribute="trailing" secondItem="Gxo-ij-Vvj" secondAttribute="trailing" constant="30" id="MqF-Ts-GyW"/>
                                         <constraint firstItem="J44-M4-lOP" firstAttribute="leading" secondItem="8xY-cO-qpg" secondAttribute="leading" constant="30" id="NEg-fW-AhO"/>
-                                        <constraint firstItem="Lwt-P2-YEF" firstAttribute="leading" secondItem="IUe-OZ-FUM" secondAttribute="trailing" constant="82.5" id="PHt-rY-4cJ"/>
                                         <constraint firstItem="014-CM-MQ4" firstAttribute="top" secondItem="dqb-cO-aNY" secondAttribute="bottom" constant="8" id="Pit-gU-XQe"/>
                                         <constraint firstItem="0MT-UV-TXY" firstAttribute="top" secondItem="jP5-sS-fyn" secondAttribute="bottom" constant="8" id="Qhs-hq-ZHE"/>
                                         <constraint firstItem="5No-hk-zlA" firstAttribute="top" secondItem="4fx-II-Xbw" secondAttribute="bottom" constant="8" id="RNW-uT-mxB"/>
