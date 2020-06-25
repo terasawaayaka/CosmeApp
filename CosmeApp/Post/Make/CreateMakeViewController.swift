@@ -52,40 +52,40 @@ extension CreateMakeViewController:HeaderViewDelegate {
     }
     func touchedRightButton(_ sender: UIButton) {
         let makePostModel: MakePostModel = MakePostModel()
-        if let text = mainView.baseMakeTextView.text {
+        if let text = mainView.baseMakeTextField.text {
             makePostModel.basemake = text
         }
-        if let text = mainView.highlightTextView.text {
+        if let text = mainView.highlightTextField.text {
             makePostModel.highlight = text
         }
-        if let text = mainView.shadingTextView.text {
+        if let text = mainView.shadingTextField.text {
             makePostModel.shading = text
         }
-        if let text = mainView.eyeshadowTextView.text {
+        if let text = mainView.eyeshadowTextField.text {
             makePostModel.eyeshadow = text
         }
-        if let text = mainView.eyelinerTextView.text {
+        if let text = mainView.eyelinerTextField.text {
             makePostModel.eyeliner = text
         }
-        if let text = mainView.mascaraTextView.text {
+        if let text = mainView.mascaraTextField.text {
             makePostModel.mascara = text
         }
-        if let text = mainView.colorContactTextView.text {
+        if let text = mainView.colorContactTextField.text {
             makePostModel.colorcontact = text
         }
-        if let text = mainView.eyebrowTextView.text {
+        if let text = mainView.eyebrowTextField.text {
             makePostModel.eyebrow = text
             }
-        if let text = mainView.cheekTextView.text {
+        if let text = mainView.cheekTextField.text {
             makePostModel.cheek = text
         }
-        if let text = mainView.lipTextView.text {
+        if let text = mainView.lipTextField.text {
             makePostModel.lip = text
         }
-        if let text = mainView.skinCareTextView.text {
+        if let text = mainView.skinCareTextField.text {
             makePostModel.skincare = text
         }
-        if let text = mainView.hairCareTextView.text {
+        if let text = mainView.hairCareTextField.text {
             makePostModel.haircare = text
         }
         if let text = mainView.processTextView.text {

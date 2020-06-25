@@ -1505,17 +1505,21 @@
 			baseConfigurationReference = 0163EBAD7923538C532F43E7 /* Pods-CosmeApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = G6R5GT3H5J;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1.0.3;
+				DEVELOPMENT_TEAM = 8Q7ZNNJG4G;
 				INFOPLIST_FILE = CosmeApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = ASWinc.CosmeApp.release;
 				PRODUCT_NAME = Choupinet;
+				PROVISIONING_PROFILE_SPECIFIER = style.ASW.Choupinet.Pro;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1524,17 +1528,21 @@
 			baseConfigurationReference = 50AAD213D38C52F89A7C4FBE /* Pods-CosmeApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = G6R5GT3H5J;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Kyohei Fujiwara (8Q7ZNNJG4G)";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1.0.3;
+				DEVELOPMENT_TEAM = 8Q7ZNNJG4G;
 				INFOPLIST_FILE = CosmeApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = ASWinc.CosmeApp.release;
 				PRODUCT_NAME = Choupinet;
+				PROVISIONING_PROFILE_SPECIFIER = style.ASW.Choupinet.Pro;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

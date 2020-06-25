@@ -38,6 +38,7 @@ extension SignUpViewController:SignUpMainViewDelegate {
         
         UserModel.create(request: userModel, success: {
             let timelineViewController = TimeLineViewController()
+            timelineViewController.fromSignUp = true
             self.navigationController?.pushViewController(timelineViewController, animated: true)
             self.animatorManager.navigationType = .push
         }) { (error) in

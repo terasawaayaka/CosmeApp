@@ -183,9 +183,10 @@ extension ReviewDetailViewController:ReviewDetailMainViewDelegate {
         CommentPostModel.create(request: commentPostModel) {
             self.mainView.commentTextField.endEditing(true)
             self.mainView.commentTextField.text = ""
-            self.mainView.tableHeight.constant = CGFloat(self.mainView.tableView.contentSize.height)
-            self.mainView.tableView.reloadData()
+//            self.mainView.tableHeight.constant = CGFloat(self.mainView.tableView.contentSize.height)
+            //self.mainView.tableView.reloadData()
         }
+        self.mainView.tableHeight.constant = CGFloat(self.mainView.tableView.contentSize.height)
         
     }
     func goodButton(reviewPostModel: ReviewPostModel) {

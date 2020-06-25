@@ -25,6 +25,7 @@ class TimeLineViewController: BaseViewController {
     var isGooded: Bool = false
     var isFavorite:Bool = false
     var isFavorited:Bool = false
+    var fromSignUp:Bool = false
 }
 // MARK: - Life cycle
 extension TimeLineViewController {
@@ -32,6 +33,10 @@ extension TimeLineViewController {
         super.loadView()
         setDelegate()
         tabBarController?.tabBar.isHidden = false
+        mainView.pleaseFollowLabel.isHidden = true
+        if fromSignUp{
+            mainView.pleaseFollowLabel.isHidden = false
+        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -231,7 +236,7 @@ extension TimeLineViewController {
                 self.mainView.reviewGetModel(reviewPostModels:filterdReviewPostModels)
                 print("カウント:", filterdReviewPostModels.count)
             }
-                
+    
             for reviewPostModel in reviewPostModels {
                 if reviewPostModel.post_user_id != "" {
                     UserModel.readAt(userId: reviewPostModel.post_user_id) { (userModel) in
