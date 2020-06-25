@@ -25,6 +25,7 @@ class TimeLineViewController: BaseViewController {
     var isGooded: Bool = false
     var isFavorite:Bool = false
     var isFavorited:Bool = false
+    var fromSignUp:Bool = false
 }
 // MARK: - Life cycle
 extension TimeLineViewController {
@@ -32,6 +33,10 @@ extension TimeLineViewController {
         super.loadView()
         setDelegate()
         tabBarController?.tabBar.isHidden = false
+        mainView.pleaseFollowLabel.isHidden = true
+        if fromSignUp{
+            mainView.pleaseFollowLabel.isHidden = false
+        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()

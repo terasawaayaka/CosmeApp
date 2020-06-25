@@ -7,8 +7,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TimeLineMainView" customModule="CosmeApp" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TimeLineMainView" customModule="Choupinet" customModuleProvider="target">
             <connections>
+                <outlet property="pleaseFollowLabel" destination="S97-63-pVZ" id="CQF-92-fxz"/>
                 <outlet property="tableView" destination="nDn-5i-ou0" id="pzu-Rp-b4G"/>
             </connections>
         </placeholder>
@@ -22,26 +23,37 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="choupinet" translatesAutoresizingMaskIntoConstraints="NO" id="GeO-tj-k8d">
-                    <rect key="frame" x="-377" y="64" width="1168" height="40"/>
+                    <rect key="frame" x="-185.5" y="64" width="785" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="4S6-5G-JiW"/>
                     </constraints>
                 </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="フォローすると投稿が表示されるよ！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S97-63-pVZ">
+                    <rect key="frame" x="0.0" y="119" width="414" height="743"/>
+                    <color key="backgroundColor" red="0.98688694980000002" green="0.97780271949999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="S97-63-pVZ" secondAttribute="trailing" id="2cG-d1-vCz"/>
                 <constraint firstItem="nDn-5i-ou0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="8E2-dy-UEa"/>
                 <constraint firstItem="GeO-tj-k8d" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="BK4-Pd-6s8"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="nDn-5i-ou0" secondAttribute="bottom" id="Fa7-ca-8vs"/>
+                <constraint firstItem="S97-63-pVZ" firstAttribute="height" secondItem="nDn-5i-ou0" secondAttribute="height" id="Fh4-0d-aPe"/>
                 <constraint firstItem="nDn-5i-ou0" firstAttribute="top" secondItem="GeO-tj-k8d" secondAttribute="bottom" constant="15" id="Gob-jg-Ibz"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="nDn-5i-ou0" secondAttribute="trailing" id="MsF-RL-7hI"/>
                 <constraint firstItem="GeO-tj-k8d" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Smo-F9-H3Z"/>
+                <constraint firstItem="S97-63-pVZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="UrR-4g-dyS"/>
+                <constraint firstItem="S97-63-pVZ" firstAttribute="top" secondItem="nDn-5i-ou0" secondAttribute="top" id="y05-Yy-mIw"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="132.58928571428572"/>
         </view>
     </objects>
     <resources>
-        <image name="choupinet" width="1168" height="329"/>
+        <image name="choupinet" width="785" height="192"/>
     </resources>
 </document>
