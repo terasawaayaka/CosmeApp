@@ -42,6 +42,7 @@ extension SignUpViewController:SignUpMainViewDelegate {
             self.navigationController?.pushViewController(timelineViewController, animated: true)
             self.animatorManager.navigationType = .push
         }) { (error) in
+            self.alert(message: error)
             print("SignUpエラー",error)
         }
     }

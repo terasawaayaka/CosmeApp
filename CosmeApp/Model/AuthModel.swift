@@ -206,7 +206,20 @@ extension UserModel {
             let request = UserModel()
             request.fcm_token = token
             if let error = error {
-                failure(error.localizedDescription)
+                if let errCode = AuthErrorCode(rawValue: error._code) {
+                    switch errCode {
+                    case .emailAlreadyInUse:
+                        failure("すでに使用されているメールアドレスです")
+                    case .invalidEmail:
+                        failure("メールアドレスの形式が違います")
+                    case .weakPassword:
+                        failure("パスワードが弱すぎます")
+                    default:
+                        print(error.localizedDescription)
+                        failure("エラーが起きました。\nしばらくしてから再度お試しください")
+                    
+                    }
+                }
             }
             if let _ = user {
                 self.update(request: request, success: {})
@@ -220,7 +233,19 @@ extension UserModel {
             let request = UserModel()
             request.fcm_token = token
             if let error = error {
-                failure(error.localizedDescription)
+                if let errCode = AuthErrorCode(rawValue: error._code) {
+                    switch errCode {
+                    case .invalidEmail:
+                        failure("メールアドレスの形式が違います")
+                    case .wrongPassword:
+                        failure("パスワードが違います")
+                    case .userNotFound:
+                        failure("アカウントが見つかりません")
+                    default:
+                        print(error.localizedDescription)
+                        failure("エラーが起きました。\nしばらくしてから再度お試しください")
+                    }
+                }
             }
             if let _ = user {
                 self.update(request: request, success: {})
