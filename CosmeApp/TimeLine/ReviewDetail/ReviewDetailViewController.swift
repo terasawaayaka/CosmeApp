@@ -57,8 +57,8 @@ extension ReviewDetailViewController {
     }
     
     override func viewWillLayoutSubviews() {
-        super.updateViewConstraints()
         mainView.tableHeight.constant = CGFloat(mainView.tableView.contentSize.height)
+        super.updateViewConstraints()
         //self.mainView.tableHeight.constant = self.mainView.tableView.contentSize.height
     }
 }
@@ -181,10 +181,9 @@ extension ReviewDetailViewController:ReviewDetailMainViewDelegate {
         }
         commentPostModel.review_post_id = reviewPostModel.id
         CommentPostModel.create(request: commentPostModel) {
+            self.mainView.tableHeight.constant = CGFloat(self.mainView.tableView.contentSize.height)
             self.mainView.commentTextField.endEditing(true)
             self.mainView.commentTextField.text = ""
-            self.mainView.tableHeight.constant = CGFloat(self.mainView.tableView.contentSize.height)
-            self.mainView.tableView.reloadData()
         }
         
     }
