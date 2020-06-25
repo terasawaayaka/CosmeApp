@@ -8,7 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="241" id="1wg-iN-cef" customClass="ReviewDetailMainTableViewCell" customModule="CosmeApp" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="241" id="1wg-iN-cef" customClass="ReviewDetailMainTableViewCell" customModule="Choupinet" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="241"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1wg-iN-cef" id="eHD-ej-ig6">
@@ -33,7 +33,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="コメント〜〜〜〜〜〜〜〜" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rF3-Gc-nIF">
-                        <rect key="frame" x="60" y="55" width="294" height="158"/>
+                        <rect key="frame" x="60" y="55" width="294" height="139"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="V4g-pu-vF3"/>
                         </constraints>
@@ -42,9 +42,9 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rT9-Vk-VM7">
-                        <rect key="frame" x="301" y="223" width="108" height="22"/>
+                        <rect key="frame" x="281" y="204" width="108" height="21"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="22" id="Z0C-QD-75m"/>
+                            <constraint firstAttribute="height" constant="21" id="aAj-JB-F7O"/>
                         </constraints>
                         <state key="normal" title="コメントを削除">
                             <color key="titleColor" red="0.74048776390000004" green="0.74497202009999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -56,14 +56,14 @@
                 </subviews>
                 <color key="backgroundColor" red="0.99577349854175101" green="0.9866160204302683" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
-                    <constraint firstItem="rT9-Vk-VM7" firstAttribute="top" secondItem="rF3-Gc-nIF" secondAttribute="bottom" constant="10" id="4MG-ni-N7v"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="rT9-Vk-VM7" secondAttribute="trailing" constant="5" id="84U-ls-4ZI"/>
                     <constraint firstAttribute="trailingMargin" secondItem="rF3-Gc-nIF" secondAttribute="trailing" constant="40" id="K0b-8s-8fL"/>
-                    <constraint firstItem="rT9-Vk-VM7" firstAttribute="bottom" secondItem="eHD-ej-ig6" secondAttribute="bottomMargin" constant="15" id="Mik-qw-g51"/>
                     <constraint firstItem="q5U-Kp-gSZ" firstAttribute="top" secondItem="eHD-ej-ig6" secondAttribute="top" constant="10" id="YvU-Yj-83N"/>
                     <constraint firstItem="uG1-hw-1Ya" firstAttribute="top" secondItem="eHD-ej-ig6" secondAttribute="top" constant="20" id="aCq-Pp-Efx"/>
                     <constraint firstItem="rF3-Gc-nIF" firstAttribute="top" secondItem="q5U-Kp-gSZ" secondAttribute="bottom" constant="5" id="aDM-cP-f9L"/>
-                    <constraint firstItem="rT9-Vk-VM7" firstAttribute="trailing" secondItem="eHD-ej-ig6" secondAttribute="trailingMargin" constant="15" id="aTZ-HW-jFu"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="rT9-Vk-VM7" secondAttribute="bottom" constant="5" id="af9-Rr-iMm"/>
                     <constraint firstItem="q5U-Kp-gSZ" firstAttribute="leading" secondItem="eHD-ej-ig6" secondAttribute="leadingMargin" constant="10" id="lyN-lo-VSv"/>
+                    <constraint firstItem="rT9-Vk-VM7" firstAttribute="top" secondItem="rF3-Gc-nIF" secondAttribute="bottom" constant="10" id="mpl-3L-oI5"/>
                     <constraint firstItem="uG1-hw-1Ya" firstAttribute="leading" secondItem="q5U-Kp-gSZ" secondAttribute="trailing" constant="10" id="oGu-0f-tyO"/>
                     <constraint firstItem="rF3-Gc-nIF" firstAttribute="leading" secondItem="eHD-ej-ig6" secondAttribute="leadingMargin" constant="40" id="zv5-Tv-Lbc"/>
                 </constraints>
