@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditMakeMainView" customModule="CosmeApp" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditMakeMainView" customModule="Choupinet" customModuleProvider="target">
             <connections>
                 <outlet property="basemakeTextField" destination="jpT-Pg-Fhh" id="eqf-EA-Bvq"/>
                 <outlet property="cheekTextField" destination="Lwt-P2-YEF" id="16s-XK-JE9"/>
@@ -15,7 +15,7 @@
                 <outlet property="eyeLinerTextField" destination="ov4-Cc-ybX" id="WiU-N7-JCX"/>
                 <outlet property="eyebrowTextField" destination="kWG-oV-ZsH" id="tQh-Vg-aBL"/>
                 <outlet property="eyeshadowTextField" destination="yPc-TZ-o0V" id="1Bd-J6-sdu"/>
-                <outlet property="haircareTextField" destination="014-CM-MQ4" id="aWe-ZT-jdM"/>
+                <outlet property="haircareTextField" destination="dqb-cO-aNY" id="Edh-dd-NPS"/>
                 <outlet property="highLightTextField" destination="oZn-PM-CX1" id="5Bp-Hs-Q14"/>
                 <outlet property="lipTextField" destination="Gxo-ij-Vvj" id="GAZ-al-wim"/>
                 <outlet property="makeImage" destination="M5c-Is-hTv" id="mh0-WY-pvz"/>
