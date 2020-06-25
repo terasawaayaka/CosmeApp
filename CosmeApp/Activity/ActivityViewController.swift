@@ -86,13 +86,39 @@ extension ActivityViewController:ActivityMainViewDelegate {
 //全削除ボタン
 extension ActivityViewController: HeaderViewDelegate {
     func touchedRightButton(_ sender: UIButton) {
-            for noticeModel in noticeModels {
-                if let uid = Auth.auth().currentUser?.uid {
-                    if noticeModel.notice_my_id == uid {
+        for noticeModel in noticeModels {
+            if let uid = Auth.auth().currentUser?.uid {
+                if noticeModel.notice_my_id == uid {
+                    //アラート生成
+                    //UIAlertControllerのスタイルがalert
+                    let alert: UIAlertController = UIAlertController(title: "", message:  "通知を全削除します", preferredStyle:  UIAlertController.Style.alert)
+                    // 確定ボタンの処理
+                    let confirmAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler:{
+                        // 確定ボタンが押された時の処理をクロージャ実装する
+                        (action: UIAlertAction!) -> Void in
+                        //実際の処理
                         NoticeModel.delete(id: noticeModel.id) {
                             self.dismiss(animated: true, completion: nil)
-                        
-                    }
+                            
+                        }
+                    })
+                    // キャンセルボタンの処理
+                    let cancelAction: UIAlertAction = UIAlertAction(title: "キャンセル", style: UIAlertAction.Style.cancel, handler:{
+                        // キャンセルボタンが押された時の処理をクロージャ実装する
+                        (action: UIAlertAction!) -> Void in
+                        //実際の処理
+                        print("キャンセル")
+                    })
+                    
+                    //UIAlertControllerにキャンセルボタンと確定ボタンをActionを追加
+                    alert.addAction(cancelAction)
+                    alert.addAction(confirmAction)
+                    
+                    //実際にAlertを表示する
+                    present(alert, animated: true, completion: nil)
+                    
+                    
+                    
                 }
             }
         }
