@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditReviewMainView" customModule="CosmeApp" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditReviewMainView" customModule="Choupinet" customModuleProvider="target">
             <connections>
                 <outlet property="categoryLabel" destination="UfL-gS-Sb8" id="q6d-gk-bZf"/>
                 <outlet property="fifthStarButton" destination="Dlk-9d-5fX" id="0KB-le-kgG"/>
