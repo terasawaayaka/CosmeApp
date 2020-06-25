@@ -183,7 +183,6 @@
                                                 <constraint firstAttribute="height" constant="120" id="Nfg-KL-gMS"/>
                                             </constraints>
                                             <connections>
-                                                <action selector="touchedEyeLinerButton:" destination="-1" eventType="touchUpInside" id="Eu9-tm-iN9"/>
                                                 <action selector="touchedEyeShadowButton:" destination="-1" eventType="touchUpInside" id="cDK-6V-tWP"/>
                                             </connections>
                                         </button>
