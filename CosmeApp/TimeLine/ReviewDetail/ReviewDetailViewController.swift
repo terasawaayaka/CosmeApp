@@ -357,18 +357,29 @@ extension ReviewDetailViewController {
             mainView.secondStarImage.image = UIImage(named: "checkedStar")
             mainView.thirdStarImage.image = UIImage(named: "checkedStar")
             mainView.fourthStarImage.image = UIImage(named: "checkedStar")
+            mainView.fifthStarImage.image = UIImage(named: "star")
         }
         if case reviewPostModel.review_num = 3{
             mainView.firstStarImage.image = UIImage(named: "checkedStar")
             mainView.secondStarImage.image = UIImage(named: "checkedStar")
             mainView.thirdStarImage.image = UIImage(named: "checkedStar")
+            mainView.fourthStarImage.image = UIImage(named: "star")
+            mainView.fifthStarImage.image = UIImage(named: "star")
         }
         if case reviewPostModel.review_num = 2{
             mainView.firstStarImage.image = UIImage(named: "checkedStar")
             mainView.secondStarImage.image = UIImage(named: "checkedStar")
+            mainView.thirdStarImage.image = UIImage(named: "star")
+            mainView.fourthStarImage.image = UIImage(named: "star")
+            mainView.fifthStarImage.image = UIImage(named: "star")
+
         }
         if case reviewPostModel.review_num = 1{
             mainView.firstStarImage.image = UIImage(named: "checkedStar")
+            mainView.secondStarImage.image = UIImage(named: "star")
+            mainView.thirdStarImage.image = UIImage(named: "star")
+            mainView.fourthStarImage.image = UIImage(named: "star")
+            mainView.fifthStarImage.image = UIImage(named: "star")
         }
         
         //ユーザー情報

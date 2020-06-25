@@ -160,18 +160,28 @@ extension TimeLineMainTableViewSecondCell {
             secondStarImage.image = UIImage(named: "checkedStar")
             thirdStarImage.image = UIImage(named: "checkedStar")
             fourthStarImage.image = UIImage(named: "checkedStar")
+            fifthStarImage.image = UIImage(named: "star")
         }
         if case reviewPostModel.review_num = 3{
             firstStarImage.image = UIImage(named: "checkedStar")
             secondStarImage.image = UIImage(named: "checkedStar")
             thirdStarImage.image = UIImage(named: "checkedStar")
+            fourthStarImage.image = UIImage(named: "star")
+            fifthStarImage.image = UIImage(named: "star")
         }
         if case reviewPostModel.review_num = 2{
             firstStarImage.image = UIImage(named: "checkedStar")
             secondStarImage.image = UIImage(named: "checkedStar")
+            thirdStarImage.image = UIImage(named: "star")
+            fourthStarImage.image = UIImage(named: "star")
+            fifthStarImage.image = UIImage(named: "star")
         }
         if case reviewPostModel.review_num = 1{
             firstStarImage.image = UIImage(named: "checkedStar")
+            secondStarImage.image = UIImage(named: "star")
+            thirdStarImage.image = UIImage(named: "star")
+            fourthStarImage.image = UIImage(named: "star")
+            fifthStarImage.image = UIImage(named: "star")
         }
        
         //user
