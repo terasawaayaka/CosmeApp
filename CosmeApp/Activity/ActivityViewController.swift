@@ -91,9 +91,9 @@ extension ActivityViewController: HeaderViewDelegate {
                 if noticeModel.notice_my_id == uid {
                     //アラート生成
                     //UIAlertControllerのスタイルがalert
-                    let alert: UIAlertController = UIAlertController(title: "", message:  "通知を全削除します", preferredStyle:  UIAlertController.Style.alert)
+                    let alert: UIAlertController = UIAlertController(title: "", message:  "通知を全削除しますか？", preferredStyle:  UIAlertController.Style.alert)
                     // 確定ボタンの処理
-                    let confirmAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler:{
+                    let confirmAction: UIAlertAction = UIAlertAction(title: "全削除", style: UIAlertAction.Style.default, handler:{
                         // 確定ボタンが押された時の処理をクロージャ実装する
                         (action: UIAlertAction!) -> Void in
                         //実際の処理
