@@ -17,11 +17,12 @@
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q5U-Kp-gSZ">
                         <rect key="frame" x="30" y="10" width="40" height="40"/>
-                        <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="40" id="cmO-Hb-I0C"/>
                             <constraint firstAttribute="width" secondItem="q5U-Kp-gSZ" secondAttribute="height" multiplier="1:1" id="lzB-RC-6h1"/>
                         </constraints>
+                        <state key="normal" image="noimage"/>
                         <connections>
                             <action selector="commentIconViewButton:" destination="1wg-iN-cef" eventType="touchUpInside" id="cVK-y4-8Uq"/>
                         </connections>
@@ -77,4 +78,7 @@
             <point key="canvasLocation" x="192.75362318840581" y="29.799107142857142"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="noimage" width="2048" height="2048"/>
+    </resources>
 </document>

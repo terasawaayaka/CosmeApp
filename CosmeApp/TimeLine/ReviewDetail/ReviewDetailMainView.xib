@@ -52,12 +52,14 @@
                                                 <constraint firstAttribute="height" constant="50" id="T64-Vv-S2a"/>
                                                 <constraint firstAttribute="width" secondItem="jCH-yG-hqv" secondAttribute="height" multiplier="1:1" id="rjx-6R-rdI"/>
                                             </constraints>
+                                            <state key="normal" image="noimage"/>
                                             <connections>
                                                 <action selector="iconViewButton:" destination="-1" eventType="touchUpInside" id="HuV-L3-hmG"/>
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sND-vf-aqR">
                                             <rect key="frame" x="70" y="25" width="344" height="21"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -381,6 +383,7 @@
         </view>
     </objects>
     <resources>
+        <image name="noimage" width="2048" height="2048"/>
         <image name="notfavorite" width="256" height="256"/>
         <image name="notgood" width="256" height="256"/>
         <image name="report" width="64" height="64"/>
