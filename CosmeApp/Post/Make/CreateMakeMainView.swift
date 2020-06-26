@@ -24,18 +24,20 @@ class CreateMakeMainView: BaseView {
         }
     }
     
-    @IBOutlet weak var baseMakeTextField: UITextField! //ベースメイク
-    @IBOutlet weak var highlightTextField: UITextField! //ハイライト
-    @IBOutlet weak var shadingTextField: UITextField! //シェーディング
-    @IBOutlet weak var eyeshadowTextField: UITextField! //アイシャドウ
-    @IBOutlet weak var eyelinerTextField: UITextField! //アイライナー
-    @IBOutlet weak var mascaraTextField: UITextField! //マスカラ
-    @IBOutlet weak var colorContactTextField: UITextField! //カラコン
-    @IBOutlet weak var eyebrowTextField: UITextField! //アイブロウ
-    @IBOutlet weak var cheekTextField: UITextField! //チーク
-    @IBOutlet weak var lipTextField: UITextField! //リップ
-    @IBOutlet weak var skinCareTextField: UITextField! //スキンケア
-    @IBOutlet weak var hairCareTextField: UITextField! //ヘアケア
+
+    @IBOutlet weak var baseMakeTextField: UITextField!
+    @IBOutlet weak var shadingTextField: UITextField!
+    @IBOutlet weak var highlightTextField: UITextField!
+    @IBOutlet weak var cheekTextField: UITextField!
+    @IBOutlet weak var eyeshadowTextField: UITextField!
+    @IBOutlet weak var eyelinerTextField: UITextField!
+    @IBOutlet weak var mascaraTextField: UITextField!
+    @IBOutlet weak var colorContactTextField: UITextField!
+    @IBOutlet weak var eyebrowTextField: UITextField!
+    @IBOutlet weak var lipTextField: UITextField!
+    @IBOutlet weak var hairCareTextField: UITextField!
+    @IBOutlet weak var skinCareTextField: UITextField!
+    
     
     @IBOutlet weak var processTextView: UITextView! //プロセス
 }
