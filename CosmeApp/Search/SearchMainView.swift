@@ -26,6 +26,7 @@ protocol SearchMainViewDelegate: NSObjectProtocol{
     func touchedSkinCareButton()
     func touchedLipButton()
     func touchedHairCareButton()
+    func touchedEtrButton()
     
     func touchedCellButton(reviewPostModel: ReviewPostModel)
     func touchedProductNAmeCellButton(reviewPostModel: ReviewPostModel)
@@ -73,6 +74,12 @@ class SearchMainView: BaseView {
 
 
 extension SearchMainView: SearchResultMainViewDelegate {
+    func touchedEtrButton() {
+        if let delegate = delegate {
+            delegate.touchedEtrButton()
+        }
+    }
+    
     func touchedEyeShadowButton() {
         if let delegate = delegate {
             delegate.touchedEyeShadowButton()}
