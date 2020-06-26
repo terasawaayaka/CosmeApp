@@ -265,6 +265,7 @@ extension ReviewDetailViewController {
                         }
                         self.commentPostModels = filterdCommentPostModels
                         self.mainView.commentGetModel(commentPostModels: filterdCommentPostModels)
+                        self.viewWillLayoutSubviews()
                         // self.mainView.commentGetModel(commentPostModels:commentPostModels)
                     }
                 }else{
