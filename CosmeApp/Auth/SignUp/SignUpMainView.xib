@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignUpMainView" customModule="CosmeApp" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignUpMainView" customModule="Choupinet" customModuleProvider="target">
             <connections>
                 <outlet property="mailTextField" destination="sSl-sd-CEe" id="Udb-a5-4k6"/>
                 <outlet property="passwordTextField" destination="a5J-mo-0dR" id="reG-Ep-a1S"/>
@@ -36,9 +36,9 @@
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20j-KU-MpK">
                     <rect key="frame" x="165.5" y="442" width="83" height="30"/>
-                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" red="1" green="0.62309132349999996" blue="0.78946096139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <state key="normal" title="　SignUp　">
-                        <color key="titleColor" red="1" green="0.82663194559999997" blue="0.99836927620000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
                         <action selector="signUpButton:" destination="-1" eventType="touchUpInside" id="BHA-f0-vcv"/>
@@ -47,7 +47,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZj-bJ-06y">
                     <rect key="frame" x="191" y="552" width="123" height="30"/>
                     <state key="normal" title="ログインはこちら">
-                        <color key="titleColor" red="1" green="0.088543030649999993" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleColor" red="1" green="0.62309132349999996" blue="0.78946096139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
                         <action selector="touchedSignInButton:" destination="-1" eventType="touchUpInside" id="aiK-He-BcX"/>
