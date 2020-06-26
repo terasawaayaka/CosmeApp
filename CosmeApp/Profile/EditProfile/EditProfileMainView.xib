@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditProfileMainView" customModule="CosmeApp" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditProfileMainView" customModule="Choupinet" customModuleProvider="target">
             <connections>
                 <outlet property="editNameTextField" destination="CE7-PN-9nR" id="aWJ-5g-h88"/>
                 <outlet property="editUserText" destination="Oax-yN-6yC" id="99A-hc-bDU"/>
@@ -26,7 +26,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A9k-Wg-Ulo">
-                                    <rect key="frame" x="0.0" y="0.0" width="416" height="941"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="416" height="850"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="237" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7K5-s5-gMx">
                                             <rect key="frame" x="108" y="8" width="200" height="200"/>
@@ -112,10 +112,10 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69x-je-ics">
-                                            <rect key="frame" x="143" y="521" width="131" height="30"/>
+                                            <rect key="frame" x="119" y="521" width="178" height="30"/>
                                             <color key="backgroundColor" red="0.74048776390000004" green="0.74497202009999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="131" id="cIk-p4-yVR"/>
+                                                <constraint firstAttribute="width" constant="178" id="g4I-ol-hR1"/>
                                             </constraints>
                                             <state key="normal" title="ログアウト">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -124,25 +124,41 @@
                                                 <action selector="touchedLogoutButton:" destination="-1" eventType="touchUpInside" id="ffa-a6-EBP"/>
                                             </connections>
                                         </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p3B-mz-Vye">
+                                            <rect key="frame" x="119" y="579" width="178" height="30"/>
+                                            <color key="backgroundColor" red="1" green="0.73385934819999998" blue="0.73971485429999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="178" id="TqS-Ac-CWN"/>
+                                            </constraints>
+                                            <state key="normal" title="アカウント削除">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="touchedAccountDeleteButton:" destination="-1" eventType="touchUpInside" id="gLj-bH-diu"/>
+                                                <action selector="touchedLogoutButton:" destination="-1" eventType="touchUpInside" id="E2I-0L-cM3"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     <constraints>
                                         <constraint firstItem="7K5-s5-gMx" firstAttribute="top" secondItem="A9k-Wg-Ulo" secondAttribute="top" constant="8" id="3XI-Zq-o9t"/>
                                         <constraint firstItem="iuX-HZ-pWB" firstAttribute="top" secondItem="zmK-AD-U48" secondAttribute="bottom" constant="48" id="4Bn-0J-eH8"/>
                                         <constraint firstItem="Oax-yN-6yC" firstAttribute="top" secondItem="9Zn-cC-8wr" secondAttribute="bottom" constant="27" id="6s4-iw-hUu"/>
+                                        <constraint firstItem="69x-je-ics" firstAttribute="top" secondItem="Oax-yN-6yC" secondAttribute="bottom" constant="120" id="8EB-do-CEH"/>
                                         <constraint firstItem="ikX-K0-OIx" firstAttribute="leading" secondItem="A9k-Wg-Ulo" secondAttribute="leading" constant="70" id="GbQ-Ha-jBo"/>
-                                        <constraint firstAttribute="trailing" secondItem="69x-je-ics" secondAttribute="trailing" constant="142" id="HuF-Sk-XjG"/>
                                         <constraint firstItem="zmK-AD-U48" firstAttribute="top" secondItem="ikX-K0-OIx" secondAttribute="bottom" constant="8" id="Ngv-Nk-SrV"/>
+                                        <constraint firstItem="p3B-mz-Vye" firstAttribute="top" secondItem="69x-je-ics" secondAttribute="bottom" constant="28" id="O7v-ZL-9ma"/>
                                         <constraint firstItem="9Zn-cC-8wr" firstAttribute="leading" secondItem="A9k-Wg-Ulo" secondAttribute="leading" constant="143" id="QbN-0U-cZx"/>
                                         <constraint firstItem="5Nj-DV-eQz" firstAttribute="top" secondItem="Oax-yN-6yC" secondAttribute="bottom" constant="-1" id="S9T-hy-gyQ"/>
-                                        <constraint firstItem="69x-je-ics" firstAttribute="top" secondItem="5Nj-DV-eQz" secondAttribute="bottom" constant="120" id="SAI-Nc-MSi"/>
                                         <constraint firstItem="7K5-s5-gMx" firstAttribute="centerX" secondItem="A9k-Wg-Ulo" secondAttribute="centerX" id="SKe-cl-jxB"/>
                                         <constraint firstAttribute="trailing" secondItem="Oax-yN-6yC" secondAttribute="trailing" constant="8" id="Tgo-rp-EHz"/>
                                         <constraint firstItem="Oax-yN-6yC" firstAttribute="leading" secondItem="edu-ba-9yH" secondAttribute="trailing" constant="60.5" id="U9j-MO-nzv"/>
                                         <constraint firstItem="5Nj-DV-eQz" firstAttribute="leading" secondItem="edu-ba-9yH" secondAttribute="trailing" constant="58.5" id="UBs-vG-dae"/>
                                         <constraint firstItem="edu-ba-9yH" firstAttribute="leading" secondItem="A9k-Wg-Ulo" secondAttribute="leading" constant="8" id="WKU-yj-9Y5"/>
+                                        <constraint firstItem="p3B-mz-Vye" firstAttribute="centerX" secondItem="A9k-Wg-Ulo" secondAttribute="centerX" id="Wp5-Vv-OLy"/>
                                         <constraint firstAttribute="trailing" secondItem="ikX-K0-OIx" secondAttribute="trailing" constant="70" id="XMh-pU-g8n"/>
                                         <constraint firstAttribute="trailing" secondItem="9Zn-cC-8wr" secondAttribute="trailing" constant="1" id="YmL-MY-Y5L"/>
+                                        <constraint firstItem="69x-je-ics" firstAttribute="centerX" secondItem="A9k-Wg-Ulo" secondAttribute="centerX" id="bbF-It-vtI"/>
                                         <constraint firstAttribute="trailing" secondItem="5Nj-DV-eQz" secondAttribute="trailing" constant="1" id="hPO-He-XYB"/>
                                         <constraint firstItem="edu-ba-9yH" firstAttribute="top" secondItem="iuX-HZ-pWB" secondAttribute="bottom" constant="47" id="igG-cy-IOd"/>
                                         <constraint firstItem="CE7-PN-9nR" firstAttribute="top" secondItem="zmK-AD-U48" secondAttribute="bottom" constant="46" id="jFx-cg-Ex8"/>
@@ -150,8 +166,7 @@
                                         <constraint firstItem="iuX-HZ-pWB" firstAttribute="leading" secondItem="A9k-Wg-Ulo" secondAttribute="leading" constant="8" id="mMf-H9-xMw"/>
                                         <constraint firstItem="ikX-K0-OIx" firstAttribute="top" secondItem="7K5-s5-gMx" secondAttribute="bottom" constant="18" id="pA1-AT-sjD"/>
                                         <constraint firstItem="zmK-AD-U48" firstAttribute="leading" secondItem="A9k-Wg-Ulo" secondAttribute="leading" id="qm3-1f-0Tn"/>
-                                        <constraint firstAttribute="height" constant="941" id="ra1-YS-1fL"/>
-                                        <constraint firstItem="69x-je-ics" firstAttribute="leading" secondItem="A9k-Wg-Ulo" secondAttribute="leading" constant="143" id="sX8-OA-1if"/>
+                                        <constraint firstAttribute="height" constant="850" id="ra1-YS-1fL"/>
                                         <constraint firstItem="9Zn-cC-8wr" firstAttribute="width" secondItem="CE7-PN-9nR" secondAttribute="width" multiplier="1.03422" id="t42-WN-t25"/>
                                         <constraint firstAttribute="trailing" secondItem="CE7-PN-9nR" secondAttribute="trailing" constant="8" id="v6T-at-dLT"/>
                                         <constraint firstItem="9Zn-cC-8wr" firstAttribute="top" secondItem="CE7-PN-9nR" secondAttribute="bottom" constant="8" id="zAS-2w-5Mf"/>

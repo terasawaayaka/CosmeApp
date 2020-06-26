@@ -11,6 +11,7 @@ import PGFramework
 protocol EditProfileMainViewDelegate: NSObjectProtocol{
     func touchedEditIconViewButton()
     func touchedLogoutButton()
+    func touchedAccountDeleteButton()
 }
 extension EditProfileMainViewDelegate {
 }
@@ -24,6 +25,12 @@ class EditProfileMainView: BaseView {
     @IBAction func touchedLogoutButton(_ sender: UIButton) {
         if let delegate = delegate{delegate.touchedLogoutButton()}
     }
+    @IBAction func touchedAccountDeleteButton(_ sender: UIButton) {
+        if let delegate = delegate {
+            delegate.touchedAccountDeleteButton()
+        }
+    }
+    
     
     //Outlet
     @IBOutlet weak var editNameTextField: UITextField!
