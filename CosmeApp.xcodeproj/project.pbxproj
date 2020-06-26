@@ -56,7 +56,6 @@
 		3F6648EE2472280300D4D950 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F6648EC2472280300D4D950 /* SignUpViewController.xib */; };
 		3F6648F22472287900D4D950 /* SignUpMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6648F02472287900D4D950 /* SignUpMainView.swift */; };
 		3F6648F32472287900D4D950 /* SignUpMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F6648F12472287900D4D950 /* SignUpMainView.xib */; };
-		3F6996EA24A5ACDE00D6933F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F6996E924A5ACDE00D6933F /* GoogleService-Info.plist */; };
 		3F6FD4942491F49400C6536B /* ReportTableViewSpamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6FD4922491F49400C6536B /* ReportTableViewSpamCell.swift */; };
 		3F6FD4952491F49400C6536B /* ReportTableViewSpamCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F6FD4932491F49400C6536B /* ReportTableViewSpamCell.xib */; };
 		3F6FD4982491FBD300C6536B /* ReportTableViewSensitiveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6FD4962491FBD300C6536B /* ReportTableViewSensitiveCell.swift */; };
@@ -200,6 +199,7 @@
 		D1B8AFC52472627C007BC6AD /* CreateMakeMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1B8AFC12472627B007BC6AD /* CreateMakeMainView.xib */; };
 		D1B8AFC62472627C007BC6AD /* CreateMakeMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B8AFC22472627B007BC6AD /* CreateMakeMainView.swift */; };
 		D1B8AFC72472627C007BC6AD /* CreateMakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B8AFC32472627C007BC6AD /* CreateMakeViewController.swift */; };
+		FF13035D24A5D22900F46A28 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FF13035C24A5D22900F46A28 /* GoogleService-Info.plist */; };
 		FF3A5EA82474BAD100EDCB26 /* ReviewDetailMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3A5EA62474BAD100EDCB26 /* ReviewDetailMainTableViewCell.swift */; };
 		FF3A5EA92474BAD100EDCB26 /* ReviewDetailMainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF3A5EA72474BAD100EDCB26 /* ReviewDetailMainTableViewCell.xib */; };
 		FF3F38DE2477977B0023FAAC /* ReviewPostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3F38DD2477977A0023FAAC /* ReviewPostModel.swift */; };
@@ -287,7 +287,6 @@
 		3F6648EC2472280300D4D950 /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
 		3F6648F02472287900D4D950 /* SignUpMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpMainView.swift; sourceTree = "<group>"; };
 		3F6648F12472287900D4D950 /* SignUpMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpMainView.xib; sourceTree = "<group>"; };
-		3F6996E924A5ACDE00D6933F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3F6FD4922491F49400C6536B /* ReportTableViewSpamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportTableViewSpamCell.swift; sourceTree = "<group>"; };
 		3F6FD4932491F49400C6536B /* ReportTableViewSpamCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportTableViewSpamCell.xib; sourceTree = "<group>"; };
 		3F6FD4962491FBD300C6536B /* ReportTableViewSensitiveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportTableViewSensitiveCell.swift; sourceTree = "<group>"; };
@@ -431,6 +430,7 @@
 		D1B8AFC12472627B007BC6AD /* CreateMakeMainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateMakeMainView.xib; sourceTree = "<group>"; };
 		D1B8AFC22472627B007BC6AD /* CreateMakeMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateMakeMainView.swift; sourceTree = "<group>"; };
 		D1B8AFC32472627C007BC6AD /* CreateMakeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateMakeViewController.swift; sourceTree = "<group>"; };
+		FF13035C24A5D22900F46A28 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FF3A5EA62474BAD100EDCB26 /* ReviewDetailMainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewDetailMainTableViewCell.swift; sourceTree = "<group>"; };
 		FF3A5EA72474BAD100EDCB26 /* ReviewDetailMainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewDetailMainTableViewCell.xib; sourceTree = "<group>"; };
 		FF3F38DD2477977A0023FAAC /* ReviewPostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewPostModel.swift; sourceTree = "<group>"; };
@@ -514,8 +514,8 @@
 				1F4B76E9246D2AC100FC3B27 /* Main.storyboard */,
 				3FC6EE852473BDF0008875B7 /* Assets.xcassets */,
 				1F4B76EE246D2AE100FC3B27 /* LaunchScreen.storyboard */,
+				FF13035C24A5D22900F46A28 /* GoogleService-Info.plist */,
 				1F4B76F1246D2AE100FC3B27 /* Info.plist */,
-				3F6996E924A5ACDE00D6933F /* GoogleService-Info.plist */,
 			);
 			path = CosmeApp;
 			sourceTree = "<group>";
@@ -1152,6 +1152,7 @@
 				FF850A17246E2BC2003E2ACF /* EditMakeMainView.xib in Resources */,
 				1F4B770A246D310F00FC3B27 /* TimeLineViewController.xib in Resources */,
 				5F97F398247B6E4500D68A0C /* TenthCollectionViewCell.xib in Resources */,
+				FF13035D24A5D22900F46A28 /* GoogleService-Info.plist in Resources */,
 				5F480A3A24988351000D67E3 /* YourFollowMainView.xib in Resources */,
 				FF850A0F246E2B16003E2ACF /* EditReviewMainView.xib in Resources */,
 				3FC6EE862473BDF0008875B7 /* Assets.xcassets in Resources */,
@@ -1174,7 +1175,6 @@
 				5F0363AB24A5C63500C00A1E /* ThirteenGenreCollectionViewCell.xib in Resources */,
 				D1B8AFC52472627C007BC6AD /* CreateMakeMainView.xib in Resources */,
 				3FF47EE42490CB1100A8DCCD /* ReportMainView.xib in Resources */,
-				3F6996EA24A5ACDE00D6933F /* GoogleService-Info.plist in Resources */,
 				3FA0F796246E6DCA00D8DBA2 /* SearchResultMainView.xib in Resources */,
 				FF8509F2246E2870003E2ACF /* TimeLineMainView.xib in Resources */,
 				5F0363A724A5C0B000C00A1E /* ThirteenYourGenreCollectionViewCell.xib in Resources */,
@@ -1522,7 +1522,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = G6R5GT3H5J;
+				DEVELOPMENT_TEAM = 8Q7ZNNJG4G;
 				INFOPLIST_FILE = CosmeApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1542,7 +1542,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = G6R5GT3H5J;
+				DEVELOPMENT_TEAM = 8Q7ZNNJG4G;
 				INFOPLIST_FILE = CosmeApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
