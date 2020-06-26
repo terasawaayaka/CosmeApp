@@ -123,6 +123,15 @@ extension ReviewDetailViewController:ReviewDetailMainViewDelegate {
         CommentPostModel.delete(id: commentPostModel.id) {
             self.mainView.tableHeight.constant = CGFloat(self.mainView.tableView.contentSize.height)
         }
+        NoticeModel.reads { (noticeModels) in
+            for noticeModel in noticeModels {
+                if noticeModel.comment_id == commentPostModel.id {
+                    NoticeModel.delete(id: noticeModel.id) {
+                        self.dismiss(animated: true, completion: nil)
+                    }
+                }
+            }
+        }
     }
     
     func iconViewButton(reviewPostModel: ReviewPostModel) {
@@ -159,19 +168,6 @@ extension ReviewDetailViewController:ReviewDetailMainViewDelegate {
         }
     }
     func commentSendButton() {
-        activityType = ActivityType.comment
-        let noticeModel: NoticeModel = NoticeModel()
-        if let text = mainView.commentTextField.text {
-            noticeModel.comment = text
-        }
-        if let uid = Auth.auth().currentUser?.uid {
-            noticeModel.notice_user_id = uid
-        }
-        noticeModel.post_id = reviewPostModel.id
-        noticeModel.notice_my_id = reviewPostModel.post_user_id
-        noticeModel.noticeType = ActivityType.comment.rawValue
-        NoticeModel.create(request: noticeModel) {
-        }
         let commentPostModel  : CommentPostModel = CommentPostModel()
         if let text = mainView.commentTextField.text{
             commentPostModel.description = text
@@ -185,6 +181,22 @@ extension ReviewDetailViewController:ReviewDetailMainViewDelegate {
             self.mainView.commentTextField.endEditing(true)
             self.mainView.commentTextField.text = ""
         }
+        activityType = ActivityType.comment
+        let noticeModel: NoticeModel = NoticeModel()
+        if let text = mainView.commentTextField.text {
+            noticeModel.comment = text
+        }
+        if let uid = Auth.auth().currentUser?.uid {
+            noticeModel.notice_user_id = uid
+        }
+        noticeModel.post_id = reviewPostModel.id
+        noticeModel.notice_my_id = reviewPostModel.post_user_id
+        noticeModel.comment_id = commentPostModel.id
+        noticeModel.comment = commentPostModel.description
+        noticeModel.noticeType = ActivityType.comment.rawValue
+        NoticeModel.create(request: noticeModel) {
+        }
+        
         
     }
     func goodButton(reviewPostModel: ReviewPostModel) {
