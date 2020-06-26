@@ -87,6 +87,10 @@
 		3FF47EE02490CADB00A8DCCD /* ReportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FF47EDE2490CADB00A8DCCD /* ReportViewController.xib */; };
 		3FF47EE32490CB1100A8DCCD /* ReportMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF47EE12490CB1100A8DCCD /* ReportMainView.swift */; };
 		3FF47EE42490CB1100A8DCCD /* ReportMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FF47EE22490CB1100A8DCCD /* ReportMainView.xib */; };
+		5F0363A624A5C0B000C00A1E /* ThirteenYourGenreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0363A424A5C0B000C00A1E /* ThirteenYourGenreCollectionViewCell.swift */; };
+		5F0363A724A5C0B000C00A1E /* ThirteenYourGenreCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F0363A524A5C0B000C00A1E /* ThirteenYourGenreCollectionViewCell.xib */; };
+		5F0363AA24A5C63500C00A1E /* ThirteenGenreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0363A824A5C63500C00A1E /* ThirteenGenreCollectionViewCell.swift */; };
+		5F0363AB24A5C63500C00A1E /* ThirteenGenreCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F0363A924A5C63500C00A1E /* ThirteenGenreCollectionViewCell.xib */; };
 		5F098A202474BE5800D033F4 /* BookmarkCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F098A1E2474BE5800D033F4 /* BookmarkCollectionViewCell.swift */; };
 		5F098A212474BE5800D033F4 /* BookmarkCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F098A1F2474BE5800D033F4 /* BookmarkCollectionViewCell.xib */; };
 		5F098A242474C0CF00D033F4 /* GenreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F098A222474C0CF00D033F4 /* GenreCollectionViewCell.swift */; };
@@ -315,6 +319,10 @@
 		3FF47EE12490CB1100A8DCCD /* ReportMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportMainView.swift; sourceTree = "<group>"; };
 		3FF47EE22490CB1100A8DCCD /* ReportMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportMainView.xib; sourceTree = "<group>"; };
 		50AAD213D38C52F89A7C4FBE /* Pods-CosmeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CosmeApp.release.xcconfig"; path = "Target Support Files/Pods-CosmeApp/Pods-CosmeApp.release.xcconfig"; sourceTree = "<group>"; };
+		5F0363A424A5C0B000C00A1E /* ThirteenYourGenreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirteenYourGenreCollectionViewCell.swift; sourceTree = "<group>"; };
+		5F0363A524A5C0B000C00A1E /* ThirteenYourGenreCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThirteenYourGenreCollectionViewCell.xib; sourceTree = "<group>"; };
+		5F0363A824A5C63500C00A1E /* ThirteenGenreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirteenGenreCollectionViewCell.swift; sourceTree = "<group>"; };
+		5F0363A924A5C63500C00A1E /* ThirteenGenreCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThirteenGenreCollectionViewCell.xib; sourceTree = "<group>"; };
 		5F098A1E2474BE5800D033F4 /* BookmarkCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkCollectionViewCell.swift; sourceTree = "<group>"; };
 		5F098A1F2474BE5800D033F4 /* BookmarkCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookmarkCollectionViewCell.xib; sourceTree = "<group>"; };
 		5F098A222474C0CF00D033F4 /* GenreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -819,6 +827,8 @@
 				5F97F3D224809F6D00D68A0C /* ElevenGenreCollectionViewCell.xib */,
 				5F97F3D524809F8700D68A0C /* TwelveGenreCollectionViewCell.swift */,
 				5F97F3D624809F8700D68A0C /* TwelveGenreCollectionViewCell.xib */,
+				5F0363A824A5C63500C00A1E /* ThirteenGenreCollectionViewCell.swift */,
+				5F0363A924A5C63500C00A1E /* ThirteenGenreCollectionViewCell.xib */,
 			);
 			path = genreCollectionViewCell;
 			sourceTree = "<group>";
@@ -850,6 +860,8 @@
 				5F97F3CA24809C6C00D68A0C /* ElevenYourGenreCollectionViewCell.xib */,
 				5F97F3CD24809CA900D68A0C /* TwelveYourGenreCollectionViewCell.swift */,
 				5F97F3CE24809CA900D68A0C /* TwelveYourGenreCollectionViewCell.xib */,
+				5F0363A424A5C0B000C00A1E /* ThirteenYourGenreCollectionViewCell.swift */,
+				5F0363A524A5C0B000C00A1E /* ThirteenYourGenreCollectionViewCell.xib */,
 			);
 			path = YourGenreCollectionViewCell;
 			sourceTree = "<group>";
@@ -1159,11 +1171,13 @@
 				5F098A4B2477BB6300D033F4 /* BookmarkCollectionView.xib in Resources */,
 				3F6FD4952491F49400C6536B /* ReportTableViewSpamCell.xib in Resources */,
 				5F098A3F2477AB1200D033F4 /* GoodCollectionView.xib in Resources */,
+				5F0363AB24A5C63500C00A1E /* ThirteenGenreCollectionViewCell.xib in Resources */,
 				D1B8AFC52472627C007BC6AD /* CreateMakeMainView.xib in Resources */,
 				3FF47EE42490CB1100A8DCCD /* ReportMainView.xib in Resources */,
 				3F6996EA24A5ACDE00D6933F /* GoogleService-Info.plist in Resources */,
 				3FA0F796246E6DCA00D8DBA2 /* SearchResultMainView.xib in Resources */,
 				FF8509F2246E2870003E2ACF /* TimeLineMainView.xib in Resources */,
+				5F0363A724A5C0B000C00A1E /* ThirteenYourGenreCollectionViewCell.xib in Resources */,
 				1F4B7717246D32C000FC3B27 /* ActivityViewController.xib in Resources */,
 				5F098A372475000B00D033F4 /* YourPostCollectionViewCell.xib in Resources */,
 				3F8CA3EA2476215C000EA5AF /* CategorySearchViewController.xib in Resources */,
@@ -1312,6 +1326,7 @@
 				1F4B7732246E7EC300FC3B27 /* ActivityMainView.swift in Sources */,
 				1F4B7709246D310F00FC3B27 /* TimeLineViewController.swift in Sources */,
 				3F7C5D9624764510007640E2 /* UserSearchResultMainView.swift in Sources */,
+				5F0363AA24A5C63500C00A1E /* ThirteenGenreCollectionViewCell.swift in Sources */,
 				5F97F3E02484BD5600D68A0C /* SearchGenreCollectionViewCell.swift in Sources */,
 				5F098A462477ACA000D033F4 /* GenreCollectionView.swift in Sources */,
 				5F098A242474C0CF00D033F4 /* GenreCollectionViewCell.swift in Sources */,
@@ -1350,6 +1365,7 @@
 				5F97F3B5247B7F0C00D68A0C /* EighthYourGenreCollectionViewCell.swift in Sources */,
 				5F97F397247B6E4500D68A0C /* TenthCollectionViewCell.swift in Sources */,
 				FFD02820246E3745009EE2E4 /* TimeLineMainTableViewSecondCell.swift in Sources */,
+				5F0363A624A5C0B000C00A1E /* ThirteenYourGenreCollectionViewCell.swift in Sources */,
 				D1B8AFC72472627C007BC6AD /* CreateMakeViewController.swift in Sources */,
 				3F18F05C24722C2B00957A2E /* SignInViewController.swift in Sources */,
 				FFEA536B246E317700694E1C /* TimeLineMainTableViewCell.swift in Sources */,

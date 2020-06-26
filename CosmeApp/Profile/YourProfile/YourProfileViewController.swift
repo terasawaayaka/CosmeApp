@@ -238,6 +238,18 @@ extension YourProfileViewController :YourProfileMainViewDelegate{
                 self.mainView.scrollMainView.searchYourGenreMainView.getModel(reviewPostModels: haircare)
                 self.reviewPostModels = haircare
             }
+        case 12:
+            ReviewPostModel.reads { (reviewPostModels) in
+                let another = reviewPostModels.filter { (reviewPostModel) -> Bool in
+                    if reviewPostModel.post_user_id == self.userModel.id && reviewPostModel.category == "その他" {
+                        return true
+                    } else {
+                        return false
+                    }
+                }
+                self.mainView.scrollMainView.searchYourGenreMainView.getModel(reviewPostModels: another)
+                self.reviewPostModels = another
+            }
         default:
             break
         }

@@ -295,6 +295,22 @@ extension MyProfileViewController :MyProfileMainViewDelegate{
                 self.mainView.scrollMainView.searchGenreCollectionView.getModel(reviewPostModels: haircare)
                 self.reviewPostModels = haircare
             }
+        case 12:
+            ReviewPostModel.reads { (reviewPostModels) in
+                let another = reviewPostModels.filter { (reviewPostModel) -> Bool in
+                    if let uid = Auth.auth().currentUser?.uid {
+                        if reviewPostModel.post_user_id == uid && reviewPostModel.category == "その他" {
+                        return true
+                    } else {
+                        return false
+                    }
+                } else {
+                    return false
+                }
+            }
+                self .mainView.scrollMainView.searchGenreCollectionView.getModel(reviewPostModels: another)
+                self.reviewPostModels = another
+            }
         default:
             break
         }
