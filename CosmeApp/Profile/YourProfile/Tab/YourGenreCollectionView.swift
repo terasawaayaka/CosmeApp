@@ -39,12 +39,13 @@ extension YourGenreCollectionView {
         loadCollectionViewCellFromXib(collectionView: collectionView, cellName: "TenthYourGenreCollectionViewCell")
         loadCollectionViewCellFromXib(collectionView: collectionView, cellName: "ElevenYourGenreCollectionViewCell")
         loadCollectionViewCellFromXib(collectionView: collectionView, cellName: "TwelveYourGenreCollectionViewCell")
+        loadCollectionViewCellFromXib(collectionView: collectionView, cellName: "ThirteenYourGenreCollectionViewCell")
     }
 }
 // MARK: - Protocol
 extension YourGenreCollectionView :UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 12
+        return 13
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -60,6 +61,7 @@ extension YourGenreCollectionView :UICollectionViewDataSource{
         guard let tenthCell = collectionView.dequeueReusableCell(withReuseIdentifier: "TenthYourGenreCollectionViewCell", for: indexPath) as? TenthYourGenreCollectionViewCell else {return UICollectionViewCell()}
         guard let elevenCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ElevenYourGenreCollectionViewCell", for: indexPath) as? ElevenYourGenreCollectionViewCell else {return UICollectionViewCell()}
         guard let twelveCell = collectionView.dequeueReusableCell(withReuseIdentifier: "TwelveYourGenreCollectionViewCell", for: indexPath) as? TwelveYourGenreCollectionViewCell else {return UICollectionViewCell()}
+        guard let thirteenCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ThirteenYourGenreCollectionViewCell", for: indexPath) as? ThirteenYourGenreCollectionViewCell else {return UICollectionViewCell()}
         
         switch indexPath.row {
         case 0:
@@ -86,6 +88,8 @@ extension YourGenreCollectionView :UICollectionViewDataSource{
             return elevenCell
         case 11:
             return twelveCell
+        case 12:
+            return thirteenCell
         default:
             return cell
         }

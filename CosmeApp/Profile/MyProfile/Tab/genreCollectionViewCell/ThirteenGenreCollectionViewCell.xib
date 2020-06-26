@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="B0r-IY-r3S" customClass="ThirteenGenreCollectionViewCell" customModule="Choupinet" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="115" height="115"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Akl-KW-t0v">
+                <rect key="frame" x="0.0" y="0.0" width="115" height="115"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4zS-fV-mwU">
+                        <rect key="frame" x="0.0" y="0.0" width="115" height="115"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noimage" translatesAutoresizingMaskIntoConstraints="NO" id="ci6-be-3qt">
+                                <rect key="frame" x="0.0" y="0.0" width="115" height="115"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="115" id="LKC-iu-NYb"/>
+                            <constraint firstItem="ci6-be-3qt" firstAttribute="top" secondItem="4zS-fV-mwU" secondAttribute="top" id="N01-Jv-jhp"/>
+                            <constraint firstAttribute="width" secondItem="4zS-fV-mwU" secondAttribute="height" multiplier="1:1" id="NfQ-JD-sta"/>
+                            <constraint firstAttribute="trailing" secondItem="ci6-be-3qt" secondAttribute="trailing" id="OLY-to-osq"/>
+                            <constraint firstItem="ci6-be-3qt" firstAttribute="leading" secondItem="4zS-fV-mwU" secondAttribute="leading" id="W9O-ye-oog"/>
+                            <constraint firstAttribute="bottom" secondItem="ci6-be-3qt" secondAttribute="bottom" id="dTN-9W-s2S"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="4zS-fV-mwU" secondAttribute="bottom" id="Zyj-4z-2YS"/>
+                    <constraint firstItem="4zS-fV-mwU" firstAttribute="leading" secondItem="Akl-KW-t0v" secondAttribute="leading" id="f7H-XY-kWa"/>
+                    <constraint firstItem="4zS-fV-mwU" firstAttribute="top" secondItem="Akl-KW-t0v" secondAttribute="top" id="h8t-y3-eLF"/>
+                    <constraint firstAttribute="trailing" secondItem="4zS-fV-mwU" secondAttribute="trailing" id="vo6-UX-HwU"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="115" height="115"/>
+            <point key="canvasLocation" x="71.739130434782609" y="59.263392857142854"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="noimage" width="2048" height="2048"/>
+    </resources>
+</document>

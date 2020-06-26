@@ -41,12 +41,13 @@ extension GenreCollectionView {
         loadCollectionViewCellFromXib(collectionView: collectionView, cellName: "TenthCollectionViewCell")
         loadCollectionViewCellFromXib(collectionView: collectionView, cellName: "ElevenGenreCollectionViewCell")
         loadCollectionViewCellFromXib(collectionView: collectionView, cellName: "TwelveGenreCollectionViewCell")
+        loadCollectionViewCellFromXib(collectionView: collectionView, cellName: "ThirteenGenreCollectionViewCell")
     }
 }
 // MARK: - Protocol
 extension GenreCollectionView :UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 12
+        return 13
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -62,6 +63,8 @@ extension GenreCollectionView :UICollectionViewDataSource{
         guard let tenthCell = collectionView.dequeueReusableCell(withReuseIdentifier: "TenthCollectionViewCell", for: indexPath) as? TenthCollectionViewCell else {return UICollectionViewCell()}
         guard let elvenCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ElevenGenreCollectionViewCell", for: indexPath) as? ElevenGenreCollectionViewCell else {return UICollectionViewCell()}
         guard let twelveCell = collectionView.dequeueReusableCell(withReuseIdentifier: "TwelveGenreCollectionViewCell", for: indexPath) as? TwelveGenreCollectionViewCell else {return UICollectionViewCell()}
+        guard let thirteenCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ThirteenGenreCollectionViewCell", for: indexPath) as? ThirteenGenreCollectionViewCell else {return UICollectionViewCell()}
+        
         switch indexPath.row {
         case 0:
             return cell
@@ -87,6 +90,8 @@ extension GenreCollectionView :UICollectionViewDataSource{
             return elvenCell
         case 11:
             return twelveCell
+        case 12:
+            return thirteenCell
         default:
             return cell
         }
