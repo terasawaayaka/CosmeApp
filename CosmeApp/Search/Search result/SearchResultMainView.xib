@@ -20,7 +20,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MnQ-Ds-DOj">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="1100"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="1280"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EyeShadow" translatesAutoresizingMaskIntoConstraints="NO" id="vF1-DC-XIZ">
                                             <rect key="frame" x="10.5" y="30" width="124.5" height="124"/>
@@ -286,6 +286,29 @@
                                                 <action selector="touchedHairCareButton:" destination="-1" eventType="touchUpInside" id="t4U-P5-bgm"/>
                                             </connections>
                                         </button>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="etr" translatesAutoresizingMaskIntoConstraints="NO" id="7k9-xQ-CDT">
+                                            <rect key="frame" x="13" y="1101" width="120" height="120"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="120" id="4N6-3r-EjQ"/>
+                                                <constraint firstAttribute="width" secondItem="7k9-xQ-CDT" secondAttribute="height" multiplier="1:1" id="SZc-pW-0Fh"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="その他" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CR4-Q0-dfj">
+                                            <rect key="frame" x="47" y="1221" width="52" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.63251819350000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hhp-Zm-ZB1">
+                                            <rect key="frame" x="23" y="1101" width="100" height="120"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="100" id="r0X-Vn-rLE"/>
+                                                <constraint firstAttribute="height" constant="120" id="t5E-e6-Pgi"/>
+                                            </constraints>
+                                            <connections>
+                                                <action selector="touchedEtrButton:" destination="-1" eventType="touchUpInside" id="7G4-EE-ZoH"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     <constraints>
@@ -296,6 +319,7 @@
                                         <constraint firstItem="KGF-WU-NUE" firstAttribute="centerX" secondItem="7Cz-mj-B9B" secondAttribute="centerX" id="3OC-r1-LVk"/>
                                         <constraint firstItem="KEA-Lh-nBk" firstAttribute="top" secondItem="HM2-2F-WKi" secondAttribute="bottom" id="3TA-F9-afd"/>
                                         <constraint firstItem="zEf-XM-YnI" firstAttribute="top" secondItem="ozO-vQ-tKM" secondAttribute="bottom" id="4BL-tO-cQq"/>
+                                        <constraint firstItem="CR4-Q0-dfj" firstAttribute="top" secondItem="7k9-xQ-CDT" secondAttribute="bottom" id="4iy-uk-4dL"/>
                                         <constraint firstItem="QDt-Gp-7VG" firstAttribute="centerX" secondItem="vF1-DC-XIZ" secondAttribute="centerX" id="4pM-Vt-0Jz"/>
                                         <constraint firstItem="vGZ-jN-O27" firstAttribute="top" secondItem="MnQ-Ds-DOj" secondAttribute="top" constant="30" id="6QI-as-nV4"/>
                                         <constraint firstItem="ozO-vQ-tKM" firstAttribute="centerY" secondItem="QDz-Li-OL2" secondAttribute="centerY" id="7Zn-3x-JeK"/>
@@ -333,14 +357,17 @@
                                         <constraint firstItem="KGF-WU-NUE" firstAttribute="top" secondItem="7Cz-mj-B9B" secondAttribute="bottom" id="Oy4-lw-b6m"/>
                                         <constraint firstItem="7Cz-mj-B9B" firstAttribute="centerX" secondItem="M8V-eB-c8D" secondAttribute="centerX" id="PTg-F4-qiG"/>
                                         <constraint firstItem="HM2-2F-WKi" firstAttribute="centerY" secondItem="QDt-Gp-7VG" secondAttribute="centerY" id="PmX-P9-YlI"/>
+                                        <constraint firstItem="CR4-Q0-dfj" firstAttribute="centerX" secondItem="7k9-xQ-CDT" secondAttribute="centerX" id="S5X-iB-6zf"/>
                                         <constraint firstItem="ehb-eS-75c" firstAttribute="centerX" secondItem="spx-Yx-OWw" secondAttribute="centerX" id="ToP-zf-b0n"/>
                                         <constraint firstItem="70r-SI-luD" firstAttribute="centerX" secondItem="M8V-eB-c8D" secondAttribute="centerX" id="TyV-OQ-stv"/>
                                         <constraint firstItem="QDz-Li-OL2" firstAttribute="centerX" secondItem="HM2-2F-WKi" secondAttribute="centerX" id="UAK-jN-kVe"/>
+                                        <constraint firstItem="Hhp-Zm-ZB1" firstAttribute="centerX" secondItem="7k9-xQ-CDT" secondAttribute="centerX" id="UWW-Ad-b1L"/>
                                         <constraint firstItem="U5G-iB-OUZ" firstAttribute="centerX" secondItem="ozO-vQ-tKM" secondAttribute="centerX" id="VsI-2v-Mdn"/>
                                         <constraint firstItem="lo4-LA-IH5" firstAttribute="centerX" secondItem="vGZ-jN-O27" secondAttribute="centerX" id="W5Z-wc-Lmb"/>
-                                        <constraint firstAttribute="height" constant="1100" id="WIX-Ec-I3O"/>
+                                        <constraint firstAttribute="height" constant="1280" id="WIX-Ec-I3O"/>
                                         <constraint firstItem="Zsa-w8-hXi" firstAttribute="centerX" secondItem="spx-Yx-OWw" secondAttribute="centerX" id="WL6-YK-Skx"/>
                                         <constraint firstItem="7Cz-mj-B9B" firstAttribute="top" secondItem="M8V-eB-c8D" secondAttribute="bottom" constant="40" id="Wvp-Ri-caZ"/>
+                                        <constraint firstItem="7k9-xQ-CDT" firstAttribute="centerX" secondItem="ehb-eS-75c" secondAttribute="centerX" id="Ydl-H1-dhA"/>
                                         <constraint firstItem="gVT-2s-Ytu" firstAttribute="leading" secondItem="vGZ-jN-O27" secondAttribute="trailing" constant="10" id="YzN-j8-TDi"/>
                                         <constraint firstItem="fKc-hc-bxK" firstAttribute="centerY" secondItem="HM2-2F-WKi" secondAttribute="centerY" constant="5" id="ZqS-Ff-hJs"/>
                                         <constraint firstItem="KEA-Lh-nBk" firstAttribute="centerX" secondItem="HM2-2F-WKi" secondAttribute="centerX" id="Ztt-8S-kbt"/>
@@ -355,7 +382,9 @@
                                         <constraint firstItem="O0Q-XY-gjw" firstAttribute="centerX" secondItem="QDt-Gp-7VG" secondAttribute="centerX" id="jkh-Yu-409"/>
                                         <constraint firstItem="U5G-iB-OUZ" firstAttribute="centerY" secondItem="ozO-vQ-tKM" secondAttribute="centerY" constant="5" id="lyV-Wq-raI"/>
                                         <constraint firstItem="uxn-49-23k" firstAttribute="top" secondItem="QDt-Gp-7VG" secondAttribute="bottom" id="nAF-Br-1yF"/>
+                                        <constraint firstItem="7k9-xQ-CDT" firstAttribute="top" secondItem="Zsa-w8-hXi" secondAttribute="bottom" constant="45" id="nC0-F5-2cS"/>
                                         <constraint firstItem="G4k-fu-kAO" firstAttribute="top" secondItem="vF1-DC-XIZ" secondAttribute="bottom" id="nrl-iO-YEl"/>
+                                        <constraint firstItem="Hhp-Zm-ZB1" firstAttribute="centerY" secondItem="7k9-xQ-CDT" secondAttribute="centerY" id="pPF-H6-URp"/>
                                         <constraint firstItem="klu-bA-Bbg" firstAttribute="centerY" secondItem="40R-iS-Chi" secondAttribute="centerY" constant="5" id="qWg-VR-SWA"/>
                                         <constraint firstItem="YzJ-bg-Vql" firstAttribute="centerY" secondItem="gVT-2s-Ytu" secondAttribute="centerY" constant="5" id="sOf-ga-f91"/>
                                         <constraint firstItem="40R-iS-Chi" firstAttribute="top" secondItem="7Cz-mj-B9B" secondAttribute="bottom" constant="60" id="tuQ-iE-z3B"/>
@@ -420,6 +449,7 @@
         <image name="SkinCare" width="712" height="712"/>
         <image name="base" width="712" height="716"/>
         <image name="cheek" width="712" height="712"/>
+        <image name="etr" width="712" height="751"/>
         <image name="mascara" width="712" height="712"/>
     </resources>
 </document>

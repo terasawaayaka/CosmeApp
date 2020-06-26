@@ -21,6 +21,7 @@ protocol SearchResultMainViewDelegate: NSObjectProtocol{
     func touchedSkinCareButton()
     func touchedLipButton()
     func touchedHairCareButton()
+    func touchedEtrButton()
 }
 extension SearchResultMainViewDelegate {
 }
@@ -76,6 +77,11 @@ class SearchResultMainView: BaseView {
     @IBAction func touchedHairCareButton(_ sender: UIButton) {
         if let delegate = delegate {
             delegate.touchedHairCareButton()}
+    }
+    @IBAction func touchedEtrButton(_ sender: UIButton) {
+        if let delegate = delegate {
+            delegate.touchedEtrButton()
+        }
     }
 }
 // MARK: - Life cycle

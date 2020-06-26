@@ -196,6 +196,12 @@ extension SearchViewController: SearchMainViewDelegate {
         navigationController?.pushViewController(categorySearchViewController, animated: true)
         animatorManager.navigationType = .slide_push
     }
+    func touchedEtrButton() {
+        let categorySearchViewController = CategorySearchViewController()
+        categorySearchViewController.categoryType = CategoryType.etr
+        navigationController?.pushViewController(categorySearchViewController, animated: true)
+        animatorManager.navigationType = .slide_push
+    }
     
 }
 // MARK: - method

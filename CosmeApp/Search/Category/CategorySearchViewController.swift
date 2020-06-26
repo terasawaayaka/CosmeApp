@@ -22,6 +22,7 @@ enum CategoryType {
     case skinCare
     case lip
     case hairCare
+    case etr
 }
 // MARK: - Property
 class CategorySearchViewController: BaseViewController {
@@ -261,7 +262,19 @@ extension CategorySearchViewController {
                 }
             }
             mainView.getReviewPostModel(reviewPostModels: filterdReviewPostModels)
-            
+        case .etr:
+            if let image = UIImage(named: "etrIllust") {
+                mainView.illustImage.image = image }
+            if let image = UIImage(named: "etrLOGO") {
+                mainView.logoImage.image = image }
+            let filterdReviewPostModels = reviewPostModels.filter { (reviewPostModel) -> Bool in
+                if reviewPostModel.category == "その他" {
+                    return true
+                }else {
+                    return false
+                }
+            }
+            mainView.getReviewPostModel(reviewPostModels: filterdReviewPostModels)
         default:
             if let image = UIImage(named: "EyeshadowIllust") {
                 mainView.illustImage.image = image}
