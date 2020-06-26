@@ -45,6 +45,7 @@ class MakeDetailMainView: BaseView {
         }
     }
     
+    //テキストと写真
     @IBOutlet weak var makeImage: UIImageView!
     @IBOutlet weak var basemakeLabel: UILabel!
     @IBOutlet weak var shadingLabel: UILabel!
@@ -59,6 +60,36 @@ class MakeDetailMainView: BaseView {
     @IBOutlet weak var haircareLabel: UILabel!
     @IBOutlet weak var skincareLabel: UILabel!
     @IBOutlet weak var processTextView: UITextView!
+    
+    
+    //テキストの下のボーダー
+    @IBOutlet weak var basemakeBoder: UIView!
+    @IBOutlet weak var shadingBoder: UIView!
+    @IBOutlet weak var highlightBoder: UIView!
+    @IBOutlet weak var cheekBoder: UIView!
+    @IBOutlet weak var eyeshadowBoder: UIView!
+    @IBOutlet weak var eyelineBoder: UIView!
+    @IBOutlet weak var mascaraBoder: UIView!
+    @IBOutlet weak var colorcontactBoder: UIView!
+    @IBOutlet weak var eyebrowBoder: UIView!
+    @IBOutlet weak var lipBoder: UIView!
+    @IBOutlet weak var haircareBoder: UIView!
+    @IBOutlet weak var skincareBoder: UIView!
+    
+    //マージン
+    @IBOutlet weak var shadingMergin: NSLayoutConstraint!
+    @IBOutlet weak var highlightMergin: NSLayoutConstraint!
+    @IBOutlet weak var cheekMergin: NSLayoutConstraint!
+    @IBOutlet weak var eyeshadowMergin: NSLayoutConstraint!
+    @IBOutlet weak var eyelineMergin: NSLayoutConstraint!
+    @IBOutlet weak var mascaraMergin: NSLayoutConstraint!
+    @IBOutlet weak var colorcontactMergin: NSLayoutConstraint!
+    @IBOutlet weak var eyebrowMergin: NSLayoutConstraint!
+    @IBOutlet weak var lipMergin: NSLayoutConstraint!
+    @IBOutlet weak var haircareMergin: NSLayoutConstraint!
+    @IBOutlet weak var skincareMergin: NSLayoutConstraint!
+    
+    
     
 }
 // MARK: - Life cycle

@@ -91,7 +91,7 @@ extension MakeDetailViewController {
             headerView.setLeft(text: "＜", fontSize: 16, color: #colorLiteral(red: 0.7404877639, green: 0.7449720201, blue: 1, alpha: 1))
         }
         
-        headerView.setCenter(text: "メイク詳細", fontSize: 20, color: #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1))
+        headerView.setCenter(text: "-make detail-", fontSize: 20, color: #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1))
         if let uid = Auth.auth().currentUser?.uid {
             if makePostModel.post_user_id == uid {
                 headerView.setRight(text: "編集", fontSize: 16, color: #colorLiteral(red: 1, green: 0.6230913235, blue: 0.7894609614, alpha: 1))
@@ -120,104 +120,128 @@ extension MakeDetailViewController {
         }
     }
     func makeUpdateView(){
-        mainView.basemakeLabel.text = "ベースメイク：" + makePostModel.basemake
+        mainView.basemakeLabel.text = "ベースメイク：　" + makePostModel.basemake
         if makePostModel.basemake != "" {
             mainView.basemakeLabel.isHidden = false
-            mainView.baseHeight.constant = 20.5
+            mainView.baseHeight.constant = 30
         } else {
             mainView.basemakeLabel.isHidden = true
             mainView.baseHeight.constant = 0
+            mainView.basemakeBoder.isHidden = true
         }
-        mainView.shadingLabel.text = "シェーディング：" + makePostModel.shading
+        mainView.shadingLabel.text = "シェーディング：　" + makePostModel.shading
         if makePostModel.shading != ""{
             mainView.shadingLabel.isHidden = false
-            mainView.shadingHeight.constant = 20.5
+            mainView.shadingHeight.constant = 30
         } else {
             mainView.shadingLabel.isHidden = true
             mainView.shadingHeight.constant = 0
+            mainView.shadingBoder.isHidden = true
+            mainView.shadingMergin.constant = 0
         }
-        mainView.highlightLabel.text = "ハイライト：" + makePostModel.highlight
+        mainView.highlightLabel.text = "ハイライト：　" + makePostModel.highlight
         if makePostModel.highlight != ""{
             mainView.highlightLabel.isHidden = false
-            mainView.hiLightHeight.constant = 20.5
+            mainView.hiLightHeight.constant = 30
         } else {
             mainView.highlightLabel.isHidden = true
             mainView.hiLightHeight.constant = 0
+            mainView.highlightBoder.isHidden = true
+            mainView.highlightMergin.constant = 0
         }
-        mainView.cheekLabel.text = "チーク：" + makePostModel.cheek
+        mainView.cheekLabel.text = "チーク：　" + makePostModel.cheek
         if makePostModel.cheek != ""{
             mainView.cheekLabel.isHidden = false
-            mainView.cheekHeight.constant = 20.5
+            mainView.cheekHeight.constant = 30
         } else {
             mainView.cheekLabel.isHidden = true
             mainView.cheekHeight.constant = 0
+            mainView.cheekBoder.isHidden = true
+            mainView.cheekMergin.constant = 0
         }
-        mainView.eyeshadowLabel.text = "アイシャドウ：" + makePostModel.eyeshadow
+        mainView.eyeshadowLabel.text = "アイシャドウ：　" + makePostModel.eyeshadow
         if makePostModel.eyeshadow != ""{
             mainView.eyeshadowLabel.isHidden = false
-            mainView.eyeshadowHeight.constant = 20.5
+            mainView.eyeshadowHeight.constant = 30
         } else {
             mainView.eyeshadowLabel.isHidden = true
             mainView.eyeshadowHeight.constant = 0
+            mainView.eyeshadowBoder.isHidden = true
+            mainView.eyeshadowMergin.constant = 0
         }
-        mainView.eyelinerLabel.text = "アイライン：" + makePostModel.eyeliner
+        mainView.eyelinerLabel.text = "アイライン：　" + makePostModel.eyeliner
         if makePostModel.eyeliner != ""{
             mainView.eyelinerLabel.isHidden = false
-            mainView.eyeLinerHeight.constant = 20.5
+            mainView.eyeLinerHeight.constant = 30
         } else {
             mainView.eyelinerLabel.isHidden = true
             mainView.eyeLinerHeight.constant = 0
+            mainView.eyelineBoder.isHidden = true
+            mainView.eyelineMergin.constant = 0
         }
-        mainView.mascaraLabel.text = "マスカラ：" + makePostModel.mascara
+        mainView.mascaraLabel.text = "マスカラ：　" + makePostModel.mascara
         if makePostModel.mascara != ""{
             mainView.mascaraLabel.isHidden = false
-            mainView.mascaraHeight.constant = 20.5
+            mainView.mascaraHeight.constant = 30
         } else {
             mainView.mascaraLabel.isHidden = true
             mainView.mascaraHeight.constant = 0
+            mainView.mascaraBoder.isHidden = true
+            mainView.mascaraMergin.constant = 0
         }
-        mainView.colorcontactLabel.text = "カラコン：" + makePostModel.colorcontact
+        mainView.colorcontactLabel.text = "カラコン：　" + makePostModel.colorcontact
         if makePostModel.colorcontact != ""{
             mainView.colorcontactLabel.isHidden = false
-            mainView.colorconHeight.constant = 20.5
+            mainView.colorconHeight.constant = 30
         } else {
             mainView.colorcontactLabel.isHidden = true
             mainView.colorconHeight.constant = 0
+            mainView.colorcontactBoder.isHidden = true
+            mainView.colorcontactMergin.constant = 0
         }
-        mainView.eyeblowLabel.text = "アイブロウ：" + makePostModel.eyebrow
+        mainView.eyeblowLabel.text = "アイブロウ：　" + makePostModel.eyebrow
         if makePostModel.eyebrow != ""{
             mainView.eyeblowLabel.isHidden = false
-            mainView.eyeBrowHeight.constant = 20.5
+            mainView.eyeBrowHeight.constant = 30
         } else {
             mainView.eyeblowLabel.isHidden = true
             mainView.eyeBrowHeight.constant = 0
+            mainView.eyebrowBoder.isHidden = true
+            mainView.eyebrowMergin.constant = 0
         }
-        mainView.lipLabel.text = "リップ：" + makePostModel.lip
+        mainView.lipLabel.text = "リップ：　" + makePostModel.lip
         if makePostModel.lip != ""{
             mainView.lipLabel.isHidden = false
-            mainView.lipHeight.constant = 20.5
+            mainView.lipHeight.constant = 30
         } else {
             mainView.lipLabel.isHidden = true
             mainView.lipHeight.constant = 0
+            mainView.lipBoder.isHidden = true
+            mainView.lipMergin.constant = 0
         }
-        mainView.haircareLabel.text = "ヘアケア：" + makePostModel.haircare
+        mainView.haircareLabel.text = "ヘアケア：　" + makePostModel.haircare
         if makePostModel.haircare != "" {
             mainView.haircareLabel.isHidden = false
-            mainView.haircareHeight.constant = 20.5
+            mainView.haircareHeight.constant = 30
         } else {
             mainView.haircareLabel.isHidden = true
             mainView.haircareHeight.constant = 0
+            mainView.haircareBoder.isHidden = true
+            mainView.haircareMergin.constant = 0
         }
-        mainView.skincareLabel.text = "スキンケア：" + makePostModel.skincare
+        mainView.skincareLabel.text = "スキンケア：　" + makePostModel.skincare
         if makePostModel.skincare != "" {
             mainView.skincareLabel.isHidden = false
-            mainView.skincareHeight.constant = 20.5
+            mainView.skincareHeight.constant = 30
         } else {
             mainView.skincareLabel.isHidden = true
             mainView.skincareHeight.constant = 0
+            mainView.skincareBoder.isHidden = true
+            mainView.skincareMergin.constant = 0
         }
-        
         mainView.processTextView.text = makePostModel.process
+        
+        //写真
         switch makePostModel.image_paths.count {
         case 0:
             mainView.makeImage.image = UIImage(named: "noimage.png")
@@ -229,6 +253,7 @@ extension MakeDetailViewController {
         default:
             break
         }
+        //ユーザー情報
         if makePostModel.post_user_name == ""{
             mainView.userName.text = "メンバーがいません"
         }else{

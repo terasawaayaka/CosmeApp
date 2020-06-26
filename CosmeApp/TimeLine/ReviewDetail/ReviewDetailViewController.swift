@@ -226,7 +226,7 @@ extension ReviewDetailViewController {
         } else {
             headerView.setLeft(text: "＜", fontSize: 16, color: #colorLiteral(red: 0.7404877639, green: 0.7449720201, blue: 1, alpha: 1))
         }
-        headerView.setCenter(text: "レビュー詳細", fontSize: 20, color: #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1))
+        headerView.setCenter(text: "-review detail-", fontSize: 20, color: #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1))
         if let uid = Auth.auth().currentUser?.uid {
             if reviewPostModel.post_user_id == uid {
                 headerView.setRight(text: "編集", fontSize: 16, color: #colorLiteral(red: 1, green: 0.6230913235, blue: 0.7894609614, alpha: 1))
