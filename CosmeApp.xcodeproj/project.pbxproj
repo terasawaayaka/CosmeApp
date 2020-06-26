@@ -195,7 +195,7 @@
 		D1B8AFC52472627C007BC6AD /* CreateMakeMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1B8AFC12472627B007BC6AD /* CreateMakeMainView.xib */; };
 		D1B8AFC62472627C007BC6AD /* CreateMakeMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B8AFC22472627B007BC6AD /* CreateMakeMainView.swift */; };
 		D1B8AFC72472627C007BC6AD /* CreateMakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B8AFC32472627C007BC6AD /* CreateMakeViewController.swift */; };
-		D2F1967E24A19D0D0034BBB0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D2F1967D24A19D0D0034BBB0 /* GoogleService-Info.plist */; };
+		D2AEDA7A24A58CFC005C5BE0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D2AEDA7924A58CFC005C5BE0 /* GoogleService-Info.plist */; };
 		FF3A5EA82474BAD100EDCB26 /* ReviewDetailMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3A5EA62474BAD100EDCB26 /* ReviewDetailMainTableViewCell.swift */; };
 		FF3A5EA92474BAD100EDCB26 /* ReviewDetailMainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF3A5EA72474BAD100EDCB26 /* ReviewDetailMainTableViewCell.xib */; };
 		FF3F38DE2477977B0023FAAC /* ReviewPostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3F38DD2477977A0023FAAC /* ReviewPostModel.swift */; };
@@ -422,7 +422,7 @@
 		D1B8AFC12472627B007BC6AD /* CreateMakeMainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateMakeMainView.xib; sourceTree = "<group>"; };
 		D1B8AFC22472627B007BC6AD /* CreateMakeMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateMakeMainView.swift; sourceTree = "<group>"; };
 		D1B8AFC32472627C007BC6AD /* CreateMakeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateMakeViewController.swift; sourceTree = "<group>"; };
-		D2F1967D24A19D0D0034BBB0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D2AEDA7924A58CFC005C5BE0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FF3A5EA62474BAD100EDCB26 /* ReviewDetailMainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewDetailMainTableViewCell.swift; sourceTree = "<group>"; };
 		FF3A5EA72474BAD100EDCB26 /* ReviewDetailMainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewDetailMainTableViewCell.xib; sourceTree = "<group>"; };
 		FF3F38DD2477977A0023FAAC /* ReviewPostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewPostModel.swift; sourceTree = "<group>"; };
@@ -506,8 +506,8 @@
 				1F4B76E9246D2AC100FC3B27 /* Main.storyboard */,
 				3FC6EE852473BDF0008875B7 /* Assets.xcassets */,
 				1F4B76EE246D2AE100FC3B27 /* LaunchScreen.storyboard */,
+				D2AEDA7924A58CFC005C5BE0 /* GoogleService-Info.plist */,
 				1F4B76F1246D2AE100FC3B27 /* Info.plist */,
-				D2F1967D24A19D0D0034BBB0 /* GoogleService-Info.plist */,
 			);
 			path = CosmeApp;
 			sourceTree = "<group>";
@@ -1131,7 +1131,6 @@
 				FF850A03246E29BC003E2ACF /* MakeDetailViewController.xib in Resources */,
 				1F4B76EB246D2AC100FC3B27 /* Main.storyboard in Resources */,
 				3F1EE732249205B800753461 /* ReportTableViewSuicideCell.xib in Resources */,
-				D2F1967E24A19D0D0034BBB0 /* GoogleService-Info.plist in Resources */,
 				5FA88A3E246E3FA300B84ACE /* YourProfileViewController.xib in Resources */,
 				5F97F3B2247B7EF400D68A0C /* SeventhYourGenreCollectionViewCell.xib in Resources */,
 				3FF47EE02490CADB00A8DCCD /* ReportViewController.xib in Resources */,
@@ -1154,6 +1153,7 @@
 				5F97F380247B6DC000D68A0C /* FourthCollectionViewCell.xib in Resources */,
 				3FF1213924724716001E0554 /* SearchResultCollectionViewCell.xib in Resources */,
 				3F7C5D8E247644E0007640E2 /* ProductNameSearchResultView.xib in Resources */,
+				D2AEDA7A24A58CFC005C5BE0 /* GoogleService-Info.plist in Resources */,
 				3F6648F32472287900D4D950 /* SignUpMainView.xib in Resources */,
 				5FA88A642472316600B84ACE /* ScrollMainView.xib in Resources */,
 				5F480A2D2498629E000D67E3 /* SearchYourGenreMainView.xib in Resources */,
@@ -1512,7 +1512,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ASWinc.CosmeApp.release;
+				PRODUCT_BUNDLE_IDENTIFIER = org.cocoapods.Alamofir;
 				PRODUCT_NAME = Choupinet;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1531,7 +1531,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ASWinc.CosmeApp.release;
+				PRODUCT_BUNDLE_IDENTIFIER = org.cocoapods.Alamofire;
 				PRODUCT_NAME = Choupinet;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
