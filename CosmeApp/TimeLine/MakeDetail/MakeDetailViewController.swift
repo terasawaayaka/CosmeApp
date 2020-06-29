@@ -115,8 +115,16 @@ extension MakeDetailViewController {
             self.makePostModel = makePostModel
             self.mainView.makeGetModel(makePostModel: makePostModel, userModel: self.userModel)
         }) {
-            self.navigationController?.popViewController(animated: true)
-            self.animatorManager.navigationType = .slide_pop
+            //プロフィールから遷移した時
+            if self.fromProfile {
+                let myProfileViewController = MyProfileViewController()
+                self.navigationController?.pushViewController(myProfileViewController, animated: true)
+                self.animatorManager.navigationType = .pop
+            } else {
+                //プロフィール以外から遷移した時
+                self.navigationController?.popViewController(animated: true)
+                self.animatorManager.navigationType = .slide_pop
+            }
         }
     }
     func makeUpdateView(){
