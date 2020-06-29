@@ -120,19 +120,43 @@ extension ReviewDetailViewController:ReviewDetailMainViewDelegate {
     
     
     func deleteButton(commentPostModel: CommentPostModel) {
-        CommentPostModel.delete(id: commentPostModel.id) {
-            self.mainView.tableHeight.constant = CGFloat(self.mainView.tableView.contentSize.height)
-        }
-        NoticeModel.reads { (noticeModels) in
-            for noticeModel in noticeModels {
-                if noticeModel.comment_id == commentPostModel.id {
-                    NoticeModel.delete(id: noticeModel.id) {
-                        self.dismiss(animated: true, completion: nil)
+        //アラート生成
+        //UIAlertControllerのスタイルがalert
+        let alert: UIAlertController = UIAlertController(title: "", message:  "コメントを削除しますか？", preferredStyle:  UIAlertController.Style.alert)
+        // 確定ボタンの処理
+        let confirmAction: UIAlertAction = UIAlertAction(title: "削除", style: UIAlertAction.Style.default, handler:{
+            // 確定ボタンが押された時の処理をクロージャ実装する
+            (action: UIAlertAction!) -> Void in
+            //実際の処理
+            CommentPostModel.delete(id: commentPostModel.id) {
+                self.mainView.tableHeight.constant = CGFloat(self.mainView.tableView.contentSize.height)
+            }
+            NoticeModel.reads { (noticeModels) in
+                for noticeModel in noticeModels {
+                    if noticeModel.comment_id == commentPostModel.id {
+                        NoticeModel.delete(id: noticeModel.id) {
+                            self.dismiss(animated: true, completion: nil)
+                        }
                     }
                 }
             }
-        }
+        })
+        // キャンセルボタンの処理
+        let cancelAction: UIAlertAction = UIAlertAction(title: "キャンセル", style: UIAlertAction.Style.cancel, handler:{
+            // キャンセルボタンが押された時の処理をクロージャ実装する
+            (action: UIAlertAction!) -> Void in
+            //実際の処理
+            print("キャンセル")
+        })
+        //UIAlertControllerにキャンセルボタンと確定ボタンをActionを追加
+        alert.addAction(cancelAction)
+        alert.addAction(confirmAction)
+        
+        //実際にAlertを表示する
+        present(alert, animated: true, completion: nil)
     }
+    
+
     
     func iconViewButton(reviewPostModel: ReviewPostModel) {
         if let uid = Auth.auth().currentUser?.uid {
