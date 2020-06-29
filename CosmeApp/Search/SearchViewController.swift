@@ -42,9 +42,9 @@ extension SearchViewController: SearchTextViewDelegate {
       
         mainView.searchCategoryButtonView.isHidden = false
         mainView.searchResultMainView.isHidden = true
-        mainView.tagResultView.isHidden = false
+        mainView.tagResultView.isHidden = true
         mainView.userResultView.isHidden = true
-        mainView.productNameResultView.isHidden = true
+        mainView.productNameResultView.isHidden = false
         
         mainView.getReviewPostModel(reviewPostModels: reviewPostModels,text: text)
         mainView.getModel(userModels: userModels,text: text)
