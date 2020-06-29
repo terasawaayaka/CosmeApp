@@ -327,8 +327,16 @@ extension ReviewDetailViewController {
             self.reviewUpdateView()
             self.mainView.reviewGetModel(reviewPostModel: reviewPostModel)
         }) {
-            self.navigationController?.popViewController(animated: true)
-            self.animatorManager.navigationType = .slide_pop
+            if self.fromProfile {
+                //プロフィールから戻る時
+                let myProfileViewController = MyProfileViewController()
+                self.navigationController?.pushViewController(myProfileViewController, animated: true)
+                self.animatorManager.navigationType = .pop
+            } else {
+                //プロフィール以外から戻る時
+                self.navigationController?.popViewController(animated: true)
+                self.animatorManager.navigationType = .slide_pop
+            }
             }
         }
     
