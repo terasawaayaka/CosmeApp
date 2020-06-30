@@ -57,6 +57,8 @@ extension SearchViewController: SearchTextViewDelegate {
         mainView.tagResultView.isHidden = true
         mainView.userResultView.isHidden = true
         mainView.productNameResultView.isHidden = true
+        searchTextView.searchBar.searchTextField.text = ""
+        hideKeybord()
     }
 }
     
