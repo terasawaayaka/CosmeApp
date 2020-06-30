@@ -267,7 +267,7 @@ extension MyProfileViewController :MyProfileMainViewDelegate{
             ReviewPostModel.reads { (reviewPostModels) in
                 let lip = reviewPostModels.filter { (reviewPostModel) -> Bool in
                     if let uid = Auth.auth().currentUser?.uid {
-                        if reviewPostModel.post_user_id == uid && reviewPostModel.category == "" {
+                        if reviewPostModel.post_user_id == uid && reviewPostModel.category == "リップ" {
                         return true
                     } else {
                         return false
