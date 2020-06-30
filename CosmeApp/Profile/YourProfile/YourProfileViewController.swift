@@ -300,10 +300,10 @@ extension YourProfileViewController :YourProfileMainViewDelegate{
                 self.mainView.scrollMainView.isHidden = false
                 self.mainView.followButton.isHidden = false
             }
-            //ブロックしたらblockUserのその人のidをtrueに、followUserのその人のidをfalseに（ブロックした相手のフォローを外す）
-            UserModel.addBlockUser(request: userModel, isBlock: isBlock, isFollow: isFollowd)
-            //ブロックされたらblockedUserのその人のidをtrueに、followUserのその人のidをfalseに（ブロックしてきた相手のフォローを外す）
-            UserModel.addBlockedUser(request: userModel, isBlock: isBlock, isFollow: isFollowd)
+            //ブロックしたらblockUserのその人のidをtrueに、followUserのその人のidをfalseに（ブロックした相手のフォローを外す）、followerUserのその人のidをfalseに（ブロックした相手をフォロワーから外す）
+            UserModel.addBlockUser(request: userModel, isBlock: isBlock, isFollow: isFollowd, isFollower: isFollowd )
+            //ブロックされたらblockedUserのその人のidをtrueに、followUserのその人のidをfalseに（ブロックしてきた相手のフォローを外す）、followerUserのその人のidをfalseに（ブロックしてきた相手のフォロワーから外される）
+            UserModel.addBlockedUser(request: userModel, isBlock: isBlock, isFollow: isFollowd, isFollower: isFollowd)
         }
 
     }
@@ -516,22 +516,22 @@ extension YourProfileViewController {
     func judgedBlock() {
         UserModel.readMe { (userModel) in
             userModel.block_users.forEach { (blockUser) in
-                blockUser.forEach { (key,val) in
+                blockUser.forEach { (blockUserId,blockVal) in
                     userModel.blocked_users.forEach { (blockedUser) in
-                        blockedUser.forEach { (key2,val2) in
-                            if key == self.userModel.id {
-                                self.isBlock = val
+                        blockedUser.forEach { (blockedUserId,blockedVal) in
+                            if blockUserId == self.userModel.id {
+                                self.isBlock = blockVal
                                 self.mainView.isBlockButtonTouched = self.isBlock
                                 self.mainView.updateBlock()
                             }
                             //ブロック中だったら投稿とフォローボタンを非表示
-                            if key == self.userModel.id && val == true {
+                            if blockUserId == self.userModel.id && blockVal == true {
                                 self.mainView.yourTodayCollectionView.isHidden = true
                                 self.mainView.scrollMainView.isHidden = true
                                 self.mainView.followButton.isHidden = true
                             }
                             //ブロックされていたらそのユーザーの投稿とフォローボタンとブロックボタンを非表示
-                            if key2 == self.userModel.id && val2 == true {
+                            if blockedUserId == self.userModel.id && blockedVal == true {
                                 self.mainView.yourTodayCollectionView.isHidden = true
                                 self.mainView.scrollMainView.isHidden = true
                                 self.mainView.followButton.isHidden = true
