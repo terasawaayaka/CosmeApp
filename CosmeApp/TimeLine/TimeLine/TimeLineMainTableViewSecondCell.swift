@@ -109,12 +109,12 @@ extension TimeLineMainTableViewSecondCell :UICollectionViewDataSource{
         if reviewPostModel.image_paths.count == 0 {
             cell.imageView.image = UIImage(named: "noimage")
         } else {
-            reviewPostModel.image_paths.forEach { (imagePath) in
-                if imagePath.contains("\(indexPath.row)?") {
+//            reviewPostModel.image_paths.forEach { (imagePath) in
+//                if imagePath.contains("\(indexPath.row)?") {
                     cell.updatecollectionView(imagePath: reviewPostModel.image_paths[indexPath.row])
                 }
-            }
-        }
+//            }
+//        }
         return cell
     }
     

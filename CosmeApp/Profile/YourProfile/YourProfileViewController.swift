@@ -454,6 +454,31 @@ extension YourProfileViewController {
 //            self.userModel = userModel
  //            self.mainView.getModel(userModel: userModel)
         }
+        ReviewPostModel.reads { (reviewPostModels) in
+            //メインビューにreviewPostModelを渡す
+            let filterdReviewPostModels = reviewPostModels.filter { (reviewPostModel) -> Bool in
+                if reviewPostModel.post_user_id == self.userModel.id {
+                    return true
+                }else {
+                    return false
+                }
+            }
+            self.reviewPostModels = filterdReviewPostModels
+            self.mainView.reviewPostModels = filterdReviewPostModels
+            self.mainView.getModelforCell(filterdReviewPostModels: reviewPostModels, userModel: self.userModel)
+            }
+        
+        MakePostModel.reads { (makePostModels) in
+            let filterMakePostModels = makePostModels.filter { (makePostModel) -> Bool in
+                if makePostModel.post_user_id == self.userModel.id {
+                    return true
+                } else {
+                    return false
+                }
+            }
+            self.mainView.getTodayModel(makePostModels: filterMakePostModels)
+            self.makePostModels = filterMakePostModels
+        }
     }
 
     func commentGetModel() {
@@ -468,6 +493,31 @@ extension YourProfileViewController {
         } else {
 //            self.userModel = userModel
 //            self.mainView.getModel(userModel: userModel)
+        }
+        ReviewPostModel.reads { (reviewPostModels) in
+            //メインビューにreviewPostModelを渡す
+            let filterdReviewPostModels = reviewPostModels.filter { (reviewPostModel) -> Bool in
+                if reviewPostModel.post_user_id == self.userModel.id {
+                    return true
+                }else {
+                    return false
+                }
+            }
+            self.reviewPostModels = filterdReviewPostModels
+            self.mainView.reviewPostModels = filterdReviewPostModels
+            self.mainView.getModelforCell(filterdReviewPostModels: reviewPostModels, userModel: self.userModel)
+            }
+        
+        MakePostModel.reads { (makePostModels) in
+            let filterMakePostModels = makePostModels.filter { (makePostModel) -> Bool in
+                if makePostModel.post_user_id == self.userModel.id {
+                    return true
+                } else {
+                    return false
+                }
+            }
+            self.mainView.getTodayModel(makePostModels: filterMakePostModels)
+            self.makePostModels = filterMakePostModels
         }
     }
     
