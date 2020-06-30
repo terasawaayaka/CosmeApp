@@ -306,23 +306,27 @@ extension UserModel {
             }
         }
     }
-    static func addBlockUser(request: UserModel,isBlock: Bool, isFollow: Bool) {
+    static func addBlockUser(request: UserModel,isBlock: Bool, isFollow: Bool, isFollower:Bool) {
          if let uid = Auth.auth().currentUser?.uid {
             if let id = request.id {
                 let blockDbRef = Database.database().reference().child(PATH).child(uid).child("block_users").child(id)
                 blockDbRef.setValue(isBlock)
                 let followDbRef = Database.database().reference().child(PATH).child(uid).child("follow_users").child(id)
                 followDbRef.setValue(isFollow)
+                let follewerDbRef =  Database.database().reference().child(PATH).child(uid).child("follower_users").child(id)
+                follewerDbRef.setValue(isFollower)
             }
         }
     }
-    static func addBlockedUser(request: UserModel,isBlock: Bool, isFollow: Bool) {
+    static func addBlockedUser(request: UserModel,isBlock: Bool, isFollow: Bool, isFollower:Bool) {
          if let uid = Auth.auth().currentUser?.uid {
             if let id = request.id {
                 let blockedDbRef = Database.database().reference().child(PATH).child(id).child("blocked_users").child(uid)
                 blockedDbRef.setValue(isBlock)
                 let followDbRef = Database.database().reference().child(PATH).child(id).child("follow_users").child(uid)
                 followDbRef.setValue(isFollow)
+                let followerDbRef = Database.database().reference().child(PATH).child(id).child("follower_users").child(uid)
+                followerDbRef.setValue(isFollower)
             }
         }
     }
