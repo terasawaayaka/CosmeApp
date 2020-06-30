@@ -190,14 +190,14 @@ extension TimeLineViewController {
                     }else{
                         return false
                     }
-                   
                 }
+                
                 self.reviewPostModels = filterdReviewPostModels
                     self.mainView.reviewGetModel(reviewPostModels:filterdReviewPostModels)
                     print("カウント:", filterdReviewPostModels.count)
                 }
                 
-                //フォローしている人と自分を抽出
+//                //フォローしている人と自分を抽出
 //                for followUser in userModel.follow_users {
 //                    followUser.forEach { (followUserId, isFollow) in
 //                        filterdReviewPostModels = reviewPostModels.filter{ (reviewPostModel) -> Bool in
@@ -214,7 +214,7 @@ extension TimeLineViewController {
 //                        }
 //                    }
 //                }
-                //ブロックしている人を排除
+//                //ブロックしている人を排除
 //                for blockUser in userModel.block_users {
 //                    blockUser.forEach { (blockUserId, isBlock) in
 //                        filterdReviewPostModels = filterdReviewPostModels.filter{ (reviewPostModel) -> Bool in
@@ -238,9 +238,9 @@ extension TimeLineViewController {
 //                        }
 //                    }
 //                }
-                
-                
-                //誰もフォローしていない場合自分だけを抽出
+//
+//
+//                //誰もフォローしていない場合自分だけを抽出
 //                if userModel.follow_users.count == 0{
 //                    filterdReviewPostModels = reviewPostModels.filter { (reviewPostModel) -> Bool in
 //                        if let uid = Auth.auth().currentUser?.uid {
@@ -254,8 +254,8 @@ extension TimeLineViewController {
 //                        }
 //                    }
 //                }
-                
-                
+//
+//
 //                self.reviewPostModels = filterdReviewPostModels
 //                self.mainView.reviewGetModel(reviewPostModels:filterdReviewPostModels)
 //                print("カウント:", filterdReviewPostModels.count)
@@ -299,11 +299,8 @@ extension TimeLineViewController {
                         }
                     }
                 }
-                
             }
-            
         }
-        
     }
 
     
