@@ -74,6 +74,7 @@
 		3F96651E246E2A7F0083EBC2 /* SearchTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F96651C246E2A7F0083EBC2 /* SearchTextView.xib */; };
 		3F966521246E2B240083EBC2 /* SearchMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F96651F246E2B240083EBC2 /* SearchMainView.swift */; };
 		3F966522246E2B240083EBC2 /* SearchMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F966520246E2B240083EBC2 /* SearchMainView.xib */; };
+		3F9EFE4F24AD6D64005FE51A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F9EFE4E24AD6D64005FE51A /* GoogleService-Info.plist */; };
 		3FA0F795246E6DCA00D8DBA2 /* SearchResultMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA0F793246E6DCA00D8DBA2 /* SearchResultMainView.swift */; };
 		3FA0F796246E6DCA00D8DBA2 /* SearchResultMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FA0F794246E6DCA00D8DBA2 /* SearchResultMainView.xib */; };
 		3FC6EE862473BDF0008875B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FC6EE852473BDF0008875B7 /* Assets.xcassets */; };
@@ -206,7 +207,6 @@
 		FF3F38E22477B6B90023FAAC /* CommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3F38E12477B6B90023FAAC /* CommentModel.swift */; };
 		FF44077E24973B6B0076058C /* TimeLineImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF44077C24973B6B0076058C /* TimeLineImageCollectionViewCell.swift */; };
 		FF44077F24973B6B0076058C /* TimeLineImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF44077D24973B6B0076058C /* TimeLineImageCollectionViewCell.xib */; };
-		FF452C5A24AAEFE200F06805 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FF452C5924AAEFE200F06805 /* GoogleService-Info.plist */; };
 		FF8509F1246E2870003E2ACF /* TimeLineMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8509EF246E2870003E2ACF /* TimeLineMainView.swift */; };
 		FF8509F2246E2870003E2ACF /* TimeLineMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF8509F0246E2870003E2ACF /* TimeLineMainView.xib */; };
 		FF8509FA246E294F003E2ACF /* ReviewDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8509F8246E294F003E2ACF /* ReviewDetailViewController.swift */; };
@@ -305,6 +305,7 @@
 		3F96651C246E2A7F0083EBC2 /* SearchTextView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTextView.xib; sourceTree = "<group>"; };
 		3F96651F246E2B240083EBC2 /* SearchMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMainView.swift; sourceTree = "<group>"; };
 		3F966520246E2B240083EBC2 /* SearchMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchMainView.xib; sourceTree = "<group>"; };
+		3F9EFE4E24AD6D64005FE51A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3FA0F793246E6DCA00D8DBA2 /* SearchResultMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultMainView.swift; sourceTree = "<group>"; };
 		3FA0F794246E6DCA00D8DBA2 /* SearchResultMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultMainView.xib; sourceTree = "<group>"; };
 		3FC6EE852473BDF0008875B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -437,7 +438,6 @@
 		FF3F38E12477B6B90023FAAC /* CommentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentModel.swift; sourceTree = "<group>"; };
 		FF44077C24973B6B0076058C /* TimeLineImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		FF44077D24973B6B0076058C /* TimeLineImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeLineImageCollectionViewCell.xib; sourceTree = "<group>"; };
-		FF452C5924AAEFE200F06805 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FF8509EF246E2870003E2ACF /* TimeLineMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineMainView.swift; sourceTree = "<group>"; };
 		FF8509F0246E2870003E2ACF /* TimeLineMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeLineMainView.xib; sourceTree = "<group>"; };
 		FF8509F8246E294F003E2ACF /* ReviewDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewDetailViewController.swift; sourceTree = "<group>"; };
@@ -514,7 +514,7 @@
 				1F4B76E9246D2AC100FC3B27 /* Main.storyboard */,
 				3FC6EE852473BDF0008875B7 /* Assets.xcassets */,
 				1F4B76EE246D2AE100FC3B27 /* LaunchScreen.storyboard */,
-				FF452C5924AAEFE200F06805 /* GoogleService-Info.plist */,
+				3F9EFE4E24AD6D64005FE51A /* GoogleService-Info.plist */,
 				1F4B76F1246D2AE100FC3B27 /* Info.plist */,
 			);
 			path = CosmeApp;
@@ -1149,7 +1149,6 @@
 				5F97F3F12484D80600D68A0C /* SerchGenreViewController.xib in Resources */,
 				5F97F3CC24809C6C00D68A0C /* ElevenYourGenreCollectionViewCell.xib in Resources */,
 				3F1EE7372493162900753461 /* ReportDoneViewController.xib in Resources */,
-				FF452C5A24AAEFE200F06805 /* GoogleService-Info.plist in Resources */,
 				FF850A17246E2BC2003E2ACF /* EditMakeMainView.xib in Resources */,
 				1F4B770A246D310F00FC3B27 /* TimeLineViewController.xib in Resources */,
 				5F97F398247B6E4500D68A0C /* TenthCollectionViewCell.xib in Resources */,
@@ -1194,6 +1193,7 @@
 				5F97F390247B6E1F00D68A0C /* EighthCollectionViewCell.xib in Resources */,
 				FF3A5EA92474BAD100EDCB26 /* ReviewDetailMainTableViewCell.xib in Resources */,
 				5F97F394247B6E3400D68A0C /* NinthCollectionViewCell.xib in Resources */,
+				3F9EFE4F24AD6D64005FE51A /* GoogleService-Info.plist in Resources */,
 				FF8509FF246E297C003E2ACF /* ReviewDetailMainView.xib in Resources */,
 				FF850A13246E2B3C003E2ACF /* EditMakeViewController.xib in Resources */,
 				FFD02821246E3745009EE2E4 /* TimeLineMainTableViewSecondCell.xib in Resources */,
@@ -1528,7 +1528,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.3;
+				MARKETING_VERSION = 1.0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = org.cocoapods.Alamofir;
 				PRODUCT_NAME = Choupinet;
 				SWIFT_VERSION = 5.0;
@@ -1548,7 +1548,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.3;
+				MARKETING_VERSION = 1.0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = org.cocoapods.Alamofire;
 				PRODUCT_NAME = Choupinet;
 				SWIFT_VERSION = 5.0;
