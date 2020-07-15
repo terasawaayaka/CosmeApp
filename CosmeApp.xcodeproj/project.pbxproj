@@ -1522,14 +1522,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8Q7ZNNJG4G;
+				DEVELOPMENT_TEAM = 2G8PC2F294;
 				INFOPLIST_FILE = CosmeApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.4;
-				PRODUCT_BUNDLE_IDENTIFIER = org.cocoapods.Alamofir;
+				PRODUCT_BUNDLE_IDENTIFIER = org.cocoapods.Alamofir20200713a;
 				PRODUCT_NAME = Choupinet;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1542,14 +1542,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8Q7ZNNJG4G;
+				DEVELOPMENT_TEAM = 2G8PC2F294;
 				INFOPLIST_FILE = CosmeApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.4;
-				PRODUCT_BUNDLE_IDENTIFIER = org.cocoapods.Alamofire;
+				PRODUCT_BUNDLE_IDENTIFIER = org.cocoapods.Alamofire20200713a;
 				PRODUCT_NAME = Choupinet;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
