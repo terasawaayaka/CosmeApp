@@ -49,23 +49,23 @@ extension CreateReviewViewController {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         switch imageViewType2 {
         case .first:
-            if let image = info[.originalImage] as? UIImage {
-                mainView.itemFirstImageVIew.image = image
+            if let firstImage = info[.originalImage] as? UIImage {
+                mainView.itemFirstImageVIew.image = firstImage
                 picker.dismiss(animated: true, completion: nil)
             }
         case .second:
-            if let image = info[.originalImage] as? UIImage {
-                mainView.itemSecondImageView.image = image
+            if let secondImage = info[.originalImage] as? UIImage {
+                mainView.itemSecondImageView.image = secondImage
                 picker.dismiss(animated: true, completion: nil)
             }
         case .third:
-            if let image = info[.originalImage] as? UIImage {
-                mainView.itemThirdImageView.image = image
+            if let therdImage = info[.originalImage] as? UIImage {
+                mainView.itemThirdImageView.image = therdImage
                 picker.dismiss(animated: true, completion: nil)
             }
         case .fourth:
-            if let image = info[.originalImage] as? UIImage {
-                mainView.itemFourthImageView.image = image
+            if let fourthImage = info[.originalImage] as? UIImage {
+                mainView.itemFourthImageView.image = fourthImage
                 picker.dismiss(animated: true, completion: nil)
             }
         default:
@@ -108,17 +108,17 @@ extension CreateReviewViewController:HeaderViewDelegate {
         
         
         var images:[UIImage] = []
-        if let image = mainView.itemFirstImageVIew.image {
-            images.append(image)
+        if let firsrImage = mainView.itemFirstImageVIew.image {
+            images.append(firsrImage)
         }
-        if let image = mainView.itemSecondImageView.image {
-            images.append(image)
+        if let secondImage = mainView.itemSecondImageView.image {
+            images.append(secondImage)
         }
-        if let image = mainView.itemThirdImageView.image {
-            images.append(image)
+        if let therdImage = mainView.itemThirdImageView.image {
+            images.append(therdImage)
         }
-        if let image = mainView.itemFourthImageView.image {
-            images.append(image)
+        if let fourthImage = mainView.itemFourthImageView.image {
+            images.append(fourthImage)
         }
         
         if let uid = Auth.auth().currentUser?.uid {
