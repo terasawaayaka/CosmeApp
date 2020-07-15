@@ -31,6 +31,7 @@ extension ReportDoneViewController {
         setDelegate()
         setHeaderView()
         changeLabel()
+        hideKeybord()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,6 +89,15 @@ extension ReportDoneViewController {
         default:
             mainView.reportLabel.text = ""
         }
+    }
+    func hideKeybord() {
+        let hideTap : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKyeoboardTap))
+        hideTap.numberOfTapsRequired = 1
+        self.view.isUserInteractionEnabled = true
+        self.view.addGestureRecognizer(hideTap)
+    }
+    @objc func hideKyeoboardTap(recognizer : UITapGestureRecognizer){
+        self.view.endEditing(true)
     }
 }
 
